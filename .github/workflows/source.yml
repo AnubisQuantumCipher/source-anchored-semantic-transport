@@ -14,5 +14,7 @@ jobs:
         run: python3 -I -S -B -Werror install/test_install_support.py -v
       - name: Closed source and transformation controls
         run: python3 -I -S -B -Werror install/test_install_layout.py -v
+      - name: Original-document handoff client controls
+        run: python3 -I -S -B -Werror install/test_handoff_client.py -v
       - name: Parse source and enforce installer function size
         run: python3 -I -S -B -Werror install/check_source.py
