@@ -51,6 +51,7 @@ The short formula is an entry point into the package. It cannot independently re
 - [Authoring schema and examples](AUTHORING.md)
 - [Package and semantic schema](docs/PACKAGE.md)
 - [Assurance, tests and known failures](docs/ASSURANCE.md)
+- [Repeated builds and package handoff](docs/REPRODUCIBILITY.md)
 - [Security boundaries](SECURITY.md)
 - [Contribution rules](CONTRIBUTING.md)
 - [License scope](LICENSE-SCOPE.md)

@@ -2,7 +2,7 @@
 
 This checkpoint publishes source and bounded local workflows. It does not declare the whole product complete or ready for a marketplace. Read the machine-readable [checkpoint receipt](../receipts/checkpoint-1.json) alongside the commands below.
 
-## Current observed controls
+## Original checkpoint controls
 
 | Scope | Result |
 |---|---|
@@ -16,6 +16,14 @@ This checkpoint publishes source and bounded local workflows. It does not declar
 | Desktop clients, x86_64 runtime and marketplace | UNPERFORMED. Local SDK stdio is not desktop-client acceptance. |
 
 Counts describe separate scopes and must not be merged into a whole-system proof. Ordinary source hashing is an integrity observation. The receipt identifies the exact source inventory and local artifacts involved.
+
+## Repeated-build and handoff follow-up
+
+The [follow-up receipt](../receipts/reproducibility-1.json) records a narrowly scoped repair to compiler debug metadata. Two fresh builds from separate copies of the pinned source produced byte-identical installed bundles on the observed Linux `aarch64` host. The native executable's allocated sections and Ada/GPR source remain unchanged from the earlier build. Strict checks and exact runtime identities remain required.
+
+The unchanged codec suites and installed-product controls passed on this new runtime. A [new deterministic handoff harness](REPRODUCIBILITY.md) passed six fixtures, recovering source bytes and comparing declared typed relationships and uncertainty with separately retained expectations. Swapped archives, changed literals, invalid shares, missing archives and incompatible runtimes were refused. Wrong-pin and runtime-mismatch preflights also refused before launching a child command. Independent GPT-6.1 reviews cover the binary comparison and final harness within their stated scopes.
+
+This result closes the observed build-metadata obstacle for that pair. It does not replace the original failed comparison, establish compatibility across hosts, or qualify AI prose. No receiving-model trial or new formal proof campaign was performed.
 
 ## Reproduce without changing frozen fixtures
 
