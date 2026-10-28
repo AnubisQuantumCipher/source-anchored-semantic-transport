@@ -39,5 +39,15 @@ jobs:
         run: python3 -I -S -B -Werror install/test_install_layout.py -v
       - name: Original-document handoff client controls
         run: python3 -I -S -B -Werror install/test_handoff_client.py -v
+      - name: Response contracts and checked draft submission
+        run: |
+          response_checks=$(mktemp -d)
+          test_pin=$(python3 -I -S -B -Werror install/freeze_response_contract_tests.py --output "$response_checks/inputs.json")
+          python3 -I -S -B -Werror install/test_response_contract.py --freeze "$response_checks/inputs.json" --expect-freeze-sha256 "$test_pin" --evidence "$response_checks/contract"
+          python3 -I -S -B -Werror install/test_checked_finish.py --freeze "$response_checks/inputs.json" --expect-freeze-sha256 "$test_pin" --evidence "$response_checks/finish"
+      - name: Reproduce retained three-hop evidence
+        run: |
+          python3 -I -S -B -Werror examples/repeated-handoff-v1/results/reproduce/check_public.py --expect-closure-sha256 651e8d75f7697be0ef977943a043d59c104dd9e792a938f86b898f5f1a3a4e61
+          python3 -I -S -B -Werror examples/repeated-handoff-v1/results/reproduce/check_witness.py
       - name: Parse source and enforce installer function size
         run: python3 -I -S -B -Werror install/check_source.py

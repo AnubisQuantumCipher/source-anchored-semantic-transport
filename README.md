@@ -16,6 +16,7 @@ This is an open-source implementation under the [MIT license](LICENSE), targetin
 - An Ada/SPARK native component and a separate evaluator source tree. Proof scope is distinct from Python orchestration and language interpretation.
 - A local CLI, a read-only MCP adapter, and a source-build installer that derives an exact runtime identity without editing the original source pins.
 - A reusable handoff preparer and compact receiving client with a fixed session, checked inputs, and an unedited draft submission.
+- An opt-in checked submission command that validates explicit field types, allowed values and unique action IDs before saving a draft.
 
 ## Start
 
@@ -57,7 +58,9 @@ The short formula is an entry point into the package. It cannot independently re
 - [Matched original-document and transport handoff comparison](docs/HANDOFF_COMPARISON.md)
 - [Local handoff reader and deterministic controls](docs/HANDOFF_READER.md)
 - [Prepare a receiving directory and use the compact client](docs/HANDOFF_CLIENT.md)
+- [Validate a response contract and submit exact draft bytes](install/CHECKED_FINISH.md)
 - [Missing-record trial and retained failures](docs/MISSING_RECORD_HANDOFF.md)
+- [Three-hop comparison and its retained output failures](docs/REPEATED_HANDOFF.md)
 - [Source review, interpretation gaps and governing records](docs/SOURCE_REVIEW.md)
 - [Reproducible handoff with corrections, revocation and missing evidence](examples/handoff-v1/README.md)
 - [Security boundaries](SECURITY.md)
