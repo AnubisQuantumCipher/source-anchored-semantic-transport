@@ -1,0 +1,1224 @@
+{
+  "controls": {
+    "bundle_unchanged": true,
+    "errors": 0,
+    "failures": 0,
+    "fixture_inputs_unchanged": true,
+    "skipped": [],
+    "test_inputs_unchanged": true,
+    "tests_run": 9
+  },
+  "core_compatibility": {
+    "all_runtime_member_bytes_equal": true,
+    "frozen_pair_unchanged": true,
+    "metadata_byte_identical": true
+  },
+  "core_runtime_sha256": "ac3ce875a0e281ed17550bdf466f43dbeaae61aced5f1d811e797e5340e57f0f",
+  "derivation": "Nonprivate summary; SDK source bytes and private paths omitted; original receipts and failures retained",
+  "implementation": {
+    "install/source_page_review_checks.py": {
+      "bytes": 12286,
+      "sha256": "cf453e276ce23297c58fc094ce515106554094971bd9b799659105f8ae45b91a"
+    },
+    "install/test_install_product.py": {
+      "bytes": 26443,
+      "sha256": "9bad91b9f77c9d49e6cce195412e0a1ac9a6cb952809a22ecf04f50ad7e59e70"
+    },
+    "tools/transport_mcp.py": {
+      "bytes": 11653,
+      "sha256": "ee01703c824fc6e2be2d7ecbda2affb6c05e70bdafcc00a1316f02ca61581830"
+    }
+  },
+  "install_manifest_sha256": "6af9896f4cb2a3456897a4ff0e9777f13a99f12f0a0df095c56788792e48f1b2",
+  "limitations": [
+    "Per-reading source spans only, not a semantic coverage or correctness measure",
+    "No source authentication, governing-version registry, legal interpretation or action authority added",
+    "No new formal proof or receiving-model trial; narrative fidelity unperformed",
+    "Local SDK stdio only; desktop-client and marketplace acceptance unperformed",
+    "Source and response bounds unchanged; no claim for unrestricted document sizes",
+    "Hashes identify retained local observations, not external attestation"
+  ],
+  "local_evidence": {
+    "build-01/receipt.json": {
+      "bytes": 4175,
+      "sha256": "990f243a02e0eee1a14f650b6145aaa7817c152e624d9e33f635c54b578cb914"
+    },
+    "core-compatibility-01/receipt.json": {
+      "bytes": 4913,
+      "sha256": "4f14eaa9e212e50741dc76f642543c51b333962bb7e7d859c5c3f749efa2bcd5"
+    },
+    "implementation-01/receipt.json": {
+      "bytes": 1575,
+      "sha256": "e5aaf8939a38976c46566498fe6a1a6b94ef5f20234203e6a25cd75284864f0e"
+    },
+    "implementation-02/receipt.json": {
+      "bytes": 1009,
+      "sha256": "b4ad4250191473edaf032b16c709404274371ab6c71a3471143e57035654df0a"
+    },
+    "product-01/receipt.json": {
+      "bytes": 42865,
+      "sha256": "267056f350801cfcf46846644c1c8999310330b225b1e948cf0d607ac1b162fc"
+    },
+    "product-02/receipt.json": {
+      "bytes": 44723,
+      "sha256": "6765c04c0256dcf10d5c63dc12b6dfe3a689984bd21a74e5cbf204e6b4ad8607"
+    },
+    "research-01/sources.json": {
+      "bytes": 1940,
+      "sha256": "e5e479c6e1f5bb65a6bace31d33f71a73ac6ff20d7ef419f7f5699aaa76d4a84"
+    },
+    "review-01/receipt.json": {
+      "bytes": 2205,
+      "sha256": "745d9337f0f85da7b2184a9e5ffba988f046e97412e2d79a3fd3812c1c4f3034"
+    },
+    "source-controls-01/receipt.json": {
+      "bytes": 1608,
+      "sha256": "a9b620ef01872d6f8e970670de0f86ed932d0f49976e041883de3dbd0f94854c"
+    }
+  },
+  "previous_failed_product": {
+    "reason": "Test helper array root violated existing object-only serializer; fixed helper wrappers, no serializer relaxation",
+    "status": "FAILED"
+  },
+  "previous_regression_receipt": {
+    "bytes": 39859,
+    "sha256": "48af7dcbc62fbb02ee5662cc9a922266d9de95a2febcc2e1a8f8f39661acce2c"
+  },
+  "previous_regression_rerun": "NOT_PERFORMED; exact actual core runtime members unchanged; new adapter product suite executed",
+  "schema": "transport/public-source-review/1",
+  "source_controls": {
+    "layout_tests": 13,
+    "static_output": "PASS: parsed source files=39; bounded installer functions=159",
+    "support_tests": 21
+  },
+  "source_inventory": {
+    "bytes": 7264,
+    "sha256": "108db5f7354ac0112c445b78d01a9764ba28675b472e0c583c523199f88e1b17"
+  },
+  "source_page_exchange": {
+    "elapsed_ns": 1086425360,
+    "pages": [
+      {
+        "authority": "NONE",
+        "bytes": 4096,
+        "context_adequacy": "UNPROVEN",
+        "page_sha256": "ff23b1a66bb078b151e1719063bba1b680284ff87aa156e13a26d75fbc9cb250",
+        "review": {
+          "context_adequacy": "UNPROVEN",
+          "execution_authority": "NONE",
+          "meaning_units": [
+            {
+              "assurance": {
+                "context_adequacy": "UNPROVEN",
+                "execution_authority": "NONE",
+                "interpretation_entailment": "UNPROVEN",
+                "semantic_completeness": "UNPROVEN",
+                "typing": "TESTED_NOT_FORMALLY_PROVED"
+              },
+              "declared_ambiguities": [
+                {
+                  "index": 0,
+                  "returned_span": null,
+                  "span": [
+                    4104,
+                    4108
+                  ]
+                }
+              ],
+              "declared_dependency_ids": [
+                "I0",
+                "Q0",
+                "SOURCE",
+                "U0"
+              ],
+              "declared_uncertainty_ids": [
+                "Q0"
+              ],
+              "interpretation": "I0",
+              "interpretation_status": "proposed",
+              "kind": "source_claim",
+              "opaque_propositions": [],
+              "representation": "INCOMPLETE",
+              "residual_intersections": "PRESENT",
+              "residuals": [
+                {
+                  "bytes": 4103,
+                  "returned_span": [
+                    5,
+                    4096
+                  ],
+                  "sha256": "0052368093263adf76b4eb6f74f6fc034950421567485fa47ef41f4e1a6dcdd8",
+                  "span": [
+                    5,
+                    4108
+                  ],
+                  "text_location": "explicit recover of source SOURCE"
+                }
+              ],
+              "unit": "U0"
+            },
+            {
+              "assurance": {
+                "context_adequacy": "UNPROVEN",
+                "execution_authority": "NONE",
+                "interpretation_entailment": "UNPROVEN",
+                "semantic_completeness": "UNPROVEN",
+                "typing": "TESTED_NOT_FORMALLY_PROVED"
+              },
+              "declared_ambiguities": [
+                {
+                  "index": 0,
+                  "returned_span": [
+                    4095,
+                    4096
+                  ],
+                  "span": [
+                    4095,
+                    4097
+                  ]
+                }
+              ],
+              "declared_dependency_ids": [
+                "I0",
+                "I1",
+                "Q0",
+                "SOURCE",
+                "U0",
+                "U1"
+              ],
+              "declared_uncertainty_ids": [
+                "Q0"
+              ],
+              "interpretation": "I1",
+              "interpretation_status": "disputed",
+              "kind": "source_claim",
+              "opaque_propositions": [],
+              "representation": "INCOMPLETE",
+              "residual_intersections": "PRESENT",
+              "residuals": [
+                {
+                  "bytes": 4098,
+                  "returned_span": [
+                    0,
+                    4096
+                  ],
+                  "sha256": "54df5c3fde1746285ef33065ce95fd6c67424c2a14f3e89d8e16f3f7a3090188",
+                  "span": [
+                    0,
+                    4098
+                  ],
+                  "text_location": "explicit recover of source SOURCE"
+                }
+              ],
+              "unit": "U1"
+            },
+            {
+              "assurance": {
+                "context_adequacy": "UNPROVEN",
+                "execution_authority": "NONE",
+                "interpretation_entailment": "UNPROVEN",
+                "semantic_completeness": "UNPROVEN",
+                "typing": "TESTED_NOT_FORMALLY_PROVED"
+              },
+              "declared_ambiguities": [],
+              "declared_dependency_ids": [
+                "I2",
+                "SOURCE",
+                "U2"
+              ],
+              "declared_uncertainty_ids": [],
+              "interpretation": "I2",
+              "interpretation_status": "withdrawn",
+              "kind": "source_claim",
+              "opaque_propositions": [
+                {
+                  "returned_span": [
+                    0,
+                    5
+                  ],
+                  "span": [
+                    0,
+                    5
+                  ]
+                }
+              ],
+              "representation": "INCOMPLETE",
+              "residual_intersections": "PRESENT",
+              "residuals": [
+                {
+                  "bytes": 4103,
+                  "returned_span": [
+                    5,
+                    4096
+                  ],
+                  "sha256": "0052368093263adf76b4eb6f74f6fc034950421567485fa47ef41f4e1a6dcdd8",
+                  "span": [
+                    5,
+                    4108
+                  ],
+                  "text_location": "explicit recover of source SOURCE"
+                }
+              ],
+              "unit": "U2"
+            },
+            {
+              "assurance": {
+                "context_adequacy": "UNPROVEN",
+                "execution_authority": "NONE",
+                "interpretation_entailment": "UNPROVEN",
+                "semantic_completeness": "UNPROVEN",
+                "typing": "TESTED_NOT_FORMALLY_PROVED"
+              },
+              "declared_ambiguities": [
+                {
+                  "index": 0,
+                  "returned_span": [
+                    0,
+                    4096
+                  ],
+                  "span": [
+                    0,
+                    4108
+                  ]
+                }
+              ],
+              "declared_dependency_ids": [
+                "I3",
+                "QOTHER",
+                "SOURCE",
+                "U3"
+              ],
+              "declared_uncertainty_ids": [
+                "QOTHER"
+              ],
+              "interpretation": "I3",
+              "interpretation_status": "proposed",
+              "kind": "source_claim",
+              "opaque_propositions": [],
+              "representation": "PROPOSED_STRUCTURED_READING",
+              "residual_intersections": "NONE_IN_RETURNED_SPAN",
+              "residuals": [],
+              "unit": "U3"
+            }
+          ],
+          "residual_meaning": "Per-unit bytes outside declared spans, cues and mentions; not semantic coverage.",
+          "schema": "transport/source-page-review/1",
+          "scope": "SOURCE_SPAN_ANNOTATIONS_ONLY",
+          "typed_readings": "SUPPLIED_FOR_SOURCE",
+          "uncertainty_selection": "DECLARED_DEPENDENCY_CLOSURE_ONLY_ABSENCE_IS_NOT_CERTAINTY"
+        },
+        "source": "SOURCE",
+        "source_sha256": "5048980fe6b5cb1d64ef0051ce69ae8027509059d62323699e8028130cc76131",
+        "span": [
+          0,
+          4096
+        ],
+        "utf8_available": false
+      },
+      {
+        "authority": "NONE",
+        "bytes": 4096,
+        "context_adequacy": "UNPROVEN",
+        "page_sha256": "d190fbc686031ad3f984eb73b8d7bf1738daa2d9a60915eeada74c6a9e2ad154",
+        "review": {
+          "context_adequacy": "UNPROVEN",
+          "execution_authority": "NONE",
+          "meaning_units": [
+            {
+              "assurance": {
+                "context_adequacy": "UNPROVEN",
+                "execution_authority": "NONE",
+                "interpretation_entailment": "UNPROVEN",
+                "semantic_completeness": "UNPROVEN",
+                "typing": "TESTED_NOT_FORMALLY_PROVED"
+              },
+              "declared_ambiguities": [
+                {
+                  "index": 0,
+                  "returned_span": null,
+                  "span": [
+                    4104,
+                    4108
+                  ]
+                }
+              ],
+              "declared_dependency_ids": [
+                "I0",
+                "Q0",
+                "SOURCE",
+                "U0"
+              ],
+              "declared_uncertainty_ids": [
+                "Q0"
+              ],
+              "interpretation": "I0",
+              "interpretation_status": "proposed",
+              "kind": "source_claim",
+              "opaque_propositions": [],
+              "representation": "INCOMPLETE",
+              "residual_intersections": "PRESENT",
+              "residuals": [
+                {
+                  "bytes": 4103,
+                  "returned_span": [
+                    5,
+                    4101
+                  ],
+                  "sha256": "0052368093263adf76b4eb6f74f6fc034950421567485fa47ef41f4e1a6dcdd8",
+                  "span": [
+                    5,
+                    4108
+                  ],
+                  "text_location": "explicit recover of source SOURCE"
+                }
+              ],
+              "unit": "U0"
+            },
+            {
+              "assurance": {
+                "context_adequacy": "UNPROVEN",
+                "execution_authority": "NONE",
+                "interpretation_entailment": "UNPROVEN",
+                "semantic_completeness": "UNPROVEN",
+                "typing": "TESTED_NOT_FORMALLY_PROVED"
+              },
+              "declared_ambiguities": [
+                {
+                  "index": 0,
+                  "returned_span": [
+                    4095,
+                    4097
+                  ],
+                  "span": [
+                    4095,
+                    4097
+                  ]
+                }
+              ],
+              "declared_dependency_ids": [
+                "I0",
+                "I1",
+                "Q0",
+                "SOURCE",
+                "U0",
+                "U1"
+              ],
+              "declared_uncertainty_ids": [
+                "Q0"
+              ],
+              "interpretation": "I1",
+              "interpretation_status": "disputed",
+              "kind": "source_claim",
+              "opaque_propositions": [],
+              "representation": "INCOMPLETE",
+              "residual_intersections": "PRESENT",
+              "residuals": [
+                {
+                  "bytes": 4098,
+                  "returned_span": [
+                    5,
+                    4098
+                  ],
+                  "sha256": "54df5c3fde1746285ef33065ce95fd6c67424c2a14f3e89d8e16f3f7a3090188",
+                  "span": [
+                    0,
+                    4098
+                  ],
+                  "text_location": "explicit recover of source SOURCE"
+                }
+              ],
+              "unit": "U1"
+            },
+            {
+              "assurance": {
+                "context_adequacy": "UNPROVEN",
+                "execution_authority": "NONE",
+                "interpretation_entailment": "UNPROVEN",
+                "semantic_completeness": "UNPROVEN",
+                "typing": "TESTED_NOT_FORMALLY_PROVED"
+              },
+              "declared_ambiguities": [],
+              "declared_dependency_ids": [
+                "I2",
+                "SOURCE",
+                "U2"
+              ],
+              "declared_uncertainty_ids": [],
+              "interpretation": "I2",
+              "interpretation_status": "withdrawn",
+              "kind": "source_claim",
+              "opaque_propositions": [],
+              "representation": "INCOMPLETE",
+              "residual_intersections": "PRESENT",
+              "residuals": [
+                {
+                  "bytes": 4103,
+                  "returned_span": [
+                    5,
+                    4101
+                  ],
+                  "sha256": "0052368093263adf76b4eb6f74f6fc034950421567485fa47ef41f4e1a6dcdd8",
+                  "span": [
+                    5,
+                    4108
+                  ],
+                  "text_location": "explicit recover of source SOURCE"
+                }
+              ],
+              "unit": "U2"
+            },
+            {
+              "assurance": {
+                "context_adequacy": "UNPROVEN",
+                "execution_authority": "NONE",
+                "interpretation_entailment": "UNPROVEN",
+                "semantic_completeness": "UNPROVEN",
+                "typing": "TESTED_NOT_FORMALLY_PROVED"
+              },
+              "declared_ambiguities": [
+                {
+                  "index": 0,
+                  "returned_span": [
+                    5,
+                    4101
+                  ],
+                  "span": [
+                    0,
+                    4108
+                  ]
+                }
+              ],
+              "declared_dependency_ids": [
+                "I3",
+                "QOTHER",
+                "SOURCE",
+                "U3"
+              ],
+              "declared_uncertainty_ids": [
+                "QOTHER"
+              ],
+              "interpretation": "I3",
+              "interpretation_status": "proposed",
+              "kind": "source_claim",
+              "opaque_propositions": [],
+              "representation": "PROPOSED_STRUCTURED_READING",
+              "residual_intersections": "NONE_IN_RETURNED_SPAN",
+              "residuals": [],
+              "unit": "U3"
+            }
+          ],
+          "residual_meaning": "Per-unit bytes outside declared spans, cues and mentions; not semantic coverage.",
+          "schema": "transport/source-page-review/1",
+          "scope": "SOURCE_SPAN_ANNOTATIONS_ONLY",
+          "typed_readings": "SUPPLIED_FOR_SOURCE",
+          "uncertainty_selection": "DECLARED_DEPENDENCY_CLOSURE_ONLY_ABSENCE_IS_NOT_CERTAINTY"
+        },
+        "source": "SOURCE",
+        "source_sha256": "5048980fe6b5cb1d64ef0051ce69ae8027509059d62323699e8028130cc76131",
+        "span": [
+          5,
+          4101
+        ],
+        "utf8_available": true
+      },
+      {
+        "authority": "NONE",
+        "bytes": 13,
+        "context_adequacy": "UNPROVEN",
+        "page_sha256": "df5b73344c4d5439ba6512675168f769d8b2f452a2f73896c60b985a9d4011f7",
+        "review": {
+          "context_adequacy": "UNPROVEN",
+          "execution_authority": "NONE",
+          "meaning_units": [
+            {
+              "assurance": {
+                "context_adequacy": "UNPROVEN",
+                "execution_authority": "NONE",
+                "interpretation_entailment": "UNPROVEN",
+                "semantic_completeness": "UNPROVEN",
+                "typing": "TESTED_NOT_FORMALLY_PROVED"
+              },
+              "declared_ambiguities": [
+                {
+                  "index": 0,
+                  "returned_span": [
+                    4104,
+                    4108
+                  ],
+                  "span": [
+                    4104,
+                    4108
+                  ]
+                }
+              ],
+              "declared_dependency_ids": [
+                "I0",
+                "Q0",
+                "SOURCE",
+                "U0"
+              ],
+              "declared_uncertainty_ids": [
+                "Q0"
+              ],
+              "interpretation": "I0",
+              "interpretation_status": "proposed",
+              "kind": "source_claim",
+              "opaque_propositions": [],
+              "representation": "INCOMPLETE",
+              "residual_intersections": "PRESENT",
+              "residuals": [
+                {
+                  "bytes": 4103,
+                  "returned_span": [
+                    4095,
+                    4108
+                  ],
+                  "sha256": "0052368093263adf76b4eb6f74f6fc034950421567485fa47ef41f4e1a6dcdd8",
+                  "span": [
+                    5,
+                    4108
+                  ],
+                  "text_location": "explicit recover of source SOURCE"
+                }
+              ],
+              "unit": "U0"
+            },
+            {
+              "assurance": {
+                "context_adequacy": "UNPROVEN",
+                "execution_authority": "NONE",
+                "interpretation_entailment": "UNPROVEN",
+                "semantic_completeness": "UNPROVEN",
+                "typing": "TESTED_NOT_FORMALLY_PROVED"
+              },
+              "declared_ambiguities": [
+                {
+                  "index": 0,
+                  "returned_span": [
+                    4095,
+                    4097
+                  ],
+                  "span": [
+                    4095,
+                    4097
+                  ]
+                }
+              ],
+              "declared_dependency_ids": [
+                "I0",
+                "I1",
+                "Q0",
+                "SOURCE",
+                "U0",
+                "U1"
+              ],
+              "declared_uncertainty_ids": [
+                "Q0"
+              ],
+              "interpretation": "I1",
+              "interpretation_status": "disputed",
+              "kind": "source_claim",
+              "opaque_propositions": [],
+              "representation": "INCOMPLETE",
+              "residual_intersections": "PRESENT",
+              "residuals": [
+                {
+                  "bytes": 4098,
+                  "returned_span": [
+                    4095,
+                    4098
+                  ],
+                  "sha256": "54df5c3fde1746285ef33065ce95fd6c67424c2a14f3e89d8e16f3f7a3090188",
+                  "span": [
+                    0,
+                    4098
+                  ],
+                  "text_location": "explicit recover of source SOURCE"
+                },
+                {
+                  "bytes": 5,
+                  "returned_span": [
+                    4103,
+                    4108
+                  ],
+                  "sha256": "ca3cbbb06dab94c61d647d7e92a0bb830e4a1706e6309fabb8b5393468455484",
+                  "span": [
+                    4103,
+                    4108
+                  ],
+                  "text_location": "explicit recover of source SOURCE"
+                }
+              ],
+              "unit": "U1"
+            },
+            {
+              "assurance": {
+                "context_adequacy": "UNPROVEN",
+                "execution_authority": "NONE",
+                "interpretation_entailment": "UNPROVEN",
+                "semantic_completeness": "UNPROVEN",
+                "typing": "TESTED_NOT_FORMALLY_PROVED"
+              },
+              "declared_ambiguities": [],
+              "declared_dependency_ids": [
+                "I2",
+                "SOURCE",
+                "U2"
+              ],
+              "declared_uncertainty_ids": [],
+              "interpretation": "I2",
+              "interpretation_status": "withdrawn",
+              "kind": "source_claim",
+              "opaque_propositions": [],
+              "representation": "INCOMPLETE",
+              "residual_intersections": "PRESENT",
+              "residuals": [
+                {
+                  "bytes": 4103,
+                  "returned_span": [
+                    4095,
+                    4108
+                  ],
+                  "sha256": "0052368093263adf76b4eb6f74f6fc034950421567485fa47ef41f4e1a6dcdd8",
+                  "span": [
+                    5,
+                    4108
+                  ],
+                  "text_location": "explicit recover of source SOURCE"
+                }
+              ],
+              "unit": "U2"
+            },
+            {
+              "assurance": {
+                "context_adequacy": "UNPROVEN",
+                "execution_authority": "NONE",
+                "interpretation_entailment": "UNPROVEN",
+                "semantic_completeness": "UNPROVEN",
+                "typing": "TESTED_NOT_FORMALLY_PROVED"
+              },
+              "declared_ambiguities": [
+                {
+                  "index": 0,
+                  "returned_span": [
+                    4095,
+                    4108
+                  ],
+                  "span": [
+                    0,
+                    4108
+                  ]
+                }
+              ],
+              "declared_dependency_ids": [
+                "I3",
+                "QOTHER",
+                "SOURCE",
+                "U3"
+              ],
+              "declared_uncertainty_ids": [
+                "QOTHER"
+              ],
+              "interpretation": "I3",
+              "interpretation_status": "proposed",
+              "kind": "source_claim",
+              "opaque_propositions": [],
+              "representation": "PROPOSED_STRUCTURED_READING",
+              "residual_intersections": "NONE_IN_RETURNED_SPAN",
+              "residuals": [],
+              "unit": "U3"
+            }
+          ],
+          "residual_meaning": "Per-unit bytes outside declared spans, cues and mentions; not semantic coverage.",
+          "schema": "transport/source-page-review/1",
+          "scope": "SOURCE_SPAN_ANNOTATIONS_ONLY",
+          "typed_readings": "SUPPLIED_FOR_SOURCE",
+          "uncertainty_selection": "DECLARED_DEPENDENCY_CLOSURE_ONLY_ABSENCE_IS_NOT_CERTAINTY"
+        },
+        "source": "SOURCE",
+        "source_sha256": "5048980fe6b5cb1d64ef0051ce69ae8027509059d62323699e8028130cc76131",
+        "span": [
+          4095,
+          4108
+        ],
+        "utf8_available": true
+      },
+      {
+        "authority": "NONE",
+        "bytes": 12,
+        "context_adequacy": "UNPROVEN",
+        "page_sha256": "fd6d8e622bb83aa4820a57bca48329cf538314a56a37e87ce46de9f998b8f00f",
+        "review": {
+          "context_adequacy": "UNPROVEN",
+          "execution_authority": "NONE",
+          "meaning_units": [
+            {
+              "assurance": {
+                "context_adequacy": "UNPROVEN",
+                "execution_authority": "NONE",
+                "interpretation_entailment": "UNPROVEN",
+                "semantic_completeness": "UNPROVEN",
+                "typing": "TESTED_NOT_FORMALLY_PROVED"
+              },
+              "declared_ambiguities": [
+                {
+                  "index": 0,
+                  "returned_span": [
+                    4104,
+                    4108
+                  ],
+                  "span": [
+                    4104,
+                    4108
+                  ]
+                }
+              ],
+              "declared_dependency_ids": [
+                "I0",
+                "Q0",
+                "SOURCE",
+                "U0"
+              ],
+              "declared_uncertainty_ids": [
+                "Q0"
+              ],
+              "interpretation": "I0",
+              "interpretation_status": "proposed",
+              "kind": "source_claim",
+              "opaque_propositions": [],
+              "representation": "INCOMPLETE",
+              "residual_intersections": "PRESENT",
+              "residuals": [
+                {
+                  "bytes": 4103,
+                  "returned_span": [
+                    4096,
+                    4108
+                  ],
+                  "sha256": "0052368093263adf76b4eb6f74f6fc034950421567485fa47ef41f4e1a6dcdd8",
+                  "span": [
+                    5,
+                    4108
+                  ],
+                  "text_location": "explicit recover of source SOURCE"
+                }
+              ],
+              "unit": "U0"
+            },
+            {
+              "assurance": {
+                "context_adequacy": "UNPROVEN",
+                "execution_authority": "NONE",
+                "interpretation_entailment": "UNPROVEN",
+                "semantic_completeness": "UNPROVEN",
+                "typing": "TESTED_NOT_FORMALLY_PROVED"
+              },
+              "declared_ambiguities": [
+                {
+                  "index": 0,
+                  "returned_span": [
+                    4096,
+                    4097
+                  ],
+                  "span": [
+                    4095,
+                    4097
+                  ]
+                }
+              ],
+              "declared_dependency_ids": [
+                "I0",
+                "I1",
+                "Q0",
+                "SOURCE",
+                "U0",
+                "U1"
+              ],
+              "declared_uncertainty_ids": [
+                "Q0"
+              ],
+              "interpretation": "I1",
+              "interpretation_status": "disputed",
+              "kind": "source_claim",
+              "opaque_propositions": [],
+              "representation": "INCOMPLETE",
+              "residual_intersections": "PRESENT",
+              "residuals": [
+                {
+                  "bytes": 4098,
+                  "returned_span": [
+                    4096,
+                    4098
+                  ],
+                  "sha256": "54df5c3fde1746285ef33065ce95fd6c67424c2a14f3e89d8e16f3f7a3090188",
+                  "span": [
+                    0,
+                    4098
+                  ],
+                  "text_location": "explicit recover of source SOURCE"
+                },
+                {
+                  "bytes": 5,
+                  "returned_span": [
+                    4103,
+                    4108
+                  ],
+                  "sha256": "ca3cbbb06dab94c61d647d7e92a0bb830e4a1706e6309fabb8b5393468455484",
+                  "span": [
+                    4103,
+                    4108
+                  ],
+                  "text_location": "explicit recover of source SOURCE"
+                }
+              ],
+              "unit": "U1"
+            },
+            {
+              "assurance": {
+                "context_adequacy": "UNPROVEN",
+                "execution_authority": "NONE",
+                "interpretation_entailment": "UNPROVEN",
+                "semantic_completeness": "UNPROVEN",
+                "typing": "TESTED_NOT_FORMALLY_PROVED"
+              },
+              "declared_ambiguities": [],
+              "declared_dependency_ids": [
+                "I2",
+                "SOURCE",
+                "U2"
+              ],
+              "declared_uncertainty_ids": [],
+              "interpretation": "I2",
+              "interpretation_status": "withdrawn",
+              "kind": "source_claim",
+              "opaque_propositions": [],
+              "representation": "INCOMPLETE",
+              "residual_intersections": "PRESENT",
+              "residuals": [
+                {
+                  "bytes": 4103,
+                  "returned_span": [
+                    4096,
+                    4108
+                  ],
+                  "sha256": "0052368093263adf76b4eb6f74f6fc034950421567485fa47ef41f4e1a6dcdd8",
+                  "span": [
+                    5,
+                    4108
+                  ],
+                  "text_location": "explicit recover of source SOURCE"
+                }
+              ],
+              "unit": "U2"
+            },
+            {
+              "assurance": {
+                "context_adequacy": "UNPROVEN",
+                "execution_authority": "NONE",
+                "interpretation_entailment": "UNPROVEN",
+                "semantic_completeness": "UNPROVEN",
+                "typing": "TESTED_NOT_FORMALLY_PROVED"
+              },
+              "declared_ambiguities": [
+                {
+                  "index": 0,
+                  "returned_span": [
+                    4096,
+                    4108
+                  ],
+                  "span": [
+                    0,
+                    4108
+                  ]
+                }
+              ],
+              "declared_dependency_ids": [
+                "I3",
+                "QOTHER",
+                "SOURCE",
+                "U3"
+              ],
+              "declared_uncertainty_ids": [
+                "QOTHER"
+              ],
+              "interpretation": "I3",
+              "interpretation_status": "proposed",
+              "kind": "source_claim",
+              "opaque_propositions": [],
+              "representation": "PROPOSED_STRUCTURED_READING",
+              "residual_intersections": "NONE_IN_RETURNED_SPAN",
+              "residuals": [],
+              "unit": "U3"
+            }
+          ],
+          "residual_meaning": "Per-unit bytes outside declared spans, cues and mentions; not semantic coverage.",
+          "schema": "transport/source-page-review/1",
+          "scope": "SOURCE_SPAN_ANNOTATIONS_ONLY",
+          "typed_readings": "SUPPLIED_FOR_SOURCE",
+          "uncertainty_selection": "DECLARED_DEPENDENCY_CLOSURE_ONLY_ABSENCE_IS_NOT_CERTAINTY"
+        },
+        "source": "SOURCE",
+        "source_sha256": "5048980fe6b5cb1d64ef0051ce69ae8027509059d62323699e8028130cc76131",
+        "span": [
+          4096,
+          4108
+        ],
+        "utf8_available": false
+      },
+      {
+        "authority": "NONE",
+        "bytes": 0,
+        "context_adequacy": "UNPROVEN",
+        "page_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "review": {
+          "context_adequacy": "UNPROVEN",
+          "execution_authority": "NONE",
+          "meaning_units": [
+            {
+              "assurance": {
+                "context_adequacy": "UNPROVEN",
+                "execution_authority": "NONE",
+                "interpretation_entailment": "UNPROVEN",
+                "semantic_completeness": "UNPROVEN",
+                "typing": "TESTED_NOT_FORMALLY_PROVED"
+              },
+              "declared_ambiguities": [
+                {
+                  "index": 0,
+                  "returned_span": null,
+                  "span": [
+                    4104,
+                    4108
+                  ]
+                }
+              ],
+              "declared_dependency_ids": [
+                "I0",
+                "Q0",
+                "SOURCE",
+                "U0"
+              ],
+              "declared_uncertainty_ids": [
+                "Q0"
+              ],
+              "interpretation": "I0",
+              "interpretation_status": "proposed",
+              "kind": "source_claim",
+              "opaque_propositions": [],
+              "representation": "INCOMPLETE",
+              "residual_intersections": "NONE_IN_RETURNED_SPAN",
+              "residuals": [],
+              "unit": "U0"
+            },
+            {
+              "assurance": {
+                "context_adequacy": "UNPROVEN",
+                "execution_authority": "NONE",
+                "interpretation_entailment": "UNPROVEN",
+                "semantic_completeness": "UNPROVEN",
+                "typing": "TESTED_NOT_FORMALLY_PROVED"
+              },
+              "declared_ambiguities": [
+                {
+                  "index": 0,
+                  "returned_span": null,
+                  "span": [
+                    4095,
+                    4097
+                  ]
+                }
+              ],
+              "declared_dependency_ids": [
+                "I0",
+                "I1",
+                "Q0",
+                "SOURCE",
+                "U0",
+                "U1"
+              ],
+              "declared_uncertainty_ids": [
+                "Q0"
+              ],
+              "interpretation": "I1",
+              "interpretation_status": "disputed",
+              "kind": "source_claim",
+              "opaque_propositions": [],
+              "representation": "INCOMPLETE",
+              "residual_intersections": "NONE_IN_RETURNED_SPAN",
+              "residuals": [],
+              "unit": "U1"
+            },
+            {
+              "assurance": {
+                "context_adequacy": "UNPROVEN",
+                "execution_authority": "NONE",
+                "interpretation_entailment": "UNPROVEN",
+                "semantic_completeness": "UNPROVEN",
+                "typing": "TESTED_NOT_FORMALLY_PROVED"
+              },
+              "declared_ambiguities": [],
+              "declared_dependency_ids": [
+                "I2",
+                "SOURCE",
+                "U2"
+              ],
+              "declared_uncertainty_ids": [],
+              "interpretation": "I2",
+              "interpretation_status": "withdrawn",
+              "kind": "source_claim",
+              "opaque_propositions": [],
+              "representation": "INCOMPLETE",
+              "residual_intersections": "NONE_IN_RETURNED_SPAN",
+              "residuals": [],
+              "unit": "U2"
+            },
+            {
+              "assurance": {
+                "context_adequacy": "UNPROVEN",
+                "execution_authority": "NONE",
+                "interpretation_entailment": "UNPROVEN",
+                "semantic_completeness": "UNPROVEN",
+                "typing": "TESTED_NOT_FORMALLY_PROVED"
+              },
+              "declared_ambiguities": [
+                {
+                  "index": 0,
+                  "returned_span": null,
+                  "span": [
+                    0,
+                    4108
+                  ]
+                }
+              ],
+              "declared_dependency_ids": [
+                "I3",
+                "QOTHER",
+                "SOURCE",
+                "U3"
+              ],
+              "declared_uncertainty_ids": [
+                "QOTHER"
+              ],
+              "interpretation": "I3",
+              "interpretation_status": "proposed",
+              "kind": "source_claim",
+              "opaque_propositions": [],
+              "representation": "PROPOSED_STRUCTURED_READING",
+              "residual_intersections": "NONE_IN_RETURNED_SPAN",
+              "residuals": [],
+              "unit": "U3"
+            }
+          ],
+          "residual_meaning": "Per-unit bytes outside declared spans, cues and mentions; not semantic coverage.",
+          "schema": "transport/source-page-review/1",
+          "scope": "SOURCE_SPAN_ANNOTATIONS_ONLY",
+          "typed_readings": "SUPPLIED_FOR_SOURCE",
+          "uncertainty_selection": "DECLARED_DEPENDENCY_CLOSURE_ONLY_ABSENCE_IS_NOT_CERTAINTY"
+        },
+        "source": "SOURCE",
+        "source_sha256": "5048980fe6b5cb1d64ef0051ce69ae8027509059d62323699e8028130cc76131",
+        "span": [
+          4108,
+          4108
+        ],
+        "utf8_available": true
+      },
+      {
+        "authority": "NONE",
+        "bytes": 8,
+        "context_adequacy": "UNPROVEN",
+        "page_sha256": "1b629bb32c0b4fb2b1c9ab968999cb54745744bb78f87ffa33633e67f5897890",
+        "review": {
+          "context_adequacy": "UNPROVEN",
+          "execution_authority": "NONE",
+          "meaning_units": [],
+          "residual_meaning": "Per-unit bytes outside declared spans, cues and mentions; not semantic coverage.",
+          "schema": "transport/source-page-review/1",
+          "scope": "SOURCE_SPAN_ANNOTATIONS_ONLY",
+          "typed_readings": "NONE_SUPPLIED_FOR_SOURCE",
+          "uncertainty_selection": "DECLARED_DEPENDENCY_CLOSURE_ONLY_ABSENCE_IS_NOT_CERTAINTY"
+        },
+        "source": "SOURCE",
+        "source_sha256": "1b629bb32c0b4fb2b1c9ab968999cb54745744bb78f87ffa33633e67f5897890",
+        "span": [
+          0,
+          8
+        ],
+        "utf8_available": false
+      },
+      {
+        "authority": "NONE",
+        "bytes": 0,
+        "context_adequacy": "UNPROVEN",
+        "page_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "review": {
+          "context_adequacy": "UNPROVEN",
+          "execution_authority": "NONE",
+          "meaning_units": [],
+          "residual_meaning": "Per-unit bytes outside declared spans, cues and mentions; not semantic coverage.",
+          "schema": "transport/source-page-review/1",
+          "scope": "SOURCE_SPAN_ANNOTATIONS_ONLY",
+          "typed_readings": "NONE_SUPPLIED_FOR_SOURCE",
+          "uncertainty_selection": "DECLARED_DEPENDENCY_CLOSURE_ONLY_ABSENCE_IS_NOT_CERTAINTY"
+        },
+        "source": "SOURCE",
+        "source_sha256": "1b629bb32c0b4fb2b1c9ab968999cb54745744bb78f87ffa33633e67f5897890",
+        "span": [
+          8,
+          8
+        ],
+        "utf8_available": true
+      },
+      {
+        "authority": "NONE",
+        "bytes": 0,
+        "context_adequacy": "UNPROVEN",
+        "page_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "review": {
+          "context_adequacy": "UNPROVEN",
+          "execution_authority": "NONE",
+          "meaning_units": [],
+          "residual_meaning": "Per-unit bytes outside declared spans, cues and mentions; not semantic coverage.",
+          "schema": "transport/source-page-review/1",
+          "scope": "SOURCE_SPAN_ANNOTATIONS_ONLY",
+          "typed_readings": "NONE_SUPPLIED_FOR_SOURCE",
+          "uncertainty_selection": "DECLARED_DEPENDENCY_CLOSURE_ONLY_ABSENCE_IS_NOT_CERTAINTY"
+        },
+        "source": "EMPTY",
+        "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "span": [
+          0,
+          0
+        ],
+        "utf8_available": true
+      },
+      {
+        "authority": "NONE",
+        "bytes": 0,
+        "context_adequacy": "UNPROVEN",
+        "page_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "review": {
+          "context_adequacy": "UNPROVEN",
+          "execution_authority": "NONE",
+          "meaning_units": [],
+          "residual_meaning": "Per-unit bytes outside declared spans, cues and mentions; not semantic coverage.",
+          "schema": "transport/source-page-review/1",
+          "scope": "SOURCE_SPAN_ANNOTATIONS_ONLY",
+          "typed_readings": "NONE_SUPPLIED_FOR_SOURCE",
+          "uncertainty_selection": "DECLARED_DEPENDENCY_CLOSURE_ONLY_ABSENCE_IS_NOT_CERTAINTY"
+        },
+        "source": "EMPTY",
+        "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "span": [
+          0,
+          0
+        ],
+        "utf8_available": true
+      }
+    ],
+    "status": "SOURCE_PAGE_REVIEW_ACTUAL_SDK_STDIO_TESTED",
+    "stdout_bytes": 39942,
+    "trace_kind": "SDK response serialization; not original wire byte serialization"
+  },
+  "status": "TESTED_LOCAL_DEVELOPMENT_CHECKPOINT"
+}
