@@ -1,0 +1,5 @@
+[MEASUREMENT]
+The synthetic rehearsal receipt for cedar-v4-green originally reported a peak working set of 24 MiB over a 12 s interval. These quantities are attributed rehearsal reports, not proved bounds, runtime requirements, deployment measurements, or permission to publish. No current-target energy measurement is supplied; absence means UNKNOWN_MISSING, not zero energy or an inferred value.
+
+[MEASUREMENT_CORRECTION]
+Correction to MEASUREMENT: the current reported peak working set is 26 MiB, replacing the earlier reported 24 MiB; the reported interval remains 12 s. Preserve the earlier value as a historical corrected report and the new value as the current attributed report, with their units unchanged. This correction changes only that reported peak, supplies no energy measurement, and does not change any candidate, receipt, publication condition, approval, revocation, or execution authority.

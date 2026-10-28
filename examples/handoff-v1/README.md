@@ -9,9 +9,11 @@ between those two units bypasses that retrieval requirement.
 
 The source files, task, expected answer, rubric, unit map and compiled input plan
 are preserved from the frozen fixture. The input plan was encoded successfully
-within the existing bounds using the corrected installed runtime. **Actual
-recipient and matched original-document baseline trials are `UNRUN`.** Encoding
-and source recovery do not establish behavioral advantage or semantic fidelity.
+within the existing bounds using the corrected installed runtime. The subsequent
+[matched recipient comparison](../../docs/HANDOFF_COMPARISON.md) records both
+first answers and independent assessments. Both passed that frozen source task;
+no behavioral advantage was established. Encoding and source recovery alone do
+not establish semantic fidelity.
 
 ## Reproduce a package
 

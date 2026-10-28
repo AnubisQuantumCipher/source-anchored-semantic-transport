@@ -1,0 +1,100 @@
+{
+  "draft_name": "cedar-applicability-blocked-draft.json",
+  "target": {
+    "proposed_source_target": "cedar-v3-red",
+    "proposed_source_draft_name": "cedar-v3-red-handoff-draft.json",
+    "effective_target": "UNKNOWN_APPLICABILITY",
+    "effective_source_draft_name": "UNKNOWN_APPLICABILITY"
+  },
+  "draft_status": "PREPARED_IN_RESPONSE_BLOCKED",
+  "goal": "Accurate public release dossier for the current candidate; current candidate applicability is unresolved and publication is not an observed event.",
+  "release_disposition": "HOLD",
+  "checks": {
+    "build": {
+      "receipt_candidate": "cedar-v4-green",
+      "reported_status": "COMPLETE",
+      "independently_verified": "UNKNOWN",
+      "effective_target_coverage": "UNKNOWN_TARGET_UNDETERMINED"
+    },
+    "security": {
+      "receipt_candidate": "cedar-v3-red",
+      "reported_status": "ACKNOWLEDGED",
+      "cedar_v4_green_acknowledgement": "UNKNOWN_MISSING",
+      "effective_target_coverage": "UNKNOWN_TARGET_UNDETERMINED"
+    },
+    "validation": {
+      "receipt_candidate": "cedar-v4-green",
+      "status": "CONFLICTED",
+      "reports": [
+        "PASS",
+        "FAIL"
+      ],
+      "resolution": "UNKNOWN",
+      "effective_target_coverage": "UNKNOWN_TARGET_UNDETERMINED"
+    },
+    "peer_acknowledgement": {
+      "missing_receipt_candidate": "cedar-v4-green",
+      "status": "UNKNOWN_MISSING",
+      "effective_target_coverage": "UNKNOWN_TARGET_UNDETERMINED"
+    }
+  },
+  "historical_approval": {
+    "candidate": "cedar-v3-red",
+    "current_applicability": "UNKNOWN",
+    "revocation_applicability": "UNKNOWN",
+    "replacement_approval": "UNKNOWN_MISSING",
+    "execution_authority_from_source": "NONE"
+  },
+  "publication_time": "UNKNOWN_UNSPECIFIED",
+  "pending_after_response": [
+    "Applicability record review",
+    "Effective target and source draft-name confirmation",
+    "Publication decision",
+    "Effective-target evidence checks",
+    "Validation reconciliation",
+    "Current publication approval"
+  ],
+  "applicability": {
+    "correction": "UNKNOWN",
+    "revocation": "UNKNOWN",
+    "record": "UNKNOWN_MISSING",
+    "neither_absence_nor_presence_inferred": true
+  },
+  "evidence": {
+    "goal": [
+      "GOAL"
+    ],
+    "documentary_instructions": [
+      "INSTRUCTION"
+    ],
+    "proposed_task": [
+      "PENDING"
+    ],
+    "unknown_applicability": [
+      "APPLICABILITY"
+    ],
+    "reported_checks": [
+      "BUILD",
+      "SECURITY",
+      "VALIDATION_A",
+      "VALIDATION_B",
+      "MISSING"
+    ],
+    "historical_approval": [
+      "APPROVAL"
+    ],
+    "hold": [
+      "APPLICABILITY",
+      "INSTRUCTION",
+      "MISSING",
+      "VALIDATION_A",
+      "VALIDATION_B"
+    ],
+    "remaining_work": [
+      "APPLICABILITY",
+      "PENDING",
+      "INSTRUCTION",
+      "MISSING"
+    ]
+  }
+}
