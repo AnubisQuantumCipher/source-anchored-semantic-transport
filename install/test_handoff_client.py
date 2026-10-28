@@ -3,6 +3,7 @@
 
 import base64
 import json
+import os
 from pathlib import Path
 import sys
 import tempfile
@@ -11,6 +12,7 @@ import unittest
 sys.dont_write_bytecode = True
 sys.path.insert(0, str(Path(__file__).absolute().parent))
 import transport_handoff_prepare as preparation
+import transport_handoff_inputs as inputs
 from transport_install_support import canonical, read_regular, run_bounded, sha, write_new
 
 HERE = Path(__file__).absolute().parent
@@ -70,6 +72,26 @@ class ClientControls(unittest.TestCase):
         self.assertEqual(value['status'], 'OK')
         self.assertEqual(value['result']['authority'], 'NONE')
 
+    def file_call(self, path, digest=None, extra=()):
+        options = ['--request-file', str(path)]
+        if digest is not None:
+            options.extend(['--expect-request-sha256', digest])
+        result = run_bounded(self.argv(*options, *extra), self.root, inputs.ENV, timeout=40, cap=131072)
+        self.assertIn(result['status'], ('SUCCESS', 'EXIT_NONZERO'))
+        self.assertEqual(result['stderr'], b'')
+        self.assertTrue(result['stdout'].endswith(b'\n'))
+        value = json.loads(result['stdout'])
+        self.assertEqual(result['exit_code'], 0 if value['status'] == 'OK' else 1)
+        return value, result['stdout']
+
+    def file_refused(self, path, digest=None):
+        value, _ = self.file_call(path, digest)
+        self.assertEqual(value['schema'], 'transport/handoff-client-refusal/1')
+        self.assertEqual(value['status'], 'REFUSED')
+        self.assertFalse(value['result']['reader_action_may_be_recorded'])
+        self.assertFalse((self.prepared / 'sessions/recipient').exists())
+        return value
+
     def recorded(self, number, raw, answer, complete=True, length=None):
         session = self.prepared / 'sessions/recipient'
         item = json.loads(read_regular(session / ('call-%02d.json' % number)))
@@ -125,6 +147,52 @@ class ClientControls(unittest.TestCase):
         value, _ = self.request(b'{"action":"describe"}')
         self.assertEqual(value['schema'], 'transport/handoff-client-refusal/1')
         self.assertFalse(value['result']['reader_action_may_be_recorded'])
+        self.assertFalse((self.prepared / 'sessions/recipient').exists())
+
+    def test_pinned_request_file_at_cap_records_exact_bytes(self):
+        document = b'{"action":"describe"}'
+        raw = document + b' ' * (inputs.REQUEST_CAP - len(document))
+        path = self.root / 'request.json'
+        write_new(path, raw)
+        value, answer = self.file_call(path, sha(raw))
+        self.assertEqual(value['status'], 'OK')
+        self.recorded(1, raw, answer)
+
+    def test_request_file_missing_wrong_malformed_digest_no_dispatch(self):
+        raw, path = b'{"action":"describe"}', self.root / 'request.json'
+        write_new(path, raw)
+        for digest in (None, '0' * 64, '', sha(raw).upper(), 'x' * 64):
+            with self.subTest(digest=digest):
+                self.file_refused(path, digest)
+        path.write_bytes(raw + b'\n')
+        self.file_refused(path, sha(raw))
+
+    def test_request_file_symlink_nonregular_missing_and_overlimit_no_dispatch(self):
+        raw, path = b'{"action":"describe"}', self.root / 'request.json'
+        write_new(path, raw)
+        link = self.root / 'link.json'
+        link.symlink_to(path)
+        fifo = self.root / 'fifo'
+        os.mkfifo(fifo, 0o600)
+        for refused in (link, self.root, fifo, self.root / 'missing.json'):
+            with self.subTest(path=refused):
+                self.file_refused(refused, sha(raw))
+        large = raw + b' ' * (inputs.REQUEST_CAP + 1 - len(raw))
+        path.write_bytes(large)
+        self.file_refused(path, sha(large))
+
+    def test_request_file_option_pairing_and_exclusivity(self):
+        for mode in (('--stdin',), ('--request-json', '{"action":"describe"}')):
+            result = run_bounded(self.argv(*mode, '--expect-request-sha256', '0' * 64),
+                                 self.root, inputs.ENV, timeout=40, cap=131072)
+            self.assertEqual(result['stderr'], b'')
+            value = json.loads(result['stdout'])
+            self.assertEqual(value['status'], 'REFUSED')
+            self.assertFalse(value['result']['reader_action_may_be_recorded'])
+            result = run_bounded(self.argv(*mode, '--request-file', str(self.root / 'unused')),
+                                 self.root, inputs.ENV, timeout=40, cap=131072)
+            self.assertEqual(result['exit_code'], 2)
+            self.assertIn(b'not allowed with argument', result['stderr'])
         self.assertFalse((self.prepared / 'sessions/recipient').exists())
 
     def test_source_drift_refuses_without_candidate(self):

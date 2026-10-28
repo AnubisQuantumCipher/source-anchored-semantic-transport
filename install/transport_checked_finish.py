@@ -8,6 +8,7 @@ import base64
 from pathlib import Path
 import resource
 import sys
+import tempfile
 
 sys.dont_write_bytecode = True
 sys.path.insert(0, str(Path(__file__).absolute().parent))
@@ -15,7 +16,7 @@ import transport_handoff_inputs as inputs
 import transport_response_contract as validator
 import transport_response_contract_model as model
 from transport_install_layout import exact_tree
-from transport_install_support import canonical, read_regular, require, run_bounded, sha
+from transport_install_support import canonical, read_regular, require, run_bounded, sha, write_new
 
 HERE = Path(__file__).absolute().parent
 MAX_TRACKED, MAX_TRACKED_BYTES, PROCESS_CAP = 48, 16777216, 8192
@@ -109,18 +110,22 @@ def client_call(state, value, request):
     require(len(state['calls']) < 2, 'checked-submit call count bound')
     raw = canonical(request)
     require(len(raw) <= inputs.REQUEST_CAP, 'client request bound')
-    argv = [value['python']['path'], '-I', '-S', '-B', '-Werror', value['client']['path'], '--binding',
-            str(state['args'].binding), '--expect-binding-sha256', state['args'].expect_binding_sha256, '--request-json', raw.decode()]
-    recheck(state)
-    state['client_dispatched'] = True
-    if request['action'] == 'finish':
-        state['finish_dispatched'] = True
-    result = run_bounded(argv, Path(value['client']['path']).parent, inputs.ENV, timeout=35, cap=PROCESS_CAP)
-    observation = {key: result[key] for key in ('status', 'exit_code', 'elapsed_ns')}
-    complete = result['status'] in ('SUCCESS', 'EXIT_NONZERO')
-    observation.update(action=request['action'], stdout=captured_stream(result['stdout'], complete),
-                       stderr=captured_stream(result['stderr'], complete))
-    state['calls'].append(observation)
+    with tempfile.TemporaryDirectory(prefix='transport-checked-request-') as temporary:
+        request_path = Path(temporary) / 'request.json'
+        write_new(request_path, raw, inputs.REQUEST_CAP)
+        argv = [value['python']['path'], '-I', '-S', '-B', '-Werror', value['client']['path'], '--binding',
+                str(state['args'].binding), '--expect-binding-sha256', state['args'].expect_binding_sha256,
+                '--request-file', str(request_path), '--expect-request-sha256', sha(raw)]
+        recheck(state)
+        state['client_dispatched'] = True
+        if request['action'] == 'finish':
+            state['finish_dispatched'] = True
+        result = run_bounded(argv, Path(value['client']['path']).parent, inputs.ENV, timeout=35, cap=PROCESS_CAP)
+        observation = {key: result[key] for key in ('status', 'exit_code', 'elapsed_ns')}
+        complete = result['status'] in ('SUCCESS', 'EXIT_NONZERO')
+        observation.update(action=request['action'], stdout=captured_stream(result['stdout'], complete),
+                           stderr=captured_stream(result['stderr'], complete))
+        state['calls'].append(observation)
     require(result['status'] in ('SUCCESS', 'EXIT_NONZERO') and not result['stderr'] and bool(result['stdout']), 'bounded client process refused')
     require(result['stdout'].endswith(b'\n'), 'client response framing differs')
     answer = inputs.json_value(result['stdout'], PROCESS_CAP)

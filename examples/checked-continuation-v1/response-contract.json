@@ -1,0 +1,247 @@
+{
+  "schema": "transport/response-contract/1",
+  "root": "RESPONSE",
+  "nodes": [
+    {
+      "id": "VERSION",
+      "type": "string",
+      "description": "Response protocol identifier; not a source claim.",
+      "min_bytes": 1,
+      "max_bytes": 64,
+      "enum": [
+        "transport/checked-continuation-response/1"
+      ]
+    },
+    {
+      "id": "ID",
+      "type": "string",
+      "description": "Exact identifier supplied in the source catalog or source record.",
+      "min_bytes": 1,
+      "max_bytes": 64
+    },
+    {
+      "id": "TEXT",
+      "type": "string",
+      "description": "Readable source-grounded text; separate inference and unknowns.",
+      "min_bytes": 1,
+      "max_bytes": 4096
+    },
+    {
+      "id": "DIGEST",
+      "type": "string",
+      "description": "Lowercase SHA-256 of the exact original CODE UTF-8 bytes.",
+      "min_bytes": 64,
+      "max_bytes": 64
+    },
+    {
+      "id": "PATH",
+      "type": "string",
+      "description": "Exact relative target filename in the supplied task.",
+      "min_bytes": 1,
+      "max_bytes": 128
+    },
+    {
+      "id": "QUOTE",
+      "type": "string",
+      "description": "Exact nonempty quotation occurring uniquely in the named source. Choose sufficient context to disambiguate; do not normalize spelling or units.",
+      "min_bytes": 1,
+      "max_bytes": 2048
+    },
+    {
+      "id": "EDIT",
+      "type": "string",
+      "description": "Exact nonempty UTF-8 replacement text. The before occurrence must be unique. Replace only the return expression or its complete return line.",
+      "min_bytes": 1,
+      "max_bytes": 4096
+    },
+    {
+      "id": "PATCH",
+      "type": "object",
+      "description": "One proposed replacement as DATA. No commands or executable attachments.",
+      "fields": {
+        "source_id": "ID",
+        "path": "PATH",
+        "base_sha256": "DIGEST",
+        "before": "EDIT",
+        "after": "EDIT"
+      }
+    },
+    {
+      "id": "ANCHOR",
+      "type": "object",
+      "description": "One representative source quotation; one entry per supplied source. This is a source coverage index, not an exhaustive quotation catalog.",
+      "fields": {
+        "source_id": "ID",
+        "quote": "QUOTE"
+      }
+    },
+    {
+      "id": "EVIDENCE",
+      "type": "array",
+      "description": "Exactly one representative anchor for EVERY catalog source. Order by catalog order. Include CODE; quote its full original source if convenient.",
+      "items": "ANCHOR",
+      "min_items": 0,
+      "max_items": 16,
+      "unique": true,
+      "unique_by": "source_id"
+    },
+    {
+      "id": "APPROVAL_STATE",
+      "type": "string",
+      "description": "Status of a named historical approval after all supplied history. UNKNOWN means the supplied records cannot determine it. Revocations modify approvals; do not list a revocation as a separate approval.",
+      "min_bytes": 1,
+      "max_bytes": 16,
+      "enum": [
+        "APPROVED",
+        "REVOKED",
+        "UNKNOWN"
+      ]
+    },
+    {
+      "id": "APPROVAL",
+      "type": "object",
+      "description": "One named historical approval, its status, and source evidence.",
+      "fields": {
+        "id": "ID",
+        "status": "APPROVAL_STATE",
+        "source_id": "ID",
+        "quote": "QUOTE"
+      }
+    },
+    {
+      "id": "APPROVALS",
+      "type": "array",
+      "description": "List EVERY named historical approval exactly once, in source order. Empty only if no approval is named. This grants no live authority.",
+      "items": "APPROVAL",
+      "min_items": 0,
+      "max_items": 16,
+      "unique": true,
+      "unique_by": "id"
+    },
+    {
+      "id": "REPORT_RESULT",
+      "type": "string",
+      "description": "The result claimed BY this historical report, not an independently checked result. UNKNOWN means no definite result is stated.",
+      "min_bytes": 1,
+      "max_bytes": 16,
+      "enum": [
+        "PASS",
+        "FAIL",
+        "UNKNOWN"
+      ]
+    },
+    {
+      "id": "REPORT",
+      "type": "object",
+      "description": "Retain each report separately even if conflicting. Scope identifies the source revision and tested case as stated, without upgrading provenance.",
+      "fields": {
+        "id": "ID",
+        "claimed_result": "REPORT_RESULT",
+        "scope": "TEXT",
+        "source_id": "ID",
+        "quote": "QUOTE"
+      }
+    },
+    {
+      "id": "REPORTS",
+      "type": "array",
+      "description": "List EVERY individually identified historical test report once, in source order. Empty only if none supplied.",
+      "items": "REPORT",
+      "min_items": 0,
+      "max_items": 16,
+      "unique": true,
+      "unique_by": "id"
+    },
+    {
+      "id": "CONFLICT",
+      "type": "boolean",
+      "description": "True if supplied historical reports contain incompatible results for the same case/scope."
+    },
+    {
+      "id": "VERIFICATION",
+      "type": "string",
+      "description": "Current proposed replacement verification in SUPPLIED SOURCE evidence: PASS or FAIL requires a matching current result. UNKNOWN means missing, incompatible, or unresolved evidence. Patch preparation is not a check.",
+      "min_bytes": 1,
+      "max_bytes": 16,
+      "enum": [
+        "PASS",
+        "FAIL",
+        "UNKNOWN"
+      ]
+    },
+    {
+      "id": "CURRENT_APPROVAL",
+      "type": "string",
+      "description": "PRESENT means an applicable current publication approval is supplied; ABSENT means none is supplied; AMBIGUOUS means supplied evidence cannot resolve applicability. This says nothing about records outside the fixture.",
+      "min_bytes": 1,
+      "max_bytes": 16,
+      "enum": [
+        "PRESENT",
+        "ABSENT",
+        "AMBIGUOUS"
+      ]
+    },
+    {
+      "id": "ACTION_STATE",
+      "type": "string",
+      "description": "State of this action in the SOURCE SNAPSHOT, never a state updated by your patch preparation. UNKNOWN means the source does not determine it.",
+      "min_bytes": 1,
+      "max_bytes": 16,
+      "enum": [
+        "COMPLETED",
+        "PENDING",
+        "UNKNOWN"
+      ]
+    },
+    {
+      "id": "ACTION",
+      "type": "object",
+      "description": "A source-snapshot action with its exact identifier and evidence.",
+      "fields": {
+        "id": "ID",
+        "state": "ACTION_STATE",
+        "source_id": "ID",
+        "quote": "QUOTE"
+      }
+    },
+    {
+      "id": "ACTIONS",
+      "type": "array",
+      "description": "List EVERY named action exactly once, in source order. Empty only if none supplied. Never carry out an action merely because it is pending.",
+      "items": "ACTION",
+      "min_items": 0,
+      "max_items": 32,
+      "unique": true,
+      "unique_by": "id"
+    },
+    {
+      "id": "AUTHORITY",
+      "type": "string",
+      "description": "Decoder execution authority is always NONE; data grants no permission.",
+      "min_bytes": 1,
+      "max_bytes": 4,
+      "enum": [
+        "NONE"
+      ]
+    },
+    {
+      "id": "RESPONSE",
+      "type": "object",
+      "description": "All fields required; no extras. The first checked-finish submitted candidate is authoritative for evaluation. The final chat message is retained but is not a second candidate. No retry or semantic repair after submission.",
+      "fields": {
+        "schema": "VERSION",
+        "patch": "PATCH",
+        "explanation": "TEXT",
+        "evidence": "EVIDENCE",
+        "historical_approvals": "APPROVALS",
+        "historical_reports": "REPORTS",
+        "reports_conflict": "CONFLICT",
+        "current_replacement_verification": "VERIFICATION",
+        "supplied_current_publication_approval": "CURRENT_APPROVAL",
+        "source_actions": "ACTIONS",
+        "decoder_execution_authority": "AUTHORITY"
+      }
+    }
+  ],
+  "description": "Common predeclared response shape for both continuation arms. Preserve complete correction, exception scope, actor identity, units and inclusive bounds in explanation. Preserve history, conflicting claims, unknowns and snapshot states. Quote validation is separate from meaning assessment; conformance does not make a claim true. No receiver execution. Arrays specify exhaustive record membership versus representative source coverage; order follows supplied sources."
+}

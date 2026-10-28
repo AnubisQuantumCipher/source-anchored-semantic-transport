@@ -29,6 +29,8 @@ def arguments():
     request = parser.add_mutually_exclusive_group(required=True)
     request.add_argument('--request-json')
     request.add_argument('--stdin', action='store_true')
+    request.add_argument('--request-file', type=Path)
+    parser.add_argument('--expect-request-sha256')
     return parser.parse_args()
 
 
@@ -67,6 +69,13 @@ def binding(path, held):
 
 
 def intake(args):
+    if args.request_file is not None:
+        require(args.expect_request_sha256 is not None, '--request-file requires --expect-request-sha256')
+        expected = inputs.digest(args.expect_request_sha256)
+        raw = read_regular(args.request_file, inputs.REQUEST_CAP)
+        require(sha(raw) == expected, 'externally held request digest differs')
+        return raw, len(raw), ''
+    require(args.expect_request_sha256 is None, '--expect-request-sha256 requires --request-file')
     if args.request_json is not None:
         raw = args.request_json.encode('utf-8')
         return raw[:inputs.REQUEST_CAP + 1], len(raw), ''

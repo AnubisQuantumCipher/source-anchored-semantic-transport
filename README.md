@@ -4,6 +4,8 @@ Carry a readable relational formula, its meaning keys, and the original evidence
 
 One encoding produces a compact share text, a matched meaning ZIP, and a readable lexicon. The ZIP carries the exact sources, typed relationships, qualifications, uncertainty, provenance, operator definitions, and recovery instructions. The receiving decoder checks the pair and exposes the recovered material for a human or an AI to explain.
 
+The [checked continuation case](docs/CHECKED_CONTINUATION.md) now follows a fresh agent from source retrieval to a proposed patch, exact submission, finite-domain behavior checks and separate source review. Both transport and the original-document baseline passed after a real submission defect was repaired. The initial failures remain available; this case does not show that transport outperforms the baseline.
+
 This is an open-source implementation under the [MIT license](LICENSE), targeting Omarchy. It is a **development checkpoint**, with bounded local functionality and explicit acceptance limits. It is not an official client plugin, an Omarchy marketplace release, or a claim of complete natural-language understanding.
 
 ## What is implemented
@@ -17,6 +19,7 @@ This is an open-source implementation under the [MIT license](LICENSE), targetin
 - A local CLI, a read-only MCP adapter, and a source-build installer that derives an exact runtime identity without editing the original source pins.
 - A reusable handoff preparer and compact receiving client with a fixed session, checked inputs, and an unedited draft submission.
 - An opt-in checked submission command that validates explicit field types, allowed values and unique action IDs before saving a draft.
+- A bounded, typed Boolean-expression interpreter for fixture bindings: it checks proposed patches against supplied states without executing candidate Python code.
 
 ## Start
 
@@ -61,6 +64,7 @@ The short formula is an entry point into the package. It cannot independently re
 - [Validate a response contract and submit exact draft bytes](install/CHECKED_FINISH.md)
 - [Missing-record trial and retained failures](docs/MISSING_RECORD_HANDOFF.md)
 - [Three-hop comparison and its retained output failures](docs/REPEATED_HANDOFF.md)
+- [Checked coding continuation, repaired submission and baseline comparison](docs/CHECKED_CONTINUATION.md)
 - [Source review, interpretation gaps and governing records](docs/SOURCE_REVIEW.md)
 - [Reproducible handoff with corrections, revocation and missing evidence](examples/handoff-v1/README.md)
 - [Security boundaries](SECURITY.md)
