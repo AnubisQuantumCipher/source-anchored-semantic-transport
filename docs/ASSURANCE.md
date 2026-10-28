@@ -25,6 +25,12 @@ The unchanged codec suites and installed-product controls passed on this new run
 
 This result closes the observed build-metadata obstacle for that pair. It does not replace the original failed comparison, establish compatibility across hosts, or qualify AI prose. No receiving-model trial or new formal proof campaign was performed.
 
+## Fresh receiving-agent follow-up
+
+The [recipient-trial receipt](../receipts/recipient-trials-1.json) records a later campaign against the unchanged installed runtime. Two first-candidate explanations received independent, source-grounded assessments against criteria frozen before either candidate: the historical plan passed 76 obligations and the synthetic loan passage passed eight. The result class is `BOUNDED_OBSERVED_SOURCE_COMPARISON`. Separate checks confirmed exact recovered/exported source bytes, unchanged candidate export and the observed tool protocol.
+
+Initial plaintext dispatch equality remains `UNKNOWN` because the child launch payload is encrypted in the available record. Requested fresh contexts and observed model settings are recorded; they do not prove backend identity or absence of hidden host access. No matched-baseline advantage, arbitrary-document completeness, current authority, or new formal proof is established. Earlier delivery and diagram-copy failures remain failures. See [trial design, reproduction limits and costs](RECIPIENT_TRIALS.md). The earlier statements about no receiving-model run describe their original checkpoints, not this later campaign.
+
 ## Reproduce without changing frozen fixtures
 
 The [source-page review follow-up](../receipts/source-review-1.json) adds bounded annotations to existing MCP pages. Its full installed-product campaign passed nine controls, including actual local SDK exchanges for page-boundary residuals, multiple readings, opaque passages, grammar ambiguity, declared uncertainty, and a broad cue that still cannot establish completeness. The exact core runtime remains byte-identical to the preceding reproducibility checkpoint; its frozen package validates identically with both installed CLIs. The earlier core regression suite was not rerun for this adapter-only change.

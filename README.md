@@ -52,6 +52,7 @@ The short formula is an entry point into the package. It cannot independently re
 - [Package and semantic schema](docs/PACKAGE.md)
 - [Assurance, tests and known failures](docs/ASSURANCE.md)
 - [Repeated builds and package handoff](docs/REPRODUCIBILITY.md)
+- [Fresh recipient trials, measured costs and remaining unknowns](docs/RECIPIENT_TRIALS.md)
 - [Source review, interpretation gaps and governing records](docs/SOURCE_REVIEW.md)
 - [Security boundaries](SECURITY.md)
 - [Contribution rules](CONTRIBUTING.md)

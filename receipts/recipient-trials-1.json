@@ -1,0 +1,431 @@
+{
+  "accounting": {
+    "amortized": [
+      {
+        "case": "plan",
+        "expression": "((1850696+30442+8408)+1*(82218+18843+991))/1",
+        "result": {
+          "assurance": "exact rational arithmetic (not yet checker-covered)",
+          "engine_output": "status=exact parsed=(1850696+30442+8408+1*(82218+18843+991))/1 exact=1991598 approx=1991598",
+          "fields": {
+            "approx": "1991598",
+            "exact": "1991598",
+            "parsed": "(1850696+30442+8408+1*(82218+18843+991))/1",
+            "status": "exact"
+          },
+          "formal": false,
+          "identities": {
+            "evaluator_sha256": "4c0ae28d2f41353332dbb29f1b6084cd275d08bad73a84942fbe6f500255d872"
+          },
+          "lane": "rat",
+          "non_claims": [
+            "NOT formal-bounded: this lane carries no Lean-checked certificate",
+            "The epistemic class above is the STRONGEST claim this result supports",
+            "exact rational arithmetic (not yet checker-covered)"
+          ],
+          "status": "exact"
+        },
+        "reuse": 1
+      },
+      {
+        "case": "plan",
+        "expression": "((1850696+30442+8408)+10*(82218+18843+991))/10",
+        "result": {
+          "assurance": "exact rational arithmetic (not yet checker-covered)",
+          "engine_output": "status=exact parsed=(1850696+30442+8408+10*(82218+18843+991))/10 exact=1455033/5 approx=291006.6",
+          "fields": {
+            "approx": "291006.6",
+            "exact": "1455033/5",
+            "parsed": "(1850696+30442+8408+10*(82218+18843+991))/10",
+            "status": "exact"
+          },
+          "formal": false,
+          "identities": {
+            "evaluator_sha256": "4c0ae28d2f41353332dbb29f1b6084cd275d08bad73a84942fbe6f500255d872"
+          },
+          "lane": "rat",
+          "non_claims": [
+            "NOT formal-bounded: this lane carries no Lean-checked certificate",
+            "The epistemic class above is the STRONGEST claim this result supports",
+            "exact rational arithmetic (not yet checker-covered)"
+          ],
+          "status": "exact"
+        },
+        "reuse": 10
+      },
+      {
+        "case": "plan",
+        "expression": "((1850696+30442+8408)+100*(82218+18843+991))/100",
+        "result": {
+          "assurance": "exact rational arithmetic (not yet checker-covered)",
+          "engine_output": "status=exact parsed=(1850696+30442+8408+100*(82218+18843+991))/100 exact=6047373/50 approx=120947.46",
+          "fields": {
+            "approx": "120947.46",
+            "exact": "6047373/50",
+            "parsed": "(1850696+30442+8408+100*(82218+18843+991))/100",
+            "status": "exact"
+          },
+          "formal": false,
+          "identities": {
+            "evaluator_sha256": "4c0ae28d2f41353332dbb29f1b6084cd275d08bad73a84942fbe6f500255d872"
+          },
+          "lane": "rat",
+          "non_claims": [
+            "NOT formal-bounded: this lane carries no Lean-checked certificate",
+            "The epistemic class above is the STRONGEST claim this result supports",
+            "exact rational arithmetic (not yet checker-covered)"
+          ],
+          "status": "exact"
+        },
+        "reuse": 100
+      },
+      {
+        "case": "loan",
+        "expression": "((1850696+30442+8408)+1*(72190+10243+991))/1",
+        "result": {
+          "assurance": "exact rational arithmetic (not yet checker-covered)",
+          "engine_output": "status=exact parsed=(1850696+30442+8408+1*(72190+10243+991))/1 exact=1972970 approx=1972970",
+          "fields": {
+            "approx": "1972970",
+            "exact": "1972970",
+            "parsed": "(1850696+30442+8408+1*(72190+10243+991))/1",
+            "status": "exact"
+          },
+          "formal": false,
+          "identities": {
+            "evaluator_sha256": "4c0ae28d2f41353332dbb29f1b6084cd275d08bad73a84942fbe6f500255d872"
+          },
+          "lane": "rat",
+          "non_claims": [
+            "NOT formal-bounded: this lane carries no Lean-checked certificate",
+            "The epistemic class above is the STRONGEST claim this result supports",
+            "exact rational arithmetic (not yet checker-covered)"
+          ],
+          "status": "exact"
+        },
+        "reuse": 1
+      },
+      {
+        "case": "loan",
+        "expression": "((1850696+30442+8408)+10*(72190+10243+991))/10",
+        "result": {
+          "assurance": "exact rational arithmetic (not yet checker-covered)",
+          "engine_output": "status=exact parsed=(1850696+30442+8408+10*(72190+10243+991))/10 exact=1361893/5 approx=272378.6",
+          "fields": {
+            "approx": "272378.6",
+            "exact": "1361893/5",
+            "parsed": "(1850696+30442+8408+10*(72190+10243+991))/10",
+            "status": "exact"
+          },
+          "formal": false,
+          "identities": {
+            "evaluator_sha256": "4c0ae28d2f41353332dbb29f1b6084cd275d08bad73a84942fbe6f500255d872"
+          },
+          "lane": "rat",
+          "non_claims": [
+            "NOT formal-bounded: this lane carries no Lean-checked certificate",
+            "The epistemic class above is the STRONGEST claim this result supports",
+            "exact rational arithmetic (not yet checker-covered)"
+          ],
+          "status": "exact"
+        },
+        "reuse": 10
+      },
+      {
+        "case": "loan",
+        "expression": "((1850696+30442+8408)+100*(72190+10243+991))/100",
+        "result": {
+          "assurance": "exact rational arithmetic (not yet checker-covered)",
+          "engine_output": "status=exact parsed=(1850696+30442+8408+100*(72190+10243+991))/100 exact=5115973/50 approx=102319.46",
+          "fields": {
+            "approx": "102319.46",
+            "exact": "5115973/50",
+            "parsed": "(1850696+30442+8408+100*(72190+10243+991))/100",
+            "status": "exact"
+          },
+          "formal": false,
+          "identities": {
+            "evaluator_sha256": "4c0ae28d2f41353332dbb29f1b6084cd275d08bad73a84942fbe6f500255d872"
+          },
+          "lane": "rat",
+          "non_claims": [
+            "NOT formal-bounded: this lane carries no Lean-checked certificate",
+            "The epistemic class above is the STRONGEST claim this result supports",
+            "exact rational arithmetic (not yet checker-covered)"
+          ],
+          "status": "exact"
+        },
+        "reuse": 100
+      }
+    ],
+    "assumptions": "Exact arithmetic over observed byte counts; 1, 10 and 100 equal-sized messages reuse decoder and protocol helpers. Share, ZIP and full interface/launch instructions charged per message. External Python/native libraries/OS, evaluation evidence, model-provider infrastructure and storage metadata excluded and unmeasured; not a complete installed system cost.",
+    "tools": {
+      "gzip": "Python gzip.compress level=9, mtime=0; round trip byte-checked",
+      "python": "3.14.7 (main, Aug 12 2026, 13:41:09) [GCC 16.1.1 20260430]",
+      "zlib": "1.3.2"
+    }
+  },
+  "boundaries": [
+    "Two first candidates, not a representative distribution or a statistical performance claim.",
+    "Actual source originals and full traces retained locally; private source and explanations are not republished.",
+    "Initial launch plaintext is encrypted in child records; dispatch equality remains UNKNOWN.",
+    "Observed model settings are not independent backend attestation; no hidden-host-access exclusion or OS sandbox.",
+    "Source fidelity is a human-readable model assessment against frozen obligations, not formal semantic completeness.",
+    "No legal authority, source authenticity, current authorization, desktop-client or marketplace acceptance.",
+    "No new proof campaign and no matched baseline showing fewer consequential errors or lower agent-context cost."
+  ],
+  "cases": {
+    "loan": {
+      "budget_200_status": "REFUSED_AS_REQUIRED",
+      "candidate": {
+        "bytes": 4395,
+        "sha256": "f21d07bb9281eff545a83cfaa7fb898b28050dfb9ab4006ca3d8debea0dab4d1"
+      },
+      "evidence": {
+        "budget": {
+          "bytes": 859,
+          "sha256": "25db2781a47d63bce5771a403fd20f223d0bf9f2d0e4cedbb02550282a024619"
+        },
+        "launch": {
+          "bytes": 575,
+          "sha256": "c99f3759755cf7955619171828a7368959a64973843e810a2e6ce56fc0c9a27b"
+        },
+        "literal_export": {
+          "bytes": 1219,
+          "sha256": "e592c8c9650d458e7944c63de8baa9fc6c1d6e9be75e1554077169a9594916e8"
+        },
+        "protocol": {
+          "bytes": 7631,
+          "sha256": "38aff59da3d3dbd278d3234ce61f7877b84d4e484826c2fb6c7407ed2fb59cac"
+        },
+        "verdict": {
+          "bytes": 24579,
+          "sha256": "9f21b41d94d1c88639c37e2bbbd0c557087f02da54614d8361152f3d24d04ab0"
+        }
+      },
+      "explanation": {
+        "bytes": 4328,
+        "sha256": "78afb6a9e100c9be636bd4367f0537372e05fe63d51db4496ba36671801511c9"
+      },
+      "initial_plaintext_dispatch": "UNKNOWN",
+      "ledger": {
+        "actions": 5,
+        "head_sha256": "0995ce33f7d19ffe237892248d267527f86214279be2b229cb129ed86ca2c720",
+        "page_coverage": {
+          "loan:LOAN": 1
+        },
+        "stored_bytes": 512697,
+        "terminal_failure": false
+      },
+      "literal_export_status": "LITERAL_EXPORT_AND_LEDGER_CHECKED_NARRATIVE_UNEVALUATED",
+      "measurements": {
+        "archive_bytes": 71506,
+        "gzip_sha256": "4961f3089d5cb0659fc9802229b5362880c95b3a999a44eb44b42cc8e6b20eae",
+        "initial_interface_bytes": 10243,
+        "launch_message_bytes": 991,
+        "model_cost": "NOT_MEASURED",
+        "model_fields": [
+          {
+            "effort": "high",
+            "model": "gpt-6.1-sol"
+          }
+        ],
+        "narrative_fidelity": "SEPARATE_INDEPENDENT_EVALUATION",
+        "observed_last_cumulative_usage": {
+          "cached_input_tokens": 363776,
+          "input_tokens": 375137,
+          "output_tokens": 2999,
+          "reasoning_output_tokens": 106,
+          "total_tokens": 378136
+        },
+        "observed_peak_per_request_input_tokens": 59157,
+        "observed_tool_calls": 6,
+        "share_and_archive_bytes": 72190,
+        "share_bytes": 684,
+        "share_unicode_code_points": 683,
+        "source_bytes": 187,
+        "source_gzip_bytes": 152,
+        "source_json_bytes": 208,
+        "source_json_sha256": "6f2dc268b3c554ab8cf5852a15f2790714fa00921bd480cfeeb5b8f4d5b32dc5",
+        "source_sha256": "0d9e1e5adbc6f47a2ed938bf5a5a42c97b6a774d234d4f137afb388f7d864dff"
+      },
+      "obligation_verdicts": {
+        "PASS": 8
+      },
+      "observed_model_fields": [
+        {
+          "effort": "high",
+          "model": "gpt-6.1-sol"
+        }
+      ],
+      "protocol_integrity": "OBSERVED_PASS_BOUNDED_PROTOCOL",
+      "requested_fork_turns": "none",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning": "high",
+      "runner_action_latency_ns": [
+        2005708,
+        122207467,
+        245887037,
+        4728376,
+        4277836
+      ],
+      "source_fidelity": "PASS",
+      "source_fidelity_class": "BOUNDED_OBSERVED_SOURCE_COMPARISON",
+      "whole_trial": "UNKNOWN_NOT_A_UNIVERSAL_ACCEPTANCE_CLAIM"
+    },
+    "plan": {
+      "budget_200_status": "REFUSED_AS_REQUIRED",
+      "candidate": {
+        "bytes": 33482,
+        "sha256": "b559d7d2da5525e46b4047970444ce706aeae4556cacd84ee9ea35f643d1ce7e"
+      },
+      "evidence": {
+        "budget": {
+          "bytes": 871,
+          "sha256": "553da75cfb9477fafeb359bc51769baed5dcff547be5689c8afe50add23fffc9"
+        },
+        "launch": {
+          "bytes": 575,
+          "sha256": "ce5be7e7142db9e69f961c637b6fa61e1359e9ab38ab7463f9b537cc6062f798"
+        },
+        "literal_export": {
+          "bytes": 1237,
+          "sha256": "e44387607ae651fc66db1ee8155b0f4fbb030f6a522a35083da572b6f0a1d62a"
+        },
+        "protocol": {
+          "bytes": 13306,
+          "sha256": "18189dcd6882d865c2797896fedeaed3e0172b810867b7436cfdb2627b3484e3"
+        },
+        "verdict": {
+          "bytes": 305476,
+          "sha256": "a25475ba770104bcbe6c20a6161f4a32213563884b1fe7194115ad2c957bb2a8"
+        }
+      },
+      "explanation": {
+        "bytes": 33325,
+        "sha256": "c8b83671cf97bf7a017ff0ee9bf6f0aaee7dd0e8e03f87829abe706bb0487dad"
+      },
+      "initial_plaintext_dispatch": "UNKNOWN",
+      "ledger": {
+        "actions": 13,
+        "head_sha256": "c2e9425e4e015482c2d5a675153dc868b3f9c0cf305307556ec33b7388a02600",
+        "page_coverage": {
+          "plan:COSMOGONY_SOURCE": 9
+        },
+        "stored_bytes": 1069210,
+        "terminal_failure": false
+      },
+      "literal_export_status": "LITERAL_EXPORT_AND_LEDGER_CHECKED_NARRATIVE_UNEVALUATED",
+      "measurements": {
+        "archive_bytes": 81545,
+        "gzip_sha256": "8fbe03b3b378b3499c92ee15d75a53d6dd4a4aed3eb50381b1d4c7def375c06c",
+        "initial_interface_bytes": 18843,
+        "launch_message_bytes": 991,
+        "model_cost": "NOT_MEASURED",
+        "model_fields": [
+          {
+            "effort": "high",
+            "model": "gpt-6.1-sol"
+          }
+        ],
+        "narrative_fidelity": "SEPARATE_INDEPENDENT_EVALUATION",
+        "observed_last_cumulative_usage": {
+          "cached_input_tokens": 870656,
+          "input_tokens": 943030,
+          "output_tokens": 11285,
+          "reasoning_output_tokens": 331,
+          "total_tokens": 954315
+        },
+        "observed_peak_per_request_input_tokens": 81167,
+        "observed_tool_calls": 14,
+        "share_and_archive_bytes": 82218,
+        "share_bytes": 673,
+        "share_unicode_code_points": 672,
+        "source_bytes": 35304,
+        "source_gzip_bytes": 13473,
+        "source_json_bytes": 36702,
+        "source_json_sha256": "00c931180d10376cbf982ea34342c97dfdc370f20314e59830cc15777fed2e59",
+        "source_sha256": "0f4d91a553522695b9c6ec8febe9532ef21412c024d584cac35e1b8779e7a071"
+      },
+      "obligation_verdicts": {
+        "PASS": 76
+      },
+      "observed_model_fields": [
+        {
+          "effort": "high",
+          "model": "gpt-6.1-sol"
+        }
+      ],
+      "protocol_integrity": "OBSERVED_PASS_BOUNDED_PROTOCOL",
+      "requested_fork_turns": "none",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning": "high",
+      "runner_action_latency_ns": [
+        2356791,
+        371623312,
+        544525892,
+        3385876,
+        5250042,
+        4208418,
+        3887335,
+        4224918,
+        8340087,
+        4897586,
+        4289961,
+        5406004,
+        7584393
+      ],
+      "source_fidelity": "PASS",
+      "source_fidelity_class": "BOUNDED_OBSERVED_SOURCE_COMPARISON",
+      "whole_trial": "UNKNOWN_NOT_A_UNIVERSAL_ACCEPTANCE_CLAIM"
+    }
+  },
+  "evidence": {
+    "arithmetic": {
+      "bytes": 12530,
+      "sha256": "8031ded0cece5c0ab7f287e4f70d70358f38ab78f2329d3a0d80863fff7e4c1a"
+    },
+    "criteria": {
+      "bytes": 257725,
+      "sha256": "c80e8f4bf2bea9e5083cca2294f930d09f34dd5faa01800e6fcd17675a82e96c"
+    },
+    "measurements": {
+      "bytes": 3851,
+      "sha256": "d4819b9af2558dc9eae898cc541329b238b4bca16af4fffee1b97da772a24b55"
+    },
+    "preparation": {
+      "bytes": 8750,
+      "sha256": "1b296857b6b3339ad622a35e48a689a8acfb2448ca54744ee3ae7d776a1ad646"
+    }
+  },
+  "main_goal_complete": false,
+  "retained_failures": [
+    "Historical full-view delivery failure remains FAILED.",
+    "Historical diagram-copy glyph and exact-layout failures remain FAILED.",
+    "New preparation refused an array passed to an object-only serializer.",
+    "New preparation refused an incorrect source identifier.",
+    "Finalizer preflight refused a non-Boolean regex object before writing outputs."
+  ],
+  "runtime": {
+    "bytes": 3632,
+    "sha256": "ac3ce875a0e281ed17550bdf466f43dbeaae61aced5f1d811e797e5340e57f0f"
+  },
+  "schema": "transport/public-recipient-trials/1",
+  "setup": {
+    "limitations": [
+      "File measurements, not formal arithmetic or provenance proofs.",
+      "Python standard library, native libraries and OS are declared external dependencies; their installed storage cost is unmeasured.",
+      "Provider usage includes repeated and cached context; last cumulative observations are not summed.",
+      "Peak input tokens describe one request, not whole-package tokenizer size.",
+      "No dollars, energy, API price or advantage over a matched agent baseline measured.",
+      "No whole-system compression claim; JSON and gzip baselines retain source text only."
+    ],
+    "protocol_helper_bytes": {
+      "transport_recipient_process.py": 8408,
+      "transport_recipient_runner.py": 30442
+    },
+    "runtime_bytes": 1850696
+  },
+  "status": "BOUNDED_OBSERVATIONS_WITH_EXPLICIT_UNKNOWNS",
+  "tested_public_commit": "4a45e40d0aabdc2027900ada8ab9a79f5bda521f"
+}
