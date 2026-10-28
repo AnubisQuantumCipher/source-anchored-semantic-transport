@@ -1,0 +1,98 @@
+{
+  "interpretations": [
+    {
+      "anchors": [
+        {
+          "source": "RECIPE",
+          "selection": {
+            "quote": "Use a small spoon of salt.",
+            "at": null
+          }
+        }
+      ],
+      "id": "SALT_OLD",
+      "label": "Possible tablespoon reading",
+      "provenance": "Initial hypothetical reader interpretation.",
+      "status": "disputed",
+      "text": "Small spoon may mean tablespoon."
+    },
+    {
+      "anchors": [
+        {
+          "source": "RECIPE",
+          "selection": {
+            "quote": "by small spoon I meant a teaspoon, not a tablespoon.",
+            "at": null
+          }
+        }
+      ],
+      "id": "SALT_NEW",
+      "label": "Teaspoon correction",
+      "provenance": "Declared reading of the authored correction; truth not independently verified.",
+      "status": "proposed",
+      "text": "The author explicitly intended teaspoon."
+    }
+  ],
+  "relations": [
+    {
+      "anchors": [
+        {
+          "source": "RECIPE",
+          "selection": {
+            "quote": "by small spoon I meant a teaspoon, not a tablespoon.",
+            "at": null
+          }
+        }
+      ],
+      "from": "SALT_NEW",
+      "kind": "contradicts",
+      "note": "Both interpretations are retained.",
+      "to": "SALT_OLD"
+    },
+    {
+      "anchors": [
+        {
+          "source": "RECIPE",
+          "selection": {
+            "quote": "by small spoon I meant a teaspoon, not a tablespoon.",
+            "at": null
+          }
+        }
+      ],
+      "from": "SALT_NEW",
+      "kind": "supersedes",
+      "note": "Declared author correction; no execution authority.",
+      "to": "SALT_OLD"
+    }
+  ],
+  "schema": "transport/authoring/1",
+  "sources": [
+    {
+      "id": "RECIPE",
+      "label": "Family recipe, authored synthetic fixture",
+      "media_type": "text/plain",
+      "provenance": "Invented by the fixture author; no real family testimony.",
+      "sha256": "da58a7a5722718df9ee73755ff9e80ca468007a85fd0181518fda8e6c6609782"
+    }
+  ],
+  "uncertainties": [
+    {
+      "affects": [
+        "SALT_OLD",
+        "SALT_NEW"
+      ],
+      "anchors": [
+        {
+          "source": "RECIPE",
+          "selection": {
+            "quote": "Use a small spoon of salt.",
+            "at": null
+          }
+        }
+      ],
+      "id": "SALT_AMBIG",
+      "text": "The original spoon wording is ambiguous without the correction."
+    }
+  ],
+  "meaning_units": []
+}

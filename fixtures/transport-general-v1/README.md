@@ -1,0 +1,1 @@
+All fixtures are authored synthetic data. Recipe and oral-history claims are illustrative and unauthenticated. Binary and empty objects test byte recovery only; they do not claim media interpretation. Source offsets are UTF-8 byte offsets. Every interpretation remains proposed or disputed. No record grants action authority.

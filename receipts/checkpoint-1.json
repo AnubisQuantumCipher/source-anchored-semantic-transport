@@ -1,0 +1,95 @@
+{
+  "build": {
+    "architecture": "aarch64",
+    "elf": {
+      "boundary": "Static ELF dependencies only; trusted loader environment and operating system remain outside proof",
+      "interpreter": "/lib/ld-linux-aarch64.so.1",
+      "native_sha256": "8c722fdedd19e2d061f8c440dd8e43d93c8ebd621ad8d98abc97a48672faa7dc",
+      "needed": [
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ],
+      "search_paths": "ABSENT"
+    },
+    "install_manifest_sha256": "39a2fafb511825eea31e57845cbc7834301ceafcf509c6406e41f980c18c020c",
+    "native_sha256": "8c722fdedd19e2d061f8c440dd8e43d93c8ebd621ad8d98abc97a48672faa7dc",
+    "python": "3.14.7 (main, Aug 12 2026, 13:41:09) [GCC 16.1.1 20260430]",
+    "status": "INSTALLED_BUILD_SPECIFIC_BUNDLE",
+    "tool_versions": {
+      "gcc": "gcc (GNAT-FSF-builds) 16.1.0\nCopyright (C) 2026 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+      "gnatbind": "GNATBIND 16.1.0\nCopyright (C) 1992-2025, Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+      "gnatlink": "GNATLINK 16.1.0\nCopyright (C) 1996-2025, Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+      "gprbuild": "GPRBUILD 26.0.0 (2026-04-15) (aarch64-linux-gnu)\nCopyright (C) 2004-2026, AdaCore\nThis is free software; see the source for copying conditions.\nThere is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+      "readelf": "GNU readelf (GNU Binutils) 2.46.1\nCopyright (C) 2026 Free Software Foundation, Inc.\nThis program is free software; you may redistribute it under the terms of\nthe GNU General Public License version 3 or (at your option) any later version.\nThis program has absolutely no warranty.\n"
+    }
+  },
+  "controls": {
+    "bundle_unchanged": true,
+    "installed_commands": 47,
+    "installed_errors": 0,
+    "installed_failures": 0,
+    "installed_product_tests": 8,
+    "installed_skipped": [],
+    "installer_support_tests": 21,
+    "source_layout_tests": 13,
+    "unchanged_codec_tests": 110
+  },
+  "derivation": "New public summary selects nonprivate fields from local receipts. It is not a rewritten original receipt. Raw local receipts remain unchanged; commands permit fresh reproduction.",
+  "limitations": [
+    "No complete semantic capture proof",
+    "No new receiving-model trial",
+    "No whole-system or compiler proof",
+    "No x86_64 runtime qualification",
+    "No tested desktop client",
+    "No marketplace publication",
+    "Trusted nonescaping toolchain; aggregate descendant containment unproved",
+    "Exact runtime identity required; independent builds not promised compatible"
+  ],
+  "local_evidence": {
+    "build-03/receipt.json": "c237375348c3fe9090d75e04edbd3222c8488ae6ef9bf4329ec0c99023b4f5fb",
+    "build-comparison-01.json": "04c8898ad4b501183474dd9e2fec8a7981f32d468cafd7084b9a1636a50cf057",
+    "preservation-01.json": "b77542bfb4d27a2b55af63018c3639b24a49e9d5f1baf381a69cbd333d105eff",
+    "product/closure-01.json": "7096db9257352f283c298ca0d1ab70bf9246fda90eb69b794f767b94e6c91f45",
+    "product/run-03/receipt.json": "3292c88a4b05403d0b645ce78061d90b14346fd8ea6db1341b7844ce80de5c1d",
+    "public-build-04/receipt.json": "0b2dd1706b1c37540e5dede53b792dd0b2536bed911b99a9f88e0bba32fda687",
+    "public-check-04/receipt.json": "85dc93109bd961b2804e24f666ff7c0b486c02ddf9588ea43a2e2bc346d88b18",
+    "public-smoke-04/receipt.json": "93eee55508e0a7f2010086b53762bed959dc1ceff17cd98df7b18c19a31504f5",
+    "public-source-controls-03/receipt.json": "d6e569a7f5d0a7b66c8221bf74587e58372a3269d1c228d9e9c917969e9f2960",
+    "public-source-controls-03/support-detail/receipt.json": "447ade8395a557002c7a1682c763a15b09ebd01286b270ff502b8ad5f0a295a6",
+    "regression-03/receipt.json": "47e64d1f2e09d20edf9eb455f7a97c339005b13498bbcd4583de970d7bf4fc99",
+    "regression-03/regression.stderr": "d492b6909f2841d2a409a034cff463150efd08f2f5de16737d04797c9528570c",
+    "review/installer-01.json": "d281e9dcd0ba938219cd84e74b407d0f16643c49a2b64c82db2872fa82ca90a3",
+    "support/closure-01.json": "441f21f397a16f04ba16d2a76c07773b17e67ef12ca773923f8cf0dd25471a21"
+  },
+  "public_only_build": {
+    "install_manifest_sha256": "736bc1a6da66406b9989b1e39ce39031b6588d8ed7bf1650d8fb3c9bfcffc3e4",
+    "native_sha256": "7a2ea5a33e58236fffeccc632db725ea8a9ae5aa3ad0d76497709fa22f0f9ca8",
+    "source_manifest_sha256": "3931243a97f3f9d3f82c824f1560af5855083db56fdd868655cfc4702dadedb6",
+    "status": "INSTALLED_BUILD_SPECIFIC_BUNDLE"
+  },
+  "public_only_smoke": {
+    "archive_bytes": 27437,
+    "exact_source_recovery": true,
+    "install_manifest_sha256": "736bc1a6da66406b9989b1e39ce39031b6588d8ed7bf1650d8fb3c9bfcffc3e4",
+    "share_codepoints": 420,
+    "source_bytes": 162,
+    "source_inventory_sha256": "3931243a97f3f9d3f82c824f1560af5855083db56fdd868655cfc4702dadedb6",
+    "status": "PASS"
+  },
+  "repeated_native_build": {
+    "first_sha256": "8c722fdedd19e2d061f8c440dd8e43d93c8ebd621ad8d98abc97a48672faa7dc",
+    "scope": "Same pinned source and selected toolchain in different isolated build paths; no binary reproducibility claimed when identities differ",
+    "second_sha256": "7a2ea5a33e58236fffeccc632db725ea8a9ae5aa3ad0d76497709fa22f0f9ca8",
+    "status": "NOT_BYTE_IDENTICAL"
+  },
+  "schema": "transport/public-checkpoint/1",
+  "source_control_rerun": "PASS on public-only source; support CLI bootstrap and explicit -v/--evidence parsing repaired; prior runs retained",
+  "source_inventory_sha256": "3931243a97f3f9d3f82c824f1560af5855083db56fdd868655cfc4702dadedb6",
+  "status": "TESTED_LOCAL_DEVELOPMENT_CHECKPOINT",
+  "tests": {
+    "install/test_install_layout.py": "cf13c4ea2b4166ad3f96802d532e7fe0cb660a6ffde03ab97e6a05ca0c163bda",
+    "install/test_install_product.py": "b69c98d05cfbe2803aad96ab4722d67e6bb2615c45ddacd86e11b8c304b66eb6",
+    "install/test_install_support.py": "3b4dda66b90cb80ace5a60f421538bf4a35569d86923d2f83b42e733e44bf8dd",
+    "install/test_installed_regression.py": "b8ec6846e265bd65dfde7b5278751a47bc681e4cdd281363c7330c65b2bd453a"
+  }
+}

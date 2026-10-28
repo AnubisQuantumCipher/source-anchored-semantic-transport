@@ -1,0 +1,29 @@
+#!/usr/bin/env python3
+"""Static syntax and local installer function-size control; not a formal verifier."""
+
+import ast
+from pathlib import Path
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def main() -> None:
+    selected = sorted((ROOT / 'tools').glob('*.py')) + sorted((ROOT / 'install').glob('*.py'))
+    if not 1 <= len(selected) <= 128:
+        raise ValueError('source file bound exceeded')
+    functions = 0
+    for path in selected:
+        if path.is_symlink() or path.stat().st_size > 131072:
+            raise ValueError('unsupported static-analysis input')
+        tree = ast.parse(path.read_bytes())
+        for node in ast.walk(tree):
+            if path.parent.name == 'install' and isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+                functions += 1
+                if node.end_lineno - node.lineno + 1 > 60:
+                    raise ValueError(str(path.relative_to(ROOT)) + ':' + node.name + ': exceeds 60 lines')
+    print('PASS: parsed source files=' + str(len(selected)) + '; bounded installer functions=' + str(functions))
+
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,99 @@
+{
+  "interpretations": [
+    {
+      "anchors": [
+        {
+          "source": "SOURCE",
+          "selection": {
+            "quote": "I really need you in my life. I love you so much and I can’t stop thinking about you.\n",
+            "at": null
+          }
+        }
+      ],
+      "id": "READING",
+      "label": "EMOTION",
+      "provenance": "Retained authored test corpus; interpretation unproved.",
+      "status": "proposed",
+      "text": "Explicit supplied corpus reading."
+    }
+  ],
+  "meaning_units": [
+    {
+      "context": [],
+      "id": "MEANING",
+      "interpretation": "READING",
+      "kind": "source_claim",
+      "plan": {
+        "meaning": {
+          "ambiguities": [],
+          "nodes": [
+            {
+              "op": "atom",
+              "span": {
+                "quote": "I really need you in my life.",
+                "at": null
+              },
+              "symbol": "S0"
+            },
+            {
+              "op": "atom",
+              "span": {
+                "quote": "I love you so much",
+                "at": null
+              },
+              "symbol": "S1"
+            },
+            {
+              "op": "atom",
+              "span": {
+                "quote": "I can’t stop thinking about you.",
+                "at": null
+              },
+              "symbol": "S2"
+            },
+            {
+              "args": [
+                1,
+                2
+              ],
+              "cue": {
+                "quote": "and",
+                "at": null
+              },
+              "op": "and"
+            },
+            {
+              "args": [
+                0,
+                3
+              ],
+              "cue": null,
+              "op": "and"
+            }
+          ],
+          "root": 4,
+          "schema": "transport/meaning/1"
+        },
+        "schema": "transport/encoding-plan/1",
+        "symbols": {
+          "S0": "I really need you in my life.",
+          "S1": "I love you so much",
+          "S2": "I can’t stop thinking about you."
+        }
+      },
+      "source": "SOURCE"
+    }
+  ],
+  "relations": [],
+  "schema": "transport/authoring/1",
+  "sources": [
+    {
+      "id": "SOURCE",
+      "label": "EMOTION",
+      "media_type": "text/plain; charset=utf-8",
+      "provenance": "Authored test corpus, preserved verbatim; not an execution authorization.",
+      "sha256": "273611bb55157d2b2f49c10b1f0275bc3c2394c0792e44125275818c93354c66"
+    }
+  ],
+  "uncertainties": []
+}

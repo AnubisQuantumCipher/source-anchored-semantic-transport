@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+obj/
+bin/
+.venv/
+.transport-build-*/
+.transport-install-*/
+local-output/
+local-evidence/

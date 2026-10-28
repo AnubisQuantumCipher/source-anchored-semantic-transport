@@ -1,0 +1,1 @@
+REQ-AUDIT-001: When a valid sample arrives, the controller shall append that sample to the audit log within 100 ms, unless maintenance mode is active at arrival.

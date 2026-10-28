@@ -1,0 +1,201 @@
+{
+  "interpretations": [
+    {
+      "anchors": [
+        {
+          "source": "SOURCE",
+          "selection": {
+            "quote": "REQ-AUDIT-001: When a valid sample arrives, the controller shall append that sample to the audit log within 100 ms, unless maintenance mode is active at arrival.\n",
+            "at": null
+          }
+        }
+      ],
+      "id": "READING",
+      "label": "CONTROLLER",
+      "provenance": "Retained authored test corpus; interpretation unproved.",
+      "status": "proposed",
+      "text": "Explicit supplied corpus reading."
+    }
+  ],
+  "meaning_units": [
+    {
+      "context": [],
+      "id": "MEANING",
+      "interpretation": "READING",
+      "kind": "instruction",
+      "plan": {
+        "meaning": {
+          "ambiguities": [
+            {
+              "note": "The phrase is retained literally; event identity and reference resolution require the declared domain interpretation.",
+              "span": {
+                "quote": "that sample",
+                "at": null
+              }
+            },
+            {
+              "note": "The source says within; the timing origin and measurement process are not executable observations in this codec.",
+              "span": {
+                "quote": "100 ms",
+                "at": null
+              }
+            }
+          ],
+          "nodes": [
+            {
+              "op": "atom",
+              "span": {
+                "quote": "a valid sample arrives",
+                "at": null
+              },
+              "symbol": "S0"
+            },
+            {
+              "op": "term",
+              "span": {
+                "quote": "the controller",
+                "at": null
+              },
+              "symbol": "S1"
+            },
+            {
+              "op": "term",
+              "span": {
+                "quote": "that sample",
+                "at": null
+              },
+              "symbol": "S2"
+            },
+            {
+              "op": "term",
+              "span": {
+                "quote": "the audit log",
+                "at": null
+              },
+              "symbol": "S3"
+            },
+            {
+              "op": "text",
+              "span": {
+                "quote": "append",
+                "at": null
+              },
+              "symbol": "S4"
+            },
+            {
+              "args": [
+                4,
+                1,
+                2,
+                3
+              ],
+              "cue": null,
+              "op": "pred"
+            },
+            {
+              "op": "text",
+              "span": {
+                "quote": "100",
+                "at": null
+              },
+              "symbol": "S5"
+            },
+            {
+              "op": "text",
+              "span": {
+                "quote": "ms",
+                "at": null
+              },
+              "symbol": "S6"
+            },
+            {
+              "args": [
+                6,
+                7
+              ],
+              "cue": null,
+              "op": "quantity"
+            },
+            {
+              "args": [
+                5,
+                8
+              ],
+              "cue": {
+                "quote": "within",
+                "at": null
+              },
+              "op": "within"
+            },
+            {
+              "args": [
+                9
+              ],
+              "cue": {
+                "quote": "shall",
+                "at": null
+              },
+              "op": "must"
+            },
+            {
+              "op": "atom",
+              "span": {
+                "quote": "maintenance mode is active at arrival",
+                "at": null
+              },
+              "symbol": "S7"
+            },
+            {
+              "args": [
+                10,
+                11
+              ],
+              "cue": {
+                "quote": "unless",
+                "at": null
+              },
+              "op": "unless"
+            },
+            {
+              "args": [
+                0,
+                12
+              ],
+              "cue": {
+                "quote": "When",
+                "at": null
+              },
+              "op": "if"
+            }
+          ],
+          "root": 13,
+          "schema": "transport/meaning/1"
+        },
+        "schema": "transport/encoding-plan/1",
+        "symbols": {
+          "S0": "a valid sample arrives",
+          "S1": "the controller",
+          "S2": "that sample",
+          "S3": "the audit log",
+          "S4": "append",
+          "S5": "100",
+          "S6": "ms",
+          "S7": "maintenance mode is active at arrival"
+        }
+      },
+      "source": "SOURCE"
+    }
+  ],
+  "relations": [],
+  "schema": "transport/authoring/1",
+  "sources": [
+    {
+      "id": "SOURCE",
+      "label": "CONTROLLER",
+      "media_type": "text/plain; charset=utf-8",
+      "provenance": "Authored test corpus, preserved verbatim; not an execution authorization.",
+      "sha256": "b5cf1f199c3105bf20ac696491ade129764acb7c9dce639c5d11e17d3f751638"
+    }
+  ],
+  "uncertainties": []
+}

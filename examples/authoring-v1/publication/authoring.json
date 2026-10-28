@@ -1,0 +1,216 @@
+{
+  "interpretations": [
+    {
+      "anchors": [
+        {
+          "source": "SOURCE",
+          "selection": {
+            "quote": "The safety review and the security review run in parallel. Publication is permitted only after both reviews have completed.",
+            "at": null
+          }
+        }
+      ],
+      "id": "READING",
+      "label": "PARALLEL_BOTH",
+      "provenance": "Retained authored test corpus; interpretation unproved.",
+      "status": "proposed",
+      "text": "Explicit supplied corpus reading."
+    }
+  ],
+  "meaning_units": [
+    {
+      "context": [],
+      "id": "MEANING",
+      "interpretation": "READING",
+      "kind": "instruction",
+      "plan": {
+        "meaning": {
+          "ambiguities": [
+            {
+              "note": "Both is declared to refer to the named safety and security reviews. Source interpretation is unproved; completion does not mean approval or passage.",
+              "span": {
+                "quote": "both reviews",
+                "at": null
+              }
+            }
+          ],
+          "nodes": [
+            {
+              "args": [],
+              "id": "safety",
+              "mentions": [
+                {
+                  "span": {
+                    "quote": "safety review",
+                    "at": null
+                  },
+                  "symbol": "S0"
+                }
+              ],
+              "op": "reference",
+              "relationship": "document"
+            },
+            {
+              "args": [],
+              "id": "security",
+              "mentions": [
+                {
+                  "span": {
+                    "quote": "security review",
+                    "at": null
+                  },
+                  "symbol": "S1"
+                }
+              ],
+              "op": "reference",
+              "relationship": "document"
+            },
+            {
+              "op": "text",
+              "span": {
+                "quote": "run",
+                "at": null
+              },
+              "symbol": "S2"
+            },
+            {
+              "args": [
+                2,
+                0
+              ],
+              "cue": null,
+              "op": "pred"
+            },
+            {
+              "op": "text",
+              "span": {
+                "quote": "run",
+                "at": null
+              },
+              "symbol": "S2"
+            },
+            {
+              "args": [
+                4,
+                1
+              ],
+              "cue": null,
+              "op": "pred"
+            },
+            {
+              "args": [
+                3,
+                5
+              ],
+              "cue": {
+                "quote": "in parallel",
+                "at": null
+              },
+              "op": "parallel"
+            },
+            {
+              "op": "text",
+              "span": {
+                "quote": "completed",
+                "at": null
+              },
+              "symbol": "S3"
+            },
+            {
+              "args": [
+                7,
+                0
+              ],
+              "cue": null,
+              "op": "pred"
+            },
+            {
+              "op": "text",
+              "span": {
+                "quote": "completed",
+                "at": null
+              },
+              "symbol": "S3"
+            },
+            {
+              "args": [
+                9,
+                1
+              ],
+              "cue": null,
+              "op": "pred"
+            },
+            {
+              "args": [
+                8,
+                10
+              ],
+              "cue": {
+                "quote": "both",
+                "at": null
+              },
+              "op": "and"
+            },
+            {
+              "op": "text",
+              "span": {
+                "quote": "Publication",
+                "at": null
+              },
+              "symbol": "S4"
+            },
+            {
+              "args": [
+                12
+              ],
+              "cue": null,
+              "op": "pred"
+            },
+            {
+              "args": [
+                13,
+                11
+              ],
+              "cue": {
+                "quote": "is permitted only after",
+                "at": null
+              },
+              "op": "permission_after"
+            },
+            {
+              "args": [
+                6,
+                14
+              ],
+              "cue": null,
+              "op": "and"
+            }
+          ],
+          "root": 15,
+          "schema": "transport/meaning/2"
+        },
+        "schema": "transport/encoding-plan/2",
+        "symbols": {
+          "S0": "safety review",
+          "S1": "security review",
+          "S2": "run",
+          "S3": "completed",
+          "S4": "Publication"
+        }
+      },
+      "source": "SOURCE"
+    }
+  ],
+  "relations": [],
+  "schema": "transport/authoring/1",
+  "sources": [
+    {
+      "id": "SOURCE",
+      "label": "PARALLEL_BOTH",
+      "media_type": "text/plain; charset=utf-8",
+      "provenance": "Authored test corpus, preserved verbatim; not an execution authorization.",
+      "sha256": "14f2ec25ecd4b873c24c5d3b5671ea225434e9e15b8629f8bf12653fe43a4db0"
+    }
+  ],
+  "uncertainties": []
+}

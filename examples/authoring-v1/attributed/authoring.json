@@ -1,0 +1,170 @@
+{
+  "interpretations": [
+    {
+      "anchors": [
+        {
+          "source": "SOURCE",
+          "selection": {
+            "quote": "Analyst Mira reports that pump P might not exceed 5.00 kPa; this is an unverified estimate.",
+            "at": null
+          }
+        }
+      ],
+      "id": "READING",
+      "label": "ATTRIBUTED",
+      "provenance": "Retained authored test corpus; interpretation unproved.",
+      "status": "proposed",
+      "text": "Explicit supplied corpus reading."
+    }
+  ],
+  "meaning_units": [
+    {
+      "context": [],
+      "id": "MEANING",
+      "interpretation": "READING",
+      "kind": "source_claim",
+      "plan": {
+        "meaning": {
+          "ambiguities": [],
+          "nodes": [
+            {
+              "op": "term",
+              "span": {
+                "quote": "Analyst Mira",
+                "at": null
+              },
+              "symbol": "S0"
+            },
+            {
+              "op": "term",
+              "span": {
+                "quote": "pump P",
+                "at": null
+              },
+              "symbol": "S1"
+            },
+            {
+              "op": "text",
+              "span": {
+                "quote": "5.00",
+                "at": null
+              },
+              "symbol": "S2"
+            },
+            {
+              "op": "text",
+              "span": {
+                "quote": "kPa",
+                "at": null
+              },
+              "symbol": "S3"
+            },
+            {
+              "args": [
+                2,
+                3
+              ],
+              "cue": null,
+              "op": "quantity"
+            },
+            {
+              "op": "text",
+              "span": {
+                "quote": "exceed",
+                "at": null
+              },
+              "symbol": "S4"
+            },
+            {
+              "args": [
+                5,
+                1,
+                4
+              ],
+              "cue": null,
+              "op": "pred"
+            },
+            {
+              "args": [
+                6
+              ],
+              "cue": {
+                "quote": "not",
+                "at": null
+              },
+              "op": "not"
+            },
+            {
+              "op": "text",
+              "span": {
+                "quote": "might",
+                "at": null
+              },
+              "symbol": "S5"
+            },
+            {
+              "args": [
+                8,
+                7
+              ],
+              "cue": null,
+              "op": "uncertain"
+            },
+            {
+              "op": "atom",
+              "span": {
+                "quote": "this is an unverified estimate",
+                "at": null
+              },
+              "symbol": "S6"
+            },
+            {
+              "args": [
+                9,
+                10
+              ],
+              "cue": null,
+              "op": "and"
+            },
+            {
+              "args": [
+                0,
+                11
+              ],
+              "cue": {
+                "quote": "reports",
+                "at": null
+              },
+              "op": "attribution"
+            }
+          ],
+          "root": 12,
+          "schema": "transport/meaning/1"
+        },
+        "schema": "transport/encoding-plan/1",
+        "symbols": {
+          "S0": "Analyst Mira",
+          "S1": "pump P",
+          "S2": "5.00",
+          "S3": "kPa",
+          "S4": "exceed",
+          "S5": "might",
+          "S6": "this is an unverified estimate"
+        }
+      },
+      "source": "SOURCE"
+    }
+  ],
+  "relations": [],
+  "schema": "transport/authoring/1",
+  "sources": [
+    {
+      "id": "SOURCE",
+      "label": "ATTRIBUTED",
+      "media_type": "text/plain; charset=utf-8",
+      "provenance": "Authored test corpus, preserved verbatim; not an execution authorization.",
+      "sha256": "e29d9134d2a68122da72a2ddcdd28378683b6f99f92be5e2f387b113bcb18c43"
+    }
+  ],
+  "uncertainties": []
+}

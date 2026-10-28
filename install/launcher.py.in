@@ -1,0 +1,116 @@
+#!@PYTHON@ -IS
+"""Source-Anchored Semantic Transport installed command; exact bundle check first."""
+
+import hashlib
+import json
+import os
+from pathlib import Path
+import stat
+import sys
+
+sys.dont_write_bytecode = True
+ROOT = Path(__file__).resolve().parents[1]
+MANIFEST_SHA256 = '@MANIFEST@'
+LIMIT = 4_194_304
+
+
+def require(condition, message):
+    if not condition:
+        raise ValueError(message)
+
+
+def read(path, limit=LIMIT):
+    descriptor = os.open(path, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK)
+    with os.fdopen(descriptor, 'rb') as stream:
+        require(stat.S_ISREG(os.fstat(stream.fileno()).st_mode), 'regular installed file required')
+        value = stream.read(limit + 1)
+    require(len(value) <= limit, 'installed file byte bound exceeded')
+    return value
+
+
+def checked_path(name):
+    require(type(name) is str and name and len(name) <= 256, 'invalid installed path')
+    parts = name.split('/')
+    require(len(parts) <= 5 and all(part and part not in ('.', '..') for part in parts)
+            and '\\' not in name, 'unsafe installed path')
+    path = ROOT
+    for part in parts:
+        path = path / part
+        require(not path.is_symlink(), 'symlink in installed path')
+    return path
+
+
+def members(expected):
+    pending, found, count = [ROOT], set(), 0
+    for _ in range(128):
+        if not pending:
+            break
+        for path in pending.pop().iterdir():
+            count += 1
+            require(count <= 256 and not path.is_symlink(), 'unexpected or excessive installed entries')
+            name = path.relative_to(ROOT).as_posix()
+            if path.is_dir():
+                require(name.count('/') < 4 and any(item.startswith(name + '/') for item in expected),
+                        'unexpected installed directory')
+                pending.append(path)
+            else:
+                require(name in expected and path.is_file(), 'unexpected installed file')
+                found.add(name)
+    require(not pending and found == expected, 'installed membership mismatch')
+
+
+def verify():
+    raw = read(ROOT / 'INSTALL.json')
+    require(hashlib.sha256(raw).hexdigest() == MANIFEST_SHA256, 'installed manifest identity mismatch')
+    value = json.loads(raw)
+    require(value['schema'] == 'transport/install/1', 'incompatible installed manifest')
+    require(type(value['files']) is list and 1 <= len(value['files']) <= 128, 'installed file bound exceeded')
+    names = set()
+    for item in value['files']:
+        require(item['path'] not in names, 'duplicate installed path')
+        names.add(item['path'])
+        data = read(checked_path(item['path']))
+        require(len(data) == item['bytes'] and hashlib.sha256(data).hexdigest() == item['sha256'],
+                'installed content changed: ' + item['path'])
+    members(names | {'INSTALL.json', 'bin/semantic-transport'})
+    require(type(value['external']) is list and len(value['external']) == 3, 'external dependency count mismatch')
+    for item in value['external']:
+        require(type(item['path']) is str and Path(item['path']).is_absolute(), 'external dependency path invalid')
+        data = read(Path(item['path']), 33_554_432)
+        require(len(data) == item['bytes'] and hashlib.sha256(data).hexdigest() == item['sha256'],
+                'external dependency content changed')
+    require(sys.version_info[:2] == (3, 14) and sys.executable == value['python'], 'installed Python mismatch')
+    return value
+
+
+def main():
+    verify()
+    require(2 <= len(sys.argv) <= 64, 'usage: semantic-transport encode|encode-plan|validate|inspect|recover|focus|render|verify|mcp|check ...')
+    require(sum(len(arg.encode()) for arg in sys.argv) <= 32768, 'argument byte bound exceeded')
+    action, rest = sys.argv[1], sys.argv[2:]
+    if action == 'check':
+        require(not rest, 'check accepts no additional arguments')
+        print(json.dumps(dict(status='INSTALLED_CONTENTS_CHECKED', manifest_sha256=MANIFEST_SHA256,
+                              authentication='NOT_PROVIDED', semantic_completeness='UNPROVEN')))
+        return 0
+    routes = {'encode': ('transport_authoring.py', ['encode']),
+              'compile': ('transport_authoring.py', ['compile']),
+              'encode-plan': ('transport_cli.py', ['encode']),
+              'validate': ('transport_cli.py', ['validate']), 'inspect': ('transport_cli.py', ['inspect']),
+              'recover': ('transport_cli.py', ['recover']), 'focus': ('transport_cli.py', ['focus']),
+              'render': ('transport_export.py', ['render']), 'verify': ('transport_export.py', ['verify']),
+              'mcp': ('transport_mcp.py', [])}
+    require(action in routes, 'unsupported installed command')
+    module, fixed = routes[action]
+    flags = ['-E', '-s', '-B', '-Werror'] + ([] if action == 'mcp' else ['-S'])
+    args = [sys.executable, *flags, str(ROOT / 'tools' / module), *fixed, *rest]
+    os.execve(sys.executable, args, {'PATH': '/usr/bin:/bin', 'LANG': 'C.UTF-8', 'LC_ALL': 'C.UTF-8'})
+    return 1
+
+
+if __name__ == '__main__':
+    try:
+        sys.exit(main())
+    except (ValueError, OSError, KeyError, TypeError, MemoryError, RecursionError) as error:
+        print('REFUSED: ' + str(error)[:256], file=sys.stderr)
+        sys.exit(1)
