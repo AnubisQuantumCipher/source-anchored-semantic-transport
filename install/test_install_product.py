@@ -15,6 +15,7 @@ import unittest
 sys.dont_write_bytecode = True
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from transport_install_support import canonical, confined, read_regular, require, run_bounded, sha, write_new
+import source_page_review_checks as source_review
 
 ROOT = Path(__file__).resolve().parents[1]
 ENVIRONMENT = {'PATH': '/usr/bin:/bin', 'LANG': 'C.UTF-8', 'LC_ALL': 'C.UTF-8'}
@@ -93,6 +94,8 @@ class Campaign:
         self.evidence = args.evidence.absolute()
         self.evidence.mkdir(mode=0o700, parents=True, exist_ok=False)
         self.commands, self.inputs, self.products = [], {}, {}
+        self.test_inputs = {str(path): sha(read_regular(path)) for path in
+            (Path(__file__), Path(source_review.__file__), Path(__file__).parent / 'transport_install_support.py')}
         self.before = self.bundle_hashes(self.bundle)
         self.before_inventory = inventory(self.bundle)
 
@@ -289,6 +292,22 @@ class ProductControls(unittest.TestCase):
         exchange = c.success('mcp-sdk-exchange', [], argv=worker)
         self.assertEqual(exchange['status'], 'ACTUAL_SDK_STDIO_TESTED')
 
+    def test_mcp_source_page_review(self):
+        c = self.campaign
+        configuration, product = source_review.prepare(c)
+        pair = Path(product['pair'])
+        startup = c.command('source-review-sdk-gate', ['mcp', pair / 'share.txt', '--archive',
+                            pair / 'meaning.zip', '--expect-pair', product['identity']])
+        if startup['status'] != 'SUCCESS':
+            dependency = any(item in startup['stderr'] for item in
+                             (b'dependency version mismatch', b'declared SDK', b'No package metadata'))
+            require(dependency and b'REFUSED:' in startup['stderr'], 'unexpected source review MCP startup failure')
+            self.skipTest('UNRUN: source review MCP SDK dependency gate refused; raw evidence retained')
+        worker = [sys.executable, '-I', '-B', str(Path(__file__).resolve()), '--source-review-worker',
+                  str(c.bundle), str(configuration)]
+        exchange = c.success('source-review-sdk-exchange', [], argv=worker)
+        self.assertEqual(exchange['status'], 'SOURCE_PAGE_REVIEW_ACTUAL_SDK_STDIO_TESTED')
+
     def test_optional_historical_runtime_incompatibility(self):
         c = self.campaign
         if c.args.historical_pair is None or c.args.historical_decoder is None:
@@ -315,10 +334,11 @@ class ProductControls(unittest.TestCase):
         self.assertFalse(result['stdout'])
 
     def test_functions_are_bounded_in_size(self):
-        for node in ast.walk(ast.parse(read_regular(Path(__file__)).decode())):
-            if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
-                with self.subTest(function=node.name):
-                    self.assertLessEqual(node.end_lineno - node.lineno + 1, 60)
+        for path in (Path(__file__), Path(source_review.__file__)):
+            for node in ast.walk(ast.parse(read_regular(path).decode())):
+                if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+                    with self.subTest(path=path.name, function=node.name):
+                        self.assertLessEqual(node.end_lineno - node.lineno + 1, 60)
 
 
 async def sdk_calls(session, source, identity, expected):
@@ -373,16 +393,23 @@ def receipt(campaign, result):
     unchanged = (campaign.bundle_hashes(campaign.bundle) == campaign.before
                  and inventory(campaign.bundle) == campaign.before_inventory
                  and final_check['status'] == 'SUCCESS' and final_check['exit_code'] == 0)
+    test_inputs_unchanged = all(sha(read_regular(Path(path))) == digest
+                                for path, digest in campaign.test_inputs.items())
+    fixture_inputs_unchanged = all(sha(read_regular(Path(path))) == digest
+                                   for path, digest in campaign.inputs.items())
     status = 'TESTED_SCOPED_WITH_UNRUN' if result.skipped else 'TESTED_SCOPED'
-    if not result.wasSuccessful() or not unchanged:
+    if not result.wasSuccessful() or not unchanged or not test_inputs_unchanged or not fixture_inputs_unchanged:
         status = 'FAILED'
     evidence = {'status': status, 'tests_run': result.testsRun, 'failures': len(result.failures),
         'errors': len(result.errors), 'skipped': [{'test': str(test), 'reason': reason} for test, reason in result.skipped],
         'bundle': str(campaign.bundle), 'bundle_unchanged': unchanged,
         'bundle_sha256': campaign.before, 'bundle_inventory': campaign.before_inventory,
         'fixture_sha256': campaign.inputs,
+        'fixture_inputs_unchanged': fixture_inputs_unchanged, 'test_inputs_unchanged': test_inputs_unchanged,
+        'test_inputs_sha256': campaign.test_inputs,
         'test_sha256': sha(read_regular(Path(__file__))),
         'support_sha256': sha(read_regular(Path(__file__).parent / 'transport_install_support.py')),
+        'source_review_checks_sha256': sha(read_regular(Path(source_review.__file__))),
         'commands': campaign.commands, 'python': sys.version,
         'limits': ['No model trials, build, publication or whole-system proof.',
                    'Execution assumes trusted tools that do not escape their process group.',
@@ -407,6 +434,8 @@ def arguments():
 
 
 def main():
+    if len(sys.argv) > 1 and sys.argv[1] == '--source-review-worker':
+        return source_review.worker(sys.argv[2:])
     if len(sys.argv) > 1 and sys.argv[1] == '--mcp-worker':
         return worker(sys.argv[2:])
     args = arguments()

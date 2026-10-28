@@ -27,6 +27,10 @@ This result closes the observed build-metadata obstacle for that pair. It does n
 
 ## Reproduce without changing frozen fixtures
 
+The [source-page review follow-up](../receipts/source-review-1.json) adds bounded annotations to existing MCP pages. Its full installed-product campaign passed nine controls, including actual local SDK exchanges for page-boundary residuals, multiple readings, opaque passages, grammar ambiguity, declared uncertainty, and a broad cue that still cannot establish completeness. The exact core runtime remains byte-identical to the preceding reproducibility checkpoint; its frozen package validates identically with both installed CLIs. The earlier core regression suite was not rerun for this adapter-only change.
+
+The first follow-up test run failed because the new test helper supplied an array to the existing object-only JSON serializer. The helper now uses a closed, versioned object wrapper. That failed run remains recorded; the serializer contract and product resource bounds were not changed. [Source review](SOURCE_REVIEW.md) explains what the annotations mean and what remains unproved.
+
 From the source directory:
 
 ```sh
