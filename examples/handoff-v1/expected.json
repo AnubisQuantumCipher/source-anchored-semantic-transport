@@ -1,0 +1,25 @@
+{
+  "draft_name": "cedar-v4-green-handoff-draft.json",
+  "target": "cedar-v4-green",
+  "draft_status": "PREPARED_IN_RESPONSE",
+  "goal": "Accurate public release dossier for the current candidate; publication remains a goal rather than an observed event.",
+  "release_disposition": "HOLD",
+  "checks": {
+    "build": {"candidate": "cedar-v4-green", "reported_status": "COMPLETE", "independently_verified": "UNKNOWN"},
+    "security": {"receipt_candidate": "cedar-v3-red", "reported_status": "ACKNOWLEDGED", "current_target_acknowledgement": "UNKNOWN_MISSING"},
+    "validation": {"candidate": "cedar-v4-green", "status": "CONFLICTED", "reports": ["PASS", "FAIL"], "resolution": "UNKNOWN"},
+    "peer_acknowledgement": {"candidate": "cedar-v4-green", "status": "UNKNOWN_MISSING"}
+  },
+  "historical_approval": {"candidate": "cedar-v3-red", "current_status": "REVOKED_FOR_UNPERFORMED_PUBLICATION", "replacement_approval": "UNKNOWN_MISSING", "execution_authority_from_decoding": "NONE"},
+  "publication_time": "UNKNOWN_UNSPECIFIED",
+  "pending_after_response": ["Publication decision", "Current-target security acknowledgement", "Validation reconciliation", "Current-target peer acknowledgement", "Current publication approval"],
+  "evidence": {
+    "goal": ["GOAL"],
+    "documentary_instructions": ["INSTRUCTION"],
+    "corrected_draft": ["PENDING", "CORRECTION"],
+    "reported_checks": ["BUILD", "SECURITY", "VALIDATION_A", "VALIDATION_B", "MISSING"],
+    "approval_history": ["APPROVAL", "REVOCATION"],
+    "release_hold": ["INSTRUCTION", "CORRECTION", "REVOCATION", "SECURITY", "VALIDATION_A", "VALIDATION_B", "MISSING"],
+    "remaining_work": ["PENDING", "INSTRUCTION", "MISSING"]
+  }
+}

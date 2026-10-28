@@ -13,7 +13,8 @@ from transport_install_layout import checked_json, record
 from transport_install_support import canonical, read_regular, require, sha, write_new
 
 ROOT = Path(__file__).resolve().parents[1]
-SUITES = ('test_transport', 'test_semantic_transport', 'test_transport_authoring', 'test_transport_export')
+SUITES = ('test_transport', 'test_semantic_transport', 'test_transport_authoring', 'test_transport_export',
+          'test_transport_context')
 FIXTURES = ('fixtures/transport-general-v1', 'fixtures/semantic-transport-v1', 'fixtures/semantic-examples-v1')
 SCRIPT = ('import sys,unittest;sys.path[:0]=[sys.argv[1]+"/tools",sys.argv[1]+"/tests"];'
           'suite=unittest.defaultTestLoader.loadTestsFromNames(sys.argv[2:]);'

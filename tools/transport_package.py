@@ -250,6 +250,7 @@ def validate(text: bytes, archive: bytes) -> dict:
 
 
 def focused_ids(decoded: dict, unit: str) -> set:
+    """Collect declared retrieval neighbours; edge direction does not grant authority."""
     require('meaning_units' in decoded, 'Transport package has no typed meaning units')
     units = decoded['meaning_units']
     require(type(unit) is str and any(item['id'] == unit for item in units),
@@ -258,7 +259,8 @@ def focused_ids(decoded: dict, unit: str) -> set:
     for _ in range(128):
         before = len(needed)
         for item in units:
-            if item['id'] in needed or item['interpretation'] in needed:
+            if (item['id'] in needed or item['interpretation'] in needed
+                    or any(name in needed for name in item['context'])):
                 needed.update(item['context'] + [item['id'], item['interpretation'], item['source']])
         for item in decoded['relations']:
             if item['from'] in needed or item['to'] in needed:
@@ -298,5 +300,6 @@ def focus(text: bytes, archive: bytes, unit: str) -> dict:
                   unexpanded_sources=[item['id'] for item in result['sources'] if item['id'] not in expanded],
                   source_coverage='DECLARED_EXCERPTS_ONLY_FURTHER_SOURCE_MAY_BE_REQUIRED',
                   dependency_closure='ALL_DECLARED_LINKS_CHECKED', execution_authority='NONE')
-    canonical(result)
+    require(len(canonical(result)) + 1 <= MAX_WIRE,
+            'Transport focused output including newline exceeds byte budget')
     return result
