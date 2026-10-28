@@ -20,6 +20,8 @@ Do not treat an empty uncertainty list as evidence of certainty. It describes su
 
 Use `transport_focus` for the selected unit's declared context and exact supporting excerpts. Use further source pages when those excerpts do not answer the question. The current tool does not decide whether an interpretation is legally, scientifically or operationally correct, and it does not decide whether a recipient has read enough.
 
+Focused retrieval and page dependency annotations now follow incoming as well as outgoing unit context links. A later unit that declares an earlier instruction as context is therefore visible when selecting that instruction, along with its declared uncertainty and qualification links. This is a retrieval neighborhood: context alone neither proves that the later unit overrides the earlier one nor grants execution authority. Disconnected readings remain unselected; connected siblings may add context, and oversized results still refuse explicitly. Earlier runtime bundles retain their original directional behavior and identities.
+
 ## Bounds and errors
 
 The existing source, page, archive, request-count and serialized-response bounds remain in force. Large annotation responses are refused explicitly rather than silently dropping readings or uncertainty. This feature does not increase the document envelope or add network retrieval. Arbitrary media can remain opaque bytes; text annotations do not establish media understanding.

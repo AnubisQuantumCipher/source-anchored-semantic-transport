@@ -1,0 +1,2 @@
+[CORRECTION]
+Correction to the unfinished dossier task: replace its target cedar-v3-red with cedar-v4-green and its proposed draft name cedar-v3-red-handoff-draft.json with cedar-v4-green-handoff-draft.json. Change only that pending task's target and draft name. Preserve the historical records and their original candidate scopes; do not transfer reviews or approvals from cedar-v3-red to cedar-v4-green. All conditions and missing-evidence handling in the work record still apply.

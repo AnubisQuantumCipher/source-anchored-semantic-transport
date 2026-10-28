@@ -89,8 +89,15 @@ checks that the complete metadata response and output newline fit the existing
 output bound before returning success; a failed check emits no successful pair.
 
 `focus(text, archive, unit)` validates the whole package before returning the
-declared dependency closure. It follows unit context edges, related declarations
-and uncertainty links with a fixed iteration bound over at most 96 record IDs.
+declared retrieval neighborhood. It follows unit context edges in both directions,
+related declarations and uncertainty links with a fixed iteration bound over at
+most 96 record IDs. Incoming context makes a later correction or revocation
+discoverable from the earlier unit it names. The returned records preserve the
+original context direction, kinds and statuses; retrieval does not interpret a
+context edge as supersession, entailment or current authority. Sibling dependents
+sharing declared context can also be included. Unlinked units are not selected
+merely because they share a source document. A neighborhood exceeding the existing
+output bound, including the CLI's final newline, is refused, not silently trimmed.
 It returns selected unit structures and supporting source excerpts with offsets,
 digests and base64 bytes. Unselected source residual text is not automatically
 loaded. An excerpt's containing source is still recoverable explicitly.

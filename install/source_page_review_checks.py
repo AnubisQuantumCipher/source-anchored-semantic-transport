@@ -38,7 +38,7 @@ def typed_fixture():
             affects=['I0'], anchors=[dict(source='SOURCE', span=[len(source) - 4, len(source)])]),
         dict(id='QOTHER', text='Separate uncertainty.', affects=['U3'], anchors=[dict(source='SOURCE', span=[0, 5])])])
     expected = [dict(unit='U0', gaps=[[5, len(source)]], opaque=[], uncertainty=['Q0'],
-                    dependencies=['I0', 'Q0', 'SOURCE', 'U0']),
+                    dependencies=['I0', 'I1', 'Q0', 'SOURCE', 'U0', 'U1']),
         dict(unit='U1', gaps=[[0, other], [other + 5, len(source)]], opaque=[], uncertainty=['Q0'],
              dependencies=['I0', 'I1', 'Q0', 'SOURCE', 'U0', 'U1']),
         dict(unit='U2', gaps=[[5, len(source)]], opaque=[[0, 5]], uncertainty=[],
