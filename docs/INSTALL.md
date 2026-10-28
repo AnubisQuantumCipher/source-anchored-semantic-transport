@@ -32,6 +32,8 @@ Both the destination and receipt directory must be absent. The receipt parent mu
 
 The command copies only the pinned build inputs into private scratch space, builds the unchanged project, rejects unexpected ELF dependencies or embedded search paths, and derives copied module/runtime pins. It verifies the complete staged tree before publishing it atomically without replacing any existing directory. Failure logs are retained in the receipt directory.
 
+The compiler keeps debug information and all project warnings/assertions. The builder omits the compiler option string from `DW_AT_producer`, because that string otherwise includes GPRbuild's process-specific temporary filenames. Fixed options remain in the pinned project and build command receipts. See [repeated builds and handoff](REPRODUCIBILITY.md) for the observed scope; a successful single build is not a universal reproducibility proof.
+
 For the commands in the README, add the **specific bundle** to PATH in the current shell:
 
 ```sh
@@ -58,6 +60,8 @@ The launcher checks installed content and declared external identities before di
 ## Receiving and upgrades
 
 Share the matched `share.txt` and `meaning.zip` plus the exact declared decoder bundle and dependencies. A source rebuild on another machine does not promise the same runtime identity. Keep the old bundle for old packages. Dependency changes cause refusal, not an automatic reinterpretation or migration.
+
+Separately built bundles can exchange packages when their complete runtime identities match. The paired-build controls exercise this case with separate source copies and build directories on one declared host. They do not establish compatibility across architectures, compiler releases or different native-library identities.
 
 The optional `mcp` command additionally requires the exact SDK and dependency versions declared in `tools/transport_mcp.py`. It never installs them. System site hooks and third-party SDK contents are trusted and version-gated, not content-authenticated. Local stdio protocol testing does not constitute acceptance by a desktop client. No desktop integration is installed automatically.
 

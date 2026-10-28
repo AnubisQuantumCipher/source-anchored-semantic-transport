@@ -91,7 +91,10 @@ def compile_native(files: dict, scratch: Path, tools: dict, env: dict, receipt: 
     copy_build_inputs(files, scratch)
     mapped = str(scratch) + '=/source/source-anchored-semantic-transport'
     args = [str(tools['gprbuild']), '-q', '-p', '-R', '-P', 'transport.gpr', '-j1',
-            '-cargs:Ada', '-fdebug-prefix-map=' + mapped, '-ffile-prefix-map=' + mapped]
+            '-cargs:Ada', '-fdebug-prefix-map=' + mapped, '-ffile-prefix-map=' + mapped,
+            # GPR's PID-specific -gnatec/-gnatem filenames otherwise enter DW_AT_producer.
+            # Retain -g and every project check; fixed options stay in source and command receipts.
+            '-gno-record-gcc-switches']
     command(args, scratch, env, receipt, 'compile')
     return read_regular(scratch / 'bin/transport_native')
 
