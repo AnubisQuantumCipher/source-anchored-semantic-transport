@@ -8,6 +8,29 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Select explicit CI Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.14.10'
+          architecture: 'x64'
+          check-latest: false
+          allow-prereleases: false
+      - name: Check CI Python against unchanged executable bound
+        run: |
+          python3 -I -S -B -Werror - <<'PY'
+          import json
+          from pathlib import Path
+          import stat
+          import sys
+          path = Path(sys.executable).resolve()
+          info = path.stat()
+          print(json.dumps({'python': str(path), 'version': sys.version.split()[0],
+                            'bytes': info.st_size, 'max_bytes': 4194304}, sort_keys=True))
+          if sys.version_info[:3] != (3, 14, 10):
+              raise SystemExit('Unexpected CI Python version')
+          if not stat.S_ISREG(info.st_mode) or not 0 < info.st_size <= 4194304:
+              raise SystemExit('CI Python exceeds the unchanged executable byte bound')
+          PY
       - name: Reproduce pinned source inventory
         run: python3 -I -S -B -Werror install/prepare_source.py --check
       - name: Bounded installer mechanics
