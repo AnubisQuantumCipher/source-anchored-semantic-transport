@@ -44,6 +44,16 @@ capture cap. The reader's existing 32-call session limit remains unchanged. Exac
 source bytes and fixed client/helper identities are rechecked around dispatch.
 Transport decoder validation remains the existing client's/reader's responsibility.
 
+Each canonical request is written with create-only, verified output to a private
+temporary directory. The fixed client receives `--request-file PATH` and
+`--expect-request-sha256 DIGEST`, keeping candidate bytes out of argv. The client
+requires that digest for file input, refuses the digest with other input modes,
+and reads at most 65536 bytes from a regular, non-symlink file before checking the
+exact digest. A file intake refusal dispatches no reader action. File input is
+mutually exclusive with the existing `--stdin` and `--request-json` modes, whose
+intake behavior is unchanged. The temporary request remains until the client
+process finishes and is then removed. Existing argv and request bounds are unchanged.
+
 The adapter reads at most 48 tracked files and 16 MiB in aggregate, with existing
 per-file caps. It executes fixed Python argv without a shell. Source strings,
 contract descriptions and candidate strings are data; they are never executed.
@@ -99,3 +109,7 @@ whitespace/LF. They test refusal before client mutation for malformed, duplicate
 wrong-type and oversized candidates, identity mismatches and unexpected helpers.
 They also test finished-session refusal and a real save followed by detected input
 drift. They do not establish transport decoder behavior or model response quality.
+The maximum-candidate control submits exactly 32768 conformant UTF-8 JSON bytes
+through the real wrapper/client/reader path and checks exact saved-byte equality;
+the adjacent 32769-byte input refuses before client dispatch. Client controls also
+cover pinned request-file mismatch, missing pins, symlinks, and the request cap.

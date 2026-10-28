@@ -109,8 +109,11 @@ class Controls(unittest.TestCase):
         self.assertFalse(self.args.session.exists())
         self.assertFalse(self.args.marker.exists())
 
-    def test_exact_original_reader_save_and_source_inert(self):
-        raw = read_regular(self.args.candidate)
+    def test_exact_maximum_candidate_original_reader_save_and_source_inert(self):
+        document = read_regular(self.args.candidate)
+        raw = document + b' ' * (32768 - len(document))
+        self.assertEqual(len(raw), 32768)
+        self.args.candidate.write_bytes(raw)
         result, value = self.call()
         self.assertEqual((result['status'], result['exit_code']), ('SUCCESS', 0))
         self.assertEqual(value['status'], 'DRAFT_SAVED_STRUCTURALLY_CHECKED')
@@ -166,8 +169,30 @@ class Controls(unittest.TestCase):
         self.no_candidate()
 
     def test_overbound_candidate_no_action(self):
-        self.args.candidate.write_bytes(b' ' * 32769)
+        document = read_regular(self.args.candidate)
+        raw = document + b' ' * (32769 - len(document))
+        self.assertEqual(len(raw), 32769)
+        self.args.candidate.write_bytes(raw)
         self.no_candidate()
+
+    def test_private_pinned_request_lifetime_small_argv_and_cleanup(self):
+        original, observed = checked.run_bounded, []
+        def inspecting(argv, *args, **kwargs):
+            self.assertNotIn('--request-json', argv)
+            self.assertTrue(all(len(part.encode('utf-8')) < 4096 for part in argv))
+            path = Path(argv[argv.index('--request-file') + 1])
+            self.assertEqual(path.stat().st_mode & 0o777, 0o600)
+            self.assertEqual(path.parent.stat().st_mode & 0o777, 0o700)
+            raw = read_regular(path, inputs.REQUEST_CAP)
+            self.assertEqual(argv[argv.index('--expect-request-sha256') + 1], sha(raw))
+            observed.append(path)
+            return original(argv, *args, **kwargs)
+        state = dict(files={}, calls=[], shape=None, client_dispatched=False, finish_dispatched=False)
+        with patch.object(checked, 'run_bounded', inspecting):
+            result = checked.submit(state, self.args)
+        self.assertEqual(result['status'], 'DRAFT_SAVED_STRUCTURALLY_CHECKED')
+        self.assertEqual(len(observed), 2)
+        self.assertTrue(all(not path.exists() and not path.parent.exists() for path in observed))
 
     def test_tampered_client_no_action(self):
         path = self.root / 'helpers' / 'transport_handoff_client.py'

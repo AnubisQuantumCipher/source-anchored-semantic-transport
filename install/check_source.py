@@ -6,10 +6,12 @@ from pathlib import Path
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
+CONTINUATION = ROOT / 'examples/checked-continuation-v1/check_response.py'
 
 
 def main() -> None:
     selected = sorted((ROOT / 'tools').glob('*.py')) + sorted((ROOT / 'install').glob('*.py'))
+    selected.append(CONTINUATION)
     if not 1 <= len(selected) <= 128:
         raise ValueError('source file bound exceeded')
     functions = 0
@@ -18,7 +20,7 @@ def main() -> None:
             raise ValueError('unsupported static-analysis input')
         tree = ast.parse(path.read_bytes())
         for node in ast.walk(tree):
-            if path.parent.name == 'install' and isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+            if (path.parent.name == 'install' or path == CONTINUATION) and isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
                 functions += 1
                 if node.end_lineno - node.lineno + 1 > 60:
                     raise ValueError(str(path.relative_to(ROOT)) + ':' + node.name + ': exceeds 60 lines')
