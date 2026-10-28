@@ -53,6 +53,8 @@ The short formula is an entry point into the package. It cannot independently re
 - [Assurance, tests and known failures](docs/ASSURANCE.md)
 - [Repeated builds and package handoff](docs/REPRODUCIBILITY.md)
 - [Fresh recipient trials, measured costs and remaining unknowns](docs/RECIPIENT_TRIALS.md)
+- [Matched original-document and transport handoff comparison](docs/HANDOFF_COMPARISON.md)
+- [Local handoff reader and deterministic controls](docs/HANDOFF_READER.md)
 - [Source review, interpretation gaps and governing records](docs/SOURCE_REVIEW.md)
 - [Reproducible handoff with corrections, revocation and missing evidence](examples/handoff-v1/README.md)
 - [Security boundaries](SECURITY.md)
