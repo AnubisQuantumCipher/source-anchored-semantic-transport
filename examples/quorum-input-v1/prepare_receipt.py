@@ -38,8 +38,8 @@ def derived() -> bytes:
             raise ValueError('receipt total byte bound exceeded')
         records.append(dict(path=str(path.relative_to(ROOT)), bytes=len(raw),
                             sha256=hashlib.sha256(raw).hexdigest()))
-    first = json.loads(read(HERE / 'evidence/source-integration-root-results.json'))
-    other = json.loads(read(HERE / 'evidence/source-integration-independent-results.json'))
+    first = json.loads(read(HERE / 'evidence/claim-integration-root-results.json'))
+    other = json.loads(read(HERE / 'evidence/claim-integration-independent-results.json'))
     for result in (first, other):
         if not result['passed']:
             raise ValueError('retained test result did not pass')

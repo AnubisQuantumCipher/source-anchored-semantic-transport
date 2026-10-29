@@ -252,18 +252,25 @@ def _result(raw: bytes, sources: list[tuple], blobs: list[dict],
     return result
 
 
+def _validated_sources(body_raw: object, originals: object) -> tuple:
+    """Private owned bundle only after the entire unchanged public source gate."""
+    body, schema = metadata._validated_body_with_schema(body_raw)
+    supplied = _arguments(body, originals)
+    _source_bounds(body_raw, supplied)
+    sources = _source_set(body['sources'], supplied)
+    _source_integrity(sources)
+    blobs, used = _blobs(body['blobs'])
+    quotes = _quotes(body['selectors'], used)
+    resolved = _selector_sources(quotes, sources)
+    _selector_ranges(resolved)
+    result = _result(body_raw, sources, blobs, _memberships(resolved))
+    return body, sources, resolved, result, schema
+
+
 def check_source_membership(body_raw: object, originals: object) -> dict:
     """Pure bounded bytes stage; caller must not concurrently mutate key dicts."""
     try:
-        body = metadata._validated_body(body_raw)
-        supplied = _arguments(body, originals)
-        _source_bounds(body_raw, supplied)
-        sources = _source_set(body['sources'], supplied)
-        _source_integrity(sources)
-        blobs, used = _blobs(body['blobs'])
-        quotes = _quotes(body['selectors'], used)
-        resolved = _selector_sources(quotes, sources)
-        _selector_ranges(resolved)
-        return _result(body_raw, sources, blobs, _memberships(resolved))
+        _, _, _, result, _ = _validated_sources(body_raw, originals)
+        return result
     except metadata.InputError as error:
         return metadata._error(error)

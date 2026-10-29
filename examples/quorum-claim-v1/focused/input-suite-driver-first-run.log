@@ -1,0 +1,1 @@
+{"suite": "input", "execution": {"outcome": "returned", "exit_code": 0}, "receipt": {"path": "/dev/shm/semantic-transport-claim-structure-controls-20261029/input-suite-first-run.json", "bytes": 13547, "sha256": "cec3b5e1c45c74d384fc838cd353e6dc8705030968998c973c7a184a1f970dd1"}, "source_pins_unchanged": true}

@@ -128,13 +128,19 @@ def check_canonical_value(raw: object) -> dict[str, str]:
     return dict(status='ok', stage='CANONICAL_VALUE_ONLY')
 
 
-def _validated_body(raw: object) -> dict:
-    """Private owned Body after the complete existing input gate, not a bypass."""
+def _validated_body_with_schema(raw: object) -> tuple[dict, dict]:
+    """Owned validated Body and its already pinned schema; no second loader IO."""
     from transport_quorum_shape import check_shape, load_schema
     schema = load_schema()
     value = _read_value(raw)
     check_shape(value, schema)
     _canonical_bytes(value, raw)
+    return value, schema
+
+
+def _validated_body(raw: object) -> dict:
+    """Private owned Body after the complete existing input gate, not a bypass."""
+    value, _ = _validated_body_with_schema(raw)
     return value
 
 

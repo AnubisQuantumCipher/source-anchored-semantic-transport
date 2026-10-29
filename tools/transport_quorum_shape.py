@@ -336,9 +336,8 @@ class Frame:
         self.waiting = 'all'
 
 
-def _evaluate(value: object, schema: dict, budget: Budget, bounds: bool) -> bool:
-    definitions = schema['$defs']
-    stack = [Frame(definitions['ReplayBody'], value, definitions, budget, bounds)]
+def _evaluate_stack(stack: list[Frame], definitions: dict,
+                    budget: Budget, bounds: bool) -> bool:
     for _ in range(1048576):
         budget.step()
         frame = stack[-1]
@@ -360,6 +359,23 @@ def _evaluate(value: object, schema: dict, budget: Budget, bounds: bool) -> bool
             else:
                 parent.ok = parent.ok and result
     raise InputError('INPUT_WORK_BOUND', budget.stage)
+
+
+def _evaluate(value: object, schema: dict, budget: Budget, bounds: bool) -> bool:
+    definitions = schema['$defs']
+    frame = Frame(definitions['ReplayBody'], value, definitions, budget, bounds)
+    return _evaluate_stack([frame], definitions, budget, bounds)
+
+
+def _declaration_shape(value: object, schema: dict) -> None:
+    """Fixed private declaration root; schema comes only from the owned bundle."""
+    definitions = schema['$defs']
+    budget = Budget('DECLARATION_INPUT')
+    frame = Frame(definitions['DeclarationSource'], value, definitions, budget, True)
+    _evaluate_stack([frame], definitions, budget, True)
+    frame = Frame(definitions['DeclarationSource'], value, definitions, budget, False)
+    if not _evaluate_stack([frame], definitions, budget, False):
+        raise InputError('INPUT_CLOSED_SCHEMA', 'DECLARATION_INPUT')
 
 
 def _record_count(body: object) -> None:

@@ -3,9 +3,9 @@
   "external_validation": "EXTERNAL_VALIDATION_PENDING",
   "files": [
     {
-      "bytes": 4978,
+      "bytes": 5200,
       "path": ".github/workflows/source.yml",
-      "sha256": "2173378461ccd7b1a927a8bf256e4e657bce2907e04e34b620a1e6a52297ad87"
+      "sha256": "8fed8596b2e1a6e9a8b10744b5e2e54c8e032558554689d2e7dc49199469a07b"
     },
     {
       "bytes": 3704,
@@ -298,6 +298,16 @@
       "sha256": "c233f1a44017359e5ba57a6cceaa669945dd54e8fd287b0c10719370f4b20771"
     },
     {
+      "bytes": 82149,
+      "path": "examples/quorum-source-v1/evidence/claim-integration-independent-results.json",
+      "sha256": "92425619e0e13d46f80971d216be013569ea6b25a9356d0ddcb28886041c22f6"
+    },
+    {
+      "bytes": 82149,
+      "path": "examples/quorum-source-v1/evidence/claim-integration-root-results.json",
+      "sha256": "92425619e0e13d46f80971d216be013569ea6b25a9356d0ddcb28886041c22f6"
+    },
+    {
       "bytes": 2001,
       "path": "examples/quorum-source-v1/evidence/code-review-01/P01_COUNT_BEFORE_BAD_ITEM.body.json",
       "sha256": "27bfed32b893e05f3d1fa99a87c0450d87cf03ab7f2f6030459f995cb39e129a"
@@ -461,6 +471,11 @@
       "bytes": 8222,
       "path": "examples/quorum-source-v1/evidence/pre-ci-test_quorum_source.py.txt",
       "sha256": "c974a469f6193b3c3549332a27b3c13337de415caf7f96073eee3c12c918bb07"
+    },
+    {
+      "bytes": 39599,
+      "path": "examples/quorum-source-v1/evidence/pre-claim-ci-receipt.json",
+      "sha256": "1b36834a852bf43ed1e35129b15c5df1a3074f5fba476875d89f1294e3e6d6d4"
     },
     {
       "bytes": 407,
@@ -953,14 +968,14 @@
       "sha256": "c2b2c4c1381e3c0e9c85ac25f7fd883938772e18e342008f4a2201929f1389a9"
     },
     {
-      "bytes": 3436,
+      "bytes": 3467,
       "path": "examples/quorum-source-v1/prepare_receipt.py",
-      "sha256": "c1873c2063f3236ac69f8539d28d214f3ac41496e5703f5f113f9e6b71d06c53"
+      "sha256": "93b66d7147c6be188b88dfa0dc9846fe8394f7e21cc6a77137c82ad08c5e7062"
     },
     {
-      "bytes": 1643,
+      "bytes": 1672,
       "path": "install/check_source.py",
-      "sha256": "dddbf0cd1c5aff480f058cba11961b1de6847d885db9839c490dd462d809befa"
+      "sha256": "244f39adede3b99495b7d6a201d25e55d7ca17294ef3465afe8b7efb40db4189"
     },
     {
       "bytes": 11371,
@@ -973,19 +988,19 @@
       "sha256": "b6c7cafc1d4f1703188f7bdcb2150316feadc6b870eda9495ee146e2f429f8aa"
     },
     {
-      "bytes": 4727,
+      "bytes": 4952,
       "path": "tools/transport_quorum_input.py",
-      "sha256": "5b5667dd264b5caacbe501b84d8807928c65ee530ad5b1fdf08b21aba081b49e"
+      "sha256": "6a90037a747b0cc2965dcf1b7169220a9732a16080ca0f3ca7c3b24d0349d653"
     },
     {
-      "bytes": 15510,
+      "bytes": 16277,
       "path": "tools/transport_quorum_shape.py",
-      "sha256": "b77d9bf35c266a60a508c1e245065c740130da147d253d5af85cda1cd3229012"
+      "sha256": "6fef25a491be924fb310ecafe581da9da9f3dfa19baf44b956838745c95f2170"
     },
     {
-      "bytes": 10799,
+      "bytes": 11078,
       "path": "tools/transport_quorum_source.py",
-      "sha256": "791e2ae4d8e08d563ba4ebef01b3e8588218bdc958e03656b0bf14dfce74e98f"
+      "sha256": "3a356f0e135900bdbe1ce1199579e8b08978b5f00a4ab499b709993466279616"
     },
     {
       "bytes": 8622,
