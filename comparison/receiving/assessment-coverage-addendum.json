@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-10-29T17:02:41.218363+00:00",
+  "epoch": "BEFORE_RECEIVER_DISPATCH_AND_OUTCOMES",
+  "finding": "Independent prelaunch reviewer identified an assessor-only exact-record requirement conflicting with the already frozen single-containing-citation contract. Original protocol is retained unchanged.",
+  "governing_contract_addendum_sha256": "546c2c5de002b4fc244548680b43769db0eaa0482240255af7f3be66e664f39d",
+  "replacement_procedure": "For each required span, presence requires one exact valid citation with matching source identity, revision and source digest whose interval contains the entire required interval. Its quote must equal the complete cited source slice. A whole-source citation can cover multiple required paragraphs. No gapped union, cross-source/revision bridge, paraphrase, inferred intent or shortened span counts. Report citation coverage independently of narrative interpretation. A containing exact quote cannot excuse omitted or contradicted narrative meaning.",
+  "retained_protocol_sha256": "9b1b74c4f18985d725171281664345b7193acd07ccebdee3abd43eee53b99844",
+  "schema": "transport/assessment-evidence-coverage-clarification/1",
+  "supersedes": "Only C_RECORD_REQUIRED_EVIDENCE exact-record/enclosing-span restriction. All10 source interpretation obligations, required spans and other assessment steps remain unchanged."
+}

@@ -1,0 +1,6 @@
+{
+  "schema": "transport/public-receiving-dispatch-clarification/1",
+  "epoch": "BEFORE_IMPLEMENTATION_AND_RECEIVER_DISPATCH",
+  "ordering": "Freeze both launch messages and input closures before either dispatch. Dispatch original first, then transport; execution may overlap. Never pass either result or tool history to the other. Record shared-host contention/cache uncertainty; no paired latency or efficiency inference from this development run.",
+  "fixed_scope": "One first attempt per arm, no repair/retry/tuning from outcomes. Individual600second owner-monitored deadline and original administrative budget remain unchanged. Interpretation assessment uses masked answers and frozen source oracle, with no proven blinding or external validation."
+}

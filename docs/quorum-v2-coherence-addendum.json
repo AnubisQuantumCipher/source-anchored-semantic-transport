@@ -1,0 +1,1206 @@
+{
+  "base_contract_sha256": "b18d82dedcfd9a90dfa4e6576ae453296c2f6f32baa222c5c83b27c0cbdd43ae",
+  "cases": [
+    {
+      "expected": {
+        "code": "REGISTRY_MODEL_FAMILY_CONFLICT",
+        "status": "REFUSED"
+      },
+      "held_sha256": {
+        "admissions": "27c8aea82b0bd30df960348fcc2118363aaf4fe67813ada724ccadc90bb39d1c",
+        "policy": "ad10b58cd63640c8538d4dea8189581fa3ee820aa9266746a7bf7d285f49166c",
+        "registry": "2f40b693276ed47a6d184441801666642032d3636e7615106c215c8c4ff032ad"
+      },
+      "id": "C01_SAME_MODEL_CONFLICT",
+      "inputs": {
+        "admissions": {
+          "runs": [
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyA",
+              "model_id": "sameModel",
+              "origin": "SYNTHETIC_FIXTURE",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_sha256": "d13bf987c8f3c05f301bf89ae0d04f1af64c6345ffe238dc5a66be6876031523",
+              "run_id": "runA",
+              "seat_id": "seatA",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "state": "ACTIVE"
+            },
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyB",
+              "model_id": "sameModel",
+              "origin": "SYNTHETIC_FIXTURE",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_sha256": "b49f818c56df29f4c1e3bede8a239c733a54bba7e04409edf4f223744561a915",
+              "run_id": "runB",
+              "seat_id": "seatB",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "state": "ACTIVE"
+            }
+          ],
+          "schema": "quorum/held-admissions/2"
+        },
+        "ballot": {
+          "context": {
+            "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "readings": [
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyA",
+              "model_id": "sameModel",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_id": "readingA",
+              "response_text": "SUPPORT",
+              "run_id": "runA",
+              "seat_id": "seatA",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "stance": "SUPPORT"
+            },
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyB",
+              "model_id": "sameModel",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_id": "readingB",
+              "response_text": "SUPPORT",
+              "run_id": "runB",
+              "seat_id": "seatB",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "stance": "SUPPORT"
+            }
+          ],
+          "schema": "quorum/ballot/2"
+        },
+        "policy": {
+          "context": {
+            "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "dissent_rule": "ELIGIBLE_OPPOSE_OR_DISPUTE_BLOCKS",
+          "minimum_families": 2,
+          "minimum_support": 2,
+          "required_seats": [
+            "seatA",
+            "seatB"
+          ],
+          "schema": "quorum/threshold-policy/2"
+        },
+        "registry": {
+          "schema": "quorum/held-registry/2",
+          "seats": [
+            {
+              "family_id": "familyA",
+              "model_id": "sameModel",
+              "seat_id": "seatA"
+            },
+            {
+              "family_id": "familyB",
+              "model_id": "sameModel",
+              "seat_id": "seatB"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "expected": {
+        "actual_support_is_cross_family": false,
+        "cross_family_policy_satisfied": false,
+        "eligible_count": 2,
+        "policy_requires_cross_family": true,
+        "provenance_class": "SYNTHETIC_ONLY",
+        "status": "EVALUATED",
+        "support_count": 2,
+        "support_families": [
+          "familyA"
+        ],
+        "verdict": "INSUFFICIENT_FAMILY_DIVERSITY"
+      },
+      "held_sha256": {
+        "admissions": "8fbb17164fe5c4eda8268098eaa5cef79c329b0ef1462caff3d72339a329c269",
+        "policy": "ad10b58cd63640c8538d4dea8189581fa3ee820aa9266746a7bf7d285f49166c",
+        "registry": "8168039849e6ff20a2fcb47b4757ce61922584fa4c7d1a2882afb14a5d776e81"
+      },
+      "id": "C02_SAME_MODEL_SAME_FAMILY",
+      "inputs": {
+        "admissions": {
+          "runs": [
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyA",
+              "model_id": "sameModel",
+              "origin": "SYNTHETIC_FIXTURE",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_sha256": "d13bf987c8f3c05f301bf89ae0d04f1af64c6345ffe238dc5a66be6876031523",
+              "run_id": "runA",
+              "seat_id": "seatA",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "state": "ACTIVE"
+            },
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyA",
+              "model_id": "sameModel",
+              "origin": "SYNTHETIC_FIXTURE",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_sha256": "9cf11067c72ea1691d1f00b7c955c7c9a024303b75655b4be38a3d397bca3301",
+              "run_id": "runB",
+              "seat_id": "seatB",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "state": "ACTIVE"
+            }
+          ],
+          "schema": "quorum/held-admissions/2"
+        },
+        "ballot": {
+          "context": {
+            "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "readings": [
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyA",
+              "model_id": "sameModel",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_id": "readingA",
+              "response_text": "SUPPORT",
+              "run_id": "runA",
+              "seat_id": "seatA",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "stance": "SUPPORT"
+            },
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyA",
+              "model_id": "sameModel",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_id": "readingB",
+              "response_text": "SUPPORT",
+              "run_id": "runB",
+              "seat_id": "seatB",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "stance": "SUPPORT"
+            }
+          ],
+          "schema": "quorum/ballot/2"
+        },
+        "policy": {
+          "context": {
+            "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "dissent_rule": "ELIGIBLE_OPPOSE_OR_DISPUTE_BLOCKS",
+          "minimum_families": 2,
+          "minimum_support": 2,
+          "required_seats": [
+            "seatA",
+            "seatB"
+          ],
+          "schema": "quorum/threshold-policy/2"
+        },
+        "registry": {
+          "schema": "quorum/held-registry/2",
+          "seats": [
+            {
+              "family_id": "familyA",
+              "model_id": "sameModel",
+              "seat_id": "seatA"
+            },
+            {
+              "family_id": "familyA",
+              "model_id": "sameModel",
+              "seat_id": "seatB"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "expected": {
+        "actual_support_is_cross_family": false,
+        "cross_family_policy_satisfied": false,
+        "eligible_count": 2,
+        "policy_requires_cross_family": false,
+        "provenance_class": "SYNTHETIC_ONLY",
+        "status": "EVALUATED",
+        "support_count": 2,
+        "support_families": [
+          "familyA"
+        ],
+        "verdict": "RECORDED_SUPPORT_THRESHOLD_MET"
+      },
+      "held_sha256": {
+        "admissions": "8fbb17164fe5c4eda8268098eaa5cef79c329b0ef1462caff3d72339a329c269",
+        "policy": "e5788cee97cf70f1fceb49419ee82711005ae522de7c0b1cc0d0817084c4e9b6",
+        "registry": "8168039849e6ff20a2fcb47b4757ce61922584fa4c7d1a2882afb14a5d776e81"
+      },
+      "id": "C03_ONE_FAMILY_POLICY",
+      "inputs": {
+        "admissions": {
+          "runs": [
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyA",
+              "model_id": "sameModel",
+              "origin": "SYNTHETIC_FIXTURE",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_sha256": "d13bf987c8f3c05f301bf89ae0d04f1af64c6345ffe238dc5a66be6876031523",
+              "run_id": "runA",
+              "seat_id": "seatA",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "state": "ACTIVE"
+            },
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyA",
+              "model_id": "sameModel",
+              "origin": "SYNTHETIC_FIXTURE",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_sha256": "9cf11067c72ea1691d1f00b7c955c7c9a024303b75655b4be38a3d397bca3301",
+              "run_id": "runB",
+              "seat_id": "seatB",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "state": "ACTIVE"
+            }
+          ],
+          "schema": "quorum/held-admissions/2"
+        },
+        "ballot": {
+          "context": {
+            "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "readings": [
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyA",
+              "model_id": "sameModel",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_id": "readingA",
+              "response_text": "SUPPORT",
+              "run_id": "runA",
+              "seat_id": "seatA",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "stance": "SUPPORT"
+            },
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyA",
+              "model_id": "sameModel",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_id": "readingB",
+              "response_text": "SUPPORT",
+              "run_id": "runB",
+              "seat_id": "seatB",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "stance": "SUPPORT"
+            }
+          ],
+          "schema": "quorum/ballot/2"
+        },
+        "policy": {
+          "context": {
+            "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "dissent_rule": "ELIGIBLE_OPPOSE_OR_DISPUTE_BLOCKS",
+          "minimum_families": 1,
+          "minimum_support": 2,
+          "required_seats": [
+            "seatA",
+            "seatB"
+          ],
+          "schema": "quorum/threshold-policy/2"
+        },
+        "registry": {
+          "schema": "quorum/held-registry/2",
+          "seats": [
+            {
+              "family_id": "familyA",
+              "model_id": "sameModel",
+              "seat_id": "seatA"
+            },
+            {
+              "family_id": "familyA",
+              "model_id": "sameModel",
+              "seat_id": "seatB"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "expected": {
+        "actual_support_is_cross_family": false,
+        "cross_family_policy_satisfied": false,
+        "eligible_count": 2,
+        "policy_requires_cross_family": true,
+        "provenance_class": "SYNTHETIC_ONLY",
+        "status": "EVALUATED",
+        "support_count": 2,
+        "support_families": [
+          "familyA"
+        ],
+        "verdict": "INSUFFICIENT_FAMILY_DIVERSITY"
+      },
+      "held_sha256": {
+        "admissions": "e5b7a0fccccb43cea4ccb1d70b605e2f4f3cb0634f384f2efb49c3b9be8ca420",
+        "policy": "ad10b58cd63640c8538d4dea8189581fa3ee820aa9266746a7bf7d285f49166c",
+        "registry": "31d3145202a9bf7c517652112e7f23a14ccea8d9c23194ba7635ad82a921224b"
+      },
+      "id": "C04_DISTINCT_MODELS_SAME_FAMILY",
+      "inputs": {
+        "admissions": {
+          "runs": [
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyA",
+              "model_id": "modelA",
+              "origin": "SYNTHETIC_FIXTURE",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_sha256": "b89ddabdb9f4e06974d8245f046973aee9d32f7a0eb7c43adc68f8aeed67a886",
+              "run_id": "runA",
+              "seat_id": "seatA",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "state": "ACTIVE"
+            },
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyA",
+              "model_id": "modelB",
+              "origin": "SYNTHETIC_FIXTURE",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_sha256": "6193f6786b8b33dbcf0b44ea19c2476a306d5ad859dc75a276bc07c064f95083",
+              "run_id": "runB",
+              "seat_id": "seatB",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "state": "ACTIVE"
+            }
+          ],
+          "schema": "quorum/held-admissions/2"
+        },
+        "ballot": {
+          "context": {
+            "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "readings": [
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyA",
+              "model_id": "modelA",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_id": "readingA",
+              "response_text": "SUPPORT",
+              "run_id": "runA",
+              "seat_id": "seatA",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "stance": "SUPPORT"
+            },
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyA",
+              "model_id": "modelB",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_id": "readingB",
+              "response_text": "SUPPORT",
+              "run_id": "runB",
+              "seat_id": "seatB",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "stance": "SUPPORT"
+            }
+          ],
+          "schema": "quorum/ballot/2"
+        },
+        "policy": {
+          "context": {
+            "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "dissent_rule": "ELIGIBLE_OPPOSE_OR_DISPUTE_BLOCKS",
+          "minimum_families": 2,
+          "minimum_support": 2,
+          "required_seats": [
+            "seatA",
+            "seatB"
+          ],
+          "schema": "quorum/threshold-policy/2"
+        },
+        "registry": {
+          "schema": "quorum/held-registry/2",
+          "seats": [
+            {
+              "family_id": "familyA",
+              "model_id": "modelA",
+              "seat_id": "seatA"
+            },
+            {
+              "family_id": "familyA",
+              "model_id": "modelB",
+              "seat_id": "seatB"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "expected": {
+        "actual_support_is_cross_family": true,
+        "cross_family_policy_satisfied": true,
+        "eligible_count": 2,
+        "policy_requires_cross_family": true,
+        "provenance_class": "SYNTHETIC_ONLY",
+        "status": "EVALUATED",
+        "support_count": 2,
+        "support_families": [
+          "familyA",
+          "familyB"
+        ],
+        "verdict": "RECORDED_SUPPORT_THRESHOLD_MET"
+      },
+      "held_sha256": {
+        "admissions": "315abd2c90217a4c30a66b0801312e867abdfc9fa858d5cd383bac5a611b26a7",
+        "policy": "ad10b58cd63640c8538d4dea8189581fa3ee820aa9266746a7bf7d285f49166c",
+        "registry": "80a4df9453b260d31cc41c3a8702f7df7e687ccfbe06ca443ef3474dadd44627"
+      },
+      "id": "C05_DISTINCT_MODELS_DISTINCT_FAMILIES",
+      "inputs": {
+        "admissions": {
+          "runs": [
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyA",
+              "model_id": "modelA",
+              "origin": "SYNTHETIC_FIXTURE",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_sha256": "b89ddabdb9f4e06974d8245f046973aee9d32f7a0eb7c43adc68f8aeed67a886",
+              "run_id": "runA",
+              "seat_id": "seatA",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "state": "ACTIVE"
+            },
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyB",
+              "model_id": "modelB",
+              "origin": "SYNTHETIC_FIXTURE",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_sha256": "371d82e4c7d16d92a00632a11b13e643f7f417460fdce52f29b6eb371796a578",
+              "run_id": "runB",
+              "seat_id": "seatB",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "state": "ACTIVE"
+            }
+          ],
+          "schema": "quorum/held-admissions/2"
+        },
+        "ballot": {
+          "context": {
+            "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "readings": [
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyA",
+              "model_id": "modelA",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_id": "readingA",
+              "response_text": "SUPPORT",
+              "run_id": "runA",
+              "seat_id": "seatA",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "stance": "SUPPORT"
+            },
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyB",
+              "model_id": "modelB",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_id": "readingB",
+              "response_text": "SUPPORT",
+              "run_id": "runB",
+              "seat_id": "seatB",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "stance": "SUPPORT"
+            }
+          ],
+          "schema": "quorum/ballot/2"
+        },
+        "policy": {
+          "context": {
+            "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "dissent_rule": "ELIGIBLE_OPPOSE_OR_DISPUTE_BLOCKS",
+          "minimum_families": 2,
+          "minimum_support": 2,
+          "required_seats": [
+            "seatA",
+            "seatB"
+          ],
+          "schema": "quorum/threshold-policy/2"
+        },
+        "registry": {
+          "schema": "quorum/held-registry/2",
+          "seats": [
+            {
+              "family_id": "familyA",
+              "model_id": "modelA",
+              "seat_id": "seatA"
+            },
+            {
+              "family_id": "familyB",
+              "model_id": "modelB",
+              "seat_id": "seatB"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "expected": {
+        "code": "REGISTRY_MODEL_FAMILY_CONFLICT",
+        "status": "REFUSED"
+      },
+      "held_sha256": {
+        "admissions": "315abd2c90217a4c30a66b0801312e867abdfc9fa858d5cd383bac5a611b26a7",
+        "policy": "ddbb16c6dfe5910b90ccf3cf1efd2e5d6932ae2e6be08f9dc4cdd6c256dd535f",
+        "registry": "fe8f7af6ec258ab59fa51fd11e276c7eb11da3fa7e8ae5b323777487870d322d"
+      },
+      "id": "C06_UNUSED_CONFLICT",
+      "inputs": {
+        "admissions": {
+          "runs": [
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyA",
+              "model_id": "modelA",
+              "origin": "SYNTHETIC_FIXTURE",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_sha256": "b89ddabdb9f4e06974d8245f046973aee9d32f7a0eb7c43adc68f8aeed67a886",
+              "run_id": "runA",
+              "seat_id": "seatA",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "state": "ACTIVE"
+            },
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyB",
+              "model_id": "modelB",
+              "origin": "SYNTHETIC_FIXTURE",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_sha256": "371d82e4c7d16d92a00632a11b13e643f7f417460fdce52f29b6eb371796a578",
+              "run_id": "runB",
+              "seat_id": "seatB",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "state": "ACTIVE"
+            }
+          ],
+          "schema": "quorum/held-admissions/2"
+        },
+        "ballot": {
+          "context": {
+            "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "readings": [
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyA",
+              "model_id": "modelA",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_id": "readingA",
+              "response_text": "SUPPORT",
+              "run_id": "runA",
+              "seat_id": "seatA",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "stance": "SUPPORT"
+            },
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyB",
+              "model_id": "modelB",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_id": "readingB",
+              "response_text": "SUPPORT",
+              "run_id": "runB",
+              "seat_id": "seatB",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "stance": "SUPPORT"
+            }
+          ],
+          "schema": "quorum/ballot/2"
+        },
+        "policy": {
+          "context": {
+            "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "dissent_rule": "ELIGIBLE_OPPOSE_OR_DISPUTE_BLOCKS",
+          "minimum_families": 2,
+          "minimum_support": 2,
+          "required_seats": [
+            "seatA",
+            "seatB",
+            "seatC"
+          ],
+          "schema": "quorum/threshold-policy/2"
+        },
+        "registry": {
+          "schema": "quorum/held-registry/2",
+          "seats": [
+            {
+              "family_id": "familyA",
+              "model_id": "modelA",
+              "seat_id": "seatA"
+            },
+            {
+              "family_id": "familyB",
+              "model_id": "modelB",
+              "seat_id": "seatB"
+            },
+            {
+              "family_id": "familyC",
+              "model_id": "modelA",
+              "seat_id": "seatC"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "expected": {
+        "code": "REGISTRY_MODEL_FAMILY_CONFLICT",
+        "status": "REFUSED"
+      },
+      "held_sha256": {
+        "admissions": "27c8aea82b0bd30df960348fcc2118363aaf4fe67813ada724ccadc90bb39d1c",
+        "policy": "ad10b58cd63640c8538d4dea8189581fa3ee820aa9266746a7bf7d285f49166c",
+        "registry": "7999a4102d333a09f814d60d81bc6e6c01e2bd227ce43c34c19358aea522fcfb"
+      },
+      "id": "C07_REVERSED_CONFLICT",
+      "inputs": {
+        "admissions": {
+          "runs": [
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyA",
+              "model_id": "sameModel",
+              "origin": "SYNTHETIC_FIXTURE",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_sha256": "d13bf987c8f3c05f301bf89ae0d04f1af64c6345ffe238dc5a66be6876031523",
+              "run_id": "runA",
+              "seat_id": "seatA",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "state": "ACTIVE"
+            },
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyB",
+              "model_id": "sameModel",
+              "origin": "SYNTHETIC_FIXTURE",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_sha256": "b49f818c56df29f4c1e3bede8a239c733a54bba7e04409edf4f223744561a915",
+              "run_id": "runB",
+              "seat_id": "seatB",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "state": "ACTIVE"
+            }
+          ],
+          "schema": "quorum/held-admissions/2"
+        },
+        "ballot": {
+          "context": {
+            "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "readings": [
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyA",
+              "model_id": "sameModel",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_id": "readingA",
+              "response_text": "SUPPORT",
+              "run_id": "runA",
+              "seat_id": "seatA",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "stance": "SUPPORT"
+            },
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyB",
+              "model_id": "sameModel",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_id": "readingB",
+              "response_text": "SUPPORT",
+              "run_id": "runB",
+              "seat_id": "seatB",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "stance": "SUPPORT"
+            }
+          ],
+          "schema": "quorum/ballot/2"
+        },
+        "policy": {
+          "context": {
+            "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "dissent_rule": "ELIGIBLE_OPPOSE_OR_DISPUTE_BLOCKS",
+          "minimum_families": 2,
+          "minimum_support": 2,
+          "required_seats": [
+            "seatA",
+            "seatB"
+          ],
+          "schema": "quorum/threshold-policy/2"
+        },
+        "registry": {
+          "schema": "quorum/held-registry/2",
+          "seats": [
+            {
+              "family_id": "familyB",
+              "model_id": "sameModel",
+              "seat_id": "seatB"
+            },
+            {
+              "family_id": "familyA",
+              "model_id": "sameModel",
+              "seat_id": "seatA"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "expected": {
+        "actual_support_is_cross_family": true,
+        "cross_family_policy_satisfied": true,
+        "eligible_count": 2,
+        "policy_requires_cross_family": true,
+        "provenance_class": "SYNTHETIC_ONLY",
+        "status": "EVALUATED",
+        "support_count": 2,
+        "support_families": [
+          "familyA",
+          "familyB"
+        ],
+        "verdict": "RECORDED_SUPPORT_THRESHOLD_MET"
+      },
+      "held_sha256": {
+        "admissions": "7adf35f2034297bc009f90dd66215adc76a1936b2f94ce669be89ee319c2203f",
+        "policy": "ad10b58cd63640c8538d4dea8189581fa3ee820aa9266746a7bf7d285f49166c",
+        "registry": "46527a43c6dfd3202303e6fae371d80924a14846153fa7f1d9393b05ac753c21"
+      },
+      "id": "C08_LITERAL_MODEL_IDS",
+      "inputs": {
+        "admissions": {
+          "runs": [
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyA",
+              "model_id": "ModelA",
+              "origin": "SYNTHETIC_FIXTURE",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_sha256": "31882ad6cb9dc8d931c0481d0a749993cb4dc0728ffa13db1e13d17106d2751e",
+              "run_id": "runA",
+              "seat_id": "seatA",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "state": "ACTIVE"
+            },
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyB",
+              "model_id": "modela",
+              "origin": "SYNTHETIC_FIXTURE",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_sha256": "856077ef9b9c7df0d9dc14b265361470555f383efea1df315b588693cf4e1ca4",
+              "run_id": "runB",
+              "seat_id": "seatB",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "state": "ACTIVE"
+            }
+          ],
+          "schema": "quorum/held-admissions/2"
+        },
+        "ballot": {
+          "context": {
+            "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "readings": [
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyA",
+              "model_id": "ModelA",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_id": "readingA",
+              "response_text": "SUPPORT",
+              "run_id": "runA",
+              "seat_id": "seatA",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "stance": "SUPPORT"
+            },
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyB",
+              "model_id": "modela",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_id": "readingB",
+              "response_text": "SUPPORT",
+              "run_id": "runB",
+              "seat_id": "seatB",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "stance": "SUPPORT"
+            }
+          ],
+          "schema": "quorum/ballot/2"
+        },
+        "policy": {
+          "context": {
+            "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "dissent_rule": "ELIGIBLE_OPPOSE_OR_DISPUTE_BLOCKS",
+          "minimum_families": 2,
+          "minimum_support": 2,
+          "required_seats": [
+            "seatA",
+            "seatB"
+          ],
+          "schema": "quorum/threshold-policy/2"
+        },
+        "registry": {
+          "schema": "quorum/held-registry/2",
+          "seats": [
+            {
+              "family_id": "familyA",
+              "model_id": "ModelA",
+              "seat_id": "seatA"
+            },
+            {
+              "family_id": "familyB",
+              "model_id": "modela",
+              "seat_id": "seatB"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "expected": {
+        "code": "HELD_ROOT_MISMATCH",
+        "status": "REFUSED"
+      },
+      "held_sha256": {
+        "admissions": "27c8aea82b0bd30df960348fcc2118363aaf4fe67813ada724ccadc90bb39d1c",
+        "policy": "ad10b58cd63640c8538d4dea8189581fa3ee820aa9266746a7bf7d285f49166c",
+        "registry": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+      },
+      "id": "C09_WRONG_HELD_ROOT_FIRST",
+      "inputs": {
+        "admissions": {
+          "runs": [
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyA",
+              "model_id": "sameModel",
+              "origin": "SYNTHETIC_FIXTURE",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_sha256": "d13bf987c8f3c05f301bf89ae0d04f1af64c6345ffe238dc5a66be6876031523",
+              "run_id": "runA",
+              "seat_id": "seatA",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "state": "ACTIVE"
+            },
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyB",
+              "model_id": "sameModel",
+              "origin": "SYNTHETIC_FIXTURE",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_sha256": "b49f818c56df29f4c1e3bede8a239c733a54bba7e04409edf4f223744561a915",
+              "run_id": "runB",
+              "seat_id": "seatB",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "state": "ACTIVE"
+            }
+          ],
+          "schema": "quorum/held-admissions/2"
+        },
+        "ballot": {
+          "context": {
+            "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "readings": [
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyA",
+              "model_id": "sameModel",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_id": "readingA",
+              "response_text": "SUPPORT",
+              "run_id": "runA",
+              "seat_id": "seatA",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "stance": "SUPPORT"
+            },
+            {
+              "context": {
+                "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+                "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+              },
+              "family_id": "familyB",
+              "model_id": "sameModel",
+              "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "raw_response_sha256": "a42b8352b4c79f604f3ca0f8c703cbd08f648e86099ec682ce98bd4a11286741",
+              "reading_id": "readingB",
+              "response_text": "SUPPORT",
+              "run_id": "runB",
+              "seat_id": "seatB",
+              "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+              "stance": "SUPPORT"
+            }
+          ],
+          "schema": "quorum/ballot/2"
+        },
+        "policy": {
+          "context": {
+            "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "dissent_rule": "ELIGIBLE_OPPOSE_OR_DISPUTE_BLOCKS",
+          "minimum_families": 2,
+          "minimum_support": 2,
+          "required_seats": [
+            "seatA",
+            "seatB"
+          ],
+          "schema": "quorum/threshold-policy/2"
+        },
+        "registry": {
+          "schema": "quorum/held-registry/2",
+          "seats": [
+            {
+              "family_id": "familyA",
+              "model_id": "sameModel",
+              "seat_id": "seatA"
+            },
+            {
+              "family_id": "familyB",
+              "model_id": "sameModel",
+              "seat_id": "seatB"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "prior_counterexample": "Current pre-fix product accepted same model_id under multiple assigned families. Original source receipt and counterexample are retained; this addendum strengthens the effective contract explicitly.",
+  "rule": "Across registry seats an exact literal model_id maps to exactly one exact family_id. Conflicting assignments refuse REGISTRY_MODEL_FAMILY_CONFLICT before any candidate eligibility or threshold. Same-model/same-family seats remain allowed; family counting stays set-based.",
+  "schema": "quorum/model-family-coherence-addendum/2",
+  "scope": "Internal consistency of held declarations only. No alias resolution, provider/model authentication, weight identity or error-independence proof. Original version1 and frozen87/43 cases remain unchanged.",
+  "status": "FROZEN_BEFORE_COHERENCE_IMPLEMENTATION"
+}
