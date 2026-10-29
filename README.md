@@ -26,7 +26,6 @@ This is an open-source implementation under the [MIT license](LICENSE), targetin
 - An optional [source-bound obligation evaluator](docs/BOUND_EVALUATION.md) with distinct typed predicate bindings, conservative handling of conflicting reports, and checks that reject a submitted verdict when it disagrees with the computed result.
 - [Recomputed finite test receipts](docs/BOUND_TESTS.md) bind a proposed function replacement to a declared predicate and test table; supplied success claims cannot substitute for rerunning the bounded comparison. The [fresh workflow comparison](examples/bound-tests-v1/REPORT.md) records passing first drafts in both arms and higher measured overhead for transport.
 - [Deterministic QUORUM replay](examples/quorum-replay-v1/README.md) connects source and quotation checks, declared condition and exception structure, context-change dependencies, and retained readings through one qualified process entry point. The same checker accepts an original-document index or a matched meaning ZIP and recomputes the result.
-- [Work accounting validation](comparison/accounting/README.md) checks declared attempts, failures, retries and evidence-backed cost records. Missing human work stays unknown; these checks support fair comparisons without calculating a benefit verdict.
 
 ## Start
 

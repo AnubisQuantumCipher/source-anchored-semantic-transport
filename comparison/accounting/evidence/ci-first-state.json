@@ -1,0 +1,247 @@
+{
+  "schema": "transport/accounting-hosted-first-state/1",
+  "head": "14e99040efd6833f4f0d0fca7853edcabdda5290",
+  "scope": "Retained intermediate state, not final complete CI status",
+  "runs": [
+    {
+      "id": 40949355495,
+      "name": "Native source workflow controls",
+      "event": "pull_request",
+      "status": "in_progress",
+      "conclusion": null,
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949355495"
+    },
+    {
+      "id": 40949355570,
+      "name": "QUORUM threshold and replay evidence",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949355570"
+    },
+    {
+      "id": 40949355531,
+      "name": "Export-reader continuity controls",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949355531"
+    },
+    {
+      "id": 40949355202,
+      "name": "Independent export reader",
+      "event": "pull_request",
+      "status": "in_progress",
+      "conclusion": null,
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949355202"
+    },
+    {
+      "id": 40949355095,
+      "name": "QUORUM sender checkpoint identities",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949355095"
+    },
+    {
+      "id": 40949355098,
+      "name": "Source and installer controls",
+      "event": "pull_request",
+      "status": "in_progress",
+      "conclusion": null,
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949355098"
+    },
+    {
+      "id": 40949355250,
+      "name": "Work accounting completeness controls",
+      "event": "pull_request",
+      "status": "in_progress",
+      "conclusion": null,
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949355250"
+    },
+    {
+      "id": 40949355167,
+      "name": "Closed semantic core controls",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949355167"
+    },
+    {
+      "id": 40949355148,
+      "name": "Adaptive receiving client evidence controls",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949355148"
+    },
+    {
+      "id": 40949354942,
+      "name": "Receiving repair evidence",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949354942"
+    },
+    {
+      "id": 40949355162,
+      "name": "Public share presentation controls",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949355162"
+    },
+    {
+      "id": 40949355379,
+      "name": "Matched source retrieval controls",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949355379"
+    },
+    {
+      "id": 40949355264,
+      "name": "Native engineering evidence",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949355264"
+    },
+    {
+      "id": 40949355483,
+      "name": "Conventional original-file transfer",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949355483"
+    },
+    {
+      "id": 40949355192,
+      "name": "QUORUM portable replay controls",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949355192"
+    },
+    {
+      "id": 40949346797,
+      "name": "Export-reader continuity controls",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949346797"
+    },
+    {
+      "id": 40949346924,
+      "name": "QUORUM sender checkpoint identities",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949346924"
+    },
+    {
+      "id": 40949346872,
+      "name": "Independent export reader",
+      "event": "push",
+      "status": "in_progress",
+      "conclusion": null,
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949346872"
+    },
+    {
+      "id": 40949346717,
+      "name": "Source and installer controls",
+      "event": "push",
+      "status": "in_progress",
+      "conclusion": null,
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949346717"
+    },
+    {
+      "id": 40949346684,
+      "name": "Receiving repair evidence",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949346684"
+    },
+    {
+      "id": 40949346708,
+      "name": "QUORUM threshold and replay evidence",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949346708"
+    },
+    {
+      "id": 40949346875,
+      "name": "QUORUM portable replay controls",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949346875"
+    },
+    {
+      "id": 40949347109,
+      "name": "Closed semantic core controls",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949347109"
+    },
+    {
+      "id": 40949346774,
+      "name": "Public share presentation controls",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949346774"
+    },
+    {
+      "id": 40949346955,
+      "name": "Matched source retrieval controls",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949346955"
+    },
+    {
+      "id": 40949346707,
+      "name": "Adaptive receiving client evidence controls",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949346707"
+    },
+    {
+      "id": 40949346849,
+      "name": "Conventional original-file transfer",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949346849"
+    },
+    {
+      "id": 40949346857,
+      "name": "Work accounting completeness controls",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949346857"
+    },
+    {
+      "id": 40949346736,
+      "name": "Native engineering evidence",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949346736"
+    },
+    {
+      "id": 40949346695,
+      "name": "Native source workflow controls",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/40949346695"
+    }
+  ]
+}
