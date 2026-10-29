@@ -1,0 +1,224 @@
+{
+  "hosted_CI": "PENDING",
+  "observations": {
+    "accounting_boundary_check": {
+      "normal": 3,
+      "optimized": 3,
+      "status": "PASS_FRESH_EXECUTION"
+    },
+    "accounting_portable": {
+      "normal_API": 46,
+      "normal_CLI": 48,
+      "optimized_API": 46,
+      "optimized_CLI": 48,
+      "status": "PASS_RETAINED_SOURCE_MATCHED_RECEIPT"
+    },
+    "install/check_source.py": {
+      "bounded_functions": 1426,
+      "source_files": 121,
+      "status": "PASS"
+    },
+    "install/test_quorum_v2_coherence.py": {
+      "normal_methods": 1,
+      "optimized_methods": 1,
+      "status": "PASS"
+    },
+    "new_python_function_size": {
+      "functions": 69,
+      "status": "PASS"
+    },
+    "publication_hygiene": {
+      "status": "PASS_FIXED_CREDENTIAL_PATTERNS_AND_FILE_BOUNDS"
+    },
+    "receiving-repair-v2/test_receipt.py": {
+      "normal": 28,
+      "optimized": 28,
+      "status": "PASS"
+    },
+    "semantic-core-v3-ci/check_continuity.py": {
+      "sealed_runtime_drift": "NONE",
+      "status": "CHECKED_IMPORT_ONLY_CONTINUITY"
+    },
+    "semantic-core-v3-ci/test_continuity.py": {
+      "normal": 12,
+      "optimized": 12,
+      "status": "PASS"
+    },
+    "test_transport_core_language.py": {
+      "normal": 15,
+      "optimized": 15,
+      "status": "PASS"
+    }
+  },
+  "pins": {
+    ".github/workflows/work-accounting.yml": {
+      "bytes": 2299,
+      "sha256": "b720e08cc293a213f78621ba1e89c004b327e8192439dcf9f588abc0b16dd6ba"
+    },
+    "README.md": {
+      "bytes": 9036,
+      "sha256": "9cbfab5394da499bddd6f3b460f81369df3ce523112adb562d83713e559ec543"
+    },
+    "comparison/accounting/README.md": {
+      "bytes": 7881,
+      "sha256": "65c49b5e42b830a6b147bfab42a927894244098490d08239b4b20dbc919749c1"
+    },
+    "comparison/accounting/accounting.py": {
+      "bytes": 13033,
+      "sha256": "4b44797d3455ca8c2cef28156422be2734825df4df90f539f6801c551ef78b87"
+    },
+    "comparison/accounting/check.py": {
+      "bytes": 5537,
+      "sha256": "eabb3f5129606d4159a46f79491770a1e77b7c5921dc1e47d11506528eb7a8df"
+    },
+    "comparison/accounting/contract.json": {
+      "bytes": 16211,
+      "sha256": "968ebd4fcdcc34d4b3be26c1a411474407ec90fa9021c1615e78b4eb1c3c376b"
+    },
+    "comparison/accounting/evidence/engineering-evidence.zip": {
+      "bytes": 225984,
+      "sha256": "9eac0f31f09886c2c7d73d809d47981909eb01bc165aa9beefde0aef1a590c5b"
+    },
+    "comparison/accounting/evidence/independent-review.json": {
+      "bytes": 9104,
+      "sha256": "08c786e6c6a7315eb6ed3986d5fda002e3d2d2fa5f58b900d575d9d27f041cda"
+    },
+    "comparison/accounting/evidence/inventory.json": {
+      "bytes": 9281,
+      "sha256": "316454ff29cf49bc37eab1575d427ab1d1a521137d000af2ced5f7aef1321945"
+    },
+    "comparison/accounting/evidence/publication-review.json": {
+      "bytes": 7340,
+      "sha256": "d2d1118bc5047eca9d16ff8a1902dccc097c6c2f7e7a11c87e98be625b68962a"
+    },
+    "comparison/accounting/oracle.json": {
+      "bytes": 35536,
+      "sha256": "a7d461442299b3819244db101897ab563f65630d0987d7864606bf9026eb8426"
+    },
+    "comparison/accounting/run_tests.py": {
+      "bytes": 7406,
+      "sha256": "4f7287bdf962b5167d0848fee4ed3d1d7739081409672be6d5865ae66a1d2279"
+    },
+    "comparison/accounting/tests/README.md": {
+      "bytes": 2784,
+      "sha256": "192bb8e2aa9494fbc110f2ec98be9a854a934869d9a9fa8cec8d148e4f6eb402"
+    },
+    "comparison/accounting/tests/boundary-check-first.py.txt": {
+      "bytes": 4535,
+      "sha256": "095b21da940e93a2de7119236ee3789121b57ef05808e5d97359d16a6d135d44"
+    },
+    "comparison/accounting/tests/boundary-closure.json": {
+      "bytes": 3875,
+      "sha256": "deed6f4590c54af628ba7c947c1af8c3602ec304ec37693fb301d1ac47d63b65"
+    },
+    "comparison/accounting/tests/boundary-inherited-limits.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "comparison/accounting/tests/boundary-inherited-limits.stdout": {
+      "bytes": 976,
+      "sha256": "dd55dae6ee201682903267dd7f7ba25927ac8d1e0b1c9bce0a983b386a131b5a"
+    },
+    "comparison/accounting/tests/boundary-jackal-receipt.json": {
+      "bytes": 1265,
+      "sha256": "76b7f2322df8e75109e0f99798d87e99dc9494426b026f322fb57551c562feb6"
+    },
+    "comparison/accounting/tests/boundary-normal-corrected.json": {
+      "bytes": 855,
+      "sha256": "9e47108e532d29539d8d16594f21bc3135d2d09fda354fe32be4c683e1826602"
+    },
+    "comparison/accounting/tests/boundary-normal-corrected.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "comparison/accounting/tests/boundary-normal.json": {
+      "bytes": 855,
+      "sha256": "9e47108e532d29539d8d16594f21bc3135d2d09fda354fe32be4c683e1826602"
+    },
+    "comparison/accounting/tests/boundary-normal.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "comparison/accounting/tests/boundary-optimized-corrected.json": {
+      "bytes": 854,
+      "sha256": "893f677712d7722ddbe106bbd9c5db7be09862d087a73978bbdfc91d4acef8b0"
+    },
+    "comparison/accounting/tests/boundary-optimized-corrected.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "comparison/accounting/tests/boundary-optimized.json": {
+      "bytes": 854,
+      "sha256": "893f677712d7722ddbe106bbd9c5db7be09862d087a73978bbdfc91d4acef8b0"
+    },
+    "comparison/accounting/tests/boundary-optimized.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "comparison/accounting/tests/boundary-review-first.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "comparison/accounting/tests/boundary-review-first.stdout": {
+      "bytes": 879,
+      "sha256": "3f77e9ca74d3ce8110d8701b07de5af6d1108da9e1c2ea0d85fa1be8ba79a8f3"
+    },
+    "comparison/accounting/tests/boundary-review-fixtures.zip": {
+      "bytes": 15822,
+      "sha256": "0d1305b3ce41d8fbe815664d84dd2e2b20acec0abe45d4cc070e00d7e49ade1e"
+    },
+    "comparison/accounting/tests/boundary-review-generation.py.txt": {
+      "bytes": 6640,
+      "sha256": "0278eef5a86ff66a000a2dc1695bec81f75b5a2b91c28f2207e1201cea4560cb"
+    },
+    "comparison/accounting/tests/boundary-review-index.json": {
+      "bytes": 2961,
+      "sha256": "6675534c34d930833dbbab573de75b638d51c702051a9f4ce14c37b834b08771"
+    },
+    "comparison/accounting/tests/boundary_check.py": {
+      "bytes": 4856,
+      "sha256": "9df99d1c1f420d49fd9e08753a8708ea1ec14695c39006227dbc0829dc102ed6"
+    },
+    "comparison/accounting/tests/evidence/normal.json": {
+      "bytes": 8877,
+      "sha256": "9ba3cc0ee808d9d09d48bd08eef2346dc41a68ead308838deaa433863c9fe419"
+    },
+    "comparison/accounting/tests/evidence/optimized.json": {
+      "bytes": 8877,
+      "sha256": "9ba3cc0ee808d9d09d48bd08eef2346dc41a68ead308838deaa433863c9fe419"
+    },
+    "comparison/accounting/tests/evidence/portable-local-receipt.json": {
+      "bytes": 2737,
+      "sha256": "b1759b47bee1edcbbce632e4d417e5b2d2c79c58d675301a8ee8f5b329191e32"
+    },
+    "comparison/accounting/tests/fixtures-index.json": {
+      "bytes": 35271,
+      "sha256": "ae4c771dc7686b86d69bc8dfcc5d282cbd8a933249da4a09bdfa90ee2f27806d"
+    },
+    "comparison/accounting/tests/fixtures-v4.zip": {
+      "bytes": 144063,
+      "sha256": "42064259d509cc1fc1a19d566ed958bffba6a584d04628e3c62079859b9cbf6e"
+    },
+    "comparison/accounting/tests/history/run_tests-before-bounded-io.py.txt": {
+      "bytes": 6950,
+      "sha256": "8f0eab687159721f50fcb32ebb3708f1cbc75918b4735acc5a940b376b6323fe"
+    },
+    "comparison/accounting/tests/retained-preflight-failures.json": {
+      "bytes": 1786,
+      "sha256": "eb9e1e09e9ce1694b2d45bcf790eead121d82c8f7169c3eb5c4b260af907c4e0"
+    },
+    "comparison/accounting/tests/run_independent_v5.py": {
+      "bytes": 9972,
+      "sha256": "c3fdd2cac9cd76a4de9abd157f88643c91922b02dded8b4ad86d04fa1481c2af"
+    }
+  },
+  "remaining": [
+    "Actual cross-family admission and independently observable prompt dispatch",
+    "Independent human validation and controlled total-work benefit study",
+    "Inherited full-system proof/install/pilot/release acceptance"
+  ],
+  "runtime": "Python 3.14.7",
+  "schema": "transport/accounting-local-integration/1",
+  "scope": "Owner-recorded actual command observations and verified current artifact pins; not a whole-system proof, fresh human/model study or product acceptance.",
+  "source_base": "39da9cd15bba82b77ccc9870caab81ee32c44b03"
+}
