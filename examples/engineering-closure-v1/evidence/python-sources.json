@@ -1,0 +1,298 @@
+{
+  "install/bound_evaluation_fixtures.py": {
+    "bytes": 6304,
+    "sha256": "1969d66dc8706a4c7524dd6a442d4ba4ac61cb86da523c3951cada85745ef51d"
+  },
+  "install/check_source.py": {
+    "bytes": 1798,
+    "sha256": "1c8c712b6b4e43577d469db32d951c2c86bb6a08ef3abd3cbd0a4b4389542940"
+  },
+  "install/export_reader_test_fixtures.py": {
+    "bytes": 19345,
+    "sha256": "8eb88a6a3f48bd6d24c0f526aea3a4e2fd46e054116a9ad77885c074aeaa5fce"
+  },
+  "install/freeze_response_contract_tests.py": {
+    "bytes": 2164,
+    "sha256": "b3a92e95f1bdc082eb85b91f74965250adf133a983e618dfb9540c2b94d71eab"
+  },
+  "install/prepare_quorum_replay.py": {
+    "bytes": 19754,
+    "sha256": "23119618174b44cf9fd411014c861751a87317d59a5bb333842b5fa7c356d830"
+  },
+  "install/prepare_quorum_sender.py": {
+    "bytes": 18974,
+    "sha256": "65326c68f4d95b0462148ff0ef92bcdcf4896dac0d02326c059d4fb1723c7932"
+  },
+  "install/prepare_source.py": {
+    "bytes": 1747,
+    "sha256": "b28dbb363bcb702b2e70369d81eaa8bbb231c9c282d1df2ea830774753ff6ef3"
+  },
+  "install/read_transport_export.py": {
+    "bytes": 29108,
+    "sha256": "4fc3f3475d9686ed87d6c6227dfe6edd63f12a53b9cb56821f26407a30310c67"
+  },
+  "install/source_page_review_checks.py": {
+    "bytes": 12298,
+    "sha256": "2bb0486a35770726aab6cf7d0cd470453da70499d28f795d918077ab303035a7"
+  },
+  "install/test_bound_evaluation.py": {
+    "bytes": 31606,
+    "sha256": "1ee08d8acaf7e9a4847ae5d90f0ccd72f51f256d74f9754a5e9e96a82d3aa4a3"
+  },
+  "install/test_bound_test_receipts.py": {
+    "bytes": 23876,
+    "sha256": "003c8c335a2876c748616f3bc7b4ebdc180e44b6f3b4758c4f4769bcc8491ace"
+  },
+  "install/test_checked_finish.py": {
+    "bytes": 17381,
+    "sha256": "67899d05626e97fff1276971da7019728c6634b66901868bca1b017919462acc"
+  },
+  "install/test_evidence_finish.py": {
+    "bytes": 24067,
+    "sha256": "3f0e6b5228a2960c82c78c4a63c42be722bcdcee49c549d90ea750b98035cfe8"
+  },
+  "install/test_export_reader.py": {
+    "bytes": 19937,
+    "sha256": "818bae441299abce11faa03c05b0a0d91495e6fba3e95a7e318805df5b46e386"
+  },
+  "install/test_finite_check.py": {
+    "bytes": 14341,
+    "sha256": "b12c0790c90024145d248a6269a4b9a17da900fbb712f16c550ba3a9256b83b1"
+  },
+  "install/test_fixture_expression.py": {
+    "bytes": 13176,
+    "sha256": "68f946bfbc53122764722cdd2504cde9022a382a61aaa3c0d404cf6af5fd5546"
+  },
+  "install/test_focus_page.py": {
+    "bytes": 11990,
+    "sha256": "0fa097fa5139f2de578a479d00c3eec8d99e86aa092266d0cd4f68ca6d55a36c"
+  },
+  "install/test_handoff_client.py": {
+    "bytes": 10809,
+    "sha256": "e7ddc8752e35b8cbaba873658e0a3c745e20ed4f3edcab9d4545d05f3a6a2c16"
+  },
+  "install/test_handoff_prepare.py": {
+    "bytes": 16486,
+    "sha256": "2cdb56bc48855a4777b04f7b2ecca299aab73e50d2411d981ea3d4ece8e2efd4"
+  },
+  "install/test_handoff_reader.py": {
+    "bytes": 19301,
+    "sha256": "20e43892c02a0cc8225e76028c3e0fd7c3a4a7cca7ef732001b976d6aba0f445"
+  },
+  "install/test_install_layout.py": {
+    "bytes": 4723,
+    "sha256": "cf13c4ea2b4166ad3f96802d532e7fe0cb660a6ffde03ab97e6a05ca0c163bda"
+  },
+  "install/test_install_product.py": {
+    "bytes": 26443,
+    "sha256": "9bad91b9f77c9d49e6cce195412e0a1ac9a6cb952809a22ecf04f50ad7e59e70"
+  },
+  "install/test_install_support.py": {
+    "bytes": 14674,
+    "sha256": "3b4dda66b90cb80ace5a60f421538bf4a35569d86923d2f83b42e733e44bf8dd"
+  },
+  "install/test_installed_regression.py": {
+    "bytes": 3534,
+    "sha256": "cce727ee573ca2ed07deb878c8c99474aed9afcb43fecba12b635ed56a2b0ed3"
+  },
+  "install/test_lexicon_registry.py": {
+    "bytes": 23900,
+    "sha256": "ed9c09ae276e69f01128356a5203d8c38fa2d688ebdb8ae27b66d08e3f7b52b6"
+  },
+  "install/test_portable_handoff.py": {
+    "bytes": 24910,
+    "sha256": "f8146be8e0b75ae38dea727f2983f4fb2e156775db8c075f3fbbeceb9da8c5bb"
+  },
+  "install/test_public_share.py": {
+    "bytes": 8468,
+    "sha256": "8d6362546a3527101321831458b581e528dde18b2bb611dd34c60c58af341b76"
+  },
+  "install/test_quorum_claim.py": {
+    "bytes": 8550,
+    "sha256": "2cb5c9eefd3a346b9daa6b15db3e55daea9d06a70075e8fc0e987d8357088772"
+  },
+  "install/test_quorum_context.py": {
+    "bytes": 11853,
+    "sha256": "4a7a707d23a464e59936c4b4495eb9a9e92451594e3e84215b838af4c59d468b"
+  },
+  "install/test_quorum_graph.py": {
+    "bytes": 6143,
+    "sha256": "95fcbd6801bf0afd0a2df95adbeab47701897d4ef00865b2874c9773eaf87043"
+  },
+  "install/test_quorum_impact.py": {
+    "bytes": 15092,
+    "sha256": "365c8742b912fa76aaf03dd88729dcf3587dafa67c53175ddeb9deebe35d1235"
+  },
+  "install/test_quorum_input.py": {
+    "bytes": 11009,
+    "sha256": "15601efbfa3d5ead0acd811ae9a8fd89f9cc2b38b6cf21d230a4b7186d618d51"
+  },
+  "install/test_quorum_reading.py": {
+    "bytes": 11460,
+    "sha256": "d1850eac3a67bd2785a24450616c72321ead57bb18e82f55b3c5af79dc56abc5"
+  },
+  "install/test_quorum_replay.py": {
+    "bytes": 9871,
+    "sha256": "34381af7a7037c3440d0b7393e1e570cc65373410e3b2329e3849a53b5b9bb54"
+  },
+  "install/test_quorum_sender.py": {
+    "bytes": 15283,
+    "sha256": "9e421805024829ddb27e01cdd7b39650a74f84a9887bef43cb12daa7a6be037d"
+  },
+  "install/test_quorum_source.py": {
+    "bytes": 11371,
+    "sha256": "6eba5037a91c3acb3d2dd2661fe26c4091cc179e5d42fc1abdf1f86badf596ae"
+  },
+  "install/test_repackage.py": {
+    "bytes": 20465,
+    "sha256": "8eab64c77e3b3e519a1835eaa1a45647776ad2e3e535baa7abfbe9e604421813"
+  },
+  "install/test_response_contract.py": {
+    "bytes": 20586,
+    "sha256": "f2328b7fd2729823dd2c3018f72c4abf86f5c81b5a03b0aee009c4350425230a"
+  },
+  "install/test_response_evidence.py": {
+    "bytes": 17949,
+    "sha256": "ef6ee7748118f6f54262f658a8f848671a88fae678bf549253ff2cccf716fc30"
+  },
+  "install/test_source_distribution.py": {
+    "bytes": 18394,
+    "sha256": "a750927c2f8231eee599afbf95a486f978962962ad3e668439ec98f576270537"
+  },
+  "install/transport_bound_check.py": {
+    "bytes": 5163,
+    "sha256": "4d6e84ca424217451a3dbae1721bdda863cc2087c92ed10fea0772fba43b326d"
+  },
+  "install/transport_bound_contract.py": {
+    "bytes": 6795,
+    "sha256": "a862d9aae43f8a2ae2e9744d9b93e66a4fca4d8068fbf441a5ea70fd15a7147f"
+  },
+  "install/transport_bound_evaluate.py": {
+    "bytes": 5883,
+    "sha256": "b873b0685628036051a45676590269fa82f0e847ccbd19eeaca80c60ce708851"
+  },
+  "install/transport_bound_inputs.py": {
+    "bytes": 2024,
+    "sha256": "513e8b04aabb1e996c334f59449f60b8e3b58128e54b7b21d3441d0759128394"
+  },
+  "install/transport_bound_lowering.py": {
+    "bytes": 5937,
+    "sha256": "52e10b6548492f926ab4d2e4220f61686f6b9ddde91d736e008b3c4c963c682d"
+  },
+  "install/transport_checked_finish.py": {
+    "bytes": 13833,
+    "sha256": "cfaadbab9798dd42fe4ea87973a908b7e3f5631a862f8564c6851834897a29a0"
+  },
+  "install/transport_finite_check.py": {
+    "bytes": 9171,
+    "sha256": "18201394e3dfb13ba6fd4a7bc5278b54af47fb11df2103e25a9e5cad16158be2"
+  },
+  "install/transport_fixture_expression.py": {
+    "bytes": 14000,
+    "sha256": "64b6b8fee7f9cedc4097bb6efe3ea328c5c922fc12be10515c232c10e4def07b"
+  },
+  "install/transport_handoff_client.py": {
+    "bytes": 7856,
+    "sha256": "745746fe485ca449d6e8d6b912ccefeee0eb67ba36e8976b995103f4fc3d6780"
+  },
+  "install/transport_handoff_inputs.py": {
+    "bytes": 9696,
+    "sha256": "e8250f03719d375ce660e8f262ef009ce2ca569bae37dcfb72ed10bfb3a91cc8"
+  },
+  "install/transport_handoff_prepare.py": {
+    "bytes": 12337,
+    "sha256": "3e9e399e3b7fe9dfc0c06967d0afa9280ae42885f68aac37127cd711c45fab27"
+  },
+  "install/transport_handoff_prepare_inputs.py": {
+    "bytes": 5121,
+    "sha256": "ed2819d48cd45befdbcc1a9ced20d7692467e0324123d57e158e47314fba292a"
+  },
+  "install/transport_handoff_reader.py": {
+    "bytes": 12776,
+    "sha256": "0d0d14c9ca7f488684f6433e062c0a3c8141c08c2337e8aa4a2710325c1718b1"
+  },
+  "install/transport_handoff_session.py": {
+    "bytes": 5775,
+    "sha256": "0826ff3fda11d023c60ea12f577e97f7d79b02f4566027647b7101cdadbdfcfe"
+  },
+  "install/transport_install.py": {
+    "bytes": 7347,
+    "sha256": "7d1affab8442e28abeaeb9f77193eef719bb8867d5907085ac13eb28871decdc"
+  },
+  "install/transport_install_build.py": {
+    "bytes": 6630,
+    "sha256": "5aede54f09ed35f1139b24d8bc11864e388df9d57c6fddb5cc312273d5398662"
+  },
+  "install/transport_install_check.py": {
+    "bytes": 5471,
+    "sha256": "9b1f67222e639357cc4eb6799d1dba9cdf50c1ee3e3ce7ffe785153f36a7d8a5"
+  },
+  "install/transport_install_layout.py": {
+    "bytes": 8449,
+    "sha256": "92bca5af352c244f0c70831a824030511b82a0017fd4834b4a8e6916a5ed422b"
+  },
+  "install/transport_install_support.py": {
+    "bytes": 17126,
+    "sha256": "f8e63f6265bb7e35b3a296e1ec463a15140a4e0106865334ce5140ff7d2586da"
+  },
+  "install/transport_public_share.py": {
+    "bytes": 18120,
+    "sha256": "cba055858360c177f25bd510c24ebdf31833e8ed550f362c55d946acbfc766b9"
+  },
+  "install/transport_quorum_bootstrap.py": {
+    "bytes": 27955,
+    "sha256": "03f2bf18a67b9a6d6ccf25fd506b252b38ac34c78f56153eb22b8ecfca5738ea"
+  },
+  "install/transport_repackage.py": {
+    "bytes": 24435,
+    "sha256": "e5be2b30a9c08025b017e82e42c549a97d7f9296680ada2c4b8c44f96d69cccf"
+  },
+  "install/transport_response_contract.py": {
+    "bytes": 6028,
+    "sha256": "44e3d2673f29c6533cea9c7ac7905c0dd9f1abc57f1c0f177bb57e76989523c2"
+  },
+  "install/transport_response_contract_model.py": {
+    "bytes": 7292,
+    "sha256": "cb07233474c0df32d084095df7775fac23fc5aa4e499d214e2ac3012612a7f3c"
+  },
+  "install/transport_response_evidence.py": {
+    "bytes": 7544,
+    "sha256": "6450ba7904aa8c6d80b3dc52b4de789c342bfd25c8f256cac4229145ba8788ad"
+  },
+  "install/transport_source_distribution.py": {
+    "bytes": 15705,
+    "sha256": "e46c1caeacb4293368ec5e5633d8347641ab3f415fdee8e5ac98501ee83a8d1e"
+  },
+  "tests/test_semantic_transport.py": {
+    "bytes": 28015,
+    "sha256": "1491cd80ee73b43e745fb4d39567f5b5aa47a98669f01eb7774de3b22da65333"
+  },
+  "tests/test_transport.py": {
+    "bytes": 29494,
+    "sha256": "b8d53c32a0b47646f9bd6ca1a2bfcf9c634102bc782c969957762be03ed8c403"
+  },
+  "tests/test_transport_authoring.py": {
+    "bytes": 22560,
+    "sha256": "788388361895db065bdd6e9e8531e962d1d7d8718010a6617fb8f4d83fdc6637"
+  },
+  "tests/test_transport_context.py": {
+    "bytes": 10936,
+    "sha256": "dd7419067806ce0a7f66d8fa7a8543c5067c63cd16ebc194f9af9005dd066b24"
+  },
+  "tests/test_transport_export.py": {
+    "bytes": 25791,
+    "sha256": "1d5846dbe3108118973f7021a09d3b71f51e733e697d2aae22f1425467f1d65d"
+  },
+  "tests/test_transport_mcp.py": {
+    "bytes": 8513,
+    "sha256": "5d42f85de0591eb9cd2c4b1e12d555a9fec7efff132051a1ce7f8f491afecaa6"
+  },
+  "tests/test_transport_recipient_pagination.py": {
+    "bytes": 17878,
+    "sha256": "6b0ed20f0b0b11752d494daa16079a86e66a51ef1f42274646a950dbe530fb34"
+  },
+  "tests/test_transport_recipient_runner.py": {
+    "bytes": 37128,
+    "sha256": "b616a4368068f88d8dba8b7ad5a07fe4496d082b186efaaf6b6834f9da4b1be1"
+  }
+}

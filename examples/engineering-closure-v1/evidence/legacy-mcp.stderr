@@ -1,0 +1,15 @@
+test_binary_and_empty_objects_remain_exact_without_fabricated_utf8 (test_transport_mcp.AdapterTests.test_binary_and_empty_objects_remain_exact_without_fabricated_utf8) ... ok
+test_bounded_input_accepts_complete_lines_and_refuses_size_count_utf8_and_truncation (test_transport_mcp.AdapterTests.test_bounded_input_accepts_complete_lines_and_refuses_size_count_utf8_and_truncation) ... ok
+test_checked_focus_and_metadata_match_authoritative_codec (test_transport_mcp.AdapterTests.test_checked_focus_and_metadata_match_authoritative_codec) ... ok
+test_closed_arguments_unknown_units_and_authority_are_not_silently_accepted (test_transport_mcp.AdapterTests.test_closed_arguments_unknown_units_and_authority_are_not_silently_accepted) ... ok
+test_exact_page_matches_separately_held_source (test_transport_mcp.AdapterTests.test_exact_page_matches_separately_held_source) ... ok
+test_missing_or_incompatible_sdk_dependencies_refuse (test_transport_mcp.AdapterTests.test_missing_or_incompatible_sdk_dependencies_refuse) ... ok
+test_real_startup_wrong_identity_and_wire_bound_are_explicit_failures (test_transport_mcp.AdapterTests.test_real_startup_wrong_identity_and_wire_bound_are_explicit_failures) ... ok
+test_real_stdio_sdk_discovery_inspect_page_focus_and_error (test_transport_mcp.AdapterTests.test_real_stdio_sdk_discovery_inspect_page_focus_and_error) ... ok
+test_response_size_refuses_instead_of_truncating (test_transport_mcp.AdapterTests.test_response_size_refuses_instead_of_truncating) ... ok
+test_wrong_pair_pin_and_truncated_archive_refuse (test_transport_mcp.AdapterTests.test_wrong_pair_pin_and_truncated_archive_refuse) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.180s
+
+OK

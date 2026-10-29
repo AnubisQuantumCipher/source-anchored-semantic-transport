@@ -1,0 +1,9 @@
+{
+  "schema": "transport/evidence-staging-correction/1",
+  "status": "PREPARATION_WARNING_RETAINED",
+  "observed": "The first evidence-copy driver exited zero but emitted ResourceWarning for two unclosed read handles while hashing retained partial prover cache archives.",
+  "affected": "Evidence staging script only. No native, product source, installed bundle or old receipt was modified.",
+  "original": "stage_public_closure.py",
+  "correction": "stage_public_closure_corrected.py uses context managers for those file reads.",
+  "rerun": "The complete create-only staging driver was not rerun against its already populated destination. The copied observations and archive identities are checked separately; no warning-free first-run claim is made."
+}

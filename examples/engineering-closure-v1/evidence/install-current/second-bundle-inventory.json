@@ -1,0 +1,202 @@
+{
+  "INSTALL.json": {
+    "bytes": 4891,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "398d5388da9c03a6c155e5f19523dccfb7b26aecbad256a4eb301a308013e50b"
+  },
+  "LICENSE": {
+    "bytes": 1104,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "e1d386e60be5de89247667ce05081ffb0716b8f14fd3e34d6033c6d2c14994ad"
+  },
+  "LICENSE-SCOPE.md": {
+    "bytes": 998,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "1daee6d7ab96d7a30df105499a1dc27d3473b70d978e7dc4a03a22f46d85c05f"
+  },
+  "RUNTIME.json": {
+    "bytes": 3632,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "683527cac47425759c750cbc5190acbd249fcec43a79b3bea99727fb51688819"
+  },
+  "bin": {
+    "kind": "directory",
+    "mode": 448
+  },
+  "bin/semantic-transport": {
+    "bytes": 5304,
+    "kind": "file",
+    "mode": 448,
+    "sha256": "7e028b1f02935d5673b5b19ca2d403d2134b9dc87bcbce226256be5dab1b476b"
+  },
+  "bin/transport_native": {
+    "bytes": 1685392,
+    "kind": "file",
+    "mode": 448,
+    "sha256": "299c0457f9047c8c68bdd1227418d5968c195ca683b32a2a7e02cf73f4411013"
+  },
+  "tools": {
+    "kind": "directory",
+    "mode": 448
+  },
+  "tools/transport_archive.py": {
+    "bytes": 4577,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "ba21391b0d1e736c2fedae05352ad06ef45c16294322eca184eaab9a5e1c8f59"
+  },
+  "tools/transport_author.py": {
+    "bytes": 3869,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "5cbb47354a1c92c1d8f4c2eb4a883a2bb43780be57fc9b49610c1786d227a03f"
+  },
+  "tools/transport_authoring.py": {
+    "bytes": 14663,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "09b02bae52a1b2425e269294dda8e822159811713088d723cefbdf3dd3d826f2"
+  },
+  "tools/transport_cli.py": {
+    "bytes": 7730,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "8d0e1152322dcb3a0504901046559ce507b584a88e4ce89320c2a66ea1e8e962"
+  },
+  "tools/transport_codec.py": {
+    "bytes": 8988,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "a7751a746240e93e511b880fda081960e0bb2000ca52747a8509a092283bef74"
+  },
+  "tools/transport_codec_cli.py": {
+    "bytes": 4048,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "3a8fd51775736e7753ba326b53f42790290d8cc06797b22f04b1b3eae97b89a1"
+  },
+  "tools/transport_corpus.py": {
+    "bytes": 8934,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "ccbe5eace498b4ba21629bb9382bfd18da77a7b3a5559e3fe381cb3b93ee0e32"
+  },
+  "tools/transport_export.py": {
+    "bytes": 15514,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "9a731c24626bbf4311057f3ef5660905bc01de4678098bf3c2c9069e4ca0831f"
+  },
+  "tools/transport_formula.py": {
+    "bytes": 7817,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "75e84b0c8fe62812c67c85e954f1a3feb505cde308abe82712761418e365ed65"
+  },
+  "tools/transport_graph.py": {
+    "bytes": 12294,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "84b2acfed139595a235cb7b39fc5f9613faa8446af41913c808c48289fadf18a"
+  },
+  "tools/transport_lexicon.py": {
+    "bytes": 10007,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "3d3e2b0bfc900dd46dbcab55b1bf8d2b93c20f93abe0945d3c60bbe62f204fa0"
+  },
+  "tools/transport_mcp.py": {
+    "bytes": 11653,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "2dc859f50e58ccbf67d7e650a132d2d45566a6845f0714f89cb37326df779767"
+  },
+  "tools/transport_meaning.py": {
+    "bytes": 8848,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "6922a302cd8dc9d6ad2391971f321a9589e7b6c2b72107a63f6701b250e07549"
+  },
+  "tools/transport_operators.py": {
+    "bytes": 1997,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "b638b57693d26238ec2c461b810ad665008a8b59886ed0be53f0dbc71809f417"
+  },
+  "tools/transport_package.py": {
+    "bytes": 16463,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "32b60f519033c4632d3438444945790a7bd3ba3cbec0a992a46ff1e3e2c8a58a"
+  },
+  "tools/transport_plan.py": {
+    "bytes": 18326,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "2dcfca9bd9ccec1c1bb7635bc6e080b7b6d8bda8b7a86dd48a1b7191c090af71"
+  },
+  "tools/transport_readable.py": {
+    "bytes": 5381,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "67496bf66b1ff15952e57cc3843fe52fa80ca4fb69a49185195efc2161737705"
+  },
+  "tools/transport_recipient_process.py": {
+    "bytes": 8408,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "8175ca8e40231187411ffcbccf115b52f4f01dd33b6a22499a061b11c785b3b0"
+  },
+  "tools/transport_recipient_runner.py": {
+    "bytes": 30442,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "ddb6220224bff2f2860c2c134973336e1adfe0986586fe73aa0f647f3d5b7c40"
+  },
+  "tools/transport_references.py": {
+    "bytes": 3423,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "421d6319bec6b8f3bb9d1c965e50daf40d1f6d5165a9913b99e18a36285d9b8a"
+  },
+  "tools/transport_requirement_language.py": {
+    "bytes": 7413,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "e9bd5b8fa360da23f9c2fd55aea9597260da453083b8ab64462a031e444d965b"
+  },
+  "tools/transport_schema.py": {
+    "bytes": 8622,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "1c324b661314bd3a92f23b4502207f38a483baa6565d479838de450f110eeb1a"
+  },
+  "tools/transport_semantics.py": {
+    "bytes": 8167,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "85d9853fde530d28f49c6b711b2ce0136968bddaec428d4a57290c8f52b0f301"
+  },
+  "tools/transport_source_map.py": {
+    "bytes": 6809,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "caa98ccb077023e85f6a57937e905ade5736048f372b8e8b96d9e4c6d3bbb9b0"
+  },
+  "tools/transport_structure.py": {
+    "bytes": 5034,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "a6975bdad37ca869c78cd2cafba189c9ad3f189bfc5e5bac8dafce6dcb09c370"
+  },
+  "tools/transport_wire.py": {
+    "bytes": 6691,
+    "kind": "file",
+    "mode": 384,
+    "sha256": "2a0fa77da78ae4591fc296f6ce4f62e961c68ed992479ffe59974e236b0f58c4"
+  }
+}

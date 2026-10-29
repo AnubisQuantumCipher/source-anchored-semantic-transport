@@ -6,6 +6,8 @@ One encoding produces a compact share text, a matched meaning ZIP, and a readabl
 
 The [checked continuation case](docs/CHECKED_CONTINUATION.md) now follows a fresh agent from source retrieval to a proposed patch, exact submission, finite-domain behavior checks and separate source review. Both transport and the original-document baseline passed after a real submission defect was repaired. The initial failures remain available; this case does not show that transport outperforms the baseline.
 
+The [native proof and installed workflow receipt](examples/engineering-closure-v1/README.md) records fresh SPARK results, two independently compiled local bundles, portable recovery and a separate export reader. Its checker rejects missing proof coverage, altered source, skipped suites and inconsistent installation evidence. The original timeout failures and remaining acceptance gates are retained.
+
 This is an open-source implementation under the [MIT license](LICENSE), targeting Omarchy. It is a **development checkpoint**, with bounded local functionality and explicit acceptance limits. It is not an official client plugin, an Omarchy marketplace release, or a claim of complete natural-language understanding.
 
 ## What is implemented

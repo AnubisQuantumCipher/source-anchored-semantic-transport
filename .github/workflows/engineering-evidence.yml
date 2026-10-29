@@ -1,0 +1,21 @@
+name: Native engineering evidence
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  receipt:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.14.10'
+          architecture: 'x64'
+          check-latest: false
+          allow-prereleases: false
+      - name: Retained observation and tamper controls (no native proof rerun)
+        run: |
+          python3 -I -S -B -Werror examples/engineering-closure-v1/test_receipt.py
+          python3 -I -S -B -O -Werror examples/engineering-closure-v1/test_receipt.py
+          python3 -I -S -B -Werror examples/engineering-closure-v1/receipt.py --check

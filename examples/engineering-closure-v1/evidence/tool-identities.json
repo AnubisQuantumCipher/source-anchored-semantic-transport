@@ -1,0 +1,34 @@
+{
+  "/home/sicarii/opt/gnat/gnat-aarch64-linux-16.1.0-1/bin/gcc": {
+    "bytes": 2300216,
+    "sha256": "ef4d2c23a77857bed0b8f86b7878451da2be9023988d5f5358d37f04fa3ec0fe"
+  },
+  "/home/sicarii/opt/gnat/gnat-aarch64-linux-16.1.0-1/bin/gnat": {
+    "bytes": 3498288,
+    "sha256": "4f9e401fcee0f1eff05bca6df940fe6ca67e1d8e0a42bf168de6e1d790bea00f"
+  },
+  "/home/sicarii/opt/gnat/gnatprove-aarch64-linux-16.1.0-1/bin/gnatprove": {
+    "bytes": 66111984,
+    "sha256": "11db5cc1032d51474c2b84cc8567095c4ec4f5ae4428ff525b7bac92e7d86bc9"
+  },
+  "/home/sicarii/opt/gnat/gnatprove-aarch64-linux-16.1.0-1/libexec/spark/bin/alt-ergo": {
+    "bytes": 24688792,
+    "sha256": "09f93d6ed6f6d70ff916185ff36bbc8a41d486ce6100f2ad0d7e3d03feb7671e"
+  },
+  "/home/sicarii/opt/gnat/gnatprove-aarch64-linux-16.1.0-1/libexec/spark/bin/cvc5": {
+    "bytes": 26751080,
+    "sha256": "010d7adf505f4bd27822fbb31a6e8999c6af2a5b8339d7c0fefccd4b38978814"
+  },
+  "/home/sicarii/opt/gnat/gnatprove-aarch64-linux-16.1.0-1/libexec/spark/bin/gnat2why": {
+    "bytes": 106334584,
+    "sha256": "375d0100954a66c78bace00d2229c9b96a30b6cf28845e00c4db220ba1efddb5"
+  },
+  "/home/sicarii/opt/gnat/gnatprove-aarch64-linux-16.1.0-1/libexec/spark/bin/z3": {
+    "bytes": 31059760,
+    "sha256": "d718168cd9b69b5e73ad7124f6e5083c047c28f1b3165ddd04e3b89191319a78"
+  },
+  "/home/sicarii/opt/gnat/gprbuild-aarch64-linux-26.0.0-1/bin/gprbuild": {
+    "bytes": 17019248,
+    "sha256": "fcf2bab30eff76c521a4800a7ead41615bf36b678851fb0268f6a930b6cfc0fb"
+  }
+}

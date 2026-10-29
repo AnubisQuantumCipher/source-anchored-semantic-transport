@@ -1,0 +1,30 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-I",
+    "-S",
+    "-B",
+    "-Werror",
+    "/dev/shm/semantic-transport-proof-closure-20261029/current-export/recipient/reader.py",
+    "metadata",
+    "/dev/shm/semantic-transport-proof-closure-20261029/current-export/recipient/export",
+    "/dev/shm/semantic-transport-proof-closure-20261029/current-export/recipient/metadata.recovered",
+    "--expect-export-sha256",
+    "746e851c8e7949372f98af475f2efe8f908b8ced45742a86feef46eb7825ab6c"
+  ],
+  "elapsed_ns": 107131499,
+  "exit_code": 0,
+  "status": "SUCCESS",
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "bytes": 775,
+    "sha256": "e369a8214238ab3a9feb12bf4199fb892b7dba6bf5140b2b047ae0cb90ac14fb"
+  },
+  "storage_after": {
+    "bytes": 122384516,
+    "files": 1984
+  }
+}

@@ -1,0 +1,11 @@
+START first-install
+first-install SUCCESS
+START second-install
+second-install SUCCESS
+START current-regression
+current-regression SUCCESS
+START current-product
+current-product SUCCESS
+START current-portable
+current-portable SUCCESS
+CURRENT_INSTALL_CHECKS_RECORDED; receipt evaluation required

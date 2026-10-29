@@ -1,0 +1,29 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-I",
+    "-S",
+    "-B",
+    "-Werror",
+    "-c",
+    "import sys,unittest;sys.path[:0]=[sys.argv[1]+\"/tools\",sys.argv[1]+\"/tests\"];r=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromNames(sys.argv[2:]));sys.exit(not r.wasSuccessful() or bool(r.skipped))",
+    "/home/sicarii/Projects/source-anchored-semantic-transport",
+    "test_transport_recipient_runner",
+    "test_transport_recipient_pagination"
+  ],
+  "elapsed_ns": 31232682735,
+  "exit_code": 0,
+  "status": "SUCCESS",
+  "stderr": {
+    "bytes": 9961,
+    "sha256": "10e8ed964866bdc046b7151519f40251604c5d071cb0dbd36365582a2d63a28a"
+  },
+  "stdout": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "storage_after": {
+    "bytes": 121126641,
+    "files": 1922
+  }
+}
