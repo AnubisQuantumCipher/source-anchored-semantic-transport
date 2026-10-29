@@ -1,0 +1,3572 @@
+{
+  "benefit": "NOT_MEASURED; matched annotations and checker demonstrate finite parity",
+  "current_authority": "NONE",
+  "external_validation": "EXTERNAL_VALIDATION_PENDING",
+  "files": [
+    {
+      "bytes": 926,
+      "path": ".github/workflows/quorum-replay.yml",
+      "sha256": "a302885a5eabbdee6fd2e3a85e63937daa0343d0e7e238af1fc86d89dafa2785"
+    },
+    {
+      "bytes": 8783,
+      "path": "README.md",
+      "sha256": "4a9f2ed165c237ad9150c61727f3dbe5eb2a119af20f57e8639a9fc84dc0063f"
+    },
+    {
+      "bytes": 4490,
+      "path": "examples/quorum-replay-v1/PREPARATION.md",
+      "sha256": "c9541f7405272021524e4960ee3e4e58a1ccca8cd29b89296e7e6e141f396608"
+    },
+    {
+      "bytes": 3927,
+      "path": "examples/quorum-replay-v1/README.md",
+      "sha256": "066bddcaeee2f5b7d429b9060b15d5722bc78a3609dd777fb68a6836a251e0cf"
+    },
+    {
+      "bytes": 5458,
+      "path": "examples/quorum-replay-v1/REPORT.md",
+      "sha256": "c36996a37b47940bc94653a6a289990c9dfdf13e72164e3429719c43e21a7868"
+    },
+    {
+      "bytes": 10211,
+      "path": "examples/quorum-replay-v1/additional-literals/P01_REQUEST_PIN_CANONICAL/body.json",
+      "sha256": "a66edd8aaa8aa0132bfc854d027a10289c1c67a2556f2534808f496d6f36f749"
+    },
+    {
+      "bytes": 419,
+      "path": "examples/quorum-replay-v1/additional-literals/P01_REQUEST_PIN_CANONICAL/expected.json",
+      "sha256": "5739da135f91e4f30eb09a4978b352e5a6310416bd293b7ce6cbf4bc5200beb9"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/additional-literals/P01_REQUEST_PIN_CANONICAL/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/additional-literals/P01_REQUEST_PIN_CANONICAL/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 589,
+      "path": "examples/quorum-replay-v1/additional-literals/P01_REQUEST_PIN_CANONICAL/materialization.json",
+      "sha256": "f88fedc5b21669d0dfbde578f9366f0987c1e61a45cde4ee80ffd842b4cb734c"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/additional-literals/P01_REQUEST_PIN_CANONICAL/original-source-envelope.json",
+      "sha256": "dc54bfb31438b49daf3d76f49f01d88542410a553bd6ac7256a6573b48b67694"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/additional-literals/P01_REQUEST_PIN_CANONICAL/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 9898,
+      "path": "examples/quorum-replay-v1/additional-literals/P02_EMPTY_SOURCE/body.json",
+      "sha256": "ed4a6eb875c80daac58621dc66420de6beed4b2c1a573a2762341c91d9de537a"
+    },
+    {
+      "bytes": 2567,
+      "path": "examples/quorum-replay-v1/additional-literals/P02_EMPTY_SOURCE/expected.json",
+      "sha256": "a61548cb3f2fe0b7c72604160194e6970decca84677fa1aef9f08a875b95f97d"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/additional-literals/P02_EMPTY_SOURCE/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/additional-literals/P02_EMPTY_SOURCE/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 473,
+      "path": "examples/quorum-replay-v1/additional-literals/P02_EMPTY_SOURCE/materialization.json",
+      "sha256": "6642483738459de6b738551c0509702c760a325cd6ff26810ca4bacaa65fbd67"
+    },
+    {
+      "bytes": 474,
+      "path": "examples/quorum-replay-v1/additional-literals/P02_EMPTY_SOURCE/original-source-envelope.json",
+      "sha256": "3388cf4b2bc241d3dea6580a10ff35eb72dfd968f0f4cc0ffb181a096444d375"
+    },
+    {
+      "bytes": 642,
+      "path": "examples/quorum-replay-v1/additional-literals/P02_EMPTY_SOURCE/originals.json",
+      "sha256": "49f8cb89b57c96f37d783e334ab5c44c7841e4b654407050072b1ef1356def72"
+    },
+    {
+      "bytes": 10626,
+      "path": "examples/quorum-replay-v1/additional-literals/P03_MISSING_CLAIM/body.json",
+      "sha256": "f7050ef532f689654d5a33df8dfce679e5419d48f2ed412d3a56b85d09e50c78"
+    },
+    {
+      "bytes": 664,
+      "path": "examples/quorum-replay-v1/additional-literals/P03_MISSING_CLAIM/expected.json",
+      "sha256": "7b464e7dfb6fa59a39a4dbf6d54071b43244a733beac5988437e277ddfcc2cda"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/additional-literals/P03_MISSING_CLAIM/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/additional-literals/P03_MISSING_CLAIM/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 473,
+      "path": "examples/quorum-replay-v1/additional-literals/P03_MISSING_CLAIM/materialization.json",
+      "sha256": "6642483738459de6b738551c0509702c760a325cd6ff26810ca4bacaa65fbd67"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/additional-literals/P03_MISSING_CLAIM/original-source-envelope.json",
+      "sha256": "db6d25a902129ee4222c0e34f951e4bb064fb2f3e18113f4bc81511d8bfec200"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/additional-literals/P03_MISSING_CLAIM/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 10335,
+      "path": "examples/quorum-replay-v1/additional-literals/P04_MISSING_SOURCE/body.json",
+      "sha256": "7c987f59c68370a04272ae61a778fed92e9beda964718e43c6d9967b7b776bfb"
+    },
+    {
+      "bytes": 659,
+      "path": "examples/quorum-replay-v1/additional-literals/P04_MISSING_SOURCE/expected.json",
+      "sha256": "b77fcda65f8ea53d0680de864471e65d9356a9f940173971a17f2c054bfdaeeb"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/additional-literals/P04_MISSING_SOURCE/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/additional-literals/P04_MISSING_SOURCE/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 473,
+      "path": "examples/quorum-replay-v1/additional-literals/P04_MISSING_SOURCE/materialization.json",
+      "sha256": "6642483738459de6b738551c0509702c760a325cd6ff26810ca4bacaa65fbd67"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/additional-literals/P04_MISSING_SOURCE/original-source-envelope.json",
+      "sha256": "747f2a99b002e324d8068b7d98b8d4c00fd98a8152a6b21b489a20de2db17638"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/additional-literals/P04_MISSING_SOURCE/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 10497,
+      "path": "examples/quorum-replay-v1/additional-literals/P05_READING_PARENT_BEFORE_UPDATE/body.json",
+      "sha256": "ad47b2d31bead9000aeb2cc7ae631fcf5b2136b2d5aba622ba0f00e3bc4ce2d0"
+    },
+    {
+      "bytes": 531,
+      "path": "examples/quorum-replay-v1/additional-literals/P05_READING_PARENT_BEFORE_UPDATE/expected.json",
+      "sha256": "cfba3adc2830e2114deda8d1127a8587e68a088030a2f71c1678e5e09e4f0bd8"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/additional-literals/P05_READING_PARENT_BEFORE_UPDATE/held-update-pins.json",
+      "sha256": "39c0870a304b41e23eaf0ea140f302f7116bca9ed747f17bd42b06f06a44b7de"
+    },
+    {
+      "bytes": 164,
+      "path": "examples/quorum-replay-v1/additional-literals/P05_READING_PARENT_BEFORE_UPDATE/held-withdrawal-pins.json",
+      "sha256": "4fc5ff480a4c8d9c0d77c552e12a9cc0586bef630b48d8f88ec2bfde18bb1f0a"
+    },
+    {
+      "bytes": 473,
+      "path": "examples/quorum-replay-v1/additional-literals/P05_READING_PARENT_BEFORE_UPDATE/materialization.json",
+      "sha256": "6642483738459de6b738551c0509702c760a325cd6ff26810ca4bacaa65fbd67"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/additional-literals/P05_READING_PARENT_BEFORE_UPDATE/original-source-envelope.json",
+      "sha256": "1caca29c93628235665a33a681f1ca51575ec4f3bf3d8735db5a80c420749580"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/additional-literals/P05_READING_PARENT_BEFORE_UPDATE/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 10632,
+      "path": "examples/quorum-replay-v1/additional-literals/P06_DEP_BEFORE_POSITIONAL/body.json",
+      "sha256": "e683b9b175f24d530e905eada87a43dff630f0ab5f885317728ebd1563e46fb6"
+    },
+    {
+      "bytes": 529,
+      "path": "examples/quorum-replay-v1/additional-literals/P06_DEP_BEFORE_POSITIONAL/expected.json",
+      "sha256": "fc9df47f44047af7a3ee72105735899511f686f03db1deb6cfd830133748d68a"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/additional-literals/P06_DEP_BEFORE_POSITIONAL/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/additional-literals/P06_DEP_BEFORE_POSITIONAL/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 473,
+      "path": "examples/quorum-replay-v1/additional-literals/P06_DEP_BEFORE_POSITIONAL/materialization.json",
+      "sha256": "6642483738459de6b738551c0509702c760a325cd6ff26810ca4bacaa65fbd67"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/additional-literals/P06_DEP_BEFORE_POSITIONAL/original-source-envelope.json",
+      "sha256": "80a8863df0f2e5a5df9f35a8538eac89d752171c5b04f3e1993447df3c00e163"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/additional-literals/P06_DEP_BEFORE_POSITIONAL/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 10691,
+      "path": "examples/quorum-replay-v1/additional-literals/P07_FINAL_LF_SET_ORDER/body.json",
+      "sha256": "e0a87a3f3fbe563cf4a3d8dca1bc3ddef9f66bb6433748c900815b6991f43219"
+    },
+    {
+      "bytes": 2927,
+      "path": "examples/quorum-replay-v1/additional-literals/P07_FINAL_LF_SET_ORDER/expected.json",
+      "sha256": "5a0fdd507283e0d72a9cc5820d4bf5d9a3fdb2670808208af2848526cb5d2955"
+    },
+    {
+      "bytes": 297,
+      "path": "examples/quorum-replay-v1/additional-literals/P07_FINAL_LF_SET_ORDER/held-update-pins.json",
+      "sha256": "b2504d37f71b510aeee1b394faba5809559fb98c1fa60218736e5321f334bcfd"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/additional-literals/P07_FINAL_LF_SET_ORDER/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 473,
+      "path": "examples/quorum-replay-v1/additional-literals/P07_FINAL_LF_SET_ORDER/materialization.json",
+      "sha256": "6642483738459de6b738551c0509702c760a325cd6ff26810ca4bacaa65fbd67"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/additional-literals/P07_FINAL_LF_SET_ORDER/original-source-envelope.json",
+      "sha256": "729ae625577b068d3fab9d3fbeded4e0af78ff7995738a50913a8eff8924c90a"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/additional-literals/P07_FINAL_LF_SET_ORDER/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 201,
+      "path": "examples/quorum-replay-v1/additional-literals/P08_AUXILIARY_LOWERCASE/auxiliary-input.json",
+      "sha256": "00b2b05ef91530e1097ad0abc45b2f8232b63da7393a69aca0820798a03e581d"
+    },
+    {
+      "bytes": 7,
+      "path": "examples/quorum-replay-v1/additional-literals/P08_AUXILIARY_LOWERCASE/auxiliary-result.json",
+      "sha256": "3514cf816e5407a39cb7a1c1e1243f176dda121e06398a8934edb1dc426b0b34"
+    },
+    {
+      "bytes": 10210,
+      "path": "examples/quorum-replay-v1/additional-literals/P08_AUXILIARY_LOWERCASE/body.json",
+      "sha256": "358f61cce73aa485898a40c2a53c71b8cc3d595bf6c1ad87e5ab81f6f7be971f"
+    },
+    {
+      "bytes": 2569,
+      "path": "examples/quorum-replay-v1/additional-literals/P08_AUXILIARY_LOWERCASE/expected.json",
+      "sha256": "3a918bf31f774b8fffb92f4b690fc201eb11c497dbb5d8132ee2878e49ac7168"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/additional-literals/P08_AUXILIARY_LOWERCASE/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/additional-literals/P08_AUXILIARY_LOWERCASE/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 498,
+      "path": "examples/quorum-replay-v1/additional-literals/P08_AUXILIARY_LOWERCASE/materialization.json",
+      "sha256": "6e2315f326b7e5bc27be7801ef402adc2d55912e3d71721ff40929c003c27196"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/additional-literals/P08_AUXILIARY_LOWERCASE/original-source-envelope.json",
+      "sha256": "c6a1c168bb0aa3f9853ec37bced8a1e20ce53cbf0b88ce19bcd26cf9cc4ff3a6"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/additional-literals/P08_AUXILIARY_LOWERCASE/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 14315,
+      "path": "examples/quorum-replay-v1/additional-literals/oracle.json",
+      "sha256": "6b08e92173be44da116b14eaef2cced8a15c91573df095ea37e467ed59a22134"
+    },
+    {
+      "bytes": 10211,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P01_REQUEST_PIN_CANONICAL/body.json",
+      "sha256": "a66edd8aaa8aa0132bfc854d027a10289c1c67a2556f2534808f496d6f36f749"
+    },
+    {
+      "bytes": 419,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P01_REQUEST_PIN_CANONICAL/expected.json",
+      "sha256": "5739da135f91e4f30eb09a4978b352e5a6310416bd293b7ce6cbf4bc5200beb9"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P01_REQUEST_PIN_CANONICAL/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P01_REQUEST_PIN_CANONICAL/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 589,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P01_REQUEST_PIN_CANONICAL/materialization.json",
+      "sha256": "f88fedc5b21669d0dfbde578f9366f0987c1e61a45cde4ee80ffd842b4cb734c"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P01_REQUEST_PIN_CANONICAL/original-source-envelope.json",
+      "sha256": "dc54bfb31438b49daf3d76f49f01d88542410a553bd6ac7256a6573b48b67694"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P01_REQUEST_PIN_CANONICAL/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 9898,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P02_EMPTY_SOURCE/body.json",
+      "sha256": "ed4a6eb875c80daac58621dc66420de6beed4b2c1a573a2762341c91d9de537a"
+    },
+    {
+      "bytes": 2593,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P02_EMPTY_SOURCE/expected.json",
+      "sha256": "ec8ba5e6bb79220193d9fdcbac39b7e3b467f79c3010854d4223825ab0ad8524"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P02_EMPTY_SOURCE/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P02_EMPTY_SOURCE/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 473,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P02_EMPTY_SOURCE/materialization.json",
+      "sha256": "6642483738459de6b738551c0509702c760a325cd6ff26810ca4bacaa65fbd67"
+    },
+    {
+      "bytes": 474,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P02_EMPTY_SOURCE/original-source-envelope.json",
+      "sha256": "3388cf4b2bc241d3dea6580a10ff35eb72dfd968f0f4cc0ffb181a096444d375"
+    },
+    {
+      "bytes": 642,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P02_EMPTY_SOURCE/originals.json",
+      "sha256": "49f8cb89b57c96f37d783e334ab5c44c7841e4b654407050072b1ef1356def72"
+    },
+    {
+      "bytes": 10626,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P03_MISSING_CLAIM/body.json",
+      "sha256": "f7050ef532f689654d5a33df8dfce679e5419d48f2ed412d3a56b85d09e50c78"
+    },
+    {
+      "bytes": 664,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P03_MISSING_CLAIM/expected.json",
+      "sha256": "7b464e7dfb6fa59a39a4dbf6d54071b43244a733beac5988437e277ddfcc2cda"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P03_MISSING_CLAIM/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P03_MISSING_CLAIM/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 473,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P03_MISSING_CLAIM/materialization.json",
+      "sha256": "6642483738459de6b738551c0509702c760a325cd6ff26810ca4bacaa65fbd67"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P03_MISSING_CLAIM/original-source-envelope.json",
+      "sha256": "db6d25a902129ee4222c0e34f951e4bb064fb2f3e18113f4bc81511d8bfec200"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P03_MISSING_CLAIM/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 10335,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P04_MISSING_SOURCE/body.json",
+      "sha256": "7c987f59c68370a04272ae61a778fed92e9beda964718e43c6d9967b7b776bfb"
+    },
+    {
+      "bytes": 659,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P04_MISSING_SOURCE/expected.json",
+      "sha256": "b77fcda65f8ea53d0680de864471e65d9356a9f940173971a17f2c054bfdaeeb"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P04_MISSING_SOURCE/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P04_MISSING_SOURCE/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 473,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P04_MISSING_SOURCE/materialization.json",
+      "sha256": "6642483738459de6b738551c0509702c760a325cd6ff26810ca4bacaa65fbd67"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P04_MISSING_SOURCE/original-source-envelope.json",
+      "sha256": "747f2a99b002e324d8068b7d98b8d4c00fd98a8152a6b21b489a20de2db17638"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P04_MISSING_SOURCE/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 10497,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P05_READING_PARENT_BEFORE_UPDATE/body.json",
+      "sha256": "ad47b2d31bead9000aeb2cc7ae631fcf5b2136b2d5aba622ba0f00e3bc4ce2d0"
+    },
+    {
+      "bytes": 531,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P05_READING_PARENT_BEFORE_UPDATE/expected.json",
+      "sha256": "cfba3adc2830e2114deda8d1127a8587e68a088030a2f71c1678e5e09e4f0bd8"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P05_READING_PARENT_BEFORE_UPDATE/held-update-pins.json",
+      "sha256": "39c0870a304b41e23eaf0ea140f302f7116bca9ed747f17bd42b06f06a44b7de"
+    },
+    {
+      "bytes": 164,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P05_READING_PARENT_BEFORE_UPDATE/held-withdrawal-pins.json",
+      "sha256": "4fc5ff480a4c8d9c0d77c552e12a9cc0586bef630b48d8f88ec2bfde18bb1f0a"
+    },
+    {
+      "bytes": 473,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P05_READING_PARENT_BEFORE_UPDATE/materialization.json",
+      "sha256": "6642483738459de6b738551c0509702c760a325cd6ff26810ca4bacaa65fbd67"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P05_READING_PARENT_BEFORE_UPDATE/original-source-envelope.json",
+      "sha256": "1caca29c93628235665a33a681f1ca51575ec4f3bf3d8735db5a80c420749580"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P05_READING_PARENT_BEFORE_UPDATE/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 10632,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P06_DEP_BEFORE_POSITIONAL/body.json",
+      "sha256": "e683b9b175f24d530e905eada87a43dff630f0ab5f885317728ebd1563e46fb6"
+    },
+    {
+      "bytes": 529,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P06_DEP_BEFORE_POSITIONAL/expected.json",
+      "sha256": "fc9df47f44047af7a3ee72105735899511f686f03db1deb6cfd830133748d68a"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P06_DEP_BEFORE_POSITIONAL/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P06_DEP_BEFORE_POSITIONAL/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 473,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P06_DEP_BEFORE_POSITIONAL/materialization.json",
+      "sha256": "6642483738459de6b738551c0509702c760a325cd6ff26810ca4bacaa65fbd67"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P06_DEP_BEFORE_POSITIONAL/original-source-envelope.json",
+      "sha256": "80a8863df0f2e5a5df9f35a8538eac89d752171c5b04f3e1993447df3c00e163"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P06_DEP_BEFORE_POSITIONAL/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 10691,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P07_FINAL_LF_SET_ORDER/body.json",
+      "sha256": "e0a87a3f3fbe563cf4a3d8dca1bc3ddef9f66bb6433748c900815b6991f43219"
+    },
+    {
+      "bytes": 2927,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P07_FINAL_LF_SET_ORDER/expected.json",
+      "sha256": "5a0fdd507283e0d72a9cc5820d4bf5d9a3fdb2670808208af2848526cb5d2955"
+    },
+    {
+      "bytes": 297,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P07_FINAL_LF_SET_ORDER/held-update-pins.json",
+      "sha256": "b2504d37f71b510aeee1b394faba5809559fb98c1fa60218736e5321f334bcfd"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P07_FINAL_LF_SET_ORDER/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 473,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P07_FINAL_LF_SET_ORDER/materialization.json",
+      "sha256": "6642483738459de6b738551c0509702c760a325cd6ff26810ca4bacaa65fbd67"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P07_FINAL_LF_SET_ORDER/original-source-envelope.json",
+      "sha256": "729ae625577b068d3fab9d3fbeded4e0af78ff7995738a50913a8eff8924c90a"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P07_FINAL_LF_SET_ORDER/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 201,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P08_AUXILIARY_LOWERCASE/auxiliary-input.json",
+      "sha256": "00b2b05ef91530e1097ad0abc45b2f8232b63da7393a69aca0820798a03e581d"
+    },
+    {
+      "bytes": 7,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P08_AUXILIARY_LOWERCASE/auxiliary-result.json",
+      "sha256": "3514cf816e5407a39cb7a1c1e1243f176dda121e06398a8934edb1dc426b0b34"
+    },
+    {
+      "bytes": 10210,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P08_AUXILIARY_LOWERCASE/body.json",
+      "sha256": "358f61cce73aa485898a40c2a53c71b8cc3d595bf6c1ad87e5ab81f6f7be971f"
+    },
+    {
+      "bytes": 2569,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P08_AUXILIARY_LOWERCASE/expected.json",
+      "sha256": "3a918bf31f774b8fffb92f4b690fc201eb11c497dbb5d8132ee2878e49ac7168"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P08_AUXILIARY_LOWERCASE/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P08_AUXILIARY_LOWERCASE/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 498,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P08_AUXILIARY_LOWERCASE/materialization.json",
+      "sha256": "6e2315f326b7e5bc27be7801ef402adc2d55912e3d71721ff40929c003c27196"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P08_AUXILIARY_LOWERCASE/original-source-envelope.json",
+      "sha256": "c6a1c168bb0aa3f9853ec37bced8a1e20ce53cbf0b88ce19bcd26cf9cc4ff3a6"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/P08_AUXILIARY_LOWERCASE/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 1337,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/correction-review.json",
+      "sha256": "e27a0a507a524bd47b58f15d540e99212df0c371138bc07e09ac07f8d98d037d"
+    },
+    {
+      "bytes": 16049,
+      "path": "examples/quorum-replay-v1/additional-literals/revision-02/oracle.json",
+      "sha256": "09a3bd98b47cb6e265979437731a9ba301d08348c0e47f974712d299fe104e72"
+    },
+    {
+      "bytes": 9871,
+      "path": "examples/quorum-replay-v1/evidence/checker-test-harness/test_quorum_replay.py",
+      "sha256": "34381af7a7037c3440d0b7393e1e570cc65373410e3b2329e3849a53b5b9bb54"
+    },
+    {
+      "bytes": 19372,
+      "path": "examples/quorum-replay-v1/evidence/controls/host-bootstrap-01/handwritten-host-expectations-02.json",
+      "sha256": "2593d47ed5df4ba9e49bb079c7801a8ee5dbe5e8316cf2ac7aedc287954b936a"
+    },
+    {
+      "bytes": 21769,
+      "path": "examples/quorum-replay-v1/evidence/controls/host-bootstrap-01/handwritten-host-expectations-03.json",
+      "sha256": "c87755b23c543f1148f4bda1836b7dcbdd3bed3d204b742bb467caedb0cdbb96"
+    },
+    {
+      "bytes": 4103,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-01/audit_import_sources.py",
+      "sha256": "cdee3e6751df5881814f1fa06e50ebb0ab54b239bcbd8c0e525017866495f5f2"
+    },
+    {
+      "bytes": 8060,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-01/complete_fixture_copies.py",
+      "sha256": "7c80d3e5cfa62e9c36a4473f11ae4147962d2c7fac84c07dcf871d0b56371774"
+    },
+    {
+      "bytes": 5945,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-01/derive_current_import_map.py",
+      "sha256": "51ed40b009fdb90e01ceb024e9146ab255d386337f27b79daa5e2989ca076e64"
+    },
+    {
+      "bytes": 5583,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-01/encode_literal_packages.py",
+      "sha256": "772b591846a9ad6f16177e8720f6007ca3a2fcbc319649b397279337b737783e"
+    },
+    {
+      "bytes": 5298,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-01/materialize_host_inputs.py",
+      "sha256": "48176f828e16374a6bb03c3ee459a9b0c3daff8fa594a59c8d087eaa9ce37832"
+    },
+    {
+      "bytes": 11433,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-01/materialize_replay_inputs.py",
+      "sha256": "5092d09e260752b51287fee7c5f1cf0d9c52056cd0836fb6944949d900ea40f0"
+    },
+    {
+      "bytes": 3580,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-01/run_frozen_cli.py",
+      "sha256": "809c2c5a4152bb11c01873ef136473d482c07a0ea187f3c6b582481a7864149d"
+    },
+    {
+      "bytes": 30304,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-01/source-derived-import-map-03f2bf18a67b-dc9ec11823ad.json",
+      "sha256": "4e38f45fd94358f9c6be7f1a9fa389020615e2ba5bc8d64db24547e8ab388b11"
+    },
+    {
+      "bytes": 30304,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-01/source-derived-import-map-da3d7994a43a-85b71074cb5d.json",
+      "sha256": "95ef8f20438196a465247e3c767346ae70f4ed1c7451c577d875af56cf247662"
+    },
+    {
+      "bytes": 6901,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/build_remaining_manifests.py",
+      "sha256": "7420ca8fe2403a923b123b8c34af6e380379ca4bd59f2fd7bc0cf6621fbba1e9"
+    },
+    {
+      "bytes": 8152,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/build_remaining_manifests_r02.py",
+      "sha256": "2767525548e069e9338aa6b57a18be95789fe094de0b481cefcd4ebb75970f47"
+    },
+    {
+      "bytes": 6100,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/derive_current_import_map.py",
+      "sha256": "55dbb8a73a0e6e9ddf69fd5ab45c38f329deb5c8eebb3b289a8cf9ec4002d374"
+    },
+    {
+      "bytes": 6140,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/encode_additional_packages.py",
+      "sha256": "ff977044960e12db728db87150de43331d37d51afdee408f248cbdf35a261782"
+    },
+    {
+      "bytes": 6779,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/first-pair-first-command.json",
+      "sha256": "23665eadafe934ec50a9b539c5b7e3d22a143448efc221a2811fcb432bf67bdb"
+    },
+    {
+      "bytes": 207,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/first-pair-first-command.log",
+      "sha256": "40c612a9570f7b3a2eec28f4314203853b149eeddf9ccdfef92f34896c44ee45"
+    },
+    {
+      "bytes": 1075,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/first-pair-observed-parity.json",
+      "sha256": "2ff4060b6512b049c088077030c3806d8898a395bb77b25ffdb648bc7a3b846e"
+    },
+    {
+      "bytes": 6872,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/first-pair-run/first-run.json",
+      "sha256": "c2ea3e75a5c3acb35d109ac854a976ebcd879f6161f07c03af9e9da2cd82d8ea"
+    },
+    {
+      "bytes": 14452,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/first-pair-run-manifest-ready.json",
+      "sha256": "b346e92b81ff0c6b527a3b19d083bc7e1ad3fe54c06bb02ff3d1628f12165184"
+    },
+    {
+      "bytes": 2860,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/materialize_absence_pair.py",
+      "sha256": "989fbf1f53e6c24a0b4ff30577718f0c5e10f4e4e48870d0d35447a7c1fe376f"
+    },
+    {
+      "bytes": 5676,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/materialize_host_inputs_r02.py",
+      "sha256": "7cbc2a730ea287f99f5b11424cf12cdfaf883cd125642ccd75bb5394030f55c9"
+    },
+    {
+      "bytes": 13106,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/materialize_replay_inputs.py",
+      "sha256": "42bda05edb8fbad2254317a68896011b7c64c67974a7392db6492d2bbecf8594"
+    },
+    {
+      "bytes": 14089,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/materialize_replay_inputs_isolated_keys_body_r02.py",
+      "sha256": "4efd3354f1c1b04c8473940e8051902fc2657427fb80e22905fb5c162ed0485f"
+    },
+    {
+      "bytes": 13956,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/materialize_replay_inputs_isolated_keys_r02.py",
+      "sha256": "b0aaeb5af1c498cd68decc0309a69fcc34c418ef6cd75ef502927de0ba4f7fad"
+    },
+    {
+      "bytes": 13164,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/materialize_replay_inputs_review_r02.py",
+      "sha256": "01a316080bcdfa0d5c7a6d6383ea5af333e0c345b8ffdc46fc160f328461e0c5"
+    },
+    {
+      "bytes": 6026,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/materialize_stale_cache.py",
+      "sha256": "dd6dfd7629b368ee1e01e310d75ebdd5792103a23e6164ca6720459b3d9e5bbe"
+    },
+    {
+      "bytes": 6411,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/original15/F01_ORIGINAL_ACCEPT/expected.stderr",
+      "sha256": "e3868ae60d894e486b2c9a4f451d17fe286d41852dc9440cd6ba457338f89573"
+    },
+    {
+      "bytes": 2587,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/original15/F01_ORIGINAL_ACCEPT/expected.stdout",
+      "sha256": "2e64128c1755686f089f7de1cd74c6c2a128f20ea42245f493beb3a812b7fcb9"
+    },
+    {
+      "bytes": 20471,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/original15/materialized-freeze.json",
+      "sha256": "4a412aeec1ccbaf2775390e14f9015d7e3924572d31fb96556baf5b0db7c6cf4"
+    },
+    {
+      "bytes": 1394,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/preentry_probe.py",
+      "sha256": "6b0ad0fcc4e7ab9c8dc71ce8982ade8024ff97a7bc37fbc8f1abba6d890e2611"
+    },
+    {
+      "bytes": 2264,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/preentry_probe_r02.py",
+      "sha256": "10a8c84659756874f00a2cd02c1832313664da31692d2638725a8547f8d315e2"
+    },
+    {
+      "bytes": 736,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/private-origin-projection-handwritten-oracle.json",
+      "sha256": "6c6227bdd778519e2d6abb9917207d1c2587b5f1f78994b7e724fb1914d7d212"
+    },
+    {
+      "bytes": 1253,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/private_origin_probe.py",
+      "sha256": "0d4b1a000e4b3c214f9ad05ae7920202c138934570f303d384d628b120d20891"
+    },
+    {
+      "bytes": 3668,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/run_frozen_cli_v02.py",
+      "sha256": "f699a8aab502bfde60da885ec2fa94982900bdddb3b6554fdcca700220e3a378"
+    },
+    {
+      "bytes": 4150,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/run_frozen_cli_v03.py",
+      "sha256": "1997a4ab11e37493537f523cbcdc3fa4adbc74767eb14958b04d371f38aac24b"
+    },
+    {
+      "bytes": 4174,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/run_frozen_cli_v04.py",
+      "sha256": "3b708d10121f7191e8a5d6c966882f73e723933e014c3d08cc30556582b50063"
+    },
+    {
+      "bytes": 4779,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/run_frozen_cli_v05.py",
+      "sha256": "b39cdd4cc4c3d6603442e2b1e3fe3d1f6a935d61e663472ff8470e97c7169223"
+    },
+    {
+      "bytes": 2806,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/sidecar-absence-pair-handwritten-oracle.json",
+      "sha256": "afe409b3c61bd84f6c29abb07a685d517678a3a8e7959846befdeedcbb0d4d4a"
+    },
+    {
+      "bytes": 1030,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/source-freeze-01-ineligible.json",
+      "sha256": "f415d87e249f0d23672e8c2be8aa62eec38f5416425d4eacaee2ba313d208bc5"
+    },
+    {
+      "bytes": 2666,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/stale-cache-oracle.json",
+      "sha256": "35aee73b12ddf422facd12c13c1e40a3c5459e6289c36e59711ebff8aa18066b"
+    },
+    {
+      "bytes": 6675,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/transport14/F02_TRANSPORT_ACCEPT/expected.stderr",
+      "sha256": "fe1ab9f8d384ce96a94580a6fd71a4be918d7923ee9b167a4bcd40dd27abc273"
+    },
+    {
+      "bytes": 2587,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/transport14/F02_TRANSPORT_ACCEPT/expected.stdout",
+      "sha256": "984aadf6d4d77cf417053f161b3f237464562f2a90a491825beb1898ab3bca5e"
+    },
+    {
+      "bytes": 19173,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-02/transport14/materialized-freeze.json",
+      "sha256": "4d7cff2ee0e6622445d1d9a27c91d9e08cb5110db844bbb3b660760ea98e91cf"
+    },
+    {
+      "bytes": 0,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/absence-pair/ABS02_ORIGINAL_MISSING_BODY_OR_SOURCE_SIDECARS/expected.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 129,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/absence-pair/ABS02_ORIGINAL_MISSING_BODY_OR_SOURCE_SIDECARS/expected.stdout",
+      "sha256": "8aeb8df357431e02d62e6ed1f45123b6671feb4dac897b9545552c7948173dd6"
+    },
+    {
+      "bytes": 5102,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/absence-pair/absence-pair-freeze.json",
+      "sha256": "9a53ef2b00a53122f5dcbd5e5935a14c4a7c2f1c40b8d73e9cfa94e6ef331dcb"
+    },
+    {
+      "bytes": 5824,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/accounting-jackal-results.json",
+      "sha256": "b45d592b805adb4315746f8547ce338f348acea35ce20d10d1d76b6c5281bcc0"
+    },
+    {
+      "bytes": 102841,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/complete-matrix-receipt.json",
+      "sha256": "26a1c13d9a63a659b144df9f769753539d6af0075c6c14c37a2ee001653061ba"
+    },
+    {
+      "bytes": 103555,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/complete-matrix-with-accounting.json",
+      "sha256": "9b4110389625b06bda7bf0aeb160e1105ecc4e9df0049261fe610e621c63fcaa"
+    },
+    {
+      "bytes": 7678,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/export_public_evidence.py",
+      "sha256": "7b79669291a0c4ba15ab994a7ef05e8a6097032ad7a706f0d25c5c34ed4e216e"
+    },
+    {
+      "bytes": 8649,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/export_public_evidence_v02.py",
+      "sha256": "4ced591f14942b4f1ff2f64f1130c6db6f760cbbb1a34f445e1fe3988a8aee93"
+    },
+    {
+      "bytes": 8554,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/export_public_evidence_v03.py",
+      "sha256": "f1ecb581d328887148f143414fdeaf559656927f0a9ac2337f1fd73ac328badc"
+    },
+    {
+      "bytes": 29461,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/fixture-alias-correction-r02.json",
+      "sha256": "e22fa01ef31c2a43c4145e97b460b10ab6694ee42337cf9beacc2e8d34dc8c6d"
+    },
+    {
+      "bytes": 133730,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/host-cache15-r02-normal-first/first-run.json",
+      "sha256": "cc143e5903875b406a669f6f103fd28564bc3614c8f393a70f8554aaa9165f8b"
+    },
+    {
+      "bytes": 42047,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/host-cache15-r02-normal-first-command.json",
+      "sha256": "056076e7a048c4536bc99de925981c90abdefdbec4bed4e2f5ad90684c8e95fc"
+    },
+    {
+      "bytes": 224,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/host-cache15-r02-normal-first-command.log",
+      "sha256": "5ed384c9e4fab59a365c982fb5b36cd6665598ef998124ad0901b16bc6f20138"
+    },
+    {
+      "bytes": 133744,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/host-cache15-r02-opt1-first/first-run.json",
+      "sha256": "4a2e1613e3749ae558ee9a759f9cc37f8ed3898f1e4a09bd371ac59d00eb4fee"
+    },
+    {
+      "bytes": 42035,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/host-cache15-r02-opt1-first-command.json",
+      "sha256": "e5a8a6071c901d55bcc4fea2d5567a4bef845ddca7bb56ab361a65da6cd83b29"
+    },
+    {
+      "bytes": 222,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/host-cache15-r02-opt1-first-command.log",
+      "sha256": "7a8ca663028b62bfa3b3a08750d7fb9bc1935795e96adae5b1d7a8d8494a8d7a"
+    },
+    {
+      "bytes": 14973,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/host15/host-materialization-freeze.json",
+      "sha256": "58d42a9357dc2f2a36bd8781c80724b41ea83555a63d1239a7a4794ebc5aa4ea"
+    },
+    {
+      "bytes": 15085,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/host15-r02/host-materialization-freeze.json",
+      "sha256": "9aaa5d5af5a9a3a76c3ee5cd6a648aab4661912a20a9591736b7d4b4e5845b42"
+    },
+    {
+      "bytes": 10266,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/isolated-copies/isolated-copy-setup-freeze.json",
+      "sha256": "ab434406b66af0972f5f9361b089e28b215694ff052b16288eb1f9f349fcafd4"
+    },
+    {
+      "bytes": 27955,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/isolated-copies-r02/F08_MISSING_CHECKER_AND_GRAPH/checker/install/transport_quorum_bootstrap.py",
+      "sha256": "03f2bf18a67b9a6d6ccf25fd506b252b38ac34c78f56153eb22b8ecfca5738ea"
+    },
+    {
+      "bytes": 10406,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/isolated-copies-r02/isolated-copy-setup-freeze.json",
+      "sha256": "33c2cc9c2ba592b6c04ab624060c7a9326f3b38e26eaf4d032e10871ebfc1358"
+    },
+    {
+      "bytes": 524,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/literal15-r02-original/F07_PACKAGE_AND_REFERENCE/expected.stdout",
+      "sha256": "3ebb62c58eb685f80607999b88eaefdbb514efa3c78dbd2624ae57c492453916"
+    },
+    {
+      "bytes": 527,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/literal15-r02-original/F09_RECORD_PIN_AND_READING/expected.stdout",
+      "sha256": "58d353d0db7b0095a324704bb5d51a318539fe04f8d41d019e307325366813e8"
+    },
+    {
+      "bytes": 540,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/literal15-r02-original/F10_REFERENCE_AND_CYCLE/expected.stdout",
+      "sha256": "8159a0df4a79756b9dce293b5adb8f8a003afbdaa48e805b125af8879f4ff3db"
+    },
+    {
+      "bytes": 545,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/literal15-r02-original/F11_HISTORY_AND_WITHDRAWAL_CYCLE/expected.stdout",
+      "sha256": "af6aa4db0681de9af0c5940bf130698455d08ff8ccd062f5dac73fde211dbfd8"
+    },
+    {
+      "bytes": 547,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/literal15-r02-original/F12_DAG_AND_DECLARATION/expected.stdout",
+      "sha256": "265ad0e8804f87c5ea7a110df67c114bf88d9299eb4024cf48a030ae37659c04"
+    },
+    {
+      "bytes": 539,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/literal15-r02-original/F13_WITHDRAWAL_DAG_AND_COUNT/expected.stdout",
+      "sha256": "f098715028781ae8f609b7fc8cefac628d6a896ad2ba5552c9eddd34bf765486"
+    },
+    {
+      "bytes": 2458,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/literal15-r02-original/F14_IMPORT_MISMATCH/expected.stdout",
+      "sha256": "931bb6bac09f696d7b772382368e6a4adab1ce79ab8430ed851dc91e66da08e5"
+    },
+    {
+      "bytes": 21191,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/literal15-r02-original/materialized-freeze.json",
+      "sha256": "fd80b3b5c92c4a0165b2efea16c13e8d990bdd12c04389bc313cb4837d8f6834"
+    },
+    {
+      "bytes": 524,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/literal15-r02-transport/F07_PACKAGE_AND_REFERENCE/expected.stdout",
+      "sha256": "9ad6d0af950f2a7f9c7a6348521ac880d3cd1b7daa6f7dcb9e30300fbe0f8d47"
+    },
+    {
+      "bytes": 527,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/literal15-r02-transport/F09_RECORD_PIN_AND_READING/expected.stdout",
+      "sha256": "3f4589b30f07d04344ee0ed5dcaa4678b0235fcc8a61a1c39166087de30ab87e"
+    },
+    {
+      "bytes": 540,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/literal15-r02-transport/F10_REFERENCE_AND_CYCLE/expected.stdout",
+      "sha256": "a0ffa0bc0fddd3116e178760acdf3e6130ddee7155c8e10be0c8b4bfde338f41"
+    },
+    {
+      "bytes": 545,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/literal15-r02-transport/F11_HISTORY_AND_WITHDRAWAL_CYCLE/expected.stdout",
+      "sha256": "f9bcd1dfe85b6247ae3ea23d63f7477db201c1b9ce7bf36a8c60fc51c26ba1f3"
+    },
+    {
+      "bytes": 547,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/literal15-r02-transport/F12_DAG_AND_DECLARATION/expected.stdout",
+      "sha256": "6210c9d92735905f8d656163e680bea19db790d823f81422b1b877941c492d3e"
+    },
+    {
+      "bytes": 539,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/literal15-r02-transport/F13_WITHDRAWAL_DAG_AND_COUNT/expected.stdout",
+      "sha256": "657ef9e855d333809735ef080c795cdc16de2f4548253ddd8e9fd99cda90bc78"
+    },
+    {
+      "bytes": 2458,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/literal15-r02-transport/F14_IMPORT_MISMATCH/expected.stdout",
+      "sha256": "cff84b6df2805f2708987f9a106cb86f81c4bb3f5b9ffe1c559e580367c6d600"
+    },
+    {
+      "bytes": 19845,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/literal15-r02-transport/materialized-freeze.json",
+      "sha256": "8ca7c7701f8b27e71ec2503bbc0e4a150dc5e390448dd2c7f2611a6fda741b64"
+    },
+    {
+      "bytes": 14025,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/measured-accounting-inputs.json",
+      "sha256": "397a8a13cf70d2ace8c5746e87c24c52fc5f5032de4ec469d5cd6ceca17a5a14"
+    },
+    {
+      "bytes": 7417,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/measured-accounting-receipt.json",
+      "sha256": "96de75ae76c07abb1f649320c27c9f91d97f96f94d4f6b2678be1da048d1f616"
+    },
+    {
+      "bytes": 47176,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/original-semantic14-r02-normal-first/first-run.json",
+      "sha256": "fa2942a53483da52fcc933cca03725e79ec746b5517c1720f2482512a633ea8e"
+    },
+    {
+      "bytes": 26637,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/original-semantic14-r02-normal-first-command.json",
+      "sha256": "e37806ed163857da2a854634c0942457f119f6f285a7de7d00e270d22088e741"
+    },
+    {
+      "bytes": 230,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/original-semantic14-r02-normal-first-command.log",
+      "sha256": "71a063effe7c91dc99fe6506fe2e9f9378a7bfbe7c86a8492118ed579e3b079b"
+    },
+    {
+      "bytes": 47188,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/original-semantic14-r02-opt1-first/first-run.json",
+      "sha256": "5d95858f40b256b18c22cee3eb8369285aa217215ff3132eaa5ca2d199c90810"
+    },
+    {
+      "bytes": 26630,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/original-semantic14-r02-opt1-first-command.json",
+      "sha256": "2155c22934861a4506b399077af898e6d2f303ab9e53576cd5465b040ae70af2"
+    },
+    {
+      "bytes": 228,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/original-semantic14-r02-opt1-first-command.log",
+      "sha256": "5b352f629d45e8b52c994a0e9fd713b3a3e98a013fa8f6844059fec719f72099"
+    },
+    {
+      "bytes": 6411,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/original15/F01_ORIGINAL_ACCEPT/expected.stderr",
+      "sha256": "7942e6899dd6f22bc59322d51cee3196b2c7b2f64fbc6b28572490e656726b55"
+    },
+    {
+      "bytes": 2587,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/original15/F01_ORIGINAL_ACCEPT/expected.stdout",
+      "sha256": "4dca7f435a3d4bfaf8971ce98364746b554b12560c35bd198a2152cefeba3a70"
+    },
+    {
+      "bytes": 20471,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/original15/materialized-freeze.json",
+      "sha256": "27fd49450fa1218b987cb4bd12cbd3f54bc43266cc86fac683fffbe4f1e68e91"
+    },
+    {
+      "bytes": 2818,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/portable-zip-only-reproducer-design.json",
+      "sha256": "e577d9cf7b1e2c11c3d9915135703d0c09f53369f7ed6867d2b72976489b122d"
+    },
+    {
+      "bytes": 11875,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/priority-pair-absence-normal-first/first-run.json",
+      "sha256": "9fc29587af1b2a629f7f471b9b7ee52cdab2ee5effceb05014818dc58d2ac7dd"
+    },
+    {
+      "bytes": 20082,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/priority-pair-absence-normal-first-command.json",
+      "sha256": "86c220cb11414a383371d4d27e4b9836494b72355c1847f9c2b0a5e6c7609938"
+    },
+    {
+      "bytes": 228,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/priority-pair-absence-normal-first-command.log",
+      "sha256": "7370ae9aba7e9d5f57a670613546c89b31e1cac64079099334016b507964115b"
+    },
+    {
+      "bytes": 32800,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/priority-pair-absence-normal-ready.json",
+      "sha256": "da491c8e2dd1211f1712a652a14109757e1a4267ad3cd8a8b5472fce5ad5f219"
+    },
+    {
+      "bytes": 11877,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/priority-pair-absence-opt1-first/first-run.json",
+      "sha256": "a615c6eee80eb453717c24c2a9f1c901511354a7efd21f159733a33e2099928e"
+    },
+    {
+      "bytes": 18840,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/priority-pair-absence-opt1-first-command.json",
+      "sha256": "3a5a869ada187314512bd1c26f1ff3fdd57f7973124c4f9e62568b9361b732e1"
+    },
+    {
+      "bytes": 226,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/priority-pair-absence-opt1-first-command.log",
+      "sha256": "5984e3f94dbb22fcd689dcb4896cdd6b749f6d719bbe0013d9ebff943c3fcc81"
+    },
+    {
+      "bytes": 32949,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/priority-pair-absence-opt1-ready.json",
+      "sha256": "9a0ff24bb968abad134a55e5a65a993eaede98f527a7808678f8043b50d376a8"
+    },
+    {
+      "bytes": 2173,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/private-origin-normal-first/first-run.json",
+      "sha256": "64d15967ec3b665b5b95b92452dfffee451cf2e1457a2e2e462cb6eb3d327040"
+    },
+    {
+      "bytes": 26615,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/private-origin-normal-first-command.json",
+      "sha256": "8ad649e71a951f3de9f1f9487034f0e008614c7e19a1dd4f9bc62260e88fe169"
+    },
+    {
+      "bytes": 220,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/private-origin-normal-first-command.log",
+      "sha256": "78f6602631772381f0cc938010917a7ecc594f91cd2d9cd8a3020562930dadc3"
+    },
+    {
+      "bytes": 2172,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/private-origin-opt1-first/first-run.json",
+      "sha256": "a38743453c0f1181be675141409e1cbbe14c6bd9dbd32c19494b9c0ca94acd7b"
+    },
+    {
+      "bytes": 26607,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/private-origin-opt1-first-command.json",
+      "sha256": "0135b70e36816767c9314d0d4054082823c09a2f8b1c03fa401e3db63deab578"
+    },
+    {
+      "bytes": 218,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/private-origin-opt1-first-command.log",
+      "sha256": "864e24590c30e02233b2c69bfffb94097d8d92e419cf47c1ee114b2533e72520"
+    },
+    {
+      "bytes": 626,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/public-export-attempt01-failure.json",
+      "sha256": "22283aafb3659c49ece1a1d89edc43d3e3089639943a177b2f73b2f8897c3c79"
+    },
+    {
+      "bytes": 618,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/public-export-attempt02-failure.json",
+      "sha256": "42e030eb62e5440b201a7bb0948b67dade1d0623d751a700f3a82ee2b9412e52"
+    },
+    {
+      "bytes": 3245,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/public-export-current-source-pins.json",
+      "sha256": "0385d30ca1b79fe3aa45f0097c6eadd56c109cc6f2989216af0f65c0f7de036e"
+    },
+    {
+      "bytes": 133302,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/remaining-manifests/transport-review8-r02-normal-ready.json",
+      "sha256": "26f4dccab9a20abd981f138fb5e90c42fea9a1da8d2d057f15685141872a7598"
+    },
+    {
+      "bytes": 133447,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/remaining-manifests/transport-review8-r02-opt1-ready.json",
+      "sha256": "2015a99703c0846493e6291f7b80762d6e63ab00092600afc56d46adc1ff269c"
+    },
+    {
+      "bytes": 127,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/remaining-manifests-r02/H01_WRONG_ENTRY_PIN.expected.stdout",
+      "sha256": "e938476f98f7076bcf8701da2b7903601378585fb1d33232460a9467f6b88516"
+    },
+    {
+      "bytes": 134,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/remaining-manifests-r02/H02_PRELOADED_TRANSPORT.expected.stdout",
+      "sha256": "2510a482500653b2a95013c9cb3f5ebcb901b2de257025d3cfd6f27216f24e11"
+    },
+    {
+      "bytes": 126,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/remaining-manifests-r02/H03_MODULE_COUNT.expected.stdout",
+      "sha256": "4f1efd0df4445d0479b1d5bfed49ea5045bef55ac393ccafc8a54ea439b8f743"
+    },
+    {
+      "bytes": 130,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/remaining-manifests-r02/H04_DESCRIPTOR_RAW.expected.stdout",
+      "sha256": "4ac3679d1ff5c0cec8c65da844b0d235f235352a0b73551d8157648f55a90c89"
+    },
+    {
+      "bytes": 123,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/remaining-manifests-r02/H05_PYTHON_PIN.expected.stdout",
+      "sha256": "cd366ca863367f89d8ab97237194bf43a4ddd341879c2183d2d9c8b9c7f850c1"
+    },
+    {
+      "bytes": 124,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/remaining-manifests-r02/H06_FILE_SET.expected.stdout",
+      "sha256": "f7c0e2e6825a75448d7acf2af63ca82c5407f7d54f32daa7b67f785bf428c9b1"
+    },
+    {
+      "bytes": 132,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/remaining-manifests-r02/H08_STALE_INSTALL.expected.stdout",
+      "sha256": "2ef5504a54e4432eed731e2c8349a73091dc8beb21e042b147d054611ec9182d"
+    },
+    {
+      "bytes": 131,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/remaining-manifests-r02/H10_STALE_SOURCE.expected.stdout",
+      "sha256": "82c01adc4b4812e6fac143a9f94cecf5554f6cb13ae52744e55da8c1d3fca00a"
+    },
+    {
+      "bytes": 105,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/remaining-manifests-r02/H14_PRIVATE.expected.stdout",
+      "sha256": "73fb2305849a7b84f42c8fec328c312523a522660526e41ca80a174224264fa9"
+    },
+    {
+      "bytes": 165123,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/remaining-manifests-r02/host-cache15-normal-ready.json",
+      "sha256": "201bb164bd6f7e8a788e956738afbdc74a9dbebe69573277045d212af76d13f4"
+    },
+    {
+      "bytes": 165192,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/remaining-manifests-r02/host-cache15-opt1-ready.json",
+      "sha256": "d22a98fec6d511c3d9d0519b9a5c0b52e5ea8b8ddd8eede3661f9bf95e07b5c3"
+    },
+    {
+      "bytes": 104008,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/remaining-manifests-r02/original-semantic14-normal-ready.json",
+      "sha256": "53262224b5e24e49c73dab9c2d8b9a04ae38103b614abee4ef5a16268e9f0bed"
+    },
+    {
+      "bytes": 104076,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/remaining-manifests-r02/original-semantic14-opt1-ready.json",
+      "sha256": "06db41959eb6ab16415e4c2e142004b681d2c990d456a78e660c5f991a2d9aa8"
+    },
+    {
+      "bytes": 32669,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/remaining-manifests-r02/private-origin-normal-ready.json",
+      "sha256": "f73a1c828e02a65a83e3e6c741632764ecfdfc0647ace6233291d6ad653c6455"
+    },
+    {
+      "bytes": 32674,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/remaining-manifests-r02/private-origin-opt1-ready.json",
+      "sha256": "89a60f6fccf0d78aa82e025d363bd0fbfc7f22de749b1d78a0a2e894c0506ead"
+    },
+    {
+      "bytes": 81510,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/remaining-manifests-r02/transport14-normal-ready.json",
+      "sha256": "0dd9f8606a079b1b79e625ec57b469a48825b2754fcfbd6c5e10c792983b7484"
+    },
+    {
+      "bytes": 81580,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/remaining-manifests-r02/transport14-opt1-ready.json",
+      "sha256": "7b2e48f8359862f0cf84c554876794ea0a8c7721ac6e1953af0bc64f35c8d0b5"
+    },
+    {
+      "bytes": 11646,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/review8-original/materialized-freeze.json",
+      "sha256": "d3bb61d70faa6282960e221b73888b452c43523abac8d68ac3302715ec0cf85b"
+    },
+    {
+      "bytes": 2611,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/review8-r02-original/P02_EMPTY_SOURCE/expected.stdout",
+      "sha256": "c1db30e134ef9b9549e4cb8e3b8fcda10e09243fba33dd8ed63631b865a78167"
+    },
+    {
+      "bytes": 682,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/review8-r02-original/P03_MISSING_CLAIM/expected.stdout",
+      "sha256": "e858b631dd9bbdea8aecd56d61ec907e03b5e776a25b1004548a819ca456a01d"
+    },
+    {
+      "bytes": 677,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/review8-r02-original/P04_MISSING_SOURCE/expected.stdout",
+      "sha256": "507e92b5f068f9e1a367056e99ba84491e4bdfd6af5ac45b89b23558b836e69e"
+    },
+    {
+      "bytes": 549,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/review8-r02-original/P05_READING_PARENT_BEFORE_UPDATE/expected.stdout",
+      "sha256": "23fd03504b5217e65dd0c1bf19915d27e714060e35390d56745f660b1ab95cfb"
+    },
+    {
+      "bytes": 547,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/review8-r02-original/P06_DEP_BEFORE_POSITIONAL/expected.stdout",
+      "sha256": "4d4f545cb0240a4d84ea8012addea0bce520069e660bedfe3e518c96b088c51e"
+    },
+    {
+      "bytes": 2945,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/review8-r02-original/P07_FINAL_LF_SET_ORDER/expected.stdout",
+      "sha256": "f623f8396358291d3f9e4b7208c94dc31ff3bfd14c44565e8f12679394163972"
+    },
+    {
+      "bytes": 11786,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/review8-r02-original/materialized-freeze.json",
+      "sha256": "81d274555cdcca1914ca78b47022020a822cddd740872826edfb6baedc3cc9b7"
+    },
+    {
+      "bytes": 2611,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/review8-r02-transport/P02_EMPTY_SOURCE/expected.stdout",
+      "sha256": "958d873bd7126e498dfb1b050cc91581cf0565f09cf302828db518003ca73456"
+    },
+    {
+      "bytes": 682,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/review8-r02-transport/P03_MISSING_CLAIM/expected.stdout",
+      "sha256": "caca322841bd86acda402a4fb835d19052f235d5dfa662b40eb89fda6c4ff015"
+    },
+    {
+      "bytes": 677,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/review8-r02-transport/P04_MISSING_SOURCE/expected.stdout",
+      "sha256": "ee5c75f2bf0d8c0c9abc37b0baa9984f23e115ec399a5af4fd81e31765dab277"
+    },
+    {
+      "bytes": 549,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/review8-r02-transport/P05_READING_PARENT_BEFORE_UPDATE/expected.stdout",
+      "sha256": "2b2054d5a10100042c2efbb797cbb51978579c5879cdb058f1c70b7a6595a9ea"
+    },
+    {
+      "bytes": 547,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/review8-r02-transport/P06_DEP_BEFORE_POSITIONAL/expected.stdout",
+      "sha256": "17e5a60781d2f5e8fe6b80788226716c2c97eefc42c104ff2ed0531747a7d569"
+    },
+    {
+      "bytes": 2945,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/review8-r02-transport/P07_FINAL_LF_SET_ORDER/expected.stdout",
+      "sha256": "4fb2757d52285a744ae00facd36c393aa85e6f866dd4fa92e2ecce2f2126b910"
+    },
+    {
+      "bytes": 11827,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/review8-r02-transport/materialized-freeze.json",
+      "sha256": "08b96fa77056ae28d274801250aeb074f30cb0306702b95920b6a5ef854dade5"
+    },
+    {
+      "bytes": 11687,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/review8-transport/materialized-freeze.json",
+      "sha256": "0c1ff6f9ae41375152099c0a89e71863b9a4d520924589e21a43115caf885832"
+    },
+    {
+      "bytes": 6747,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/stale-cache/expected.stderr",
+      "sha256": "e0c1fc786b5fb199f3b19e29cd589977f358d2aea50db6c3bbee3c170b88407b"
+    },
+    {
+      "bytes": 2587,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/stale-cache/expected.stdout",
+      "sha256": "c4eb499a2170465cef4a167097e8641e9cfc377185db4bf5c57f38d3991d8662"
+    },
+    {
+      "bytes": 11316,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/stale-cache/stale-cache-freeze.json",
+      "sha256": "d7221e732e7d3108a62465b2d00b5ed7dcfc1c747eafc61caa05fd9bfa384a93"
+    },
+    {
+      "bytes": 132,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport-review8-r02-normal-first/F05_VERSION_AND_RUNTIME__transport.stdout",
+      "sha256": "144ff852ff95b7806acf96362ddcc4ae35bc1a03dd175b332c72f150c763e8d7"
+    },
+    {
+      "bytes": 98744,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport-review8-r02-normal-first/first-run.json",
+      "sha256": "0e2a4a1e0033daef6d31d6e6cd1299b5481c1bb6fc9897904a1c2543efa42bb1"
+    },
+    {
+      "bytes": 26630,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport-review8-r02-normal-first-command.json",
+      "sha256": "7052334e23dec4392e769844b0d822e2e090268476fe068e746ada1c4679faf0"
+    },
+    {
+      "bytes": 228,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport-review8-r02-normal-first-command.log",
+      "sha256": "834f915462eb87ecea55c31def574cddd13f8f068a82552e3e7176919d6070d1"
+    },
+    {
+      "bytes": 98771,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport-review8-r02-opt1-first/first-run.json",
+      "sha256": "7687cd8f37f8fac14e8585653aa3bd9a94d07f7f37668264c5510749e61695d7"
+    },
+    {
+      "bytes": 26622,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport-review8-r02-opt1-first-command.json",
+      "sha256": "b16b092269a5e6e4e7d3c61c2bb3f62a1e5c83bbb35d071f6ead96e362b7813a"
+    },
+    {
+      "bytes": 226,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport-review8-r02-opt1-first-command.log",
+      "sha256": "9327a54a05d4c2faed0e57be6494d5a019c6b65d6fa7f531b57d86ccf65c1003"
+    },
+    {
+      "bytes": 6675,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport14/F02_TRANSPORT_ACCEPT/expected.stderr",
+      "sha256": "f7c0d486eb63a7593b911f23601a1bf4c9859e3666b76ac8370b1e370f8819bf"
+    },
+    {
+      "bytes": 2587,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport14/F02_TRANSPORT_ACCEPT/expected.stdout",
+      "sha256": "88fd1caeb7d45a33fe1f02606116b6a9d89246a5da2477ab2bbb0f7c2ccdbbd6"
+    },
+    {
+      "bytes": 414,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport14/F03_BAD_UTF8_AND_STALE_PIN/expected.stdout",
+      "sha256": "627265eae81f811c9865d2d84673984c68f79c9269f4160a0bfb209e70a533c9"
+    },
+    {
+      "bytes": 416,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport14/F04_BOUNDS_AND_UNKNOWN_RULE/expected.stdout",
+      "sha256": "74073d231188ddf9f13a02337577ed26000c92a2f06fda5841b7c9944b0127b5"
+    },
+    {
+      "bytes": 6675,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport14/F05_VERSION_AND_RUNTIME/expected.stderr",
+      "sha256": "c58c038cbbf9bab971db152c862e28c91f8ec6641cdcb50a7e8c40b877f950ad"
+    },
+    {
+      "bytes": 427,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport14/F05_VERSION_AND_RUNTIME/expected.stdout",
+      "sha256": "ad1d29663df11ea9af221090f5f3e386402fc3862bea239ec2bda929fb713a99"
+    },
+    {
+      "bytes": 420,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport14/F06_REQUEST_PIN_AND_RECORD/expected.stdout",
+      "sha256": "ddef2a4cfd42893e8fefee5d28f115b31bff82c6d31312818b442bd4b540d3bc"
+    },
+    {
+      "bytes": 524,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport14/F07_PACKAGE_AND_REFERENCE/expected.stdout",
+      "sha256": "1ffdcb5b15b6d370978bb7abf1f4204ce330f4759edf03404787523cb652b48d"
+    },
+    {
+      "bytes": 527,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport14/F09_RECORD_PIN_AND_READING/expected.stdout",
+      "sha256": "0c61a73c9aeb7a6123618eaf4646763d36d765b5e871a94264c515934461ff70"
+    },
+    {
+      "bytes": 540,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport14/F10_REFERENCE_AND_CYCLE/expected.stdout",
+      "sha256": "a199bec924188c13ff27912d911412602e6c0e3b13f6c5301b46bdf99f21af2d"
+    },
+    {
+      "bytes": 545,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport14/F11_HISTORY_AND_WITHDRAWAL_CYCLE/expected.stdout",
+      "sha256": "96950797c56d9ba84be6e873bf1a732b905f216db11c5f30cc051c1bbfb52780"
+    },
+    {
+      "bytes": 547,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport14/F12_DAG_AND_DECLARATION/expected.stdout",
+      "sha256": "4073fa74638ad7497726d801996484b8d60f13d09353ea0fa3750da08f76fce2"
+    },
+    {
+      "bytes": 539,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport14/F13_WITHDRAWAL_DAG_AND_COUNT/expected.stdout",
+      "sha256": "8f13e839e2f51f0c7cb2103e67263d1e2387afee0507ca6b862dec20e543089c"
+    },
+    {
+      "bytes": 2458,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport14/F14_IMPORT_MISMATCH/expected.stdout",
+      "sha256": "d59cd4ad776f6902de6c0ef6016f73fd9c9e74283e1db753dd0a32e44c1feca0"
+    },
+    {
+      "bytes": 2587,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport14/F15_IGNORED_CLAIMED_VERDICT/expected.stdout",
+      "sha256": "a0d261bfa76d52f7031af2f5569823477cb5ec5a68c2746cc47e5672250f1462"
+    },
+    {
+      "bytes": 19173,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport14/materialized-freeze.json",
+      "sha256": "4d60749c010be22bb3fef32e2238f8fc4e055675dccae8a86a993e42293c62ac"
+    },
+    {
+      "bytes": 49191,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport14-r02-normal-first/first-run.json",
+      "sha256": "f02261b864b87bc748bbcc8b47f84f9fac15e8943bf41b5cb071d3a5e305a278"
+    },
+    {
+      "bytes": 26606,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport14-r02-normal-first-command.json",
+      "sha256": "8ad7611f5cdec3ac620f462ba93dc7125467bb047d0df41b6cbcedca1f6bc96a"
+    },
+    {
+      "bytes": 222,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport14-r02-normal-first-command.log",
+      "sha256": "9d0c93d3a88a79120f204399f10997878e7398370776eb8a7f49b7095f4d1a32"
+    },
+    {
+      "bytes": 49203,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport14-r02-opt1-first/first-run.json",
+      "sha256": "4d4bb6135a58064ac0aa13ae058f0df4b6c0f7afc84dbb2eb5f43d269f8d9517"
+    },
+    {
+      "bytes": 26597,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport14-r02-opt1-first-command.json",
+      "sha256": "fd877b841147698e2ff4a0a988557e758d8915556a64de14aa92a946c1be1749"
+    },
+    {
+      "bytes": 220,
+      "path": "examples/quorum-replay-v1/evidence/controls/materialization-03/transport14-r02-opt1-first-command.log",
+      "sha256": "fece3417792ae88cd49198d9289d39001319e6bde97ac1b956bd868e70e926f6"
+    },
+    {
+      "bytes": 318638,
+      "path": "examples/quorum-replay-v1/evidence/inventory.json",
+      "sha256": "a8ce0f4bd4fcffe2acc1e74423e0fd7ecf21c99b46599c2b75a8c8f6d2c1bbbb"
+    },
+    {
+      "bytes": 849,
+      "path": "examples/quorum-replay-v1/evidence/portable-core-tests-01/commands.json",
+      "sha256": "6494c21976545a340975a9f7de4de29b7f078242b6bf0ac5e925400e49a42d4e"
+    },
+    {
+      "bytes": 1238,
+      "path": "examples/quorum-replay-v1/evidence/portable-core-tests-01/normal.stderr",
+      "sha256": "bcd7ec7cb03bd8b5be1f54087f65f695e69c5bd6ab509f3bf0559db236b82a6c"
+    },
+    {
+      "bytes": 1238,
+      "path": "examples/quorum-replay-v1/evidence/portable-core-tests-01/optimized.stderr",
+      "sha256": "173b2a908ee82ddcf6a23efbbc4f15f3ad01994c4e0af6273b3598c4245520ba"
+    },
+    {
+      "bytes": 1743,
+      "path": "examples/quorum-replay-v1/evidence/portable-core-tests-03/commands.json",
+      "sha256": "c8c10d6e0835cded184045a1606a461de93a4352c114f1ff513a4114379378e8"
+    },
+    {
+      "bytes": 2851,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/additive-corrections.json",
+      "sha256": "c2f63a484be13dd59de164ab60482b7065d8057ba567f8c0525ccdb2c88d5538"
+    },
+    {
+      "bytes": 2734,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/bootstrap-cli-contract.json",
+      "sha256": "8aedcffee3b7ee1e26f1ce3d402bd8899edafd9cef91e222df7482784c75eb01"
+    },
+    {
+      "bytes": 915,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/bootstrap-cli-correctness-amendment.json",
+      "sha256": "8205e3ce4cdd7fd60585b1a9511123f1c57f42c76565d9c99e7ff733fbcab05c"
+    },
+    {
+      "bytes": 749,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/bootstrap-code-ready.json",
+      "sha256": "aef1ba6dd41889e570e1e1de9671ef3de036355529fc2757746a13b3f1386f56"
+    },
+    {
+      "bytes": 24523,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/bootstrap-d7a8-sourcefreeze-withdrawn.py",
+      "sha256": "d7a8fb2ba3f8cdeb0d54b27ebeea1a45d14a50516c1b0e32583f4e268cdfdb48"
+    },
+    {
+      "bytes": 27821,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/bootstrap-da3d-firstpair-qualified.py",
+      "sha256": "da3d7994a43a7eccc232594e864b4dd1c299b7d83f3deeabef7d0235bcc3c751"
+    },
+    {
+      "bytes": 21687,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/bootstrap-first-code-draft.py",
+      "sha256": "4162c177357593b68c23af5c1f4afe742d1e1fc09ebb0c36b80705da0b9a797e"
+    },
+    {
+      "bytes": 3920,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/bootstrap-host-additive-contract-02.json",
+      "sha256": "c41f2bbe5bec236ef2e39446f0d5ea8f5d076316a80a495cdc6d3b89d9fe31d2"
+    },
+    {
+      "bytes": 6690,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/bootstrap-invocation.schema-draft01.json",
+      "sha256": "d7b37e414b8c3026c8974c99940911acc97faa2ec792f85b430f3dfbc8510cef"
+    },
+    {
+      "bytes": 6951,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/bootstrap-invocation.schema.json",
+      "sha256": "30bf206428e5087d2a392c2bdf0fc50475668400c65d1a0b5babafe5bef05f4c"
+    },
+    {
+      "bytes": 1912,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/bootstrap-owned-source-execution-amendment.json",
+      "sha256": "fcfa8bec432e0cff44cc4c0bfc7d5b1630fded970ea45f56c32834c6f4c9ce1a"
+    },
+    {
+      "bytes": 23486,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/bootstrap-priority-draft02.py",
+      "sha256": "ab4e45f446c329cef1ae9d556d0071eb8e11c0518ca97aa8c575811e0a953193"
+    },
+    {
+      "bytes": 1825,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/bootstrap-receiving-contract.json",
+      "sha256": "ee1346f7258e77af27fb304cb2ceea8e6fbf5a4ae5ef22869a11f0e3a83617d2"
+    },
+    {
+      "bytes": 960,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/bootstrap-recipient-ready.json",
+      "sha256": "0b00e7bf3952fcb4aa94e101e16f79d31c8e5f2ede0f2aab48bc1fb80f7ed244"
+    },
+    {
+      "bytes": 4696,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/bootstrap-recipient.patch",
+      "sha256": "38a1705456baaf66bca670c775ca691010a170b8ebb10e444436079b6618d062"
+    },
+    {
+      "bytes": 350,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/bootstrap-resource-arithmetic.json",
+      "sha256": "18a3cfa7b0f04b4d0a6ced7f6902559b75980d6b8d18d7d79fcfa19dd024fd29"
+    },
+    {
+      "bytes": 6151,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/bootstrap-resource-scan-inventory-d7a8.json",
+      "sha256": "d8fb4a0e62dd144928ad3075c812761c219126393096c14d28939da8b8ba55a6"
+    },
+    {
+      "bytes": 5048,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/bootstrap-resource-scan-inventory-draft01.json",
+      "sha256": "7728b057fcee9b80e708f218f131d4a140213bc78f25e1804ea2588f0c323742"
+    },
+    {
+      "bytes": 7058,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/bootstrap-resource-scan-inventory-owned-loader.json",
+      "sha256": "dbfcbdf290735a882ea25f624c4f5c296039bc84f641a73213fba34576e90be4"
+    },
+    {
+      "bytes": 7075,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/bootstrap-resource-scan-inventory-recipient.json",
+      "sha256": "b223456793fdc83dcf8a4167d4cc9254ac75c2ce993113e636009d876d8023e8"
+    },
+    {
+      "bytes": 4400,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/bootstrap-sidecar-absence-oracle.json",
+      "sha256": "8b867bea9fdea4000a22f7ae225c118e40d325840e4478a077b591cd6e1a8797"
+    },
+    {
+      "bytes": 1917,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/bootstrap-success-contract.json",
+      "sha256": "28d4bbbf0ade183be716594ca683edac489ffd1c79596f4983e307c4819b3afc"
+    },
+    {
+      "bytes": 2824,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/bootstrap-success.schema.json",
+      "sha256": "1fd8763798d7bf7ab9f02f8f5cb5159824275336b7633f4adfce654fe754c3d5"
+    },
+    {
+      "bytes": 2244,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/checker-bootstrap.schema.json",
+      "sha256": "e02d130569adcccd2d2bc372ab60f7e8eb554dc9cb496bc81be93d40119e4335"
+    },
+    {
+      "bytes": 21994,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/contract.json",
+      "sha256": "92c75f7a3dbc565da51d2331c7fcb3de01b5a21ddc0fc8c1b0ed1db10ca86809"
+    },
+    {
+      "bytes": 3522,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/core-work-accounting.json",
+      "sha256": "1ee477429496d112c4dfacc59824cf9a04250e8b7b18ba8fec1072620d41a47b"
+    },
+    {
+      "bytes": 1866,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/design-freeze.json",
+      "sha256": "106c27d98e637c7205dff5f00c1c6f5b151c71fa2074e0e5a0f8089fc1dab5df"
+    },
+    {
+      "bytes": 964,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/final-author-status.json",
+      "sha256": "6b1c25ffd69707cf6c42bcc3652fbee9306cb0a21af466afd82c29011f26350d"
+    },
+    {
+      "bytes": 2691,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/final-design-receipt-02.json",
+      "sha256": "92e5dd07a26048bca09a13228596d062b59620ac6ab2ff294e302c39e29d3ec3"
+    },
+    {
+      "bytes": 2076,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/final-design-receipt.json",
+      "sha256": "1b2eef6375eec927ddc2067851fcc21a12acd1d08f85f82441c4268d6a39e708"
+    },
+    {
+      "bytes": 9773,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/finalize_design.py",
+      "sha256": "78ab1fd60c3c6614eee4d79778feb452788145c50edda9b96b4e80141e0d14d9"
+    },
+    {
+      "bytes": 6012,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/freeze_protocol.py",
+      "sha256": "e462d2ff158d7dc486672684cdab543c5dcfb5962520618afc7a38136890ffdc"
+    },
+    {
+      "bytes": 6092,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/freeze_protocol_compact.py",
+      "sha256": "ca66edfea153579d81c3cb1be6745b4afe3900a8f7055003c50717a190280098"
+    },
+    {
+      "bytes": 7141,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/identity-subphases-02.json",
+      "sha256": "4279b8804ebc11b16e333cdf7276f48da8f3cecb079a3db01823623ba820305f"
+    },
+    {
+      "bytes": 7370,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/identity-subphases-final-draft01.json",
+      "sha256": "dfbadee568cbaf48b510809a8c3f2ea2b91258b4a2f746ee1be079abf6e933ce"
+    },
+    {
+      "bytes": 7843,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/identity-subphases-final.json",
+      "sha256": "0d551653f833122227048b886d113e7f38894cd19e98eefc1c06480f50ec894e"
+    },
+    {
+      "bytes": 5390,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/identity-subphases.json",
+      "sha256": "3da5ebcfe3d0a661df87afdbbc823379662942db5df42aa463477824ea70fe7d"
+    },
+    {
+      "bytes": 413,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/literal-controls/F03_BAD_UTF8_AND_STALE_PIN/expected.json",
+      "sha256": "decd36fd1f5ee0ff8bc0d55483f263ac3d5ea21965203c01f9361cec2bbb2577"
+    },
+    {
+      "bytes": 415,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/literal-controls/F04_BOUNDS_AND_UNKNOWN_RULE/expected.json",
+      "sha256": "79980e331da629694c2e4bbfd8a22214065e63398cfb5fe2952ed9ac67b9755a"
+    },
+    {
+      "bytes": 426,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/literal-controls/F05_VERSION_AND_RUNTIME/expected.json",
+      "sha256": "3c2629bf13bec6cf6d9ddd5426f66c2e26b5d87924b0176a007f2a508f07b4eb"
+    },
+    {
+      "bytes": 419,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/literal-controls/F06_REQUEST_PIN_AND_RECORD/expected.json",
+      "sha256": "5739da135f91e4f30eb09a4978b352e5a6310416bd293b7ce6cbf4bc5200beb9"
+    },
+    {
+      "bytes": 462,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/literal-controls/F07_PACKAGE_AND_REFERENCE/expected.json",
+      "sha256": "7126cbefc398c5901c95c0215dc88a2a9f8126d1e534f41bf05f41175efd0eb6"
+    },
+    {
+      "bytes": 128,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/literal-controls/F08_MISSING_CHECKER_AND_GRAPH/expected.json",
+      "sha256": "e13d8b95a4363fa9794e4c56862dd4e17b8f700869d6281d507421c4be018fce"
+    },
+    {
+      "bytes": 465,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/literal-controls/F09_RECORD_PIN_AND_READING/expected.json",
+      "sha256": "94f139bde1b472bfc8b2c0ce66df447843a39962bb917cea4c8caccf4cf5a035"
+    },
+    {
+      "bytes": 478,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/literal-controls/F10_REFERENCE_AND_CYCLE/expected.json",
+      "sha256": "704af37ebeb4c2422b828c5e772c94a06baaa958ba1067b39f1994c81cedac35"
+    },
+    {
+      "bytes": 483,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/literal-controls/F11_HISTORY_AND_WITHDRAWAL_CYCLE/expected.json",
+      "sha256": "a74a1a94f41677d7e024e782ad9cc5738267185d22c778ca453fbb22332a0891"
+    },
+    {
+      "bytes": 485,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/literal-controls/F12_DAG_AND_DECLARATION/expected.json",
+      "sha256": "3e16fdc7b954ee4d7251dc889f76e8bd2c10822cbf281394902820e47cce0208"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/literal-controls/F13_WITHDRAWAL_DAG_AND_COUNT/expected.json",
+      "sha256": "c0b543e48e024c9a5bc05f398d3e4b42d4f4c7647dd7ef04ab471bce8315a15a"
+    },
+    {
+      "bytes": 2396,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/literal-controls/F14_IMPORT_MISMATCH/expected.json",
+      "sha256": "8cce63f196c271aac71de5d87a98b210ebc7fba0c544048506773f45c308e795"
+    },
+    {
+      "bytes": 2569,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/literal-controls/F15_IGNORED_CLAIMED_VERDICT/expected.json",
+      "sha256": "3a918bf31f774b8fffb92f4b690fc201eb11c497dbb5d8132ee2878e49ac7168"
+    },
+    {
+      "bytes": 26175,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/literal-controls/oracle.json",
+      "sha256": "b099e497db319db078e7d42a0b3a1a3100ebc3adc0a52442c47d0a0b36d4bec8"
+    },
+    {
+      "bytes": 28115,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/manual-oracle-recipes.json",
+      "sha256": "d974fc330f9575d59e5294c134c4832a4d08ca4eb0995eb40013cb069cf7acd8"
+    },
+    {
+      "bytes": 9060,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/materialize_semantic_controls.py",
+      "sha256": "ac8f46c4848a1660996195fdd6937d7efd3ad6ef9c2b67db5258921fe928453a"
+    },
+    {
+      "bytes": 420,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/owned-loader-lazy-import-inspection.json",
+      "sha256": "b474409916b291bd2984d2e98ce327a2155b280c1116a11bbe502e68efbcca0b"
+    },
+    {
+      "bytes": 3065,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/prefeature-final-freeze.json",
+      "sha256": "d5f5b74db503e7e878743045cd9b8e638a2350ca12da60817213ab0dedfd3479"
+    },
+    {
+      "bytes": 8054,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/prepare_recipient_patch.py",
+      "sha256": "5599c3cb799a04c237b9e55808682282320236f366a66b61e0668ad79f00e5c8"
+    },
+    {
+      "bytes": 12556,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/prepare_tables.py",
+      "sha256": "3d2c6fd0842955f8ae2db4a497f53fce54d14ff433f12fae832d76e6482cd6b3"
+    },
+    {
+      "bytes": 745,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/protocol-freeze.json",
+      "sha256": "5dc236b15dafcbe4dd727d7946d980155a642763bdd9b507db569bf111dc1df6"
+    },
+    {
+      "bytes": 63162,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/protocol-rules-correct-kind-draft01.json",
+      "sha256": "f4f90a51b1601791d577790cae464fe65a29f863e0e999fef61e866d77da680d"
+    },
+    {
+      "bytes": 69154,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/protocol-rules-overbound-draft01.json",
+      "sha256": "696e77d70f3b4d1bc52f6aa4ed030ccdb23692d7d3f96ce57fd2b12f0b89cfe1"
+    },
+    {
+      "bytes": 63967,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/protocol-rules.json",
+      "sha256": "437df64e8d4a21d985570c218ec8abb208f18b6d1cd2bc23fd07d36e46c1ee48"
+    },
+    {
+      "bytes": 2061,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/remaining-blockers.json",
+      "sha256": "e8afc3855a436a2f0a5f23ef042aff0eca74d2ac881d67b8bb19564fa4848496"
+    },
+    {
+      "bytes": 1181,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/source-bound-freeze-final.json",
+      "sha256": "4db482f9343519489008bd3908476a4a841bde71d0aba38172db1c8c34b845e4"
+    },
+    {
+      "bytes": 4012,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/source-inventory.json",
+      "sha256": "5bd00ba51752d34daf94774525687bf2ac7484dbefbe7dc00ce5c1156776160b"
+    },
+    {
+      "bytes": 2670,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/static-top-level-import-dag.json",
+      "sha256": "8a90f1bd861b58fd870ea797e3ecbd84b18f5fa0130c104100592e194d80fbd3"
+    },
+    {
+      "bytes": 16735,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/typed-content-inventory-02.json",
+      "sha256": "807fbd48a32e707f1991cc486d49b45ead0c3c5c7815f858756d369c85b000e5"
+    },
+    {
+      "bytes": 28592,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/typed-content-inventory-final.json",
+      "sha256": "509964827b1c2381bea4e1e17fcb427922fc1f7321ac4d12a6129078f51fdfab"
+    },
+    {
+      "bytes": 16420,
+      "path": "examples/quorum-replay-v1/evidence/profile/revision-02/typed-content-inventory.json",
+      "sha256": "17d69e5e2bd34e94843c769a4478ff4dab4a9afc5835b0467aa03b1a0cc01c2a"
+    },
+    {
+      "bytes": 669,
+      "path": "examples/quorum-replay-v1/evidence/profile/source-freeze-01-ineligible.json",
+      "sha256": "a96ebcaf15cd32c411cc15fa0183b5e902d8a05bb8424d9dae4eb0c5786f1fee"
+    },
+    {
+      "bytes": 6246,
+      "path": "examples/quorum-replay-v1/evidence/profile/source-freeze-01.json",
+      "sha256": "03a33f74075a34d8e70ce91c1ffb4d8c6c7de84d1b9c56496e6eed3b51d4dcd4"
+    },
+    {
+      "bytes": 6499,
+      "path": "examples/quorum-replay-v1/evidence/profile/source-freeze-02.json",
+      "sha256": "2b49bdd0ede4a94fee320a59c062bf33eb98a0071aa3e781ad9f785205db5943"
+    },
+    {
+      "bytes": 6925,
+      "path": "examples/quorum-replay-v1/evidence/profile/source-freeze-03.json",
+      "sha256": "127a1895615fe76f5fe7b8753744f4d71621ae53cd7a48c3d4c18b04c8333291"
+    },
+    {
+      "bytes": 4163,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/README-before-tested-install-copy-42399194.md",
+      "sha256": "4239919419c56850794400ef302ef29b3f4df672144408a243de88183cca593f"
+    },
+    {
+      "bytes": 3877,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/README-first-draft-92985af3.md",
+      "sha256": "92985af38544eee46a8e97e44146939a508cc338deb569c57e35bbf313ef42e5"
+    },
+    {
+      "bytes": 4490,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/README.md",
+      "sha256": "c9541f7405272021524e4960ee3e4e58a1ccca8cd29b89296e7e6e141f396608"
+    },
+    {
+      "bytes": 1111,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/U01-first-run.json",
+      "sha256": "d9e0bfacf6eb0e18accbd17b4daaff90c688389a8fea4ab98be89935987b64af"
+    },
+    {
+      "bytes": 221,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/U01-first-stdout.bin",
+      "sha256": "2409e73460da16f901310e5d4e1a3b8d34e5133f76c0ce99c6e8f8275e58ba09"
+    },
+    {
+      "bytes": 41687,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/bootstrap-two-first-runs/PUBLIC_NORMAL.first-result.json",
+      "sha256": "b0a0e0d7a760baea93ebd506b894cd055612cf4d6151e19061361d4326f4d5c5"
+    },
+    {
+      "bytes": 41701,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/bootstrap-two-first-runs/PUBLIC_OPTIMIZED.first-result.json",
+      "sha256": "a302b928dd8f40783e2eecef24d9a1ccff4bb824a94ba265bda49b5265809720"
+    },
+    {
+      "bytes": 83933,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/bootstrap-two-first-runs/first-run.json",
+      "sha256": "aaf7d9147ad6138b67b82301bce276ea0ef029a89d5f7eae6ff520accc565a8f"
+    },
+    {
+      "bytes": 12539,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/bootstrap-two-run-manifest-before-root-inventory.json",
+      "sha256": "5b203c9b8cd6b570f860dadbe31aa34315859d2b0a58325dc75ae371ecd4b7ab"
+    },
+    {
+      "bytes": 88329,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/bootstrap-two-run-manifest.json",
+      "sha256": "7237e395b0ddf911bee83d967bf6bc14eb5e38b859d060dbb65fd12558975df0"
+    },
+    {
+      "bytes": 2863,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/contract-first-draft-11357bd1.json",
+      "sha256": "11357bd19dbc954b0853e08eaf86d3f0625c34bd481fe882f957ff57e8d29dc0"
+    },
+    {
+      "bytes": 3093,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/contract.json",
+      "sha256": "583d67b21a3ada9b4efe85032f154f9822777e383b3906c0c42ff4665c96b846"
+    },
+    {
+      "bytes": 3993,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/final-freeze.json",
+      "sha256": "1b406a78eee0208e386f73c2dc2052355ed88d0f34a612d7ef191dfd80232e7a"
+    },
+    {
+      "bytes": 604,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/held-identities-first-draft-e1e761ef.json",
+      "sha256": "e1e761ef9d202090f2349499e7c88b4c52d9dfca92cf2a3566591d450df4e64b"
+    },
+    {
+      "bytes": 713,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/held-identities.json",
+      "sha256": "b81941ededf4b55432f44a349e258596a168c3f0db042177c139ce7eca366f4c"
+    },
+    {
+      "bytes": 508,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/held-identity-provenance.json",
+      "sha256": "4dd05043818585c17cf60528ffe9ab4f827c6abedf11dd51ae0d48240dc10533"
+    },
+    {
+      "bytes": 3757,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/manual-oracle-first-draft-6f8c8fb6.json",
+      "sha256": "6f8c8fb6d5ed41e450ae36683b5f2cd5e05b5dd402f5772cdced581b87465c40"
+    },
+    {
+      "bytes": 4564,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/manual-oracle.json",
+      "sha256": "799588a3c9e2d308d42dc46a714b545d2ad3cf3c67c941265b90395554be6355"
+    },
+    {
+      "bytes": 1022,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-command.json",
+      "sha256": "eb0381b42e6601ee9a35e39de5429f8c26bdf7fc4791a028c5ec217bd3fc0e1b"
+    },
+    {
+      "bytes": 713,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/U02-held.json",
+      "sha256": "dd1057fbc1f087b0540a8356219fd7a10a35ee6527845ef7a91cd896dc9bdefb"
+    },
+    {
+      "bytes": 1415,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/U02.json",
+      "sha256": "689b8cf8b222b25adc5f69458b22ae36b6b56be01b35c19dd025245482837d3a"
+    },
+    {
+      "bytes": 713,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/U03-held.json",
+      "sha256": "caa7885c3e3c02c3ab391e56291a1f20765a23ad4a52d9e8f2d77a3a86be856f"
+    },
+    {
+      "bytes": 1415,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/U03.json",
+      "sha256": "5a70c0e70b7abdae2fbc6d25142e2f523c33a102f1116cccba35f257ab39b6c4"
+    },
+    {
+      "bytes": 713,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/U04-held.json",
+      "sha256": "2770b87da873f2fcfc42d0b90c97a7f186d4f8dd45e4cdb31c4337b007f62aa0"
+    },
+    {
+      "bytes": 7106,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/U04-snapshot.json",
+      "sha256": "2cd3d238d337b51c7cfffa38f2c8f2e1306927bf3680bd82a774fa1c25e7c78e"
+    },
+    {
+      "bytes": 1406,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/U04.json",
+      "sha256": "76a005c2b1da54b3964c986d661a83ffd1219a0eaefe0841e76d57efde050a28"
+    },
+    {
+      "bytes": 63,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/U04.stdout",
+      "sha256": "862f4b660736ae704f9e7a6b2bf0f9eb927312e10798278b9c0214f40d9425ca"
+    },
+    {
+      "bytes": 1404,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/U05.json",
+      "sha256": "936328e936e6ae1ffcb8731917c6a128ea5551773512d371596830a625730edd"
+    },
+    {
+      "bytes": 1373,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/U06.json",
+      "sha256": "37c0e37ddc9db9ef35d18b47c26479d70790341856dca0e496fb5de9032eb2cb"
+    },
+    {
+      "bytes": 59,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/U06.stdout",
+      "sha256": "30233df5be556fcf8232afa2753e6bb4701e72f0b3f67ee419534ad0a8c34444"
+    },
+    {
+      "bytes": 726,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/U07-held.json",
+      "sha256": "0df27bd9d120d4751ef1bd5bb6069ba5b50930a8c040e28c96799d696c5f99c7"
+    },
+    {
+      "bytes": 1401,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/U07.json",
+      "sha256": "90bba97ba01576f50f9fa38a5b1f099818487445d87b24aefb8aa80bbb6db44c"
+    },
+    {
+      "bytes": 61,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/U07.stdout",
+      "sha256": "f465a2e1a4a70c514371bd674722cf3ba1f701d98ce87a1343679c2ed9b90dca"
+    },
+    {
+      "bytes": 229,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/U08.json",
+      "sha256": "0f0b4dcc18a8ed94f0ad7432adc99f41ee39b58762ae8275e312dc89f04bb729"
+    },
+    {
+      "bytes": 1404,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/U10.json",
+      "sha256": "0c9409a79ec096df19702db3d69f6887d7459b05b847eea83a9f140beb095986"
+    },
+    {
+      "bytes": 729,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/U11-held.json",
+      "sha256": "d6b136f1b4147020d930417609c18752b38aa63a0639fe6697eed893b380bbee"
+    },
+    {
+      "bytes": 1397,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/U11.json",
+      "sha256": "8ae115dd7ac0a16dba1fb3b14eb6d4d3c7a8ca73b7d349c48abb1caacd3dfc39"
+    },
+    {
+      "bytes": 59,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/U11.stdout",
+      "sha256": "04c567c2176104d71c2aa125f013c9fa27b4316e1cf826a47170cbb335a96193"
+    },
+    {
+      "bytes": 1,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/U12-decoder/RUNTIME.json",
+      "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "bytes": 1,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/U12-decoder/x",
+      "sha256": "2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881"
+    },
+    {
+      "bytes": 706,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/U12-held.json",
+      "sha256": "a5a49dca1fe1ab12925344051662962903c7507bc2f47da68fed70a474447648"
+    },
+    {
+      "bytes": 570,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/U12-snapshot.json",
+      "sha256": "b6abff047d75c76298e12b55db67eeedf1ad66cec440c8a1a468c6117362f517"
+    },
+    {
+      "bytes": 1399,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/U12.json",
+      "sha256": "c7216c0dcfc7f0c0cc1adbf0aed926ca55ae9e1151784c6dfb5e7e442ab72de5"
+    },
+    {
+      "bytes": 58,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/U12.stdout",
+      "sha256": "d56111594d20b41c4731898b19f192f947fc3e992dc3d130de6d7568030f57c7"
+    },
+    {
+      "bytes": 869,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/copied-fixture/fixture-manifest.json",
+      "sha256": "3fbe93b266f8fa1a32e98b25c6299bcb444bcd06985439f069767fbd5c3d5f96"
+    },
+    {
+      "bytes": 10210,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/copied-fixture/literal-controls/F02_TRANSPORT_ACCEPT/body.json",
+      "sha256": "358f61cce73aa485898a40c2a53c71b8cc3d595bf6c1ad87e5ab81f6f7be971f"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/copied-fixture/literal-controls/F02_TRANSPORT_ACCEPT/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 23700,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/copied-fixture/recipient/meaning.zip",
+      "sha256": "24d6d8009d6c8d27c15ea88aa8ca47a56c097e32b74ad437e02834b014b2431d"
+    },
+    {
+      "bytes": 151,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/copied-fixture/recipient/share.txt",
+      "sha256": "d3ed9a8dd0e1cd0bee6f02001307a777a1578bd147b76140e102927258385b81"
+    },
+    {
+      "bytes": 13102,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-controls-first-run/results.json",
+      "sha256": "13801aa400b4bc99b42fc73942c422f109b6d5879b95bd7ad1ddea76950dff3b"
+    },
+    {
+      "bytes": 528,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/preparation-gap-findings-01.json",
+      "sha256": "a705edb23ef996b504f90a0c43a8fd84b7524afbb24f3af6ea38f894797e8fe6"
+    },
+    {
+      "bytes": 18897,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/prepare_public_replay-first-draft-736aaf2d.py",
+      "sha256": "736aaf2d6284c3bacf1ebba55ef6c7ae27b39d8e63c94567ad8f4c4d68868eb2"
+    },
+    {
+      "bytes": 19094,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/prepare_public_replay-second-draft-ab7f79af.py",
+      "sha256": "ab7f79af41b226ddff6fdd61502ac587fc8296f22630d706746ff89f201ae781"
+    },
+    {
+      "bytes": 19754,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/prepare_public_replay.py",
+      "sha256": "23119618174b44cf9fd411014c861751a87317d59a5bb333842b5fa7c356d830"
+    },
+    {
+      "bytes": 3016,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/prepared-inputs-01/checker-descriptor.json",
+      "sha256": "262db12783fb3e9e3f1e906e1591375774d86f10260c5547bc32ab760c79547e"
+    },
+    {
+      "bytes": 423,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/prepared-inputs-01/command.txt",
+      "sha256": "d6da63e92cce06ed52793b1151dbd588c0ea778781304534321957d260702d01"
+    },
+    {
+      "bytes": 4862,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/prepared-inputs-01/envelope.json",
+      "sha256": "1b325b7936aeb79dd34b6d866e95b51ef627e26a3060276757a9d61098e77fb4"
+    },
+    {
+      "bytes": 2586,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/prepared-inputs-01/expected.json",
+      "sha256": "f62733073ecb5a19ee830bb40f26f6b0c229432f1a04e216bf8b1c21e9f2243e"
+    },
+    {
+      "bytes": 3501,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/prepared-inputs-01/invocation.json",
+      "sha256": "52e4566911a7a734b81cf0ed0789fcac9ae6ddc3b166aa240ed2f73d2deacaa7"
+    },
+    {
+      "bytes": 1306,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/prepared-inputs-01/preparation-receipt.json",
+      "sha256": "c729661f8e7a52e42213869d3d9e71099b9fdeb0c683e0dd45392b3b1f96b882"
+    },
+    {
+      "bytes": 4780,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/prepared-inputs-01/request.json",
+      "sha256": "83c696b9112d91756465327abf016dc7c6b8b09133406a98b5146e70cb502902"
+    },
+    {
+      "bytes": 473,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/prepared-inputs-01/result-command.json",
+      "sha256": "0dc9c8b02a2615672f2faf669069315a51fbf569f804f3f50cc488c25217434a"
+    },
+    {
+      "bytes": 1673,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/public-reproducer-first-observations.json",
+      "sha256": "31a1247a84827f6f2b2f8e257f7586e165365c1ddb5c7917dbe8911775a98043"
+    },
+    {
+      "bytes": 8212,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/run_preparation_controls.py",
+      "sha256": "f45a091d68eac963546d7ccb9cb9dabc1928d80d1cb43920144b23b039e67463"
+    },
+    {
+      "bytes": 869,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/static-source-audit-02.json",
+      "sha256": "2bd9af60574d2574d1a7d94246045dfa8b30152b864c9d7a158f8ab6de66c098"
+    },
+    {
+      "bytes": 1308,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/static-source-audit-03.json",
+      "sha256": "3bc6d1506ee95059c179c06b6a641a8c8dc313da6ef60c166698d101b7d1e3ff"
+    },
+    {
+      "bytes": 1052,
+      "path": "examples/quorum-replay-v1/evidence/public-reproducer-01/static-source-audit.json",
+      "sha256": "9706567b785bc47511cf683aff6cc8290b43b965e1b5a4db60fe022ed6f8dec5"
+    },
+    {
+      "bytes": 3151,
+      "path": "examples/quorum-replay-v1/evidence/review/P02-oracle-defect-diagnosis.json",
+      "sha256": "aa86ed6467401360714e5c536d52d6e0931ae4460d7d80c39675b10ecef868d6"
+    },
+    {
+      "bytes": 441,
+      "path": "examples/quorum-replay-v1/evidence/review/absence-concrete-review03.json",
+      "sha256": "3e5f3ccb0928c95b434a76d9546a82545b8f34fb141d0ed2e6355d27dbaf7f8c"
+    },
+    {
+      "bytes": 2567,
+      "path": "examples/quorum-replay-v1/evidence/review/additional-literals/P02_EMPTY_SOURCE/expected.json",
+      "sha256": "a61548cb3f2fe0b7c72604160194e6970decca84677fa1aef9f08a875b95f97d"
+    },
+    {
+      "bytes": 664,
+      "path": "examples/quorum-replay-v1/evidence/review/additional-literals/P03_MISSING_CLAIM/expected.json",
+      "sha256": "7b464e7dfb6fa59a39a4dbf6d54071b43244a733beac5988437e277ddfcc2cda"
+    },
+    {
+      "bytes": 659,
+      "path": "examples/quorum-replay-v1/evidence/review/additional-literals/P04_MISSING_SOURCE/expected.json",
+      "sha256": "b77fcda65f8ea53d0680de864471e65d9356a9f940173971a17f2c054bfdaeeb"
+    },
+    {
+      "bytes": 531,
+      "path": "examples/quorum-replay-v1/evidence/review/additional-literals/P05_READING_PARENT_BEFORE_UPDATE/expected.json",
+      "sha256": "cfba3adc2830e2114deda8d1127a8587e68a088030a2f71c1678e5e09e4f0bd8"
+    },
+    {
+      "bytes": 529,
+      "path": "examples/quorum-replay-v1/evidence/review/additional-literals/P06_DEP_BEFORE_POSITIONAL/expected.json",
+      "sha256": "fc9df47f44047af7a3ee72105735899511f686f03db1deb6cfd830133748d68a"
+    },
+    {
+      "bytes": 2927,
+      "path": "examples/quorum-replay-v1/evidence/review/additional-literals/P07_FINAL_LF_SET_ORDER/expected.json",
+      "sha256": "5a0fdd507283e0d72a9cc5820d4bf5d9a3fdb2670808208af2848526cb5d2955"
+    },
+    {
+      "bytes": 14315,
+      "path": "examples/quorum-replay-v1/evidence/review/additional-literals/oracle.json",
+      "sha256": "6b08e92173be44da116b14eaef2cced8a15c91573df095ea37e467ed59a22134"
+    },
+    {
+      "bytes": 2593,
+      "path": "examples/quorum-replay-v1/evidence/review/additional-literals/revision-02/P02_EMPTY_SOURCE/expected.json",
+      "sha256": "ec8ba5e6bb79220193d9fdcbac39b7e3b467f79c3010854d4223825ab0ad8524"
+    },
+    {
+      "bytes": 1337,
+      "path": "examples/quorum-replay-v1/evidence/review/additional-literals/revision-02/correction-review.json",
+      "sha256": "e27a0a507a524bd47b58f15d540e99212df0c371138bc07e09ac07f8d98d037d"
+    },
+    {
+      "bytes": 16049,
+      "path": "examples/quorum-replay-v1/evidence/review/additional-literals/revision-02/oracle.json",
+      "sha256": "09a3bd98b47cb6e265979437731a9ba301d08348c0e47f974712d299fe104e72"
+    },
+    {
+      "bytes": 4669,
+      "path": "examples/quorum-replay-v1/evidence/review/additional-probe-recipes.json",
+      "sha256": "f8037bfe57c61d2eac5211790e50b1baff84d0bf721342ea21938e4e2bc55f34"
+    },
+    {
+      "bytes": 3980,
+      "path": "examples/quorum-replay-v1/evidence/review/bootstrap-final-source-review.json",
+      "sha256": "bbe44965f902b98c8e0c6c6a3def679ba3b4f5d567c275d556608d3d55b9bf3a"
+    },
+    {
+      "bytes": 23195,
+      "path": "examples/quorum-replay-v1/evidence/review/bootstrap-revision02.py.txt",
+      "sha256": "56c52549093821e0b7ba2387b3371242f1f151335bbfc17a04e10967989a872d"
+    },
+    {
+      "bytes": 1613,
+      "path": "examples/quorum-replay-v1/evidence/review/cache-negative-control-before-run.json",
+      "sha256": "346c16ac4743701a84a4a788ee421bf2b8eb951c87f728160bedb406d68c6470"
+    },
+    {
+      "bytes": 2200,
+      "path": "examples/quorum-replay-v1/evidence/review/copied-host-cache-concrete-review03.json",
+      "sha256": "0769711b969cd7ea302864024e7cb5a5c079c8f32ca5db5d0cd2e8f3f5b06657"
+    },
+    {
+      "bytes": 5336,
+      "path": "examples/quorum-replay-v1/evidence/review/core-final-source-review.json",
+      "sha256": "0324e6aeba1b6897f5c5ea3f584e675f021c98769627b99e3a67fac86942afc2"
+    },
+    {
+      "bytes": 5867,
+      "path": "examples/quorum-replay-v1/evidence/review/corrected-host-manifest-concrete-review03.json",
+      "sha256": "951f5855b852bb32d40a7410b3998d371d912def804a6bc644bb1e4070bb8f30"
+    },
+    {
+      "bytes": 852,
+      "path": "examples/quorum-replay-v1/evidence/review/corrected-pure-ci-normal-runner.json",
+      "sha256": "0e45337063619bf6361eb671317ce11dda7a2cb8dd087fc6c35d5ca9225889de"
+    },
+    {
+      "bytes": 290,
+      "path": "examples/quorum-replay-v1/evidence/review/corrected-pure-ci-normal.stderr",
+      "sha256": "8123deb08aa35658ff31bb412d925ae7e6ea3aad6af08a80f6abc9656c228629"
+    },
+    {
+      "bytes": 863,
+      "path": "examples/quorum-replay-v1/evidence/review/corrected-pure-ci-optimized-runner.json",
+      "sha256": "70837d5c555572dae56bd1c9d0753386dda6349573693b9078aff00bfa7d298c"
+    },
+    {
+      "bytes": 290,
+      "path": "examples/quorum-replay-v1/evidence/review/corrected-pure-ci-optimized.stderr",
+      "sha256": "e2765b085e8c4b22e25de996c00052691b3a6033670ff5016f704bcd7b8a2a92"
+    },
+    {
+      "bytes": 19089,
+      "path": "examples/quorum-replay-v1/evidence/review/corrected-pure-ci-source-after.json",
+      "sha256": "af4d8dcfbfa01324ee8bd0472fabb4ee95fa6e52e0c072eeffae309e83489241"
+    },
+    {
+      "bytes": 55157,
+      "path": "examples/quorum-replay-v1/evidence/review/final-core-normal-results.json",
+      "sha256": "c6f28e683a118a334d1fc876e3b14f56cd9a5e2588bd6d77cecb42358d8c5721"
+    },
+    {
+      "bytes": 645,
+      "path": "examples/quorum-replay-v1/evidence/review/final-core-normal-runner.json",
+      "sha256": "9392b3726679ab54f465b13154da37ad787f34ec0fb2ff7333c55a080c579beb"
+    },
+    {
+      "bytes": 290,
+      "path": "examples/quorum-replay-v1/evidence/review/final-core-normal.stderr",
+      "sha256": "58b2d8ff4aef9ec8612c47478a1878ff53fc5afecdf004a7684aaca78b70c7af"
+    },
+    {
+      "bytes": 646,
+      "path": "examples/quorum-replay-v1/evidence/review/final-core-opt1-runner.json",
+      "sha256": "76c4d57bbcfbdff6f058c3c5b15b50dc6cab208d37573ddb75836ad85dde95f1"
+    },
+    {
+      "bytes": 290,
+      "path": "examples/quorum-replay-v1/evidence/review/final-core-opt1.stderr",
+      "sha256": "bdafa60e29d39adb83df46a9e6f5bff6a99a4e77645d694fbab767746c51bd16"
+    },
+    {
+      "bytes": 165099,
+      "path": "examples/quorum-replay-v1/evidence/review/final-host-cache15-normal-manifest.json",
+      "sha256": "56735b59fa369b91a8d391c1f2a198bafa29ce0a984adb5adb05dd51d1063f89"
+    },
+    {
+      "bytes": 133930,
+      "path": "examples/quorum-replay-v1/evidence/review/final-host-cache15-normal-observations/first-run.json",
+      "sha256": "ac90fded6b7c95e11e71319d14cb7206698c5c25eefe902f2b8fd62d274cf510"
+    },
+    {
+      "bytes": 952,
+      "path": "examples/quorum-replay-v1/evidence/review/final-host-cache15-normal-runner.json",
+      "sha256": "86a03bafc7e3999c6af39182f140648e3fb5843e9cd9d2177f34ecc621aeef73"
+    },
+    {
+      "bytes": 232,
+      "path": "examples/quorum-replay-v1/evidence/review/final-host-cache15-normal.stdout",
+      "sha256": "243e03a2692f92a0037bf004cc0a9704c8fe6c32798c8bd4423d9fe208f94b36"
+    },
+    {
+      "bytes": 1136,
+      "path": "examples/quorum-replay-v1/evidence/review/final-host-cache15-opt1-H02_PRELOADED_TRANSPORT.preentry.json",
+      "sha256": "e75ff8f6d202c8a0273705163a2df2a9ff3f25d0812a09b689f7142ff0e6118d"
+    },
+    {
+      "bytes": 13753,
+      "path": "examples/quorum-replay-v1/evidence/review/final-host-cache15-opt1-H03_MODULE_COUNT.preentry.json",
+      "sha256": "dcc8f0dfc481c9ba81aa378aab6d49edaf48ee527b246fb1b66b64c755b2806f"
+    },
+    {
+      "bytes": 165168,
+      "path": "examples/quorum-replay-v1/evidence/review/final-host-cache15-opt1-manifest.json",
+      "sha256": "68ba5164a53acc5d1b8ce17f5e743c48dada4aa347b657bc33947445dfed8a54"
+    },
+    {
+      "bytes": 133944,
+      "path": "examples/quorum-replay-v1/evidence/review/final-host-cache15-opt1-observations/first-run.json",
+      "sha256": "d45a43425c43641c5386d804c989df5e842f3153d2a3e9e871f7f9524226f43b"
+    },
+    {
+      "bytes": 944,
+      "path": "examples/quorum-replay-v1/evidence/review/final-host-cache15-opt1-runner.json",
+      "sha256": "147b02e020a05c6f327b2e6a438c7a64da326896dc078c83e331c5b4c87bc780"
+    },
+    {
+      "bytes": 230,
+      "path": "examples/quorum-replay-v1/evidence/review/final-host-cache15-opt1.stdout",
+      "sha256": "1dd5936e5fa0c5cbce367fad7040b9e349f9b28392d4e6920b98a086a89eed90"
+    },
+    {
+      "bytes": 10366,
+      "path": "examples/quorum-replay-v1/evidence/review/final-independent-full-replay-review.json",
+      "sha256": "6c24ef9d520dfbdbd5926cc7e9f77919ae41f5657e5c22e09100157880f266e1"
+    },
+    {
+      "bytes": 7244,
+      "path": "examples/quorum-replay-v1/evidence/review/final-independent-matrix-runner-receipt.json",
+      "sha256": "7d02ede60174a20afd1889f0ae7a23e3932432a0a2998f50d04ebba7db0eb603"
+    },
+    {
+      "bytes": 73589,
+      "path": "examples/quorum-replay-v1/evidence/review/final-original-semantic14-normal-observations/first-run.json",
+      "sha256": "0aed7403ac3ebcd7d14be0ddf19c2fad85403fd7a94716570bdb9c26566b88c3"
+    },
+    {
+      "bytes": 980,
+      "path": "examples/quorum-replay-v1/evidence/review/final-original-semantic14-normal-runner.json",
+      "sha256": "1f4a7c0aa8b7d4ed6ecfe2cb1671d8868edd1b01c01e99695fc159500071ada7"
+    },
+    {
+      "bytes": 238,
+      "path": "examples/quorum-replay-v1/evidence/review/final-original-semantic14-normal.stdout",
+      "sha256": "2985a5555f7c1f78a13a2cdec04af91549adcd22df40d3f6d7f750a42321ab5a"
+    },
+    {
+      "bytes": 73596,
+      "path": "examples/quorum-replay-v1/evidence/review/final-original-semantic14-opt1-observations/first-run.json",
+      "sha256": "fab3a1b04095428004d7454f1f3bde9c07ae6e58983c731706ff246f3e11d5ab"
+    },
+    {
+      "bytes": 972,
+      "path": "examples/quorum-replay-v1/evidence/review/final-original-semantic14-opt1-runner.json",
+      "sha256": "dd544695eefc4b4d0fb87ac7d66e4ae920f7a02e674adfc23876c9f5ded373ce"
+    },
+    {
+      "bytes": 236,
+      "path": "examples/quorum-replay-v1/evidence/review/final-original-semantic14-opt1.stdout",
+      "sha256": "892c78574b312e1d737ed2304b86117a9c8dd96bfa4131c2bbecc675e3d2092d"
+    },
+    {
+      "bytes": 31905,
+      "path": "examples/quorum-replay-v1/evidence/review/final-private-origin-normal-manifest.json",
+      "sha256": "14143e8327f3d3ae52df5af2d0da14825746510b6b3dee1dbd7472f22c99087b"
+    },
+    {
+      "bytes": 2181,
+      "path": "examples/quorum-replay-v1/evidence/review/final-private-origin-normal-observations/first-run.json",
+      "sha256": "06a4c2e71ca507d789979923165818033d8ed1d13fb794110ef8a218e9aa6fe4"
+    },
+    {
+      "bytes": 412,
+      "path": "examples/quorum-replay-v1/evidence/review/final-private-origin-normal-runner.json",
+      "sha256": "f1498992236390d33fac4b89dbddf442087a1160c5a339242f0b05ba128d03a0"
+    },
+    {
+      "bytes": 232,
+      "path": "examples/quorum-replay-v1/evidence/review/final-private-origin-normal.stdout",
+      "sha256": "d369a6d61a37051e56ef244c3ef7b819f7e0390515f027126e992f9ebb887362"
+    },
+    {
+      "bytes": 31910,
+      "path": "examples/quorum-replay-v1/evidence/review/final-private-origin-opt1-manifest.json",
+      "sha256": "985d6b22d6491795a8f1d3184e18ae5b8ac3f3ea4edf3072d8951a40cae9cd09"
+    },
+    {
+      "bytes": 2178,
+      "path": "examples/quorum-replay-v1/evidence/review/final-private-origin-opt1-observations/first-run.json",
+      "sha256": "53805b314d488479647a6275bbf67b776e33edd741f8ab297af5ba2db8b871db"
+    },
+    {
+      "bytes": 408,
+      "path": "examples/quorum-replay-v1/evidence/review/final-private-origin-opt1-runner.json",
+      "sha256": "9853f67dcf110eeb5587618bdb21f70d90cc2c5545d5934b46f8303d20fe1363"
+    },
+    {
+      "bytes": 230,
+      "path": "examples/quorum-replay-v1/evidence/review/final-private-origin-opt1.stdout",
+      "sha256": "f53cc477773a53b8491c4426877fab6723b7ae03dd8297296e21fcd08c759295"
+    },
+    {
+      "bytes": 87382,
+      "path": "examples/quorum-replay-v1/evidence/review/final-review8-normal-manifest.json",
+      "sha256": "6683a658c22a391f1fab69e10c09415fa3ad3ab5f13354e9cfa5b6296eccb22e"
+    },
+    {
+      "bytes": 56899,
+      "path": "examples/quorum-replay-v1/evidence/review/final-review8-normal-observations/first-run.json",
+      "sha256": "595fc9ec8f235f5c85c17a43e7379ed0c4c7bddd9bf501887b8a88a8c4a45fef"
+    },
+    {
+      "bytes": 398,
+      "path": "examples/quorum-replay-v1/evidence/review/final-review8-normal-runner.json",
+      "sha256": "dd6fdf0b933a099d80ca10115c75967b43529669f9e8884541d333c34b378b83"
+    },
+    {
+      "bytes": 226,
+      "path": "examples/quorum-replay-v1/evidence/review/final-review8-normal.stdout",
+      "sha256": "d87e36a74c80f671926c489d0cc4cda509ebac6ecaddb80b7c6be705f4917834"
+    },
+    {
+      "bytes": 87462,
+      "path": "examples/quorum-replay-v1/evidence/review/final-review8-opt1-manifest.json",
+      "sha256": "583a1819ea98de9c727aae49031ae4d988485974296326b2516eb8328bfe5cf8"
+    },
+    {
+      "bytes": 56911,
+      "path": "examples/quorum-replay-v1/evidence/review/final-review8-opt1-observations/first-run.json",
+      "sha256": "01c5dff72f7ec96cca65cdb1d885f69c5ab003f0bdc6ace3a34c74de387209e3"
+    },
+    {
+      "bytes": 394,
+      "path": "examples/quorum-replay-v1/evidence/review/final-review8-opt1-runner.json",
+      "sha256": "6edf4fb0638621d64625dcb1c15e930b8c83d54cb6eb1f435d6569e4c23c9df7"
+    },
+    {
+      "bytes": 224,
+      "path": "examples/quorum-replay-v1/evidence/review/final-review8-opt1.stdout",
+      "sha256": "bd602ede6cf6ff967aed9fe9a2f7ab54b307f49dfea486bf100b05abaf0e1aa9"
+    },
+    {
+      "bytes": 2658,
+      "path": "examples/quorum-replay-v1/evidence/review/final-source-execution-readiness.json",
+      "sha256": "b608dcb8c1bd24e7b4d3c7f7134a3c177138f337b8b80c7d32379d8b19c554fa"
+    },
+    {
+      "bytes": 51657,
+      "path": "examples/quorum-replay-v1/evidence/review/final-transport14-normal-observations/first-run.json",
+      "sha256": "db1f5ea23df4a751b79f112420da244ca659d7830d7689bbacf49a357419a47a"
+    },
+    {
+      "bytes": 946,
+      "path": "examples/quorum-replay-v1/evidence/review/final-transport14-normal-runner.json",
+      "sha256": "14f44d97628aa19b19228f27dec4fba9ac43e9b08b6d9a16d3ea144bd0e81bf8"
+    },
+    {
+      "bytes": 230,
+      "path": "examples/quorum-replay-v1/evidence/review/final-transport14-normal.stdout",
+      "sha256": "8a95f4cf1f4d19b49c6b6cb7d9492c2ac355184839a5b0c705395abe315c81c4"
+    },
+    {
+      "bytes": 51670,
+      "path": "examples/quorum-replay-v1/evidence/review/final-transport14-opt1-observations/first-run.json",
+      "sha256": "0869fa41fdc2225c03340f8ad7d912d66320e336fb75e6f6b6fb5e3432be0345"
+    },
+    {
+      "bytes": 938,
+      "path": "examples/quorum-replay-v1/evidence/review/final-transport14-opt1-runner.json",
+      "sha256": "3ea631b184f7e321c116c69bc3d6dc7f9afc93ddfe5c9a88aa19be121f5185c1"
+    },
+    {
+      "bytes": 228,
+      "path": "examples/quorum-replay-v1/evidence/review/final-transport14-opt1.stdout",
+      "sha256": "c0c2c38e32b9e9afa4e23f29bcaea0a0cc9e7cde0c1bf68e20eac72f32d18085"
+    },
+    {
+      "bytes": 5566,
+      "path": "examples/quorum-replay-v1/evidence/review/finalize-independent-review.py",
+      "sha256": "53d475880fc0a8f76e01d98e46485062908a23c9984aab06a57a17685787e5aa"
+    },
+    {
+      "bytes": 4387,
+      "path": "examples/quorum-replay-v1/evidence/review/first-concrete-fixture-review.json",
+      "sha256": "658187abb9d0775a5a965597ae6bd1ba4c2f2ccd92e5a0eb590b4550f191b07f"
+    },
+    {
+      "bytes": 4387,
+      "path": "examples/quorum-replay-v1/evidence/review/first-concrete-fixture-review03.json",
+      "sha256": "1bc9f22508f1946f1e59555c5123c195826553e2747f1f79b333255ebbe9c5ec"
+    },
+    {
+      "bytes": 2404,
+      "path": "examples/quorum-replay-v1/evidence/review/first-pair-independent-runtime-receipt.json",
+      "sha256": "2810e534100f909fe7dd278ad381e58d234150da3786d9f9fccfbb8052bcd93a"
+    },
+    {
+      "bytes": 13767,
+      "path": "examples/quorum-replay-v1/evidence/review/first-pair-normal-manifest.json",
+      "sha256": "f885df354b669077e25d04e467764d295954af08d97c750e7eb17591a56aaff6"
+    },
+    {
+      "bytes": 6928,
+      "path": "examples/quorum-replay-v1/evidence/review/first-pair-normal-observations/first-run.json",
+      "sha256": "a6a476d9dd196d3e450076f05bc37a13bb97adbe197e20552fb1c54ea03ee53c"
+    },
+    {
+      "bytes": 12193,
+      "path": "examples/quorum-replay-v1/evidence/review/first-pair-normal-runner.json",
+      "sha256": "fabf71e23c840e15e3436b877d48abf886c93dfca66210614576b03e940766db"
+    },
+    {
+      "bytes": 222,
+      "path": "examples/quorum-replay-v1/evidence/review/first-pair-normal-runner.stdout",
+      "sha256": "b393c1e902143bf8cc24cc1d2657b08d17933560c230df409692c41ae8467256"
+    },
+    {
+      "bytes": 13777,
+      "path": "examples/quorum-replay-v1/evidence/review/first-pair-optimized-manifest.json",
+      "sha256": "732979dae398bf4850fee3fa3b9afffc1f361e91f3e089a7e620d4f124b8f6bb"
+    },
+    {
+      "bytes": 6953,
+      "path": "examples/quorum-replay-v1/evidence/review/first-pair-optimized-observations/first-run.json",
+      "sha256": "581f531309191bea858f92baa146389aa0653ac8008ffa1ea95d9ae6e861bdab"
+    },
+    {
+      "bytes": 12199,
+      "path": "examples/quorum-replay-v1/evidence/review/first-pair-optimized-runner.json",
+      "sha256": "d2c1fb527776201be33fa6095907162a477cd013671a732892032f76cef792d9"
+    },
+    {
+      "bytes": 225,
+      "path": "examples/quorum-replay-v1/evidence/review/first-pair-optimized-runner.stdout",
+      "sha256": "b2688acc118374b5dbee2a39b6cad23807fc112c7b32e3885db3bbc506da33a4"
+    },
+    {
+      "bytes": 5879,
+      "path": "examples/quorum-replay-v1/evidence/review/first-pair-source-after.json",
+      "sha256": "a405a9f879911a5715bcf08c66c06be64cd6f6cdf51dff18c0e2f6620eceb6c0"
+    },
+    {
+      "bytes": 1281,
+      "path": "examples/quorum-replay-v1/evidence/review/import-loader-late-finding.json",
+      "sha256": "1c47d07d1328b5543d2a9486a42f828a84e0348990d5b705a5759434494d2a89"
+    },
+    {
+      "bytes": 3017,
+      "path": "examples/quorum-replay-v1/evidence/review/import-loader-stdlib-evidence.json",
+      "sha256": "bbb0ea681b8ff6be7b7cd3b54e3e91280a39b443fc2481df94f56c3ffe924aab"
+    },
+    {
+      "bytes": 2471,
+      "path": "examples/quorum-replay-v1/evidence/review/import-map-source-review.json",
+      "sha256": "ff1b2294b0372f65066898c3c049947125527afb87e36a1ab2788a3a6b6a5bb3"
+    },
+    {
+      "bytes": 29257,
+      "path": "examples/quorum-replay-v1/evidence/review/initial-replay.py.txt",
+      "sha256": "7ab52d6371de2819676bb15b6ad67ecf4a807c3a8e541ccfbc1eba1b63db940b"
+    },
+    {
+      "bytes": 6309,
+      "path": "examples/quorum-replay-v1/evidence/review/inspect-first-concrete-fixtures.py",
+      "sha256": "53a7566ab49722381cdb6ebdc7e27d77a8947cd6fcedf664b387d4f303216b18"
+    },
+    {
+      "bytes": 6311,
+      "path": "examples/quorum-replay-v1/evidence/review/inspect-first-concrete-fixtures03.py",
+      "sha256": "62d126bc63a0caf13f4dedb33e2200d278b99ed3beb0ea3d4abfd7605187df17"
+    },
+    {
+      "bytes": 6760,
+      "path": "examples/quorum-replay-v1/evidence/review/inspect-remaining-semantic-fixtures03.py",
+      "sha256": "2f16e2ea8133d4c8ba1dcd0b4632f7d88b1ce524992e96013c0b2954824df9b6"
+    },
+    {
+      "bytes": 9022,
+      "path": "examples/quorum-replay-v1/evidence/review/inspect-remaining-semantic-isolated03-corrected.py",
+      "sha256": "14d69e9d059b5fae36117873ebab2684b504ac0b7ac509d34aba8b6755a0e91d"
+    },
+    {
+      "bytes": 8963,
+      "path": "examples/quorum-replay-v1/evidence/review/inspect-remaining-semantic-isolated03.py",
+      "sha256": "b22b4dd6a8d606afc019d2746d92252d9e228615269845a0c9ff10de251fd386"
+    },
+    {
+      "bytes": 17750,
+      "path": "examples/quorum-replay-v1/evidence/review/materializer-runtime-alias-diagnosis.json",
+      "sha256": "4508dd98e2fca3fb72bedb74dcc07cea26b77ad182a73ed87887824b786f46ae"
+    },
+    {
+      "bytes": 2971,
+      "path": "examples/quorum-replay-v1/evidence/review/owned-source-loader-review.json",
+      "sha256": "c8cc249f1c97ce937c866407ac0d5c6ece57c4aba394b257af7ff3577bc7f699"
+    },
+    {
+      "bytes": 511,
+      "path": "examples/quorum-replay-v1/evidence/review/portable-core-host-ownership-delta-review.json",
+      "sha256": "2351458ad3771fcfaf6be49039234e7bbc8f5ea446e09544b4504d7911b4eb17"
+    },
+    {
+      "bytes": 4703,
+      "path": "examples/quorum-replay-v1/evidence/review/preexecution-static-findings.json",
+      "sha256": "c41d7cfd423fbefcb0c4c10f451330e3b39209aa7de6270aaf883f2fe9c02795"
+    },
+    {
+      "bytes": 9405,
+      "path": "examples/quorum-replay-v1/evidence/review/prepare-additional-literals.py",
+      "sha256": "8e8d28dc0f459c96c421cbda216f59a5f123f1028796ec6610321de55a02c02c"
+    },
+    {
+      "bytes": 1139,
+      "path": "examples/quorum-replay-v1/evidence/review/private-origin-concrete-review03.json",
+      "sha256": "082ab5f22348a15880f553bd3e1cd02d3e54b442862da3d5daf481d808f1c7a1"
+    },
+    {
+      "bytes": 1971,
+      "path": "examples/quorum-replay-v1/evidence/review/public-U01-bootstrap-observation-review.json",
+      "sha256": "cdc68a3bcbb38116c5caba40a614498cdb8345080bd613c7d44ed565cd2e704c"
+    },
+    {
+      "bytes": 2592,
+      "path": "examples/quorum-replay-v1/evidence/review/public-U01-concrete-review.json",
+      "sha256": "4dfd1cbb3b5c623dd37a5887f877f7ba53edb00e4c49354883c39f7b9099c9a7"
+    },
+    {
+      "bytes": 1442,
+      "path": "examples/quorum-replay-v1/evidence/review/public-preparer-repaired-source-review.json",
+      "sha256": "1aef438ccbe5e4f4e148033b14da34cf686fc05612a1fc7540bbd05d06913c1a"
+    },
+    {
+      "bytes": 2760,
+      "path": "examples/quorum-replay-v1/evidence/review/recipient-only-delta-review.json",
+      "sha256": "99aa934bb1d6566d3de132a9cc5e43665b1bcb4fc681b300c32dce4cf870bd58"
+    },
+    {
+      "bytes": 40240,
+      "path": "examples/quorum-replay-v1/evidence/review/remaining-semantic-concrete-isolated-review03-corrected.json",
+      "sha256": "f9ebd7d5376d948ed3ac508925231d1cd4d131e81b27024f0308cac00d27e645"
+    },
+    {
+      "bytes": 40242,
+      "path": "examples/quorum-replay-v1/evidence/review/remaining-semantic-concrete-isolated-review03.json",
+      "sha256": "458ab61d411902e20144d306a4128ed03410edc3485550937ec0f9a25da37b75"
+    },
+    {
+      "bytes": 21532,
+      "path": "examples/quorum-replay-v1/evidence/review/remaining-semantic-concrete-review03.json",
+      "sha256": "e6a9d5d2f15ba5f95b23fba53f3d40da1d487447a3a6fe5f003cbb2fc4dfdd6a"
+    },
+    {
+      "bytes": 5257,
+      "path": "examples/quorum-replay-v1/evidence/review/review-public-U01.py",
+      "sha256": "316bc3669a3e734dc2aab237908ef6a99da8f45684e2c86501f64052b8de1f9e"
+    },
+    {
+      "bytes": 34956,
+      "path": "examples/quorum-replay-v1/evidence/review/reviewed-final-replay.py.txt",
+      "sha256": "af53ad9a704726ae97fd8b4ba0be909e1e1cb3870c1cd5ce96cd2e23c6421584"
+    },
+    {
+      "bytes": 3185,
+      "path": "examples/quorum-replay-v1/evidence/review/run-final-independent-matrix.py",
+      "sha256": "93188efa189eaee1f98c39686e69f1d89a0adc99ce217183cb4dc4205cc35c5a"
+    },
+    {
+      "bytes": 1617,
+      "path": "examples/quorum-replay-v1/evidence/review/run-final-review8.py",
+      "sha256": "f383378373a04527ebcba66992fe0b1d134300508b19b037a6061703f504f152"
+    },
+    {
+      "bytes": 19089,
+      "path": "examples/quorum-replay-v1/evidence/review/source03-combined-source-after.json",
+      "sha256": "df92bcfecfe087135ad59b70fb902d189771e57aa1215d04a50c1c4af26cbdc9"
+    },
+    {
+      "bytes": 3837,
+      "path": "examples/quorum-replay-v1/evidence/review/source03-priority-and-core-independent-receipt.json",
+      "sha256": "a932972199eea84ffb97ad23a303d691ed99f9d519ac108b91d4e6afccd328fd"
+    },
+    {
+      "bytes": 32947,
+      "path": "examples/quorum-replay-v1/evidence/review/source03-priority-normal-manifest.json",
+      "sha256": "080184e7cdfc10966787b79e8f4fd3f246638ea8c52772685015bfae96758550"
+    },
+    {
+      "bytes": 11973,
+      "path": "examples/quorum-replay-v1/evidence/review/source03-priority-normal-observations/first-run.json",
+      "sha256": "608077212aa514ed01e690a7815efc98063cb1d444fa486e085060a358ee3c4c"
+    },
+    {
+      "bytes": 430,
+      "path": "examples/quorum-replay-v1/evidence/review/source03-priority-normal-runner.json",
+      "sha256": "a4198ff7bfde082c0d59e813a68450c85aa05cc45b99e4289de1298a983547d6"
+    },
+    {
+      "bytes": 230,
+      "path": "examples/quorum-replay-v1/evidence/review/source03-priority-normal.stdout",
+      "sha256": "50f28cf6b2935aa85a9433dfd8c7b81b8588b071eca70a5af7e7d3177a7305a7"
+    },
+    {
+      "bytes": 32967,
+      "path": "examples/quorum-replay-v1/evidence/review/source03-priority-optimized-manifest.json",
+      "sha256": "ad918fe6c3961398091878935d7e2f578e87f2fec3e9f54b9baa4c2378e41c3c"
+    },
+    {
+      "bytes": 12020,
+      "path": "examples/quorum-replay-v1/evidence/review/source03-priority-optimized-observations/first-run.json",
+      "sha256": "54b848915ef500822c6d65f25d25a9d4cee20b65c2c260721f18e00bf6436079"
+    },
+    {
+      "bytes": 436,
+      "path": "examples/quorum-replay-v1/evidence/review/source03-priority-optimized-runner.json",
+      "sha256": "0d25cc3ec285605cca9e44f54ca6366a1c0f8ed19e4fe0765274138fff6af830"
+    },
+    {
+      "bytes": 233,
+      "path": "examples/quorum-replay-v1/evidence/review/source03-priority-optimized.stdout",
+      "sha256": "7d91f0228fb7b20a5850f44d741e0fbdd65c0049b36b905b6c68f59e4ab72f0c"
+    },
+    {
+      "bytes": 55120,
+      "path": "examples/quorum-replay-v1/evidence/review/source03-pure-ci-normal-results.json",
+      "sha256": "e29ffc062e49a612f68f4ec80d319825e03d4f711e7d62cd1692fc737fdd9637"
+    },
+    {
+      "bytes": 679,
+      "path": "examples/quorum-replay-v1/evidence/review/source03-pure-ci-normal-runner.json",
+      "sha256": "9fc7f92e1309c49675f1659934e31f4df2be5c73340d2a1bc7dcce01c518a819"
+    },
+    {
+      "bytes": 1238,
+      "path": "examples/quorum-replay-v1/evidence/review/source03-pure-ci-normal.stderr",
+      "sha256": "0ec2aa13d0614639fbc73f617e93ddd878573250ff864fcc60ca96d2934b7518"
+    },
+    {
+      "bytes": 869,
+      "path": "examples/quorum-replay-v1/fixture-manifest.json",
+      "sha256": "bed37c48a5168f9ed0bf0b1169d7b13dcb942526c46b28c6f985bc8c31e74a04"
+    },
+    {
+      "bytes": 10210,
+      "path": "examples/quorum-replay-v1/literal-controls/F01_ORIGINAL_ACCEPT/body.json",
+      "sha256": "358f61cce73aa485898a40c2a53c71b8cc3d595bf6c1ad87e5ab81f6f7be971f"
+    },
+    {
+      "bytes": 2569,
+      "path": "examples/quorum-replay-v1/literal-controls/F01_ORIGINAL_ACCEPT/expected.json",
+      "sha256": "3a918bf31f774b8fffb92f4b690fc201eb11c497dbb5d8132ee2878e49ac7168"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/literal-controls/F01_ORIGINAL_ACCEPT/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/literal-controls/F01_ORIGINAL_ACCEPT/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 596,
+      "path": "examples/quorum-replay-v1/literal-controls/F01_ORIGINAL_ACCEPT/materialization.json",
+      "sha256": "0d5911125e3fd072903072537ab54fa1856035fc22ac296a06d08985bf852a51"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/literal-controls/F01_ORIGINAL_ACCEPT/original-source-envelope.json",
+      "sha256": "c6a1c168bb0aa3f9853ec37bced8a1e20ce53cbf0b88ce19bcd26cf9cc4ff3a6"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/literal-controls/F01_ORIGINAL_ACCEPT/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 10210,
+      "path": "examples/quorum-replay-v1/literal-controls/F02_TRANSPORT_ACCEPT/body.json",
+      "sha256": "358f61cce73aa485898a40c2a53c71b8cc3d595bf6c1ad87e5ab81f6f7be971f"
+    },
+    {
+      "bytes": 2569,
+      "path": "examples/quorum-replay-v1/literal-controls/F02_TRANSPORT_ACCEPT/expected.json",
+      "sha256": "3a918bf31f774b8fffb92f4b690fc201eb11c497dbb5d8132ee2878e49ac7168"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/literal-controls/F02_TRANSPORT_ACCEPT/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/literal-controls/F02_TRANSPORT_ACCEPT/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 596,
+      "path": "examples/quorum-replay-v1/literal-controls/F02_TRANSPORT_ACCEPT/materialization.json",
+      "sha256": "0d5911125e3fd072903072537ab54fa1856035fc22ac296a06d08985bf852a51"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/literal-controls/F02_TRANSPORT_ACCEPT/original-source-envelope.json",
+      "sha256": "c6a1c168bb0aa3f9853ec37bced8a1e20ce53cbf0b88ce19bcd26cf9cc4ff3a6"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/literal-controls/F02_TRANSPORT_ACCEPT/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 1,
+      "path": "examples/quorum-replay-v1/literal-controls/F03_BAD_UTF8_AND_STALE_PIN/body.json",
+      "sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89"
+    },
+    {
+      "bytes": 413,
+      "path": "examples/quorum-replay-v1/literal-controls/F03_BAD_UTF8_AND_STALE_PIN/expected.json",
+      "sha256": "decd36fd1f5ee0ff8bc0d55483f263ac3d5ea21965203c01f9361cec2bbb2577"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/literal-controls/F03_BAD_UTF8_AND_STALE_PIN/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/literal-controls/F03_BAD_UTF8_AND_STALE_PIN/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 712,
+      "path": "examples/quorum-replay-v1/literal-controls/F03_BAD_UTF8_AND_STALE_PIN/materialization.json",
+      "sha256": "2c85761859acd43e2b1cd82dba13616afaed56a369107c1874ce82085f94baa4"
+    },
+    {
+      "bytes": 473,
+      "path": "examples/quorum-replay-v1/literal-controls/F03_BAD_UTF8_AND_STALE_PIN/original-source-envelope.json",
+      "sha256": "e83e41fc97aaea5396797f1000616f3d6f1fcb096e9f169866f69ff6d2d46cb9"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/literal-controls/F03_BAD_UTF8_AND_STALE_PIN/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 22370,
+      "path": "examples/quorum-replay-v1/literal-controls/F04_BOUNDS_AND_UNKNOWN_RULE/body.json",
+      "sha256": "401bf9ef67ba88bbf2c17cc08ca6a79ec9bd2d013f6107e6dec6aa6e26bdd677"
+    },
+    {
+      "bytes": 415,
+      "path": "examples/quorum-replay-v1/literal-controls/F04_BOUNDS_AND_UNKNOWN_RULE/expected.json",
+      "sha256": "79980e331da629694c2e4bbfd8a22214065e63398cfb5fe2952ed9ac67b9755a"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/literal-controls/F04_BOUNDS_AND_UNKNOWN_RULE/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/literal-controls/F04_BOUNDS_AND_UNKNOWN_RULE/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 596,
+      "path": "examples/quorum-replay-v1/literal-controls/F04_BOUNDS_AND_UNKNOWN_RULE/materialization.json",
+      "sha256": "0d5911125e3fd072903072537ab54fa1856035fc22ac296a06d08985bf852a51"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/literal-controls/F04_BOUNDS_AND_UNKNOWN_RULE/original-source-envelope.json",
+      "sha256": "c047e539c69fe48b8c78ac1fee23f216d7f17a2680c5bcb167b3ce61d82b1627"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/literal-controls/F04_BOUNDS_AND_UNKNOWN_RULE/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 10210,
+      "path": "examples/quorum-replay-v1/literal-controls/F05_VERSION_AND_RUNTIME/body.json",
+      "sha256": "e089f71d6da683ecf5b30e1d458a75a3b8e5b7a8ab9d7644d1d20823dbbf3981"
+    },
+    {
+      "bytes": 426,
+      "path": "examples/quorum-replay-v1/literal-controls/F05_VERSION_AND_RUNTIME/expected.json",
+      "sha256": "3c2629bf13bec6cf6d9ddd5426f66c2e26b5d87924b0176a007f2a508f07b4eb"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/literal-controls/F05_VERSION_AND_RUNTIME/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/literal-controls/F05_VERSION_AND_RUNTIME/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 734,
+      "path": "examples/quorum-replay-v1/literal-controls/F05_VERSION_AND_RUNTIME/materialization.json",
+      "sha256": "75bba948060df8a407c2a8a4d25d97e9457d7b7a5157143d426bfe9c066b0248"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/literal-controls/F05_VERSION_AND_RUNTIME/original-source-envelope.json",
+      "sha256": "0c44aa946d8915533556aa7483cbfa7e0973c3901546ae1efc23ab4c22b1b97d"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/literal-controls/F05_VERSION_AND_RUNTIME/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 10210,
+      "path": "examples/quorum-replay-v1/literal-controls/F06_REQUEST_PIN_AND_RECORD/body.json",
+      "sha256": "358f61cce73aa485898a40c2a53c71b8cc3d595bf6c1ad87e5ab81f6f7be971f"
+    },
+    {
+      "bytes": 419,
+      "path": "examples/quorum-replay-v1/literal-controls/F06_REQUEST_PIN_AND_RECORD/expected.json",
+      "sha256": "5739da135f91e4f30eb09a4978b352e5a6310416bd293b7ce6cbf4bc5200beb9"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/literal-controls/F06_REQUEST_PIN_AND_RECORD/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/literal-controls/F06_REQUEST_PIN_AND_RECORD/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 767,
+      "path": "examples/quorum-replay-v1/literal-controls/F06_REQUEST_PIN_AND_RECORD/materialization.json",
+      "sha256": "cf65ab752d7ffd5e6671aba8dc4cee46c2e854f9b1216de21a6fb4ec95c834e3"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/literal-controls/F06_REQUEST_PIN_AND_RECORD/original-source-envelope.json",
+      "sha256": "c6a1c168bb0aa3f9853ec37bced8a1e20ce53cbf0b88ce19bcd26cf9cc4ff3a6"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/literal-controls/F06_REQUEST_PIN_AND_RECORD/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 10208,
+      "path": "examples/quorum-replay-v1/literal-controls/F07_PACKAGE_AND_REFERENCE/body.json",
+      "sha256": "507459873fdfbac9f2f03fc8b379521bda3fe8e26eee4955e116ee192eb36210"
+    },
+    {
+      "bytes": 462,
+      "path": "examples/quorum-replay-v1/literal-controls/F07_PACKAGE_AND_REFERENCE/expected.json",
+      "sha256": "7126cbefc398c5901c95c0215dc88a2a9f8126d1e534f41bf05f41175efd0eb6"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/literal-controls/F07_PACKAGE_AND_REFERENCE/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/literal-controls/F07_PACKAGE_AND_REFERENCE/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 715,
+      "path": "examples/quorum-replay-v1/literal-controls/F07_PACKAGE_AND_REFERENCE/materialization.json",
+      "sha256": "9d0f88f78d5cc5e5fc633e9bcccbcd40404005bd0627271eba057bc0fbe8f414"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/literal-controls/F07_PACKAGE_AND_REFERENCE/original-source-envelope.json",
+      "sha256": "a3380846e6bf51aeba24d0f91cfb658f6b5b484c07f711e568d19b81f0235d2f"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/literal-controls/F07_PACKAGE_AND_REFERENCE/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 10620,
+      "path": "examples/quorum-replay-v1/literal-controls/F08_MISSING_CHECKER_AND_GRAPH/body.json",
+      "sha256": "70be5e201ad1a9d1dcf39a607f28b5833a0156883599ffa6423b4961e9f965a7"
+    },
+    {
+      "bytes": 128,
+      "path": "examples/quorum-replay-v1/literal-controls/F08_MISSING_CHECKER_AND_GRAPH/expected.json",
+      "sha256": "e13d8b95a4363fa9794e4c56862dd4e17b8f700869d6281d507421c4be018fce"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/literal-controls/F08_MISSING_CHECKER_AND_GRAPH/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/literal-controls/F08_MISSING_CHECKER_AND_GRAPH/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 686,
+      "path": "examples/quorum-replay-v1/literal-controls/F08_MISSING_CHECKER_AND_GRAPH/materialization.json",
+      "sha256": "cb9eafda8e3ad5ef0071469c85007ed0473982feac0b5e000d74554f40cc9c59"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/literal-controls/F08_MISSING_CHECKER_AND_GRAPH/original-source-envelope.json",
+      "sha256": "8549900fcc548d62f51bd6ea4a8f0f5961de6036bf90e2d0702045b94c12088c"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/literal-controls/F08_MISSING_CHECKER_AND_GRAPH/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 10207,
+      "path": "examples/quorum-replay-v1/literal-controls/F09_RECORD_PIN_AND_READING/body.json",
+      "sha256": "d56bca9087d3a3f83897536061630292cb77afbd6f983d94e2cdcd5afaf1df07"
+    },
+    {
+      "bytes": 465,
+      "path": "examples/quorum-replay-v1/literal-controls/F09_RECORD_PIN_AND_READING/expected.json",
+      "sha256": "94f139bde1b472bfc8b2c0ce66df447843a39962bb917cea4c8caccf4cf5a035"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/literal-controls/F09_RECORD_PIN_AND_READING/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/literal-controls/F09_RECORD_PIN_AND_READING/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 735,
+      "path": "examples/quorum-replay-v1/literal-controls/F09_RECORD_PIN_AND_READING/materialization.json",
+      "sha256": "08d0a04f8629051b9afcf971f18d8cdfe2eab4afb936ee7fcbd3db220f5f1d6d"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/literal-controls/F09_RECORD_PIN_AND_READING/original-source-envelope.json",
+      "sha256": "ab0dfe39e0b2d6f3820652795aac632bff0041981f3e10ae59dd234723684954"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/literal-controls/F09_RECORD_PIN_AND_READING/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 10618,
+      "path": "examples/quorum-replay-v1/literal-controls/F10_REFERENCE_AND_CYCLE/body.json",
+      "sha256": "9dd1ba8dfae38ef15a11bd5f0401780f8093a8dffa79f1eeb5106ac12c97266a"
+    },
+    {
+      "bytes": 478,
+      "path": "examples/quorum-replay-v1/literal-controls/F10_REFERENCE_AND_CYCLE/expected.json",
+      "sha256": "704af37ebeb4c2422b828c5e772c94a06baaa958ba1067b39f1994c81cedac35"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/literal-controls/F10_REFERENCE_AND_CYCLE/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/literal-controls/F10_REFERENCE_AND_CYCLE/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 596,
+      "path": "examples/quorum-replay-v1/literal-controls/F10_REFERENCE_AND_CYCLE/materialization.json",
+      "sha256": "0d5911125e3fd072903072537ab54fa1856035fc22ac296a06d08985bf852a51"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/literal-controls/F10_REFERENCE_AND_CYCLE/original-source-envelope.json",
+      "sha256": "963f6b6ca8b3f99bf34feac80eaa18d868fa7c42441e8e3ba2f3e29bf467638f"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/literal-controls/F10_REFERENCE_AND_CYCLE/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 10798,
+      "path": "examples/quorum-replay-v1/literal-controls/F11_HISTORY_AND_WITHDRAWAL_CYCLE/body.json",
+      "sha256": "9d7ea62b1a21bf72ed316eed633a929b85f556f07ee8e32974d9c56412987d60"
+    },
+    {
+      "bytes": 483,
+      "path": "examples/quorum-replay-v1/literal-controls/F11_HISTORY_AND_WITHDRAWAL_CYCLE/expected.json",
+      "sha256": "a74a1a94f41677d7e024e782ad9cc5738267185d22c778ca453fbb22332a0891"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/literal-controls/F11_HISTORY_AND_WITHDRAWAL_CYCLE/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 164,
+      "path": "examples/quorum-replay-v1/literal-controls/F11_HISTORY_AND_WITHDRAWAL_CYCLE/held-withdrawal-pins.json",
+      "sha256": "b0b2869c4889f2730ac7be985fc84c5601ad61b4399e2fc3c721decc59401bc4"
+    },
+    {
+      "bytes": 596,
+      "path": "examples/quorum-replay-v1/literal-controls/F11_HISTORY_AND_WITHDRAWAL_CYCLE/materialization.json",
+      "sha256": "0d5911125e3fd072903072537ab54fa1856035fc22ac296a06d08985bf852a51"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/literal-controls/F11_HISTORY_AND_WITHDRAWAL_CYCLE/original-source-envelope.json",
+      "sha256": "9efda5abe8550250f6df1eeb3587561578ae43d6dec47ee8585060c7c8ecb70f"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/literal-controls/F11_HISTORY_AND_WITHDRAWAL_CYCLE/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 10312,
+      "path": "examples/quorum-replay-v1/literal-controls/F12_DAG_AND_DECLARATION/body.json",
+      "sha256": "e9b952677c171e8ac22a02b2c7beda91d40d423f3715a7966d3dd846ed4b6d2b"
+    },
+    {
+      "bytes": 485,
+      "path": "examples/quorum-replay-v1/literal-controls/F12_DAG_AND_DECLARATION/expected.json",
+      "sha256": "3e16fdc7b954ee4d7251dc889f76e8bd2c10822cbf281394902820e47cce0208"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/literal-controls/F12_DAG_AND_DECLARATION/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/literal-controls/F12_DAG_AND_DECLARATION/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 596,
+      "path": "examples/quorum-replay-v1/literal-controls/F12_DAG_AND_DECLARATION/materialization.json",
+      "sha256": "0d5911125e3fd072903072537ab54fa1856035fc22ac296a06d08985bf852a51"
+    },
+    {
+      "bytes": 475,
+      "path": "examples/quorum-replay-v1/literal-controls/F12_DAG_AND_DECLARATION/original-source-envelope.json",
+      "sha256": "b4d5a651e16de6eed0c6df295796047a37fa2f1643ee2ffeda00da0436ad55d5"
+    },
+    {
+      "bytes": 646,
+      "path": "examples/quorum-replay-v1/literal-controls/F12_DAG_AND_DECLARATION/originals.json",
+      "sha256": "c9fe758eb99d83f4c1b56f9d1e4bf455d0b79043c5c5ea77b33754378e5adb9b"
+    },
+    {
+      "bytes": 11745,
+      "path": "examples/quorum-replay-v1/literal-controls/F13_WITHDRAWAL_DAG_AND_COUNT/body.json",
+      "sha256": "49e67021496cba6360b14b42dba2d62a1be5fe24a7bbace20251c67e635f48e2"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/literal-controls/F13_WITHDRAWAL_DAG_AND_COUNT/expected.json",
+      "sha256": "c0b543e48e024c9a5bc05f398d3e4b42d4f4c7647dd7ef04ab471bce8315a15a"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/literal-controls/F13_WITHDRAWAL_DAG_AND_COUNT/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 164,
+      "path": "examples/quorum-replay-v1/literal-controls/F13_WITHDRAWAL_DAG_AND_COUNT/held-withdrawal-pins.json",
+      "sha256": "b0b2869c4889f2730ac7be985fc84c5601ad61b4399e2fc3c721decc59401bc4"
+    },
+    {
+      "bytes": 596,
+      "path": "examples/quorum-replay-v1/literal-controls/F13_WITHDRAWAL_DAG_AND_COUNT/materialization.json",
+      "sha256": "0d5911125e3fd072903072537ab54fa1856035fc22ac296a06d08985bf852a51"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/literal-controls/F13_WITHDRAWAL_DAG_AND_COUNT/original-source-envelope.json",
+      "sha256": "a73de8212d590d67febb42461dc8e62cf76da6177ed116d28b3cb74aea92edcf"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/literal-controls/F13_WITHDRAWAL_DAG_AND_COUNT/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 3641,
+      "path": "examples/quorum-replay-v1/literal-controls/F14_IMPORT_MISMATCH/auxiliary-input.json",
+      "sha256": "cfa2bae124c5a8bcb6a2ee050e325cada54a061f709cc02036d5406be4ec7376"
+    },
+    {
+      "bytes": 2583,
+      "path": "examples/quorum-replay-v1/literal-controls/F14_IMPORT_MISMATCH/auxiliary-result.json",
+      "sha256": "0bca9d8bdd3242546b826795a6a763ffe73ff7acfc62c4e3a71cfd3a7ac0091f"
+    },
+    {
+      "bytes": 10210,
+      "path": "examples/quorum-replay-v1/literal-controls/F14_IMPORT_MISMATCH/body.json",
+      "sha256": "358f61cce73aa485898a40c2a53c71b8cc3d595bf6c1ad87e5ab81f6f7be971f"
+    },
+    {
+      "bytes": 2396,
+      "path": "examples/quorum-replay-v1/literal-controls/F14_IMPORT_MISMATCH/expected.json",
+      "sha256": "8cce63f196c271aac71de5d87a98b210ebc7fba0c544048506773f45c308e795"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/literal-controls/F14_IMPORT_MISMATCH/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/literal-controls/F14_IMPORT_MISMATCH/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 595,
+      "path": "examples/quorum-replay-v1/literal-controls/F14_IMPORT_MISMATCH/materialization.json",
+      "sha256": "62750b9c52f60dee76b3f901b023c15759580c95902ddd7fefab7f15dc759742"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/literal-controls/F14_IMPORT_MISMATCH/original-source-envelope.json",
+      "sha256": "c6a1c168bb0aa3f9853ec37bced8a1e20ce53cbf0b88ce19bcd26cf9cc4ff3a6"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/literal-controls/F14_IMPORT_MISMATCH/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 206,
+      "path": "examples/quorum-replay-v1/literal-controls/F15_IGNORED_CLAIMED_VERDICT/auxiliary-input.json",
+      "sha256": "3a18d214d434b16d999d0a06a68a78e83fa69ffa74160d78c488fb0d50ae52a3"
+    },
+    {
+      "bytes": 7,
+      "path": "examples/quorum-replay-v1/literal-controls/F15_IGNORED_CLAIMED_VERDICT/auxiliary-result.json",
+      "sha256": "3514cf816e5407a39cb7a1c1e1243f176dda121e06398a8934edb1dc426b0b34"
+    },
+    {
+      "bytes": 10210,
+      "path": "examples/quorum-replay-v1/literal-controls/F15_IGNORED_CLAIMED_VERDICT/body.json",
+      "sha256": "358f61cce73aa485898a40c2a53c71b8cc3d595bf6c1ad87e5ab81f6f7be971f"
+    },
+    {
+      "bytes": 2569,
+      "path": "examples/quorum-replay-v1/literal-controls/F15_IGNORED_CLAIMED_VERDICT/expected.json",
+      "sha256": "3a918bf31f774b8fffb92f4b690fc201eb11c497dbb5d8132ee2878e49ac7168"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-replay-v1/literal-controls/F15_IGNORED_CLAIMED_VERDICT/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-replay-v1/literal-controls/F15_IGNORED_CLAIMED_VERDICT/held-withdrawal-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 621,
+      "path": "examples/quorum-replay-v1/literal-controls/F15_IGNORED_CLAIMED_VERDICT/materialization.json",
+      "sha256": "9f36dc70bbb10724cc1fd7bbde3212dd6b37303997a7a2db0487bd76b705127a"
+    },
+    {
+      "bytes": 477,
+      "path": "examples/quorum-replay-v1/literal-controls/F15_IGNORED_CLAIMED_VERDICT/original-source-envelope.json",
+      "sha256": "c6a1c168bb0aa3f9853ec37bced8a1e20ce53cbf0b88ce19bcd26cf9cc4ff3a6"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-replay-v1/literal-controls/F15_IGNORED_CLAIMED_VERDICT/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 26175,
+      "path": "examples/quorum-replay-v1/literal-controls/oracle.json",
+      "sha256": "b099e497db319db078e7d42a0b3a1a3100ebc3adc0a52442c47d0a0b36d4bec8"
+    },
+    {
+      "bytes": 9171,
+      "path": "examples/quorum-replay-v1/prepare_receipt.py",
+      "sha256": "d488ab2f765d1fab32c65a6c3e47775673a0d63f76bd552d867c90aa1adc61c6"
+    },
+    {
+      "bytes": 2911,
+      "path": "examples/quorum-replay-v1/recipient/lexicon.md",
+      "sha256": "8298e83a0966ee9422f0d036ff1e152b2b5ad81ff016662f7ee37a57eb141a82"
+    },
+    {
+      "bytes": 23700,
+      "path": "examples/quorum-replay-v1/recipient/meaning.zip",
+      "sha256": "fa81968b4a14642b5444b7fd39613a79cb29b4be9ea26e4c2e654f0ddfd4e906"
+    },
+    {
+      "bytes": 151,
+      "path": "examples/quorum-replay-v1/recipient/share.txt",
+      "sha256": "d3ed9a8dd0e1cd0bee6f02001307a777a1578bd147b76140e102927258385b81"
+    },
+    {
+      "bytes": 19754,
+      "path": "install/prepare_quorum_replay.py",
+      "sha256": "23119618174b44cf9fd411014c861751a87317d59a5bb333842b5fa7c356d830"
+    },
+    {
+      "bytes": 24910,
+      "path": "install/test_portable_handoff.py",
+      "sha256": "f8146be8e0b75ae38dea727f2983f4fb2e156775db8c075f3fbbeceb9da8c5bb"
+    },
+    {
+      "bytes": 9871,
+      "path": "install/test_quorum_replay.py",
+      "sha256": "34381af7a7037c3440d0b7393e1e570cc65373410e3b2329e3849a53b5b9bb54"
+    },
+    {
+      "bytes": 9696,
+      "path": "install/transport_handoff_inputs.py",
+      "sha256": "e8250f03719d375ce660e8f262ef009ce2ca569bae37dcfb72ed10bfb3a91cc8"
+    },
+    {
+      "bytes": 8449,
+      "path": "install/transport_install_layout.py",
+      "sha256": "92bca5af352c244f0c70831a824030511b82a0017fd4834b4a8e6916a5ed422b"
+    },
+    {
+      "bytes": 17126,
+      "path": "install/transport_install_support.py",
+      "sha256": "f8e63f6265bb7e35b3a296e1ec463a15140a4e0106865334ce5140ff7d2586da"
+    },
+    {
+      "bytes": 27955,
+      "path": "install/transport_quorum_bootstrap.py",
+      "sha256": "03f2bf18a67b9a6d6ccf25fd506b252b38ac34c78f56153eb22b8ecfca5738ea"
+    },
+    {
+      "bytes": 32177,
+      "path": "tools/transport_quorum_body.schema.json",
+      "sha256": "b6c7cafc1d4f1703188f7bdcb2150316feadc6b870eda9495ee146e2f429f8aa"
+    },
+    {
+      "bytes": 9598,
+      "path": "tools/transport_quorum_claim.py",
+      "sha256": "c361d626536f4dbd1f1079b613a0ba52375e78af5b09295ef151e276010d5425"
+    },
+    {
+      "bytes": 12295,
+      "path": "tools/transport_quorum_context.py",
+      "sha256": "6ab179a99fecd5bba4c3a0df58ce6244dcd5d01a8484206d62d127aab62ffebe"
+    },
+    {
+      "bytes": 5524,
+      "path": "tools/transport_quorum_graph.py",
+      "sha256": "40edaed32f10d2803a3be59e33130d62f7724de3e67eeaadf9c8d823c5dc4902"
+    },
+    {
+      "bytes": 16564,
+      "path": "tools/transport_quorum_impact.py",
+      "sha256": "b97e87b2a63a036d87e776cd92980ba80c7ae11fbafe9860708c73dbf2bdbbf1"
+    },
+    {
+      "bytes": 4952,
+      "path": "tools/transport_quorum_input.py",
+      "sha256": "6a90037a747b0cc2965dcf1b7169220a9732a16080ca0f3ca7c3b24d0349d653"
+    },
+    {
+      "bytes": 63967,
+      "path": "tools/transport_quorum_protocol-rules.json",
+      "sha256": "437df64e8d4a21d985570c218ec8abb208f18b6d1cd2bc23fd07d36e46c1ee48"
+    },
+    {
+      "bytes": 16588,
+      "path": "tools/transport_quorum_reading.py",
+      "sha256": "ecc3ab465cff4f367d71ae6970bfba9e7917a53f1145aceb743fe3f8eb16cfd4"
+    },
+    {
+      "bytes": 34956,
+      "path": "tools/transport_quorum_replay.py",
+      "sha256": "af53ad9a704726ae97fd8b4ba0be909e1e1cb3870c1cd5ce96cd2e23c6421584"
+    },
+    {
+      "bytes": 16277,
+      "path": "tools/transport_quorum_shape.py",
+      "sha256": "6fef25a491be924fb310ecafe581da9da9f3dfa19baf44b956838745c95f2170"
+    },
+    {
+      "bytes": 11078,
+      "path": "tools/transport_quorum_source.py",
+      "sha256": "3a356f0e135900bdbe1ce1199579e8b08978b5f00a4ab499b709993466279616"
+    }
+  ],
+  "formal_proof": "UNPROVEN",
+  "independent_run_groups": [
+    {
+      "cases": 14,
+      "group": "original-semantic14",
+      "lane": "normal"
+    },
+    {
+      "cases": 14,
+      "group": "original-semantic14",
+      "lane": "opt1"
+    },
+    {
+      "cases": 14,
+      "group": "transport14",
+      "lane": "normal"
+    },
+    {
+      "cases": 14,
+      "group": "transport14",
+      "lane": "opt1"
+    },
+    {
+      "cases": 15,
+      "group": "host-cache15",
+      "lane": "normal"
+    },
+    {
+      "cases": 15,
+      "group": "host-cache15",
+      "lane": "opt1"
+    },
+    {
+      "cases": 16,
+      "group": "review8",
+      "lane": "normal"
+    },
+    {
+      "cases": 16,
+      "group": "review8",
+      "lane": "opt1"
+    },
+    {
+      "cases": 1,
+      "group": "private-origin",
+      "lane": "normal"
+    },
+    {
+      "cases": 1,
+      "group": "private-origin",
+      "lane": "opt1"
+    }
+  ],
+  "portable_core_output_records": 22,
+  "product_acceptance": false,
+  "public_recipient_runs": 2,
+  "schema": "quorum/full-replay-checkpoint-receipt/1",
+  "scope": "Frozen development replay, qualified local CLI and separately labeled probes",
+  "semantic_completeness": "UNPROVEN",
+  "status": "TESTED"
+}

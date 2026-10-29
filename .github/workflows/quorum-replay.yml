@@ -1,0 +1,24 @@
+name: QUORUM portable replay controls
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  pure-core:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.14.10'
+          architecture: 'x64'
+          check-latest: false
+          allow-prereleases: false
+      - name: Frozen pure-core outcomes and source bounds
+        run: |
+          python3 -I -S -B -Werror install/test_quorum_replay.py
+          python3 -I -S -B -O -Werror install/test_quorum_replay.py
+      - name: Existing source controls
+        run: python3 -I -S -B -Werror install/check_source.py
+      - name: Retained source and complete observation receipt
+        run: python3 -I -S -B -Werror examples/quorum-replay-v1/prepare_receipt.py --check
