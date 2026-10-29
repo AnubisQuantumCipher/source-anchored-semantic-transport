@@ -1,0 +1,17 @@
+test_01_encode_and_fresh_recipient_recover_exact_source_model_and_verdict (__main__.CoreBridgeTests.test_01_encode_and_fresh_recipient_recover_exact_source_model_and_verdict) ... ok
+test_02_model_changes_preserve_unknown_and_conditional_satisfaction (__main__.CoreBridgeTests.test_02_model_changes_preserve_unknown_and_conditional_satisfaction) ... ok
+test_03_missing_model_is_not_evaluated (__main__.CoreBridgeTests.test_03_missing_model_is_not_evaluated) ... ok
+test_04_cli_draft_matches_literal_requirement_scope (__main__.CoreBridgeTests.test_04_cli_draft_matches_literal_requirement_scope) ... ok
+test_05_envelope_model_source_operator_and_version_tampering_refused (__main__.CoreBridgeTests.test_05_envelope_model_source_operator_and_version_tampering_refused) ... ok
+test_06_present_malformed_model_is_never_treated_as_absent (__main__.CoreBridgeTests.test_06_present_malformed_model_is_never_treated_as_absent) ... ok
+test_07_authored_tree_and_role_binding_mismatches_refused (__main__.CoreBridgeTests.test_07_authored_tree_and_role_binding_mismatches_refused) ... ok
+test_08_clock_source_requires_explicit_documentary_translation_status (__main__.CoreBridgeTests.test_08_clock_source_requires_explicit_documentary_translation_status) ... ok
+test_09_swapped_archive_and_truncated_archive_refuse_before_evaluation (__main__.CoreBridgeTests.test_09_swapped_archive_and_truncated_archive_refuse_before_evaluation) ... ok
+test_10_missing_and_conflicting_tuples_stay_unresolved (__main__.CoreBridgeTests.test_10_missing_and_conflicting_tuples_stay_unresolved) ... ok
+test_11_dependency_pin_and_private_parent_errors_refuse (__main__.CoreBridgeTests.test_11_dependency_pin_and_private_parent_errors_refuse) ... ok
+test_12_child_limits_never_increase_and_workspace_descriptor_is_closed (__main__.CoreBridgeTests.test_12_child_limits_never_increase_and_workspace_descriptor_is_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 6.135s
+
+OK

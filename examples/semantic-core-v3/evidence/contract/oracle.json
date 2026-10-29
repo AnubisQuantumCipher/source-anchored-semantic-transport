@@ -1,0 +1,1068 @@
+{
+  "assurance": {
+    "integration_tests": "UNRUN",
+    "native_proof": "UNRUN",
+    "oracle_execution": "UNRUN",
+    "report_authentication": "NOT_AUTHENTICATED",
+    "source_entailment": "UNPROVEN",
+    "source_review": "OBSERVED_READ_ONLY",
+    "whole_system_proof": "NOT_CLAIMED"
+  },
+  "authored_tree_mismatch_cases": [
+    "actor term swapped",
+    "action predicate swapped",
+    "event and action exchanged",
+    "exception negation removed",
+    "unless attached only to event phrase",
+    "if outside must",
+    "must applied to conjunction of event/action",
+    "source span moved to equal-spelling occurrence",
+    "source digest changed",
+    "model term ID silently aliased by equal quote"
+  ],
+  "authored_tree_mismatch_expected": {
+    "execution_authority": "NONE",
+    "permission": "NONE",
+    "status": "REFUSED"
+  },
+  "base_model": {
+    "domains": [
+      {
+        "id": "d",
+        "members": [
+          "a",
+          "b"
+        ]
+      },
+      {
+        "id": "empty",
+        "members": []
+      }
+    ],
+    "predicates": [
+      {
+        "arity": 0,
+        "id": "e"
+      },
+      {
+        "arity": 0,
+        "id": "x"
+      },
+      {
+        "arity": 1,
+        "id": "q"
+      },
+      {
+        "arity": 2,
+        "id": "r"
+      }
+    ],
+    "terms": [
+      "a",
+      "b"
+    ],
+    "tuples": [
+      {
+        "arguments": [],
+        "predicate": "e",
+        "truth": "KNOWN_TRUE"
+      },
+      {
+        "arguments": [],
+        "predicate": "x",
+        "truth": "KNOWN_FALSE"
+      },
+      {
+        "arguments": [
+          "a"
+        ],
+        "predicate": "q",
+        "truth": "KNOWN_TRUE"
+      },
+      {
+        "arguments": [
+          "b"
+        ],
+        "predicate": "q",
+        "truth": "KNOWN_FALSE"
+      },
+      {
+        "arguments": [
+          "a",
+          "b"
+        ],
+        "predicate": "r",
+        "truth": "KNOWN_TRUE"
+      }
+    ]
+  },
+  "binary_truth_tables": {
+    "and": [
+      [
+        "UNRESOLVED",
+        "UNRESOLVED",
+        "UNRESOLVED"
+      ],
+      [
+        "UNRESOLVED",
+        "KNOWN_FALSE",
+        "KNOWN_FALSE"
+      ],
+      [
+        "UNRESOLVED",
+        "KNOWN_TRUE",
+        "UNRESOLVED"
+      ],
+      [
+        "KNOWN_FALSE",
+        "UNRESOLVED",
+        "KNOWN_FALSE"
+      ],
+      [
+        "KNOWN_FALSE",
+        "KNOWN_FALSE",
+        "KNOWN_FALSE"
+      ],
+      [
+        "KNOWN_FALSE",
+        "KNOWN_TRUE",
+        "KNOWN_FALSE"
+      ],
+      [
+        "KNOWN_TRUE",
+        "UNRESOLVED",
+        "UNRESOLVED"
+      ],
+      [
+        "KNOWN_TRUE",
+        "KNOWN_FALSE",
+        "KNOWN_FALSE"
+      ],
+      [
+        "KNOWN_TRUE",
+        "KNOWN_TRUE",
+        "KNOWN_TRUE"
+      ]
+    ],
+    "if": [
+      [
+        "UNRESOLVED",
+        "UNRESOLVED",
+        "UNRESOLVED"
+      ],
+      [
+        "UNRESOLVED",
+        "KNOWN_FALSE",
+        "UNRESOLVED"
+      ],
+      [
+        "UNRESOLVED",
+        "KNOWN_TRUE",
+        "KNOWN_TRUE"
+      ],
+      [
+        "KNOWN_FALSE",
+        "UNRESOLVED",
+        "KNOWN_TRUE"
+      ],
+      [
+        "KNOWN_FALSE",
+        "KNOWN_FALSE",
+        "KNOWN_TRUE"
+      ],
+      [
+        "KNOWN_FALSE",
+        "KNOWN_TRUE",
+        "KNOWN_TRUE"
+      ],
+      [
+        "KNOWN_TRUE",
+        "UNRESOLVED",
+        "UNRESOLVED"
+      ],
+      [
+        "KNOWN_TRUE",
+        "KNOWN_FALSE",
+        "KNOWN_FALSE"
+      ],
+      [
+        "KNOWN_TRUE",
+        "KNOWN_TRUE",
+        "KNOWN_TRUE"
+      ]
+    ]
+  },
+  "boundary_cases": [
+    {
+      "description": "Well-typed connected AST containing exactly 256 nodes",
+      "id": "exact_node_cap",
+      "status": "ADMITTED"
+    },
+    {
+      "description": "Same construction with 257 nodes",
+      "id": "above_node_cap",
+      "status": "REFUSED"
+    },
+    {
+      "description": "Valid model with exactly 64 globally distinct term/predicate/domain IDs",
+      "id": "exact_symbol_cap",
+      "status": "ADMITTED"
+    },
+    {
+      "description": "Valid model except 65 globally distinct IDs",
+      "id": "above_symbol_cap",
+      "status": "REFUSED"
+    },
+    {
+      "description": "Valid model with exactly 256 valid tuple rows",
+      "id": "exact_tuple_cap",
+      "status": "ADMITTED"
+    },
+    {
+      "description": "Same model except 257 tuple rows",
+      "id": "above_tuple_cap",
+      "status": "REFUSED"
+    },
+    {
+      "description": "all sees known false early but a later model row is malformed",
+      "id": "early_false_then_bad_tuple",
+      "status": "REFUSED"
+    },
+    {
+      "description": "some sees known true early but a later model row is malformed",
+      "id": "early_true_then_bad_tuple",
+      "status": "REFUSED"
+    },
+    {
+      "description": "Every permutation of a valid model row list including conflicts",
+      "id": "row_order",
+      "relation": "IDENTICAL_SEMANTIC_RESULT"
+    },
+    {
+      "description": "Every permutation of a valid unique domain list",
+      "id": "domain_order",
+      "relation": "IDENTICAL_SEMANTIC_RESULT"
+    },
+    {
+      "description": "Malformed unused declared domain or over-budget unused tuple rows",
+      "id": "unused_domain_data",
+      "status": "REFUSED"
+    },
+    {
+      "all": "UNRESOLVED",
+      "description": "q(a)=true and q(b) missing on d=[a,b]",
+      "id": "partial_missing_in_domain",
+      "some": "KNOWN_TRUE"
+    },
+    {
+      "all": "UNRESOLVED",
+      "description": "all unary tuples missing on nonempty declared domain",
+      "id": "all_missing_in_domain",
+      "some": "UNRESOLVED"
+    },
+    {
+      "description": "Present model object with missing required fields",
+      "id": "empty_model_present",
+      "status": "REFUSED"
+    },
+    {
+      "description": "Well-formed grammar3 declaration with model absent",
+      "id": "no_model_no_outcome",
+      "outcome": null,
+      "status": "NOT_EVALUATED"
+    },
+    {
+      "description": "One payload byte differs from held digest",
+      "id": "payload_mutated",
+      "status": "REFUSED"
+    },
+    {
+      "description": "One model byte differs from held digest or package bound model source",
+      "id": "model_mutated",
+      "status": "REFUSED"
+    },
+    {
+      "description": "Another valid model is supplied against the original package/model digest",
+      "id": "model_swapped",
+      "status": "REFUSED"
+    },
+    {
+      "description": "Package round trip recovers model and declaration exact bytes; result cites those digests",
+      "id": "model_in_zip",
+      "relation": "EXACT_BOUND_SOURCE_READBACK"
+    },
+    {
+      "description": "Existing /1 and /2 accepted cases, documentary operator definitions, failure controls and pinned bundle readbacks",
+      "id": "old_profiles",
+      "relation": "UNCHANGED_DOCUMENTARY_BEHAVIOR"
+    }
+  ],
+  "evaluation_cases": [
+    {
+      "id": "tuple_true",
+      "tree": [
+        "pred",
+        "q",
+        [
+          "a"
+        ]
+      ],
+      "truth": "KNOWN_TRUE"
+    },
+    {
+      "id": "tuple_false",
+      "tree": [
+        "pred",
+        "q",
+        [
+          "b"
+        ]
+      ],
+      "truth": "KNOWN_FALSE"
+    },
+    {
+      "id": "ordered_tuple_not_commutative",
+      "tree": [
+        "pred",
+        "r",
+        [
+          "b",
+          "a"
+        ]
+      ],
+      "truth": "UNRESOLVED"
+    },
+    {
+      "id": "nullary",
+      "tree": [
+        "pred",
+        "e",
+        []
+      ],
+      "truth": "KNOWN_TRUE"
+    },
+    {
+      "id": "missing_tuple",
+      "tree": [
+        "pred",
+        "r",
+        [
+          "a",
+          "a"
+        ]
+      ],
+      "truth": "UNRESOLVED"
+    },
+    {
+      "id": "universal_contains_false",
+      "tree": [
+        "all",
+        "q",
+        "d"
+      ],
+      "truth": "KNOWN_FALSE"
+    },
+    {
+      "id": "existential_contains_true",
+      "tree": [
+        "some",
+        "q",
+        "d"
+      ],
+      "truth": "KNOWN_TRUE"
+    },
+    {
+      "id": "empty_universal",
+      "tree": [
+        "all",
+        "q",
+        "empty"
+      ],
+      "truth": "KNOWN_TRUE"
+    },
+    {
+      "id": "empty_existential",
+      "tree": [
+        "some",
+        "q",
+        "empty"
+      ],
+      "truth": "KNOWN_FALSE"
+    },
+    {
+      "id": "must_true",
+      "outcome": "SATISFIED",
+      "tree": [
+        "must",
+        [
+          "pred",
+          "q",
+          [
+            "a"
+          ]
+        ]
+      ],
+      "truth": "UNRESOLVED"
+    },
+    {
+      "id": "must_false",
+      "outcome": "VIOLATED",
+      "tree": [
+        "must",
+        [
+          "pred",
+          "q",
+          [
+            "b"
+          ]
+        ]
+      ],
+      "truth": "UNRESOLVED"
+    },
+    {
+      "id": "must_missing",
+      "outcome": "UNKNOWN",
+      "tree": [
+        "must",
+        [
+          "pred",
+          "r",
+          [
+            "a",
+            "a"
+          ]
+        ]
+      ],
+      "truth": "UNRESOLVED"
+    },
+    {
+      "append_tuples": [
+        {
+          "arguments": [
+            "a"
+          ],
+          "predicate": "q",
+          "truth": "KNOWN_FALSE"
+        }
+      ],
+      "id": "conflict",
+      "outcome": "UNKNOWN",
+      "tree": [
+        "must",
+        [
+          "pred",
+          "q",
+          [
+            "a"
+          ]
+        ]
+      ],
+      "truth": "UNRESOLVED"
+    },
+    {
+      "append_tuples": [
+        {
+          "arguments": [
+            "a"
+          ],
+          "predicate": "q",
+          "truth": "UNRESOLVED"
+        }
+      ],
+      "id": "explicit_unresolved_with_true",
+      "outcome": "UNKNOWN",
+      "tree": [
+        "must",
+        [
+          "pred",
+          "q",
+          [
+            "a"
+          ]
+        ]
+      ],
+      "truth": "UNRESOLVED"
+    },
+    {
+      "id": "vacuous_event",
+      "outcome": "SATISFIED",
+      "replace_tuple_truth": {
+        "arguments": [],
+        "predicate": "e",
+        "truth": "KNOWN_FALSE"
+      },
+      "tree": [
+        "must",
+        [
+          "if",
+          [
+            "pred",
+            "e",
+            []
+          ],
+          [
+            "pred",
+            "q",
+            [
+              "b"
+            ]
+          ]
+        ]
+      ],
+      "truth": "UNRESOLVED"
+    },
+    {
+      "id": "known_exception",
+      "outcome": "SATISFIED",
+      "replace_tuple_truth": {
+        "arguments": [],
+        "predicate": "x",
+        "truth": "KNOWN_TRUE"
+      },
+      "tree": [
+        "must",
+        [
+          "if",
+          [
+            "and",
+            [
+              "pred",
+              "e",
+              []
+            ],
+            [
+              "not",
+              [
+                "pred",
+                "x",
+                []
+              ]
+            ]
+          ],
+          [
+            "pred",
+            "q",
+            [
+              "b"
+            ]
+          ]
+        ]
+      ],
+      "truth": "UNRESOLVED"
+    },
+    {
+      "id": "unknown_guard_false_action",
+      "outcome": "UNKNOWN",
+      "replace_tuple_truth": {
+        "arguments": [],
+        "predicate": "e",
+        "truth": "UNRESOLVED"
+      },
+      "tree": [
+        "must",
+        [
+          "if",
+          [
+            "pred",
+            "e",
+            []
+          ],
+          [
+            "pred",
+            "q",
+            [
+              "b"
+            ]
+          ]
+        ]
+      ],
+      "truth": "UNRESOLVED"
+    },
+    {
+      "id": "unknown_guard_true_action",
+      "outcome": "SATISFIED",
+      "replace_tuple_truth": {
+        "arguments": [],
+        "predicate": "e",
+        "truth": "UNRESOLVED"
+      },
+      "tree": [
+        "must",
+        [
+          "if",
+          [
+            "pred",
+            "e",
+            []
+          ],
+          [
+            "pred",
+            "q",
+            [
+              "a"
+            ]
+          ]
+        ]
+      ],
+      "truth": "UNRESOLVED"
+    },
+    {
+      "id": "no_model",
+      "model": null,
+      "outcome": null,
+      "status": "NOT_EVALUATED",
+      "tree": [
+        "must",
+        [
+          "pred",
+          "q",
+          [
+            "a"
+          ]
+        ]
+      ]
+    }
+  ],
+  "invariants": {
+    "execution_authority": "NONE",
+    "fact_outcome": "UNKNOWN",
+    "malformed_present_model": "REFUSED",
+    "missing_model": "NOT_EVALUATED",
+    "norm_truth": "UNRESOLVED",
+    "outside_surface_fragment": "NOT_IN_FRAGMENT",
+    "permission": "NONE"
+  },
+  "limits": {
+    "aggregate_term_predicate_domain_symbols": 64,
+    "ground_predicate_arity": [
+      0,
+      1,
+      2
+    ],
+    "nodes": 256,
+    "tuple_rows": 256
+  },
+  "model_refusals": [
+    "duplicate object key",
+    "unknown field",
+    "unknown truth label",
+    "undeclared tuple predicate",
+    "undeclared tuple argument",
+    "wrong tuple arity",
+    "duplicate global symbol ID across roles",
+    "duplicate domain member",
+    "unknown domain member",
+    "floating-point JSON number",
+    "NaN",
+    "Infinity",
+    "Boolean as count/index/arity",
+    "node count above 256",
+    "aggregate symbol count above 64",
+    "tuple row count above 256",
+    "cycle",
+    "forward reference",
+    "unreachable node",
+    "trailing bytes",
+    "malformed UTF-8",
+    "source span splits UTF-8",
+    "source anchor digest mismatch"
+  ],
+  "notation": {
+    "all": [
+      "all",
+      "unary_predicate_id",
+      "domain_id"
+    ],
+    "and": [
+      "and",
+      "left_fact",
+      "right_fact"
+    ],
+    "if": [
+      "if",
+      "antecedent_fact",
+      "consequent_fact"
+    ],
+    "must": [
+      "must",
+      "fact"
+    ],
+    "not": [
+      "not",
+      "fact"
+    ],
+    "pred": [
+      "pred",
+      "predicate_id",
+      "ordered_term_ids"
+    ],
+    "some": [
+      "some",
+      "unary_predicate_id",
+      "domain_id"
+    ]
+  },
+  "quantifier_folds": [
+    {
+      "all": "KNOWN_TRUE",
+      "instance_truths": [],
+      "some": "KNOWN_FALSE"
+    },
+    {
+      "all": "UNRESOLVED",
+      "instance_truths": [
+        "UNRESOLVED"
+      ],
+      "some": "UNRESOLVED"
+    },
+    {
+      "all": "KNOWN_FALSE",
+      "instance_truths": [
+        "KNOWN_FALSE"
+      ],
+      "some": "KNOWN_FALSE"
+    },
+    {
+      "all": "KNOWN_TRUE",
+      "instance_truths": [
+        "KNOWN_TRUE"
+      ],
+      "some": "KNOWN_TRUE"
+    },
+    {
+      "all": "UNRESOLVED",
+      "instance_truths": [
+        "KNOWN_TRUE",
+        "UNRESOLVED"
+      ],
+      "some": "KNOWN_TRUE"
+    },
+    {
+      "all": "KNOWN_FALSE",
+      "instance_truths": [
+        "KNOWN_FALSE",
+        "UNRESOLVED"
+      ],
+      "some": "UNRESOLVED"
+    },
+    {
+      "all": "KNOWN_FALSE",
+      "instance_truths": [
+        "KNOWN_TRUE",
+        "KNOWN_FALSE"
+      ],
+      "some": "KNOWN_TRUE"
+    },
+    {
+      "all": "KNOWN_TRUE",
+      "instance_truths": [
+        "KNOWN_TRUE",
+        "KNOWN_TRUE"
+      ],
+      "some": "KNOWN_TRUE"
+    },
+    {
+      "all": "KNOWN_FALSE",
+      "instance_truths": [
+        "KNOWN_FALSE",
+        "KNOWN_FALSE"
+      ],
+      "some": "KNOWN_FALSE"
+    },
+    {
+      "all": "UNRESOLVED",
+      "instance_truths": [
+        "UNRESOLVED",
+        "UNRESOLVED"
+      ],
+      "some": "UNRESOLVED"
+    }
+  ],
+  "role": "INDEPENDENT_DESIGN_REVIEW_ORACLE_NOT_IMPLEMENTATION_OR_PROOF",
+  "schema": "semantic-core-independent-oracle/1",
+  "scope": "CLOSED_UNARY_FINITE_QUANTIFIER_FRAGMENT_NOT_GENERAL_FIRST_ORDER_LOGIC",
+  "status": "AUTHORED_EXPECTATIONS_UNRUN",
+  "surface_cases": [
+    {
+      "canonical_shape": [
+        "must",
+        [
+          "if",
+          "event_fact",
+          "action_pred(actor_term)"
+        ]
+      ],
+      "source": "R1: When E, A shall Q.",
+      "status": "IN_FRAGMENT"
+    },
+    {
+      "canonical_shape": [
+        "must",
+        [
+          "if",
+          [
+            "and",
+            "event_fact",
+            [
+              "not",
+              "exception_fact"
+            ]
+          ],
+          "action_pred(actor_term)"
+        ]
+      ],
+      "source": "R1: When E, A shall Q, unless X.",
+      "status": "IN_FRAGMENT"
+    },
+    {
+      "source": "R1: A shall Q.",
+      "status": "NOT_IN_FRAGMENT"
+    },
+    {
+      "source": "R1: When E, A should Q.",
+      "status": "NOT_IN_FRAGMENT"
+    },
+    {
+      "source": "R1: When E, A may Q.",
+      "status": "NOT_IN_FRAGMENT"
+    },
+    {
+      "source": "R1: When E, A shall not Q.",
+      "status": "NOT_IN_FRAGMENT"
+    },
+    {
+      "source": "R1: When E, A shall Q within 5 s.",
+      "status": "NOT_IN_FRAGMENT"
+    },
+    {
+      "requires": "Closed role vocabulary or explicit rejection grammar; arbitrary free-text labels cannot substantiate this classification.",
+      "source": "R1: When E because C, A shall Q.",
+      "status": "NOT_IN_FRAGMENT"
+    },
+    {
+      "requires": "Same role-vocabulary decision.",
+      "source": "R1: When A believes E, A shall Q.",
+      "status": "NOT_IN_FRAGMENT"
+    },
+    {
+      "source": "R1: When E, A shall Q. trailing",
+      "status": "NOT_IN_FRAGMENT"
+    },
+    {
+      "source": "R1: When E, A shall Q. R2: When E, A shall Q.",
+      "status": "NOT_IN_FRAGMENT"
+    },
+    {
+      "source": "R1: When E, A shall Q, unless X, unless Y.",
+      "status": "NOT_IN_FRAGMENT"
+    },
+    {
+      "source": "R1: When , A shall Q.",
+      "status": "NOT_IN_FRAGMENT"
+    },
+    {
+      "source": "R1: When E,  shall Q.",
+      "status": "NOT_IN_FRAGMENT"
+    },
+    {
+      "source": "R1: When E, A shall .",
+      "status": "NOT_IN_FRAGMENT"
+    }
+  ],
+  "type_refusals": [
+    [
+      "not",
+      [
+        "must",
+        [
+          "pred",
+          "q",
+          [
+            "a"
+          ]
+        ]
+      ]
+    ],
+    [
+      "must",
+      [
+        "must",
+        [
+          "pred",
+          "q",
+          [
+            "a"
+          ]
+        ]
+      ]
+    ],
+    [
+      "and",
+      [
+        "must",
+        [
+          "pred",
+          "q",
+          [
+            "a"
+          ]
+        ]
+      ],
+      [
+        "must",
+        [
+          "pred",
+          "q",
+          [
+            "b"
+          ]
+        ]
+      ]
+    ],
+    [
+      "and",
+      [
+        "must",
+        [
+          "pred",
+          "q",
+          [
+            "a"
+          ]
+        ]
+      ],
+      [
+        "pred",
+        "q",
+        [
+          "b"
+        ]
+      ]
+    ],
+    [
+      "if",
+      [
+        "pred",
+        "e",
+        []
+      ],
+      [
+        "must",
+        [
+          "pred",
+          "q",
+          [
+            "a"
+          ]
+        ]
+      ]
+    ],
+    [
+      "all",
+      "r",
+      "d"
+    ],
+    [
+      "some",
+      "e",
+      "d"
+    ],
+    [
+      "all",
+      "q",
+      [
+        "pred",
+        "q",
+        [
+          "a"
+        ]
+      ]
+    ],
+    [
+      "all",
+      "var",
+      "d",
+      [
+        "pred",
+        "q",
+        [
+          "var"
+        ]
+      ]
+    ],
+    [
+      "pred",
+      "q",
+      []
+    ],
+    [
+      "pred",
+      "e",
+      [
+        "a"
+      ]
+    ],
+    [
+      "pred",
+      "r",
+      [
+        "a",
+        "b",
+        "a"
+      ]
+    ],
+    [
+      "pred",
+      "q",
+      [
+        "undeclared"
+      ]
+    ],
+    [
+      "pred",
+      "d",
+      [
+        "a"
+      ]
+    ],
+    [
+      "all",
+      "q",
+      "a"
+    ],
+    [
+      "var",
+      "v"
+    ]
+  ],
+  "unary_truth_tables": {
+    "must": [
+      [
+        "UNRESOLVED",
+        "UNKNOWN"
+      ],
+      [
+        "KNOWN_FALSE",
+        "VIOLATED"
+      ],
+      [
+        "KNOWN_TRUE",
+        "SATISFIED"
+      ]
+    ],
+    "not": [
+      [
+        "UNRESOLVED",
+        "UNRESOLVED"
+      ],
+      [
+        "KNOWN_FALSE",
+        "KNOWN_TRUE"
+      ],
+      [
+        "KNOWN_TRUE",
+        "KNOWN_FALSE"
+      ]
+    ]
+  }
+}

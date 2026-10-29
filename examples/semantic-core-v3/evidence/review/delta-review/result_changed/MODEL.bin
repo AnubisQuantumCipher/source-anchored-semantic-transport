@@ -1,0 +1,1 @@
+{"schema":"transport/finite-model/1","symbols":[{"arity":0,"binding":{"kind":"name","name":"p"},"id":"p","kind":"predicate"}],"tuples":[]}

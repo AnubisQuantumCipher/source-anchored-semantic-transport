@@ -1,0 +1,18 @@
+{
+  "schema": "transport/native-legacy-prefix/1",
+  "items": [
+    {
+      "path": "evaluation/src/transport_eval.ads",
+      "legacy_sha256": "a70421ced9f139915045a309fa2f18e2f7510a9f4126ca8672606cd7dc5be3e2",
+      "current_sha256": "d558b864f27bf670c47e82a7b75b312dc733a65de0cb8c4ea738ec918d954929",
+      "all_legacy_declarations_and_bodies_byte_preserved": true
+    },
+    {
+      "path": "evaluation/src/transport_eval.adb",
+      "legacy_sha256": "1b34c157b07c1cc4be459b91be8ae6bbb88937f70be49f445fdb3e70bb2f953d",
+      "current_sha256": "0be2b7bac4306afceb0de589d0f80ce680954b8b35ba7911b487045f1539b434",
+      "all_legacy_declarations_and_bodies_byte_preserved": true
+    }
+  ],
+  "scope": "Preserved bytes preceding original package end; additive declarations and implementations follow. This is not full regression testing."
+}

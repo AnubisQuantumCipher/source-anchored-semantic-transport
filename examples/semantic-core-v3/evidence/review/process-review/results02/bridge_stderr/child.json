@@ -1,0 +1,1 @@
+{"argv":["/usr/bin/python3","-I","-S","-B","-c","import os;os.write(2,b'err-prefix')"],"elapsed_ns":8903342,"exit_code":0,"status":"SUCCESS","streams":{"stderr":{"bytes":10,"sha256":"46dc64f0d5a20b08855dff81d85770b02b887c6c82ee03ece2d527d2d218d964"},"stdout":{"bytes":0,"sha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}}}

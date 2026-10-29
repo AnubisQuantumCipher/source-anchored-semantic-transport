@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-I",
+    "-S",
+    "-B",
+    "-Werror",
+    "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py",
+    "--check"
+  ],
+  "exit_code": 1,
+  "scope": "Expected refusal on newer additive source; frozen historical acceptance checked separately.",
+  "stderr_sha256": "81bc0a50d29b8727983f8166e4a5f59efdfa4492949dcb594dca4492d4db51a2",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

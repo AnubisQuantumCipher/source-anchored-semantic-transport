@@ -1,0 +1,8 @@
+Compile
+   [Ada]          core_checks.adb
+   [Ada]          core_checks_support.adb
+Bind
+   [gprbind]      core_checks.bexch
+   [Ada]          core_checks.ali
+Link
+   [link]         core_checks.adb

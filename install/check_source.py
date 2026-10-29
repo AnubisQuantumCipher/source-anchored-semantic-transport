@@ -28,7 +28,10 @@ def main() -> None:
             raise ValueError('unsupported static-analysis input')
         tree = ast.parse(path.read_bytes())
         for node in ast.walk(tree):
-            if (path.parent.name == 'install' or path in (CONTINUATION, QUORUM_GRAPH) or path in QUORUM_INPUT or path.parent == HELDOUT) and isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+            bounded = (path.parent.name == 'install' or path in (CONTINUATION, QUORUM_GRAPH)
+                       or path in QUORUM_INPUT or path.parent == HELDOUT
+                       or path.name.startswith('transport_core'))
+            if bounded and isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
                 functions += 1
                 if node.end_lineno - node.lineno + 1 > 60:
                     raise ValueError(str(path.relative_to(ROOT)) + ':' + node.name + ': exceeds 60 lines')

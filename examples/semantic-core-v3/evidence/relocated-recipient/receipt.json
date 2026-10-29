@@ -1,0 +1,46 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-I",
+    "-S",
+    "-B",
+    "-Werror",
+    "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_core_cli.py",
+    "evaluate",
+    "--share",
+    "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/share.txt",
+    "--archive",
+    "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/meaning.zip",
+    "--decoder",
+    "/home/sicarii/Projects/source-anchored-semantic-transport/evidence/acceptance-v1-preflight-20261029/engineering-admission-01/semantic-core-courier-v3/bin/semantic-transport",
+    "--decoder-sha256",
+    "7e028b1f02935d5673b5b19ca2d403d2134b9dc87bcbce226256be5dab1b476b",
+    "--native",
+    "/home/sicarii/Projects/source-anchored-semantic-transport/evidence/acceptance-v1-preflight-20261029/engineering-admission-01/semantic-core-native-v3/bin/transport_core_native",
+    "--native-sha256",
+    "aa04e9aca4afa2663202eac7085329ac5e1f331057b418d3339c2ed17309c23b",
+    "--work",
+    "/dev/shm/semantic-transport-core-20261029/evidence/relocated-recipient/work"
+  ],
+  "elapsed_ns": 1042510900,
+  "exit_code": 0,
+  "held_inputs": {
+    "/home/sicarii/Projects/source-anchored-semantic-transport/evidence/acceptance-v1-preflight-20261029/engineering-admission-01/semantic-core-courier-v3/bin/semantic-transport": "7e028b1f02935d5673b5b19ca2d403d2134b9dc87bcbce226256be5dab1b476b",
+    "/home/sicarii/Projects/source-anchored-semantic-transport/evidence/acceptance-v1-preflight-20261029/engineering-admission-01/semantic-core-native-v3/bin/transport_core_native": "aa04e9aca4afa2663202eac7085329ac5e1f331057b418d3339c2ed17309c23b",
+    "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/meaning.zip": "92d387c25b1738f5b289060fc7ffcf823429a9c169364ba5d8094de6861cf463",
+    "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/share.txt": "5c31e1a94db9261a6c1748e6f2a3ff25f1a3823d2fd3e4221ae2845b476febe7"
+  },
+  "native_result": {
+    "node": 6,
+    "outcome": "VIOLATED",
+    "sort": "NORM",
+    "truth": "UNRESOLVED"
+  },
+  "package_identity": "STS1:fc757c0f5a8da57154e47e4e6277e4429dfbd01e089e844f2b6a9a36ebc0c755",
+  "result_exact_comparison": "PASS",
+  "schema": "transport/relocated-core-recipient/1",
+  "scope": "Fresh CLI process with relocated exact dependency artifacts; no AI model invocation.",
+  "source_model_core_byte_comparison": "PASS",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "57a176d3a9ddc583f4e70fb9b9661b77ffda3e25f583892a8747531ca579f97c"
+}

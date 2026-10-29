@@ -1,0 +1,8 @@
+{
+  "schema": "transport/prior-proof-source-preservation/1",
+  "method": "Exact prior bytes reconstructed by reversing only latest modular typing patch; SHA256 compared with pre-repair manifest",
+  "pins": {
+    "transport_eval.ads": "d558b864f27bf670c47e82a7b75b312dc733a65de0cb8c4ea738ec918d954929",
+    "transport_eval.adb": "0be2b7bac4306afceb0de589d0f80ce680954b8b35ba7911b487045f1539b434"
+  }
+}
