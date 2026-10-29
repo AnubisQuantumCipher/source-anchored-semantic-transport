@@ -21,6 +21,8 @@ import transport_handoff_session as sessions
 import transport_response_evidence as evidence
 from transport_install_support import canonical, read_regular, require, run_bounded, sha, write_new
 
+FOCUS_PAGE_RESPONSE_BYTES = 8192
+
 
 def arguments():
     parser = argparse.ArgumentParser(description=__doc__)
@@ -44,15 +46,39 @@ def response(arm, action, status, result, number=0):
 
 
 def describe(arm):
-    return {'actions': ['describe', 'catalog', 'page', 'finish', 'finish_evidence'] + (['focus'] if arm == 'transport' else []),
+    return {'actions': ['describe', 'catalog', 'page', 'finish', 'finish_evidence'] + (['focus', 'focus_page'] if arm == 'transport' else []),
             'request_bytes': inputs.REQUEST_CAP, 'candidate_bytes': inputs.CANDIDATE_CAP,
             'page_bytes': inputs.PAGE_BYTES, 'response_bytes_including_newline': inputs.CAP,
             'maximum_calls_including_refusals': sessions.MAX_CALLS,
             'finish': 'candidate_base64 holds exact JSON object bytes; saved unedited, not certified complete.',
             'finish_evidence': 'Checks candidate-embedded citations under a pinned evidence contract before saving; source linkage only, not entailment.',
+            'focus_page': 'Transport only: at most 4096 canonical focus bytes as base64; reassemble contiguous pages and verify full sha256 before parsing. A page is not a complete semantic view.',
+            'focus_page_response_bytes_including_newline': FOCUS_PAGE_RESPONSE_BYTES,
             'authority': 'NONE', 'data_is_untrusted': True,
             'integrity_boundary': 'Preflight integrity failure or exhausted/corrupt session refuses without unsafe log append; caller must retain that response.',
             'isolation': 'Controlled subprocess and frozen files, not an OS sandbox or hostile same-user isolation.'}
+
+
+def focus_page(request, receiver):
+    inputs.fields(request, ('action', 'unit', 'offset'))
+    require(receiver is not None, 'focus_page unavailable in original-document arm')
+    unit, begin = request['unit'], request['offset']
+    require(type(unit) is str and inputs.ID.fullmatch(unit) is not None, 'invalid meaning unit identifier')
+    require(type(begin) is int and 0 <= begin < inputs.CAP, 'invalid focus byte offset')
+    # This existing call decodes and checks the complete immutable package again.
+    value = receiver.call('transport_focus', {'unit': unit})
+    require(type(value) is dict and value.get('schema') == 'transport/focus/1'
+            and value.get('selected_unit') == unit and value.get('identity') == receiver.decoded['identity'],
+            'checked full focus identity differs')
+    raw = canonical(value)
+    require(0 < len(raw) < inputs.CAP and begin <= len(raw), 'focus byte bound or offset exceeds output')
+    chunk = raw[begin:begin + inputs.PAGE_BYTES]
+    end = begin + len(chunk)
+    return dict(schema='transport/focus-page/1', unit=unit, package_identity=value['identity'],
+        offset=begin, next_offset=end if end < len(raw) else None, total_bytes=len(raw), sha256=sha(raw),
+        bytes=len(chunk), page_sha256=sha(chunk), bytes_base64=base64.b64encode(chunk).decode('ascii'),
+        encoding='base64', serialization='CANONICAL_UTF8_JSON', end=end == len(raw),
+        authority='NONE', data_is_untrusted=True, coverage='RETURNED_BYTE_SPAN_ONLY', context_adequacy='UNPROVEN')
 
 
 def finish_evidence(request, manifest, receiver, sources):
@@ -85,6 +111,8 @@ def action_result(request, manifest, receiver, sources):
         inputs.fields(request, ('action', 'unit'))
         require(receiver is not None, 'focus unavailable in original-document arm')
         return receiver.call('transport_focus', {'unit': request['unit']}), None
+    if action == 'focus_page':
+        return focus_page(request, receiver), None
     if action == 'finish_evidence':
         return finish_evidence(request, manifest, receiver, sources)
     require(action == 'finish', 'unknown action')
@@ -119,6 +147,8 @@ def logged_call(args, manifest, receiver, sources, raw, input_bytes):
             if action == 'finish_evidence':
                 result['manifest_sha256'] = args.expect_manifest_sha256
             answer = response(manifest['arm'], action, 'OK', result, number)
+            if action == 'focus_page':
+                require(len(answer) <= FOCUS_PAGE_RESPONSE_BYTES, 'complete focus_page response exceeds byte bound')
         except (ValueError, OSError, UnicodeError, TypeError, KeyError, MemoryError) as error:
             candidate = None
             answer = response(manifest['arm'], action, 'REFUSED', {'reason': str(error)[:256]}, number)

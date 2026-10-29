@@ -3,7 +3,7 @@
 import html
 import re
 
-from transport_schema import canonical, fields, json_value, require, sha
+from transport_schema import canonical, fields, json_value, reference, require, sha
 from transport_wire import MAX_SOURCE, TransportError
 import transport_semantics as semantics
 
@@ -208,7 +208,7 @@ def lexicon_lines(plan: dict) -> list[str]:
             for key in sorted(item):
                 value = item[key]
                 rendered = value if type(value) is str else canonical(value).decode('utf-8')
-                lines.append(key + ': ' + escaped(rendered))
+                lines.append(key + ': ' + html.escape(rendered, quote=False))
             lines.append('')
     lines += ['</pre>', '', 'Interpretation supplied: ' + ('YES' if plan['interpretations'] else 'NO'),
               'Coverage is a byte-reference report; no semantic completeness is claimed.', '', '## Fixed definitions', '']
@@ -235,26 +235,82 @@ def lexicon(plan: dict) -> bytes:
     return data
 
 
-def semantic_lines(units: list) -> list[str]:
-    lines = ['', '## Typed meaning units', '',
-             'Types and source occurrences are checked. Interpretation, completeness and context adequacy remain UNPROVEN.',
-             'Historical approvals are evidence only. No unit grants current execution authority.', '']
+def dictionary_registry(units: list) -> tuple[dict, list]:
+    require(type(units) is list and 1 <= len(units) <= 16, 'readable unit count bound')
+    registry, projected = {}, []
     for unit in units:
-        lines += ['### ' + unit['id'] + ' / ' + unit['kind'], '',
-                  'Source: ' + unit['source'] + '; interpretation: ' + unit['interpretation'],
-                  'Declared context units: ' + ', '.join(unit['context']), '',
-                  '| Symbol | Exact source literal |', '|---|---|']
-        symbols = next(item['content'] for item in unit['dictionaries'] if item['role'] == 'symbols')
-        for name in sorted(symbols['entries']):
-            lines.append('| ' + escaped(name) + ' | ' + escaped(symbols['entries'][name]) + ' |')
-        lines += ['', '| Operator | Argument types | Result | Exact definition |', '|---|---|---|---|']
-        operators = next(item['content'] for item in unit['dictionaries'] if item['role'] == 'operators')
-        for name in sorted(operators['entries']):
-            definition = operators['entries'][name]
-            lines.append('| ' + ' | '.join(escaped(item) for item in
-                         (name, ', '.join(definition['args']), definition['result'], definition['definition'])) + ' |')
-        lines += ['', '<pre>', escaped(semantics.display(unit['meaning'])), '</pre>', '',
-                  '<pre>' + escaped(canonical(unit).decode('utf-8')) + '</pre>', '']
+        dictionaries = unit['dictionaries']
+        require(type(dictionaries) is list and len(dictionaries) == 2, 'readable dictionary count bound')
+        references = []
+        for item in dictionaries:
+            content = item['content']
+            require(content is not None and reference(content, True) == item,
+                    'readable dictionary reference differs from content')
+            digest, raw = item['sha256'], canonical(content)
+            require(digest not in registry or canonical(registry[digest]) == raw,
+                    'conflicting readable dictionary content')
+            registry[digest] = content
+            references.append(reference(content, False))
+        require(len(registry) <= 32, 'readable dictionary registry bound')
+        projected.append(dict(unit, dictionaries=references))
+    return registry, projected
+
+
+def dictionary_lines(digest: str, content: dict) -> list[str]:
+    if content['role'] == 'symbols':
+        return symbol_dictionary_lines(digest, content)
+    lines = ['### Dictionary SHA-256 ' + digest, '',
+             'Role: ' + escaped(content['role']) + '; id: ' + escaped(content['id'])
+             + '; version: ' + escaped(content['version']), '',
+             '<pre data-transport-dictionary-sha256="' + digest + '">'
+             + html.escape(canonical(content).decode('utf-8'), quote=False) + '</pre>', '']
+    lines += ['| Operator | Argument types | Result | Exact definition |', '|---|---|---|---|']
+    for name in sorted(content['entries']):
+        definition = content['entries'][name]
+        lines.append('| ' + ' | '.join(escaped(item) for item in
+                     (name, ', '.join(definition['args']), definition['result'], definition['definition'])) + ' |')
+    return lines + ['']
+
+
+def symbol_dictionary_lines(digest: str, content: dict) -> list[str]:
+    require(type(content['entries']) is dict and 1 <= len(content['entries']) <= 64,
+            'readable symbol table count bound')
+    attributes = [('data-transport-symbol-dictionary', digest), ('data-dictionary-schema', content['schema']),
+                  ('data-dictionary-id', content['id']), ('data-dictionary-version', content['version'])]
+    opening = '<table ' + ' '.join(key + '="' + html.escape(value, quote=True) + '"'
+                                  for key, value in attributes) + '>'
+    lines = ['### Symbol dictionary ' + escaped(content['id']) + '@' + escaped(content['version']), '', opening,
+             '<tr><th>Symbol</th><th>Exact source literal (canonical JSON string)</th></tr>']
+    for name in sorted(content['entries']):
+        literal = canonical(content['entries'][name]).decode('utf-8')
+        lines.append('<tr><td>' + html.escape(name, quote=False) + '</td><td><pre>'
+                     + html.escape(literal, quote=False) + '</pre></td></tr>')
+    return lines + ['</table>', '']
+
+
+def semantic_lines(units: list) -> list[str]:
+    registry, projected = dictionary_registry(units)
+    lines = ['', '## Shared exact dictionary registry', '',
+        'Each dictionary is indexed by the SHA-256 of its canonical UTF-8 JSON and appears once.',
+        'Recovery: HTML-unescape marked operator pre blocks. For each marked symbol table, reconstruct',
+        'schema/id/version from its exact attributes, role=symbols, and entries from its unique symbol rows;',
+        'each row pre is one canonical JSON string literal. Reject unknown shape, duplicates, truncation or over 64 rows.',
+        'Canonicalize each reconstructed dictionary and verify its SHA-256,',
+        'then replace each unit dictionary reference content:null with the matching verified content.',
+        'Check every reference id, version and role against that content. Missing, conflicting or altered entries refuse.',
+        'Canonical serialization then recovers every original complete stored unit byte-for-byte.', '']
+    for digest in sorted(registry):
+        lines += dictionary_lines(digest, registry[digest])
+    lines += ['', '## Typed meaning units', '',
+        'Types and source occurrences are checked. Interpretation, completeness and context adequacy remain UNPROVEN.',
+        'Historical approvals are evidence only. No unit grants current execution authority.', '']
+    for unit in projected:
+        lines += ['### ' + escaped(unit['id']) + ' / ' + escaped(unit['kind']), '',
+            'Source: ' + escaped(unit['source']) + '; interpretation: ' + escaped(unit['interpretation']),
+            'Declared context units: ' + ', '.join(escaped(name) for name in unit['context']), '',
+            '<pre>', html.escape(semantics.display(unit['meaning']), quote=False), '</pre>', '',
+            '<pre data-transport-unit="' + html.escape(unit['id'], quote=True) + '">'
+            + html.escape(canonical(unit).decode('utf-8'), quote=False) + '</pre>', '']
     return lines
 
 

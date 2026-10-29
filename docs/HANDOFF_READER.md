@@ -15,6 +15,8 @@ directory whose parent exists:
 ```sh
 python3 -I -S -B -Werror install/test_handoff_reader.py \
   --bundle /absolute/installed/bundle --evidence /absolute/newdirectory
+
+python3 -I -S -B -Werror install/test_focus_page.py -v
 ```
 
 This runs synthetic deterministic reader controls and retains subprocess output,
@@ -49,13 +51,15 @@ JSON and unsupported actions refuse. The available request shapes are:
 {"action":"describe"}
 {"action":"catalog"}
 {"action":"page","source":"SOURCE","offset":0}
+{"action":"focus_page","unit":"U_SOURCE","offset":0}
 {"action":"focus","unit":"U_SOURCE"}
 {"action":"finish","candidate_base64":"eyJkcmFmdCI6InVuYXNzZXNzZWQifQ=="}
 {"action":"finish_evidence","candidate_base64":"BASE64_CANDIDATE","evidence_contract_base64":"BASE64_EVIDENCE_CONTRACT","expect_evidence_contract_sha256":"HELD_EVIDENCE_CONTRACT_SHA256"}
 ```
 
 `SOURCE` and `U_SOURCE` are illustrative identifiers, not guaranteed targets.
-`focus` is available only in the transport arm. There is no `inspect` action.
+`focus` and `focus_page` are available only in the transport arm; the original
+arm refuses them. There is no `inspect` action.
 Catalog returns source IDs, labels, media types, provenance, lengths and digests
 in frozen order, without source contents or semantic annotations. Both arms use
 the same catalog projection. Keep its metadata nonsemantic when preparing a
@@ -68,6 +72,38 @@ same bytes loaded and hash-checked for that call, without rereading the source.
 Transport pages retain the installed receiver's declared review annotations.
 Transport focus returns checked declared structures and source excerpts; it
 does not establish that supplied links are semantically adequate.
+
+For bounded display, prefer `focus_page`. Its exact request shape has only
+`action`, `unit` and `offset`. The unit must be an existing uppercase identifier;
+the byte offset must be an exact integer, excluding Booleans, between zero and
+the complete canonical focus length inclusive. Unknown fields, invalid units
+and out-of-range offsets refuse. Legacy `focus` continues to return its full
+checked view, which can exceed a surrounding tool's display limit.
+
+The page result uses `transport/focus-page/1`. `unit`, `package_identity`,
+`total_bytes` and `sha256` identify the complete canonical UTF-8 focus JSON,
+without a final newline. `offset`, `bytes`, `page_sha256` and `bytes_base64`
+identify the returned byte span; `encoding` is `base64` and `serialization` is
+`CANONICAL_UTF8_JSON`. A page has at most 4096 decoded bytes. `next_offset` is the
+following byte offset, or `null` at the end; `end` agrees with that boundary.
+Requesting exactly `total_bytes` returns an empty end page. Authority remains
+`NONE`, coverage is `RETURNED_BYTE_SPAN_ONLY`, and context adequacy is `UNPROVEN`.
+
+Start at offset zero. Require invariant complete-result identifiers and
+contiguous offsets, base64-decode each chunk, check its length and `page_sha256`,
+and concatenate the bytes. Verify the final length and full `sha256` before
+decoding UTF-8 or parsing JSON: a byte page can split a Unicode character or a
+JSON token. Partial pages are not complete semantic views. Each page call
+rechecks the complete package through the existing decoder; no URL is fetched
+and no document code executes.
+
+The complete `focus_page` response, including its final newline, is limited to
+8192 bytes. Set the surrounding tool's output allowance to retain at least that
+much and verify that it reports no truncation. Use a trusted bounded decoder for
+base64/reassembly rather than assuming a model recovers encoded text faithfully.
+All pages consume the existing 32-call session budget, including `describe`,
+refusals and `finish`; reserve a call for submission. Some complete focus views
+cannot fit the calls remaining, and must not be described as completely read.
 
 The example finish payload decodes to `{"draft":"unassessed"}`. Replace it with
 base64 of the actual candidate's exact JSON-object bytes. A successful finish
