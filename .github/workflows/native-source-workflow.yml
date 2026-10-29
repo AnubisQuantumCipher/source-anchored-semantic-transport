@@ -14,6 +14,12 @@ jobs:
           architecture: 'x64'
           check-latest: false
           allow-prereleases: false
+      - name: Install required native search tool on ephemeral runner
+        timeout-minutes: 2
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends ripgrep
+          /usr/bin/rg --version
       - name: Portable original-source controls in both interpreter modes
         env:
           NATIVE_WORKFLOW_HELD_SHA256: 4679aae738dd3efb9c4840e677ec6e55e8a423dd7c8522a0addf6612a6bbfbc1
@@ -43,7 +49,10 @@ jobs:
           python3 -I -S -B -O -Werror comparison/workflow/test_evidence.py \
             --root "$native_evidence_tmp/optimized" --optimized \
             --expect-reader-sha256 "$NATIVE_WORKFLOW_READER_SHA256"
-          python3 -I -S -B -Werror comparison/workflow/prepare_receipt.py --check
+          python3 -I -S -B -Werror comparison/workflow/ci/test_delta.py
+          python3 -I -S -B -O -Werror comparison/workflow/ci/test_delta.py
+          python3 -I -S -B -Werror comparison/workflow/ci/prepare_receipt.py --check
+          python3 -I -S -B -O -Werror comparison/workflow/ci/prepare_receipt.py --check
           python3 -I -S -B -Werror comparison/retrieval/prepare_receipt.py --check
           python3 -I -S -B -Werror install/check_source.py
           python3 -I -S -B -Werror - <<'PY'
@@ -51,7 +60,8 @@ jobs:
           from pathlib import Path
           root = Path('comparison/workflow')
           for name in ('native_workspace.py', 'test_workflow.py', 'test_boundaries.py',
-                       'test_native_tools.py', 'test_evidence.py', 'prepare_receipt.py'):
+                       'test_native_tools.py', 'test_evidence.py', 'prepare_receipt.py',
+                       'ci/prepare_receipt.py', 'ci/test_delta.py'):
               with (root / name).open('rb') as source:
                   raw = source.read(131073)
               if len(raw) > 131072:
