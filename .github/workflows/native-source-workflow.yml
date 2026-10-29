@@ -42,7 +42,8 @@ jobs:
         env:
           NATIVE_WORKFLOW_READER_SHA256: fed2ceb65a2d55ba9f856b7bf92fc1c9157c64f44e5049e0dd0bd67d1e53d8dc
         run: |
-          native_evidence_tmp="$(mktemp -d)"
+          native_evidence_tmp=/dev/shm/semantic-transport-native-workflow-20261029
+          mkdir -m 700 "$native_evidence_tmp"
           python3 -I -S -B -Werror comparison/workflow/test_evidence.py \
             --root "$native_evidence_tmp/normal" \
             --expect-reader-sha256 "$NATIVE_WORKFLOW_READER_SHA256"
@@ -51,8 +52,8 @@ jobs:
             --expect-reader-sha256 "$NATIVE_WORKFLOW_READER_SHA256"
           python3 -I -S -B -Werror comparison/workflow/ci/test_delta.py
           python3 -I -S -B -O -Werror comparison/workflow/ci/test_delta.py
-          python3 -I -S -B -Werror comparison/workflow/ci/prepare_receipt.py --check
-          python3 -I -S -B -O -Werror comparison/workflow/ci/prepare_receipt.py --check
+          python3 -I -S -B -Werror comparison/workflow/ci2/prepare_receipt.py --check
+          python3 -I -S -B -O -Werror comparison/workflow/ci2/prepare_receipt.py --check
           python3 -I -S -B -Werror comparison/retrieval/prepare_receipt.py --check
           python3 -I -S -B -Werror install/check_source.py
           python3 -I -S -B -Werror - <<'PY'
@@ -61,7 +62,7 @@ jobs:
           root = Path('comparison/workflow')
           for name in ('native_workspace.py', 'test_workflow.py', 'test_boundaries.py',
                        'test_native_tools.py', 'test_evidence.py', 'prepare_receipt.py',
-                       'ci/prepare_receipt.py', 'ci/test_delta.py'):
+                       'ci/prepare_receipt.py', 'ci/test_delta.py', 'ci2/prepare_receipt.py'):
               with (root / name).open('rb') as source:
                   raw = source.read(131073)
               if len(raw) > 131072:
