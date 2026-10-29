@@ -256,18 +256,26 @@ def _result(body: dict, impact_result: dict, index: dict, seats: list, manifests
     return result
 
 
+def _validated_context(body_raw: object, originals: object, held_update_pins: object) -> tuple:
+    """Private owned records, released only after every inherited output bound."""
+    body, sources, claim_result, impact_result, schema = impact._validated_impact_details(
+        body_raw, originals, held_update_pins)
+    index, claim_keys = _identities(body)
+    _array_order(body)
+    seats = _seat_evidence(body, sources)
+    task = _task(body, claim_keys)
+    _claim_conflicts(body, claim_keys)
+    if task['task_text'] is not None:
+        _blob_reference(task['task_text'], index, 'TASK_TEXT', 'TASK_TEXT', 'TASK_TEXT')
+    manifests = _manifests(body, task, index, claim_keys)
+    result = _result(body, impact_result, index, seats, manifests)
+    return body, sources, claim_result, impact_result, result, index, claim_keys, schema
+
+
 def check_context_bindings(body_raw: object, originals: object, held_update_pins: object) -> dict:
     """Check exact context from bytes; metadata types and history grant no authority."""
     try:
-        body, sources, impact_result, _ = impact._validated_impact(body_raw, originals, held_update_pins)
-        index, claim_keys = _identities(body)
-        _array_order(body)
-        seats = _seat_evidence(body, sources)
-        task = _task(body, claim_keys)
-        _claim_conflicts(body, claim_keys)
-        if task['task_text'] is not None:
-            _blob_reference(task['task_text'], index, 'TASK_TEXT', 'TASK_TEXT', 'TASK_TEXT')
-        manifests = _manifests(body, task, index, claim_keys)
-        return _result(body, impact_result, index, seats, manifests)
+        _, _, _, _, result, _, _, _ = _validated_context(body_raw, originals, held_update_pins)
+        return result
     except metadata.InputError as error:
         return metadata._error(error)

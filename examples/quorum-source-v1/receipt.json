@@ -3,9 +3,9 @@
   "external_validation": "EXTERNAL_VALIDATION_PENDING",
   "files": [
     {
-      "bytes": 5798,
+      "bytes": 6104,
       "path": ".github/workflows/source.yml",
-      "sha256": "2fdfd41a519c3ad992c9ce9e2d740db7ba64d3a7de56bd6d413a8e639ba4aa5a"
+      "sha256": "d4c3d1bd1cfd59c2a4d939421ce668f5ada199c24b92f80984aad6c9ff2d6166"
     },
     {
       "bytes": 3704,
@@ -491,6 +491,11 @@
       "bytes": 407,
       "path": "examples/quorum-source-v1/evidence/pre-product-harness-freeze.json",
       "sha256": "29a39588fab6faa6daf59f2a9877d4fbd02fec6fec25981c29315db9a062c3d9"
+    },
+    {
+      "bytes": 40618,
+      "path": "examples/quorum-source-v1/evidence/pre-reading-integration-receipt.json",
+      "sha256": "95169078bbb24fd4e3fdbdd62ab16850e7019fce640ae2a9966d4da6aaf9b548"
     },
     {
       "bytes": 687,
@@ -983,9 +988,9 @@
       "sha256": "93b66d7147c6be188b88dfa0dc9846fe8394f7e21cc6a77137c82ad08c5e7062"
     },
     {
-      "bytes": 1750,
+      "bytes": 1798,
       "path": "install/check_source.py",
-      "sha256": "c30004ded45fcccad45b3d9cea7602dd7a23654d83d88eeeafd97d1b76ac0cc3"
+      "sha256": "1c8c712b6b4e43577d469db32d951c2c86bb6a08ef3abd3cbd0a4b4389542940"
     },
     {
       "bytes": 11371,

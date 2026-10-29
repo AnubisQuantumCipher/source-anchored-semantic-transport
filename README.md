@@ -79,6 +79,7 @@ The short formula is an entry point into the package. It cannot independently re
 - [QUORUM declared conditions and exceptions in development](examples/quorum-claim-v1/README.md)
 - [QUORUM change impact, dependency paths and retained history](examples/quorum-impact-v1/README.md)
 - [QUORUM exact task, registry and input-manifest bindings](examples/quorum-context-v1/README.md)
+- [QUORUM readings, challenges, withdrawals and stance counts](examples/quorum-reading-v1/README.md)
 - [Contribution rules](CONTRIBUTING.md)
 - [License scope](LICENSE-SCOPE.md)
 

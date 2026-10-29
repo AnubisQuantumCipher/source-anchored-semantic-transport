@@ -1,0 +1,1974 @@
+{
+  "benefit": "NOT_MEASURED; identical checker and annotation development parity only",
+  "external_validation": "EXTERNAL_VALIDATION_PENDING",
+  "files": [
+    {
+      "bytes": 5798,
+      "path": ".github/workflows/source.yml",
+      "sha256": "2fdfd41a519c3ad992c9ce9e2d740db7ba64d3a7de56bd6d413a8e639ba4aa5a"
+    },
+    {
+      "bytes": 8513,
+      "path": "examples/quorum-context-v1/C01_COMPLETE_BASE/body.json",
+      "sha256": "1a892f1662d18fe0c5c46a7956d4f9887cb8d91124280066b5a8f464d08c0a4b"
+    },
+    {
+      "bytes": 3907,
+      "path": "examples/quorum-context-v1/C01_COMPLETE_BASE/expected.json",
+      "sha256": "3e6e517f0d678a08f9299581b3007953c9d51d548764869a00b9208ee7a34d80"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C01_COMPLETE_BASE/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C01_COMPLETE_BASE/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 6285,
+      "path": "examples/quorum-context-v1/C02_NO_MANIFEST/body.json",
+      "sha256": "ecebd7670182be263e20aae6a3b71d5efd722a2a315155950144a4b71307c2f8"
+    },
+    {
+      "bytes": 3470,
+      "path": "examples/quorum-context-v1/C02_NO_MANIFEST/expected.json",
+      "sha256": "4952e28d9afcd14b493a27d325aa3d2bcd7a6e87f86d7b2abdc89f1d28d7c778"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C02_NO_MANIFEST/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C02_NO_MANIFEST/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8515,
+      "path": "examples/quorum-context-v1/C03_NONCLAIM_ID_COLLISION/body.json",
+      "sha256": "e1cea8525afd7b92fa6aa0ce480bbf77af2406558dd1336f584d9d32cf00a438"
+    },
+    {
+      "bytes": 78,
+      "path": "examples/quorum-context-v1/C03_NONCLAIM_ID_COLLISION/expected.json",
+      "sha256": "5fe4b4fdec974297221de105976dd1c550b0b4b6d48e8a564e9105a98bf0aeb6"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C03_NONCLAIM_ID_COLLISION/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C03_NONCLAIM_ID_COLLISION/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8514,
+      "path": "examples/quorum-context-v1/C04_RAW_CLAIM_LABEL_COLLISION/body.json",
+      "sha256": "1a59783085316ec3c6d2c2462240b85a972daac06c8607b657bb11f9e3a11390"
+    },
+    {
+      "bytes": 87,
+      "path": "examples/quorum-context-v1/C04_RAW_CLAIM_LABEL_COLLISION/expected.json",
+      "sha256": "e763c61e53d20e95d17ab0ff4694623e765e977dd093e3a0d95769b015eadd31"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C04_RAW_CLAIM_LABEL_COLLISION/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C04_RAW_CLAIM_LABEL_COLLISION/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8517,
+      "path": "examples/quorum-context-v1/C05_DERIVED_CLAIM_PIN_COLLISION/body.json",
+      "sha256": "3d3ee4f4a1e046f0cc15f38888a02f2fe073bf4df4277b115814df0d84cd6d95"
+    },
+    {
+      "bytes": 78,
+      "path": "examples/quorum-context-v1/C05_DERIVED_CLAIM_PIN_COLLISION/expected.json",
+      "sha256": "5fe4b4fdec974297221de105976dd1c550b0b4b6d48e8a564e9105a98bf0aeb6"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C05_DERIVED_CLAIM_PIN_COLLISION/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C05_DERIVED_CLAIM_PIN_COLLISION/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8638,
+      "path": "examples/quorum-context-v1/C06_DERIVED_ID_BOUND/body.json",
+      "sha256": "a2905676f88fd9812231b92de51ad098849114fb0da1c3ddc76973e308402477"
+    },
+    {
+      "bytes": 84,
+      "path": "examples/quorum-context-v1/C06_DERIVED_ID_BOUND/expected.json",
+      "sha256": "943efd29ed3c01bd80f3b9f56b7eb52ae27fac574bdd510fa2d7f1f4e5e068db"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C06_DERIVED_ID_BOUND/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C06_DERIVED_ID_BOUND/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 9326,
+      "path": "examples/quorum-context-v1/C07_COLON_COLLISION/body.json",
+      "sha256": "4da441e347423365820c288e2e8f16a8e8ffe41b0e4f37b2175fc132aea2952f"
+    },
+    {
+      "bytes": 78,
+      "path": "examples/quorum-context-v1/C07_COLON_COLLISION/expected.json",
+      "sha256": "5fe4b4fdec974297221de105976dd1c550b0b4b6d48e8a564e9105a98bf0aeb6"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C07_COLON_COLLISION/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C07_COLON_COLLISION/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 9486,
+      "path": "examples/quorum-context-v1/C08_DISTINCT_REVISIONS/body.json",
+      "sha256": "3a3de440b911c1bbae0adf6108b041727341ae97feefbb83c295fb40fa356552"
+    },
+    {
+      "bytes": 4168,
+      "path": "examples/quorum-context-v1/C08_DISTINCT_REVISIONS/expected.json",
+      "sha256": "27efe08d9ccfc6ffd78735a2299a8be1e716ad022c8c9a29d3e787e342d7bd28"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C08_DISTINCT_REVISIONS/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C08_DISTINCT_REVISIONS/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8513,
+      "path": "examples/quorum-context-v1/C09_RECORD_ARRAY_ORDER/body.json",
+      "sha256": "43dad245855c916bddb30eeca9f853d25403457eedb3d6b740cac9828227bd39"
+    },
+    {
+      "bytes": 78,
+      "path": "examples/quorum-context-v1/C09_RECORD_ARRAY_ORDER/expected.json",
+      "sha256": "c7e6dbbad2dc0da4f1a200b7eba9c0dfc49e8c2fc1080f9e5337b5b43bf00286"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C09_RECORD_ARRAY_ORDER/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C09_RECORD_ARRAY_ORDER/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8513,
+      "path": "examples/quorum-context-v1/C10_SOURCE_SET_ORDER/body.json",
+      "sha256": "cec79d0e1323de21620a05f0cd92d59abdbb8b6f697ae99f395115fbcdfb415e"
+    },
+    {
+      "bytes": 78,
+      "path": "examples/quorum-context-v1/C10_SOURCE_SET_ORDER/expected.json",
+      "sha256": "c7e6dbbad2dc0da4f1a200b7eba9c0dfc49e8c2fc1080f9e5337b5b43bf00286"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C10_SOURCE_SET_ORDER/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C10_SOURCE_SET_ORDER/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8987,
+      "path": "examples/quorum-context-v1/C11_FINAL_LF_ID_CANONICAL_ORDER/body.json",
+      "sha256": "7ca9038a328c8b9939d46e8b9f8e0f16aa61850311d350516f667964e495fdf0"
+    },
+    {
+      "bytes": 4136,
+      "path": "examples/quorum-context-v1/C11_FINAL_LF_ID_CANONICAL_ORDER/expected.json",
+      "sha256": "49a87f49b9c5635679b8153c3964ea16cdff57643bcff05b0f58ca7d04578c82"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C11_FINAL_LF_ID_CANONICAL_ORDER/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C11_FINAL_LF_ID_CANONICAL_ORDER/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8987,
+      "path": "examples/quorum-context-v1/C12_FINAL_LF_RAW_ORDER_REFUSED/body.json",
+      "sha256": "38b1b6bec451d36dbb8275c46009a9a65f191e10d39ea6b0313f1dd2c219800f"
+    },
+    {
+      "bytes": 78,
+      "path": "examples/quorum-context-v1/C12_FINAL_LF_RAW_ORDER_REFUSED/expected.json",
+      "sha256": "c7e6dbbad2dc0da4f1a200b7eba9c0dfc49e8c2fc1080f9e5337b5b43bf00286"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C12_FINAL_LF_RAW_ORDER_REFUSED/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C12_FINAL_LF_RAW_ORDER_REFUSED/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8530,
+      "path": "examples/quorum-context-v1/C13_MANUAL_MODEL_LABEL/body.json",
+      "sha256": "158742f529d4f77cf064e23aab12f96eac5b0fbc4dd12b3079dc9a0338c08c68"
+    },
+    {
+      "bytes": 75,
+      "path": "examples/quorum-context-v1/C13_MANUAL_MODEL_LABEL/expected.json",
+      "sha256": "3a5a6d246af6766db7aa719ef6f665e5d8d98e14d91285d0f9c34687fcd5340a"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C13_MANUAL_MODEL_LABEL/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C13_MANUAL_MODEL_LABEL/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8672,
+      "path": "examples/quorum-context-v1/C14_MISSING_SEAT_EVIDENCE/body.json",
+      "sha256": "1d604a48d8badeefd6a024d4568e1d015fc81ddc12c31950a26b195ef514008f"
+    },
+    {
+      "bytes": 84,
+      "path": "examples/quorum-context-v1/C14_MISSING_SEAT_EVIDENCE/expected.json",
+      "sha256": "f589932a2284eaa9dd269311a41f0eae10896aff7c3844f5da7548e17f4e4e73"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C14_MISSING_SEAT_EVIDENCE/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C14_MISSING_SEAT_EVIDENCE/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8863,
+      "path": "examples/quorum-context-v1/C15_EXTERNAL_DECLARATION_UNVERIFIED/body.json",
+      "sha256": "83b0e072f45678df787838fd14bba510a7047560ec9544e2610f70aa4a79fb0b"
+    },
+    {
+      "bytes": 4039,
+      "path": "examples/quorum-context-v1/C15_EXTERNAL_DECLARATION_UNVERIFIED/expected.json",
+      "sha256": "4112b2092b32c22c4322b5d4ab0e97160ad41ce220ae383b23ff5f2077efe850"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C15_EXTERNAL_DECLARATION_UNVERIFIED/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C15_EXTERNAL_DECLARATION_UNVERIFIED/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 9526,
+      "path": "examples/quorum-context-v1/C16_OPAQUE_SOURCE_TEMPORAL_UNKNOWN/body.json",
+      "sha256": "94fcf7fbf1793733ad43cd0a2957bb5300d7dd68d91c66f0027b015f73a73494"
+    },
+    {
+      "bytes": 4200,
+      "path": "examples/quorum-context-v1/C16_OPAQUE_SOURCE_TEMPORAL_UNKNOWN/expected.json",
+      "sha256": "67415da7ba6fb8c10986a8698c5f1ae2c04fb38d18a4ba96107b1c056ab42a9f"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C16_OPAQUE_SOURCE_TEMPORAL_UNKNOWN/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 1959,
+      "path": "examples/quorum-context-v1/C16_OPAQUE_SOURCE_TEMPORAL_UNKNOWN/originals.json",
+      "sha256": "7ba9844e5ce3ce20d4e7b82fad38189912340b95048f040b10f64ab358a2f202"
+    },
+    {
+      "bytes": 8513,
+      "path": "examples/quorum-context-v1/C17_TASK_RULE_SET/body.json",
+      "sha256": "de664d0086c0d11fa1ab2b554d8e5f6ca164350147a510355e891fdc12ef815a"
+    },
+    {
+      "bytes": 73,
+      "path": "examples/quorum-context-v1/C17_TASK_RULE_SET/expected.json",
+      "sha256": "838690a65b71588c8a40a87591e7876969b51db5d9b9653416dc15786e0588ed"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C17_TASK_RULE_SET/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C17_TASK_RULE_SET/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8513,
+      "path": "examples/quorum-context-v1/C18_TASK_ROSTER_PIN/body.json",
+      "sha256": "0a41c413de782d4c6447bc4c0e0e958ca238852e7cc8c8e6c03aceb269ef84df"
+    },
+    {
+      "bytes": 75,
+      "path": "examples/quorum-context-v1/C18_TASK_ROSTER_PIN/expected.json",
+      "sha256": "ab8e694551ba790f59782773d85d1e35274fe1c181b9d076c4133808a4619bb5"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C18_TASK_ROSTER_PIN/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C18_TASK_ROSTER_PIN/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8513,
+      "path": "examples/quorum-context-v1/C19_TASK_EXPECTED_SEAT/body.json",
+      "sha256": "46fa8d3f75443fe06e8300a09b6ffc49140b10efdccbfcff3c8ed7a4863b7874"
+    },
+    {
+      "bytes": 76,
+      "path": "examples/quorum-context-v1/C19_TASK_EXPECTED_SEAT/expected.json",
+      "sha256": "2bfd2901e4812ef9b0040a2f8d37885c4d0ba3f3df426239dcc1f37b19ac9611"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C19_TASK_EXPECTED_SEAT/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C19_TASK_EXPECTED_SEAT/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8393,
+      "path": "examples/quorum-context-v1/C20_TASK_SOURCE_SET/body.json",
+      "sha256": "1e781bcdeb9e5b66e1ffc23c1c42757d103a67effb99c23169fddf63d4db395c"
+    },
+    {
+      "bytes": 75,
+      "path": "examples/quorum-context-v1/C20_TASK_SOURCE_SET/expected.json",
+      "sha256": "b926ff295e15ac667520d21c726a40421588214040070ba725f0a3c83b79ec32"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C20_TASK_SOURCE_SET/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C20_TASK_SOURCE_SET/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8550,
+      "path": "examples/quorum-context-v1/C21_MISSING_CONFLICT_LABEL/body.json",
+      "sha256": "a50a4a3759478920720e837e3a50e5d9a612dec941684c709258d3125c7cb17b"
+    },
+    {
+      "bytes": 93,
+      "path": "examples/quorum-context-v1/C21_MISSING_CONFLICT_LABEL/expected.json",
+      "sha256": "c49e8966a2b4f6bf02c179ca84d5c0f65db75bac724ed7c4a255b2cd743fa8b1"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C21_MISSING_CONFLICT_LABEL/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C21_MISSING_CONFLICT_LABEL/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8551,
+      "path": "examples/quorum-context-v1/C22_SELF_CONFLICT_LABEL/body.json",
+      "sha256": "807a84447e0ce41046de98c8072f283ca8c25e01fd7cbc4bdcd558b726aef7b3"
+    },
+    {
+      "bytes": 3907,
+      "path": "examples/quorum-context-v1/C22_SELF_CONFLICT_LABEL/expected.json",
+      "sha256": "0dd2a1bae86b8364f5dbef046ca9a03206bd4ca051a64c506ccfe5cefbcb1028"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C22_SELF_CONFLICT_LABEL/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C22_SELF_CONFLICT_LABEL/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8607,
+      "path": "examples/quorum-context-v1/C23_TASK_POSTASSESSMENT_PIN/body.json",
+      "sha256": "48d3788d852f67bcb76e85583e2695ebc074aed3e80d7842a5f059079a177f23"
+    },
+    {
+      "bytes": 79,
+      "path": "examples/quorum-context-v1/C23_TASK_POSTASSESSMENT_PIN/expected.json",
+      "sha256": "2724fcd8ba5767a203eb7cf8e7e476482fc2af8bfbc67b40ba99247ca02d471c"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C23_TASK_POSTASSESSMENT_PIN/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C23_TASK_POSTASSESSMENT_PIN/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8393,
+      "path": "examples/quorum-context-v1/C24_MANIFEST_SOURCE_SET/body.json",
+      "sha256": "0b92e7e2cbf893b1727d401ee0afb8bac41b7d6fd21aa4a7353ac9df44c4caf7"
+    },
+    {
+      "bytes": 84,
+      "path": "examples/quorum-context-v1/C24_MANIFEST_SOURCE_SET/expected.json",
+      "sha256": "2ad237a836097d588973572453bc90d6da9e7007b4081764e898a37b4df25cb4"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C24_MANIFEST_SOURCE_SET/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C24_MANIFEST_SOURCE_SET/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8506,
+      "path": "examples/quorum-context-v1/C25_MANIFEST_SELECTOR_SET/body.json",
+      "sha256": "3b01e4fe416d03de7d49b142c4ab4896b6253b57c0c0aa07740baaa505f2dd95"
+    },
+    {
+      "bytes": 86,
+      "path": "examples/quorum-context-v1/C25_MANIFEST_SELECTOR_SET/expected.json",
+      "sha256": "29ba9d8534de2600f46a96b89c2927b15130bf7b31a8ffcdc5db58e183a0ee22"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C25_MANIFEST_SELECTOR_SET/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C25_MANIFEST_SELECTOR_SET/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 9610,
+      "path": "examples/quorum-context-v1/C26_TASK_CONTEXT_UNION/body.json",
+      "sha256": "b5a0a7366480714f0daeae6723dc0cf82b379d992add5a92ad7de2911695c41f"
+    },
+    {
+      "bytes": 4171,
+      "path": "examples/quorum-context-v1/C26_TASK_CONTEXT_UNION/expected.json",
+      "sha256": "32a928256cffb5a5dfd6f18cd88dab60e82d2442add800127e47b411ed9023a4"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C26_TASK_CONTEXT_UNION/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C26_TASK_CONTEXT_UNION/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 9503,
+      "path": "examples/quorum-context-v1/C27_MISSING_CONTEXT_UNION_MEMBER/body.json",
+      "sha256": "d02627d6af9e50e59eaaf0aa2f2336871b49319b427d9cb53f3d69d974309d80"
+    },
+    {
+      "bytes": 88,
+      "path": "examples/quorum-context-v1/C27_MISSING_CONTEXT_UNION_MEMBER/expected.json",
+      "sha256": "739fdc77943493166ca1ca13e5968078476fff02893527b63047b173a04df4c2"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C27_MISSING_CONTEXT_UNION_MEMBER/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C27_MISSING_CONTEXT_UNION_MEMBER/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8506,
+      "path": "examples/quorum-context-v1/C28_REGISTRY_SNAPSHOT/body.json",
+      "sha256": "c1ac2a0f1f96c9c2ecfe1edc3b64d2e5dd27ada7dbb30bdddc7fb1890d9d4719"
+    },
+    {
+      "bytes": 82,
+      "path": "examples/quorum-context-v1/C28_REGISTRY_SNAPSHOT/expected.json",
+      "sha256": "4c377f6b81ad3fd106424da7a1ef0cf0e0231fda8694c3c564a62a4b93d8f9ad"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C28_REGISTRY_SNAPSHOT/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C28_REGISTRY_SNAPSHOT/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8508,
+      "path": "examples/quorum-context-v1/C29_PROMPT_POSTASSESSMENT_TYPE/body.json",
+      "sha256": "84e80657ad177cb11e788d8f5868ecda8fcc29d751be41693d7cfa5a9f49ce7b"
+    },
+    {
+      "bytes": 85,
+      "path": "examples/quorum-context-v1/C29_PROMPT_POSTASSESSMENT_TYPE/expected.json",
+      "sha256": "61f6f433f67ac5a2f943ae35040d823c88c3469e59283730f8ff7d55b5a59e22"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C29_PROMPT_POSTASSESSMENT_TYPE/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C29_PROMPT_POSTASSESSMENT_TYPE/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8519,
+      "path": "examples/quorum-context-v1/C30_PROMPT_RESPONSE_KIND/body.json",
+      "sha256": "5c2c3aecbc7fb29f340f541f7edf865cf0d1b0fe24cae0f42c8df15d525a00ca"
+    },
+    {
+      "bytes": 85,
+      "path": "examples/quorum-context-v1/C30_PROMPT_RESPONSE_KIND/expected.json",
+      "sha256": "0823442c61b3fca8b0eebc4a86141455dfd18ee4f6e31e3bcb3f2df89bc18327"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C30_PROMPT_RESPONSE_KIND/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C30_PROMPT_RESPONSE_KIND/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8514,
+      "path": "examples/quorum-context-v1/C31_STALE_PROMPT_RECORD_PIN/body.json",
+      "sha256": "83ded7044201723913faaedf829b47d2ad587fbb17e63897d2abb8209712788a"
+    },
+    {
+      "bytes": 84,
+      "path": "examples/quorum-context-v1/C31_STALE_PROMPT_RECORD_PIN/expected.json",
+      "sha256": "4e538d73943a838b973e534a8142fa35d6586c4cdbdb6b9f68f6adaa02e27a2a"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/C31_STALE_PROMPT_RECORD_PIN/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/C31_STALE_PROMPT_RECORD_PIN/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 2952,
+      "path": "examples/quorum-context-v1/README.md",
+      "sha256": "ac781f0234bc47711001f834ed08e7d3da7603285da6523f83f9eb1db1b5d885"
+    },
+    {
+      "bytes": 2195,
+      "path": "examples/quorum-context-v1/code-review-01/additional-probe-expectations.json",
+      "sha256": "51b5ca1e66c81678afe9be121586a54e763d4f7b540b003567652040509cd1c6"
+    },
+    {
+      "bytes": 168046,
+      "path": "examples/quorum-context-v1/code-review-01/assertions-disabled-probe-results.json",
+      "sha256": "cbdff7371d28fcd0c8f2448889195b7b4e59c3225b8d01e86ab04b67ec7625b7"
+    },
+    {
+      "bytes": 4880,
+      "path": "examples/quorum-context-v1/code-review-01/final-ci-review-addendum.json",
+      "sha256": "f0c803c6337a37c4384d3cbd65fec51c09daa60e83aa017ec5682825e61f76b8"
+    },
+    {
+      "bytes": 334713,
+      "path": "examples/quorum-context-v1/code-review-01/final-unit-optimized-results.json",
+      "sha256": "0884cd53d8de3a9a0e1ad903409f7b45963279a794bcbf9a2f8b53c86b1c21c5"
+    },
+    {
+      "bytes": 334713,
+      "path": "examples/quorum-context-v1/code-review-01/final-unit-results.json",
+      "sha256": "0884cd53d8de3a9a0e1ad903409f7b45963279a794bcbf9a2f8b53c86b1c21c5"
+    },
+    {
+      "bytes": 332369,
+      "path": "examples/quorum-context-v1/code-review-01/first-owner-suite-results.json",
+      "sha256": "89ec0fca1947ca24b171375a319373a7fcb333664fc1763145fb061c073ac3b4"
+    },
+    {
+      "bytes": 168045,
+      "path": "examples/quorum-context-v1/code-review-01/first-probe-results.json",
+      "sha256": "4916abcb1bece399298d745f6bc7e115877aee8f5312744b9e73d6eaf28f1199"
+    },
+    {
+      "bytes": 10606,
+      "path": "examples/quorum-context-v1/code-review-01/independent-code-review.json",
+      "sha256": "df9b61dc3aec858ac040e698540c59fc033fb6143d6f2be98cc7a471b0c26c0b"
+    },
+    {
+      "bytes": 11909,
+      "path": "examples/quorum-context-v1/code-review-01/reviewed-transport_quorum_context.py.txt",
+      "sha256": "b5044424809ae2a990c1c0657bd3ef9715204cb1d85bd71d422de7615f1403fd"
+    },
+    {
+      "bytes": 16222,
+      "path": "examples/quorum-context-v1/code-review-01/reviewed-transport_quorum_impact.py.txt",
+      "sha256": "3ad91c1acb9a68ce249df23aefd0caa776bd0ccc82e29887264ef730728a1b42"
+    },
+    {
+      "bytes": 5709,
+      "path": "examples/quorum-context-v1/code-review-01/run-independent-probes.py",
+      "sha256": "ff060536ad5de9dbedfae80db86dcd6da6cd5c4b0334a808ce5cd9bd5c0c14b4"
+    },
+    {
+      "bytes": 3480,
+      "path": "examples/quorum-context-v1/code-review-01/static-check.json",
+      "sha256": "0fd4bb522ba25fe77cece959ab0b9a40a7dba938b24e592fba6b0f601126128d"
+    },
+    {
+      "bytes": 11162,
+      "path": "examples/quorum-context-v1/contract-draft01.json",
+      "sha256": "fa1cdb4b02afa81727b4c2677f70a43b8a69451a8976d54c80e73ec99eb7077c"
+    },
+    {
+      "bytes": 14765,
+      "path": "examples/quorum-context-v1/contract-draft02.json",
+      "sha256": "a80da559995f5d0039c7598d6c20dfdf629a7b6d48ef6f0e7c4c96dc0cbd2f91"
+    },
+    {
+      "bytes": 15176,
+      "path": "examples/quorum-context-v1/contract-draft03.json",
+      "sha256": "0c65e6038d3b1de69ffac587069aed9e3f238dd470ef9bc67c3160f16d2de469"
+    },
+    {
+      "bytes": 17312,
+      "path": "examples/quorum-context-v1/contract-draft04.json",
+      "sha256": "caed6f3ad290998eed07830a4ef412c51ca049e866509ec9547b4d2c6b6989e4"
+    },
+    {
+      "bytes": 17539,
+      "path": "examples/quorum-context-v1/contract.json",
+      "sha256": "6441d7df28267ffe148980c5b66d4b771f52290e41b1e13edec6679065ba2686"
+    },
+    {
+      "bytes": 3966,
+      "path": "examples/quorum-context-v1/design-addendum-draft01.json",
+      "sha256": "871322113a4527d47e00a0ed726f21d121bec41d2d49b32672fe9a770b507b18"
+    },
+    {
+      "bytes": 4517,
+      "path": "examples/quorum-context-v1/design-addendum.json",
+      "sha256": "37d1f74b9fbaee8fed6e81ad57e02543ebe0fbbd8ae28aabdeea2f5dbdfc2608"
+    },
+    {
+      "bytes": 334713,
+      "path": "examples/quorum-context-v1/evidence/independent-unit-results.json",
+      "sha256": "0884cd53d8de3a9a0e1ad903409f7b45963279a794bcbf9a2f8b53c86b1c21c5"
+    },
+    {
+      "bytes": 334713,
+      "path": "examples/quorum-context-v1/evidence/root-unit-ci-results.json",
+      "sha256": "0884cd53d8de3a9a0e1ad903409f7b45963279a794bcbf9a2f8b53c86b1c21c5"
+    },
+    {
+      "bytes": 332369,
+      "path": "examples/quorum-context-v1/evidence/root-unit-first.json",
+      "sha256": "89ec0fca1947ca24b171375a319373a7fcb333664fc1763145fb061c073ac3b4"
+    },
+    {
+      "bytes": 334713,
+      "path": "examples/quorum-context-v1/evidence/root-unit-optimized-results.json",
+      "sha256": "0884cd53d8de3a9a0e1ad903409f7b45963279a794bcbf9a2f8b53c86b1c21c5"
+    },
+    {
+      "bytes": 17539,
+      "path": "examples/quorum-context-v1/focused/at-fixture-freeze-contract.json",
+      "sha256": "6441d7df28267ffe148980c5b66d4b771f52290e41b1e13edec6679065ba2686"
+    },
+    {
+      "bytes": 4517,
+      "path": "examples/quorum-context-v1/focused/at-fixture-freeze-design-addendum.json",
+      "sha256": "37d1f74b9fbaee8fed6e81ad57e02543ebe0fbbd8ae28aabdeea2f5dbdfc2608"
+    },
+    {
+      "bytes": 130782,
+      "path": "examples/quorum-context-v1/focused/claim-suite-evidence-first-run.json",
+      "sha256": "c0eb26df2090490874b763739d47cdcaa0ea2077105d907b37743353f50dc7e6"
+    },
+    {
+      "bytes": 14316,
+      "path": "examples/quorum-context-v1/focused/claim-suite-first-run.json",
+      "sha256": "e2ba472d5afc027b086fa41b6c15e126d8c055e4d78078c6add114679fd8f48b"
+    },
+    {
+      "bytes": 474,
+      "path": "examples/quorum-context-v1/focused/claim-suite-first-run.log",
+      "sha256": "f97f1dec25373cc8906ec25c27f4ddee5d28d31e854f438cb998a560ed9f754f"
+    },
+    {
+      "bytes": 102176,
+      "path": "examples/quorum-context-v1/focused/handwritten-expectations.json",
+      "sha256": "7500bfdbe5bc9a7e05182187bf59aa6ec56c10fd40f453713afc1a032a6782cc"
+    },
+    {
+      "bytes": 345456,
+      "path": "examples/quorum-context-v1/focused/impact-suite-evidence-first-run.json",
+      "sha256": "805b102468f7ffe93e9be402d3ebbc9f7d4700f9d358187cec3bc5a05a5ddf1b"
+    },
+    {
+      "bytes": 14324,
+      "path": "examples/quorum-context-v1/focused/impact-suite-first-run.json",
+      "sha256": "78f4d0a36e7d3ad0e760ec70f00ea423bc6545ce2078d0c7aa2af9c45cf483dd"
+    },
+    {
+      "bytes": 558,
+      "path": "examples/quorum-context-v1/focused/impact-suite-first-run.log",
+      "sha256": "5944e378d72e4bba27ff1aa0c3a8b89bdad59e46acb4997435bc5dfe715ba523"
+    },
+    {
+      "bytes": 61555,
+      "path": "examples/quorum-context-v1/focused/input-suite-evidence-first-run.json",
+      "sha256": "d19a7b96e2eb9506f20fdd8bc256f9f2347e3221229ffb71cf5ef0422f3935f9"
+    },
+    {
+      "bytes": 14317,
+      "path": "examples/quorum-context-v1/focused/input-suite-first-run.json",
+      "sha256": "199953f4761085669460b5798a3f55e1557402bc2d9e0b28735b855ad666c191"
+    },
+    {
+      "bytes": 729,
+      "path": "examples/quorum-context-v1/focused/input-suite-first-run.log",
+      "sha256": "24c4b307b4403ce0424d3e810f71061070e005d0b7d1e07aac2e0ed122859eeb"
+    },
+    {
+      "bytes": 12416,
+      "path": "examples/quorum-context-v1/focused/pre-oracle-freeze.json",
+      "sha256": "ae09fd4b19d96956c36e141371676e6e5bb602e6806a3aa45cdae58d15a3fff5"
+    },
+    {
+      "bytes": 208,
+      "path": "examples/quorum-context-v1/focused/prepare-first-run.log",
+      "sha256": "fa5cf693a55d0ddf7c3e9e9bd838e897275609bc6c312cf57f17a7332dfd9a29"
+    },
+    {
+      "bytes": 25314,
+      "path": "examples/quorum-context-v1/focused/prepare.py",
+      "sha256": "5e228a4929b22b2797dfacc856c20b526a011d683fa7cbc06db347f6c6cd40bf"
+    },
+    {
+      "bytes": 162,
+      "path": "examples/quorum-context-v1/focused/product-first-command.json",
+      "sha256": "3a4ad86a0a8bf5bffe048e977c538f0ff65da0f701e8c6a365e6b9611af2c2ab"
+    },
+    {
+      "bytes": 282,
+      "path": "examples/quorum-context-v1/focused/product-first-command.log",
+      "sha256": "dd03ca42b41f0c3c99f6bfa791f2bab6cdabf52a325659425af9f87747feaa39"
+    },
+    {
+      "bytes": 1077,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/C00_CONFLICT_TARGET_MISSING.comparison.json",
+      "sha256": "3eecf7f84e95020412797f825c5d67298e30b57d1074e446a6881cea0ae0fe79"
+    },
+    {
+      "bytes": 154,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/C00_CONFLICT_TARGET_MISSING.json",
+      "sha256": "05572f78a79e19c8d5b765a7996c6f51dd36c68707a9220a97fcd3afa8e0b6c8"
+    },
+    {
+      "bytes": 989,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_CLAIM.comparison.json",
+      "sha256": "d6a4033faf3ef1999561ec91063aa8785af1e92ae4dcf269fb053be5ffc78cc6"
+    },
+    {
+      "bytes": 140,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_CLAIM.json",
+      "sha256": "eee3e18d5a3efbeac7ce977a8b87d20bf4177a575c3ef48f6b387f541df49f61"
+    },
+    {
+      "bytes": 1046,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_DEPENDENCY_CONTEXT.comparison.json",
+      "sha256": "9f597a57a453e660c9c52de2dda034d704cd0f89108dc51db91d0ded509a6de0"
+    },
+    {
+      "bytes": 149,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_DEPENDENCY_CONTEXT.json",
+      "sha256": "09d20c1ab00e749ec8925288688603a335a63c0c3d498585dc52f2a05e7f08d2"
+    },
+    {
+      "bytes": 994,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_POLICY.comparison.json",
+      "sha256": "93d7d957c765c5471168a424b0d3b2c66c36040d92c41f462e900be30919bb25"
+    },
+    {
+      "bytes": 141,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_POLICY.json",
+      "sha256": "a30d1ad632d4e7a18d90ad4e0bc3ac821be92eca00f19221e72941b2547734c2"
+    },
+    {
+      "bytes": 1019,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_PROMPT_KIND.comparison.json",
+      "sha256": "dc758dc107d0ab340ae9bf3568466698cd0eecfc9940c6bead70e62e37d064d5"
+    },
+    {
+      "bytes": 146,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_PROMPT_KIND.json",
+      "sha256": "6bd9ae112ee44e786edf307028b27983d78394bf28c697721a23b518558e23c9"
+    },
+    {
+      "bytes": 1034,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_PROMPT_MISSING.comparison.json",
+      "sha256": "3fbd3c3517dcb099f1653ca72cc62cd6dc58d8fbd4a416ca62e99b07667097cb"
+    },
+    {
+      "bytes": 149,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_PROMPT_MISSING.json",
+      "sha256": "260e3e15e8729935e980e2c3d010d9975b0ebb65b98fd8e82129075a5896aee0"
+    },
+    {
+      "bytes": 1043,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_PROMPT_READING_TYPE.comparison.json",
+      "sha256": "1beb14a2e69cd6ffbcb5f5e454b4bc589598c90f72a3a40fbd960adf8998aa2d"
+    },
+    {
+      "bytes": 146,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_PROMPT_READING_TYPE.json",
+      "sha256": "f91a1554b8d00ff3e6415629a15ee274b9a3b419413c9962419b1cc848bd7785"
+    },
+    {
+      "bytes": 1047,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_PROMPT_STALE_ENCODING.comparison.json",
+      "sha256": "73068dded3afb322c4d647f14156b00a60970f2af4fc225797579d30d0952b5c"
+    },
+    {
+      "bytes": 145,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_PROMPT_STALE_ENCODING.json",
+      "sha256": "f3a160bd83cc3a51cd5d426dc00f8581828d657bf7cec0aa08f8882e2783dd42"
+    },
+    {
+      "bytes": 1004,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_REGISTRY.comparison.json",
+      "sha256": "a94fbf753a8bcb113670e1817fdf11a3a9d6568f00cc867867dc3d3e1b942f53"
+    },
+    {
+      "bytes": 143,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_REGISTRY.json",
+      "sha256": "1dd86a25ff59945c81d275398267071f9ef7b8a5bfe747b93dc02a8bf5574cc5"
+    },
+    {
+      "bytes": 995,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_RULES.comparison.json",
+      "sha256": "8fe6333f26cb7213da77c9f34b0d2aa3bcea0ec76d84a8a0689845a1309dc8f9"
+    },
+    {
+      "bytes": 143,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_RULES.json",
+      "sha256": "50bfe3640d8aea30c8dfb75a184181f5850f6bdde5bf557265eba8977b994b77"
+    },
+    {
+      "bytes": 1012,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_SELECTOR.comparison.json",
+      "sha256": "10a33c84c988b955cebac2ea2bedb1eab812a92852258f3198fde3e1811e96d9"
+    },
+    {
+      "bytes": 147,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_SELECTOR.json",
+      "sha256": "ea7cac0969c371cb81471b67564ad926a2150b29c53c941fdfb0f59a76f62adb"
+    },
+    {
+      "bytes": 1029,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_SETTINGS_KIND.comparison.json",
+      "sha256": "c986684a54cd12917283397649a62fcb003169e0cfb857b76b788f4300bbab7a"
+    },
+    {
+      "bytes": 148,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_SETTINGS_KIND.json",
+      "sha256": "3d0fb379dc9d423d428089f9d2e0200f57aa9e18e7c9e1352cbbe1548998b350"
+    },
+    {
+      "bytes": 1044,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_SETTINGS_MISSING.comparison.json",
+      "sha256": "579ef9c50cdab92eef98c5b8fdc0893a8921f37fa0253ada405847822fa225bd"
+    },
+    {
+      "bytes": 151,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_SETTINGS_MISSING.json",
+      "sha256": "35eb4902ac018a0aa8119cdc8e34e23a11a1d799efafcf1595c7c4da4ac9cc22"
+    },
+    {
+      "bytes": 1048,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_SETTINGS_PAYLOAD_PIN.comparison.json",
+      "sha256": "069b9a375e7f53b1d571f4e97f18990e0a5fabdac24368a793480a931a923c9f"
+    },
+    {
+      "bytes": 147,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_SETTINGS_PAYLOAD_PIN.json",
+      "sha256": "002febd28c1efefb44bca2c9bf68097237bc68d95b6181cc633ea652e9d50601"
+    },
+    {
+      "bytes": 1041,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_SETTINGS_RUN_TYPE.comparison.json",
+      "sha256": "71ba9f4ac3682dcaaf1312ce0d5ad3f27f934c41344d80804fd3521305370abb"
+    },
+    {
+      "bytes": 148,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_SETTINGS_RUN_TYPE.json",
+      "sha256": "7f434da2aabe2d6f8812f0f2bbe99ed7f5c24a5d60d6d1bef383cb099b8250cc"
+    },
+    {
+      "bytes": 1005,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_SOURCES.comparison.json",
+      "sha256": "4f1944254e49c9b978b11b0b56341f3685e856eae4de429dc1638a10b977069b"
+    },
+    {
+      "bytes": 145,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_SOURCES.json",
+      "sha256": "39e4daaeff4cfc8b7d9adc8e7ed1df5076c2cb2314fc2a42dae147f9e4594415"
+    },
+    {
+      "bytes": 984,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_TASK.comparison.json",
+      "sha256": "0786e8f833a21f929052b4e1a960c97cfba336db4eb798183f436412ccf9c4f2"
+    },
+    {
+      "bytes": 139,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_TASK.json",
+      "sha256": "17cfe916ea6541430ed034950b37590fd4022278b832c4f8380150ff95becce3"
+    },
+    {
+      "bytes": 1063,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_UNUSED_SECOND_SETTINGS.comparison.json",
+      "sha256": "408c32bef9eb7863d810206c8788903d62c4df11362621086c10f03265d25b45"
+    },
+    {
+      "bytes": 151,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/M_UNUSED_SECOND_SETTINGS.json",
+      "sha256": "41a05ba35b30de18e7562938b3af22d5a578e2fb49489cb81e4f9e7daffc4bb5"
+    },
+    {
+      "bytes": 1038,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/N00_CROSS_ROLE_DUPLICATE.comparison.json",
+      "sha256": "aa30b51bcd31ff8932f7accf3aee06673ecf81a199b94c79cb62b67d2a50b4de"
+    },
+    {
+      "bytes": 139,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/N00_CROSS_ROLE_DUPLICATE.json",
+      "sha256": "39b92b0607f5bd4db36bb25f78ebdc420c433055fba28155e8de225ef4c90569"
+    },
+    {
+      "bytes": 1053,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/N01_RAW_LABEL_COLLISION.comparison.json",
+      "sha256": "bb1deed5c2cd7b4704fb0f9829c6f0e26f5df2ac319458f3cf2aa89d79affc66"
+    },
+    {
+      "bytes": 148,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/N01_RAW_LABEL_COLLISION.json",
+      "sha256": "4c476169f56728d527a2cdff780a87f9fadf08faf1a1d0c376401e19ba951260"
+    },
+    {
+      "bytes": 1056,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/N02_DERIVED_NONCLAIM_COLLISION.comparison.json",
+      "sha256": "08716d99581b0d8066c81235a60847cede716fce5214bfef30e385c8019403d3"
+    },
+    {
+      "bytes": 139,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/N02_DERIVED_NONCLAIM_COLLISION.json",
+      "sha256": "f5d872b7d7bdd5514ec2c6672f640e484fe70f304694f4abb09bddf47368dda7"
+    },
+    {
+      "bytes": 1023,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/N03_COLON_COLLISION.comparison.json",
+      "sha256": "e10c66312557aca057484c22ff1d5b98efd7fd0af2d0cf2f391aaf8e2ddb752c"
+    },
+    {
+      "bytes": 139,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/N03_COLON_COLLISION.json",
+      "sha256": "ec970a6cb6bf498461071709a6fe75ae12ba896df4817f3bb7c92303482e9527"
+    },
+    {
+      "bytes": 1032,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/N04_DERIVED_LENGTH.comparison.json",
+      "sha256": "d86e8dcad1c1d5a1102bfe6adc4969a49d3034315b4c03bbb52f048dbe67f3ce"
+    },
+    {
+      "bytes": 145,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/N04_DERIVED_LENGTH.json",
+      "sha256": "59cb73f9a7518c49d38f99eb53d327cf17c0ae718a91a02213dafdb891c12a43"
+    },
+    {
+      "bytes": 1047,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/N05_DERIVED_EMBEDDED_LF.comparison.json",
+      "sha256": "6130582c89acd2a2a040b773c35359246df8faeb3de81109745dc27546ac9476"
+    },
+    {
+      "bytes": 145,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/N05_DERIVED_EMBEDDED_LF.json",
+      "sha256": "0eafb487d543451b59ee77c5b55e034b2c4f81b39a60b8d8185b48a722917cdc"
+    },
+    {
+      "bytes": 1035,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/O00_SOURCE_RECORD_ORDER.comparison.json",
+      "sha256": "f882db4c6e8797ac621a2eec2e9bdf7ce51f8136e2dbe9d59c96cb6c20861573"
+    },
+    {
+      "bytes": 139,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/O00_SOURCE_RECORD_ORDER.json",
+      "sha256": "0895793751b21fe26cfbb83518c6898f657d6ce8ac1df138094484e8d28b6f57"
+    },
+    {
+      "bytes": 1032,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/O01_FINAL_LF_RAW_ORDER.comparison.json",
+      "sha256": "e0867340cb2ec118e396d2bcd7d3e840c880f044815a5026cc9d46461d65b57f"
+    },
+    {
+      "bytes": 139,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/O01_FINAL_LF_RAW_ORDER.json",
+      "sha256": "ddea4f7b96ef509e07f65699d398b1cd4ea58e416a7a438d55178e82583d5631"
+    },
+    {
+      "bytes": 1032,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/O02_ROSTER_LABEL_ORDER.comparison.json",
+      "sha256": "5cb8e2669b76ab15384912b885bb1484139fb7d6202f24d45ce1637d7cb96a9e"
+    },
+    {
+      "bytes": 139,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/O02_ROSTER_LABEL_ORDER.json",
+      "sha256": "3a757f6e83f867d48068aa54c59a6e0e255a03630f6b7fdf856248edc0a29685"
+    },
+    {
+      "bytes": 1017,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/O03_RULE_ID_ORDER.comparison.json",
+      "sha256": "23e6f526a6ed01ae91ca7db105fcb17456f7d0e854c92872af97bb1ce5ba11c3"
+    },
+    {
+      "bytes": 139,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/O03_RULE_ID_ORDER.json",
+      "sha256": "437fb8cac69d6209e5f78b2687407064ae56dd0fe6b0d637e8243581f3eb14f4"
+    },
+    {
+      "bytes": 1035,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/O04_DEPENDENCY_ID_ORDER.comparison.json",
+      "sha256": "cf8de4dcc09234f0f752b1daedae09383e4714b0e5900a204a1345dbbf4877cf"
+    },
+    {
+      "bytes": 139,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/O04_DEPENDENCY_ID_ORDER.json",
+      "sha256": "1a6e9587aceb14381d573c6bd7339fc4375b1863f4ce00e2cec61e89d84d76b2"
+    },
+    {
+      "bytes": 9941,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/P00_FULL_CONTEXT.comparison.json",
+      "sha256": "be14acc8e96560ee8acf6ac36081c460408ea4593de4c84fe9d6037b670b5f25"
+    },
+    {
+      "bytes": 4602,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/P00_FULL_CONTEXT.json",
+      "sha256": "15fa4b5c8250abac27d0af7664bb2fea6c016b8b3a2cc4214cb3ce5e4c044d0e"
+    },
+    {
+      "bytes": 9068,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/P01_NO_MANIFEST.comparison.json",
+      "sha256": "ff998dba88067e3e7f9c9b2923fd3dfbd352d7e19a4ebc9adc362fffd01592f5"
+    },
+    {
+      "bytes": 4167,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/P01_NO_MANIFEST.json",
+      "sha256": "232a35b1af9bff2ac3db396e60f3caaad00de5d80f3d6d9b1d587c5554be8c67"
+    },
+    {
+      "bytes": 9962,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/P02_SHARED_RAW_CLAIM_ID.comparison.json",
+      "sha256": "86bb9f02d0a2770b615cd1ee8d1b98a59e3d4fc0953bf18c41ef573b9e2c179c"
+    },
+    {
+      "bytes": 4602,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/P02_SHARED_RAW_CLAIM_ID.json",
+      "sha256": "e6d610ea99fbc60cf7632b8d76be69eb09db0e5a39c31621f7a63c2e81d4487b"
+    },
+    {
+      "bytes": 9986,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/P03_RAW_LABEL_MATCHES_DERIVED.comparison.json",
+      "sha256": "9f18661c8f04550b948c193a8b817f2e591dc1839335ed729d31dfee14ba858f"
+    },
+    {
+      "bytes": 4605,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/P03_RAW_LABEL_MATCHES_DERIVED.json",
+      "sha256": "9c4a49cdb887c03c28d1bbd5256cf3936a2c76ea79e99cfa19679623d85aabbd"
+    },
+    {
+      "bytes": 10247,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/P04_PHYSICAL_KEY_ALIAS.comparison.json",
+      "sha256": "2b6d48f21d69e1a6395e75e5aecb96d9fce9c71e4823d136295be7206260be8e"
+    },
+    {
+      "bytes": 4746,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/P04_PHYSICAL_KEY_ALIAS.json",
+      "sha256": "029fbc7720b5e9793e32fd87a31907cc04215bd9e7c282448ffa31648c8c7d96"
+    },
+    {
+      "bytes": 9962,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/P05_SELF_CONFLICT_LABEL.comparison.json",
+      "sha256": "e457a7f9afbc173e3ab0058b73631d2caeebbc83b54c918fb7536a39cab3d44d"
+    },
+    {
+      "bytes": 4602,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/P05_SELF_CONFLICT_LABEL.json",
+      "sha256": "615d533c2f2eff28b698907e08c6b8087bf938df64fbb371b7304e8648e57029"
+    },
+    {
+      "bytes": 9962,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/P06_ASYMMETRIC_CONFLICT.comparison.json",
+      "sha256": "1ebcbec0e0234333b1a7b4889b0d4585c83e220131b315b553d3dd2141d3e362"
+    },
+    {
+      "bytes": 4602,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/P06_ASYMMETRIC_CONFLICT.json",
+      "sha256": "7a977110be4292334e84833dbf5cd224c846291b4533237b0e21f2e0f64158cb"
+    },
+    {
+      "bytes": 10211,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/P07_DEFERRED_READING.comparison.json",
+      "sha256": "8c88859db6156d604a815c4b3ac710f9c2f64a15a8a62eb145c014a7f29e6f3b"
+    },
+    {
+      "bytes": 4731,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/P07_DEFERRED_READING.json",
+      "sha256": "3b89431a9dd22f212a58583e300e4c8b97cadef356df6555b09605231113e123"
+    },
+    {
+      "bytes": 9986,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/P08_OPAQUE_LATER_LOOKING_SOURCE.comparison.json",
+      "sha256": "6ff2d559778ae038f7f716b2ab8b8e4d401fc9bb2b5e21fa5769a158670d4389"
+    },
+    {
+      "bytes": 4602,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/P08_OPAQUE_LATER_LOOKING_SOURCE.json",
+      "sha256": "163bb68f3691178b91b76d68910881bbae06155eefab3cd3c1eb8cdcbf3e6a98"
+    },
+    {
+      "bytes": 1008,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/S00_MANUAL_MODEL.comparison.json",
+      "sha256": "dc8cd2e434465335d8ee09626ed07ccb4c2abde2c39b67f4c5e0f2d68d132c44"
+    },
+    {
+      "bytes": 136,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/S00_MANUAL_MODEL.json",
+      "sha256": "232ae1b43950c54df06a7150d906a7b7d103345cafee3beebd86eddcd4e5171a"
+    },
+    {
+      "bytes": 1026,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/S01_EXTERNAL_ASSURANCE.comparison.json",
+      "sha256": "2eb4f8ca20d5f532efae388c6a7ef84ef37c6d0a665262064458612c84468b8f"
+    },
+    {
+      "bytes": 136,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/S01_EXTERNAL_ASSURANCE.json",
+      "sha256": "d96f6070698fa72eec7be1d7dae1d33ec5f51c46873f2a48bad6f812c4b5e151"
+    },
+    {
+      "bytes": 1050,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/S02_SEAT_EVIDENCE_SOURCE.comparison.json",
+      "sha256": "71727d5c81b4576f8871254f9aee99fe3d6ed52874b27add1126368e197106ae"
+    },
+    {
+      "bytes": 145,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/S02_SEAT_EVIDENCE_SOURCE.json",
+      "sha256": "19003703cecf800ca06e22763ca2e1a39e2b03a5c6d9c395985272b955dbcf3d"
+    },
+    {
+      "bytes": 1001,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/T_CLAIM_OWNER.comparison.json",
+      "sha256": "7c7df3c6cba512059c5ec874c0628c62bb885f67fc10ea53cb27194314d71543"
+    },
+    {
+      "bytes": 137,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/T_CLAIM_OWNER.json",
+      "sha256": "922410889bed86094d27186f0a14f8c79a4319334c2923b787518edab25d158c"
+    },
+    {
+      "bytes": 1036,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/T_CONTEXT_DEPENDENCY.comparison.json",
+      "sha256": "e06695d1a852501c4f65b877058d4d3df3f703968c1471d697f5802e72a140af"
+    },
+    {
+      "bytes": 144,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/T_CONTEXT_DEPENDENCY.json",
+      "sha256": "2515e837bfb51aa72ba4196ceda1b0e9fe90277ebbe47de366e41086a812eb9d"
+    },
+    {
+      "bytes": 976,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/T_POLICY.comparison.json",
+      "sha256": "ff8e1d5b5ee3f0e8520676330f5cdf33775536b8d128f851c3dfbc1eaac4d77d"
+    },
+    {
+      "bytes": 132,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/T_POLICY.json",
+      "sha256": "9ca79098e18fbab72252e100e6614929dad0776137fca919778eb35315c5f701"
+    },
+    {
+      "bytes": 986,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/T_REGISTRY.comparison.json",
+      "sha256": "cfab050f10a8d43395bb5773996e26477eb09b9c209c9416c017f31e79ad4cfa"
+    },
+    {
+      "bytes": 134,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/T_REGISTRY.json",
+      "sha256": "0fefc8c02949266b92cbd734709220df7b6da7103c5d0bb8ef9b12868cde27a3"
+    },
+    {
+      "bytes": 1026,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/T_ROSTER_DUPLICATE.comparison.json",
+      "sha256": "314dc42cd49d4b9d24e0f45413a62c26797ba561318018607cec71a121c08604"
+    },
+    {
+      "bytes": 142,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/T_ROSTER_DUPLICATE.json",
+      "sha256": "7c818cbd72e3e2a678cd390211f7ebff9414207585737de1e470b4bad48f62bd"
+    },
+    {
+      "bytes": 1008,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/T_ROSTER_MISSING.comparison.json",
+      "sha256": "1c3ff05231fefed9c7cf3cb712b58e23b32fc148e54b1fc7e1b832c3fb17c515"
+    },
+    {
+      "bytes": 136,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/T_ROSTER_MISSING.json",
+      "sha256": "55550983d08e83de0119038c843921ab97fab91670d9f74310d39fef7d4bf4d3"
+    },
+    {
+      "bytes": 996,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/T_ROSTER_PIN.comparison.json",
+      "sha256": "17aca590b244f0e1e6c91eeb900b9b29ec6059e915a08e50ade975d84c9bbd88"
+    },
+    {
+      "bytes": 136,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/T_ROSTER_PIN.json",
+      "sha256": "f18e3ca34108f6d19a95cb5d425804c5c807523d1ef04126525f41c34669cb51"
+    },
+    {
+      "bytes": 1001,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/T_ROSTER_SEAT.comparison.json",
+      "sha256": "60873a9eb75cd2efeddeee2c6197b9458332061a097a8b30462b1b1c8253da4f"
+    },
+    {
+      "bytes": 137,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/T_ROSTER_SEAT.json",
+      "sha256": "cfb40dc700d1bd6a84fed8501cd1b67e815cb6a174784a16f77b149043eb6cd6"
+    },
+    {
+      "bytes": 986,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/T_RULE_SET.comparison.json",
+      "sha256": "17f2a51d53709f866bc16b90335e08f8022251c9892a84803a5da9bd4da17891"
+    },
+    {
+      "bytes": 134,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/T_RULE_SET.json",
+      "sha256": "0d9e03d9b7c1bb067aef198b556c54396097d600417fa081c7b317f9a4bd3f1a"
+    },
+    {
+      "bytes": 996,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/T_SOURCE_SET.comparison.json",
+      "sha256": "7d1686fc1a2708dd6a52990ae795dd848d56923f09972391ac60f0e7ef6123d7"
+    },
+    {
+      "bytes": 136,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/T_SOURCE_SET.json",
+      "sha256": "0a3a79ccc5f747cf7d2576d188f46e2a3d56a00b90aad05f58fa73376fb53597"
+    },
+    {
+      "bytes": 1016,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/X_TASK_TEXT_KIND.comparison.json",
+      "sha256": "2392b9f390b10b2b0da84ace48e675265b43680265c974e9291cca3a0a66cb30"
+    },
+    {
+      "bytes": 140,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/X_TASK_TEXT_KIND.json",
+      "sha256": "81bbd91dd1a3399b3d299cbf4080f370fc10b58c4f67853de86120904d6772eb"
+    },
+    {
+      "bytes": 1031,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/X_TASK_TEXT_MISSING.comparison.json",
+      "sha256": "d2c7e80e3fdbba7c8c71654625e863ea5ed830bdae6898ab914f0b0c490cfa63"
+    },
+    {
+      "bytes": 143,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/X_TASK_TEXT_MISSING.json",
+      "sha256": "d13fb52676a72fd1f209c09d9612ccf10c9a9a476a5918b46062d8b223827dec"
+    },
+    {
+      "bytes": 1011,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/X_TASK_TEXT_PIN.comparison.json",
+      "sha256": "a46d7cf736806d2647cd8dec3946f5600f7d780408daa7e721a3da3a2fc3bfde"
+    },
+    {
+      "bytes": 139,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/X_TASK_TEXT_PIN.json",
+      "sha256": "c8152a8320d96822ed9f3b42eb4c0609eaca0e66bb2d0d5d96450436729327e4"
+    },
+    {
+      "bytes": 1016,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/X_TASK_TEXT_TYPE.comparison.json",
+      "sha256": "0275515e11625a3ecdad638e677074333870179e83514953668f6de060087b5b"
+    },
+    {
+      "bytes": 140,
+      "path": "examples/quorum-context-v1/focused/product-first-outputs/X_TASK_TEXT_TYPE.json",
+      "sha256": "d2e6f484de050f75f6b9951fc25549528a5d4700c6f486b16ca32d8773f510ce"
+    },
+    {
+      "bytes": 138375,
+      "path": "examples/quorum-context-v1/focused/product-first-run.json",
+      "sha256": "6bb39835766571ac8c23f7ae2a23fde074482de494bf0325558009fd83d6c078"
+    },
+    {
+      "bytes": 7898,
+      "path": "examples/quorum-context-v1/focused/product-source-pins-after.json",
+      "sha256": "9ce825147f70a9471517a3af7ec1102409c5b25f2c58e16109762d5299ec2622"
+    },
+    {
+      "bytes": 7898,
+      "path": "examples/quorum-context-v1/focused/product-source-pins-before.json",
+      "sha256": "9ce825147f70a9471517a3af7ec1102409c5b25f2c58e16109762d5299ec2622"
+    },
+    {
+      "bytes": 4673,
+      "path": "examples/quorum-context-v1/focused/product-verification-receipt.json",
+      "sha256": "9fdc65e26dc162552c7ffd5da496dc86ca047c73e3bade86555ea4b5ae0f7de7"
+    },
+    {
+      "bytes": 8957,
+      "path": "examples/quorum-context-v1/focused/raw/C00_CONFLICT_TARGET_MISSING.body.json",
+      "sha256": "7c93fdb0826142c7371ddfa461cb755d977f448b09b635ec6238391e754ef388"
+    },
+    {
+      "bytes": 8912,
+      "path": "examples/quorum-context-v1/focused/raw/M_CLAIM.body.json",
+      "sha256": "7da9a52f8fd582c19c8753baa5adfa53ab5dbab367eeae84f3641ba828abd855"
+    },
+    {
+      "bytes": 8803,
+      "path": "examples/quorum-context-v1/focused/raw/M_DEPENDENCY_CONTEXT.body.json",
+      "sha256": "81c1e52d377401f6b92533b8512569f8e3cf6d4053ab8689e37569aa48f64904"
+    },
+    {
+      "bytes": 8912,
+      "path": "examples/quorum-context-v1/focused/raw/M_POLICY.body.json",
+      "sha256": "49f2546a6f59733a70bebfcefdb79522b221e167cc4a2e020362f96938b642b8"
+    },
+    {
+      "bytes": 8918,
+      "path": "examples/quorum-context-v1/focused/raw/M_PROMPT_KIND.body.json",
+      "sha256": "c14413fc984ffb9f6ed755d7ca40be824d8d3578137dd8ff719d781e73970eaa"
+    },
+    {
+      "bytes": 8916,
+      "path": "examples/quorum-context-v1/focused/raw/M_PROMPT_MISSING.body.json",
+      "sha256": "55a81d378dae8b7b556add312956da9a58f0633ab252aabb9e6158de8a666776"
+    },
+    {
+      "bytes": 9896,
+      "path": "examples/quorum-context-v1/focused/raw/M_PROMPT_READING_TYPE.body.json",
+      "sha256": "5de3e4234806b6b44df7596ffac9c75fdd643b53a99f13a947f373c56a132c64"
+    },
+    {
+      "bytes": 8911,
+      "path": "examples/quorum-context-v1/focused/raw/M_PROMPT_STALE_ENCODING.body.json",
+      "sha256": "5afd3fa97270dfe73c2d43be5ef507bb8c55d21d3a495323675169c0f631273f"
+    },
+    {
+      "bytes": 8921,
+      "path": "examples/quorum-context-v1/focused/raw/M_REGISTRY.body.json",
+      "sha256": "9ccd02eb3e57b0396524bfc5a7f5617985ae86e0e040aba4878e0b8bf3c1cf99"
+    },
+    {
+      "bytes": 8912,
+      "path": "examples/quorum-context-v1/focused/raw/M_RULES.body.json",
+      "sha256": "8dc8dc5a43e65ed9816f782f82f2ca98e04d98ed0a5fab6df00b50d9fe37f2ee"
+    },
+    {
+      "bytes": 8908,
+      "path": "examples/quorum-context-v1/focused/raw/M_SELECTOR.body.json",
+      "sha256": "ac73afa7d66dd47247f06c71c92d8b79ab0906609ea4465306c6725e6e4ba533"
+    },
+    {
+      "bytes": 8916,
+      "path": "examples/quorum-context-v1/focused/raw/M_SETTINGS_KIND.body.json",
+      "sha256": "98d99f759d3af8a82561760611ad68dd432da8939394bb98db1414c0e595bb0d"
+    },
+    {
+      "bytes": 8914,
+      "path": "examples/quorum-context-v1/focused/raw/M_SETTINGS_MISSING.body.json",
+      "sha256": "12db69e216ba563e74adcc1100881886f8193b98ebd61eb3a282fcef6608cf91"
+    },
+    {
+      "bytes": 8910,
+      "path": "examples/quorum-context-v1/focused/raw/M_SETTINGS_PAYLOAD_PIN.body.json",
+      "sha256": "6386a343b9730f28a3213b2ab47d0b5d5c07b8febe57b0acd998e664610111e5"
+    },
+    {
+      "bytes": 9644,
+      "path": "examples/quorum-context-v1/focused/raw/M_SETTINGS_RUN_TYPE.body.json",
+      "sha256": "589a747fd9d52aeb673662528adbe9d1c1c4d70d9e620c82f6aa092c0c2b6484"
+    },
+    {
+      "bytes": 8796,
+      "path": "examples/quorum-context-v1/focused/raw/M_SOURCES.body.json",
+      "sha256": "0117e8c7cffae71428df9995b1a9b40d19dffd81798c1b4498b5aebf5f9ae8ff"
+    },
+    {
+      "bytes": 8912,
+      "path": "examples/quorum-context-v1/focused/raw/M_TASK.body.json",
+      "sha256": "031d38a74dc296ee7c4f06d429863f1e70fb7a064a456c54bfcb1b17bdd78afe"
+    },
+    {
+      "bytes": 11380,
+      "path": "examples/quorum-context-v1/focused/raw/M_UNUSED_SECOND_SETTINGS.body.json",
+      "sha256": "bab22c6c9186afeee59abfd5a1f7be4d8abc1356af50f99e85481384a2877c32"
+    },
+    {
+      "bytes": 8916,
+      "path": "examples/quorum-context-v1/focused/raw/N00_CROSS_ROLE_DUPLICATE.body.json",
+      "sha256": "c20011afa0229d6d1f2932ae1321ca27445f663b583612c911f066d8c86ca373"
+    },
+    {
+      "bytes": 8932,
+      "path": "examples/quorum-context-v1/focused/raw/N01_RAW_LABEL_COLLISION.body.json",
+      "sha256": "48454e4150e57308ded3ee886c30150b5730fe1d382600a95d14e32d02aa2966"
+    },
+    {
+      "bytes": 8908,
+      "path": "examples/quorum-context-v1/focused/raw/N02_DERIVED_NONCLAIM_COLLISION.body.json",
+      "sha256": "01e5760ea7c9d40a3e365f630d8802461a24d1947ba6dd4c2824c72b71224ca3"
+    },
+    {
+      "bytes": 8920,
+      "path": "examples/quorum-context-v1/focused/raw/N03_COLON_COLLISION.body.json",
+      "sha256": "8f347e392a27b247ba23d76e5b3e71d8f475a3ccecb202bda0ca1e1a48f48110"
+    },
+    {
+      "bytes": 9036,
+      "path": "examples/quorum-context-v1/focused/raw/N04_DERIVED_LENGTH.body.json",
+      "sha256": "3edc9ee512a0058d863ecb0f959e0a5318b597c73a765c9c335f0c3959d3739d"
+    },
+    {
+      "bytes": 8920,
+      "path": "examples/quorum-context-v1/focused/raw/N05_DERIVED_EMBEDDED_LF.body.json",
+      "sha256": "8ec47c779b07eb4aceec1405aa8533c8bbbabb111ab37628ca8640e6f3338875"
+    },
+    {
+      "bytes": 8912,
+      "path": "examples/quorum-context-v1/focused/raw/O00_SOURCE_RECORD_ORDER.body.json",
+      "sha256": "86b55733cb72b6288b7fc0ab3fbe1551fd427fa219c28c74b2d9e46685f16886"
+    },
+    {
+      "bytes": 8912,
+      "path": "examples/quorum-context-v1/focused/raw/O01_FINAL_LF_RAW_ORDER.body.json",
+      "sha256": "5daedf0d18ceca0b14602afbe8656ce988a3c05577b84030bb2285db262eab47"
+    },
+    {
+      "bytes": 8912,
+      "path": "examples/quorum-context-v1/focused/raw/O02_ROSTER_LABEL_ORDER.body.json",
+      "sha256": "e0cf39534edb4356dbb055b9b17863680b3d1c15b75e7c56b3563eb98a37973c"
+    },
+    {
+      "bytes": 8912,
+      "path": "examples/quorum-context-v1/focused/raw/O03_RULE_ID_ORDER.body.json",
+      "sha256": "bd8d65c2ab44e8aed2ed0d3a3cf42222da50ef70dcc1cf3fb45a65182744516c"
+    },
+    {
+      "bytes": 8912,
+      "path": "examples/quorum-context-v1/focused/raw/O04_DEPENDENCY_ID_ORDER.body.json",
+      "sha256": "c79f6feed3836cc983333c0c8773cf51d5bb5db5c1d0ccdd22bf347560cdadb9"
+    },
+    {
+      "bytes": 8912,
+      "path": "examples/quorum-context-v1/focused/raw/P00_FULL_CONTEXT.body.json",
+      "sha256": "8163b81b91ff642e1512e914784b2672cd3f7cf62361c34b1011ff8b9ccc1c9c"
+    },
+    {
+      "bytes": 6447,
+      "path": "examples/quorum-context-v1/focused/raw/P01_NO_MANIFEST.body.json",
+      "sha256": "f230ace43659fef0863534b9a18f61345163cb683ac875c868a67d7c34e5cc66"
+    },
+    {
+      "bytes": 8912,
+      "path": "examples/quorum-context-v1/focused/raw/P02_SHARED_RAW_CLAIM_ID.body.json",
+      "sha256": "ab595061603abd0e85732a4a3e6a055a6386c23a4db3d4ca22a08264493efbc7"
+    },
+    {
+      "bytes": 8924,
+      "path": "examples/quorum-context-v1/focused/raw/P03_RAW_LABEL_MATCHES_DERIVED.body.json",
+      "sha256": "41c132a4966283ea3208f114061fe068489ad35ef11802c7ab05eebbdbf90dca"
+    },
+    {
+      "bytes": 9196,
+      "path": "examples/quorum-context-v1/focused/raw/P04_PHYSICAL_KEY_ALIAS.body.json",
+      "sha256": "960de3ec6ab7422c941f7e8f28bae8ed0c1cc80bdde0b0bb0d181d828d3f112b"
+    },
+    {
+      "bytes": 8944,
+      "path": "examples/quorum-context-v1/focused/raw/P05_SELF_CONFLICT_LABEL.body.json",
+      "sha256": "8c705a9abf3f030b83ade9369f3e914ba765a54bfdef79dbbf2a7a9a8b01a0c2"
+    },
+    {
+      "bytes": 8944,
+      "path": "examples/quorum-context-v1/focused/raw/P06_ASYMMETRIC_CONFLICT.body.json",
+      "sha256": "267723bed904df393927748c7db94673fb1cb9baabc342ae717a82c42d0bfef6"
+    },
+    {
+      "bytes": 9895,
+      "path": "examples/quorum-context-v1/focused/raw/P07_DEFERRED_READING.body.json",
+      "sha256": "ab8201a4f445746a9b3f5f177c0cc423254355db7cc134832a7be4e0219f4072"
+    },
+    {
+      "bytes": 8912,
+      "path": "examples/quorum-context-v1/focused/raw/P08_OPAQUE_LATER_LOOKING_SOURCE.body.json",
+      "sha256": "2323bfabfe36d2dab9c7d19825f90c66f29668b9d9eec02248843d6fa8fb28bf"
+    },
+    {
+      "bytes": 8934,
+      "path": "examples/quorum-context-v1/focused/raw/S00_MANUAL_MODEL.body.json",
+      "sha256": "19e5bf1a47bc51f90537c85214851a8741f2efbbcbfd5de4569e9d5dad53026c"
+    },
+    {
+      "bytes": 8912,
+      "path": "examples/quorum-context-v1/focused/raw/S01_EXTERNAL_ASSURANCE.body.json",
+      "sha256": "1cb4ee1252b9f2b42a60796575e541a5c6589fbcfda2423bf349b5f5b400e428"
+    },
+    {
+      "bytes": 8912,
+      "path": "examples/quorum-context-v1/focused/raw/S02_SEAT_EVIDENCE_SOURCE.body.json",
+      "sha256": "622f424882ddc3a41dd83e1b2db4b30f41287846837e6d6ac1bf8bd3028398ea"
+    },
+    {
+      "bytes": 8918,
+      "path": "examples/quorum-context-v1/focused/raw/T_CLAIM_OWNER.body.json",
+      "sha256": "5e3fef01da4da7d29b8faf738f274aaab1a64e3d1694270df09af5f14e371903"
+    },
+    {
+      "bytes": 8810,
+      "path": "examples/quorum-context-v1/focused/raw/T_CONTEXT_DEPENDENCY.body.json",
+      "sha256": "e9db7b76ffbde06fd35db909a5ab7b2d2c92820fef4778f5f3dbd30d35f1bebc"
+    },
+    {
+      "bytes": 8913,
+      "path": "examples/quorum-context-v1/focused/raw/T_POLICY.body.json",
+      "sha256": "a799413bab03a9a6441b49d56ef9fc7ab39d2ebd0a51d3b60b1143f61888d539"
+    },
+    {
+      "bytes": 8911,
+      "path": "examples/quorum-context-v1/focused/raw/T_REGISTRY.body.json",
+      "sha256": "cb9cd21a976c7e6422993c556e9a18e9d3bfa24d6764d74135e6f959895e1c89"
+    },
+    {
+      "bytes": 8912,
+      "path": "examples/quorum-context-v1/focused/raw/T_ROSTER_DUPLICATE.body.json",
+      "sha256": "efa68a25bbad0591d81fae25e50482a1f41f2fc45a7830dfc3693b582345e734"
+    },
+    {
+      "bytes": 8742,
+      "path": "examples/quorum-context-v1/focused/raw/T_ROSTER_MISSING.body.json",
+      "sha256": "e3ec06a54c23ea6881a545984acee83c9b84a45de26befe6a067f225e150eba7"
+    },
+    {
+      "bytes": 8912,
+      "path": "examples/quorum-context-v1/focused/raw/T_ROSTER_PIN.body.json",
+      "sha256": "c21297aec9c8db92ee15b26212faf819152b71350d2d5eb9401dc15c434d3461"
+    },
+    {
+      "bytes": 8910,
+      "path": "examples/quorum-context-v1/focused/raw/T_ROSTER_SEAT.body.json",
+      "sha256": "0e817f1fe52438efc15bc2f5849dc154aef94a09a42f20cafa559d3e5b9608f6"
+    },
+    {
+      "bytes": 8918,
+      "path": "examples/quorum-context-v1/focused/raw/T_RULE_SET.body.json",
+      "sha256": "2c57608eac6cd661dd18ddaba011ad4d0ec49ef9609608d4f188032f74041bd5"
+    },
+    {
+      "bytes": 8680,
+      "path": "examples/quorum-context-v1/focused/raw/T_SOURCE_SET.body.json",
+      "sha256": "03ea1f7a279dc9823ca7da8023bf600b90405cd47407128349046a7ab555c0a4"
+    },
+    {
+      "bytes": 8909,
+      "path": "examples/quorum-context-v1/focused/raw/X_TASK_TEXT_KIND.body.json",
+      "sha256": "8d461a616004de25709a886f55e0c30244361def445c750fc80f7cb869c0dbf5"
+    },
+    {
+      "bytes": 8913,
+      "path": "examples/quorum-context-v1/focused/raw/X_TASK_TEXT_MISSING.body.json",
+      "sha256": "64370d0e623b9a6efc2edfa24ebf83c0a8f0fea404a01e4d57b4b92398baf8fa"
+    },
+    {
+      "bytes": 8912,
+      "path": "examples/quorum-context-v1/focused/raw/X_TASK_TEXT_PIN.body.json",
+      "sha256": "a6e014b428b87a6e6cb3fe3b1ac87e74c97b2be0c6f9507b950f4f8c745a3cdd"
+    },
+    {
+      "bytes": 8907,
+      "path": "examples/quorum-context-v1/focused/raw/X_TASK_TEXT_TYPE.body.json",
+      "sha256": "6c6f911b1915d06f5e569516aea30497c77fe5d2312e01c3e15149b925d8bc22"
+    },
+    {
+      "bytes": 1501,
+      "path": "examples/quorum-context-v1/focused/ready-receipt.json",
+      "sha256": "d6ab17fd9587a266a25cb86ce887b593f7207541910ef5d5e140a21dddb0294c"
+    },
+    {
+      "bytes": 6911,
+      "path": "examples/quorum-context-v1/focused/run-product-first.py",
+      "sha256": "00b00df9d19da003dc27acdd13896b8a0d1a124f92be15ede7ee33868955477f"
+    },
+    {
+      "bytes": 2332,
+      "path": "examples/quorum-context-v1/focused/run-regression-suites-first.py",
+      "sha256": "3df9f38e33fcb3c5d68055a75b55e996635e680433773f51721019c8d43ddfc8"
+    },
+    {
+      "bytes": 82149,
+      "path": "examples/quorum-context-v1/focused/source-suite-evidence-first-run.json",
+      "sha256": "92425619e0e13d46f80971d216be013569ea6b25a9356d0ddcb28886041c22f6"
+    },
+    {
+      "bytes": 14323,
+      "path": "examples/quorum-context-v1/focused/source-suite-first-run.json",
+      "sha256": "abd527d3115f99440ce0c6331dd7cabd2804a9781d97d2cc680e4297a5a45fdd"
+    },
+    {
+      "bytes": 788,
+      "path": "examples/quorum-context-v1/focused/source-suite-first-run.log",
+      "sha256": "b96f26950b519250696aea79535a3c2d7d87b2fcc20147920b4e244dbf74be30"
+    },
+    {
+      "bytes": 3235,
+      "path": "examples/quorum-context-v1/freeze.json",
+      "sha256": "665b17fd572d6cc75721f4512b6cc4642020cf807425bb6eb656686938d8e75d"
+    },
+    {
+      "bytes": 20086,
+      "path": "examples/quorum-context-v1/oracle.json",
+      "sha256": "53e5a4480cc7d72e95a0235ee523381a38d8963f2583300080cd31715d5ec2b5"
+    },
+    {
+      "bytes": 406,
+      "path": "examples/quorum-context-v1/preparation-first-failure.json",
+      "sha256": "3aebf1aeaea61e32e78475f5a597e1bd6d093dce9c274fe3c45cbc126d4af1f5"
+    },
+    {
+      "bytes": 11452,
+      "path": "examples/quorum-context-v1/prepare_contract.py",
+      "sha256": "2b494c02271eda70eeaee04cd540de4ac33ea387c5c44739880a8ff140772169"
+    },
+    {
+      "bytes": 15127,
+      "path": "examples/quorum-context-v1/prepare_oracle-first.py",
+      "sha256": "f1860eb259d2ab21b896ba2544eb1677abddfb56e99b23d1614b81664594976a"
+    },
+    {
+      "bytes": 15126,
+      "path": "examples/quorum-context-v1/prepare_oracle.py",
+      "sha256": "553b13686052c2e4e187d0ee8e44fe8ef6f30bca16fa80e48851567060ca0703"
+    },
+    {
+      "bytes": 3611,
+      "path": "examples/quorum-context-v1/prepare_receipt.py",
+      "sha256": "6a27009a5a39b5d90df32690a4ca3c2732154aa02a0dfc2f52c39c41a528ba86"
+    },
+    {
+      "bytes": 8710,
+      "path": "examples/quorum-context-v1/refine_contract.py",
+      "sha256": "1e1153972acc04d5f2b287741cfe91394b495de5e3d2658718ef7c7a83475edc"
+    },
+    {
+      "bytes": 4669,
+      "path": "examples/quorum-context-v1/refine_contract02.py",
+      "sha256": "a24137101244c185454cf93a82b9d209ec29705cbad6b462d57a96e6e7f38ac5"
+    },
+    {
+      "bytes": 9277,
+      "path": "examples/quorum-context-v1/review-01/author-oracle-inspection.json",
+      "sha256": "986b5ee98bde27f675bcc9bb43c896bfb1b8d5f75c6441306352e5e80ccea93e"
+    },
+    {
+      "bytes": 8839,
+      "path": "examples/quorum-context-v1/review-01/complementary-controls/P01_ALL_SHAPES_BEFORE_COLLISION/body.json",
+      "sha256": "573f0042b4edd3e15e95eefd36cf1b23ad0e137ae8686d31c81996d46548a8c6"
+    },
+    {
+      "bytes": 84,
+      "path": "examples/quorum-context-v1/review-01/complementary-controls/P01_ALL_SHAPES_BEFORE_COLLISION/expected.json",
+      "sha256": "943efd29ed3c01bd80f3b9f56b7eb52ae27fac574bdd510fa2d7f1f4e5e068db"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/review-01/complementary-controls/P01_ALL_SHAPES_BEFORE_COLLISION/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/review-01/complementary-controls/P01_ALL_SHAPES_BEFORE_COLLISION/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8837,
+      "path": "examples/quorum-context-v1/review-01/complementary-controls/P02_NONCLAIM_DUP_BEFORE_SHAPE/body.json",
+      "sha256": "1c7ca6634031f7cbdf895bd2bf28944c09d20797fd3905b8aca11f3bfb459e65"
+    },
+    {
+      "bytes": 78,
+      "path": "examples/quorum-context-v1/review-01/complementary-controls/P02_NONCLAIM_DUP_BEFORE_SHAPE/expected.json",
+      "sha256": "5fe4b4fdec974297221de105976dd1c550b0b4b6d48e8a564e9105a98bf0aeb6"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/review-01/complementary-controls/P02_NONCLAIM_DUP_BEFORE_SHAPE/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/review-01/complementary-controls/P02_NONCLAIM_DUP_BEFORE_SHAPE/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8836,
+      "path": "examples/quorum-context-v1/review-01/complementary-controls/P03_RAW_LABEL_BEFORE_SHAPE/body.json",
+      "sha256": "bd2432745e0552969006108ea2e0380ff40e62d76663544228bbd6169c1a8532"
+    },
+    {
+      "bytes": 87,
+      "path": "examples/quorum-context-v1/review-01/complementary-controls/P03_RAW_LABEL_BEFORE_SHAPE/expected.json",
+      "sha256": "e763c61e53d20e95d17ab0ff4694623e765e977dd093e3a0d95769b015eadd31"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/review-01/complementary-controls/P03_RAW_LABEL_BEFORE_SHAPE/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/review-01/complementary-controls/P03_RAW_LABEL_BEFORE_SHAPE/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 9616,
+      "path": "examples/quorum-context-v1/review-01/complementary-controls/P04_ROSTER_ROW_SEAT_BEFORE_LATER_PIN/body.json",
+      "sha256": "d679882677a819d627af429c4ecd3c50e5ff6bfefb54331f3a8e3cf110e6e22c"
+    },
+    {
+      "bytes": 76,
+      "path": "examples/quorum-context-v1/review-01/complementary-controls/P04_ROSTER_ROW_SEAT_BEFORE_LATER_PIN/expected.json",
+      "sha256": "2bfd2901e4812ef9b0040a2f8d37885c4d0ba3f3df426239dcc1f37b19ac9611"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/review-01/complementary-controls/P04_ROSTER_ROW_SEAT_BEFORE_LATER_PIN/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/review-01/complementary-controls/P04_ROSTER_ROW_SEAT_BEFORE_LATER_PIN/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8530,
+      "path": "examples/quorum-context-v1/review-01/complementary-controls/P05_ORDER_BEFORE_SEAT_ORIGIN/body.json",
+      "sha256": "9663695bf3e8964089ae8a194a16c652308440940db83ba021c27057116da0d5"
+    },
+    {
+      "bytes": 78,
+      "path": "examples/quorum-context-v1/review-01/complementary-controls/P05_ORDER_BEFORE_SEAT_ORIGIN/expected.json",
+      "sha256": "c7e6dbbad2dc0da4f1a200b7eba9c0dfc49e8c2fc1080f9e5337b5b43bf00286"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-context-v1/review-01/complementary-controls/P05_ORDER_BEFORE_SEAT_ORIGIN/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-context-v1/review-01/complementary-controls/P05_ORDER_BEFORE_SEAT_ORIGIN/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 4318,
+      "path": "examples/quorum-context-v1/review-01/complementary-controls/oracle.json",
+      "sha256": "50b2a656abe53b9b32276acb63fbe9d6c972df280c8696f2b634428825edbf3e"
+    },
+    {
+      "bytes": 864,
+      "path": "examples/quorum-context-v1/review-01/complementary-controls/shape-only-inspection.json",
+      "sha256": "ec3c8a12432a4c7f2f387c737d609e3cad2aef8a498da73ec59e1696e075088c"
+    },
+    {
+      "bytes": 15176,
+      "path": "examples/quorum-context-v1/review-01/first-reviewed-contract.json",
+      "sha256": "0c65e6038d3b1de69ffac587069aed9e3f238dd470ef9bc67c3160f16d2de469"
+    },
+    {
+      "bytes": 4105,
+      "path": "examples/quorum-context-v1/review-01/first-reviewed-design-addendum.json",
+      "sha256": "440b21365d40fabf22b6a618ff2f0842cf5eef9d9111d9fbaed9c3cdcbb6ea0e"
+    },
+    {
+      "bytes": 8389,
+      "path": "examples/quorum-context-v1/review-01/independent-prefreeze-review.json",
+      "sha256": "b621345f89cd60d481e9b700be894aa4c938dd87d8c3efdc260f31b609f122cf"
+    },
+    {
+      "bytes": 2396,
+      "path": "examples/quorum-context-v1/review-01/initial-review-findings.json",
+      "sha256": "15895080a638cb88d2837129ed8492d0e6a811d1bfa3cf872837a513bba47106"
+    },
+    {
+      "bytes": 5941,
+      "path": "examples/quorum-context-v1/review-01/inspect-author-oracle.py",
+      "sha256": "847ea849ae1d46f2f46b678bdf6b5fff30b977dd05f4147b8336588c8e142d52"
+    },
+    {
+      "bytes": 3338,
+      "path": "examples/quorum-context-v1/review-01/prepare-complementary-controls.py",
+      "sha256": "fd43387c8b090c658667587e3ff361adea8aa9eaa6fde86967fd8b016a34b1e4"
+    },
+    {
+      "bytes": 4148,
+      "path": "examples/quorum-context-v1/review-01/typed-edge-inventory.json",
+      "sha256": "40404a7c89aa454af3671ed3a9ce2dcd58782bd3ff5ee948364c6808de22b3d0"
+    },
+    {
+      "bytes": 1750,
+      "path": "install/check_source.py",
+      "sha256": "c30004ded45fcccad45b3d9cea7602dd7a23654d83d88eeeafd97d1b76ac0cc3"
+    },
+    {
+      "bytes": 11853,
+      "path": "install/test_quorum_context.py",
+      "sha256": "4a7a707d23a464e59936c4b4495eb9a9e92451594e3e84215b838af4c59d468b"
+    },
+    {
+      "bytes": 32177,
+      "path": "tools/transport_quorum_body.schema.json",
+      "sha256": "b6c7cafc1d4f1703188f7bdcb2150316feadc6b870eda9495ee146e2f429f8aa"
+    },
+    {
+      "bytes": 9598,
+      "path": "tools/transport_quorum_claim.py",
+      "sha256": "c361d626536f4dbd1f1079b613a0ba52375e78af5b09295ef151e276010d5425"
+    },
+    {
+      "bytes": 11909,
+      "path": "tools/transport_quorum_context.py",
+      "sha256": "b5044424809ae2a990c1c0657bd3ef9715204cb1d85bd71d422de7615f1403fd"
+    },
+    {
+      "bytes": 5524,
+      "path": "tools/transport_quorum_graph.py",
+      "sha256": "40edaed32f10d2803a3be59e33130d62f7724de3e67eeaadf9c8d823c5dc4902"
+    },
+    {
+      "bytes": 16222,
+      "path": "tools/transport_quorum_impact.py",
+      "sha256": "3ad91c1acb9a68ce249df23aefd0caa776bd0ccc82e29887264ef730728a1b42"
+    },
+    {
+      "bytes": 4952,
+      "path": "tools/transport_quorum_input.py",
+      "sha256": "6a90037a747b0cc2965dcf1b7169220a9732a16080ca0f3ca7c3b24d0349d653"
+    },
+    {
+      "bytes": 16277,
+      "path": "tools/transport_quorum_shape.py",
+      "sha256": "6fef25a491be924fb310ecafe581da9da9f3dfa19baf44b956838745c95f2170"
+    },
+    {
+      "bytes": 11078,
+      "path": "tools/transport_quorum_source.py",
+      "sha256": "3a356f0e135900bdbe1ce1199579e8b08978b5f00a4ab499b709993466279616"
+    },
+    {
+      "bytes": 8622,
+      "path": "tools/transport_schema.py",
+      "sha256": "1c324b661314bd3a92f23b4502207f38a483baa6565d479838de450f110eeb1a"
+    },
+    {
+      "bytes": 6691,
+      "path": "tools/transport_wire.py",
+      "sha256": "2a0fa77da78ae4591fc296f6ce4f62e961c68ed992479ffe59974e236b0f58c4"
+    }
+  ],
+  "formal_proof": "UNPROVEN",
+  "full_replay": "UNRUN",
+  "installed_decoder": "UNCHANGED_NOT_INTEGRATED",
+  "observed_output_records": 195,
+  "observed_test_methods": 5,
+  "product_acceptance": false,
+  "schema": "quorum/context-component-receipt/1",
+  "status": "TESTED"
+}

@@ -341,7 +341,7 @@ def _paths(result: dict, indices: dict, edges: list, affected: dict,
         _fail('OUTPUT_ACCOUNTING', 'OUTPUT_BOUNDS')
 
 
-def _validated_impact(body_raw: object, originals: object, held_update_pins: object) -> tuple:
+def _validated_impact_details(body_raw: object, originals: object, held_update_pins: object) -> tuple:
     """Private owned bundle exposed only after the complete inherited result gate."""
     body, sources, claim_result, schema = claims._validated_claims(body_raw, originals)
     held = _held_arguments(held_update_pins)
@@ -358,6 +358,12 @@ def _validated_impact(body_raw: object, originals: object, held_update_pins: obj
     entries = _claim_entries(claim_result, indices, affected, conflicts)
     result, size = _skeleton(claim_result, entries, updates, history, recorded, conflicts)
     _paths(result, indices, edges, affected, updates, size)
+    return body, sources, claim_result, result, schema
+
+
+def _validated_impact(body_raw: object, originals: object, held_update_pins: object) -> tuple:
+    """Preserve the established private tuple and every inherited refusal."""
+    body, sources, _, result, schema = _validated_impact_details(body_raw, originals, held_update_pins)
     return body, sources, result, schema
 
 

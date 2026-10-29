@@ -77,6 +77,11 @@ jobs:
           python3 -I -S -B -Werror install/test_quorum_context.py
           python3 -I -S -B -O -Werror install/test_quorum_context.py
           python3 -I -S -B -Werror examples/quorum-context-v1/prepare_receipt.py --check
+      - name: QUORUM reading references and retained stance counts
+        run: |
+          python3 -I -S -B -Werror install/test_quorum_reading.py
+          python3 -I -S -B -O -Werror install/test_quorum_reading.py
+          python3 -I -S -B -Werror examples/quorum-reading-v1/prepare_receipt.py --check
       - name: Response contracts and checked draft submission
         run: |
           response_checks=$(mktemp -d)
