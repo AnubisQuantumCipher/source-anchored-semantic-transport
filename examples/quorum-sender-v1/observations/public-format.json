@@ -1,0 +1,38 @@
+[
+  {
+    "name": "refuse-canonical-destination",
+    "argv": [
+      "python3",
+      "-I",
+      "-S",
+      "-B",
+      "install/transport_public_share.py",
+      "format",
+      "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/quorum-sender-v1/recipient/share.txt",
+      "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/quorum-sender-v1/recipient/public-share.txt",
+      "--budget",
+      "512"
+    ],
+    "exit_code": 2,
+    "stdout": "{\"reason\":\"PUBLIC_SHARE_CANONICAL_DESTINATION\",\"schema\":\"transport/public-share-refusal/1\",\"status\":\"REFUSED_PUBLIC_SHARE\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "public-companion",
+    "argv": [
+      "python3",
+      "-I",
+      "-S",
+      "-B",
+      "install/transport_public_share.py",
+      "format",
+      "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/quorum-sender-v1/recipient/share.txt",
+      "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/quorum-sender-v1/public-share.txt",
+      "--budget",
+      "512"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"budget\":512,\"characters\":244,\"cred\":\"CRED:a9b4f61db4e096f9964c667687153544775c08bf6b3c23731464b666a03b1249\",\"input\":{\"bytes\":175,\"sha256\":\"bcff08d4acac493c0f4e604f3dab8b4b5585b2a1544032e2d6ad382a56f32154\"},\"output\":{\"bytes\":245,\"sha256\":\"924b870082f1f7e9f620e325bab2f74219bdbf74840127dc821accb88229dd33\"},\"schema\":\"transport/public-share-format/1\",\"status\":\"FORMATTED_COMPANION\"}\n",
+    "stderr": ""
+  }
+]
