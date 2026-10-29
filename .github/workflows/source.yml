@@ -39,8 +39,18 @@ jobs:
         run: python3 -I -S -B -Werror install/test_install_layout.py -v
       - name: Portable pinned source distribution controls
         run: python3 -I -S -B -Werror install/test_source_distribution.py -v
+      - name: Exact readable dictionaries and qualified native reuse
+        run: |
+          python3 -I -S -B -Werror install/test_lexicon_registry.py
+          python3 -I -S -B -Werror install/test_repackage.py
+      - name: Held-out source-bound response controls
+        run: |
+          python3 -I -S -B -Werror examples/heldout-release-v1/build_plan.py --check
+          python3 -I -S -B -Werror examples/heldout-release-v1/test_check_response.py
       - name: Original-document handoff client controls
         run: python3 -I -S -B -Werror install/test_handoff_client.py -v
+      - name: Bounded focus pagination and session controls
+        run: python3 -I -S -B -Werror install/test_focus_page.py -v
       - name: Response contracts and checked draft submission
         run: |
           response_checks=$(mktemp -d)

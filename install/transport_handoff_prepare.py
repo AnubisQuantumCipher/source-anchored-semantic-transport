@@ -114,15 +114,23 @@ def interface(root, state, binding):
              + state['task'].decode('utf-8') + '\n\nReader command (send one raw JSON object on stdin):\n'
              + command + '\n\nStart with {"action":"describe"}. Generic closed action shapes:\n'
              '{"action":"catalog"}\n{"action":"page","source":"SOURCE_ID","offset":0}\n'
-             + ('{"action":"focus","unit":"UNIT_ID"}\n' if state['config']['arm'] == 'transport' else '')
+             + ('{"action":"focus_page","unit":"UNIT_ID","offset":0}\n'
+                '{"action":"focus","unit":"UNIT_ID"}\n' if state['config']['arm'] == 'transport' else '')
              + '{"action":"finish","candidate_base64":"BASE64_OF_EXACT_UTF8_JSON_OBJECT_BYTES"}\n\n'
              'For a caller-declared source-evidence contract, finish_evidence additionally requires '
              'evidence_contract_base64 and expect_evidence_contract_sha256, replacing action finish. '
              'It verifies selected candidate citation spans before saving, not claim entailment.\n\n'
              'Use catalog source identifiers and task-directed reads. Source pages are 4096 bytes. '
-             + ('Before transport focus, discover declared unit identifiers in a checked page response at '
+             + ('Prefer focus_page for bounded transport output. Discover declared unit identifiers in a checked page response at '
                 'result.review.meaning_units[].unit, or use an explicit task selector. '
-                'Focus supplies no completeness guarantee. ' if state['config']['arm'] == 'transport' else '')
+                'Start focus_page at offset 0 and follow next_offset until null. Base64-decode bytes_base64, require '
+                'contiguous offsets and unchanged unit/package_identity/total_bytes/sha256, concatenate exact bytes, '
+                'and verify the full sha256 before parsing the canonical UTF-8 JSON. Each page contains at most 4096 '
+                'raw bytes and its complete response at most 8192 UTF-8 bytes including LF. Set the calling tool output '
+                'allowance to retain at least 8192 bytes and check for truncation. Partial pages are not complete '
+                'semantic views. Re-fetching rechecks the whole package and consumes a call; budget reads within '
+                'the remaining 32-call session. Legacy focus remains available but may exceed a surrounding tool display. '
+                'Neither route establishes context adequacy or completeness. ' if state['config']['arm'] == 'transport' else '')
              + 'Maximum 32 calls including admitted refusals; requests at most 65536 bytes, candidates 32768 bytes, '
              'responses 131072 bytes including LF. Finish saves the exact draft once; it does not certify correctness. '
              'Use --request-json with one JSON argument instead of --stdin if needed. '

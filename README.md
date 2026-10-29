@@ -19,6 +19,7 @@ This is an open-source implementation under the [MIT license](LICENSE), targetin
 - A local CLI, a read-only MCP adapter, and a source-build installer that derives an exact runtime identity without editing the original source pins.
 - A [portable source export](docs/SOURCE_DISTRIBUTION.md) that packages the exact codec build inputs and an authoring example, with deterministic ZIP validation and byte-checked extraction before any build.
 - A reusable handoff preparer and compact receiving client with a fixed session, checked inputs, and an unedited draft submission.
+- Bounded focus pages for larger receiving tasks, with exact byte reassembly and unchanged session limits; the [museum continuation case](examples/heldout-release-v1/README.md) supplies preparation, paging and response checks.
 - An opt-in checked submission command that validates explicit field types, allowed values and unique action IDs before saving a draft.
 - Optional source-evidence checks that reject citations whose source revision, byte location or quotation does not match the recovered source; the [recipient demonstration](examples/checked-evidence-v1/REPORT.md) retains its failed first trial and passing task/contract repair.
 - A bounded, typed Boolean-expression interpreter for fixture bindings: it checks proposed patches against supplied states without executing candidate Python code.
@@ -70,6 +71,7 @@ The short formula is an entry point into the package. It cannot independently re
 - [Missing-record trial and retained failures](docs/MISSING_RECORD_HANDOFF.md)
 - [Three-hop comparison and its retained output failures](docs/REPEATED_HANDOFF.md)
 - [Checked coding continuation, repaired submission and baseline comparison](docs/CHECKED_CONTINUATION.md)
+- [Museum continuation with readable dictionary sharing and bounded focus pages](examples/heldout-release-v1/README.md)
 - [Source review, interpretation gaps and governing records](docs/SOURCE_REVIEW.md)
 - [Reproducible handoff with corrections, revocation and missing evidence](examples/handoff-v1/README.md)
 - [Security boundaries](SECURITY.md)
