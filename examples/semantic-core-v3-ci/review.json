@@ -1,0 +1,316 @@
+{
+  "assurance_boundary": [
+    "Local tests and source continuity checked; post-push hosted execution not observed.",
+    "Push/PR triggers reviewed; branch-protection required-check configuration not verified.",
+    "No new proof claim; original native proof scope and source/model/English entailment limitations remain.",
+    "Cross-family QUORUM policy and failed receiving-agent attempt outside this correction review."
+  ],
+  "conclusions": [
+    "All sealed source pins checked; only exact reversible import bootstrap allowed, then original byte length and SHA required.",
+    "Complete sealed artifact inventory checked; no resealing, dropped source pin, runtime mutation or historical receipt rewrite.",
+    "Core coverage exactly five tools/transport_core*.py files; AST and function counts bounded, functions at most 60 lines.",
+    "Historical gates run at exact 02f0bfee and 13681d09; current continuity and direct tests execute separately."
+  ],
+  "current_pins": {
+    ".github/workflows/engineering-evidence.yml": {
+      "bytes": 1949,
+      "sha256": "58267df7cae9d33bf642d4448a09c36d3a762aaea9fd401f8315c8b5eefe0cb1"
+    },
+    ".github/workflows/semantic-core.yml": {
+      "bytes": 1399,
+      "sha256": "c70b6228d27c3292d84fd71a071cb242ced189ddd8218e50673231346be9ce4d"
+    },
+    ".github/workflows/source.yml": {
+      "bytes": 6104,
+      "sha256": "d4c3d1bd1cfd59c2a4d939421ce668f5ada199c24b92f80984aad6c9ff2d6166"
+    },
+    "examples/semantic-core-v3-ci/README.md": {
+      "bytes": 1572,
+      "sha256": "05aa3bb1a3789b41e7314aa8279b40ef6112351f893b14472f0d94bb6b9aa2b2"
+    },
+    "examples/semantic-core-v3-ci/check_continuity.py": {
+      "bytes": 6113,
+      "sha256": "86004e938e97d822d94a2a7099af4d91465b06aca864ebabbb0264d1817e86e1"
+    },
+    "examples/semantic-core-v3-ci/test_continuity.py": {
+      "bytes": 3911,
+      "sha256": "fd5c4a0ff873c94ba31fb273e83dad858d06639596bffd0fddb25cebcc83db2e"
+    },
+    "examples/semantic-core-v3-review/final-review-receipt.json": {
+      "bytes": 3258,
+      "sha256": "f367e067f1d2331cd2d1b003bfa37e73c388204610b0ed371f810cbf6a1399e5"
+    },
+    "examples/semantic-core-v3/receipt.json": {
+      "bytes": 99256,
+      "sha256": "54c2b2a67acfbda9c6629b6b298d0dca111b1ec384abccca0ab18cfb0180a9a1"
+    },
+    "install/check_source.py": {
+      "bytes": 1798,
+      "sha256": "1c8c712b6b4e43577d469db32d951c2c86bb6a08ef3abd3cbd0a4b4389542940"
+    },
+    "tests/test_transport_core_language.py": {
+      "bytes": 10520,
+      "sha256": "24627c5415a254dd5b65bf47371d335f1fd146f32beb57b07ad4dd2d3ce6ca17"
+    }
+  },
+  "findings": [
+    {
+      "detail": "New job renamed semantic-core-controls; distinct from source-controls.",
+      "id": "CI-CHECK-IDENTITY",
+      "status": "RESOLVED"
+    }
+  ],
+  "historical_base": "13681d09ea132f84e1c890d839122a9bd6a50672",
+  "historical_restoration": [
+    {
+      "bytes": 6104,
+      "equal_to_02f0bfee": true,
+      "path": ".github/workflows/source.yml",
+      "sha256": "d4c3d1bd1cfd59c2a4d939421ce668f5ada199c24b92f80984aad6c9ff2d6166"
+    },
+    {
+      "bytes": 1798,
+      "equal_to_02f0bfee": true,
+      "path": "install/check_source.py",
+      "sha256": "1c8c712b6b4e43577d469db32d951c2c86bb6a08ef3abd3cbd0a4b4389542940"
+    }
+  ],
+  "local_checks": [
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "examples/semantic-core-v3-ci/check_continuity.py"
+      ],
+      "exit": 0,
+      "id": "continuity",
+      "stderr": "",
+      "stdout": "{\"allowed_change\": \"tests/test_transport_core_language.py: exact isolated import bootstrap only\", \"core_functions\": [{\"file\": \"transport_core.py\", \"function\": \"identifier\", \"lines\": 3}, {\"file\": \"transport_core.py\", \"function\": \"records\", \"lines\": 3}, {\"file\": \"transport_core.py\", \"function\": \"binding\", \"lines\": 20}, {\"file\": \"transport_core.py\", \"function\": \"symbols\", \"lines\": 21}, {\"file\": \"transport_core.py\", \"function\": \"predicate\", \"lines\": 7}, {\"file\": \"transport_core.py\", \"function\": \"node_kind\", \"lines\": 21}, {\"file\": \"transport_core.py\", \"function\": \"tree\", \"lines\": 15}, {\"file\": \"transport_core.py\", \"function\": \"plan\", \"lines\": 9}, {\"file\": \"transport_core.py\", \"function\": \"model\", \"lines\": 15}, {\"file\": \"transport_core.py\", \"function\": \"symbol_wire\", \"lines\": 5}, {\"file\": \"transport_core.py\", \"function\": \"node_wire\", \"lines\": 7}, {\"file\": \"transport_core.py\", \"function\": \"wire\", \"lines\": 17}, {\"file\": \"transport_core.py\", \"function\": \"display\", \"lines\": 12}, {\"file\": \"transport_core.py\", \"function\": \"native_values\", \"lines\": 14}, {\"file\": \"transport_core_bridge.py\", \"function\": \"pinned\", \"lines\": 6}, {\"file\": \"transport_core_bridge.py\", \"function\": \"runtime\", \"lines\": 8}, {\"file\": \"transport_core_bridge.py\", \"function\": \"workspace\", \"lines\": 8}, {\"file\": \"transport_core_bridge.py\", \"function\": \"call\", \"lines\": 11}, {\"file\": \"transport_core_bridge.py\", \"function\": \"translation\", \"lines\": 6}, {\"file\": \"transport_core_bridge.py\", \"function\": \"envelope\", \"lines\": 10}, {\"file\": \"transport_core_bridge.py\", \"function\": \"check_envelope\", \"lines\": 10}, {\"file\": \"transport_core_bridge.py\", \"function\": \"courier_plan\", \"lines\": 14}, {\"file\": \"transport_core_bridge.py\", \"function\": \"encode\", \"lines\": 39}, {\"file\": \"transport_core_bridge.py\", \"function\": \"recover\", \"lines\": 12}, {\"file\": \"transport_core_bridge.py\", \"function\": \"evaluate\", \"lines\": 14}, {\"file\": \"transport_core_bridge.py\", \"function\": \"decode\", \"lines\": 24}, {\"file\": \"transport_core_cli.py\", \"function\": \"arguments\", \"lines\": 23}, {\"file\": \"transport_core_cli.py\", \"function\": \"draft\", \"lines\": 11}, {\"file\": \"transport_core_cli.py\", \"function\": \"run\", \"lines\": 12}, {\"file\": \"transport_core_cli.py\", \"function\": \"main\", \"lines\": 14}, {\"file\": \"transport_core_language.py\", \"function\": \"outside\", \"lines\": 6}, {\"file\": \"transport_core_language.py\", \"function\": \"role_symbols\", \"lines\": 20}, {\"file\": \"transport_core_language.py\", \"function\": \"expected_tree\", \"lines\": 11}, {\"file\": \"transport_core_language.py\", \"function\": \"canonical_sentence\", \"lines\": 6}, {\"file\": \"transport_core_language.py\", \"function\": \"parse_fragment\", \"lines\": 24}, {\"file\": \"transport_core_language.py\", \"function\": \"bounded_canonical\", \"lines\": 25}, {\"file\": \"transport_core_language.py\", \"function\": \"validate_translation\", \"lines\": 12}, {\"file\": \"transport_core_process.py\", \"function\": \"limit\", \"lines\": 5}, {\"file\": \"transport_core_process.py\", \"function\": \"child_limits\", \"lines\": 8}, {\"file\": \"transport_core_process.py\", \"function\": \"run_bounded\", \"lines\": 29}], \"current_source_files\": 59, \"proof_scope\": \"Existing sealed receipt unchanged; no new proof claim\", \"runtime_drift\": \"NONE_IN_SEALED_SOURCE_INVENTORY\", \"sealed_receipt_sha256\": \"54c2b2a67acfbda9c6629b6b298d0dca111b1ec384abccca0ab18cfb0180a9a1\", \"status\": \"CHECKED_IMPORT_ONLY_CONTINUITY\"}\n"
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "examples/semantic-core-v3-ci/test_continuity.py"
+      ],
+      "exit": 0,
+      "id": "continuity-normal",
+      "stderr": "............\n----------------------------------------------------------------------\nRan 12 tests in 0.455s\n\nOK\n",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "-O",
+        "examples/semantic-core-v3-ci/test_continuity.py"
+      ],
+      "exit": 0,
+      "id": "continuity-optimized",
+      "stderr": "............\n----------------------------------------------------------------------\nRan 12 tests in 0.475s\n\nOK\n",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "tests/test_transport_core.py",
+        "CoreIndependentChecks.test_schema_guards"
+      ],
+      "exit": 0,
+      "id": "schema-normal",
+      "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.015s\n\nOK\n",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "-O",
+        "tests/test_transport_core.py",
+        "CoreIndependentChecks.test_schema_guards"
+      ],
+      "exit": 0,
+      "id": "schema-optimized",
+      "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.015s\n\nOK\n",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "tests/test_transport_core.py",
+        "CoreIndependentChecks.test_published_operator_dictionary_matches_frozen_oracle"
+      ],
+      "exit": 0,
+      "id": "dictionary",
+      "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nOK\n",
+      "stdout": ""
+    }
+  ],
+  "prior_checks_artifact": {
+    "bytes": 2977,
+    "sha256": "9640e818d40a74906518522cf4e919db197779d287066ea55fd8cdb7ae91cb0c"
+  },
+  "prior_local_checks": [
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "examples/quorum-graph-v1/prepare_receipt.py",
+        "--check"
+      ],
+      "exit": 0,
+      "id": "quorum-graph",
+      "stderr": "",
+      "stdout": "COMPONENT_RECEIPT_CHECKED\n"
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "examples/quorum-input-v1/prepare_receipt.py",
+        "--check"
+      ],
+      "exit": 0,
+      "id": "quorum-input",
+      "stderr": "",
+      "stdout": "INPUT_RECEIPT_CHECKED\n"
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "examples/quorum-source-v1/prepare_receipt.py",
+        "--check"
+      ],
+      "exit": 0,
+      "id": "quorum-source",
+      "stderr": "",
+      "stdout": "SOURCE_RECEIPT_CHECKED\n"
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "examples/quorum-claim-v1/prepare_receipt.py",
+        "--check"
+      ],
+      "exit": 0,
+      "id": "quorum-claim",
+      "stderr": "",
+      "stdout": "CLAIM_RECEIPT_CHECKED\n"
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "examples/quorum-impact-v1/prepare_receipt.py",
+        "--check"
+      ],
+      "exit": 0,
+      "id": "quorum-impact",
+      "stderr": "",
+      "stdout": "IMPACT_RECEIPT_CHECKED\n"
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "examples/quorum-context-v1/prepare_receipt.py",
+        "--check"
+      ],
+      "exit": 0,
+      "id": "quorum-context",
+      "stderr": "",
+      "stdout": "CONTEXT_RECEIPT_CHECKED\n"
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "examples/quorum-reading-v1/prepare_receipt.py",
+        "--check"
+      ],
+      "exit": 0,
+      "id": "quorum-reading",
+      "stderr": "",
+      "stdout": "READING_RECEIPT_CHECKED\n"
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "tests/test_transport_core_language.py"
+      ],
+      "exit": 0,
+      "id": "language-normal",
+      "stderr": "...............\n----------------------------------------------------------------------\nRan 15 tests in 0.007s\n\nOK\n",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-O",
+        "-Werror",
+        "tests/test_transport_core_language.py"
+      ],
+      "exit": 0,
+      "id": "language-optimized",
+      "stderr": "...............\n----------------------------------------------------------------------\nRan 15 tests in 0.010s\n\nOK\n",
+      "stdout": ""
+    }
+  ],
+  "prior_review_limit": "Prior final review missed dependency pins on source.yml/check_source.py and isolated direct language-test import failure. Prior review retained unchanged; it is not current CI acceptance.",
+  "reviewer_role": "Independent GPT-6.1 review; no model or native proof calls in this correction review",
+  "schema": "transport/semantic-core-ci-correction-independent-review/1",
+  "scope": "Exact historical restoration, exact import-only test repair, versioned CI source continuity and bounded core function coverage.",
+  "sealed_example_and_prior_review_unchanged": true,
+  "smallest_next_step": "Commit scoped correction and observe all exact-commit hosted workflows. Local checks do not establish hosted success.",
+  "status": "CHECKED_LOCAL_CORRECTION"
+}

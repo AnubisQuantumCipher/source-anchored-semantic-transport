@@ -1,0 +1,191 @@
+[
+  {
+    "command": [
+      "python3",
+      "-I",
+      "-S",
+      "-B",
+      "-Werror",
+      "tests/test_transport_core.py",
+      "CoreIndependentChecks.test_schema_guards"
+    ],
+    "exit_code": 0,
+    "elapsed_ns": 75456738,
+    "output_prefix": "normal-0"
+  },
+  {
+    "command": [
+      "python3",
+      "-I",
+      "-S",
+      "-B",
+      "-Werror",
+      "tests/test_transport_core.py",
+      "CoreIndependentChecks.test_published_operator_dictionary_matches_frozen_oracle"
+    ],
+    "exit_code": 0,
+    "elapsed_ns": 71242356,
+    "output_prefix": "normal-1"
+  },
+  {
+    "command": [
+      "python3",
+      "-I",
+      "-S",
+      "-B",
+      "-Werror",
+      "tests/test_transport_core_language.py"
+    ],
+    "exit_code": 0,
+    "elapsed_ns": 66552433,
+    "output_prefix": "normal-2"
+  },
+  {
+    "command": [
+      "python3",
+      "-I",
+      "-S",
+      "-B",
+      "-Werror",
+      "-O",
+      "tests/test_transport_core.py",
+      "CoreIndependentChecks.test_schema_guards"
+    ],
+    "exit_code": 0,
+    "elapsed_ns": 97504187,
+    "output_prefix": "optimized-0"
+  },
+  {
+    "command": [
+      "python3",
+      "-I",
+      "-S",
+      "-B",
+      "-Werror",
+      "-O",
+      "tests/test_transport_core.py",
+      "CoreIndependentChecks.test_published_operator_dictionary_matches_frozen_oracle"
+    ],
+    "exit_code": 0,
+    "elapsed_ns": 81943205,
+    "output_prefix": "optimized-1"
+  },
+  {
+    "command": [
+      "python3",
+      "-I",
+      "-S",
+      "-B",
+      "-Werror",
+      "-O",
+      "tests/test_transport_core_language.py"
+    ],
+    "exit_code": 0,
+    "elapsed_ns": 71386815,
+    "output_prefix": "optimized-2"
+  },
+  {
+    "command": [
+      "python3",
+      "-I",
+      "-S",
+      "-B",
+      "-Werror",
+      "examples/quorum-claim-v1/prepare_receipt.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "output_prefix": "quorum-claim-v1"
+  },
+  {
+    "command": [
+      "python3",
+      "-I",
+      "-S",
+      "-B",
+      "-Werror",
+      "examples/quorum-context-v1/prepare_receipt.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "output_prefix": "quorum-context-v1"
+  },
+  {
+    "command": [
+      "python3",
+      "-I",
+      "-S",
+      "-B",
+      "-Werror",
+      "examples/quorum-graph-v1/prepare_receipt.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "output_prefix": "quorum-graph-v1"
+  },
+  {
+    "command": [
+      "python3",
+      "-I",
+      "-S",
+      "-B",
+      "-Werror",
+      "examples/quorum-impact-v1/prepare_receipt.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "output_prefix": "quorum-impact-v1"
+  },
+  {
+    "command": [
+      "python3",
+      "-I",
+      "-S",
+      "-B",
+      "-Werror",
+      "examples/quorum-input-v1/prepare_receipt.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "output_prefix": "quorum-input-v1"
+  },
+  {
+    "command": [
+      "python3",
+      "-I",
+      "-S",
+      "-B",
+      "-Werror",
+      "examples/quorum-reading-v1/prepare_receipt.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "output_prefix": "quorum-reading-v1"
+  },
+  {
+    "command": [
+      "python3",
+      "-I",
+      "-S",
+      "-B",
+      "-Werror",
+      "examples/quorum-replay-v1/prepare_receipt.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "output_prefix": "quorum-replay-v1"
+  },
+  {
+    "command": [
+      "python3",
+      "-I",
+      "-S",
+      "-B",
+      "-Werror",
+      "examples/quorum-source-v1/prepare_receipt.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "output_prefix": "quorum-source-v1"
+  }
+]

@@ -1,0 +1,28 @@
+name: Closed semantic core controls
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  semantic-core-controls:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.14.10'
+          architecture: 'x64'
+          check-latest: false
+          allow-prereleases: false
+      - name: Current source continuity and bounded function controls
+        run: |
+          python3 -I -S -B -Werror examples/semantic-core-v3-ci/check_continuity.py
+          python3 -I -S -B -Werror examples/semantic-core-v3-ci/test_continuity.py
+          python3 -I -S -B -O -Werror examples/semantic-core-v3-ci/test_continuity.py
+      - name: Closed grammar 3 schema and controlled translation
+        run: |
+          python3 -I -S -B -Werror tests/test_transport_core.py CoreIndependentChecks.test_schema_guards
+          python3 -I -S -B -O -Werror tests/test_transport_core.py CoreIndependentChecks.test_schema_guards
+          python3 -I -S -B -Werror tests/test_transport_core.py CoreIndependentChecks.test_published_operator_dictionary_matches_frozen_oracle
+          python3 -I -S -B -Werror tests/test_transport_core_language.py
+          python3 -I -S -B -O -Werror tests/test_transport_core_language.py

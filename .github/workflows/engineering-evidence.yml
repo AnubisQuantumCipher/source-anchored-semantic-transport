@@ -13,6 +13,11 @@ jobs:
         with:
           ref: 02f0bfee2d5f454e51869832fa70662d4de6229e
           path: historical-engineering-source
+      - name: Check out the exact source of the sealed grammar 3 receipt
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: 13681d09ea132f84e1c890d839122a9bd6a50672
+          path: historical-semantic-source
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
         with:
           python-version: '3.14.10'
@@ -25,8 +30,11 @@ jobs:
           python3 -I -S -B -Werror examples/engineering-closure-v1/test_receipt.py
           python3 -I -S -B -O -Werror examples/engineering-closure-v1/test_receipt.py
           python3 -I -S -B -Werror examples/engineering-closure-v1/receipt.py --check
-      - name: Current grammar 3 source-bound evidence and tamper controls
+      - name: Frozen grammar 3 evidence and tamper controls on their sealed source
+        working-directory: historical-semantic-source
         run: |
           python3 -I -S -B -Werror examples/semantic-core-v3/test_receipt.py
           python3 -I -S -B -O -Werror examples/semantic-core-v3/test_receipt.py
           python3 -I -S -B -Werror examples/semantic-core-v3/receipt.py --check
+      - name: Current source continuity with the frozen proof and integration evidence
+        run: python3 -I -S -B -Werror examples/semantic-core-v3-ci/check_continuity.py
