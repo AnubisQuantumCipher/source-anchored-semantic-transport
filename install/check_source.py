@@ -10,7 +10,8 @@ CONTINUATION = ROOT / 'examples/checked-continuation-v1/check_response.py'
 HELDOUT = ROOT / 'examples/heldout-release-v1'
 QUORUM_GRAPH = ROOT / 'tools/transport_quorum_graph.py'
 QUORUM_INPUT = {ROOT / 'tools' / name for name in
-                ('transport_quorum_input.py', 'transport_quorum_shape.py')}
+                ('transport_quorum_input.py', 'transport_quorum_shape.py',
+                 'transport_quorum_source.py')}
 
 
 def main() -> None:

@@ -128,14 +128,20 @@ def check_canonical_value(raw: object) -> dict[str, str]:
     return dict(status='ok', stage='CANONICAL_VALUE_ONLY')
 
 
+def _validated_body(raw: object) -> dict:
+    """Private owned Body after the complete existing input gate, not a bypass."""
+    from transport_quorum_shape import check_shape, load_schema
+    schema = load_schema()
+    value = _read_value(raw)
+    check_shape(value, schema)
+    _canonical_bytes(value, raw)
+    return value
+
+
 def check_body_input(raw: object) -> dict[str, str]:
     """Validate metadata input only; no source, interpretation or authority claim."""
-    from transport_quorum_shape import check_shape, load_schema
     try:
-        schema = load_schema()
-        value = _read_value(raw)
-        check_shape(value, schema)
-        _canonical_bytes(value, raw)
+        _validated_body(raw)
     except InputError as error:
         return _error(error)
     return dict(status='ok', stage='BODY_INPUT_SHAPE_ONLY')

@@ -3,9 +3,9 @@
   "external_validation": "EXTERNAL_VALIDATION_PENDING",
   "files": [
     {
-      "bytes": 4754,
+      "bytes": 4978,
       "path": ".github/workflows/source.yml",
-      "sha256": "d36683c19d846e38e617e6d36339d418ecd5ff7ffad944797747dfb6f8461e6d"
+      "sha256": "2173378461ccd7b1a927a8bf256e4e657bce2907e04e34b620a1e6a52297ad87"
     },
     {
       "bytes": 2322,
@@ -108,9 +108,24 @@
       "sha256": "28b07dbfbce622095ab7d21b000e49687f17e21712d421c607883314a519654b"
     },
     {
+      "bytes": 47235,
+      "path": "examples/quorum-input-v1/evidence/pre-source-ci-receipt.json",
+      "sha256": "661b9d45c0572feb16863d8f164bf7164c2e42243fbad9bd95a796f3c242a131"
+    },
+    {
       "bytes": 11183,
       "path": "examples/quorum-input-v1/evidence/raw-first-test.json",
       "sha256": "150516b64fe5e3793403a888150f190cfc043907d9bd305c02ff03cf11bc5034"
+    },
+    {
+      "bytes": 61555,
+      "path": "examples/quorum-input-v1/evidence/source-integration-independent-results.json",
+      "sha256": "25ec0c1055a05673434786abd67934f4339ab39ab0d19cfb9c2ff385f5f3ef81"
+    },
+    {
+      "bytes": 61555,
+      "path": "examples/quorum-input-v1/evidence/source-integration-root-results.json",
+      "sha256": "25ec0c1055a05673434786abd67934f4339ab39ab0d19cfb9c2ff385f5f3ef81"
     },
     {
       "bytes": 60097,
@@ -163,9 +178,9 @@
       "sha256": "38d8f9d6e057140ec5e7ec38a0f4cfe0bd1acfd741bbde939548a87d03ac378d"
     },
     {
-      "bytes": 3236,
+      "bytes": 3238,
       "path": "examples/quorum-input-v1/prepare_receipt.py",
-      "sha256": "a1baf68d3d26802e336b6dceeeb62e441899ae7a0a4421e75cce242074343340"
+      "sha256": "603a4a8aceb1f5189a36f6656fb8ca77be764bdc7440b47b11fff98fbc02ebf2"
     },
     {
       "bytes": 56015,
@@ -1233,9 +1248,9 @@
       "sha256": "2ae85a2b9f6a51ad5967b42ad24745ca26df0fbfa0a3e7d1cb24e486742ca4ed"
     },
     {
-      "bytes": 1596,
+      "bytes": 1643,
       "path": "install/check_source.py",
-      "sha256": "aef1bea297c33fbe0619e4bb7d51c3efbaf52a70b5c7d44a61a849f9048df537"
+      "sha256": "dddbf0cd1c5aff480f058cba11961b1de6847d885db9839c490dd462d809befa"
     },
     {
       "bytes": 11009,
@@ -1248,9 +1263,9 @@
       "sha256": "b6c7cafc1d4f1703188f7bdcb2150316feadc6b870eda9495ee146e2f429f8aa"
     },
     {
-      "bytes": 4570,
+      "bytes": 4727,
       "path": "tools/transport_quorum_input.py",
-      "sha256": "14a4105d184cd0964af07e4eec71a33c010e2ba65342631e8ce373e625f1b369"
+      "sha256": "5b5667dd264b5caacbe501b84d8807928c65ee530ad5b1fdf08b21aba081b49e"
     },
     {
       "bytes": 15510,

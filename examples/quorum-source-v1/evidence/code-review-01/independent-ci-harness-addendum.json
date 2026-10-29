@@ -1,0 +1,30 @@
+{
+  "schema":"quorum/source-independent-ci-harness-addendum/1",
+  "reviewer":"/root/quorum_graph_oracle",
+  "scope":"Only added portable loading/assertions and rerun of unchanged product under final CI harness. Prior product audit and first failures remain retained.",
+  "final_pins":{
+    "tools/transport_quorum_source.py":"791e2ae4d8e08d563ba4ebef01b3e8588218bdc958e03656b0bf14dfce74e98f",
+    "tools/transport_quorum_input.py":"5b5667dd264b5caacbe501b84d8807928c65ee530ad5b1fdf08b21aba081b49e",
+    "install/test_quorum_source.py":"6eba5037a91c3acb3d2dd2661fe26c4091cc179e5d42fc1abdf1f86badf596ae"
+  },
+  "prior_harness_pin":"c974a469f6193b3c3549332a27b3c13337de415caf7f96073eee3c12c918bb07",
+  "delta_review":[
+    "Additional fixture manifests are digest-pinned and candidate Body bytes are independently hash-checked before use. Runtime paths resolve through ROOT/examples, with no dependency on the temporary preparation directory.",
+    "Loader reconstructs only known frozen exact tuple/bytes cases; unknown construction tags refuse. Actual physical-copy and source-count probe inputs are preserved without checker-derived expected values.",
+    "The fourteen frozen additional cases retain exact error/full-output comparisons, with projection limited to the already-declared long-range selector-status observation. Final-LF identifier case still compares its complete result.",
+    "Two dedicated _binary tests require InputError and exact frozen stage/code. They remain explicitly PRIVATE_HELPER_ONLY and do not imply public cumulative-overflow reachability.",
+    "Host-key callback test resets counters after hostile dictionary construction and requires zero hash/equality callbacks across both checker calls.",
+    "No original case or expected outcome was weakened or deleted. All harness functions remain at most sixty physical lines and strict in-memory compilation passes."
+  ],
+  "execution":{
+    "status":"TESTED_PASS",
+    "test_methods":7,
+    "command":"PYTHONDONTWRITEBYTECODE=1 timeout --kill-after=2s 30s python -W error install/test_quorum_source.py --evidence CREATE_ONLY_PATH",
+    "receipt":"independent-suite-ci-final.json",
+    "warnings":"Warnings treated as errors; run passed.",
+    "product_source":"Unchanged exact source791e2ae4d8e08d563ba4ebef01b3e8588218bdc958e03656b0bf14dfce74e98f"
+  },
+  "retention":"First failed suite on initial source, prior repaired suite, additional independent probes, private R02 evidence and main code review remain unchanged. This addendum updates only the reviewed CI harness identity and final independent receipt.",
+  "verdict":"NO_MATERIAL_ADDED_HARNESS_DEFECT_IDENTIFIED; FINAL_SEVEN_METHOD_SUITE_PASSED_ON_EXACT_PINS",
+  "remaining_limits":"Bounded informational component only. Formal proof, full replay and product acceptance remain UNPROVEN/UNRUN/NOT_ACCEPTED."
+}
