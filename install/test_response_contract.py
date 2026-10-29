@@ -30,7 +30,7 @@ def frozen(path, held):
     raw = read_regular(path)
     require(sha(raw) == held, 'held test input freeze differs')
     value = json.loads(raw)
-    require(type(value['files']) is list and 0 < len(value['files']) <= 16, 'test input count bound')
+    require(type(value['files']) is list and 0 < len(value['files']) <= 17, 'test input count bound')
     for item in value['files']:
         data = read_regular(Path(item['path']))
         require(len(data) == item['bytes'] and sha(data) == item['sha256'], 'frozen test dependency differs')

@@ -132,7 +132,7 @@ class PreparationControls(unittest.TestCase):
         self.assertFalse((root / 'helpers/test_portable_handoff.py').exists())
         self.assertFalse((root / 'sessions/recipient').exists())
         self.assertEqual(list((root / 'sessions').iterdir()), [])
-        self.assertEqual(len(manifest['helpers']), 5)
+        self.assertEqual(len(manifest['helpers']), 6)
         text = read_regular(root / 'interface.txt').decode()
         self.assertLess(len(text.encode()), 8192)
         self.assertIn('SOURCE_ID', text)

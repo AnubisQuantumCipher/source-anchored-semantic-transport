@@ -16,7 +16,7 @@ DIGEST = re.compile(r'[0-9a-f]{64}\Z')
 ENV = {'PATH': '/usr/bin:/bin', 'LANG': 'C.UTF-8', 'LC_ALL': 'C.UTF-8'}
 BOOTSTRAP = ('transport_handoff_reader.py', 'transport_handoff_inputs.py',
              'transport_handoff_session.py', 'transport_install_support.py',
-             'transport_install_layout.py')
+             'transport_install_layout.py', 'transport_response_evidence.py')
 
 
 def fields(value, keys):

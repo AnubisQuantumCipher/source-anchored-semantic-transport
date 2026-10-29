@@ -1,9 +1,11 @@
-# Structurally checked draft submission
+# Checked draft submission
 
 `transport_checked_finish.py` validates a candidate against an explicitly held
 response contract, then submits those exact bytes through the existing pinned
-handoff client. It does not change the reader, codec, source format or earlier
-trial criteria. See [RESPONSE_CONTRACT.md](RESPONSE_CONTRACT.md) for the declarative
+handoff client. Ordinary mode checks structure and exact custody. The optional
+[source-evidence profile](RESPONSE_EVIDENCE.md) also checks selected quotations
+against pinned source spans before saving. Neither changes earlier trial
+criteria. See [RESPONSE_CONTRACT.md](RESPONSE_CONTRACT.md) for the declarative
 contract subset and [HANDOFF_CLIENT.md](../docs/HANDOFF_CLIENT.md) for receiving
 directory preparation and the client binding.
 
@@ -29,7 +31,7 @@ refused before dispatch; valid escaped surrogate pairs retain their original byt
 source and, for transport only, installed decoder/package identities.
 
 The copied client and reader helpers must equal this trusted local checkout's
-counterparts. The helper directory has exactly the existing five original-reader
+counterparts. The helper directory has exactly six original-reader
 helpers plus the client; transport additionally requires `test_portable_handoff.py`.
 No arbitrary client program or shadow helper is accepted. The binding Python must
 be the currently running resolved executable and fit the unchanged 4 MiB file
@@ -38,7 +40,8 @@ bootstrap code: disk hashes do not attest already executing code or the host.
 
 Shape failure, wrong held digest or a detected frozen-input mismatch before
 client dispatch produces no client action. A new session receives `describe`
-followed by `finish`; an existing session receives only `finish`. There are at
+followed by `finish` (or `finish_evidence` when selected); an existing session
+receives only that finish action. There are at
 most two bounded client processes, each with a 35-second deadline and an 8192-byte per-stream
 capture cap. The reader's existing 32-call session limit remains unchanged. Exact
 source bytes and fixed client/helper identities are rechecked around dispatch.
@@ -60,8 +63,9 @@ contract descriptions and candidate strings are data; they are never executed.
 It has no credential, network or install facility. Its complete JSON verdict,
 including final LF, is bounded by 131072 bytes.
 
-Exit 0 reports `DRAFT_SAVED_STRUCTURALLY_CHECKED` only after the real saved draft
-matches the original candidate bytes. Exit 1 is `STRUCTURAL_MISMATCH`; exit 2 is
+Exit 0 reports `DRAFT_SAVED_STRUCTURALLY_CHECKED` in ordinary mode, or
+`DRAFT_SAVED_SOURCE_LINKED` with the evidence profile, only after the real saved
+draft matches the original candidate bytes. Exit 1 is `STRUCTURAL_MISMATCH`; exit 2 is
 `REFUSED`. The verdict records bounded process observations, exact base64-encoded captured
 stdout/stderr, their byte counts and hashes, and an explicit extent/completeness flag.
 Only SUCCESS/EXIT_NONZERO captures are marked complete; output-limit, timeout or
@@ -86,7 +90,8 @@ within a workflow that explicitly selects it, not OS authority enforcement.
 
 From a trusted checkout, run the following. These commands create new temporary
 evidence, require no private fixtures or installed decoder and run no models.
-The freeze covers exactly the validator/model, both tests, example/docs, adapter,
+The freeze covers exactly the structural validator/model, source-evidence validator,
+both structural suites, example/docs, adapter,
 freezer, existing support/layout/inputs/client/reader/session, and resolved Python.
 Every listed file is checked before and after each test suite. The printed pin is
 explicitly **self-derived test-source identity**, not independent authentication

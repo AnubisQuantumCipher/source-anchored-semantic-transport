@@ -105,7 +105,7 @@ parents refuse. Transport output cannot overlap its source bundle. Preparation
 copies exact content bytes, the reader helper closure and the client; transport
 also copies the declared decoder. It checks the copied reader before publishing
 `interface.txt` and `client-binding.json`. The original helper closure is exactly
-the reader, its inputs/session modules and install support/layout modules;
+the reader, its inputs/session modules, source-evidence validator and install support/layout modules;
 transport adds `test_portable_handoff.py`. The client is pinned separately.
 
 On success, `preparation.json` reports `PREPARED_NOT_DISPATCHED` and includes the
@@ -128,7 +128,9 @@ python3 -I -S -B -Werror /absolute/receiving/helpers/transport_handoff_client.py
   --request-json '{"action":"describe"}'
 ```
 
-Alternatively use `--stdin`, supplying one raw JSON object and EOF. Each call
+Alternatively use `--stdin`, supplying one raw JSON object and EOF, or
+`--request-file PATH --expect-request-sha256 HELD_DIGEST` for a bounded pinned
+regular file. File input avoids the smaller command-line argument bound. Each call
 uses one of these closed shapes:
 
 ```json
@@ -137,6 +139,7 @@ uses one of these closed shapes:
 {"action":"page","source":"SOURCE_ID","offset":0}
 {"action":"focus","unit":"UNIT_ID"}
 {"action":"finish","candidate_base64":"BASE64_OF_EXACT_UTF8_JSON_OBJECT_BYTES"}
+{"action":"finish_evidence","candidate_base64":"BASE64_OF_EXACT_UTF8_JSON_OBJECT_BYTES","evidence_contract_base64":"BASE64_OF_EXACT_EVIDENCE_CONTRACT_BYTES","expect_evidence_contract_sha256":"HELD_EVIDENCE_CONTRACT_SHA256"}
 ```
 
 Start with `describe`. `catalog` supplies the same nonsemantic source metadata
@@ -147,6 +150,9 @@ task selector, before `focus`. Focus is available only in transport. Neither
 source paging nor focus establishes context adequacy or semantic completeness.
 Encode the exact UTF-8 bytes of your JSON object as base64 for `finish`; the
 reader saves them unedited once. That save is not an answer-quality certificate.
+`finish_evidence` checks selected candidate citations before saving; see the
+[evidence contract](../install/RESPONSE_EVIDENCE.md). Use the checked wrapper when
+both structural validation and source linkage are required.
 For another transfer, prepare another new directory and binding explicitly.
 
 ## Bounds and failure handling
