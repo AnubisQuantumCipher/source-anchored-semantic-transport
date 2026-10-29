@@ -1,0 +1,69 @@
+{
+  "acceptance_evidence": "Frozen reviewed input digests, exact source/runtime identities, implementation inspection demonstrating finite bounds and no recursion, strict applicable analysis, exact literal outcomes including inclusive boundary coverage, nonmutation/fresh-output checks, retained failures and identical baseline use. Full-system acceptance remains pending.",
+  "admission": "Sole owner may freeze exact contract/oracle identities plus independent review and matched baseline, then implement only these bounded informational helpers under the already reconciled local item. No wire-level accepted verdict, authority decision, new development round or cap extension is admitted.",
+  "bounded_implementation_controls": [
+    {
+      "basis": "shared_semantics.resources plus reverse_reachable.validation_precedence",
+      "id": "C01",
+      "requirement": "Keep validation bounded before copying or traversing caller collections. For exact dict input, probe the fixed required keys and reject an extra-key cardinality using constant expected fields; do not iterate, sort, set-copy or serialize an arbitrarily large unknown-field dictionary merely to reject it. Preserve MISSING-before-UNKNOWN precedence."
+    },
+    {
+      "basis": "shared_semantics.representation/resources and error envelope",
+      "id": "C02",
+      "requirement": "Check collection type/length before any content traversal; check each edge length before indexed access and exact int type before range/comparison/indexing. Every auxiliary array/set/list and every loop bound must be justified by the contract maxima. No recursive DFS."
+    },
+    {
+      "basis": "whole-graph acyclicity and no-partial-output clauses",
+      "id": "C03",
+      "requirement": "Check the entire dependency graph for cycles even with no seeds or cycles outside seed closure. A finite reachability scan alone is insufficient cycle evidence. For predecessor ordering, if no ready node exists before every admitted entry is emitted, return only P_CYCLE."
+    },
+    {
+      "basis": "shared_semantics.output/failure and oracle retention",
+      "id": "C04",
+      "requirement": "Return fresh dict/list output objects and preserve input values on success and every error. Retain all first mismatches/errors; component TESTED does not imply PROVED or whole checker acceptance."
+    }
+  ],
+  "disposition": "NO_BLOCKING_CONTRACT_OR_LITERAL_EXPECTATION_ERROR_FOUND",
+  "inspected_pins": [
+    {
+      "bytes": 8705,
+      "path": "/dev/shm/semantic-transport-graph-20261029/contract.json",
+      "sha256": "77b5a8338a93cf4d27703756c707005dd99ffa0507f9187cef0e1eeb1a734a6b"
+    },
+    {
+      "bytes": 14613,
+      "path": "/dev/shm/semantic-transport-graph-20261029/oracle.json",
+      "sha256": "5cb3a7fe16707a285170c1c939f517ce4b6d07bd4cca7f9880440da2a84dcd56"
+    }
+  ],
+  "integration_owner": "/root",
+  "model_identity_basis": "Actual-model dispatch is evidenced by parent spawn record; this artifact does not independently attest provider execution.",
+  "narrow_additive_test_recommendation": {
+    "classification": "BOUNDARY_COVERAGE_GAP_NOT_AN_EXPECTED_VALUE_CORRECTION",
+    "detail": "A rejected 65-edge input is supplied, but there is no accepted input exactly at the 64-edge cap. Existing valid chain fixture exercises 31 edges. Add a hand-authored acyclic graph with exactly 64 unique edges and a literal expected closure before freezing the component test set if feasible; preserve oracle.json unchanged and place additions in a separately pinned artifact. This catches accidental rejection of the published inclusive edge bound.",
+    "id": "T01",
+    "required_for_claim": "Before claiming full inclusive edge-bound component acceptance, qualify acceptance at that boundary. This recommendation does not add a feature or demand a broader campaign."
+  },
+  "observed_consistency": [
+    "reverse_reachable includes seeds, follows required-to-dependent reverse impact, validates cycles throughout the graph including disconnected components and empty-seed inputs, sorts output, and refuses rather than emits partial closure.",
+    "predecessor_order selects the smallest currently ready index at each step. p_smallest_available_each_step expected [1,2,0,3] is consistent: roots 1 and 2 are initially ready; after 1, choose 2 over 3; after 2, choose newly ready 0 over 3.",
+    "Self-cycles, multivertex cycles, missing indices, bool/float indices, duplicate edges/changed indices, collection exhaustion and closed-field validation expectations agree with their declared precedence.",
+    "Graph and predecessor limits are fixed; exact builtin type checks exclude bool-as-int and integral floats. No recursion, hidden fetching or authority-bearing operation is required by either contract.",
+    "Raw byte parsing, duplicate-key detection, encoding/depth/allocation limits upstream, identity binding, replay qualification, installed runtime, recovery, formal proof, external validation and product acceptance are explicitly outside this component claim and remain unqualified.",
+    "Matched development baseline applies the same helpers and annotations/limits to both representations; these examples establish no superiority result.",
+    "No original expected-value mistake was identified; no replacement or correction of supplied cases was made."
+  ],
+  "remaining_unproved": [
+    "Actual implementation and its resource/loop bounds",
+    "Strict analysis and literal-case execution",
+    "Raw untrusted-byte parser and upstream bounded decoding",
+    "Content identities and all full replay dimensions",
+    "Inherited native proof/recovery/interoperability and supported installation",
+    "External-human validation and any benefit claim"
+  ],
+  "review_method": "Read both complete artifacts; manually checked supplied graph relationships, direction, cycle/refusal examples, predecessor readiness/tie-breaking and validation precedence. Parsed JSON and checked case-ID uniqueness and literal boundary collection sizes. Did not implement either helper, generate oracle expectations using a graph algorithm, build native code or use network.",
+  "reviewer": "/root/quorum_wire_review",
+  "schema": "quorum/independent-graph-contract-review/1",
+  "smallest_sound_next_step": "Freeze this reviewed component scope; add and pin the narrow boundary control if used; implement the helpers and execute the retained literal controls plus nonmutation/fresh-output checks, preserving raw first outcomes.",
+  "status": "REVIEWED_COMPONENT_DEVELOPMENT_SPECIFICATION_ONLY"
+}
