@@ -1,0 +1,3 @@
+Σ[REQUIREMENT,EVIDENCE,HISTORY] I[I_REQUIREMENT:proposed,I_EVIDENCE:proposed,I_HISTORY:proposed] U[REPORT_AUTHENTICITY] R[I_HISTORY qualifies I_EVIDENCE] M[U_REQUIREMENT:instruction{n0 = term(S0); n1 = term(S1); n2 = term(S2); n3 = text(S3); n4 = pred(n3, n0, n1, n2); n5 = not(n4); n6 = must(n5); root n6} | U_EVIDENCE:source_claim{n0 = atom(S0); root n0} | U_HISTORY:source_claim{n0 = atom(S0); root n0}]
+STS1:0702e9751b98ea726f06627e964f65ec3b292ea5c55482fc8f8a814b154f5e81
+attached:meaning.zip

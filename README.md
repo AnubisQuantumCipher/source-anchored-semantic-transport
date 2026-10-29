@@ -21,6 +21,7 @@ This is an open-source implementation under the [MIT license](LICENSE), targetin
 - An opt-in checked submission command that validates explicit field types, allowed values and unique action IDs before saving a draft.
 - Optional source-evidence checks that reject citations whose source revision, byte location or quotation does not match the recovered source; the [recipient demonstration](examples/checked-evidence-v1/REPORT.md) retains its failed first trial and passing task/contract repair.
 - A bounded, typed Boolean-expression interpreter for fixture bindings: it checks proposed patches against supplied states without executing candidate Python code.
+- An optional [source-bound obligation evaluator](docs/BOUND_EVALUATION.md) with distinct typed predicate bindings, conservative handling of conflicting reports, and checks that reject a submitted verdict when it disagrees with the computed result.
 
 ## Start
 

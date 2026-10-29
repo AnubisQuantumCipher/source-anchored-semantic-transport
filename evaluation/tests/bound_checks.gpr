@@ -1,0 +1,16 @@
+project Bound_Checks is
+   for Source_Dirs use (".", "../src");
+   for Source_Files use
+     ("transport_eval.ads", "transport_eval.adb",
+      "transport_bound_eval.ads", "transport_bound_eval.adb",
+      "transport_bound_eval_parse.ads", "transport_bound_eval_parse.adb",
+      "transport_bound_eval_checks.adb");
+   for Object_Dir use "bound_obj";
+   for Exec_Dir use "bin";
+   for Main use ("transport_bound_eval_checks.adb");
+   package Compiler is
+      for Default_Switches ("Ada") use
+        ("-gnat2022", "-gnatwa", "-gnatwe", "-gnatVa", "-gnata", "-gnatf",
+         "-O2", "-g");
+   end Compiler;
+end Bound_Checks;
