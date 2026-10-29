@@ -14,6 +14,18 @@ jobs:
           architecture: 'x64'
           check-latest: false
           allow-prereleases: false
+      - name: Prepare optimized standard-library cache without changing test controls
+        run: |
+          # The fixed imports below are stdlib only. -B controls still run unchanged.
+          python3 -I -S -B -O -X importtime -Werror - <<'PY'
+          import argparse, ast, contextlib, copy, errno, hashlib, importlib.util, io, json, locale, os, pathlib, re, resource, shutil, signal, stat, subprocess, sys, tempfile, textwrap, unittest, _colorize
+          print({"phase": "before", "python": sys.version, "optimized_cache_exists": {m.__name__: os.path.isfile(m.__cached__) for m in (argparse, json, unittest)}})
+          PY
+          python3 -I -S -O -Werror -c 'import argparse, ast, contextlib, copy, errno, hashlib, importlib.util, io, json, locale, os, pathlib, re, resource, shutil, signal, stat, subprocess, sys, tempfile, textwrap, unittest, _colorize'
+          python3 -I -S -B -O -X importtime -Werror - <<'PY'
+          import argparse, ast, contextlib, copy, errno, hashlib, importlib.util, io, json, locale, os, pathlib, re, resource, shutil, signal, stat, subprocess, sys, tempfile, textwrap, unittest, _colorize
+          print({"phase": "after", "python": sys.version, "optimized_cache_exists": {m.__name__: os.path.isfile(m.__cached__) for m in (argparse, json, unittest)}})
+          PY
       - name: Independent reader controls and frozen export recovery
         run: |
           python3 -I -S -B -Werror install/test_export_reader.py --evidence-dir "$RUNNER_TEMP/reader-normal"
@@ -22,4 +34,4 @@ jobs:
       - name: Source and retained observation receipt
         run: |
           python3 -I -S -B -Werror install/check_source.py
-          python3 -I -S -B -Werror examples/independent-export-reader-v1/receipt.py --check
+          python3 -I -S -B -Werror examples/export-reader-ci-warmup/check_continuity.py

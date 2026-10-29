@@ -1,0 +1,135 @@
+#!/usr/bin/env python3
+"""Verify the complete original receipt with one exact admitted CI transformation."""
+import hashlib
+import importlib.util
+import json
+from pathlib import Path
+import sys
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[1]
+OLD = ROOT / "examples/independent-export-reader-v1"
+WORKFLOW = ".github/workflows/export-reader.yml"
+RECEIPT_SHA = '18c00ccaee6abd3f8568d6d07159e306d2921822e2be315df2da034d93262ed8'
+RECEIPT_CODE_SHA = 'f946a4fbea4998db437cdacd93878b7a667190d457ee0fdfef76dd574c5b7770'
+ORIGINAL_SHA = '9ae346ce0d846dffd13eba24933e952eb59c32933547686452baf793f1c87ef6'
+WARMUP = b'      - name: Prepare optimized standard-library cache without changing test controls\n        run: |\n          # The fixed imports below are stdlib only. -B controls still run unchanged.\n          python3 -I -S -B -O -X importtime -Werror - <<\'PY\'\n          import argparse, ast, contextlib, copy, errno, hashlib, importlib.util, io, json, locale, os, pathlib, re, resource, shutil, signal, stat, subprocess, sys, tempfile, textwrap, unittest, _colorize\n          print({"phase": "before", "python": sys.version, "optimized_cache_exists": {m.__name__: os.path.isfile(m.__cached__) for m in (argparse, json, unittest)}})\n          PY\n          python3 -I -S -O -Werror -c \'import argparse, ast, contextlib, copy, errno, hashlib, importlib.util, io, json, locale, os, pathlib, re, resource, shutil, signal, stat, subprocess, sys, tempfile, textwrap, unittest, _colorize\'\n          python3 -I -S -B -O -X importtime -Werror - <<\'PY\'\n          import argparse, ast, contextlib, copy, errno, hashlib, importlib.util, io, json, locale, os, pathlib, re, resource, shutil, signal, stat, subprocess, sys, tempfile, textwrap, unittest, _colorize\n          print({"phase": "after", "python": sys.version, "optimized_cache_exists": {m.__name__: os.path.isfile(m.__cached__) for m in (argparse, json, unittest)}})\n          PY\n'
+FAILURE_PINS = {'failure-receipt.json': {'bytes': 645, 'sha256': '3670da34cd9b64a7c8687484e8cf0539cee3c8755afa8509ce2b4e4694e8c10b'}, 'export-reader-ci-123683771499.log': {'bytes': 16017, 'sha256': 'e4789134321bd72488db2652d2044235a2d90ba25b3e94b9e4cb3ce6f1c0f478'}, 'export-reader-ci-123683818072.log': {'bytes': 17026, 'sha256': 'f09cb28dceacf05162ee1329166171a931df1f807de16531ce7b76cc02f0daf4'}}
+ANCHOR = b"      - name: Independent reader controls and frozen export recovery\n"
+OLD_CHECK = b"          python3 -I -S -B -Werror examples/independent-export-reader-v1/receipt.py --check\n"
+NEW_CHECK = b"          python3 -I -S -B -Werror examples/export-reader-ci-warmup/check_continuity.py\n"
+
+
+def need(value, message):
+    if not value:
+        raise ValueError(message)
+
+
+def sha(raw):
+    return hashlib.sha256(raw).hexdigest()
+
+
+def read(path, cap):
+    need(path.is_file() and not path.is_symlink(), "regular continuity input required")
+    with path.open("rb") as stream:
+        raw = stream.read(cap + 1)
+    need(len(raw) <= cap, "continuity input byte bound")
+    return raw
+
+
+def pinned(raw, expected):
+    need(type(raw) is bytes and sha(raw) == expected, "immutable input pin mismatch")
+    return raw
+
+
+def workflow_pin(raw):
+    return {"path": WORKFLOW, "bytes": len(raw), "sha256": sha(raw)}
+
+
+def approved_workflow(original):
+    pinned(original, ORIGINAL_SHA)
+    need(original.count(ANCHOR) == 1 and original.count(OLD_CHECK) == 1,
+         "original transformation anchors ambiguous")
+    changed = original.replace(ANCHOR, WARMUP + ANCHOR, 1)
+    return changed.replace(OLD_CHECK, NEW_CHECK, 1)
+
+
+def validate_workflow(original, current):
+    need(type(current) is bytes and len(current) <= 131072, "workflow byte bound")
+    need(current == approved_workflow(original), "unapproved workflow transformation")
+
+
+def validate_receipt(generated, old_raw, original, current):
+    pinned(old_raw, RECEIPT_SHA)
+    validate_workflow(original, current)
+    need(type(generated) is dict, "generated receipt type")
+    rows = generated.get("files")
+    need(type(rows) is list and len(rows) <= 512, "generated inventory bound")
+    replaced, files = 0, []
+    for row in rows:
+        need(type(row) is dict, "generated inventory row type")
+        if row.get("path") == WORKFLOW:
+            need(row == workflow_pin(current), "current workflow inventory mismatch")
+            files.append(workflow_pin(original))
+            replaced += 1
+        else:
+            files.append(row)
+    need(replaced == 1, "workflow row missing or duplicated")
+    normalized = {**generated, "files": files}
+    raw = (json.dumps(normalized, sort_keys=True, separators=(",", ":")) + "\n").encode()
+    need(len(raw) <= 131072 and raw == old_raw, "original full receipt mismatch")
+
+
+def load_pinned_receipt():
+    path = OLD / "receipt.py"
+    before = pinned(read(path, 1048576), RECEIPT_CODE_SHA)
+    spec = importlib.util.spec_from_file_location("frozen_export_reader_receipt", path)
+    need(spec is not None and spec.loader is not None, "receipt import unavailable")
+    module = importlib.util.module_from_spec(spec)
+    # Execute only the pinned source bytes; never consult a project bytecode cache.
+    code = compile(before, str(path), "exec", dont_inherit=True)
+    exec(code, module.__dict__)
+    need(read(path, 1048576) == before, "receipt source changed during import")
+    return module
+
+
+def check_failures():
+    for name, expected in FAILURE_PINS.items():
+        raw = read(HERE / name, 131072)
+        need(len(raw) == expected["bytes"], "retained failure byte mismatch")
+        pinned(raw, expected["sha256"])
+
+
+def check():
+    check_failures()
+    old_raw = pinned(read(OLD / "receipt.json", 131072), RECEIPT_SHA)
+    original = pinned(read(HERE / "original-workflow.yml", 131072), ORIGINAL_SHA)
+    current = read(ROOT / WORKFLOW, 131072)
+    validate_workflow(original, current)
+    module = load_pinned_receipt()
+    generated = module.expected()
+    validate_receipt(generated, old_raw, original, current)
+    need(read(ROOT / WORKFLOW, 131072) == current, "workflow changed during check")
+    need(read(OLD / "receipt.json", 131072) == old_raw, "receipt changed during check")
+    pinned(read(OLD / "receipt.py", 1048576), RECEIPT_CODE_SHA)
+    return {"status": "PASS_EXACT_CI_TRANSFORMATION_AND_FULL_ORIGINAL_RECEIPT",
+            "original_receipt_sha256": RECEIPT_SHA,
+            "original_workflow_sha256": ORIGINAL_SHA,
+            "approved_workflow_sha256": sha(current), "warmup_sha256": sha(WARMUP),
+            "other_receipt_fields": "UNCHANGED", "retained_ci_failures": "EXACT_PINS_CHECKED",
+            "semantic_acceptance": "NOT_ESTABLISHED"}
+
+
+def main():
+    try:
+        need(len(sys.argv) == 1, "no continuity arguments accepted")
+        result = check()
+    except (OSError, ValueError, TypeError, KeyError, UnicodeError, MemoryError) as error:
+        print(json.dumps({"status": "REFUSED", "reason": str(error)[:256]}), file=sys.stderr)
+        return 1
+    print(json.dumps(result, sort_keys=True, separators=(",", ":")))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
