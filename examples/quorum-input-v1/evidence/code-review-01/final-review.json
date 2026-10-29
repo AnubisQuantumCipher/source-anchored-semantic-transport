@@ -1,0 +1,176 @@
+{
+  "acceptance_evidence_for_broader_claim": "Separate source-bound identity/reference/recomputation controls, complete inherited proof/static/runtime/recovery/interoperability/install gates, external-human evidence and controlled release remain necessary.",
+  "bounded_design_observations": "Pinned schema only; no arbitrary schema service or remote reference. Explicit one-child DFS frames and charged finite counters remain. oneOf requires exactly one matching branch; allOf/ordinary children conjunctive. Parser lexical/scalar gates, schema stage checks and canonical-byte equality remain separate. No public accepted_result, authority, source validity or semantic verdict is produced.",
+  "final_runs": [
+    {
+      "command": [
+        "timeout",
+        "30s",
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "install/test_quorum_input.py",
+        "--evidence",
+        "/dev/shm/semantic-transport-wire-input-20261029/code-review-01/independent-unit-final-results.json"
+      ],
+      "cwd": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028",
+      "exit_code": 0,
+      "raw_stderr": "test_bootstrap_special_files_and_tamper (__main__.InputTests.test_bootstrap_special_files_and_tamper) ... ok\ntest_explicit_work_refusal (__main__.InputTests.test_explicit_work_refusal) ... ok\ntest_frozen_independent_shape_observations (__main__.InputTests.test_frozen_independent_shape_observations) ... ok\ntest_frozen_raw (__main__.InputTests.test_frozen_raw) ... ok\ntest_host_type_and_unchanged_unicode (__main__.InputTests.test_host_type_and_unchanged_unicode) ... ok\ntest_review_regressions (__main__.InputTests.test_review_regressions) ... ok\ntest_wrapper_constructions (__main__.InputTests.test_wrapper_constructions) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 1.308s\n\nOK\n",
+      "raw_stdout": "",
+      "results": "independent-unit-final-results.json",
+      "stable_product_harness_correction_pins": true
+    },
+    {
+      "command": [
+        "timeout",
+        "30s",
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "install/test_quorum_graph.py"
+      ],
+      "cwd": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028",
+      "exit_code": 0,
+      "result": "All4 frozen graph test methods pass; previous graph component regression retained."
+    },
+    {
+      "command": [
+        "timeout",
+        "30s",
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "install/check_source.py"
+      ],
+      "cwd": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028",
+      "exit_code": 0,
+      "raw_output": "PASS: parsed source files=86; bounded installer functions=882\n",
+      "scope": "Syntax/function-size checker at observed current scope; see mechanical-enforcement followthrough."
+    }
+  ],
+  "limits": [
+    "No formal proof or whole-runtime worst-case memory/time certificate was produced. Existing Python/json internals and host filesystem/runtime remain explicit trusted exclusions.",
+    "Finite independent shape/raw corpus and targeted probes establish only the declared component scope. No source digest/reference/graph/applicability/aggregation/import/recovery/interoperability/installation or public full-replay acceptance result follows.",
+    "External human validation, strongest baseline/cost/benefit measurement and product ACCEPTED_V1 remain pending. No native build, network or product edit was performed by this reviewer."
+  ],
+  "mechanical_enforcement_followthrough": {
+    "detail": "Current source checker parses the new modules but its function-size enforcement whitelist names only QUORUM_GRAPH among these tools. Independent function-size-final.json verifies all new reader/shape functions<=60. Add both new modules to the existing CI enforcement whitelist before claiming continuing mechanical enforcement; no change to functional algorithm is needed.",
+    "status": "OWNER_NOTIFIED_BEFORE_INTEGRATION"
+  },
+  "oracle_correction_review": {
+    "artifact": "examples/quorum-input-v1/admission-correction.json",
+    "disposition": "JUSTIFIED_REQUIREMENT_RECONCILIATION_NOT_OUTCOME_DRIVEN_WEAKENING",
+    "reason": "Original revision02 protocol hash345c58ac03d0855fd65122cd4db5870ad0962362cb03265abeb63a79a0682abd already requires unknown top-level schema admission refusal. V2 summary and independent public-predicate table omitted it. The literal_V16_VERSION candidate changes that schema. Applying a separately pinned override to require INPUT_UNADMITTED restores the inherited requirement, grants no success and changes no safety/benefit threshold.",
+    "retention": "Original public-expectations.json remains pinned fe938cb3e439f9a50ce4c4782afddb10b95d4451782e8baa8f4d274eb9ba2c0f; first wrong-category results and failed unit-repair-results-02 comparison are preserved. The harness reads an explicit pinned additive override.",
+    "sha256": "52615783aa6bfd8bd6061829491b5207c19d222486b707b2d14106d163de98c6"
+  },
+  "preserved_artifact_pins": [
+    {
+      "bytes": 11368,
+      "path": "/dev/shm/semantic-transport-wire-input-20261029/code-review-01/review.json",
+      "sha256": "fab53522c9eb487e217438a1b18000fa4a5bb3936ef23235d64047c3336073e5"
+    },
+    {
+      "bytes": 23023,
+      "path": "/dev/shm/semantic-transport-wire-input-20261029/code-review-01/raw-probes-first.json",
+      "sha256": "2227548b5689bc116af643e12f991c3e8071b2a95af38b209350f1150f6eb66f"
+    },
+    {
+      "bytes": 73232,
+      "path": "/dev/shm/semantic-transport-wire-input-20261029/code-review-01/shape-probes-first.json",
+      "sha256": "cd43e78b0084e56ef2c90a98063b60367a305c9c24e16888446e098c386dbfba"
+    },
+    {
+      "bytes": 1158,
+      "path": "/dev/shm/semantic-transport-wire-input-20261029/code-review-01/resource-probes-first.json",
+      "sha256": "96c21e08bb8a1b3098f138dc02966e07b80d4b9129feb3f1ed300dc0ea917262"
+    },
+    {
+      "bytes": 4985,
+      "path": "/dev/shm/semantic-transport-wire-input-20261029/code-review-01/repair-probes-final.json",
+      "sha256": "b3c2aa8e78071a93db6e2b031d821694a993e9320d7735ae3b00f70c1afe7273"
+    },
+    {
+      "bytes": 2403,
+      "path": "/dev/shm/semantic-transport-wire-input-20261029/code-review-01/independent-unit-final-command.json",
+      "sha256": "557069fbc14c9dd8f2db491c6f2a31a430cd75573bb79e297c46add377bbf2e9"
+    },
+    {
+      "bytes": 61555,
+      "path": "/dev/shm/semantic-transport-wire-input-20261029/code-review-01/independent-unit-final-results.json",
+      "sha256": "95dce562d3280b9b6337d8bbd02b08bd93b4ed98c215ff33956e49fa41b02846"
+    },
+    {
+      "bytes": 3402,
+      "path": "/dev/shm/semantic-transport-wire-input-20261029/code-review-01/function-size-final.json",
+      "sha256": "d5744770dd7049c33c5c945f1cb8e3559cb9fde4ca959511246fcd366873efb1"
+    },
+    {
+      "bytes": 6534,
+      "path": "/dev/shm/semantic-transport-wire-input-20261029/independent-v2-and-reader-review.json",
+      "sha256": "9a9038710535c0231478b8df465efb9a01ee37f1bf6418e4cc8abcd4450c20e4"
+    },
+    {
+      "bytes": 60097,
+      "path": "/dev/shm/semantic-transport-wire-input-20261029/unit-first-results.json",
+      "sha256": "e2b5101205d4e1ed98f608231a3b679971b067a00ca06bcac2efedf04a031e7f"
+    },
+    {
+      "bytes": 61268,
+      "path": "/dev/shm/semantic-transport-wire-input-20261029/unit-repair-results-02.json",
+      "sha256": "feee7e1fcd7e2f284f65ff4d430cbc650e8fd6bf2f8a29fe71afec04e648f8b5"
+    },
+    {
+      "bytes": 61555,
+      "path": "/dev/shm/semantic-transport-wire-input-20261029/unit-repair-results-03.json",
+      "sha256": "95dce562d3280b9b6337d8bbd02b08bd93b4ed98c215ff33956e49fa41b02846"
+    }
+  ],
+  "qualification": "TESTED_COMPONENT_ONLY_NOT_FULL_REPLAY_OR_PRODUCT_ACCEPTANCE",
+  "repair_dispositions": [
+    {
+      "evidence": "Full raw grammar is checked before the twenty-digit otherwise-unsigned resource ceiling. Frozen long fraction/exponent regressions and pure20/21digit controls pass. Original reviewer I01 outputs remain in independent-v2-and-reader-review.json.",
+      "id": "I01",
+      "status": "CLOSED_FOR_COMPONENT"
+    },
+    {
+      "evidence": "load_schema uses descriptor os.open with O_RDONLY/O_NONBLOCK/O_NOFOLLOW/O_CLOEXEC, fstat regular-file/size check before bounded read, and finally descriptor closure. Independent FIFO/directory/symlink/missing/oversized/wrongdigest probes promptly yield INPUT_SCHEMA_UNSUPPORTED/BOOTSTRAP. Pinned ordinary schema still succeeds.",
+      "id": "I02_SCHEMA_SPECIAL_FILE",
+      "status": "CLOSED_FOR_COMPONENT"
+    },
+    {
+      "evidence": "_limits now covers explicit string type and string const/enum fields. Independent over4096 mode and RuleSpec.kind controls yield INPUT_BYTE_FIELD_BOUND/BOUNDS; full independent corpus/regressions pass. UTF8 width counting performs no unbudgeted string encoding allocation.",
+      "id": "I03_IMPLICIT_STRING_BYTE_CAP",
+      "status": "CLOSED_FOR_COMPONENT"
+    },
+    {
+      "evidence": "_string_size charges quote bytes first and each fixed scalar UTF8/escape width before accumulating it, without encoding characters. Zero byte budget fails before a character step. Observed size matches actual canonical bytes for ASCII, escapes/control characters, accented/decomposed text, U2028, astral scalar and nested values. Canonical key creation remains reserved/length checked under scratch and work caps.",
+      "id": "I04_BYTE_QUOTA_BEFORE_ENCODING",
+      "status": "CLOSED_FOR_COMPONENT"
+    },
+    {
+      "evidence": "Present unknown string Body.schema yields INPUT_UNADMITTED/SCHEMA after earlier bounds. Missing/nonstring schema remains INPUT_CLOSED_SCHEMA. Frozen raw suite and independent full harness pass with source pins unchanged.",
+      "id": "I05_UNKNOWN_BODY_SCHEMA",
+      "status": "CLOSED_FOR_COMPONENT_WITH_JUSTIFIED_ADDITIVE_ORACLE_CORRECTION"
+    }
+  ],
+  "reviewer": "/root/quorum_wire_review",
+  "runtime": "3.14.7 (main, Aug 12 2026, 13:41:09) [GCC 16.1.1 20260430]",
+  "schema": "quorum/body-input-independent-repair-closure/1",
+  "smallest_sound_next_step": "Owner retains this additive source-stable closure, completes the small CI enforcement followthrough, then admits the next independently frozen bounded checker boundary under reconciled existing caps. Preserve all first failures and original oracle files.",
+  "source_pins": {
+    "examples/quorum-input-v1/admission-correction.json": "52615783aa6bfd8bd6061829491b5207c19d222486b707b2d14106d163de98c6",
+    "install/test_quorum_input.py": "15601efbfa3d5ead0acd811ae9a8fd89f9cc2b38b6cf21d230a4b7186d618d51",
+    "tools/transport_quorum_body.schema.json": "b6c7cafc1d4f1703188f7bdcb2150316feadc6b870eda9495ee146e2f429f8aa",
+    "tools/transport_quorum_input.py": "14a4105d184cd0964af07e4eec71a33c010e2ba65342631e8ce373e625f1b369",
+    "tools/transport_quorum_shape.py": "b77d9bf35c266a60a508c1e245065c740130da147d253d5af85cda1cd3229012"
+  },
+  "stable_source_before_after": true,
+  "status": "NO_BLOCKING_REPAIRED_CODE_ISSUE_FOUND_WITHIN_FROZEN_COMPONENT_SCOPE"
+}

@@ -1,0 +1,11 @@
+{
+  "first_copy": "FAILED_ON_NAMED_PIPE_AFTER_COPYING_REGULAR_FILES",
+  "recovery": "Only regular evidence files copied and exact compared; special artifacts listed explicitly.",
+  "excluded": [
+    {
+      "name": "schema-fifo",
+      "mode": "0o10600",
+      "reason": "Special-file regression artifact; no readable regular-file bytes to copy."
+    }
+  ]
+}

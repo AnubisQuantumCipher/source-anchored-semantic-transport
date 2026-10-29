@@ -9,6 +9,8 @@ ROOT = Path(__file__).resolve().parents[1]
 CONTINUATION = ROOT / 'examples/checked-continuation-v1/check_response.py'
 HELDOUT = ROOT / 'examples/heldout-release-v1'
 QUORUM_GRAPH = ROOT / 'tools/transport_quorum_graph.py'
+QUORUM_INPUT = {ROOT / 'tools' / name for name in
+                ('transport_quorum_input.py', 'transport_quorum_shape.py')}
 
 
 def main() -> None:
@@ -23,7 +25,7 @@ def main() -> None:
             raise ValueError('unsupported static-analysis input')
         tree = ast.parse(path.read_bytes())
         for node in ast.walk(tree):
-            if (path.parent.name == 'install' or path in (CONTINUATION, QUORUM_GRAPH) or path.parent == HELDOUT) and isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+            if (path.parent.name == 'install' or path in (CONTINUATION, QUORUM_GRAPH) or path in QUORUM_INPUT or path.parent == HELDOUT) and isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
                 functions += 1
                 if node.end_lineno - node.lineno + 1 > 60:
                     raise ValueError(str(path.relative_to(ROOT)) + ':' + node.name + ': exceeds 60 lines')

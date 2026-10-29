@@ -1,0 +1,517 @@
+{
+  "results": [
+    {
+      "case": "r_null",
+      "expected": {
+        "stage": "CANONICAL_VALUE_ONLY",
+        "status": "ok"
+      },
+      "actual": {
+        "status": "ok",
+        "stage": "CANONICAL_VALUE_ONLY"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_zero",
+      "expected": {
+        "stage": "CANONICAL_VALUE_ONLY",
+        "status": "ok"
+      },
+      "actual": {
+        "status": "ok",
+        "stage": "CANONICAL_VALUE_ONLY"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_positive",
+      "expected": {
+        "stage": "CANONICAL_VALUE_ONLY",
+        "status": "ok"
+      },
+      "actual": {
+        "status": "ok",
+        "stage": "CANONICAL_VALUE_ONLY"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_boolean",
+      "expected": {
+        "stage": "CANONICAL_VALUE_ONLY",
+        "status": "ok"
+      },
+      "actual": {
+        "status": "ok",
+        "stage": "CANONICAL_VALUE_ONLY"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_number_spellings_in_string",
+      "expected": {
+        "stage": "CANONICAL_VALUE_ONLY",
+        "status": "ok"
+      },
+      "actual": {
+        "status": "ok",
+        "stage": "CANONICAL_VALUE_ONLY"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_composed",
+      "expected": {
+        "stage": "CANONICAL_VALUE_ONLY",
+        "status": "ok"
+      },
+      "actual": {
+        "status": "ok",
+        "stage": "CANONICAL_VALUE_ONLY"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_decomposed",
+      "expected": {
+        "stage": "CANONICAL_VALUE_ONLY",
+        "status": "ok"
+      },
+      "actual": {
+        "status": "ok",
+        "stage": "CANONICAL_VALUE_ONLY"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_negative",
+      "expected": {
+        "error": "INPUT_INTEGER_TOKEN",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "PREPARSE",
+        "error": "INPUT_INTEGER_TOKEN"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_negative_zero",
+      "expected": {
+        "error": "INPUT_INTEGER_TOKEN",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "PREPARSE",
+        "error": "INPUT_INTEGER_TOKEN"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_decimal",
+      "expected": {
+        "error": "INPUT_INTEGER_TOKEN",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "PREPARSE",
+        "error": "INPUT_INTEGER_TOKEN"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_exponent",
+      "expected": {
+        "error": "INPUT_INTEGER_TOKEN",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "PREPARSE",
+        "error": "INPUT_INTEGER_TOKEN"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_nan",
+      "expected": {
+        "error": "INPUT_INTEGER_TOKEN",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "PREPARSE",
+        "error": "INPUT_INTEGER_TOKEN"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_infinity",
+      "expected": {
+        "error": "INPUT_INTEGER_TOKEN",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "PREPARSE",
+        "error": "INPUT_INTEGER_TOKEN"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_leading_zero",
+      "expected": {
+        "error": "INPUT_INTEGER_TOKEN",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "PREPARSE",
+        "error": "INPUT_INTEGER_TOKEN"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_duplicate",
+      "expected": {
+        "error": "INPUT_JSON",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "PREPARSE",
+        "error": "INPUT_JSON"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_nested_duplicate",
+      "expected": {
+        "error": "INPUT_JSON",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "PREPARSE",
+        "error": "INPUT_JSON"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_escaped_duplicate",
+      "expected": {
+        "error": "INPUT_JSON",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "PREPARSE",
+        "error": "INPUT_JSON"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_trailing",
+      "expected": {
+        "error": "INPUT_JSON",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "PREPARSE",
+        "error": "INPUT_JSON"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_truncated",
+      "expected": {
+        "error": "INPUT_JSON",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "PREPARSE",
+        "error": "INPUT_JSON"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_bom",
+      "expected": {
+        "error": "INPUT_ENCODING",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "PREPARSE",
+        "error": "INPUT_ENCODING"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_invalid_utf8",
+      "expected": {
+        "error": "INPUT_ENCODING",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "PREPARSE",
+        "error": "INPUT_ENCODING"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_unpaired_surrogate",
+      "expected": {
+        "error": "INPUT_ENCODING",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "PREPARSE",
+        "error": "INPUT_ENCODING"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_whitespace",
+      "expected": {
+        "error": "INPUT_NONCANONICAL",
+        "stage": "CANONICAL_BYTES",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "CANONICAL_BYTES",
+        "error": "INPUT_NONCANONICAL"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_final_lf",
+      "expected": {
+        "error": "INPUT_NONCANONICAL",
+        "stage": "CANONICAL_BYTES",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "CANONICAL_BYTES",
+        "error": "INPUT_NONCANONICAL"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_escaped_ascii",
+      "expected": {
+        "error": "INPUT_NONCANONICAL",
+        "stage": "CANONICAL_BYTES",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "CANONICAL_BYTES",
+        "error": "INPUT_NONCANONICAL"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_unsorted_keys",
+      "expected": {
+        "error": "INPUT_NONCANONICAL",
+        "stage": "CANONICAL_BYTES",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "CANONICAL_BYTES",
+        "error": "INPUT_NONCANONICAL"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_escaped_newline",
+      "expected": {
+        "stage": "CANONICAL_VALUE_ONLY",
+        "status": "ok"
+      },
+      "actual": {
+        "status": "ok",
+        "stage": "CANONICAL_VALUE_ONLY"
+      },
+      "passed": true
+    },
+    {
+      "case": "b_minimal",
+      "expected": {
+        "stage": "BODY_INPUT_SHAPE_ONLY",
+        "status": "ok"
+      },
+      "actual": {
+        "status": "ok",
+        "stage": "BODY_INPUT_SHAPE_ONLY"
+      },
+      "passed": true
+    },
+    {
+      "case": "b_empty_object",
+      "expected": {
+        "error": "INPUT_CLOSED_SCHEMA",
+        "stage": "SCHEMA",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "SCHEMA",
+        "error": "INPUT_CLOSED_SCHEMA"
+      },
+      "passed": true
+    },
+    {
+      "case": "b_noncanonical_minimal",
+      "expected": {
+        "error": "INPUT_NONCANONICAL",
+        "stage": "CANONICAL_BYTES",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "CANONICAL_BYTES",
+        "error": "INPUT_NONCANONICAL"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_integer_digit_boundary",
+      "expected": {
+        "stage": "CANONICAL_VALUE_ONLY",
+        "status": "ok"
+      },
+      "actual": {
+        "status": "ok",
+        "stage": "CANONICAL_VALUE_ONLY"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_integer_digit_overflow",
+      "expected": {
+        "error": "INPUT_INTEGER_BOUND",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "PREPARSE",
+        "error": "INPUT_INTEGER_BOUND"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_utf8_before_integer",
+      "expected": {
+        "error": "INPUT_ENCODING",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "PREPARSE",
+        "error": "INPUT_ENCODING"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_integer_before_depth",
+      "expected": {
+        "error": "INPUT_INTEGER_TOKEN",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "PREPARSE",
+        "error": "INPUT_INTEGER_TOKEN"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_depth_before_integer",
+      "expected": {
+        "error": "INPUT_DEPTH",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "PREPARSE",
+        "error": "INPUT_DEPTH"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_duplicate_before_canonical",
+      "expected": {
+        "error": "INPUT_JSON",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "PREPARSE",
+        "error": "INPUT_JSON"
+      },
+      "passed": true
+    },
+    {
+      "case": "r_duplicate_before_scalar",
+      "expected": {
+        "error": "INPUT_JSON",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "PREPARSE",
+        "error": "INPUT_JSON"
+      },
+      "passed": true
+    },
+    {
+      "case": "b_noncanonical_empty_shape",
+      "expected": {
+        "error": "INPUT_CLOSED_SCHEMA",
+        "stage": "SCHEMA",
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "stage": "SCHEMA",
+        "error": "INPUT_CLOSED_SCHEMA"
+      },
+      "passed": true
+    }
+  ],
+  "passed": true
+}
