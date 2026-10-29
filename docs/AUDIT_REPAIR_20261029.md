@@ -10,7 +10,7 @@ have been repaired. Their earlier failures remain available.
 | Fresh receiving agent | A fresh `gpt-6.1-sol` receiver performed recovery and returned its first answer with all 11 required citation records. Saved and observed final bytes match. |
 | Source interpretation assessment | A separate fresh assessor recorded all 30 required items as supported and all 22 forbidden items as not observed. Workflow disclosure compromised masking, so blinded assessment completion is not claimed. |
 | QUORUM threshold and replay | Nine-seat policy support, live source replay, explicit dissent/withdrawal handling, and coherent model-to-family assignments are implemented and tested. Dependency warnings survive a successful threshold. |
-| Actual cross-family observation | A fresh OpenAI observation completed. The second provider's sole attempt failed because its login expired. No identity, stance, or admission was invented for that failure. |
+| Actual cross-family observation | A fresh OpenAI response was captured, but encrypted dispatch prevents independent exact-prompt verification. The second provider's sole attempt failed because its login expired. Neither seat was admitted; no identity, stance, abstention, or lower threshold was invented. |
 
 The matched [share text](../examples/receiving-repair-v2/share.txt),
 [meaning ZIP](../examples/receiving-repair-v2/meaning.zip),
@@ -24,6 +24,9 @@ The [QUORUM verification entry point](../examples/quorum-v2/README.md) links its
 contracts, interfaces, independent controls, correction history and commands.
 The [receiving independent review](../examples/receiving-repair-v2-review/review.json)
 also exercises coherent tampering against the published evidence checker.
+The separate [actual-provider observation record](../examples/quorum-observed-v2/README.md)
+retains the failed authentication attempt, prompt-observability limit and provider
+probe incident without replacing the frozen trial with a later attempt.
 
 These repairs preserve the previously sealed native semantic-core source and
 proof evidence. No new whole-system proof follows from the Python tests, source
