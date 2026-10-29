@@ -15,6 +15,7 @@ sys.path.insert(0, str(Path(__file__).absolute().parent))
 import transport_handoff_inputs as inputs
 import transport_response_contract as validator
 import transport_response_contract_model as model
+import transport_response_evidence as evidence
 from transport_install_layout import exact_tree
 from transport_install_support import canonical, read_regular, require, run_bounded, sha, write_new
 
@@ -118,7 +119,7 @@ def client_call(state, value, request):
                 '--request-file', str(request_path), '--expect-request-sha256', sha(raw)]
         recheck(state)
         state['client_dispatched'] = True
-        if request['action'] == 'finish':
+        if request['action'] in ('finish', 'finish_evidence'):
             state['finish_dispatched'] = True
         result = run_bounded(argv, Path(value['client']['path']).parent, inputs.ENV, timeout=35, cap=PROCESS_CAP)
         observation = {key: result[key] for key in ('status', 'exit_code', 'elapsed_ns')}
@@ -135,6 +136,40 @@ def client_call(state, value, request):
     return answer
 
 
+def finish_request(state, args, candidate, contract_sha256):
+    request = dict(action='finish', candidate_base64=base64.b64encode(candidate).decode('ascii'))
+    path, held = getattr(args, 'evidence_contract', None), getattr(args, 'expect_evidence_contract_sha256', None)
+    state['evidence_required'] = path is not None or held is not None
+    if not state['evidence_required']:
+        return request
+    require(path is not None and held is not None, 'evidence contract and held digest are both required')
+    require(absolute(str(path)) not in {absolute(str(args.contract)), absolute(str(args.candidate)), absolute(str(args.binding))},
+            'evidence contract must have a distinct input path')
+    raw = held_file(state, path, held, evidence.CONTRACT_BYTES)
+    compiled = evidence.compile_contract(raw)
+    require(compiled['response_contract_sha256'] == contract_sha256, 'evidence contract names a different response contract')
+    state['evidence_contract_sha256'] = sha(raw)
+    request.update(action='finish_evidence', evidence_contract_base64=base64.b64encode(raw).decode('ascii'),
+                   expect_evidence_contract_sha256=sha(raw))
+    require(len(canonical(request)) <= inputs.REQUEST_CAP, 'complete evidence submission request exceeds bound')
+    return request
+
+
+def saved_result(state, response, request, candidate, contract_sha256, manifest_sha256):
+    expected = 'DRAFT_SAVED_SOURCE_LINKED' if request['action'] == 'finish_evidence' else 'DRAFT_SAVED_UNEDITED'
+    require(response['result']['status'] == expected
+            and response['result']['candidate'] == inputs.record(candidate), 'client candidate receipt differs')
+    if request['action'] == 'finish_evidence':
+        require(response['result']['manifest_sha256'] == manifest_sha256, 'source-evidence manifest receipt differs')
+        verdict = response['result']['source_evidence']
+        require(verdict['status'] == 'SOURCE_SPANS_MATCH' and verdict['candidate_sha256'] == sha(candidate)
+                and verdict['evidence_contract_sha256'] == state['evidence_contract_sha256']
+                and verdict['response_contract_sha256'] == contract_sha256, 'source-evidence receipt identities differ')
+        state['source_evidence'] = verdict
+        return 'DRAFT_SAVED_SOURCE_LINKED'
+    return 'DRAFT_SAVED_STRUCTURALLY_CHECKED'
+
+
 def submit(state, args):
     state['args'] = args
     for name in inputs.BOOTSTRAP + ('transport_handoff_client.py', 'transport_checked_finish.py',
@@ -148,16 +183,18 @@ def submit(state, args):
     shape = validator.validate(candidate, model.compile_contract(contract))
     state['shape'] = shape
     require(shape['status'] == 'STRUCTURALLY_CONFORMANT', 'candidate does not conform; no client action attempted')
+    request = finish_request(state, args, candidate, sha(contract))
     value = binding(state, args)
     session = Path(value['session'])
+    if state.get('evidence_required'):
+        require(not absolute(str(args.evidence_contract)).is_relative_to(session), 'evidence contract must be outside submission session')
     if not session.exists():
         client_call(state, value, dict(action='describe'))
-    response = client_call(state, value, dict(action='finish', candidate_base64=base64.b64encode(candidate).decode('ascii')))
-    require(response['result']['status'] == 'DRAFT_SAVED_UNEDITED'
-            and response['result']['candidate'] == inputs.record(candidate), 'client candidate receipt differs')
+    response = client_call(state, value, request)
+    status = saved_result(state, response, request, candidate, sha(contract), value['manifest']['sha256'])
     require(read_regular(session / 'candidate.json', model.CANDIDATE_BYTES) == candidate, 'saved draft bytes differ')
     recheck(state)
-    return dict(status='DRAFT_SAVED_STRUCTURALLY_CHECKED', candidate=inputs.record(candidate),
+    return dict(status=status, candidate=inputs.record(candidate),
                 contract_sha256=sha(contract), binding_sha256=args.expect_binding_sha256, client_response=response)
 
 
@@ -168,6 +205,8 @@ def arguments():
     parser.add_argument('--candidate', type=Path, required=True)
     parser.add_argument('--binding', type=Path, required=True)
     parser.add_argument('--expect-binding-sha256', required=True)
+    parser.add_argument('--evidence-contract', type=Path)
+    parser.add_argument('--expect-evidence-contract-sha256')
     return parser.parse_args()
 
 
@@ -184,10 +223,13 @@ def main():
         mismatch = state['shape'] is not None and state['shape']['status'] == 'STRUCTURAL_MISMATCH'
         result = dict(status='STRUCTURAL_MISMATCH' if mismatch else 'REFUSED', reason=str(error)[:256])
         status = 1 if mismatch else 2
+    if state.get('evidence_required'):
+        result['source_evidence_verdict'] = state.get('source_evidence')
     result.update(schema='transport/checked-finish/1', structural_verdict=state['shape'], calls=state['calls'],
                   client_dispatched=state['client_dispatched'], reader_action_may_be_recorded=state['client_dispatched'],
                   draft_state='SAVED_EXACT_BYTES' if status == 0 else 'UNKNOWN_MAY_BE_SAVED' if state['finish_dispatched'] else 'NOT_SUBMITTED_BY_THIS_COMMAND',
-                  scope='STRUCTURE_AND_DRAFT_CUSTODY_ONLY', semantics='NOT_ASSESSED', source_approval='NOT_ASSESSED', execution_authority='NONE')
+                  scope='STRUCTURE_SOURCE_LINKAGE_AND_DRAFT_CUSTODY' if state.get('evidence_required') else 'STRUCTURE_AND_DRAFT_CUSTODY_ONLY',
+                  semantics='NOT_ASSESSED', source_approval='NOT_ASSESSED', execution_authority='NONE')
     raw = canonical(result) + b'\n'
     require(len(raw) <= inputs.CAP, 'complete checked-finish verdict including LF exceeds bound')
     sys.stdout.buffer.write(raw)

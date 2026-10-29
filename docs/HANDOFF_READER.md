@@ -3,7 +3,8 @@
 The Source-Anchored Semantic Transport reader supports bounded local receiving
 tasks with two explicit arms: `original` reads frozen source files, and
 `transport` reads a frozen share/archive through an exact installed decoder.
-It records retrieval and saves a candidate. It does not evaluate source fidelity,
+It records retrieval and saves a candidate. The optional `finish_evidence` action
+checks declared citation spans before saving. It does not evaluate narrative fidelity,
 semantic completeness, current authority or whether a task has been completed.
 
 ## Reproduce the controls
@@ -50,6 +51,7 @@ JSON and unsupported actions refuse. The available request shapes are:
 {"action":"page","source":"SOURCE","offset":0}
 {"action":"focus","unit":"U_SOURCE"}
 {"action":"finish","candidate_base64":"eyJkcmFmdCI6InVuYXNzZXNzZWQifQ=="}
+{"action":"finish_evidence","candidate_base64":"BASE64_CANDIDATE","evidence_contract_base64":"BASE64_EVIDENCE_CONTRACT","expect_evidence_contract_sha256":"HELD_EVIDENCE_CONTRACT_SHA256"}
 ```
 
 `SOURCE` and `U_SOURCE` are illustrative identifiers, not guaranteed targets.
@@ -108,7 +110,8 @@ Extra files, missing files, duplicate IDs/paths and unsupported links refuse.
 
 The shared helper closure contains `transport_handoff_reader.py`,
 `transport_handoff_inputs.py`, `transport_handoff_session.py`,
-`transport_install_support.py` and `transport_install_layout.py`, colocated in
+`transport_install_support.py`, `transport_install_layout.py` and
+`transport_response_evidence.py`, colocated in
 one directory. Transport additionally requires `test_portable_handoff.py` for
 the existing `bundle_snapshot` function. The test runner and evaluator answers
 are not reader dependencies and must not be supplied to a recipient.

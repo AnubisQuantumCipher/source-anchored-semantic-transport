@@ -13,12 +13,13 @@ NAMES = ('transport_response_contract.py', 'transport_response_contract_model.py
          'response_contract_example.json', 'RESPONSE_CONTRACT.md', 'transport_checked_finish.py',
          'test_checked_finish.py', 'CHECKED_FINISH.md', 'freeze_response_contract_tests.py',
          'transport_install_support.py', 'transport_install_layout.py', 'transport_handoff_inputs.py',
-         'transport_handoff_client.py', 'transport_handoff_reader.py', 'transport_handoff_session.py')
+         'transport_handoff_client.py', 'transport_handoff_reader.py', 'transport_handoff_session.py',
+         'transport_response_evidence.py')
 
 
 def snapshot():
     paths = [HERE / name for name in NAMES] + [Path(sys.executable).resolve()]
-    require(len(paths) == 16 and len(set(paths)) == 16, 'exact test closure differs')
+    require(len(paths) == 17 and len(set(paths)) == 17, 'exact test closure differs')
     files, total = [], 0
     for path in paths:
         raw = read_regular(path, 4194304)

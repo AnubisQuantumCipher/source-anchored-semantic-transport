@@ -116,6 +116,9 @@ def interface(root, state, binding):
              '{"action":"catalog"}\n{"action":"page","source":"SOURCE_ID","offset":0}\n'
              + ('{"action":"focus","unit":"UNIT_ID"}\n' if state['config']['arm'] == 'transport' else '')
              + '{"action":"finish","candidate_base64":"BASE64_OF_EXACT_UTF8_JSON_OBJECT_BYTES"}\n\n'
+             'For a caller-declared source-evidence contract, finish_evidence additionally requires '
+             'evidence_contract_base64 and expect_evidence_contract_sha256, replacing action finish. '
+             'It verifies selected candidate citation spans before saving, not claim entailment.\n\n'
              'Use catalog source identifiers and task-directed reads. Source pages are 4096 bytes. '
              + ('Before transport focus, discover declared unit identifiers in a checked page response at '
                 'result.review.meaning_units[].unit, or use an explicit task selector. '

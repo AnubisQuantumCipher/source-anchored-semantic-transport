@@ -30,9 +30,9 @@ def frozen(path, held):
     raw = read_regular(path, 32768)
     require(sha(raw) == held, 'held test freeze differs')
     value = inputs.json_value(raw, 32768)
-    require(type(value['files']) is list and len(value['files']) == 16, 'test closure count differs')
+    require(type(value['files']) is list and len(value['files']) == 17, 'test closure count differs')
     names = [item['path'] for item in value['files']]
-    require(len(set(names)) == 16, 'duplicate test closure path')
+    require(len(set(names)) == 17, 'duplicate test closure path')
     for item in value['files']:
         require(pin(Path(item['path'])) == item, 'frozen test source changed')
     return raw

@@ -18,6 +18,7 @@ sys.dont_write_bytecode = True
 sys.path.insert(0, str(Path(__file__).absolute().parent))
 import transport_handoff_inputs as inputs
 import transport_handoff_session as sessions
+import transport_response_evidence as evidence
 from transport_install_support import canonical, read_regular, require, run_bounded, sha, write_new
 
 
@@ -43,14 +44,31 @@ def response(arm, action, status, result, number=0):
 
 
 def describe(arm):
-    return {'actions': ['describe', 'catalog', 'page', 'finish'] + (['focus'] if arm == 'transport' else []),
+    return {'actions': ['describe', 'catalog', 'page', 'finish', 'finish_evidence'] + (['focus'] if arm == 'transport' else []),
             'request_bytes': inputs.REQUEST_CAP, 'candidate_bytes': inputs.CANDIDATE_CAP,
             'page_bytes': inputs.PAGE_BYTES, 'response_bytes_including_newline': inputs.CAP,
             'maximum_calls_including_refusals': sessions.MAX_CALLS,
             'finish': 'candidate_base64 holds exact JSON object bytes; saved unedited, not certified complete.',
+            'finish_evidence': 'Checks candidate-embedded citations under a pinned evidence contract before saving; source linkage only, not entailment.',
             'authority': 'NONE', 'data_is_untrusted': True,
             'integrity_boundary': 'Preflight integrity failure or exhausted/corrupt session refuses without unsafe log append; caller must retain that response.',
             'isolation': 'Controlled subprocess and frozen files, not an OS sandbox or hostile same-user isolation.'}
+
+
+def finish_evidence(request, manifest, receiver, sources):
+    inputs.fields(request, ('action', 'candidate_base64', 'evidence_contract_base64', 'expect_evidence_contract_sha256'))
+    for name in ('candidate_base64', 'evidence_contract_base64'):
+        require(type(request[name]) is str and len(request[name]) <= inputs.REQUEST_CAP, 'evidence encoding bound')
+    candidate = base64.b64decode(request['candidate_base64'], validate=True)
+    contract = base64.b64decode(request['evidence_contract_base64'], validate=True)
+    require(sha(contract) == inputs.digest(request['expect_evidence_contract_sha256']), 'held evidence contract differs')
+    actual = sources if receiver is None else {item['id']: item['data'] for item in receiver.decoded['sources']}
+    verdict = evidence.validate(candidate, contract, actual, manifest['held_source_sha256'])
+    require(verdict['status'] == 'SOURCE_SPANS_MATCH' and verdict['candidate_sha256'] == sha(candidate)
+            and verdict['evidence_contract_sha256'] == sha(contract), 'source-evidence validator result differs')
+    return {'status': 'DRAFT_SAVED_SOURCE_LINKED', 'candidate': inputs.record(candidate),
+            'file': 'candidate.json', 'source_evidence': verdict, 'completeness': 'NOT_ASSESSED',
+            'structure': 'NOT_ASSESSED_BY_READER', 'authority': 'NONE'}, candidate
 
 
 def action_result(request, manifest, receiver, sources):
@@ -67,6 +85,8 @@ def action_result(request, manifest, receiver, sources):
         inputs.fields(request, ('action', 'unit'))
         require(receiver is not None, 'focus unavailable in original-document arm')
         return receiver.call('transport_focus', {'unit': request['unit']}), None
+    if action == 'finish_evidence':
+        return finish_evidence(request, manifest, receiver, sources)
     require(action == 'finish', 'unknown action')
     inputs.fields(request, ('action', 'candidate_base64'))
     encoded = request['candidate_base64']
@@ -96,6 +116,8 @@ def logged_call(args, manifest, receiver, sources, raw, input_bytes):
             requested = request.get('action')
             action = requested if type(requested) is str and len(requested) <= 32 else 'INVALID'
             result, candidate = action_result(request, manifest, receiver, sources)
+            if action == 'finish_evidence':
+                result['manifest_sha256'] = args.expect_manifest_sha256
             answer = response(manifest['arm'], action, 'OK', result, number)
         except (ValueError, OSError, UnicodeError, TypeError, KeyError, MemoryError) as error:
             candidate = None

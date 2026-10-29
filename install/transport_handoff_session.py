@@ -77,7 +77,7 @@ def replay(path, expected):
         decoded = json_value(response, CAP)
         require(decoded['call'] == index and decoded['action'] == item['action']
                 and decoded['status'] == item['status'], 'response/call metadata differs')
-        finished = item['action'] == 'finish' and item['status'] == 'OK'
+        finished = item['action'] in ('finish', 'finish_evidence') and item['status'] == 'OK'
         require((item['candidate'] is not None) == finished, 'candidate state differs')
         if finished:
             require('candidate.json' in files and len(files['candidate.json']) <= CANDIDATE_CAP
