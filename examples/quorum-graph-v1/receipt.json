@@ -4,9 +4,9 @@
   "external_validation": "EXTERNAL_VALIDATION_PENDING",
   "files": [
     {
-      "bytes": 5200,
+      "bytes": 5501,
       "path": ".github/workflows/source.yml",
-      "sha256": "8fed8596b2e1a6e9a8b10744b5e2e54c8e032558554689d2e7dc49199469a07b"
+      "sha256": "4b9b565b2294b80b7db8ff409c81069f359779538a253f9e3c761a237942a755"
     },
     {
       "bytes": 1954,
@@ -64,9 +64,9 @@
       "sha256": "cceec14ab68e37d09fa1eee577ff95cd7315eaac1afdbb89abfde05dfe09d2e4"
     },
     {
-      "bytes": 1672,
+      "bytes": 1719,
       "path": "install/check_source.py",
-      "sha256": "244f39adede3b99495b7d6a201d25e55d7ca17294ef3465afe8b7efb40db4189"
+      "sha256": "555f7ff308dcf938c2b47379bd5bf02d8ccdce36129f79a4146afcdb38ca0552"
     },
     {
       "bytes": 6143,

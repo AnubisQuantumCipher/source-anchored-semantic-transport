@@ -209,13 +209,20 @@ def _result(source_result: dict, claims: list[dict]) -> dict:
     return result
 
 
+def _validated_claims(body_raw: object, originals: object) -> tuple:
+    """Private owned bundle, available only after every inherited output gate."""
+    body, sources, resolved, source_result, schema = source._validated_sources(body_raw, originals)
+    contexts = _contexts(body)
+    _claim_prechecks(contexts, sources)
+    claims = _comparisons(contexts, resolved, source_result, sources, schema)
+    result = _result(source_result, claims)
+    return body, sources, result, schema
+
+
 def check_claim_structure(body_raw: object, originals: object) -> dict:
     """Complete internal structure stage; never accepts a caller-validated bundle."""
     try:
-        body, sources, resolved, source_result, schema = source._validated_sources(body_raw, originals)
-        contexts = _contexts(body)
-        _claim_prechecks(contexts, sources)
-        claims = _comparisons(contexts, resolved, source_result, sources, schema)
-        return _result(source_result, claims)
+        _, _, result, _ = _validated_claims(body_raw, originals)
+        return result
     except metadata.InputError as error:
         return metadata._error(error)

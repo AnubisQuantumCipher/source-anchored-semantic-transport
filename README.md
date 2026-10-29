@@ -77,6 +77,7 @@ The short formula is an entry point into the package. It cannot independently re
 - [Security boundaries](SECURITY.md)
 - [QUORUM source and quotation checks in development](examples/quorum-source-v1/README.md)
 - [QUORUM declared conditions and exceptions in development](examples/quorum-claim-v1/README.md)
+- [QUORUM change impact, dependency paths and retained history](examples/quorum-impact-v1/README.md)
 - [Contribution rules](CONTRIBUTING.md)
 - [License scope](LICENSE-SCOPE.md)
 

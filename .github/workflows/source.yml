@@ -67,6 +67,11 @@ jobs:
         run: |
           python3 -I -S -B -Werror install/test_quorum_claim.py
           python3 -I -S -B -Werror examples/quorum-claim-v1/prepare_receipt.py --check
+      - name: QUORUM declared change impact and retained history
+        run: |
+          python3 -I -S -B -Werror install/test_quorum_impact.py
+          python3 -I -S -B -O -Werror install/test_quorum_impact.py
+          python3 -I -S -B -Werror examples/quorum-impact-v1/prepare_receipt.py --check
       - name: Response contracts and checked draft submission
         run: |
           response_checks=$(mktemp -d)
