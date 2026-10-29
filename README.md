@@ -17,6 +17,7 @@ This is an open-source implementation under the [MIT license](LICENSE), targetin
 - Bounded archive handling and explicit refusals for changed identities, missing dependencies, unsupported versions and invalid input.
 - An Ada/SPARK native component and a separate evaluator source tree. Proof scope is distinct from Python orchestration and language interpretation.
 - A local CLI, a read-only MCP adapter, and a source-build installer that derives an exact runtime identity without editing the original source pins.
+- A [portable source export](docs/SOURCE_DISTRIBUTION.md) that packages the exact codec build inputs and an authoring example, with deterministic ZIP validation and byte-checked extraction before any build.
 - A reusable handoff preparer and compact receiving client with a fixed session, checked inputs, and an unedited draft submission.
 - An opt-in checked submission command that validates explicit field types, allowed values and unique action IDs before saving a draft.
 - Optional source-evidence checks that reject citations whose source revision, byte location or quotation does not match the recovered source; the [recipient demonstration](examples/checked-evidence-v1/REPORT.md) retains its failed first trial and passing task/contract repair.

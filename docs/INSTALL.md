@@ -14,6 +14,8 @@ The compiler is trusted not to escape its process group. Direct process time, ou
 
 Obtain the source at the intended published commit. Verify `install/SOURCE.json` against the digest supplied with that release or checkpoint. A digest obtained from the same untrusted download is an integrity reference, not independent authentication.
 
+For a separate, inspectable source archive, use the [source distribution commands](SOURCE_DISTRIBUTION.md). They export only the pinned codec installer inputs and a controller example. Extraction checks every member before writing; building remains a separate trust decision. The full repository retains the evaluator extensions, tests and evidence.
+
 ```sh
 python3 -I -S -B -Werror install/prepare_source.py --check
 
