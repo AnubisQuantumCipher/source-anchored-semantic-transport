@@ -12,7 +12,7 @@ QUORUM_GRAPH = ROOT / 'tools/transport_quorum_graph.py'
 QUORUM_INPUT = {ROOT / 'tools' / name for name in
                 ('transport_quorum_input.py', 'transport_quorum_shape.py',
                  'transport_quorum_source.py', 'transport_quorum_claim.py',
-                 'transport_quorum_impact.py')}
+                 'transport_quorum_impact.py', 'transport_quorum_context.py')}
 
 
 def main() -> None:

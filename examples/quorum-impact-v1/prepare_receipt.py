@@ -14,7 +14,8 @@ SOURCE = ('tools/transport_quorum_impact.py', 'tools/transport_quorum_graph.py',
           'tools/transport_quorum_body.schema.json', 'tools/transport_schema.py',
           'tools/transport_wire.py', 'install/test_quorum_impact.py',
           'install/check_source.py', '.github/workflows/source.yml')
-RESULTS = ('evidence/root-unit-ci-results.json', 'evidence/independent-unit-results.json')
+RESULTS = ('evidence/context-integration-root-results.json',
+           'evidence/context-integration-independent-results.json')
 
 
 def read(path: Path) -> bytes:

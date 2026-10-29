@@ -72,6 +72,11 @@ jobs:
           python3 -I -S -B -Werror install/test_quorum_impact.py
           python3 -I -S -B -O -Werror install/test_quorum_impact.py
           python3 -I -S -B -Werror examples/quorum-impact-v1/prepare_receipt.py --check
+      - name: QUORUM exact task and preassessment context
+        run: |
+          python3 -I -S -B -Werror install/test_quorum_context.py
+          python3 -I -S -B -O -Werror install/test_quorum_context.py
+          python3 -I -S -B -Werror examples/quorum-context-v1/prepare_receipt.py --check
       - name: Response contracts and checked draft submission
         run: |
           response_checks=$(mktemp -d)

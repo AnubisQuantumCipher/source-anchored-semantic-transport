@@ -341,24 +341,30 @@ def _paths(result: dict, indices: dict, edges: list, affected: dict,
         _fail('OUTPUT_ACCOUNTING', 'OUTPUT_BOUNDS')
 
 
+def _validated_impact(body_raw: object, originals: object, held_update_pins: object) -> tuple:
+    """Private owned bundle exposed only after the complete inherited result gate."""
+    body, sources, claim_result, schema = claims._validated_claims(body_raw, originals)
+    held = _held_arguments(held_update_pins)
+    updates, encoded = _event_pins(body, held)
+    indices, labels, source_keys = _nodes(body, claim_result)
+    edges = _dependencies(body, indices, labels, source_keys)
+    _reach(len(indices), edges, [], 'DEPENDENCY_DAG')
+    _update_records(body, updates, source_keys)
+    _predecessors(updates)
+    history, recorded = _history(body, sources, encoded)
+    conflicts = _conflicts(updates)
+    affected = {u['id']: _reach(len(indices), edges,
+        [indices[canonical(u['old_version'])]], 'REACHABILITY') for u in updates}
+    entries = _claim_entries(claim_result, indices, affected, conflicts)
+    result, size = _skeleton(claim_result, entries, updates, history, recorded, conflicts)
+    _paths(result, indices, edges, affected, updates, size)
+    return body, sources, result, schema
+
+
 def check_declared_impact(body_raw: object, originals: object, held_update_pins: object) -> dict:
     """Verify declared impact from bytes and explicit held pins; never apply updates."""
     try:
-        body, sources, claim_result, _ = claims._validated_claims(body_raw, originals)
-        held = _held_arguments(held_update_pins)
-        updates, encoded = _event_pins(body, held)
-        indices, labels, source_keys = _nodes(body, claim_result)
-        edges = _dependencies(body, indices, labels, source_keys)
-        _reach(len(indices), edges, [], 'DEPENDENCY_DAG')
-        _update_records(body, updates, source_keys)
-        _predecessors(updates)
-        history, recorded = _history(body, sources, encoded)
-        conflicts = _conflicts(updates)
-        affected = {u['id']: _reach(len(indices), edges,
-            [indices[canonical(u['old_version'])]], 'REACHABILITY') for u in updates}
-        entries = _claim_entries(claim_result, indices, affected, conflicts)
-        result, size = _skeleton(claim_result, entries, updates, history, recorded, conflicts)
-        _paths(result, indices, edges, affected, updates, size)
+        _, _, result, _ = _validated_impact(body_raw, originals, held_update_pins)
         return result
     except metadata.InputError as error:
         return metadata._error(error)
