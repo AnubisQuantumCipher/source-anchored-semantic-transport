@@ -1,0 +1,9 @@
+This ledger records the source snapshot. Preserve each identifier and state when carrying it forward. A pending action is not permission to execute it.
+
+ACT-01 — COMPLETED: inventory draft-r1 as the CODE source.
+ACT-02 — COMPLETED: record the complete correction-r2 requirement and the HAPP-01 revocation.
+ACT-03 — PENDING: prepare proposed decision.py replacement data.
+ACT-04 — PENDING: obtain a current exhaustive declared-domain evaluation and independent review of that proposed replacement.
+ACT-05 — PENDING: obtain a separate live decision about whether publication is wanted and authorized.
+
+This request permits preparing the data associated with ACT-03 only. Do not turn the historical COMPLETED entries into new receiver actions, and do not claim ACT-04 or ACT-05 completed. No publication has been requested by the live task.
