@@ -1,0 +1,170 @@
+{
+  "acceptance_evidence_required": "Exact destination/archive/index/collator/README/receipt/review byte pins and final repository/readback receipt for publication; a separately admitted complete clean build/proof meeting the unchanged total/unit oracle remains required for fresh proof claims.",
+  "artifact_pins": {
+    "README.md": {
+      "bytes": 2406,
+      "sha256": "818de23b73b74eb7f30b99676097fff3da653b28cfd8fa0ac678594cfdfb2f1c"
+    },
+    "collate.py": {
+      "bytes": 14666,
+      "sha256": "f345bdc46d66b8099b94b29ce5db776ce300d3c8c30f222cb313201a810cd545"
+    },
+    "collation-receipt.json": {
+      "bytes": 8690,
+      "sha256": "560fcf25c14ce888075f31e9f3ff54b8737341e1eec710d4014c29180789b43f"
+    },
+    "index.json": {
+      "bytes": 72176,
+      "sha256": "7dbf988f08f3e1e84b5b5d5057d49d472de497a196262e4b35d200a5a8313648"
+    },
+    "observations.zip": {
+      "bytes": 417959,
+      "sha256": "911c45dcf4ebdda8a7a6bdc5fcdab0f028e350c964ed304312f0b8f3d00e20ab"
+    }
+  },
+  "blockers": [],
+  "capacity_observation": {
+    "bounded_entries": 35,
+    "cap": 8388608,
+    "qualification": "Finite allocated/logical accounting observation; not a hard quota or peak theorem.",
+    "shared_publication_stage_accounted_bytes_before_review_receipt": 1528748
+  },
+  "data_check_runs": [
+    {
+      "argv": [
+        "/usr/bin/python3.14",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "/dev/shm/semantic-transport-verification-publication-20261029/proof-third/collate.py",
+        "check"
+      ],
+      "exit": 0,
+      "stderr": "EMPTY",
+      "stdout": "CHECKED_DATA_MEMBERS_AND_HASHES_ONLY\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3.14",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "-O",
+        "/dev/shm/semantic-transport-verification-publication-20261029/proof-third/collate.py",
+        "check"
+      ],
+      "exit": 0,
+      "stderr": "EMPTY",
+      "stdout": "CHECKED_DATA_MEMBERS_AND_HASHES_ONLY\n"
+    }
+  ],
+  "remaining_unproved": [
+    "No new formal proof, whole-system assurance, semantic fidelity, study validity, benefit, human evaluation or ACCEPTED_V1.",
+    "Non-atomic observation76 remains incomplete; collection race diagnosis does not establish file creator or hostile same-user isolation.",
+    "Tool/canonical identities are retained metadata; compiler objects, new binaries, cache and tmp content are explicitly excluded. This publication review did not rerun source compilation or rehash large tool binaries.",
+    "A fixed-pattern credential scan and selected source snapshots do not prove secret absence or complete environment attestation."
+  ],
+  "retained_actual_review": {
+    "bytes": 15040,
+    "sha256": "f2cc83d375d5e0c77a0f92a02050dc6a8e0fafd1d47b890f8a723201df7d7dd7"
+  },
+  "retained_failure": {
+    "build_process_returncode": -15,
+    "build_status": "FAILED",
+    "build_stderr": "EMPTY",
+    "build_stdout": {
+      "bytes": 637,
+      "sha256": "baa7f1388df5d18c4eb50084d5ce21f1cb5978e33572bb498cc6bcc4d0bbd42a"
+    },
+    "capture_complete": false,
+    "final_callbacks": "Seven expected final observations present; final_checks.failures empty.",
+    "later_observation78": "FINAL COMPLETE with inactive owned group is retained separately; it does not erase observation76 or the original refusal.",
+    "live_absence_readback": "No T3 proof-process.json, proof.stdout, proof.stderr or obj/gnatprove/gnatprove.out exists.",
+    "observation76": {
+      "committed_ends": [],
+      "error": "Listed entry absent at lstat (ENOENT).",
+      "path": "tmp/ccFoAVu8.s",
+      "phase": "BUILD",
+      "status": "ERROR"
+    },
+    "owned_group_absent": "Recorded true in frozen build/terminal and original independent actual review. No signal/probe was issued in this collation review.",
+    "parent_exit": 1,
+    "parent_stderr": "EMPTY",
+    "prior_attempts": "T1/T2/T3 failures remain. No clean native reproduction is established.",
+    "proof": "NOT_RUN",
+    "proof_summary": "ABSENT",
+    "refusal_fields": "type, uid, st_dev, st_ino, mode and nlink remain UNKNOWN; creator, deletion syscall/time and authenticated provenance unestablished.",
+    "terminal": "FAILED"
+  },
+  "review_actions": "Read-only filesystem/archive inspection, independent bounded byte/stat/member checks and two explicitly authorized local collator data-check invocations. Only this assigned review receipt was written. No native/CLI/model launch, signal, archive extraction or archived/compiled code execution.",
+  "reviewer": "/root/accounting_publication_review",
+  "schema": "transport/third-failed-proof-publication-review/1",
+  "scope": "Independent read-only engineering review of the inert third-attempt collation; no study or product acceptance.",
+  "selected_contract_source_review_pins": {
+    "D/proof-lifetime-implementation-review-01.json": {
+      "bytes": 6053,
+      "sha256": "369a9b311703e49b6a4963fbe83ac1a8dc87dbbb14ba9e700f572a26daf24107"
+    },
+    "D/proof-lifetime-launch-01.json": {
+      "bytes": 4986,
+      "sha256": "437d91786f5d3d8698fab12ea89182903439396a271e791573a67c8126c740b6"
+    },
+    "M/proof-oracle.json": {
+      "bytes": 3889,
+      "sha256": "83e9a762808e417aa37c61d5b163c7d686df672ff4a20329159d479ba6bea7cc"
+    },
+    "M/runner-index.json": {
+      "bytes": 5977,
+      "sha256": "6a5df5ad339cea11464333c85f5a60a3cea949966d61725a5a8d2b26ccef8dad"
+    },
+    "M/source-manifest.json": {
+      "bytes": 6560,
+      "sha256": "7b61c16882b649141bd3288b8289ef635cfe04a01c3dd53341238a4c0cd4efd2"
+    }
+  },
+  "smallest_sound_next_step": "Parent may copy these exact inert files and this review as a retained FAILED checkpoint, then independently verify destination bytes and publication readback. Any new native attempt requires separately reviewed implementation, explicit admission and launch evidence; this review does not authorize retry.",
+  "unexecuted_oracle": {
+    "expected_total_row": "Total                          1368    342 (25%)                                        1026 (75%)           .          .",
+    "preservation": "All21 exact expected unit strings and total row match archived proof-oracle and original full actual review. They are expected historical requirements, not T3 proof results.",
+    "source_head": "b8aefc51a51d6f391e58460b95074f28f654f50a",
+    "unit_rows": 21,
+    "zero_requirements": [
+      "unproved",
+      "justified",
+      "warnings",
+      "errors",
+      "pragma Assume",
+      "Suppress or Skip_Proof bypasses"
+    ]
+  },
+  "verdict": "PASS_THIRD_FAILED_ATTEMPT_DATA_PUBLICATION_REVIEW",
+  "verified": {
+    "D_records": "Exact twelve-file D selection matches collator whitelist, including original complete 15040-byte independent actual review, design/implementation grants/reviews, calendar adoption, parent stdout/stderr/exit and launch admission.",
+    "README": "Counts, selected-source scope, omission/exclusion treatment, failure/no-proof claims, nonportable historical absolute paths, raw diagnostic UNKNOWNs, heuristic scan qualification and absence of acceptance/proof claims agree with the inspected records.",
+    "archive": "All 163 indexed unique regular members were read in full from the archive and checked for exact size and SHA256. Expanded aggregate is 876420 bytes. CRC/decompression read completed. No extraction performed.",
+    "credential_scan": "No match in complete raw member bytes for fixed private-key-header, sk-proj, ghp or AKIA patterns. Heuristic only; not proof of secret absence. Nested archives remain opaque and unexecuted.",
+    "design_tree": "Independent bounded traversal of live M regular files matches M archive membership exactly. Traversal bounds: depth10, entries2048; no symlink dereference.",
+    "omissions": "Exactly eight live nonregular M entries match all declared omission paths, lstat fields and readlink strings. All are intentional test symlinks. None is dereferenced or archived as a regular file.",
+    "outer_receipt": "All thirteen collation-receipt bound local files match full bytes and SHA256. Held archive/index/collator/receipt pins match. README independently pinned.",
+    "paths_and_modes": "All names are canonical relative slash paths, depth <=12, fixed safe component alphabet, no dot/dotdot/absolute aliases or duplicate names. Unix member type is regular and permission is 0400. No encrypted entries; compression is stored or deflated. Each member <=1MiB, aggregate <=4MiB; archive417959 bytes <=4MiB.",
+    "prefix_inventory": {
+      "D_fixed_records": 12,
+      "M_regular_files": 107,
+      "T3_selected_root_records": 6,
+      "T3_source_files": 38
+    },
+    "selected_T3_records": [
+      "before.json",
+      "terminal.json",
+      "launch-admission.json",
+      "build-process.json",
+      "build.stdout",
+      "build.stderr"
+    ],
+    "source_bytes_and_identity": "Every indexed member matches its declared absolute source path and all current live bytes, SHA256 and selected lstat fields: dev, ino, mode, size, blocks, mtime_ns, ctime_ns, uid, nlink. These fields and hashes were rechecked after normal/optimized data checks. Atime is deliberately not an identity field; no reader attribution is inferred.",
+    "source_manifest": "All38 T3/source paths and bytes match the archived and live frozen M source-manifest. Original public manifest hash f013611aefcbc712f9c2261a975bf324d16233395427a1cfcc1531e62e9562c1 independently matches its live bytes and parses identically to M manifest. This preserves source contents despite the documented historical JSON serialization difference.",
+    "static_collator_review": "The explicit check branch only reads bounded index/archive data and verifies inventory/hash/type/bounds. No subprocess, exec, eval, native launcher or archive-member import/execution is present in that branch. The default archive-creation branch was not invoked by this reviewer."
+  }
+}

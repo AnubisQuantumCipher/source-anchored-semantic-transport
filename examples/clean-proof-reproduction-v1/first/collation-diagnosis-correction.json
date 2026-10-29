@@ -1,0 +1,14 @@
+{
+  "affected_record": {
+    "bytes": 725,
+    "path": "owner/proof-collation-first-failure-01.json inside evidence.zip",
+    "sha256": "8f4e20921349dd5db4f4b2ba0bb8d84200547272c5bb03dd3f28e230a0b8c372"
+  },
+  "corrected_cause": "UNKNOWN. An access-time update caused by reading is a plausible explanation; it was not directly measured for the failing file.",
+  "observation": "The first bounded reader raised ValueError(changed file) after comparing complete stat_result values, before writing an archive. The failing path and individual changed fields were not captured.",
+  "original_cause_status": "INFERRED_NOT_VERIFIED",
+  "preservation": "Original failure and original publication review are unchanged. This additive correction supersedes any definite access-time attribution; it changes no native proof, CLI output or archive bytes.",
+  "repair": "The successor reader compares explicit device/inode/mode/uid/nlink/size/mtime_ns/ctime_ns plus exact bytes, and excludes atime. The successor archive and live source identities were independently read back.",
+  "schema": "transport/collation-diagnosis-correction/1",
+  "status": "CORRECTED_UNOBSERVED_CAUSE_LABEL"
+}

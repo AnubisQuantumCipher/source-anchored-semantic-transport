@@ -1,0 +1,65 @@
+{
+  "acceptance": "NOT_ASSESSED",
+  "actual_CLI_executions_by_collator": "NONE",
+  "expanded_bytes": 1417483,
+  "files": {
+    "README.md": {
+      "bytes": 6121,
+      "sha256": "c57083b9675b4ffdaf52e072f016f8c0ada35323de97cc396d7735a1048301d5"
+    },
+    "collate.py": {
+      "bytes": 13678,
+      "sha256": "5101646826c95f4debf8907e77f0e4a537ab061c9898ac4e4ef85fd1064a9458"
+    },
+    "index.json": {
+      "bytes": 61754,
+      "sha256": "972df4649dc32b1632b12e4dd9f45c5c84ad9ec421709371de37686a4809773c"
+    },
+    "observations.zip": {
+      "bytes": 176096,
+      "sha256": "b6e61f249e814365d813ffdd20a71955e4b2ee55f251fe4808e2be822feb5d82"
+    }
+  },
+  "member_count": 140,
+  "native_model_or_human_executions": "NONE",
+  "omissions": [
+    {
+      "name": "C/helper-controls/link.bin",
+      "reason": "SYMLINK_OR_SPECIAL_NOT_DEREFERENCED",
+      "source_stat": {
+        "st_blocks": 0,
+        "st_ctime_ns": 1793306922009747459,
+        "st_dev": 29,
+        "st_ino": 417056,
+        "st_mode": 41471,
+        "st_mtime_ns": 1793306922009747459,
+        "st_nlink": 1,
+        "st_size": 83,
+        "st_uid": 1000
+      },
+      "target_string_only": "/dev/shm/semantic-transport-cli-boundary-design-20261029/helper-controls/sample.bin"
+    }
+  ],
+  "publication": "NOT_PERFORMED",
+  "schema": "transport/cli-public-collation-receipt/1",
+  "scope": "Exact C/Q regular-file snapshot and fixed D admissions/parent captures/actual result review; nested archives opaque; source inventory before/after equal; every archived byte hash read back.",
+  "source_function_lines": {
+    "canonical": 2,
+    "capacity": 19,
+    "create_archive": 22,
+    "inventory": 13,
+    "main": 20,
+    "need": 3,
+    "outcomes": 9,
+    "read": 12,
+    "readme": 42,
+    "safe_name": 6,
+    "scan": 4,
+    "sha": 2,
+    "stat_row": 4,
+    "tree": 26,
+    "verify_archive": 20,
+    "write": 8
+  },
+  "status": "COLLATED_DATA_ONLY_PENDING_INDEPENDENT_REVIEW"
+}

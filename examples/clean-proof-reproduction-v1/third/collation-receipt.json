@@ -1,0 +1,272 @@
+{
+  "acceptance": "NOT_ASSESSED",
+  "actual_native_CLI_model_human_runs_by_collator": "NONE",
+  "checks": {
+    "kind": "ARCHIVE_MEMBER_BYTE_HASH_DATA_CHECKS_ONLY_NO_MEMBER_EXECUTION",
+    "normal": {
+      "argv": [
+        "/usr/bin/python3.14",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "/dev/shm/semantic-transport-verification-publication-20261029/proof-third/collate.py",
+        "check"
+      ],
+      "exit": 0,
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 37,
+        "sha256": "e68339652eefdef92fc36cba75a2a23d9d62ac8f15f06233fa44e9dd9fa954ee"
+      }
+    },
+    "optimized": {
+      "argv": [
+        "/usr/bin/python3.14",
+        "-I",
+        "-S",
+        "-B",
+        "-O",
+        "-Werror",
+        "/dev/shm/semantic-transport-verification-publication-20261029/proof-third/collate.py",
+        "check"
+      ],
+      "exit": 0,
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 37,
+        "sha256": "e68339652eefdef92fc36cba75a2a23d9d62ac8f15f06233fa44e9dd9fa954ee"
+      }
+    }
+  },
+  "expanded_bytes": 876420,
+  "files": {
+    "COLLATION-PLAN.json": {
+      "bytes": 1571,
+      "sha256": "99ff44e94cd29eed8a1b9e1448995d350548f997ab42b0c74a09e0cc422661c7"
+    },
+    "README.md": {
+      "bytes": 2406,
+      "sha256": "818de23b73b74eb7f30b99676097fff3da653b28cfd8fa0ac678594cfdfb2f1c"
+    },
+    "check-normal.exit": {
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    "check-normal.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "check-normal.stdout": {
+      "bytes": 37,
+      "sha256": "e68339652eefdef92fc36cba75a2a23d9d62ac8f15f06233fa44e9dd9fa954ee"
+    },
+    "check-optimized.exit": {
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    "check-optimized.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "check-optimized.stdout": {
+      "bytes": 37,
+      "sha256": "e68339652eefdef92fc36cba75a2a23d9d62ac8f15f06233fa44e9dd9fa954ee"
+    },
+    "collate.py": {
+      "bytes": 14666,
+      "sha256": "f345bdc46d66b8099b94b29ce5db776ce300d3c8c30f222cb313201a810cd545"
+    },
+    "collation.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "collation.stdout": {
+      "bytes": 208,
+      "sha256": "b8b2a434ad33e5667afcd69dd0e75cd1a9532b26cb96f520c2fa9be37d2b718f"
+    },
+    "index.json": {
+      "bytes": 72176,
+      "sha256": "7dbf988f08f3e1e84b5b5d5057d49d472de497a196262e4b35d200a5a8313648"
+    },
+    "observations.zip": {
+      "bytes": 417959,
+      "sha256": "911c45dcf4ebdda8a7a6bdc5fcdab0f028e350c964ed304312f0b8f3d00e20ab"
+    }
+  },
+  "history": "T1/T2/T3 failures and all M regular preservation/control/review files retained; eight special test entries omitted explicitly without dereference. Unrelated quiescent proposal excluded.",
+  "member_count": 163,
+  "native_attempt": "FAILED_T3_BUILD_INTERRUPTED_RETURN_MINUS15",
+  "omission_count": 8,
+  "omissions": [
+    {
+      "name": "M/helper-tests-03/inventory/alias",
+      "reason": "SYMLINK_OR_SPECIAL_NOT_DEREFERENCED",
+      "source_stat": {
+        "st_blocks": 0,
+        "st_ctime_ns": 1793310329613769258,
+        "st_dev": 29,
+        "st_ino": 418996,
+        "st_mode": 41471,
+        "st_mtime_ns": 1793310329613769258,
+        "st_nlink": 1,
+        "st_size": 89,
+        "st_uid": 1000
+      },
+      "target_string_only": "/dev/shm/semantic-transport-proof-lifetime-design-20261029/helper-tests-03/inventory/data"
+    },
+    {
+      "name": "M/helper-tests-03/reads/alias",
+      "reason": "SYMLINK_OR_SPECIAL_NOT_DEREFERENCED",
+      "source_stat": {
+        "st_blocks": 0,
+        "st_ctime_ns": 1793310329658828893,
+        "st_dev": 29,
+        "st_ino": 419004,
+        "st_mode": 41471,
+        "st_mtime_ns": 1793310329658828893,
+        "st_nlink": 1,
+        "st_size": 85,
+        "st_uid": 1000
+      },
+      "target_string_only": "/dev/shm/semantic-transport-proof-lifetime-design-20261029/helper-tests-03/reads/file"
+    },
+    {
+      "name": "M/independent-lifetime-01/symlink/tmp/GPR.x",
+      "reason": "SYMLINK_OR_SPECIAL_NOT_DEREFERENCED",
+      "source_stat": {
+        "st_blocks": 0,
+        "st_ctime_ns": 1793310612511372381,
+        "st_dev": 29,
+        "st_ino": 419340,
+        "st_mode": 41471,
+        "st_mtime_ns": 1793310612511372381,
+        "st_nlink": 1,
+        "st_size": 94,
+        "st_uid": 1000
+      },
+      "target_string_only": "/dev/shm/semantic-transport-proof-lifetime-design-20261029/independent-lifetime-01/symlink/obj"
+    },
+    {
+      "name": "M/ipc-tests-04/symlinks/tmp",
+      "reason": "SYMLINK_OR_SPECIAL_NOT_DEREFERENCED",
+      "source_stat": {
+        "st_blocks": 0,
+        "st_ctime_ns": 1793310330110014963,
+        "st_dev": 29,
+        "st_ino": 419039,
+        "st_mode": 41471,
+        "st_mtime_ns": 1793310330110014963,
+        "st_nlink": 1,
+        "st_size": 85,
+        "st_uid": 1000
+      },
+      "target_string_only": "/dev/shm/semantic-transport-proof-lifetime-design-20261029/ipc-tests-04/ancestors/tmp"
+    },
+    {
+      "name": "M/ipc-tests-05/symlinks/tmp",
+      "reason": "SYMLINK_OR_SPECIAL_NOT_DEREFERENCED",
+      "source_stat": {
+        "st_blocks": 0,
+        "st_ctime_ns": 1793310450182778888,
+        "st_dev": 29,
+        "st_ino": 419238,
+        "st_mode": 41471,
+        "st_mtime_ns": 1793310450182778888,
+        "st_nlink": 1,
+        "st_size": 85,
+        "st_uid": 1000
+      },
+      "target_string_only": "/dev/shm/semantic-transport-proof-lifetime-design-20261029/ipc-tests-05/ancestors/tmp"
+    },
+    {
+      "name": "M/lifetime-tests-01/symlink/tmp/GPR.x",
+      "reason": "SYMLINK_OR_SPECIAL_NOT_DEREFERENCED",
+      "source_stat": {
+        "st_blocks": 0,
+        "st_ctime_ns": 1793310315878131252,
+        "st_dev": 29,
+        "st_ino": 418750,
+        "st_mode": 41471,
+        "st_mtime_ns": 1793310315878131252,
+        "st_nlink": 1,
+        "st_size": 88,
+        "st_uid": 1000
+      },
+      "target_string_only": "/dev/shm/semantic-transport-proof-lifetime-design-20261029/lifetime-tests-01/symlink/obj"
+    },
+    {
+      "name": "M/lifetime-tests-02/symlink/tmp/GPR.x",
+      "reason": "SYMLINK_OR_SPECIAL_NOT_DEREFERENCED",
+      "source_stat": {
+        "st_blocks": 0,
+        "st_ctime_ns": 1793310325167032458,
+        "st_dev": 29,
+        "st_ino": 418897,
+        "st_mode": 41471,
+        "st_mtime_ns": 1793310325167032458,
+        "st_nlink": 1,
+        "st_size": 88,
+        "st_uid": 1000
+      },
+      "target_string_only": "/dev/shm/semantic-transport-proof-lifetime-design-20261029/lifetime-tests-02/symlink/obj"
+    },
+    {
+      "name": "M/lifetime-tests-03/symlink/tmp/GPR.x",
+      "reason": "SYMLINK_OR_SPECIAL_NOT_DEREFERENCED",
+      "source_stat": {
+        "st_blocks": 0,
+        "st_ctime_ns": 1793310444331440873,
+        "st_dev": 29,
+        "st_ino": 419145,
+        "st_mode": 41471,
+        "st_mtime_ns": 1793310444331440873,
+        "st_nlink": 1,
+        "st_size": 88,
+        "st_uid": 1000
+      },
+      "target_string_only": "/dev/shm/semantic-transport-proof-lifetime-design-20261029/lifetime-tests-03/symlink/obj"
+    }
+  ],
+  "proof": "NOT_RUN",
+  "proof_summary": "ABSENT",
+  "publication": "NOT_PERFORMED",
+  "review_input": {
+    "bytes": 15040,
+    "held_root_pin_matched": true,
+    "sha256": "f2cc83d375d5e0c77a0f92a02050dc6a8e0fafd1d47b890f8a723201df7d7dd7"
+  },
+  "schema": "transport/third-failed-proof-collation-receipt/1",
+  "source_function_lines": {
+    "canonical": 2,
+    "capacity": 19,
+    "create_archive": 22,
+    "inventory": 18,
+    "main": 24,
+    "need": 3,
+    "outcomes": 14,
+    "read": 12,
+    "readme": 34,
+    "safe_name": 6,
+    "scan": 4,
+    "sha": 2,
+    "stat_row": 4,
+    "tree": 26,
+    "verify_archive": 21,
+    "write": 8
+  },
+  "source_integrity": {
+    "after_data_checks": "EVERY_ARCHIVED_SOURCE_FILE_BYTES_SHA256_SELECTED_STAT_FIELDS_RECHECKED_IDENTICAL",
+    "atime": "NOT_AN_IDENTITY_FIELD_NO_READER_CAUSE_ATTRIBUTION",
+    "before_after_full_inventory": "IDENTICAL_AT_COLLATION",
+    "selected_stat_mutations": 0,
+    "source_byte_mutations": 0
+  },
+  "status": "COLLATED_DATA_ONLY_NORMAL_OPTIMIZED_CHECKS_PASS_PENDING_INDEPENDENT_REVIEW"
+}

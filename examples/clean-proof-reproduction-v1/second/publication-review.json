@@ -1,0 +1,126 @@
+{
+  "acceptance_evidence_required": "Exact source/destination/Git/hosted readback for this data checkpoint. Clean build/proof acceptance still needs its separate complete source-bound execution evidence and independent decision.",
+  "archive_observations": {
+    "archive_execution": "NONE",
+    "declared_unsupported_omissions": 12,
+    "expanded_bytes": 635807,
+    "extraction": "NONE",
+    "member_modes": "regular0400",
+    "nested_archives": "OPAQUE_NOT_RECURSIVELY_EXTRACTED",
+    "regular_members": 207
+  },
+  "artifact_pins": {
+    "README.md": {
+      "bytes": 3116,
+      "sha256": "911c1682732adc21ef9a3b3a2b6a4e10a11f612776ec09f990876436101b0b61"
+    },
+    "collate.py": {
+      "bytes": 13976,
+      "sha256": "7033667ba8c7213ebb9bc2a5a46ed86469cecceac68d44eb0b5cf69381a2608e"
+    },
+    "collation-receipt.json": {
+      "bytes": 8982,
+      "sha256": "23d45a52d314d2e414809e58427678e8caba68e431194bda9e7df1850ef7d17a"
+    },
+    "index.json": {
+      "bytes": 90691,
+      "sha256": "d8775230837d8d5d38e9fd3de97674a9b08d04a33d53ddfb5d4ee6a24321e8c6"
+    },
+    "observations.zip": {
+      "bytes": 290103,
+      "sha256": "8c7e19b08857247209042bd777f6d6271f0d77a23698e978ce910c7d25e00be3"
+    }
+  },
+  "atime_cause": "UNKNOWN; plausible inference remains unverified and no reader attribution is established",
+  "blocking_publication_findings_remaining": [],
+  "decision": "PASS_SECOND_FAILED_ATTEMPT_DATA_PUBLICATION_REVIEW",
+  "native_execution_by_reviewer": "NONE",
+  "new_formal_proof": "NONE",
+  "observed_attempt": {
+    "atime_cause": "UNKNOWN_NO_READER_ATTRIBUTION",
+    "build_supervisor": "FAILED",
+    "capture_complete": false,
+    "clean_native_build": "NOT_ESTABLISHED",
+    "creator_or_removal_cause": "NOT_AUTHENTICATED_BY_THIS_EVIDENCE",
+    "missing_final_bound_path": "tmp/GPR.880304",
+    "native_build_process_returncode": 0,
+    "original_independent_verdict": "VERIFIED_TERMINAL_FAILURE_PROOF_NOT_RUN",
+    "proof": "NOT_RUN",
+    "proof_summary": "ABSENT",
+    "terminal": "FAILED"
+  },
+  "product_acceptance": false,
+  "publication": "NOT_PERFORMED_BY_THIS_REVIEW",
+  "remaining_limits": [
+    "This verifies integrity and factual reporting of a failed local attempt. It neither repeats native execution nor establishes a clean build, mathematical proof, semantic fidelity, benefit, study validity, whole-system correctness or product acceptance.",
+    "Omitted T2 compiled objects/binaries/source/tmp and installed toolchain are outside this archive. Their full contents are not newly qualified by this publication review; the original task/review remains their stated provenance.",
+    "Incomplete capture and proof NOT_RUN remain binding. A build process exit zero cannot satisfy the failed frozen supervisor contract; prospective repairs/admissions cannot alter this attempt.",
+    "Source/library/kernel/model-provider attestation, hostile same-user isolation and arbitrary-secret absence remain unproved. Configured engineering review and raw-byte credential patterns retain only their stated scope.",
+    "No archived driver, actual CLI, compiler, prover, model campaign, helper execution, source modification, cleanup, retry or Git operation was performed. Only this additive review receipt is written."
+  ],
+  "reviewer": "accounting_publication_review",
+  "schema": "transport/second-failed-proof-publication-review/1",
+  "scope": "Independent bounded archive/index/live-source and README review only. Publication-byte qualification does not qualify a clean native build or proof.",
+  "selected_evidence_pins": {
+    "D/proof-ipc-attempt-review-01.json": {
+      "bytes": 9500,
+      "sha256": "ebc2263d943670bb2be282d3a36023f53c9c1d6c78013898c66436953b0cda57"
+    },
+    "D/proof-ipc-launch-01.exit": {
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    "D/proof-ipc-launch-01.json": {
+      "bytes": 3248,
+      "sha256": "55c355f9f5777e89d90ed3df3a076e098ae583cf2c59be2368ccbd2c9f504008"
+    },
+    "D/proof-ipc-launch-01.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "D/proof-ipc-launch-01.stdout": {
+      "bytes": 97,
+      "sha256": "d1a0bbc20e60a003b57c73c43448fe99dc095aea46b1d0e1e825e55c84d7a3d6"
+    },
+    "T2/before.json": {
+      "bytes": 10919,
+      "sha256": "0cf9926c43dd52643835a88a004f4c5c0f23ae5f3c166d826008baa5568e8cb0"
+    },
+    "T2/build-process.json": {
+      "bytes": 3852,
+      "sha256": "55d1f7f0b49cf4ecd710811148b7c23480e60b2c6163d9bc28496cb5aca91c19"
+    },
+    "T2/build.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "T2/build.stdout": {
+      "bytes": 686,
+      "sha256": "2c15fd0920dfc79ffe3772558e716c1fc6c1bbcf57acf92c2d291ab99771fe72"
+    },
+    "T2/launch-admission.json": {
+      "bytes": 3248,
+      "sha256": "55c355f9f5777e89d90ed3df3a076e098ae583cf2c59be2368ccbd2c9f504008"
+    },
+    "T2/terminal.json": {
+      "bytes": 26348,
+      "sha256": "83edb88138649ecd3d784147a1ed6c53af682a64261cee4981d526a761452ca2"
+    }
+  },
+  "smallest_sound_next_step": "Copy the exact qualified named data files and this additive review with destination pin readback. Keep both native attempts FAILED and any future proposal/implementation/attempt separately identified and admitted.",
+  "verified": [
+    "Exact held archive/index pins and all collation receipt file pins match current bytes. Archive contains exactly 207 unique lexical-safe relative regular read-only members, supported compression and no encrypted or unsupported archive members. Each member and aggregate were read under declared bounds.",
+    "Every member size/SHA256 matches the index and complete live source bytes plus retained source stat observations. Every regular file in frozen N is represented; T2 contains exactly the six disclosed selected root records and D exactly the fixed admissions/launch/final-review/actual-review selection. No source mutation was observed during readback.",
+    "All 12 omissions match live lstat identity. They are intentional N test symlinks plus the declared FIFO; link target strings match without dereference, and the FIFO was never opened. Complete live N unsupported-entry inventory matches the omission list.",
+    "Original actual-review bytes match the held 9500-byte ebc2263d943670bb2be282d3a36023f53c9c1d6c78013898c66436953b0cda57 identity and failed/proof-not-run verdict. All relevant native/task/owner raw evidence remains byte-identical in the archive and at its indexed source.",
+    "Native build raw stream hashes match build-process.json: recorded process returncode zero, 686 stdout bytes, empty stderr, supervisor FAILED and capture_complete false. Owner and task launch bytes match; parent exit is one with empty stderr. Terminal status remains FAILED.",
+    "All six baseline final source/copy/canonical/tool/environment/inventory observations are retained, alongside the additional private_bindings_after failure for the missing bound generated directory. Before/after canonical/tool/environment observations match. The frozen failed rule is not waived or relabelled success.",
+    "Actual review and index retain proof NOT_RUN and no proof summary. No live proof-process/stdout/stderr records exist at T2. The archived actual review preserves the distinction between an observed directory-lifetime compatibility failure and unauthenticated creator/removal attribution.",
+    "README recorded native command exactly matches retained build-process command. It explicitly separates process exit zero from failed/incomplete enclosing attempt, states that a clean build is unestablished and proof NOT_RUN, and treats successor proposals as separate unexecuted records.",
+    "README/index retain UNKNOWN earlier atime attribution without identifying a reader. This is consistent with the separately pinned additive correction; no original failure/review/archive bytes were rewritten.",
+    "README discloses compiled-object/new-binary/source/tmp exclusions from selected T2 collation, opaque nested ZIPs, exact local source/tool/process assumptions, and historical drivers as inspection data rather than automatic portable launchers. Engineering review does not become external-human validation or ACCEPTED_V1.",
+    "The collator source was inspected and compiled statically with warnings as errors; functions satisfy the line ceiling. Its check branch verifies archive/index membership and bytes/hashes without importing or running archived code. This review did not execute that branch.",
+    "Fixed private-key/provider-token/GitHub-token/AWS-access-key patterns matched no raw archived member. README correctly states the heuristic limitation; nested compressed payloads remain opaque.",
+    "The collation receipt explicitly retains its optional preparation-command SyntaxError as a failed preparation with no file change, and states that no standalone raw capture exists. This statement is preserved as author-recorded provenance, not reconstructed original tool evidence."
+  ]
+}
