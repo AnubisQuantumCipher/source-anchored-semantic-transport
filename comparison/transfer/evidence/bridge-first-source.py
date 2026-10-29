@@ -1,0 +1,218 @@
+#!/usr/bin/env python3
+"""Frozen public-fixture transfer to the unchanged, qualified QUORUM checker."""
+import argparse
+import hashlib
+import json
+import os
+from pathlib import Path
+import resource
+import signal
+import subprocess
+import sys
+import time
+import types
+
+ROOT = Path(__file__).resolve().parents[2]
+CORE = '4bd4e99d2252fcd3699bcd751f87affd3da2622f782c5ae7abb13797a3e0a32d'
+BOOT = '03f2bf18a67b9a6d6ccf25fd506b252b38ac34c78f56153eb22b8ecfca5738ea'
+RSYNC = 'cdd6759b34905d289e4b993efc726f7586fe2c12a0e84d712fcf254b1b3ef4b8'
+OLD = Path('/dev/shm/semantic-transport-sender-20261029/identifier-closure/normal-POSITIVE/output')
+OBS = ROOT / 'examples/quorum-sender-v1/observations'
+CAP = 2097152
+
+
+def need(value, reason):
+    if not value:
+        raise ValueError(reason)
+
+
+def canonical(value):
+    return json.dumps(value, sort_keys=True, ensure_ascii=False,
+                      separators=(',', ':'), allow_nan=False).encode()
+
+
+def pin(raw):
+    return dict(bytes=len(raw), sha256=hashlib.sha256(raw).hexdigest())
+
+
+def read(path, observed):
+    need(path.is_file() and not path.is_symlink(), 'BRIDGE_INPUT_FILE')
+    with path.open('rb') as stream:
+        raw = stream.read(CAP + 1)
+    need(len(raw) <= CAP, 'BRIDGE_INPUT_BOUND')
+    observed[str(path)] = raw
+    return raw
+
+
+def write(path, raw):
+    with path.open('xb') as stream:
+        need(stream.write(raw) == len(raw), 'BRIDGE_WRITE')
+    need(path.read_bytes() == raw, 'BRIDGE_WRITE_READBACK')
+
+
+def load_core(observed):
+    path = ROOT / 'comparison/transfer/transfer.py'
+    raw = read(path, observed)
+    need(pin(raw)['sha256'] == CORE, 'BRIDGE_CORE_PIN')
+    module = types.ModuleType('_approved_transfer_bridge_core')
+    module.__file__ = str(path)
+    exec(compile(raw, str(path), 'exec'), module.__dict__)
+    return module
+
+
+def fixture(observed):
+    raw = read(OLD / 'original-invocation.json', observed)
+    inv = json.loads(raw)
+    execution = json.loads(read(OBS / 'normal-original-execution.json', observed))
+    need(pin(raw)['sha256'] == execution['argv'][6], 'BRIDGE_ORIGINAL_INVOCATION_PIN')
+    paths = {'Q_RECORDS':ROOT/'examples/quorum-sender-v1/body.json'}
+    expected = {'Q_RECORDS':inv['body']}
+    for row in inv['originals']:
+        paths[row['alias']] = ROOT/'examples/quorum-sender-v1'/(row['alias']+'.bin')
+        expected[row['alias']] = row['key']
+    for alias, field, name in (('ORIGINAL_INDEX','package','original-index.json'),
+            ('REQUEST','request','original-request.json'),
+            ('ENVELOPE','envelope','original-envelope.json'),
+            ('CHECKER_DESCRIPTOR','checker_descriptor','checker-descriptor.json')):
+        paths[alias] = OLD/name
+        expected[alias] = inv[field].get('key', inv[field])
+    rows, data = [], {}
+    for alias, path in paths.items():
+        raw = read(path, observed)
+        need(pin(raw) == {k:expected[alias][k] for k in ('bytes','sha256')},
+             'BRIDGE_FIXTURE_PIN')
+        rows.append(dict(id=alias, revision='V1', path=str(path), **pin(raw)))
+        data[alias] = raw
+    return inv, rows, data
+
+
+def reconstruct(core, report, out, data):
+    selected = report['candidates']['deflate9']['warm']
+    archive = (out/'transfer'/selected['path']).read_bytes()
+    cache = {pin(data[name])['sha256']:data[name]
+             for name in ('ACCESS_NOTICE','TIMETABLE_BEFORE')}
+    recovered = core.restore(archive, selected['sha256'],
+                             selected['manifest_sha256'], cache)
+    need(recovered == data, 'BRIDGE_RECOVERED_BYTES')
+    recipient = out/'original-recipient'
+    recipient.mkdir(mode=0o700)
+    for alias, raw in recovered.items():
+        write(recipient/(alias+'.bin'), raw)
+    return recipient
+
+
+def relocate(inv, recipient):
+    clone = json.loads(canonical(inv))
+    clone['body']['path'] = str(recipient/'Q_RECORDS.bin')
+    for row in clone['originals']:
+        row['path'] = str(recipient/(row['alias']+'.bin'))
+    for field, alias in (('package','ORIGINAL_INDEX'),('request','REQUEST'),
+                         ('envelope','ENVELOPE'),('checker_descriptor','CHECKER_DESCRIPTOR')):
+        clone[field]['path'] = str(recipient/(alias+'.bin'))
+    restored = json.loads(canonical(clone))
+    restored['body']['path'] = inv['body']['path']
+    for old, new in zip(inv['originals'], restored['originals'], strict=True):
+        new['path'] = old['path']
+    for field in ('package','request','envelope','checker_descriptor'):
+        restored[field]['path'] = inv[field]['path']
+    need(restored == inv, 'BRIDGE_NONPATH_CHANGE')
+    return clone
+
+
+def execute(out, label, invocation, expected, observed):
+    bootstrap = ROOT/'install/transport_quorum_bootstrap.py'
+    need(pin(read(bootstrap, observed))['sha256'] == BOOT, 'BRIDGE_BOOTSTRAP_PIN')
+    raw = read(invocation, observed)
+    args = [str(Path(sys.executable).resolve()), '-I', '-S', str(bootstrap),
+            str(invocation), '--expect-invocation-sha256', pin(raw)['sha256'],
+            '--expect-bootstrap-sha256', BOOT]
+    start = time.perf_counter_ns()
+    timeout = False
+    with (out/(label+'.stdout')).open('xb') as first, (out/(label+'.stderr')).open('xb') as second:
+        child = subprocess.Popen(args, stdin=subprocess.DEVNULL, stdout=first, stderr=second,
+            env={'PATH':'/usr/bin:/bin','LC_ALL':'C','TMPDIR':str(out)}, start_new_session=True)
+        try:
+            code = child.wait(timeout=30)
+        except subprocess.TimeoutExpired:
+            timeout = True
+            os.killpg(child.pid, signal.SIGKILL)
+            code = child.wait(timeout=5)
+    elapsed = time.perf_counter_ns()-start
+    stdout = read(out/(label+'.stdout'), observed)
+    stderr = read(out/(label+'.stderr'), observed)
+    need(len(stdout)+len(stderr) <= 131072, 'BRIDGE_OUTPUT_BOUND')
+    record = dict(argv=args, exit_code=code, timeout=timeout, elapsed_ns=elapsed,
+                  stdout=pin(stdout), stderr=pin(stderr), expected_stdout=pin(expected),
+                  complete_stdout_byte_match=stdout == expected)
+    write(out/(label+'-execution.json'), canonical(record))
+    need(not timeout and code == 0 and stdout == expected, 'BRIDGE_CHECKER_RESULT')
+    return record
+
+
+def transport(out, observed):
+    path = OLD/'transport-invocation.json'
+    raw = read(path, observed)
+    inv = json.loads(raw)
+    execution = json.loads(read(OBS/'normal-transport-execution.json', observed))
+    need(pin(raw)['sha256'] == execution['argv'][6], 'BRIDGE_TRANSPORT_INVOCATION_PIN')
+    for field in ('package','request','envelope','share','checker_descriptor'):
+        item = inv[field]
+        actual = read(Path(item['path']), observed)
+        key = item.get('key', item)
+        need(pin(actual) == {k:key[k] for k in ('bytes','sha256')}, 'BRIDGE_TRANSPORT_PIN')
+    need(all(not Path(row['path']).exists() for row in inv['originals']) and
+         not Path(inv['body']['path']).exists(), 'BRIDGE_SIDECARS_PRESENT')
+    expected = read(OBS/'normal-transport-stdout.bin', observed)
+    need(pin(expected) == execution['stdout'], 'BRIDGE_TRANSPORT_EXPECTED_PIN')
+    return execute(out, 'transport', path, expected, observed)
+
+
+def run(out):
+    observed = {}
+    core = load_core(observed)
+    inv, rows, data = fixture(observed)
+    out.mkdir(mode=0o700)
+    request = dict(schema='transport/transfer-comparison-input/1', current=rows,
+                   prior=[row for row in rows if row['id'] in ('ACCESS_NOTICE','TIMETABLE_BEFORE')])
+    write(out/'request.json', canonical(request))
+    report = core.prepare(out/'request.json', out/'transfer', True, RSYNC)
+    recipient = reconstruct(core, report, out, data)
+    write(out/'original-invocation.json', canonical(relocate(inv, recipient)))
+    expected = read(OBS/'normal-original-stdout.bin', observed)
+    execution = json.loads(read(OBS/'normal-original-execution.json', observed))
+    need(pin(expected) == execution['stdout'], 'BRIDGE_ORIGINAL_EXPECTED_PIN')
+    original = execute(out, 'original', out/'original-invocation.json', expected, observed)
+    counterpart = transport(out, observed)
+    for path, raw in observed.items():
+        need(Path(path).read_bytes() == raw, 'BRIDGE_SOURCE_CHANGED')
+    result = dict(schema='transport/conventional-checker-bridge/1', status='TESTED',
+        same_checker_integration=True, original=original, transport=counterpart,
+        transfer_report=pin((out/'transfer/report.json').read_bytes()),
+        observed_inputs=[dict(path=path, **pin(raw)) for path, raw in sorted(observed.items())],
+        python=sys.version, human_work='UNMEASURED', semantic_fidelity='NOT_ASSESSED',
+        model_runs='UNPERFORMED', strongest_retrieval_baseline='NOT_QUALIFIED',
+        scope='Frozen public fixture, conventional warm ZIP plus declared cache; exact complete checker output per arm.',
+        authority='NONE', freshness='UNKNOWN')
+    write(out/'result.json', canonical(result))
+    return result
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('out', type=Path)
+    args = parser.parse_args()
+    need(args.out.is_absolute() and args.out.parent ==
+         Path('/dev/shm/semantic-transport-transfer-comparison-20261029'), 'BRIDGE_OUTPUT_LOCATION')
+    need(args.out.parent.stat().st_uid == os.getuid() and
+         not args.out.parent.stat().st_mode & 0o022, 'BRIDGE_PRIVATE_PARENT')
+    for kind, limit in ((resource.RLIMIT_AS,1073741824),(resource.RLIMIT_CPU,120),
+                        (resource.RLIMIT_FSIZE,CAP)):
+        unused, hard = resource.getrlimit(kind)
+        need(hard == resource.RLIM_INFINITY or hard >= limit, 'BRIDGE_RESOURCE')
+        resource.setrlimit(kind,(limit,limit))
+    result = run(args.out)
+    print(json.dumps(dict(status=result['status'], report=str(args.out/'result.json'))))
+
+
+if __name__ == '__main__':
+    main()
