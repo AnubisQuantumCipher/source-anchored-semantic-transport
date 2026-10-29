@@ -1,0 +1,2 @@
+def allow_demo_route(requester_is_keeper, recipient_is_keeper, seal_ok, repair_mode, ticket_ok, age_hours):
+    return recipient_is_keeper and ((seal_ok and age_hours < 12) or (repair_mode and ticket_ok))

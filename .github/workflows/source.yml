@@ -56,6 +56,7 @@ jobs:
         run: |
           bound_checks=$(mktemp -d)
           python3 -I -S -B -Werror install/test_bound_evaluation.py --structure-only --evidence "$bound_checks/controls"
+          python3 -I -S -B -Werror install/test_finite_check.py
       - name: Reproduce retained three-hop evidence
         run: |
           python3 -I -S -B -Werror examples/repeated-handoff-v1/results/reproduce/check_public.py --expect-closure-sha256 651e8d75f7697be0ef977943a043d59c104dd9e792a938f86b898f5f1a3a4e61

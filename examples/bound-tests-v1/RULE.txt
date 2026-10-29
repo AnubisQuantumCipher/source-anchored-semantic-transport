@@ -1,0 +1,5 @@
+This is an invented demonstration routing problem. It represents no real, legal, safety, or production authorization. The supplied code is draft-r1; this correction-r2 note supersedes its behavior.
+
+Complete correction: allow_demo_route must return True exactly when requester_is_keeper is True, age_hours is between 0 and 12 inclusive, and either seal_ok is True or both repair_mode and ticket_ok are True. The repair exception waives only seal_ok; it never waives the requester role or either age bound. recipient_is_keeper has no effect on the decision.
+
+The role is the requester, not the recipient. Age is measured in whole hours. Exactly 12 hours is allowed when the other conditions hold. The repair exception requires repair_mode and ticket_ok together. A missing ticket cannot be replaced by the recipient's role.

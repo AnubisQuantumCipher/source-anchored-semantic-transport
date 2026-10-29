@@ -1,0 +1,7 @@
+Both reports claim to describe the same draft-r1 source represented by CODE.
+
+TR-A, dated 2026-10-20: "All boundary cases passed, including age_hours=12 with requester_is_keeper=True, recipient_is_keeper=True, seal_ok=True, repair_mode=False, and ticket_ok=False."
+
+TR-B, dated 2026-10-21: "That same age_hours=12 input returned False and the inclusive threshold check failed."
+
+These are conflicting historical claims. Neither report includes its raw output, command, evaluator identity, or source digest; this bundle does not resolve their provenance. Neither report tests a proposed correction-r2 replacement. No current execution result, exhaustive truth-table result, proof, or independent review for the proposed replacement is included. Its current verification status is UNKNOWN. Preparing patch data does not change that status and does not establish a passing check.

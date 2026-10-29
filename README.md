@@ -22,6 +22,7 @@ This is an open-source implementation under the [MIT license](LICENSE), targetin
 - Optional source-evidence checks that reject citations whose source revision, byte location or quotation does not match the recovered source; the [recipient demonstration](examples/checked-evidence-v1/REPORT.md) retains its failed first trial and passing task/contract repair.
 - A bounded, typed Boolean-expression interpreter for fixture bindings: it checks proposed patches against supplied states without executing candidate Python code.
 - An optional [source-bound obligation evaluator](docs/BOUND_EVALUATION.md) with distinct typed predicate bindings, conservative handling of conflicting reports, and checks that reject a submitted verdict when it disagrees with the computed result.
+- [Recomputed finite test receipts](docs/BOUND_TESTS.md) bind a proposed function replacement to a declared predicate and test table; supplied success claims cannot substitute for rerunning the bounded comparison. The [fresh workflow comparison](examples/bound-tests-v1/REPORT.md) records passing first drafts in both arms and higher measured overhead for transport.
 
 ## Start
 
