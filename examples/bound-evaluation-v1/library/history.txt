@@ -1,0 +1,2 @@
+An earlier dispatch record denied that Inez delivered the atlas to Omar.
+A later correction reports delivery. Both reports remain preserved; precedence is not automatically resolved.

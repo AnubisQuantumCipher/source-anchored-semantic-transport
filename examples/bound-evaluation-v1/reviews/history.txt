@@ -1,0 +1,2 @@
+An older record reported validation review completion TRUE.
+The later FALSE report is a declared correction. Neither recency nor correction wording automatically selects an authoritative report.
