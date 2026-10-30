@@ -10,7 +10,8 @@ MODULES = ('__init__', 'common', 'bindings', 'census', 'graph', 'locators', 'cha
            'collection_document', 'document_client', 'document_display')
 TESTS = ('common', 'meaning', 'locators', 'challenges', 'refinement', 'assessments',
          'analysis', 'bundle', 'adversarial', 'native_build', 'native_runtime', 'native',
-         'analysis_boundaries', 'document_analysis', 'document_analysis_independent', 'collection',
+         'analysis_boundaries', 'document_analysis', 'document_analysis_independent',
+         'document_analysis_reuse', 'collection',
          'collection_document', 'document_client', 'document_display')
 CORE = ('__init__', 'common', 'bindings', 'census', 'graph', 'locators', 'challenges', 'refinement')
 

@@ -27,7 +27,7 @@ jobs:
           chmod 700 "$fixture_tmp"
           export TMPDIR="$fixture_tmp"
           trap 'rm -rf -- "$fixture_tmp"' EXIT
-          suites=(common meaning locators challenges refinement assessments analysis bundle adversarial native_build native_runtime native analysis_boundaries document_analysis document_analysis_independent collection collection_document document_client document_display)
+          suites=(common meaning locators challenges refinement assessments analysis bundle adversarial native_build native_runtime native analysis_boundaries document_analysis document_analysis_independent document_analysis_reuse collection collection_document document_client document_display)
           for suite in "${suites[@]}"; do
             python3 -I -S -B -Werror "tests/test_sentinel_${suite}.py"
             python3 -I -S -B -O -Werror "tests/test_sentinel_${suite}.py"

@@ -316,16 +316,26 @@ def request_bytes(index, index_held, row, raw, prompt):
 
 def prepare_document_job(reading, binding_raw, index_raw, index_held, blocks, job_id):
     index, groups = document_checked(reading, binding_raw, index_raw, index_held, blocks)
+    return _prepare_checked(reading, index, index_held, groups, job_id)
+
+
+def _prepare_checked(reading, index, index_held, groups, job_id):
+    """Use only an owned document_checked result within the current call."""
     row, raw, prompt = selected_job(index, groups, reading, job_id)
     return {'request': request_bytes(index, index_held, row, raw, prompt), 'prompt': prompt, 'reading': raw}
 
 
 def request_checked(request_raw, request_held, reading, binding_raw, index_raw, index_held, blocks, registry):
+    index, groups = document_checked(reading, binding_raw, index_raw, index_held, blocks)
+    return _request_checked(request_raw, request_held, reading, index, index_held, groups, registry)
+
+
+def _request_checked(request_raw, request_held, reading, index, index_held, groups, registry):
     value = held_record(request_raw, request_held)
     fields(value, ('schema', 'index_sha256', 'job_id', 'binding', 'source_set', 'context_sha256',
         'paragraph_ids', 'reading_pin', 'prompt_pin', 'max_response_bytes', 'required_context_regions',
         'qualification', 'semantic_completeness', 'execution_authority'))
-    prepared = prepare_document_job(reading, binding_raw, index_raw, index_held, blocks, value['job_id'])
+    prepared = _prepare_checked(reading, index, index_held, groups, value['job_id'])
     require(prepared['request'] == request_raw, 'document request differs from held full source/index')
     require(artifact(value['reading_pin'], registry, JOB_BYTES) == prepared['reading']
             and artifact(value['prompt_pin'], registry, JOB_BYTES) == prepared['prompt'], 'document request artifacts changed')
@@ -336,6 +346,12 @@ def import_candidate(request_raw, request_held, graph_raw, graph_held, reading, 
                      index_raw, index_held, blocks, registry, registry_held, provenance_raw, provenance_held):
     snapshot = registry_snapshot(registry, registry_held)
     request = request_checked(request_raw, request_held, reading, binding_raw, index_raw, index_held, blocks, snapshot)
+    return _import_checked(request, request_held, graph_raw, graph_held, index_held,
+                           snapshot, provenance_raw, provenance_held)
+
+
+def _import_checked(request, request_held, graph_raw, graph_held, index_held,
+                    snapshot, provenance_raw, provenance_held):
     require(type(graph_raw) is bytes and len(graph_raw) <= JOB_BYTES, 'document response bound')
     proposal = graph_from_registry(graph_held, snapshot)
     require(snapshot.get(graph_held) == graph_raw and canonical(proposal['source_set']) == canonical(request['source_set']),
@@ -369,10 +385,16 @@ def admission_checked(raw, held, index_held, job_id):
 
 def replay_attempt(row, document, registry, registry_held, admitted):
     reading, binding_raw, index_raw, index_held, blocks, job_id = document
+    index, groups = document_checked(reading, binding_raw, index_raw, index_held, blocks)
+    snapshot = registry_snapshot(registry, registry_held)
+    _replay_checked(row, reading, index, index_held, groups, job_id, snapshot, admitted)
+
+
+def _replay_checked(row, reading, index, index_held, groups, job_id, registry, admitted):
     fields(row, ('ordinal', 'status', 'request_sha256', 'graph_sha256', 'provenance_sha256', 'result_pin'))
     integer(row['ordinal'], 1, ROUNDS)
     key = hash_checked(row['request_sha256']); request_raw = registry.get(key)
-    request = request_checked(request_raw, key, reading, binding_raw, index_raw, index_held, blocks, registry)
+    request = _request_checked(request_raw, key, reading, index, index_held, groups, registry)
     require(request['job_id'] == job_id, 'attempt job differs')
     result = artifact(row['result_pin'], registry, JOB_BYTES)
     require(row['status'] in ('FAILED', 'INTERRUPTED', 'ANALYZED_PROPOSED'), 'document attempt status')
@@ -386,8 +408,8 @@ def replay_attempt(row, document, registry, registry_held, admitted):
     provenance = held_record(provenance_raw, provenance_key); reviewer_checked(provenance, registry)
     require(provenance['origin'] == 'RECORDED_EXTERNAL_RUN' and provenance['observed_identity_pin'] is not None,
             'manual fixture cannot count as recorded generation')
-    expected = import_candidate(request_raw, key, graph_raw, graph_key, reading, binding_raw,
-        index_raw, index_held, blocks, registry, registry_held, provenance_raw, provenance_key)
+    expected = _import_checked(request, key, graph_raw, graph_key, index_held,
+                               registry, provenance_raw, provenance_key)
     require(result == expected and row['ordinal'] in admitted, 'generation import/admission missing')
     actual = {'ordinal': row['ordinal'], 'request_pin': identity(request_raw), 'prompt_pin': request['prompt_pin'],
         'response_pin': identity(graph_raw), 'provenance_pin': identity(provenance_raw), 'import_pin': identity(result),
@@ -398,6 +420,12 @@ def replay_attempt(row, document, registry, registry_held, admitted):
 def reconcile_job(reading, binding_raw, index_raw, index_held, blocks, job_id, records_raw,
                   records_held, registry, registry_held, admission_raw, admission_held):
     index, groups = document_checked(reading, binding_raw, index_raw, index_held, blocks)
+    return _reconcile_checked(reading, index, index_held, groups, job_id, records_raw,
+        records_held, registry, registry_held, admission_raw, admission_held)
+
+
+def _reconcile_checked(reading, index, index_held, groups, job_id, records_raw,
+                       records_held, registry, registry_held, admission_raw, admission_held):
     selected_job(index, groups, reading, job_id)
     records = held_record(records_raw, records_held)
     fields(records, ('schema', 'index_sha256', 'job_id', 'attempts'))
@@ -406,10 +434,10 @@ def reconcile_job(reading, binding_raw, index_raw, index_held, blocks, job_id, r
     require(type(records['attempts']) is list and len(records['attempts']) <= ROUNDS, 'document attempt round bound')
     admitted = admission_checked(admission_raw, admission_held, index_held, job_id)
     snapshot = registry_snapshot(registry, registry_held); successes = set()
-    document = (reading, binding_raw, index_raw, index_held, blocks, job_id)
     for ordinal, row in enumerate(records['attempts'], 1):
         fields(row, ('ordinal', 'status', 'request_sha256', 'graph_sha256', 'provenance_sha256', 'result_pin'))
-        integer(row['ordinal'], ordinal, ordinal); replay_attempt(row, document, snapshot, registry_held, admitted)
+        integer(row['ordinal'], ordinal, ordinal)
+        _replay_checked(row, reading, index, index_held, groups, job_id, snapshot, admitted)
         if row['status'] == 'ANALYZED_PROPOSED': successes.add(ordinal)
     require(successes == set(admitted), 'unused generation admission')
     status = 'PENDING' if not records['attempts'] else ('RECORDED_GENERATION_IMPORTED'
@@ -462,7 +490,7 @@ def reconcile_document(reading, binding_raw, index_raw, index_held, blocks, job_
     require(set(inputs) == required, 'missing/extra job reconciliation evidence')
     statuses, receipts = {}, {}
     for job_id, value in inputs.items():
-        raw = reconcile_job(reading, binding_raw, index_raw, index_held, blocks, job_id,
+        raw = _reconcile_checked(reading, index, index_held, groups, job_id,
             value['records_raw'], value['records_held'], value['registry'], value['registry_held'],
             value['admission_raw'], value['admission_held'])
         metadata += len(raw); require(metadata <= TOTAL_METADATA, 'document replay receipts bound')
