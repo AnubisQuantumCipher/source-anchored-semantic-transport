@@ -1,0 +1,30 @@
+name: SENTINEL additive semantic evidence controls
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  additive-controls:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.14.10'
+          architecture: 'x64'
+          check-latest: false
+          allow-prereleases: false
+      - name: Closed source inventory and bounded control profile
+        run: |
+          python3 -I -S -B -Werror tests/check_sentinel_v1.py --core
+          python3 -I -S -B -Werror examples/sentinel-v1-core/freeze_core.py --check
+          python3 -I -S -B -Werror examples/sentinel-v1-core/check_endpoints.py
+      - name: Normal and optimized additive controls
+        shell: bash
+        run: |
+          set -euo pipefail
+          suites=(common meaning locators challenges refinement)
+          for suite in "${suites[@]}"; do
+            python3 -I -S -B -Werror "tests/test_sentinel_${suite}.py"
+            python3 -I -S -B -O -Werror "tests/test_sentinel_${suite}.py"
+          done
