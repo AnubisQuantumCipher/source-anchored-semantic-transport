@@ -1,0 +1,86 @@
+{
+  "schema": "sentinel/independent-refinement-review/1",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "status": "PASS_REPAIRED_SOURCE_AND_15_PURE_CONTROLS_NORMAL_OPTIMIZED",
+  "freeze_sha256": "7e63cd3a792408971f2a6c002772a117a8549e42d18ce88b6fe787ef8d08d45b",
+  "source_pins_before": {
+    "tests/test_sentinel_challenges.py": "eceec3eda95580a0e53729d0be0c2d9bd262441a34af3ac4e9e2965bd054c7f2",
+    "tests/test_sentinel_meaning.py": "6479cdfa54c0ea9539ad1e3f2abb4280e3c26a10a78cca509cb1249d2b638b5a",
+    "tests/test_sentinel_refinement.py": "4eeea5a5b71575f3822817bd0eebd09f2fa5872de508f44b5ec30378e35b66fb",
+    "tools/sentinel_v1/bindings.py": "1ca9e6952c7002cdcc74106e52cba2b1031fa1f6294fb0b3bf10978ca61b438a",
+    "tools/sentinel_v1/census.py": "89cdc5184c280a1c11b76ea323a2666f8a8938e3722c655bacd125e4e54b8992",
+    "tools/sentinel_v1/challenges.py": "98123cdb080593d8dd3e2e3d79018c8e56f6e52e005c1fbcd918c61dda818dfc",
+    "tools/sentinel_v1/common.py": "2463b4572553603511f968e977d9460cee5db859f0f0d3715139abfde35694f8",
+    "tools/sentinel_v1/graph.py": "6335d67aaa7855a01eeba3e047edd52b37af7823ce733765174b66eb1169918d",
+    "tools/sentinel_v1/locators.py": "f098c132f72dd95b1775dea48931919ea920fdeeae3f7183490d472a4b34cd8c",
+    "tools/sentinel_v1/refinement.py": "cd34cae18568a808bf8adb75704a4f60d8b935ff16e7e177aa313646bf2ed4bd"
+  },
+  "source_pins_after": {
+    "tests/test_sentinel_challenges.py": "eceec3eda95580a0e53729d0be0c2d9bd262441a34af3ac4e9e2965bd054c7f2",
+    "tests/test_sentinel_meaning.py": "6479cdfa54c0ea9539ad1e3f2abb4280e3c26a10a78cca509cb1249d2b638b5a",
+    "tests/test_sentinel_refinement.py": "4eeea5a5b71575f3822817bd0eebd09f2fa5872de508f44b5ec30378e35b66fb",
+    "tools/sentinel_v1/bindings.py": "1ca9e6952c7002cdcc74106e52cba2b1031fa1f6294fb0b3bf10978ca61b438a",
+    "tools/sentinel_v1/census.py": "89cdc5184c280a1c11b76ea323a2666f8a8938e3722c655bacd125e4e54b8992",
+    "tools/sentinel_v1/challenges.py": "98123cdb080593d8dd3e2e3d79018c8e56f6e52e005c1fbcd918c61dda818dfc",
+    "tools/sentinel_v1/common.py": "2463b4572553603511f968e977d9460cee5db859f0f0d3715139abfde35694f8",
+    "tools/sentinel_v1/graph.py": "6335d67aaa7855a01eeba3e047edd52b37af7823ce733765174b66eb1169918d",
+    "tools/sentinel_v1/locators.py": "f098c132f72dd95b1775dea48931919ea920fdeeae3f7183490d472a4b34cd8c",
+    "tools/sentinel_v1/refinement.py": "cd34cae18568a808bf8adb75704a4f60d8b935ff16e7e177aa313646bf2ed4bd"
+  },
+  "independent_controls_sha256": "3e2bd2c76da5309d32692e13106d83d0fac19f57812ad32cca55995cc36f1336",
+  "runs": [
+    {
+      "mode": "normal",
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/refinement-independent-review-01/review_controls.py"
+      ],
+      "exit": 0,
+      "elapsed_seconds": 1.2082944840658456,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "1fb27887a26fa7323d5a5bb0ffe81881a4d3cf2b3f6f5a6a8bca5230638df8de"
+    },
+    {
+      "mode": "optimized",
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-O",
+        "-Werror",
+        "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/refinement-independent-review-01/review_controls.py"
+      ],
+      "exit": 0,
+      "elapsed_seconds": 1.2069123080000281,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "cc5be82466d22ba3b6738962304611ba7c3c7bc978cf7b52085b237bed926208"
+    }
+  ],
+  "reviewer_preflight_failure": "Initial runner expected first-epoch files map; second-epoch packet used artifacts list. Refused before tests, retained preflight-failed-key-files.py. Corrected reader explicitly combines original dependency pins with two frozen delta pins.",
+  "retained_failure_sha256": "ef1e406135265e0dee8079ccf344059acbfa4ecbfcd5e45ea6b9cdf3a378cf18",
+  "source_review": [
+    "Historical graph delta and old/new undirected dependency closure are recomputed from each adjacent retained checked graph; genesis impact lists must be empty. Both exact ordered lists are compared before historical raw-answer replay.",
+    "Shared impact_details applies the same conservative policy to current revisions; original nodes cannot be deleted, and actual changed IDs must equal caller-declared allowed IDs.",
+    "All historical fixed-Q/oracle/source/checker contracts are reconstructed and replayed through the same challenge validator against retained immutable raw-answer registry entries.",
+    "All prior mismatch counterexample SHA parents remain ordered and mandatory; caller-held previous identity alone is not treated as evidence of internal correctness.",
+    "Eight-round bound, repeated graph SHA refusal, explicit unknown/unrun non-readiness and NOT_QUALIFIED/NONE remain unchanged."
+  ],
+  "independent_controls": [
+    "forged historical change/impact lists",
+    "self-consistent fake MATCH status against retained WRONG raw answer",
+    "fully valid changed oracle cannot alter fixed historical contract",
+    "unrelated node edit omitted from allowed list",
+    "deletion of original node despite valid current graph",
+    "unknown oracle and unrun never ready"
+  ],
+  "scope": "Source review plus15 pure controls (root9+reviewer6), not model execution, package recovery, native qualification, semantic equivalence or whole-input truth. READY_FOR_NATIVE_POLICY_REVIEW is only a request state.",
+  "qualification": "NOT_QUALIFIED",
+  "execution_authority": "NONE",
+  "semantic_completeness": "UNPROVEN"
+}

@@ -1,0 +1,89 @@
+{
+  "schema": "sentinel/independent-endpoint-repair-review/1",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "status": "PASS_FROZEN_ENDPOINT_TABLE_AND_DEPENDENT_PURE_SUITES",
+  "implementation_freeze_sha256": "28527f058271323a7fda61d9261faa6123b9d12c852d18651b4f5a4a89905cde",
+  "source_pins_before": {
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-worktree/tools/sentinel_v1/common.py": "2463b4572553603511f968e977d9460cee5db859f0f0d3715139abfde35694f8",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-worktree/tools/sentinel_v1/census.py": "89cdc5184c280a1c11b76ea323a2666f8a8938e3722c655bacd125e4e54b8992",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-worktree/tools/sentinel_v1/graph.py": "9034ccc281d6c689d01511f1a4d2deec2db1033ed92146657bb27a203ca8f3dc",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-worktree/tools/sentinel_v1/locators.py": "f098c132f72dd95b1775dea48931919ea920fdeeae3f7183490d472a4b34cd8c",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-worktree/tools/sentinel_v1/bindings.py": "1ca9e6952c7002cdcc74106e52cba2b1031fa1f6294fb0b3bf10978ca61b438a",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-worktree/tools/sentinel_v1/challenges.py": "98123cdb080593d8dd3e2e3d79018c8e56f6e52e005c1fbcd918c61dda818dfc",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-worktree/tools/sentinel_v1/refinement.py": "cd34cae18568a808bf8adb75704a4f60d8b935ff16e7e177aa313646bf2ed4bd",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-worktree/tests/test_sentinel_common.py": "3c94991e2f0965eaff6693ea9ab37ac752b78a559cad0a70e4cd21747f074933",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-worktree/tests/test_sentinel_meaning.py": "24a1157a74e9ceb9f2adf0feaf51e510bcec6f435f7ec33ed67936f27cffcdc9",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-worktree/tests/test_sentinel_locators.py": "499385c46f736713417ceff9be1630992d6bdfae982e1b489ff25947e72ab35c",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-worktree/tests/test_sentinel_challenges.py": "eceec3eda95580a0e53729d0be0c2d9bd262441a34af3ac4e9e2965bd054c7f2",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-worktree/tests/test_sentinel_refinement.py": "4eeea5a5b71575f3822817bd0eebd09f2fa5872de508f44b5ec30378e35b66fb",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/meaning-endpoint-independent-review-01/review_controls.py": "6db2932f4bcac1e62cdbbb64e09894e7b692f725d7d4852e36e14f9ff461ca15",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/meaning-endpoint-contract-01/contract.json": "212154bd2b3f0b05f5a9de4b387bc6c9adcbe56e0af1dc7475522ebcbdd5e404",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/meaning-endpoint-contract-01/literal-oracle.json": "358b50e208b34811afd62a0585840ffb865364f20714eb69ad6bd49f9f4948b1",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/meaning-independent-review-01/review_controls.py": "cc0bd66eaefedd14af710afe7b3b131c763fb75ae09a159b55cd1aefd3889d3d"
+  },
+  "source_pins_after": {
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-worktree/tools/sentinel_v1/common.py": "2463b4572553603511f968e977d9460cee5db859f0f0d3715139abfde35694f8",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-worktree/tools/sentinel_v1/census.py": "89cdc5184c280a1c11b76ea323a2666f8a8938e3722c655bacd125e4e54b8992",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-worktree/tools/sentinel_v1/graph.py": "9034ccc281d6c689d01511f1a4d2deec2db1033ed92146657bb27a203ca8f3dc",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-worktree/tools/sentinel_v1/locators.py": "f098c132f72dd95b1775dea48931919ea920fdeeae3f7183490d472a4b34cd8c",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-worktree/tools/sentinel_v1/bindings.py": "1ca9e6952c7002cdcc74106e52cba2b1031fa1f6294fb0b3bf10978ca61b438a",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-worktree/tools/sentinel_v1/challenges.py": "98123cdb080593d8dd3e2e3d79018c8e56f6e52e005c1fbcd918c61dda818dfc",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-worktree/tools/sentinel_v1/refinement.py": "cd34cae18568a808bf8adb75704a4f60d8b935ff16e7e177aa313646bf2ed4bd",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-worktree/tests/test_sentinel_common.py": "3c94991e2f0965eaff6693ea9ab37ac752b78a559cad0a70e4cd21747f074933",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-worktree/tests/test_sentinel_meaning.py": "24a1157a74e9ceb9f2adf0feaf51e510bcec6f435f7ec33ed67936f27cffcdc9",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-worktree/tests/test_sentinel_locators.py": "499385c46f736713417ceff9be1630992d6bdfae982e1b489ff25947e72ab35c",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-worktree/tests/test_sentinel_challenges.py": "eceec3eda95580a0e53729d0be0c2d9bd262441a34af3ac4e9e2965bd054c7f2",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-worktree/tests/test_sentinel_refinement.py": "4eeea5a5b71575f3822817bd0eebd09f2fa5872de508f44b5ec30378e35b66fb",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/meaning-endpoint-independent-review-01/review_controls.py": "6db2932f4bcac1e62cdbbb64e09894e7b692f725d7d4852e36e14f9ff461ca15",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/meaning-endpoint-contract-01/contract.json": "212154bd2b3f0b05f5a9de4b387bc6c9adcbe56e0af1dc7475522ebcbdd5e404",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/meaning-endpoint-contract-01/literal-oracle.json": "358b50e208b34811afd62a0585840ffb865364f20714eb69ad6bd49f9f4948b1",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/meaning-independent-review-01/review_controls.py": "cc0bd66eaefedd14af710afe7b3b131c763fb75ae09a159b55cd1aefd3889d3d"
+  },
+  "runs": [
+    {
+      "mode": "normal",
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/meaning-endpoint-independent-review-01/review_controls.py"
+      ],
+      "exit": 0,
+      "elapsed_seconds": 2.1917231001425534,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "852512177e4ddf80f0162bf612ede28d56cfdbd3f45f8719cb57a3e34eee16df"
+    },
+    {
+      "mode": "optimized",
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-O",
+        "-Werror",
+        "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/meaning-endpoint-independent-review-01/review_controls.py"
+      ],
+      "exit": 0,
+      "elapsed_seconds": 1.6875756119843572,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "09c809c5f16edb5f3ab8312f22f3663d6814527dd74601f774fedf55c7b170e3"
+    }
+  ],
+  "retained_counterexample_sha256": "1a89de584cd412b611963a06b44443b8acc0516290c8ac0c42a3669501497766",
+  "inspection": [
+    "The complete15-relation endpoint table exactly matches the separately frozen contract; no unknown relation/default fallback.",
+    "edges_checked receives actual checked node-kind mapping and enforces both endpoint domains before preserving duplicate/self/DAG controls. One incompatible edge refuses the entire graph.",
+    "OPAQUE is not a wildcard. Broad documentary relations and broad REFERENCE referents are explicit finite domains and imply no logical entailment.",
+    "Original cycle rejection controls now use REVISION/EVENT kinds to isolate actual cycle rejection after type checks; original failure behavior remains.",
+    "No source codec, grammar3 denotation, native policy authority or package locator interface changed. Existing common/census/locator/challenge/refinement dependencies are exact pinned and exercised in both modes."
+  ],
+  "impact": "Graph9034 and meaning-test24a1 replace6335/6479. All other exercised product modules retain exact bytes. Previous graph-source-bound integration remains exact old-epoch evidence; this pure regression verifies current integration callers without retargeting prior native receipts.",
+  "qualification": "NOT_QUALIFIED",
+  "execution_authority": "NONE",
+  "semantic_completeness": "UNPROVEN",
+  "scope": "Closed endpoint-category validation only, not correctness of semantic categories, reference truth, wholebook completeness or native policy-wire qualification."
+}

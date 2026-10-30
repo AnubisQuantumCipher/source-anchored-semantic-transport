@@ -1,0 +1,55 @@
+{
+  "schema": "sentinel/conservative-machine-gate-independent-review/1",
+  "verdict": "PASS_SCOPED_SOURCE_AND_PURE_CONTROLS",
+  "source": [
+    {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/sentinel_native/sentinel_qualification.py",
+      "bytes": 11891,
+      "sha256": "575d1772b47e26a7b149f02612f33dd8da3fa1c1ac85a434c87c5c68eb5fead6"
+    },
+    {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/sentinel_native/sentinel_build_profile.py",
+      "bytes": 6499,
+      "sha256": "0550bdf381ba1efd1bd4cac4b426756ad2293d98be79ad834dfa4c36fa1971a4"
+    },
+    {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_sentinel_qualification.py",
+      "bytes": 25683,
+      "sha256": "f8f0b8c9bcdf975ab9b42c3abb32ba031f80e608cb7892e63b49c3863aba348d"
+    }
+  ],
+  "frozen_contract": {
+    "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/build-oracle/machine-diagnostics-01/CONTRACT.md",
+    "bytes": 2213,
+    "sha256": "7f6bb08ebe8765614af065516f21f43c1ec5152abf07c6338c403d9834e1d01a"
+  },
+  "frozen_status_addendum": {
+    "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/build-oracle/machine-diagnostics-01/STATUS.md",
+    "bytes": 634,
+    "sha256": "834012b834d7c3024f74d559f6da4a65a9206e9defda6527d24234aa60df24aa"
+  },
+  "controls": {
+    "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/build-oracle/machine-independent-review-01/controls.json",
+    "bytes": 3266,
+    "sha256": "4192d1ea8c0620a86c2319605fc0aff59fc5692b1fc795c4e3c32b5ac5e641ae"
+  },
+  "independent_additional": {
+    "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/build-oracle/machine-independent-review-01/additional.json",
+    "bytes": 488,
+    "sha256": "ce1a5c154fb93dff4ca0ac88fa4cb1f049e6754a701929ce45d4f877bfbeacfb"
+  },
+  "review": [
+    "Complete current qualification/profile source and added five test methods read; old text35/mixed/source controls retained. Existing23 normal/O strict-warning pure controls independently passed with separate fresh scratch and Popen denied.",
+    "Fixed exact unit .spark path only; <=1MiB ASCII JSON, depth32, unique keys, nonfinite refusals. Floating tokens become inert nonnumeric sentinels; no token is used as an accepted numeric count. Informational nested timing data and modular-assumption contents are outside the gate semantic claim.",
+    "Exact root field roster and root container types, completed proof status and no stop reason. Any nonempty warn_error, pragma_assume or skip list refuses, regardless of trivial proof metadata; no ambiguity resolved by reclassification.",
+    "Every top-level proof/flow row requires info severity, no nonempty suppression, allowed method; arrays bounded4096 and exact lengths match separately parsed strict integer text totals. Both entity maps match text/source entity count. Existing exact source names/coordinates, positive Post/DIC minima and complete coverage remain in independent text gate.",
+    "Worker performs machine gate after text check and before binary hash/success publication. No flags/resource/capture/ownership or original contract oracle weakened. Mocked worker refusal control denies premature binary acceptance.",
+    "Additional independent literal controls refuse bool flow/prover counts and actual retained source04 raw warning-array record. Source04 goals remain evidence; new refusal is not a claim that its unresolved row was an emitted active warning."
+  ],
+  "boundaries": [
+    "Gate trusts the declared fixed GNAT producer and pinned source/tool/roster; it does not certify JSON producer correctness, arbitrary diagnostic semantics, or source-native refinement.",
+    "Per-row machine source/rule coordinates are not independently correlated; strict entity-name/location correlation occurs in text gate. Ignored metadata/modular assumptions do not certify truth or actual reference/evaluator independence.",
+    "No actual source05 build/proof/native execution by reviewer. Source05 roster c9be4819e618941729cbe47635a4dd89f1406df6859406df3d67a8e28cf0bba2 remains required before separately authorized root dispatch.",
+    "No live bridge, native wire parser, English/whole-book/OCR proof, action authority, publication/merge/release acceptance inferred. Earlier failures and review-harness mistakes remain retained."
+  ]
+}

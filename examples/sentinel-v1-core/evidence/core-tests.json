@@ -1,0 +1,360 @@
+{
+  "schema": "sentinel/public-test-projection/1",
+  "created_utc": "2026-10-30T06:59:57.140475+00:00",
+  "admission_sha256": "d14e1ec5d75de98eaa87b72e20c1a8bb76a849a74008acdf1222e31950c06245",
+  "status": "PASS",
+  "failure": null,
+  "runs": [
+    {
+      "suite": "test_sentinel_common",
+      "mode": "normal",
+      "argv": [
+        "/usr/bin/prlimit",
+        "--as=67108864",
+        "--fsize=4194304",
+        "--nofile=64",
+        "--core=0",
+        "--cpu=30",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "tests/test_sentinel_common.py"
+      ],
+      "returncode": 0,
+      "elapsed_ns": 219393380,
+      "expected_tests": 10,
+      "status": "PASS"
+    },
+    {
+      "suite": "test_sentinel_common",
+      "mode": "optimized",
+      "argv": [
+        "/usr/bin/prlimit",
+        "--as=67108864",
+        "--fsize=4194304",
+        "--nofile=64",
+        "--core=0",
+        "--cpu=30",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "-O",
+        "tests/test_sentinel_common.py"
+      ],
+      "returncode": 0,
+      "elapsed_ns": 380482237,
+      "expected_tests": 10,
+      "status": "PASS"
+    },
+    {
+      "suite": "test_sentinel_meaning",
+      "mode": "normal",
+      "argv": [
+        "/usr/bin/prlimit",
+        "--as=67108864",
+        "--fsize=4194304",
+        "--nofile=64",
+        "--core=0",
+        "--cpu=30",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "tests/test_sentinel_meaning.py"
+      ],
+      "returncode": 0,
+      "elapsed_ns": 933760196,
+      "expected_tests": 25,
+      "status": "PASS"
+    },
+    {
+      "suite": "test_sentinel_meaning",
+      "mode": "optimized",
+      "argv": [
+        "/usr/bin/prlimit",
+        "--as=67108864",
+        "--fsize=4194304",
+        "--nofile=64",
+        "--core=0",
+        "--cpu=30",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "-O",
+        "tests/test_sentinel_meaning.py"
+      ],
+      "returncode": 0,
+      "elapsed_ns": 725686718,
+      "expected_tests": 25,
+      "status": "PASS"
+    },
+    {
+      "suite": "test_sentinel_locators",
+      "mode": "normal",
+      "argv": [
+        "/usr/bin/prlimit",
+        "--as=67108864",
+        "--fsize=4194304",
+        "--nofile=64",
+        "--core=0",
+        "--cpu=30",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "tests/test_sentinel_locators.py"
+      ],
+      "returncode": 0,
+      "elapsed_ns": 218940544,
+      "expected_tests": 27,
+      "status": "PASS"
+    },
+    {
+      "suite": "test_sentinel_locators",
+      "mode": "optimized",
+      "argv": [
+        "/usr/bin/prlimit",
+        "--as=67108864",
+        "--fsize=4194304",
+        "--nofile=64",
+        "--core=0",
+        "--cpu=30",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "-O",
+        "tests/test_sentinel_locators.py"
+      ],
+      "returncode": 0,
+      "elapsed_ns": 319013571,
+      "expected_tests": 27,
+      "status": "PASS"
+    },
+    {
+      "suite": "test_sentinel_challenges",
+      "mode": "normal",
+      "argv": [
+        "/usr/bin/prlimit",
+        "--as=67108864",
+        "--fsize=4194304",
+        "--nofile=64",
+        "--core=0",
+        "--cpu=30",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "tests/test_sentinel_challenges.py"
+      ],
+      "returncode": 0,
+      "elapsed_ns": 371866476,
+      "expected_tests": 9,
+      "status": "PASS"
+    },
+    {
+      "suite": "test_sentinel_challenges",
+      "mode": "optimized",
+      "argv": [
+        "/usr/bin/prlimit",
+        "--as=67108864",
+        "--fsize=4194304",
+        "--nofile=64",
+        "--core=0",
+        "--cpu=30",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "-O",
+        "tests/test_sentinel_challenges.py"
+      ],
+      "returncode": 0,
+      "elapsed_ns": 372052186,
+      "expected_tests": 9,
+      "status": "PASS"
+    },
+    {
+      "suite": "test_sentinel_refinement",
+      "mode": "normal",
+      "argv": [
+        "/usr/bin/prlimit",
+        "--as=67108864",
+        "--fsize=4194304",
+        "--nofile=64",
+        "--core=0",
+        "--cpu=30",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "tests/test_sentinel_refinement.py"
+      ],
+      "returncode": 0,
+      "elapsed_ns": 1229920086,
+      "expected_tests": 9,
+      "status": "PASS"
+    },
+    {
+      "suite": "test_sentinel_refinement",
+      "mode": "optimized",
+      "argv": [
+        "/usr/bin/prlimit",
+        "--as=67108864",
+        "--fsize=4194304",
+        "--nofile=64",
+        "--core=0",
+        "--cpu=30",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "-O",
+        "tests/test_sentinel_refinement.py"
+      ],
+      "returncode": 0,
+      "elapsed_ns": 1079851420,
+      "expected_tests": 9,
+      "status": "PASS"
+    }
+  ],
+  "source_pins_before": {
+    "tools/sentinel_v1/common.py": "2463b4572553603511f968e977d9460cee5db859f0f0d3715139abfde35694f8",
+    "tools/sentinel_v1/census.py": "89cdc5184c280a1c11b76ea323a2666f8a8938e3722c655bacd125e4e54b8992",
+    "tools/sentinel_v1/graph.py": "9034ccc281d6c689d01511f1a4d2deec2db1033ed92146657bb27a203ca8f3dc",
+    "tools/sentinel_v1/locators.py": "f098c132f72dd95b1775dea48931919ea920fdeeae3f7183490d472a4b34cd8c",
+    "tools/sentinel_v1/bindings.py": "1ca9e6952c7002cdcc74106e52cba2b1031fa1f6294fb0b3bf10978ca61b438a",
+    "tools/sentinel_v1/challenges.py": "98123cdb080593d8dd3e2e3d79018c8e56f6e52e005c1fbcd918c61dda818dfc",
+    "tools/sentinel_v1/refinement.py": "cd34cae18568a808bf8adb75704a4f60d8b935ff16e7e177aa313646bf2ed4bd",
+    "tests/test_sentinel_common.py": "3c94991e2f0965eaff6693ea9ab37ac752b78a559cad0a70e4cd21747f074933",
+    "tests/test_sentinel_meaning.py": "24a1157a74e9ceb9f2adf0feaf51e510bcec6f435f7ec33ed67936f27cffcdc9",
+    "tests/test_sentinel_locators.py": "499385c46f736713417ceff9be1630992d6bdfae982e1b489ff25947e72ab35c",
+    "tests/test_sentinel_challenges.py": "eceec3eda95580a0e53729d0be0c2d9bd262441a34af3ac4e9e2965bd054c7f2",
+    "tests/test_sentinel_refinement.py": "4eeea5a5b71575f3822817bd0eebd09f2fa5872de508f44b5ec30378e35b66fb"
+  },
+  "source_pins_after": {
+    "tools/sentinel_v1/common.py": "2463b4572553603511f968e977d9460cee5db859f0f0d3715139abfde35694f8",
+    "tools/sentinel_v1/census.py": "89cdc5184c280a1c11b76ea323a2666f8a8938e3722c655bacd125e4e54b8992",
+    "tools/sentinel_v1/graph.py": "9034ccc281d6c689d01511f1a4d2deec2db1033ed92146657bb27a203ca8f3dc",
+    "tools/sentinel_v1/locators.py": "f098c132f72dd95b1775dea48931919ea920fdeeae3f7183490d472a4b34cd8c",
+    "tools/sentinel_v1/bindings.py": "1ca9e6952c7002cdcc74106e52cba2b1031fa1f6294fb0b3bf10978ca61b438a",
+    "tools/sentinel_v1/challenges.py": "98123cdb080593d8dd3e2e3d79018c8e56f6e52e005c1fbcd918c61dda818dfc",
+    "tools/sentinel_v1/refinement.py": "cd34cae18568a808bf8adb75704a4f60d8b935ff16e7e177aa313646bf2ed4bd",
+    "tests/test_sentinel_common.py": "3c94991e2f0965eaff6693ea9ab37ac752b78a559cad0a70e4cd21747f074933",
+    "tests/test_sentinel_meaning.py": "24a1157a74e9ceb9f2adf0feaf51e510bcec6f435f7ec33ed67936f27cffcdc9",
+    "tests/test_sentinel_locators.py": "499385c46f736713417ceff9be1630992d6bdfae982e1b489ff25947e72ab35c",
+    "tests/test_sentinel_challenges.py": "eceec3eda95580a0e53729d0be0c2d9bd262441a34af3ac4e9e2965bd054c7f2",
+    "tests/test_sentinel_refinement.py": "4eeea5a5b71575f3822817bd0eebd09f2fa5872de508f44b5ec30378e35b66fb"
+  },
+  "runtime_pins_after": {
+    "/usr/bin/prlimit": "1c39f226c7ba9dd25ed5e9ac99c088d740fbecef2f07f55fe0fd9af0e6c647dc",
+    "/usr/bin/python3": "c6bc1ef497b896b7575c546b13f9bafe52e2066f184fdd3fec6af4b5b6349947"
+  },
+  "scope": "FIVE_CORE_SUITES_PROJECTED_FROM_RETAINED_RAW_CURRENT_REGRESSION_RECEIPT",
+  "outputs": {
+    "test_sentinel_refinement-optimized.stderr": {
+      "sha256": "6833dda2b38051e657403553579c6e7de074e502e4475a3a82dbfc7b03d24a94",
+      "bytes": 107
+    },
+    "test_sentinel_refinement-optimized.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "test_sentinel_refinement-normal.stderr": {
+      "sha256": "78fc77426ad440309e9088d66c78c87f2aea43aaccc83d0867c641831d5014c0",
+      "bytes": 107
+    },
+    "test_sentinel_refinement-normal.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "test_sentinel_challenges-optimized.stderr": {
+      "sha256": "8e0175c1f3fa65ac9778a574e9f6286b123bda6101a6e742022dd2417fc00424",
+      "bytes": 107
+    },
+    "test_sentinel_challenges-optimized.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "test_sentinel_challenges-normal.stderr": {
+      "sha256": "8f7cf53d8806ba31f6894c49dc59270b899cc403c40f2021b8ff88f469d8cb97",
+      "bytes": 107
+    },
+    "test_sentinel_challenges-normal.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "test_sentinel_locators-optimized.stderr": {
+      "sha256": "715872ca47a930d94cce70d853b8f2c3b70f604e91d7086a6c2b426c10ca1ca5",
+      "bytes": 126
+    },
+    "test_sentinel_locators-optimized.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "test_sentinel_locators-normal.stderr": {
+      "sha256": "6eccbc59606c5b0899f01d96302802facdb903833348c7e7b97d05a56e906324",
+      "bytes": 126
+    },
+    "test_sentinel_locators-normal.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "test_sentinel_meaning-optimized.stderr": {
+      "sha256": "00bdaaf3cae0ecdf517ca49e97abb77afa49a4e9bf44f64e72fa14846f1a3d3c",
+      "bytes": 124
+    },
+    "test_sentinel_meaning-optimized.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "test_sentinel_meaning-normal.stderr": {
+      "sha256": "c4abd8b950da07cf9894693eef8ec5461ca4412c203d1e4e7790b1bf35693b29",
+      "bytes": 124
+    },
+    "test_sentinel_meaning-normal.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "test_sentinel_common-optimized.stderr": {
+      "sha256": "7113510254859a25fd51a67566b4a2edd527f7bf5883b8868a9383bb875d9cf9",
+      "bytes": 109
+    },
+    "test_sentinel_common-optimized.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "test_sentinel_common-normal.stderr": {
+      "sha256": "f90205cbd4fdd781cd1743acb491bbf8107bba0a826706e16eea68607db679c8",
+      "bytes": 109
+    },
+    "test_sentinel_common-normal.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  },
+  "parent_raw_receipt_sha256": "95431a01c2f65d3290d8b2c09381072caebdcc4d3da1d11066805d95375a251d"
+}

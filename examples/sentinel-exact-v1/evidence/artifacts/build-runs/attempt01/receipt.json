@@ -1,0 +1,29 @@
+{
+  "argv": [
+    "/usr/bin/unshare",
+    "--user",
+    "--map-root-user",
+    "--mount",
+    "--pid",
+    "--fork",
+    "--mount-proc",
+    "--net",
+    "--propagation",
+    "private",
+    "--kill-child=SIGKILL",
+    "/usr/bin/python3",
+    "-I",
+    "-S",
+    "-B",
+    "-c",
+    "import runpy,sys;sys.path.insert(0,sys.argv[1]);sys.path.insert(0,sys.argv[2]);runpy.run_module('sentinel_build_profile',run_name='__main__')",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/build-input-01/tools",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/build-input-01/sentinel_native",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/build-runs/attempt01"
+  ],
+  "external_bytes": 24312260,
+  "failure": "ValueError:missing successful terminal",
+  "namespace_waited": true,
+  "returncode": 2,
+  "status": "FAILED"
+}

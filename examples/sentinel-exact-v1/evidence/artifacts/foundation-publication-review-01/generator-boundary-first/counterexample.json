@@ -1,0 +1,29 @@
+{
+  "schema": "sentinel/generator-path-counterexample/1",
+  "status": "CONFIRMED_INITIAL_DERIVATION_PATH_ESCAPE",
+  "source_sha256": "a5e25fbeba61c2ca9dbcf153deaf2a700f9b52dc6ef4c6140aacc4cddeee2382",
+  "source_preimage": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/foundation-publication-review-01/generator-boundary-first/generator-source.inert",
+  "mechanism": "Fixed wanted row path plus inventory payload absolute path outside capture root; selected_artifacts reads it and exports marker under allowed raw evidence names. Expected hash was attacker-controlled inventory value.",
+  "copied_keys": [
+    "raw/attempt01/proof.stderr",
+    "raw/attempt01/proof/gnatprove/gnatprove.out",
+    "raw/attempt01/checks.stdout",
+    "raw/attempt01/checks.stderr",
+    "raw/attempt02/proof.stderr",
+    "raw/attempt02/proof/gnatprove/gnatprove.out",
+    "raw/attempt02/checks.stdout",
+    "raw/attempt02/checks.stderr",
+    "raw/attempt03/proof.stderr",
+    "raw/attempt03/proof/gnatprove/gnatprove.out",
+    "raw/attempt03/checks.stdout",
+    "raw/attempt03/checks.stderr",
+    "raw/attempt04/proof.stderr",
+    "raw/attempt04/proof/gnatprove/gnatprove.out",
+    "raw/attempt04/checks.stdout",
+    "raw/attempt04/checks.stderr",
+    "raw/attempt04/proof/gnatprove/sentinel_policy.spark"
+  ],
+  "marker_scope": "Tiny own review marker outside declared capture only; no actual private data accessed; no product writes/native/models.",
+  "boundary": "Initial derivation, distinct from fixed public --check path allowlist.",
+  "minimal_fix": "Strict unique regular selected rows, exact payload basename syntax, nofollow nonblocking regular descriptor bounded stable reads; preserve old generator and actual public evidence bytes."
+}
