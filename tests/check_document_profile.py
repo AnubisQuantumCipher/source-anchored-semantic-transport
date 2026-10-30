@@ -11,6 +11,7 @@ def sources():
     files += sorted((ROOT / 'tools/document_build').glob('*.py'))
     files.append(ROOT / 'tests/test_document_build_helper.py')
     files += sorted((ROOT / 'document_native').glob('*.py'))
+    files += sorted((ROOT / 'examples/document-profile-v1').glob('*.py'))
     files.append(Path(__file__).resolve())
     if not 1 <= len(files) <= 48 or len(set(files)) != len(files):
         raise ValueError('document source inventory bound or duplicate')

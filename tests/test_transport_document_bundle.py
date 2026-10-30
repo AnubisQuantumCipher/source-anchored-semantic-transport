@@ -4,6 +4,7 @@ import os
 import tempfile
 import importlib.util
 from pathlib import Path
+import platform
 import stat
 import sys
 import unittest
@@ -50,6 +51,11 @@ def stored(path, entries):
 class Pure(unittest.TestCase):
     def setUp(self):
         self.assertLessEqual(allocated(ROOT) + 262144, 4194304)
+        self.host_profile = {'system': platform.system(), 'machine': platform.machine(),
+                             'python': platform.python_version(), 'libc': list(platform.libc_ver())}
+        profile_patch = patch.object(subject, 'PROFILE', self.host_profile)
+        profile_patch.start()
+        self.addCleanup(profile_patch.stop)
         self.case = ROOT / (('optimized-' if sys.flags.optimize else 'normal-') + self._testMethodName)
         self.case.mkdir(mode=0o700)
         self.inputs = self.case / 'inputs'
@@ -93,6 +99,19 @@ class Pure(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'declared input pin mismatch'):
             self.create()
         self.assertFalse(self.archive.exists())
+
+    def test_mismatched_synthetic_host_profile_refuses_before_archive(self):
+        variants = {'system': self.host_profile['system'] + '-fixture-mismatch',
+                    'machine': self.host_profile['machine'] + '-fixture-mismatch',
+                    'python': self.host_profile['python'] + '-fixture-mismatch',
+                    'libc': ['synthetic-unmatched-libc', 'fixture-mismatch']}
+        for key, wrong in variants.items():
+            mismatch = dict(self.host_profile)
+            mismatch[key] = wrong
+            with self.subTest(field=key), patch.object(subject, 'PROFILE', mismatch):
+                with self.assertRaisesRegex(ValueError, 'recipient platform profile mismatch'):
+                    self.create()
+            self.assertFalse(self.archive.exists())
 
     def test_oversize_refuses_before_read(self):
         path = self.case / 'three-bytes'

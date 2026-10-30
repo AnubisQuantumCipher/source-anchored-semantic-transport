@@ -41,12 +41,20 @@ suite resource caps are unchanged.
 
 The separate `document-profile.yml` workflow pins Linux x64 Python 3.14.10 and
 installs only the hash-pinned universal `defusedxml` wheel into runner temporary
-storage. It runs bundle7, OCR36 and media29 controls in normal/optimized isolated
+storage. It runs bundle8, OCR36 and media29 controls in normal/optimized isolated
 modes, plus bounded AST/function-size checks. `TRANSPORT_DOCUMENT_TEST_PURE=1`
 replaces the media PDF tool boundary with deterministic outputs and denies
 process creation there. It exercises page parsing and byte spans, and does not
 claim to execute Poppler/qpdf in CI. The default local media mode retains the
 real synthetic PDF tool control.
+
+The eight bundle controls use synthetic payload bytes and a synthetic declared
+profile matching the test host's system, machine, Python version and libc. A
+test-scoped patch restores the production profile after each case. A negative
+control changes each profile field and requires refusal before any archive is
+created. These data-only controls execute no bundled payload and do not establish
+native x64 support. Production runtime requirements, input pins and bundle bytes
+remain unchanged.
 
 `TRANSPORT_DOCUMENT_XML_PATH` explicitly selects the dependency directory under
 `-S`; `TRANSPORT_DOCUMENT_REQUIRE_XML=1` makes absence a hard error. An exit77

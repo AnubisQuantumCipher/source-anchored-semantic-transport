@@ -33,6 +33,15 @@ jobs:
           PY
       - name: Reproduce pinned source inventory
         run: python3 -I -S -B -Werror install/prepare_source.py --check
+      - name: Use runner temporary storage for historical replay
+        run: |
+          printf 'TMPDIR=%s\n' "$RUNNER_TEMP" >> "$GITHUB_ENV"
+      - name: Historical receipt epoch boundary controls
+        run: |
+          python3 -I -S -B -Werror examples/document-profile-v1/test_replay_historical.py
+          python3 -I -S -B -O -Werror examples/document-profile-v1/test_replay_historical.py
+          python3 -I -S -B -Werror tests/check_document_profile.py
+          python3 -I -S -B -O -Werror tests/check_document_profile.py
       - name: Bounded installer mechanics
         run: python3 -I -S -B -Werror install/test_install_support.py -v
       - name: Closed source and transformation controls
@@ -54,34 +63,34 @@ jobs:
       - name: Independent bounded QUORUM graph development oracle
         run: |
           python3 -I -S -B -Werror install/test_quorum_graph.py
-          python3 -I -S -B -Werror examples/quorum-graph-v1/prepare_receipt.py --check
+          python3 -I -S -B -Werror examples/document-profile-v1/replay_historical.py --component graph
       - name: QUORUM canonical input and frozen schema controls
         run: |
           python3 -I -S -B -Werror install/test_quorum_input.py
-          python3 -I -S -B -Werror examples/quorum-input-v1/prepare_receipt.py --check
+          python3 -I -S -B -Werror examples/document-profile-v1/replay_historical.py --component input
       - name: QUORUM exact sources and quote membership
         run: |
           python3 -I -S -B -Werror install/test_quorum_source.py
-          python3 -I -S -B -Werror examples/quorum-source-v1/prepare_receipt.py --check
+          python3 -I -S -B -Werror examples/document-profile-v1/replay_historical.py --component source
       - name: QUORUM declared conditions and exceptions
         run: |
           python3 -I -S -B -Werror install/test_quorum_claim.py
-          python3 -I -S -B -Werror examples/quorum-claim-v1/prepare_receipt.py --check
+          python3 -I -S -B -Werror examples/document-profile-v1/replay_historical.py --component claim
       - name: QUORUM declared change impact and retained history
         run: |
           python3 -I -S -B -Werror install/test_quorum_impact.py
           python3 -I -S -B -O -Werror install/test_quorum_impact.py
-          python3 -I -S -B -Werror examples/quorum-impact-v1/prepare_receipt.py --check
+          python3 -I -S -B -Werror examples/document-profile-v1/replay_historical.py --component impact
       - name: QUORUM exact task and preassessment context
         run: |
           python3 -I -S -B -Werror install/test_quorum_context.py
           python3 -I -S -B -O -Werror install/test_quorum_context.py
-          python3 -I -S -B -Werror examples/quorum-context-v1/prepare_receipt.py --check
+          python3 -I -S -B -Werror examples/document-profile-v1/replay_historical.py --component context
       - name: QUORUM reading references and retained stance counts
         run: |
           python3 -I -S -B -Werror install/test_quorum_reading.py
           python3 -I -S -B -O -Werror install/test_quorum_reading.py
-          python3 -I -S -B -Werror examples/quorum-reading-v1/prepare_receipt.py --check
+          python3 -I -S -B -Werror examples/document-profile-v1/replay_historical.py --component reading
       - name: Response contracts and checked draft submission
         run: |
           response_checks=$(mktemp -d)

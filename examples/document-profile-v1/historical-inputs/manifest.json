@@ -1,0 +1,103 @@
+{
+  "aliases": {
+    ".github/workflows/source.yml": {
+      "bytes": 6104,
+      "path": ".github/workflows/source.yml",
+      "sha256": "d4c3d1bd1cfd59c2a4d939421ce668f5ada199c24b92f80984aad6c9ff2d6166"
+    },
+    "install/check_source.py": {
+      "bytes": 1798,
+      "path": "install/check_source.py",
+      "sha256": "1c8c712b6b4e43577d469db32d951c2c86bb6a08ef3abd3cbd0a4b4389542940"
+    }
+  },
+  "origin_git_commit": "ad2befaf7e89e73790bd5ab462158225f4b864b2",
+  "profiles": {
+    "claim": {
+      "preparer": {
+        "bytes": 3489,
+        "path": "examples/quorum-claim-v1/prepare_receipt.py",
+        "sha256": "5201c305f087f3d0358b70714e4166b542bdb242e87c31d49254d9d691c84805"
+      },
+      "receipt": {
+        "bytes": 44002,
+        "path": "examples/quorum-claim-v1/receipt.json",
+        "sha256": "bdce604c262404159c05c90db1dcea40e904fad57993a7631c6ce0770829a92a"
+      }
+    },
+    "context": {
+      "preparer": {
+        "bytes": 3649,
+        "path": "examples/quorum-context-v1/prepare_receipt.py",
+        "sha256": "3f9f6fd59c5c8caddd4f60d213face9b72cc8ff9429ad1786f8b723620c9a4e6"
+      },
+      "receipt": {
+        "bytes": 81933,
+        "path": "examples/quorum-context-v1/receipt.json",
+        "sha256": "b362ff4e52704b0fe39a0b49660dc4f9044c2957cd643106508b071e9772a1f3"
+      }
+    },
+    "graph": {
+      "preparer": {
+        "bytes": 3225,
+        "path": "examples/quorum-graph-v1/prepare_receipt.py",
+        "sha256": "6bee668ad350da65490615027d438479354704448dd22cc863509f9038ee77f3"
+      },
+      "receipt": {
+        "bytes": 4844,
+        "path": "examples/quorum-graph-v1/receipt.json",
+        "sha256": "90727ca46695e40626190ca32256070bb8ee9aa0dc823084623e2ee8aad77e9d"
+      }
+    },
+    "impact": {
+      "preparer": {
+        "bytes": 3598,
+        "path": "examples/quorum-impact-v1/prepare_receipt.py",
+        "sha256": "ea4080122438519c14ae1b2013e63594de001224248994549d00e89a51dc32ce"
+      },
+      "receipt": {
+        "bytes": 68114,
+        "path": "examples/quorum-impact-v1/receipt.json",
+        "sha256": "d6859d1581e1729608f5ab7d02d525520fb1f2e286325105b8b1799017c158dc"
+      }
+    },
+    "input": {
+      "preparer": {
+        "bytes": 3236,
+        "path": "examples/quorum-input-v1/prepare_receipt.py",
+        "sha256": "40d72e423c58204152164627f1282c0d9ba34cc857b37df2913c0a59732d55cf"
+      },
+      "receipt": {
+        "bytes": 49070,
+        "path": "examples/quorum-input-v1/receipt.json",
+        "sha256": "a86ee0fa8197c8347abbcdbdf0e5600fc3e99facaa94e656f79a6bb9e99ed584"
+      }
+    },
+    "reading": {
+      "preparer": {
+        "bytes": 3648,
+        "path": "examples/quorum-reading-v1/prepare_receipt.py",
+        "sha256": "9c67ef6139bb697eb81d0d1cb500926f8490f031d068a956c1d946a11c648cc0"
+      },
+      "receipt": {
+        "bytes": 107227,
+        "path": "examples/quorum-reading-v1/receipt.json",
+        "sha256": "dfcfb420ec5feaf737f33ceaf9f350f244b126752d5be4ccfa131aceb4d44e15"
+      }
+    },
+    "source": {
+      "preparer": {
+        "bytes": 3467,
+        "path": "examples/quorum-source-v1/prepare_receipt.py",
+        "sha256": "93b66d7147c6be188b88dfa0dc9846fe8394f7e21cc6a77137c82ad08c5e7062"
+      },
+      "receipt": {
+        "bytes": 40825,
+        "path": "examples/quorum-source-v1/receipt.json",
+        "sha256": "b3c141450ec71628d0cde329958f4aa98538c62fb32c78ea259245c4fb2b13f1"
+      }
+    }
+  },
+  "schema": "document-profile/historical-controls/1",
+  "scope": "Retained QUORUM receipt epoch controls; not current checker or current CI equivalence"
+}
