@@ -1,0 +1,170 @@
+{
+  "acceptance_evidence_required": "Exact destination bytes/archive/index/collator/README/receipt/review pins and publication readback. Fresh proof claims still require separately admitted complete build/proof satisfying unchanged total/all21unit/zero-count/source/tool/canonical/resource/cleanup gates and independent actual review.",
+  "actions": "Only assigned publication-review.json written. No W/source/archive/index/README/receipt edits; no native/CLI/model/proc-census/signal/cgroup operations. Two authorized local data-only collator invocations; no archive member execution.",
+  "artifact_pins": {
+    "README.md": {
+      "bytes": 3004,
+      "sha256": "63241769bbd4c5b29de66f26a9146d982a95ea66fd1ef47e10a2f9e4a3202d8d"
+    },
+    "collate.py": {
+      "bytes": 17595,
+      "sha256": "86e8aeb397253c20a54fbc0b410fd9fd5fc15c11934c3b5238e84b72b8f4f536"
+    },
+    "collation-receipt.json": {
+      "bytes": 5305,
+      "sha256": "2fd23fa22ec66e16c6270cdc92b0bf1206276444c68102fa062ba58d7907abd9"
+    },
+    "index.json": {
+      "bytes": 61735,
+      "sha256": "a98ed2004fdcef932a3c5ac337667fc71d10ceccf2bd4437910b7126f2420ea8"
+    },
+    "observations.zip": {
+      "bytes": 787462,
+      "sha256": "ee2cb214969b84b0cba3c728ac7531c844e99c52861b05af2fd7634fc2daf8fc"
+    }
+  },
+  "blockers": [],
+  "capacity_observation": {
+    "cap": 8388608,
+    "entries_including_root": 71,
+    "qualification": "Current bounded accounted storage observation only; not hard quota or full peak theorem.",
+    "shared_publication_stage_accounted_bytes_before_review": 3155720
+  },
+  "independent_data_checks": [
+    {
+      "argv": [
+        "/usr/bin/python3.14",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "/dev/shm/semantic-transport-verification-publication-20261029/proof-fourth/collate.py",
+        "check"
+      ],
+      "exit": 0,
+      "stderr": "EMPTY",
+      "stdout": "CHECKED_DATA_MEMBERS_AND_HASHES_ONLY\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3.14",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "-O",
+        "/dev/shm/semantic-transport-verification-publication-20261029/proof-fourth/collate.py",
+        "check"
+      ],
+      "exit": 0,
+      "stderr": "EMPTY",
+      "stdout": "CHECKED_DATA_MEMBERS_AND_HASHES_ONLY\n"
+    }
+  ],
+  "remaining_unproved": [
+    "No new formal proof, complete clean proof, whole-system assurance, semantic/study benefit, human evaluation, release or ACCEPTED_V1.",
+    "Nested ZIP contents opaque; fixed credential scan does not prove no secrets. Tool/canonical identities are preserved metadata; no large installed-tool rehash or compiler/runtime execution in this collation review.",
+    "No creator authentication or same-UID hostile isolation; no retroactive proof/resource/control compliance. Root-reserve comparison caveat remains in full actual review."
+  ],
+  "retained_actual_outcome": {
+    "T4": "PERMANENT_FAILED",
+    "build": "SUCCESS exit0/full capture/groupabsent recorded",
+    "correction": "README and index/receipt explicitly replace root initial foreign attribution with UNKNOWN. Owner reports immediate correction; archive does not authenticate conversational timing. No definite foreign attribution is accepted.",
+    "counters": {
+      "complete_censuses": 36,
+      "incomplete_censuses": 10,
+      "pauses": 17,
+      "peak_pause_ns": 113938522,
+      "resumes": 16,
+      "status": "FAILED_NO_RESUME"
+    },
+    "expected_oracle": {
+      "qualification": "All21 exact unit strings and total row match full retained actual review. Expected requirements only, not results from T4.",
+      "require_zero": [
+        "unproved",
+        "justified",
+        "warnings",
+        "errors",
+        "pragma Assume",
+        "Suppress or Skip_Proof bypasses"
+      ],
+      "total_row": "Total                          1368    342 (25%)                                        1026 (75%)           .          .",
+      "unit_rows": 21
+    },
+    "failure": "Fixed round8 global census refusal; latest ENOENT/proc/1032727, knownUNKNOWN, census incomplete. Six recorded owned rowsT do not establish complete group membership.",
+    "final_checks": "All seven callbacks present/failures empty; later complete inactive FINAL102 and strict emptyIPC do not erase failed proof/acquisition. Group absence is retained recorded evidence; no live probe by reviewer.",
+    "fresh_full_proof": "NOT_ESTABLISHED",
+    "history": "T1/T2/T3/T4 remain FAILED; previous atime-cause attribution UNKNOWN. Prior65-control logic PASS coexists with FAILED_RESOURCE_BOUND; recovered current Q is not retroactive resource compliance.18/23 current pure controls are distinct prior receipts, not rerun here; three older actual Python controls remain exact-older-source-only.",
+    "missing_PID_ownership": "PGID/session/UID/starttime/creator/deletion cause UNKNOWN. Not verified foreign, owned, hostile or harmless.",
+    "proof": "FAILED exit-9/incomplete capture/groupabsent recorded",
+    "proof_oracle": "NOT_SATISFIED",
+    "proof_stdout": "Exactly64B Phase1 heading only; stderr0B. Empty captured stderr does not prove absence of uncaptured diagnostics.",
+    "proof_summary": "ABSENT; live gnatprove.out and generated why3.conf both absent."
+  },
+  "reviewer": "/root/accounting_publication_review",
+  "schema": "transport/fourth-failed-proof-publication-review/1",
+  "scope": "Independent inert collation engineering review only; no product/study acceptance or execution authority.",
+  "selected_retained_record_pins": {
+    "D/proof-quiescent-attempt-review-01.json": {
+      "bytes": 14353,
+      "sha256": "2bce039ee3163530abb5ea8942641e25e689924a9b7b03486ec78d5ec007c504"
+    },
+    "D/proof-quiescent-implementation-review-01.json": {
+      "bytes": 14270,
+      "sha256": "3cc91d2598194d3813f0018ca3495fbf0a543f720d0cec0d4e6585e3c50b2340"
+    },
+    "D/proof-quiescent-launch-01.json": {
+      "bytes": 6639,
+      "sha256": "7c9c14fd58d1b2640ff0e99f4f4d77f5e9a3c647dc1d9911c0236ce7218ecbcf"
+    },
+    "D/proof-quiescent-v3-final-review-01.json": {
+      "bytes": 5159,
+      "sha256": "03d04151958edb0208eec4097397a412d812f300d08b50254578a89d21a4f198"
+    },
+    "Q/proof-oracle.json": {
+      "bytes": 3889,
+      "sha256": "83e9a762808e417aa37c61d5b163c7d686df672ff4a20329159d479ba6bea7cc"
+    },
+    "Q/runner-index.json": {
+      "bytes": 7266,
+      "sha256": "4fda3d407ad754ff3508088b39b3219a814e64a76dc95b6b362bd18d2e65fa20"
+    },
+    "Q/source-manifest.json": {
+      "bytes": 6560,
+      "sha256": "7b61c16882b649141bd3288b8289ef635cfe04a01c3dd53341238a4c0cd4efd2"
+    },
+    "T4/build-process.json": {
+      "bytes": 26569,
+      "sha256": "0f44967e16c39596ab85365f29718b75cf283679feb675b4e8495af599b3f13f"
+    },
+    "T4/proof-process.json": {
+      "bytes": 39267,
+      "sha256": "426d6d6c91fd76f916823d75fbfe888c2aee5d912713db195eb054aef142ee1e"
+    },
+    "T4/terminal.json": {
+      "bytes": 96695,
+      "sha256": "b81cff2d24328bad542720c104d196f9bbd00fa401ea2393d4ade1a4252ab62e"
+    }
+  },
+  "smallest_sound_next_step": "Parent may copy exact inert files/review as retained FAILED checkpoint, then verify destination pins and repository/publication readback. Any future cgroup/supervisor design requires distinct review/admission; this review grants no execution/retry.",
+  "verdict": "PASS_FOURTH_FAILED_ATTEMPT_DATA_PUBLICATION_REVIEW",
+  "verified": {
+    "D_inventory": "Exact27-file collator literal whitelist. Full14353-byte actual review2bce039... and prior actual-failure reviews retained. Operative calendar adoption/reviews/v3 and invalid administrative serialization originals retained as bytes; invalid originals are not promoted to active JSON authority.",
+    "Q_inventory": "Independent bounded traversal equals archived Q regular membership. Zero current compiled/cache/special entries requiring exclusion and zero declared omissions. Qv3 operative runner/calendar02 and historical preservation/control/resource/compaction sources retained.",
+    "README": "Failure/build/proof/source scope/counts/zero omissions/history/UNKNOWN qualifications agree with inspected records. Historical Qv2 plan is explicitly distinguished from actual Qv3/calendar02 launch. Future cgroup design is outside selected source inventory.",
+    "T4_inventory": "Exactly38 manifest-pinned source/GPR paths and full bytes, plus exactly nine selected before/launch/build/proof/raw/terminal records. Object/newbinary/cache/tmp trees intentionally not selected; their retained identities remain metadata.",
+    "archive": "All142 unique regular members fully read with ZIP CRC/decompression, indexed size/SHA256 and live byte equality. Expanded1316725 bytes; compressed archive787462 bytes. No extraction.",
+    "credential_scan": "No fixed private-key-header/sk-proj/ghp/AKIA byte-pattern match across complete raw member bytes. Heuristic only, not proof of absence of secrets.",
+    "held_pins": "All five supplied outer artifact sizes/SHA256 match. Six explicit collator held-source pins match. Fourteen bound files in collation receipt match exact bytes/hash, including original data-check raw outputs.",
+    "nested_archives": "Opaque raw-byte members only; not recursively inspected, extracted, imported or executed. Direct exclusion claims are scoped accordingly.",
+    "prefix_counts": {
+      "D_fixed_records": 27,
+      "Q_regular_files": 68,
+      "T4_selected_root_records": 9,
+      "T4_source_files": 38
+    },
+    "safe_structure": "Canonical relative slash names, depth<=12 and fixed safe component alphabet; no absolute/dot/dotdot/duplicate/normalization aliases. Regular Unix0400 members only, no encryption; stored/deflated only. Per-member<=1MiB, expanded/archive<=4MiB.",
+    "source_stat": "Every member matches its source-root-relative absolute path, live bytes and dev/ino/mode/size/blocks/mtime_ns/ctime_ns/uid/nlink. All hashes and selected stat fields rechecked after both data checks. Atime is excluded; no reader-cause attribution.",
+    "static_checker": "Explicit check branch only reads bounded index/archive and validates regular membership, bounds, byte/hash identity. No native/CLI/model/helper/proc/signal/cgroup operation or archived-code execution. Default creation branch not invoked by reviewer. All collator functions<=60lines."
+  }
+}

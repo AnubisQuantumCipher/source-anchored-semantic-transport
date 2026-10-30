@@ -1,0 +1,29 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-I",
+    "-S",
+    "-B",
+    "-Werror",
+    "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/install/test_installed_regression.py",
+    "--bundle",
+    "/dev/shm/semantic-transport-proof-closure-20261029/install-current/first-bundle",
+    "--evidence",
+    "/dev/shm/semantic-transport-proof-closure-20261029/install-current/regression"
+  ],
+  "elapsed_ns": 25722664306,
+  "exit_code": 0,
+  "status": "SUCCESS",
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "bytes": 3899,
+    "sha256": "80fd11019874967f3371407cac6a12a7f26ec46a75573ef92d42d54ac852319d"
+  },
+  "storage_after": {
+    "bytes": 94641495,
+    "files": 1390
+  }
+}

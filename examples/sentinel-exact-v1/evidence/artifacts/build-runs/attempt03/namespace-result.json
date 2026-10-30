@@ -1,0 +1,230 @@
+{
+  "capture": {
+    "complete": true,
+    "inventory": "capture/inventory.json",
+    "payload_bytes": 24787347,
+    "readonly_qualified": true
+  },
+  "cleanup": {
+    "ownership": "private PID namespace",
+    "remaining": 0
+  },
+  "external_bytes": 25893296,
+  "failures": [],
+  "identity_after": {
+    "assumption": "hostile host and concurrent writes outside namespace are not attested; TOCTOU remains UNPROVEN",
+    "files": 2494,
+    "roster_sha256": "9fd09d8ffe9b6560aa0bd839d8513f1b8449b0342572c2ddba2ddd955a2c98e0",
+    "scope": "exact previously declared tool/compiler/runtime/system-library roster",
+    "status": "CHECKED"
+  },
+  "identity_before": {
+    "assumption": "hostile host and concurrent writes outside namespace are not attested; TOCTOU remains UNPROVEN",
+    "files": 2494,
+    "roster_sha256": "9fd09d8ffe9b6560aa0bd839d8513f1b8449b0342572c2ddba2ddd955a2c98e0",
+    "scope": "exact previously declared tool/compiler/runtime/system-library roster",
+    "status": "CHECKED"
+  },
+  "namespaces": {
+    "mnt": "mnt:[4026532939]",
+    "net": "net:[4026532973]",
+    "pid": "pid:[4026532971]",
+    "user": "user:[4026532904]"
+  },
+  "readonly_qualified": true,
+  "status": "SENTINEL_POLICY_BUILD_TEST_PROOF_CHECKED",
+  "terminal_cleanup": {
+    "ownership": "private PID namespace",
+    "remaining": 0
+  },
+  "worker": {
+    "English_semantics": "UNPROVEN",
+    "OCR_accuracy": "UNPROVEN",
+    "checks_binary_sha256": "ac47796772a1a5c7d2ea48c133eb8fce93f0887a303b21077007e0bc0bea6d31",
+    "execution_authority": "NONE",
+    "native_wire": "NOT_IMPLEMENTED_BY_THIS_PROFILE",
+    "proof": {
+      "assume": 0,
+      "categories": {
+        "Assertions": [
+          8,
+          0,
+          8,
+          0,
+          0
+        ],
+        "Concurrency": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Data Dependencies": [
+          25,
+          25,
+          0,
+          0,
+          0
+        ],
+        "Flow Dependencies": [
+          5,
+          5,
+          0,
+          0,
+          0
+        ],
+        "Functional Contracts": [
+          8,
+          0,
+          8,
+          0,
+          0
+        ],
+        "Initialization": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "LSP Verification": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Non-Aliasing": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Run-time Checks": [
+          34,
+          0,
+          34,
+          0,
+          0
+        ],
+        "Termination": [
+          35,
+          35,
+          0,
+          0,
+          0
+        ]
+      },
+      "entities": {
+        "Sentinel_Policy": 0,
+        "Sentinel_Policy.Accepted_Count": 0,
+        "Sentinel_Policy.All_Linked": 1,
+        "Sentinel_Policy.All_Match": 2,
+        "Sentinel_Policy.Answer_Admissible": 0,
+        "Sentinel_Policy.Authority": 0,
+        "Sentinel_Policy.Begin_Refinement": 2,
+        "Sentinel_Policy.Bind_Source": 1,
+        "Sentinel_Policy.Candidate_Of": 0,
+        "Sentinel_Policy.Claims_Valid": 3,
+        "Sentinel_Policy.Current_Challenge": 1,
+        "Sentinel_Policy.Current_Differs": 1,
+        "Sentinel_Policy.Current_Round": 0,
+        "Sentinel_Policy.Documentary_Of": 0,
+        "Sentinel_Policy.Eligible": 0,
+        "Sentinel_Policy.Expected_Of": 0,
+        "Sentinel_Policy.Failure_Count": 10,
+        "Sentinel_Policy.Failure_History": 0,
+        "Sentinel_Policy.Fatal": 0,
+        "Sentinel_Policy.History_Preserved": 19,
+        "Sentinel_Policy.Identity_Of": 0,
+        "Sentinel_Policy.Identity_Valid": 0,
+        "Sentinel_Policy.Initialize": 1,
+        "Sentinel_Policy.Initialized": 0,
+        "Sentinel_Policy.Link_Valid": 0,
+        "Sentinel_Policy.New_Candidate": 1,
+        "Sentinel_Policy.Qualification_Requested": 0,
+        "Sentinel_Policy.Questions_Of": 0,
+        "Sentinel_Policy.Record_Answer": 2,
+        "Sentinel_Policy.Refinement_Admissible": 0,
+        "Sentinel_Policy.Repairs_Valid": 0,
+        "Sentinel_Policy.Request_Qualification": 1,
+        "Sentinel_Policy.Result_Of": 0,
+        "Sentinel_Policy.Roster_Valid": 3,
+        "Sentinel_Policy.Session": 1,
+        "Sentinel_Policy.State_Of": 1,
+        "Sentinel_Policy.Valid": 0
+      },
+      "flow": 65,
+      "justified": 0,
+      "prover": 50,
+      "scope": "EXACT_SUPPLIED_SOURCE_ROSTER_POLICY_CONTRACTS_ONLY",
+      "sha256": "51f1e87f263ed569c7f7b4aed120d3113f301b1f2ba3782139e40624c1d89374",
+      "total": 115,
+      "unproved": 0,
+      "warnings": 0
+    },
+    "runs": [
+      {
+        "argv": [
+          "/home/sicarii/opt/gnat/gprbuild-aarch64-linux-26.0.0-1/bin/gprbuild",
+          "-R",
+          "-P",
+          "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/build-input-03/sentinel_native/sentinel_policy.gpr",
+          "-j1",
+          "-cargs:Ada",
+          "-gnata",
+          "-gnatwa",
+          "-gnatwe",
+          "-gnatVa",
+          "-gnatf"
+        ],
+        "cleanup": {
+          "ownership": "private PID namespace",
+          "remaining": 0
+        },
+        "elapsed_seconds": 2.6121374720241874,
+        "returncode": 0,
+        "seconds_bound": 90
+      },
+      {
+        "argv": [
+          "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/build-runs/attempt03/private/bin/sentinel_policy_checks"
+        ],
+        "cleanup": {
+          "ownership": "private PID namespace",
+          "remaining": 0
+        },
+        "elapsed_seconds": 0.45387597382068634,
+        "returncode": 0,
+        "seconds_bound": 30
+      },
+      {
+        "argv": [
+          "/home/sicarii/opt/gnat/gnatprove-aarch64-linux-16.1.0-1/bin/gnatprove",
+          "-P",
+          "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/build-input-03/sentinel_native/sentinel_policy_proof.gpr",
+          "-U",
+          "--level=2",
+          "--report=all",
+          "--warnings=error",
+          "-j1",
+          "--prover=z3",
+          "--timeout=1",
+          "--counterexamples=off"
+        ],
+        "cleanup": {
+          "ownership": "private PID namespace",
+          "remaining": 0
+        },
+        "elapsed_seconds": 17.387415543897077,
+        "returncode": 0,
+        "seconds_bound": 180
+      }
+    ],
+    "scope": "PURE_TYPED_POLICY_CONTRACTS_AND_STATIC_FIXTURES_ONLY",
+    "status": "SENTINEL_POLICY_BUILD_TEST_PROOF_CHECKED",
+    "wholebook_semantics": "UNPROVEN"
+  }
+}

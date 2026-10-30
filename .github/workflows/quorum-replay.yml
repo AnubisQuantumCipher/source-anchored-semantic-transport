@@ -1,0 +1,41 @@
+name: QUORUM portable replay controls
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  pure-core:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    defaults:
+      run:
+        working-directory: current
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          path: current
+      - name: Exact historical QUORUM source view
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: 3e0d8602353e42a772927c8adaa32a73e7cc3b0a
+          path: historical
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.14.10'
+          architecture: 'x64'
+          check-latest: false
+          allow-prereleases: false
+      - name: Frozen pure-core outcomes and source bounds
+        run: |
+          python3 -I -S -B -Werror install/test_quorum_replay.py
+          python3 -I -S -B -O -Werror install/test_quorum_replay.py
+      - name: Existing source controls
+        run: python3 -I -S -B -Werror install/check_source.py
+      - name: Sealed historical receipt at its declared source epoch
+        working-directory: historical
+        run: python3 -I -S -B -Werror examples/quorum-replay-v1/prepare_receipt.py --check
+      - name: Current QUORUM source continuity and documentary transition
+        run: |
+          python3 -I -S -B -Werror examples/quorum-replay-continuity-v2/check_continuity.py --historical-root ../historical
+          python3 -I -S -B -O -Werror examples/quorum-replay-continuity-v2/check_continuity.py --historical-root ../historical
+          python3 -I -S -B -Werror examples/quorum-replay-continuity-v2/test_continuity.py --historical-root ../historical
+          python3 -I -S -B -O -Werror examples/quorum-replay-continuity-v2/test_continuity.py --historical-root ../historical

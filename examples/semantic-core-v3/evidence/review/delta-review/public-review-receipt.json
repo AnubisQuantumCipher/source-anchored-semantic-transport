@@ -1,0 +1,57 @@
+{
+  "entailment": "NOT_CHECKED",
+  "execution_authority": "NONE",
+  "interpretation_entailment": "UNPROVEN",
+  "model_role": "User-requested GPT-6.1 independent review; backend identity belongs to spawning-task metadata and is not separately attested by this receipt.",
+  "native_sha256": "aa04e9aca4afa2663202eac7085329ac5e1f331057b418d3339c2ed17309c23b",
+  "not_proved": [
+    "Wire-byte-to-field functional correspondence",
+    "Python validation/serialization or source-language conformance",
+    "English entailment/model adequacy/report authentication/world truth",
+    "C/OS IO, compiler/runtime correctness or whole-product acceptance"
+  ],
+  "proved_property": "The written SPARK Step/Evaluate postconditions over a valid finite model/typed tree, parser valid model/tree on Ok and empty-count failure reset, AORTE and termination in analyzed units.",
+  "replay_scope": "Equality of status, all node values and root result before/after courier recovery, tied to exact source/payload/model/native/package identities. No majority vote or added truth authority.",
+  "retained_failures": [
+    {
+      "artifact": "/dev/shm/semantic-transport-core-20261029/evidence/schema-review/results.json",
+      "disposition": "Original serializer admitted3 unsupported envelope variants; fixed complete plan validation; unchanged139 cases subsequently pass.",
+      "id": "SCHEMA-01",
+      "sha256": "2fc6965c521e097ce90c9fbf113ca43a127c94bd2bdc6ec696c190489fd00df9"
+    },
+    {
+      "artifact": "/dev/shm/semantic-transport-core-20261029/evidence/process-review/results01.json",
+      "disposition": "Original wrapper leaked cwd directory descriptor through exec; fixed close after fchdir; unchanged12 fixtures subsequently pass.",
+      "id": "PROCESS-01",
+      "sha256": "291b86081279a2ab5ff073e3354c456e97dd6c82bdbe2e69011af391a82b6baa"
+    },
+    {
+      "artifact": "/dev/shm/semantic-transport-core-20261029/evidence/delta-review/proof03/gnatprove.out",
+      "disposition": "Five typing-preservation VCs timed out. Exact equivalent modular Typed_Node repair; proof04 reports zero unproved. Original report retained.",
+      "id": "PROOF-03",
+      "sha256": "eb4499a33700abec16c3942482841c42525d49092288a4c252dc358ff0073d87"
+    }
+  ],
+  "schema": "transport/independent-core-review/1",
+  "source_pins": {
+    "evaluation/src/transport_core_parse.adb": "c0b8efb1690b7558771450ba6be192e5b824f596a53712a174b3e7bdc23c6e61",
+    "evaluation/src/transport_core_parse.ads": "e63c01c17bfc40bc1e2c26d36fa61f3970837790ecd0d712cc1314c13700a30b",
+    "evaluation/src/transport_eval.adb": "260e066eb5b7b4d027b679bc1b4b05dcaae9fde9df8bfffc2b199232bea8ad35",
+    "evaluation/src/transport_eval.ads": "22f52d356bc99d09ad932f4cfca5c97446383d03f1ab5e217361eafad727e79d",
+    "tests/test_transport_core.py": "01b2a21c35c608f74e06ca0cf0ef6ea0e7fcec055af2e5974f7ba8a3367dd51b",
+    "tools/transport_core.py": "c186f9e9a78060fd03e95c339d2c5b31e7558fd37e6f4b7f12e8538bf952e6cd",
+    "tools/transport_core_bridge.py": "c11226a6f16f55a4ebc5ffea976be9f58b6b14725d3fadc9943f8c401fb1cda6",
+    "tools/transport_core_cli.py": "514dbfa17bd3b900eb779fe52b36c236aa14803dbbd04484e760518bfbccc5d1",
+    "tools/transport_core_process.py": "4bf942e5d3eff91a5f676c42554ac5bb4800c22d702c9544fb92851925d8b838"
+  },
+  "status": "REVIEWED_SCOPED_EVIDENCE_PASS",
+  "verification": {
+    "frozen139_expectations": "UNCHANGED",
+    "legacy": "Original evaluator prefixes and previously reviewed documentary module hashes unchanged",
+    "normal": "3 unittest groups PASS, dedicated command exit0",
+    "proof04": "1368 total:342 flow and1026 prover;0 unproved;0 justified; exact copied proof sources match current files",
+    "published_operator_tables": "Exact not/and/if/must table cells and dimensions match frozen oracle; signatures and Fact/Norm boundaries checked",
+    "python_optimized": "3 unittest groups PASS, dedicated command exit0",
+    "replay_guard": "6 mocked-courier controls PASS: exact match, missing model, and status/nodes/result mismatch refusal; invalid plan refuses before missing-model return"
+  }
+}

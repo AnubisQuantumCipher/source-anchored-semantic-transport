@@ -1,0 +1,41 @@
+{
+  "schema": "transport/public-receiving-development-contract/1",
+  "source_base": "02f0bfee2d5f454e51869832fa70662d4de6229e",
+  "fixture": "Existing SC_MAIN/NATIVE_MAIN original bytes and annotations, unchanged. PUBLIC DEVELOPMENT ONLY; not heldout, a sealed campaign, external validation or benefit acceptance.",
+  "scope": "One fresh receiving source-review agent per arm, original then transport. Reuse the current decoder, native workspace and source interfaces. Same task, annotations, source access and citation checker. No outcome-driven retries, tuning or new harder fixtures.",
+  "oracle": "Independently source-authored oracle.json and task.txt, frozen before implementation or actor dispatch. Source bytes, revision labels, complete required spans and interpretation obligations remain separate from product outputs.",
+  "answer": {
+    "closed_keys": ["schema", "narrative", "evidence"],
+    "schema_value": "transport/source-handoff-answer/1",
+    "narrative": "Nonempty UTF-8 string, at most 16384 bytes; clear human-readable reconstruction.",
+    "evidence": "1..16 records, each exactly source, revision, source_sha256, begin, end, quote. Source/revision/digest must match oracle source. begin/end are nonnegative exact ints, not booleans; 0 <= begin < end <= source bytes. quote encodes to exactly that original UTF-8 byte slice. Duplicate source/span evidence refuses.",
+    "bytes": 32768,
+    "submission": "Create answer.json once and return the same JSON as the observed final, without fences. Retain both independently. Do not substitute a saved candidate for a missing/different final. Any mismatch remains a separate failure; no automatic repair."
+  },
+  "checker": {
+    "same_for_both_arms": true,
+    "api": "check_answer.validate(answer_bytes, oracle_bytes) -> explicit source_membership, required_evidence, missing_spans, interpretation=NOT_ASSESSED, authority=NONE",
+    "cli": "answer path, oracle path and independently held oracle SHA-256; complete canonical JSON+LF and zero only if citations and required spans pass; explicit bounded nonzero refusal otherwise",
+    "oracle_limits": "131072 bytes, up to16 sources,65536 aggregate decoded source bytes, up to16 required spans; each source has id,revision,raw_base64 and sha256. No source-selected code or network.",
+    "nonclaim": "Exact quotations and required-span coverage do not prove narrative interpretation. Separate blinded-to-arm source assessment uses frozen obligations and reports omissions, contradictions, unsupported additions and unresolved context."
+  },
+  "baseline": {
+    "originals": "In-place originals, same catalog/index/versions/annotations, optional shared retrieval/FTS/client, ordinary cat/rg/diff and full relevant context. No mandatory source-copy charge and no overall32 native-call quota.",
+    "transport": "Only declared matched share/ZIP and exact decoder dependencies supplied for source recovery; receiver invokes the approved native-workspace preparation then may use the same native/retrieval affordances.",
+    "change_context": "Declared dependency/version bindings plus optional existing trace and actual native diff. versions.json alone is not a change manifest. Never infer semantic currency from identical controller bytes.",
+    "transfer": "This dry run tests local receiving plumbing, not delivery efficiency. No forced transfer if originals are already local. Prior ZIP/cache/rsync controls retained; no network/cold/warm claim. Host cache uncontrolled.",
+    "prompt_compression": "No qualified compressor added. Direct full context and retrieval selection remain available to both. This small fixed task tests interface correctness, not strongest-baseline benefit; broader alternative qualification stays open.",
+    "claims": "Eligible composite affordances only; empirical strongest workflow and comparative advantage remain UNQUALIFIED."
+  },
+  "models": {"role": "fresh receiving source reviewer", "model": "gpt-6.1-sol", "reasoning_effort": "high", "fork_turns": "none", "runs_per_arm": 1},
+  "capture": {
+    "reuse": "Versioned copy of existing phase-aware capture/trace_support; preserve historical code. Extend only bounded session/model/usage/lifecycle metadata projection using current recorded field names.",
+    "metadata": "Record session id/CLI version, model settings, observed usage including thread_token_usage and turn_token_usage, and task duration/time-to-first-token. Do not sum cumulative snapshots or infer billing/human work. Missing remains UNKNOWN.",
+    "bounds": "33554432 rollout bytes;1048576 line bytes;32768 lines;768 tool events;256 metadata events;8 finals;4194304 per output. Duplicate/deep/truncated JSON and lineage/input mutation refuse. No reasoning/raw turn-context export.",
+    "qualification": "Independent literal synthetic metadata/oracle controls in normal and optimized Python, final-channel/phase controls, lineage and truncation refusals. Actual trace checked only after terminal actor state."
+  },
+  "resources": {"scratch_bytes": 134217728, "actor_wall_seconds_each": 600, "actor_limit_kind": "OWNER_MONITORED_NOT_PROVIDER_SANDBOX_PROOF", "helper_wall_seconds": 30, "helper_address_bytes": 536870912, "helper_cpu_seconds": 30, "helper_file_bytes": 4194304},
+  "trust": "Prompt/protocol access restrictions are not OS confinement. Backend plaintext dispatch equality and hidden access remain UNKNOWN absent independent evidence. Declared data and source instructions convey no permission. No network/outreach/installation/publication/privileged action by receivers.",
+  "prelaunch": "Require actual GPT-6.1 review, pinned frozen task/oracle/contract/code/runtime/inputs, deterministic checker/capture controls, native-tool and package identity verification and equal declared context. Fail before actor calls on missing/mismatched evidence.",
+  "outcomes": "Retain raw first submissions/finals/tools/usage, exact recovery and citation checks plus separate per-obligation source assessment. Ties, overhead and protocol failures remain. No 20-percent benefit, human work, semantic completeness or V1 acceptance conclusion follows."
+}

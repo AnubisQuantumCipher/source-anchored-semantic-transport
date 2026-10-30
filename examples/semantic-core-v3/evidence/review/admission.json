@@ -1,0 +1,51 @@
+{
+  "acceptance": "Independent truth/boundary oracle; source-binding/model/tamper/unsupported negative tests; exact package recovery; native postcondition proof with every failed/unproved VC retained; legacytests. No productacceptance claim.",
+  "authorization": "Latest direct user request: earn semantic for a closed model-bound grammar3; build and verify.",
+  "baseline": "Existing dictionary/grammar1and2 documentary and qualified decoder bundle remain unchanged; inherited receiving trial FAILED retained.",
+  "contract": {
+    "authority": "NONE",
+    "entailment": "NOT_CHECKED",
+    "grammar": "transport/meaning/3",
+    "limits": {
+      "arity": 2,
+      "nodes": 256,
+      "symbols": 64,
+      "tuples": 256
+    },
+    "model_missing": "NOT_EVALUATED",
+    "operators": [
+      "pred",
+      "not",
+      "and",
+      "if",
+      "all",
+      "some",
+      "must"
+    ],
+    "package": "Model/formula/source retained as source frames in unchanged current ZIP; separate pinned native evaluator.",
+    "quantifiers": "Unary predicate over explicit finite listed domain only. No variables or arbitrary quantified body.",
+    "translation": "One complete ID: When event, actor shall action[, unless condition]. source. Bounded exact ASCII phrase roles are opaque model symbols, not interpreted lexical English; unsupported reserved clock/causal/belief/modal markers refused.",
+    "truth": "Strong Kleene; missing/conflicting/explicit unresolved tuple remains Unresolved. Norm Truth always Unresolved."
+  },
+  "head": "02f0bfee2d5f454e51869832fa70662d4de6229e",
+  "oracle_sha256": "c8cc2970b3816e3187a9d7e150521b8667fd92ebf0ffd7dd1498c558906da709",
+  "resources": {
+    "build_process_memory_bytes": 1073741824,
+    "no_iPad_dependency": true,
+    "parallel_prover_jobs": 1,
+    "proof_timeout_seconds": 300,
+    "root_disk": "small source/evidence writes only; unchanged10GB reserve below; no build there",
+    "scratch": "/dev/shm/semantic-transport-core-20261029",
+    "scratch_bytes": 268435456
+  },
+  "review_sha256": "57a82574b2eb7b21e0892648bd85bb917cfdf3a703bd4e31c1b22d2ae335b64d",
+  "schema": "transport/engineering-admission/1",
+  "source_pins": {
+    "evaluation/src/transport_eval.adb": "1b34c157b07c1cc4be459b91be8ae6bbb88937f70be49f445fdb3e70bb2f953d",
+    "evaluation/src/transport_eval.ads": "a70421ced9f139915045a309fa2f18e2f7510a9f4126ca8672606cd7dc5be3e2",
+    "tools/transport_package.py": "c7746908cb1885914f83aa3d4ed97ca57b5f44a86f6442ca1ad837d76ea9810d",
+    "tools/transport_requirement_language.py": "e9bd5b8fa360da23f9c2fd55aea9597260da453083b8ab64462a031e444d965b",
+    "tools/transport_schema.py": "1c324b661314bd3a92f23b4502207f38a483baa6565d479838de450f110eeb1a"
+  },
+  "utc": "2026-10-29T17:22:50.018144+00:00"
+}

@@ -1,0 +1,30 @@
+{
+  "assurance_boundary": "Staticworkflowreview only; hosted2mincompletion and main5minjobperformance remain tobe observed. Both jobs mustcomplete; subsetpasses arenot fullCIacceptance.",
+  "blocking_findings": [],
+  "new_workflow": {
+    "path": ".github/workflows/export-reader-continuity.yml",
+    "pin": {
+      "bytes": 734,
+      "sha256": "00d44a0ef38141c4234545a84133145cf5339e608acc6923468f2c3c7bd83b72"
+    }
+  },
+  "next_step": "Commitexactreviewedsources andinspectboth hostedjobs while retainingoldtimedoutlogs and all existingbounds.",
+  "not_rerun": "No tests/model/provider/warmup execution for thisaddendum, perparentscope",
+  "prior_review": {
+    "path": "/dev/shm/semantic-transport-quorum-v2-20261029/independent/export-ci-warmup-final-review02.json",
+    "pin": {
+      "bytes": 5720,
+      "sha256": "c5c51964fc60f0bc0f8a1abe1334d89c8456c297e454f10ddb357645b8e6a5bf"
+    }
+  },
+  "review_model": "gpt-6.1-sol",
+  "schema": "transport/independent-export-continuity-workflow-review/1",
+  "status": "READ_ONLY_SCOPED_PASS",
+  "verified": [
+    "Separatepush/pull_requestjob timeout2min, ubuntu24.04, read-onlycontentspermission",
+    "Checkout/setup-python exactpinnedactionSHAs andsamePython3.14.10/x64 withcheck-latestfalse/allow-prereleasesfalse",
+    "Existing23control suite invoked exactisolated-I-S-B-Werror normaland-O commands",
+    "No warmup, product/model/provider action or sharedartifact/cache mutation added by thisnewworkflow",
+    "All finalreview02 sourcepins unchanged, including originalreader5minworkflow andchecker/test/oldreceipt"
+  ]
+}

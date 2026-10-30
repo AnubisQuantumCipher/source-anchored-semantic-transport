@@ -1,0 +1,244 @@
+{
+  "caveat": "Final product04; complete declared shared dependency accounting, logical bytes per file; overlaps are not a net compression claim.",
+  "courier_declared_external": [
+    {
+      "bytes": 67720,
+      "declared_path": "/usr/bin/python3.14",
+      "path": "/usr/bin/python3.14",
+      "sha256": "c6bc1ef497b896b7575c546b13f9bafe52e2066f184fdd3fec6af4b5b6349947"
+    },
+    {
+      "bytes": 201832,
+      "declared_path": "/lib/ld-linux-aarch64.so.1",
+      "path": "/usr/lib/ld-linux-aarch64.so.1",
+      "sha256": "b1f2738bdb51e6419d7062f96c8a44bd68853698dc5ac624fa6ca9f9b03d456d"
+    },
+    {
+      "bytes": 1853736,
+      "declared_path": "/usr/lib/libc.so.6",
+      "path": "/usr/lib/libc.so.6",
+      "sha256": "6ab264fb4e8df9942b0fb75b48fcd5c30b2f081d8dfaa6c25d7be1d3fce5b2ab"
+    }
+  ],
+  "grammar_runtime_files": [
+    {
+      "bytes": 17126,
+      "path": "install/transport_install_support.py",
+      "sha256": "f8e63f6265bb7e35b3a296e1ec463a15140a4e0106865334ce5140ff7d2586da"
+    },
+    {
+      "bytes": 11155,
+      "path": "transport_core.py",
+      "sha256": "c186f9e9a78060fd03e95c339d2c5b31e7558fd37e6f4b7f12e8538bf952e6cd"
+    },
+    {
+      "bytes": 11231,
+      "path": "transport_core_bridge.py",
+      "sha256": "fa65f65d9021b1c14470ff46cef5686dcc91d951a323073006ed2607dafcb5d7"
+    },
+    {
+      "bytes": 3796,
+      "path": "transport_core_cli.py",
+      "sha256": "514dbfa17bd3b900eb779fe52b36c236aa14803dbbd04484e760518bfbccc5d1"
+    },
+    {
+      "bytes": 6843,
+      "path": "transport_core_language.py",
+      "sha256": "8652bb99fd9c0083f5e979db3603d79662db41c37a709cb1e73afb9cfbcb2f91"
+    },
+    {
+      "bytes": 2650,
+      "path": "transport_core_process.py",
+      "sha256": "4bf942e5d3eff91a5f676c42554ac5bb4800c22d702c9544fb92851925d8b838"
+    },
+    {
+      "bytes": 1997,
+      "path": "transport_operators.py",
+      "sha256": "b638b57693d26238ec2c461b810ad665008a8b59886ed0be53f0dbc71809f417"
+    },
+    {
+      "bytes": 7413,
+      "path": "transport_requirement_language.py",
+      "sha256": "e9bd5b8fa360da23f9c2fd55aea9597260da453083b8ab64462a031e444d965b"
+    },
+    {
+      "bytes": 8622,
+      "path": "transport_schema.py",
+      "sha256": "1c324b661314bd3a92f23b4502207f38a483baa6565d479838de450f110eeb1a"
+    },
+    {
+      "bytes": 6691,
+      "path": "transport_wire.py",
+      "sha256": "2a0fa77da78ae4591fc296f6ce4f62e961c68ed992479ffe59974e236b0f58c4"
+    }
+  ],
+  "native": {
+    "bytes": 1873376,
+    "path": "/dev/shm/semantic-transport-core-20261029/native/bin/transport_core_native",
+    "sha256": "aa04e9aca4afa2663202eac7085329ac5e1f331057b418d3339c2ed17309c23b"
+  },
+  "qualified_courier_bundle_files": [
+    {
+      "bytes": 1104,
+      "path": "LICENSE",
+      "sha256": "e1d386e60be5de89247667ce05081ffb0716b8f14fd3e34d6033c6d2c14994ad"
+    },
+    {
+      "bytes": 998,
+      "path": "LICENSE-SCOPE.md",
+      "sha256": "1daee6d7ab96d7a30df105499a1dc27d3473b70d978e7dc4a03a22f46d85c05f"
+    },
+    {
+      "bytes": 3632,
+      "path": "RUNTIME.json",
+      "sha256": "683527cac47425759c750cbc5190acbd249fcec43a79b3bea99727fb51688819"
+    },
+    {
+      "bytes": 1685392,
+      "path": "bin/transport_native",
+      "sha256": "299c0457f9047c8c68bdd1227418d5968c195ca683b32a2a7e02cf73f4411013"
+    },
+    {
+      "bytes": 4577,
+      "path": "tools/transport_archive.py",
+      "sha256": "ba21391b0d1e736c2fedae05352ad06ef45c16294322eca184eaab9a5e1c8f59"
+    },
+    {
+      "bytes": 3869,
+      "path": "tools/transport_author.py",
+      "sha256": "5cbb47354a1c92c1d8f4c2eb4a883a2bb43780be57fc9b49610c1786d227a03f"
+    },
+    {
+      "bytes": 14663,
+      "path": "tools/transport_authoring.py",
+      "sha256": "09b02bae52a1b2425e269294dda8e822159811713088d723cefbdf3dd3d826f2"
+    },
+    {
+      "bytes": 7730,
+      "path": "tools/transport_cli.py",
+      "sha256": "8d0e1152322dcb3a0504901046559ce507b584a88e4ce89320c2a66ea1e8e962"
+    },
+    {
+      "bytes": 8988,
+      "path": "tools/transport_codec.py",
+      "sha256": "a7751a746240e93e511b880fda081960e0bb2000ca52747a8509a092283bef74"
+    },
+    {
+      "bytes": 4048,
+      "path": "tools/transport_codec_cli.py",
+      "sha256": "3a8fd51775736e7753ba326b53f42790290d8cc06797b22f04b1b3eae97b89a1"
+    },
+    {
+      "bytes": 8934,
+      "path": "tools/transport_corpus.py",
+      "sha256": "ccbe5eace498b4ba21629bb9382bfd18da77a7b3a5559e3fe381cb3b93ee0e32"
+    },
+    {
+      "bytes": 15514,
+      "path": "tools/transport_export.py",
+      "sha256": "9a731c24626bbf4311057f3ef5660905bc01de4678098bf3c2c9069e4ca0831f"
+    },
+    {
+      "bytes": 7817,
+      "path": "tools/transport_formula.py",
+      "sha256": "75e84b0c8fe62812c67c85e954f1a3feb505cde308abe82712761418e365ed65"
+    },
+    {
+      "bytes": 12294,
+      "path": "tools/transport_graph.py",
+      "sha256": "84b2acfed139595a235cb7b39fc5f9613faa8446af41913c808c48289fadf18a"
+    },
+    {
+      "bytes": 10007,
+      "path": "tools/transport_lexicon.py",
+      "sha256": "3d3e2b0bfc900dd46dbcab55b1bf8d2b93c20f93abe0945d3c60bbe62f204fa0"
+    },
+    {
+      "bytes": 11653,
+      "path": "tools/transport_mcp.py",
+      "sha256": "2dc859f50e58ccbf67d7e650a132d2d45566a6845f0714f89cb37326df779767"
+    },
+    {
+      "bytes": 8848,
+      "path": "tools/transport_meaning.py",
+      "sha256": "6922a302cd8dc9d6ad2391971f321a9589e7b6c2b72107a63f6701b250e07549"
+    },
+    {
+      "bytes": 1997,
+      "path": "tools/transport_operators.py",
+      "sha256": "b638b57693d26238ec2c461b810ad665008a8b59886ed0be53f0dbc71809f417"
+    },
+    {
+      "bytes": 16463,
+      "path": "tools/transport_package.py",
+      "sha256": "32b60f519033c4632d3438444945790a7bd3ba3cbec0a992a46ff1e3e2c8a58a"
+    },
+    {
+      "bytes": 18326,
+      "path": "tools/transport_plan.py",
+      "sha256": "2dcfca9bd9ccec1c1bb7635bc6e080b7b6d8bda8b7a86dd48a1b7191c090af71"
+    },
+    {
+      "bytes": 5381,
+      "path": "tools/transport_readable.py",
+      "sha256": "67496bf66b1ff15952e57cc3843fe52fa80ca4fb69a49185195efc2161737705"
+    },
+    {
+      "bytes": 8408,
+      "path": "tools/transport_recipient_process.py",
+      "sha256": "8175ca8e40231187411ffcbccf115b52f4f01dd33b6a22499a061b11c785b3b0"
+    },
+    {
+      "bytes": 30442,
+      "path": "tools/transport_recipient_runner.py",
+      "sha256": "ddb6220224bff2f2860c2c134973336e1adfe0986586fe73aa0f647f3d5b7c40"
+    },
+    {
+      "bytes": 3423,
+      "path": "tools/transport_references.py",
+      "sha256": "421d6319bec6b8f3bb9d1c965e50daf40d1f6d5165a9913b99e18a36285d9b8a"
+    },
+    {
+      "bytes": 7413,
+      "path": "tools/transport_requirement_language.py",
+      "sha256": "e9bd5b8fa360da23f9c2fd55aea9597260da453083b8ab64462a031e444d965b"
+    },
+    {
+      "bytes": 8622,
+      "path": "tools/transport_schema.py",
+      "sha256": "1c324b661314bd3a92f23b4502207f38a483baa6565d479838de450f110eeb1a"
+    },
+    {
+      "bytes": 8167,
+      "path": "tools/transport_semantics.py",
+      "sha256": "85d9853fde530d28f49c6b711b2ce0136968bddaec428d4a57290c8f52b0f301"
+    },
+    {
+      "bytes": 6809,
+      "path": "tools/transport_source_map.py",
+      "sha256": "caa98ccb077023e85f6a57937e905ade5736048f372b8e8b96d9e4c6d3bbb9b0"
+    },
+    {
+      "bytes": 5034,
+      "path": "tools/transport_structure.py",
+      "sha256": "a6975bdad37ca869c78cd2cafba189c9ad3f189bfc5e5bac8dafce6dcb09c370"
+    },
+    {
+      "bytes": 6691,
+      "path": "tools/transport_wire.py",
+      "sha256": "2a0fa77da78ae4591fc296f6ce4f62e961c68ed992479ffe59974e236b0f58c4"
+    },
+    {
+      "bytes": 4891,
+      "path": "INSTALL.json",
+      "sha256": "398d5388da9c03a6c155e5f19523dccfb7b26aecbad256a4eb301a308013e50b"
+    },
+    {
+      "bytes": 5304,
+      "path": "bin/semantic-transport",
+      "sha256": "7e028b1f02935d5673b5b19ca2d403d2134b9dc87bcbce226256be5dab1b476b"
+    }
+  ],
+  "schema": "transport/core-dependency-accounting/1",
+  "scope": "Per-file logical bytes of exact declared shared dependencies; no model-token measurement, no duplicated-install amortization assertion, excludes operating-system footprint and undeclared runtime transitive libraries."
+}

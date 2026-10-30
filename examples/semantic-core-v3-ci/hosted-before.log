@@ -1,0 +1,434 @@
+﻿2026-10-29T18:19:29.4701139Z Current runner version: '2.338.0'
+2026-10-29T18:19:29.4727234Z ##[group]Runner Image Provisioner
+2026-10-29T18:19:29.4728128Z Hosted Compute Agent
+2026-10-29T18:19:29.4728828Z Version: 20261021.618
+2026-10-29T18:19:29.4729531Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-29T18:19:29.4730298Z Build Date: 2026-10-21T00:45:21Z
+2026-10-29T18:19:29.4731126Z Worker ID: {ffd139dd-e986-4569-9175-fa7d5393431b}
+2026-10-29T18:19:29.4732231Z Region: westcentralus
+2026-10-29T18:19:29.4732974Z Cloud: Azure
+2026-10-29T18:19:29.4733585Z ##[endgroup]
+2026-10-29T18:19:29.4735403Z ##[group]Operating System
+2026-10-29T18:19:29.4736204Z Ubuntu
+2026-10-29T18:19:29.4736781Z 24.04.5
+2026-10-29T18:19:29.4737318Z LTS
+2026-10-29T18:19:29.4737983Z ##[endgroup]
+2026-10-29T18:19:29.4738583Z ##[group]Runner Image
+2026-10-29T18:19:29.4739293Z Image: ubuntu-24.04
+2026-10-29T18:19:29.4739938Z Version: 20261025.353.1
+2026-10-29T18:19:29.4741345Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-29T18:19:29.4743253Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+2026-10-29T18:19:29.4744331Z ##[endgroup]
+2026-10-29T18:19:29.4745556Z ##[group]GITHUB_TOKEN Permissions
+2026-10-29T18:19:29.4747571Z Contents: read
+2026-10-29T18:19:29.4748285Z Metadata: read
+2026-10-29T18:19:29.4748904Z ##[endgroup]
+2026-10-29T18:19:29.4751083Z Secret source: Actions
+2026-10-29T18:19:29.4752246Z Cache mode: write
+2026-10-29T18:19:29.4753120Z Prepare workflow directory
+2026-10-29T18:19:29.5098746Z Prepare all required actions
+2026-10-29T18:19:29.5147145Z Getting action download info
+2026-10-29T18:19:29.8086263Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-29T18:19:29.9436320Z Download action repository 'actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97' (SHA:5fda3b95a4ea91299a34e894583c3862153e4b97)
+2026-10-29T18:19:30.2078307Z Complete job name: source-controls
+2026-10-29T18:19:30.3081058Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-10-29T18:19:30.3082292Z with:
+2026-10-29T18:19:30.3082913Z   repository: AnubisQuantumCipher/source-anchored-semantic-transport
+2026-10-29T18:19:30.3086917Z   token: ***
+2026-10-29T18:19:30.3087359Z   ssh-strict: true
+2026-10-29T18:19:30.3087802Z   ssh-user: git
+2026-10-29T18:19:30.3088266Z   persist-credentials: true
+2026-10-29T18:19:30.3088758Z   clean: true
+2026-10-29T18:19:30.3089203Z   sparse-checkout-cone-mode: true
+2026-10-29T18:19:30.3089718Z   fetch-depth: 1
+2026-10-29T18:19:30.3090144Z   fetch-tags: false
+2026-10-29T18:19:30.3090584Z   show-progress: true
+2026-10-29T18:19:30.3091028Z   lfs: false
+2026-10-29T18:19:30.3091440Z   submodules: false
+2026-10-29T18:19:30.3092052Z   set-safe-directory: true
+2026-10-29T18:19:30.3092560Z   allow-unsafe-pr-checkout: false
+2026-10-29T18:19:30.3093283Z ##[endgroup]
+2026-10-29T18:19:30.6911024Z Syncing repository: AnubisQuantumCipher/source-anchored-semantic-transport
+2026-10-29T18:19:30.6913724Z ##[group]Getting Git version info
+2026-10-29T18:19:30.6915278Z Working directory is '/home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport'
+2026-10-29T18:19:30.6916695Z [command]/usr/bin/git version
+2026-10-29T18:19:30.6983062Z git version 2.56.0
+2026-10-29T18:19:30.6984985Z ##[endgroup]
+2026-10-29T18:19:30.7001206Z Temporarily overriding HOME='/home/runner/work/_temp/65df155d-c118-4734-b036-295f00577caa' before making global git config changes
+2026-10-29T18:19:30.7003259Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-29T18:19:30.7012919Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport
+2026-10-29T18:19:30.7225542Z Deleting the contents of '/home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport'
+2026-10-29T18:19:30.7236237Z ##[group]Initializing the repository
+2026-10-29T18:19:30.7238448Z [command]/usr/bin/git init /home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport
+2026-10-29T18:19:30.7319470Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-29T18:19:30.7321097Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-29T18:19:30.7322640Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-29T18:19:30.7325244Z hint: call:
+2026-10-29T18:19:30.7326252Z hint:
+2026-10-29T18:19:30.7327387Z hint: 	git config --global init.defaultBranch <name>
+2026-10-29T18:19:30.7328645Z hint:
+2026-10-29T18:19:30.7329776Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-29T18:19:30.7331525Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-29T18:19:30.7333310Z hint:
+2026-10-29T18:19:30.7334323Z hint: 	git branch -m <name>
+2026-10-29T18:19:30.7335341Z hint:
+2026-10-29T18:19:30.7336666Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-29T18:19:30.7339349Z Initialized empty Git repository in /home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport/.git/
+2026-10-29T18:19:30.7345264Z [command]/usr/bin/git remote add origin https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport
+2026-10-29T18:19:30.7402540Z ##[endgroup]
+2026-10-29T18:19:30.7406418Z ##[group]Disabling automatic garbage collection
+2026-10-29T18:19:30.7407450Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-29T18:19:30.7443479Z ##[endgroup]
+2026-10-29T18:19:30.7444596Z ##[group]Setting up auth
+2026-10-29T18:19:30.7451193Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-29T18:19:30.7491466Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-29T18:19:30.8035442Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-29T18:19:30.8084037Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-29T18:19:30.8345516Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-29T18:19:30.8394545Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-29T18:19:30.8651545Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-29T18:19:30.8774476Z ##[endgroup]
+2026-10-29T18:19:30.8775316Z ##[group]Fetching the repository
+2026-10-29T18:19:30.8786108Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +324d6ddb4c34e2fecd994e6021c8a72a22d38c9a:refs/remotes/pull/13/merge
+2026-10-29T18:19:33.4765585Z From https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport
+2026-10-29T18:19:33.4766498Z  * [new ref]         324d6ddb4c34e2fecd994e6021c8a72a22d38c9a -> pull/13/merge
+2026-10-29T18:19:33.4770515Z ##[endgroup]
+2026-10-29T18:19:33.4771495Z ##[group]Determining the checkout info
+2026-10-29T18:19:33.4774480Z ##[endgroup]
+2026-10-29T18:19:33.4780126Z [command]/usr/bin/git sparse-checkout disable
+2026-10-29T18:19:33.4840889Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-29T18:19:33.4881907Z ##[group]Checking out the ref
+2026-10-29T18:19:33.4885196Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/13/merge
+2026-10-29T18:19:33.7613546Z Note: switching to 'refs/remotes/pull/13/merge'.
+2026-10-29T18:19:33.7614087Z 
+2026-10-29T18:19:33.7614521Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-29T18:19:33.7615476Z changes and commit them, and you can discard any commits you make in this
+2026-10-29T18:19:33.7616372Z state without impacting any branches by switching back to a branch.
+2026-10-29T18:19:33.7616716Z 
+2026-10-29T18:19:33.7617032Z If you want to create a new branch to retain commits you create, you may
+2026-10-29T18:19:33.7617606Z do so (now or later) by using -c with the switch command. Example:
+2026-10-29T18:19:33.7617908Z 
+2026-10-29T18:19:33.7618061Z   git switch -c <new-branch-name>
+2026-10-29T18:19:33.7618279Z 
+2026-10-29T18:19:33.7618435Z Or undo this operation with:
+2026-10-29T18:19:33.7618646Z 
+2026-10-29T18:19:33.7618764Z   git switch -
+2026-10-29T18:19:33.7618967Z 
+2026-10-29T18:19:33.7619238Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-29T18:19:33.7619590Z 
+2026-10-29T18:19:33.7619980Z HEAD is now at 324d6dd Merge 13681d09ea132f84e1c890d839122a9bd6a50672 into 4cdec4855a9ce9e4128dc6e7c7a8a26d9e974345
+2026-10-29T18:19:33.7639383Z ##[endgroup]
+2026-10-29T18:19:33.7696767Z [command]/usr/bin/git log -1 --format=%H
+2026-10-29T18:19:33.7733542Z 324d6ddb4c34e2fecd994e6021c8a72a22d38c9a
+2026-10-29T18:19:33.8088498Z ##[group]Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+2026-10-29T18:19:33.8089015Z with:
+2026-10-29T18:19:33.8089315Z   python-version: 3.14.10
+2026-10-29T18:19:33.8089628Z   architecture: x64
+2026-10-29T18:19:33.8089914Z   check-latest: false
+2026-10-29T18:19:33.8090220Z   allow-prereleases: false
+2026-10-29T18:19:33.8093013Z   token: ***
+2026-10-29T18:19:33.8093323Z   update-environment: true
+2026-10-29T18:19:33.8093640Z   freethreaded: false
+2026-10-29T18:19:33.8093927Z ##[endgroup]
+2026-10-29T18:19:33.9423876Z ##[group]Installed versions
+2026-10-29T18:19:33.9441472Z Version 3.14.10 was not found in the local cache
+2026-10-29T18:19:35.0443490Z Version 3.14.10 is available for downloading
+2026-10-29T18:19:35.0445468Z Download from "https://github.com/actions/python-versions/releases/download/3.14.10-40336797752/python-3.14.10-linux-24.04-x64.tar.gz"
+2026-10-29T18:19:35.8027784Z Extract downloaded archive
+2026-10-29T18:19:35.8178306Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/1fd9b86c-da64-4936-a8f8-1d39336ad192 -f /home/runner/work/_temp/20e64497-f9ac-4288-8a20-9483d28c73aa
+2026-10-29T18:19:38.2760799Z Execute installation script
+2026-10-29T18:19:38.2882796Z Check if Python hostedtoolcache folder exist...
+2026-10-29T18:19:38.2889867Z Create Python 3.14.10 folder
+2026-10-29T18:19:38.2899013Z Copy Python binaries to hostedtoolcache folder
+2026-10-29T18:19:38.7868556Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+2026-10-29T18:19:38.7913943Z Upgrading pip...
+2026-10-29T18:19:40.8597783Z Collecting pip
+2026-10-29T18:19:40.9544069Z Downloading pip-26.2.2-py3-none-any.whl.metadata (4.6 kB)
+2026-10-29T18:19:40.9822190Z Downloading pip-26.2.2-py3-none-any.whl (1.8 MB)
+2026-10-29T18:19:41.0805529Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 31.9 MB/s  0:00:00
+2026-10-29T18:19:41.0806139Z 
+2026-10-29T18:19:41.1934848Z Installing collected packages: pip
+2026-10-29T18:19:41.1936545Z Attempting uninstall: pip
+2026-10-29T18:19:41.1957568Z Found existing installation: pip 26.2.2
+2026-10-29T18:19:41.2248010Z Uninstalling pip-26.2.2:
+2026-10-29T18:19:41.2305575Z Successfully uninstalled pip-26.2.2
+2026-10-29T18:19:42.5248635Z Successfully installed pip-26.2.2
+2026-10-29T18:19:42.5938393Z Create complete file
+2026-10-29T18:19:42.5978371Z Successfully set up CPython (3.14.10)
+2026-10-29T18:19:42.5979352Z ##[endgroup]
+2026-10-29T18:19:42.6185637Z ##[group]Run python3 -I -S -B -Werror - <<'PY'
+2026-10-29T18:19:42.6186112Z [36;1mpython3 -I -S -B -Werror - <<'PY'[0m
+2026-10-29T18:19:42.6186423Z [36;1mimport json[0m
+2026-10-29T18:19:42.6186687Z [36;1mfrom pathlib import Path[0m
+2026-10-29T18:19:42.6186962Z [36;1mimport stat[0m
+2026-10-29T18:19:42.6187201Z [36;1mimport sys[0m
+2026-10-29T18:19:42.6187465Z [36;1mpath = Path(sys.executable).resolve()[0m
+2026-10-29T18:19:42.6188072Z [36;1minfo = path.stat()[0m
+2026-10-29T18:19:42.6188460Z [36;1mprint(json.dumps({'python': str(path), 'version': sys.version.split()[0],[0m
+2026-10-29T18:19:42.6188988Z [36;1m                  'bytes': info.st_size, 'max_bytes': 4194304}, sort_keys=True))[0m
+2026-10-29T18:19:42.6189398Z [36;1mif sys.version_info[:3] != (3, 14, 10):[0m
+2026-10-29T18:19:42.6189764Z [36;1m    raise SystemExit('Unexpected CI Python version')[0m
+2026-10-29T18:19:42.6190248Z [36;1mif not stat.S_ISREG(info.st_mode) or not 0 < info.st_size <= 4194304:[0m
+2026-10-29T18:19:42.6190762Z [36;1m    raise SystemExit('CI Python exceeds the unchanged executable byte bound')[0m
+2026-10-29T18:19:42.6191161Z [36;1mPY[0m
+2026-10-29T18:19:42.6218925Z shell: /usr/bin/bash -e {0}
+2026-10-29T18:19:42.6219212Z env:
+2026-10-29T18:19:42.6219505Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:42.6219977Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+2026-10-29T18:19:42.6220438Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:42.6220823Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:42.6221203Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:42.6221580Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+2026-10-29T18:19:42.6222201Z ##[endgroup]
+2026-10-29T18:19:42.6543430Z {"bytes": 17752, "max_bytes": 4194304, "python": "/opt/hostedtoolcache/Python/3.14.10/x64/bin/python3.14", "version": "3.14.10"}
+2026-10-29T18:19:42.6629463Z ##[group]Run python3 -I -S -B -Werror install/prepare_source.py --check
+2026-10-29T18:19:42.6629990Z [36;1mpython3 -I -S -B -Werror install/prepare_source.py --check[0m
+2026-10-29T18:19:42.6651474Z shell: /usr/bin/bash -e {0}
+2026-10-29T18:19:42.6651927Z env:
+2026-10-29T18:19:42.6652214Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:42.6652706Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+2026-10-29T18:19:42.6653169Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:42.6653559Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:42.6653937Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:42.6654321Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+2026-10-29T18:19:42.6654647Z ##[endgroup]
+2026-10-29T18:19:42.7411464Z {"authentication":"NOT_PROVIDED","bytes":7264,"sha256":"e1796ecd8ba6bab8d4e8694cbe73f27315eaac0e0ffe8016abfac0fd9a5827c6","status":"SOURCE_INVENTORY_CHECKED"}
+2026-10-29T18:19:42.7597399Z ##[group]Run python3 -I -S -B -Werror install/test_install_support.py -v
+2026-10-29T18:19:42.7597961Z [36;1mpython3 -I -S -B -Werror install/test_install_support.py -v[0m
+2026-10-29T18:19:42.7620295Z shell: /usr/bin/bash -e {0}
+2026-10-29T18:19:42.7620568Z env:
+2026-10-29T18:19:42.7620858Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:42.7621332Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+2026-10-29T18:19:42.7621903Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:42.7622311Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:42.7622698Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:42.7623077Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+2026-10-29T18:19:42.7623411Z ##[endgroup]
+2026-10-29T18:19:43.0350012Z test_confined_names (__main__.FileControls.test_confined_names) ... ok
+2026-10-29T18:19:43.0369656Z test_empty_file_and_fifo_refusal (__main__.FileControls.test_empty_file_and_fifo_refusal) ... ok
+2026-10-29T18:19:43.0381699Z test_initial_identity_failure_recovers_or_refuses_cleanup (__main__.FileControls.test_initial_identity_failure_recovers_or_refuses_cleanup) ... ok
+2026-10-29T18:19:43.0400990Z test_leaf_and_parent_links_refused (__main__.FileControls.test_leaf_and_parent_links_refused) ... ok
+2026-10-29T18:19:43.0415828Z test_parent_swapped_after_confined_refused (__main__.FileControls.test_parent_swapped_after_confined_refused) ... ok
+2026-10-29T18:19:43.0425505Z test_permission_failure_removes_created_file (__main__.FileControls.test_permission_failure_removes_created_file) ... ok
+2026-10-29T18:19:43.0451588Z test_publication_is_create_only (__main__.FileControls.test_publication_is_create_only) ... ok
+2026-10-29T18:19:43.0462098Z test_publication_stage_swap_refused (__main__.FileControls.test_publication_stage_swap_refused) ... ok
+2026-10-29T18:19:43.0474522Z test_regular_file_bounds_and_create_only (__main__.FileControls.test_regular_file_bounds_and_create_only) ... ok
+2026-10-29T18:19:43.0485952Z test_write_swap_does_not_remove_replacement (__main__.FileControls.test_write_swap_does_not_remove_replacement) ... ok
+2026-10-29T18:19:43.0490120Z test_argument_and_environment_budget_refusals (__main__.ProcessControls.test_argument_and_environment_budget_refusals) ... ok
+2026-10-29T18:19:43.0859236Z test_closed_pipe_descendant_prevents_success (__main__.ProcessControls.test_closed_pipe_descendant_prevents_success) ... ok
+2026-10-29T18:19:43.1031529Z test_cwd_and_environment_are_explicit (__main__.ProcessControls.test_cwd_and_environment_are_explicit) ... ok
+2026-10-29T18:19:43.1505276Z test_exact_output_limit_and_flood (__main__.ProcessControls.test_exact_output_limit_and_flood) ... ok
+2026-10-29T18:19:43.1699551Z test_nonzero_and_launch_failure (__main__.ProcessControls.test_nonzero_and_launch_failure) ... ok
+2026-10-29T18:19:43.3813336Z test_parent_exit_with_child_holding_pipes (__main__.ProcessControls.test_parent_exit_with_child_holding_pipes) ... ok
+2026-10-29T18:19:43.3990579Z test_success_complete_raw_streams_and_limits (__main__.ProcessControls.test_success_complete_raw_streams_and_limits) ... ok
+2026-10-29T18:19:43.6019197Z test_timeout_preserves_prefix (__main__.ProcessControls.test_timeout_preserves_prefix) ... ok
+2026-10-29T18:19:43.6102818Z test_canonical_depth_cycles_and_size (__main__.ValueControls.test_canonical_depth_cycles_and_size) ... ok
+2026-10-29T18:19:43.6105338Z test_canonical_exact_types_and_order (__main__.ValueControls.test_canonical_exact_types_and_order) ... ok
+2026-10-29T18:19:43.6277708Z test_function_lengths (__main__.ValueControls.test_function_lengths) ... ok
+2026-10-29T18:19:43.6278237Z 
+2026-10-29T18:19:43.6278633Z ----------------------------------------------------------------------
+2026-10-29T18:19:43.6279230Z Ran 21 tests in 0.594s
+2026-10-29T18:19:43.6279461Z 
+2026-10-29T18:19:43.6279581Z OK
+2026-10-29T18:19:43.6540071Z ##[group]Run python3 -I -S -B -Werror install/test_install_layout.py -v
+2026-10-29T18:19:43.6540577Z [36;1mpython3 -I -S -B -Werror install/test_install_layout.py -v[0m
+2026-10-29T18:19:43.6563455Z shell: /usr/bin/bash -e {0}
+2026-10-29T18:19:43.6563726Z env:
+2026-10-29T18:19:43.6564007Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:43.6564474Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+2026-10-29T18:19:43.6564918Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:43.6565298Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:43.6565670Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:43.6566058Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+2026-10-29T18:19:43.6566392Z ##[endgroup]
+2026-10-29T18:19:43.7865306Z test_duplicate_assignment_refused (__main__.LayoutTests.test_duplicate_assignment_refused) ... ok
+2026-10-29T18:19:43.7873883Z test_exact_tree_refuses_extra_missing_and_link (__main__.LayoutTests.test_exact_tree_refuses_extra_missing_and_link) ... ok
+2026-10-29T18:19:43.8005366Z test_generated_uses_only_declared_runtime_members (__main__.LayoutTests.test_generated_uses_only_declared_runtime_members) ... ok
+2026-10-29T18:19:43.8133114Z test_inventory_reproduces_and_closed_inputs (__main__.LayoutTests.test_inventory_reproduces_and_closed_inputs) ... ok
+2026-10-29T18:19:43.8134531Z test_json_duplicate_depth_and_truncation_refused (__main__.LayoutTests.test_json_duplicate_depth_and_truncation_refused) ... ok
+2026-10-29T18:19:43.8155731Z test_launcher_expansion_and_no_site (__main__.LayoutTests.test_launcher_expansion_and_no_site) ... ok
+2026-10-29T18:19:43.8156785Z test_missing_expected_pin_refused (__main__.LayoutTests.test_missing_expected_pin_refused) ... ok
+2026-10-29T18:19:43.8157721Z test_named_digest_substitution_only (__main__.LayoutTests.test_named_digest_substitution_only) ... ok
+2026-10-29T18:19:43.8164619Z test_original_package_unchanged_except_declared_native_pin (__main__.LayoutTests.test_original_package_unchanged_except_declared_native_pin) ... ok
+2026-10-29T18:19:43.8165879Z test_unknown_architecture_refused (__main__.LayoutTests.test_unknown_architecture_refused) ... ok
+2026-10-29T18:19:43.8168075Z test_unsafe_launcher_path_refused (__main__.LayoutTests.test_unsafe_launcher_path_refused) ... ok
+2026-10-29T18:19:43.8170447Z test_wrong_held_source_identity_refused (__main__.LayoutTests.test_wrong_held_source_identity_refused) ... ok
+2026-10-29T18:19:43.8226931Z test_x86_transformation_is_syntax_checked_not_execution_qualified (__main__.LayoutTests.test_x86_transformation_is_syntax_checked_not_execution_qualified) ... ok
+2026-10-29T18:19:43.8227930Z 
+2026-10-29T18:19:43.8228128Z ----------------------------------------------------------------------
+2026-10-29T18:19:43.8228513Z Ran 13 tests in 0.036s
+2026-10-29T18:19:43.8228667Z 
+2026-10-29T18:19:43.8228761Z OK
+2026-10-29T18:19:43.8368267Z ##[group]Run python3 -I -S -B -Werror install/test_source_distribution.py -v
+2026-10-29T18:19:43.8368815Z [36;1mpython3 -I -S -B -Werror install/test_source_distribution.py -v[0m
+2026-10-29T18:19:43.8391841Z shell: /usr/bin/bash -e {0}
+2026-10-29T18:19:43.8392110Z env:
+2026-10-29T18:19:43.8392389Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:43.8392840Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+2026-10-29T18:19:43.8393271Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:43.8393673Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:43.8394051Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:43.8394430Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+2026-10-29T18:19:43.8394766Z ##[endgroup]
+2026-10-29T18:19:44.1461362Z test_archive_member_count_and_member_size_bounds_refuse (__main__.SourceDistributionTests.test_archive_member_count_and_member_size_bounds_refuse) ... ok
+2026-10-29T18:19:44.1744370Z test_changed_missing_reordered_and_duplicate_members_refuse (__main__.SourceDistributionTests.test_changed_missing_reordered_and_duplicate_members_refuse) ... ok
+2026-10-29T18:19:44.1778634Z test_collection_is_exact_pinned_installer_source_and_demo (__main__.SourceDistributionTests.test_collection_is_exact_pinned_installer_source_and_demo) ... ok
+2026-10-29T18:19:44.1859221Z test_forged_source_manifest_cannot_replace_independently_held_pin (__main__.SourceDistributionTests.test_forged_source_manifest_cannot_replace_independently_held_pin) ... ok
+2026-10-29T18:19:44.1867805Z test_headroom_rejects_unbounded_sizes_directories_and_allocation_units (__main__.SourceDistributionTests.test_headroom_rejects_unbounded_sizes_directories_and_allocation_units) ... ok
+2026-10-29T18:19:44.1877197Z test_headroom_rounds_file_allocations_and_counts_directories (__main__.SourceDistributionTests.test_headroom_rounds_file_allocations_and_counts_directories) ... ok
+2026-10-29T18:19:44.2094560Z test_low_space_refuses_unpack_and_publish_before_outputs (__main__.SourceDistributionTests.test_low_space_refuses_unpack_and_publish_before_outputs) ... ok
+2026-10-29T18:19:44.2448430Z test_manifest_duplicate_fields_boolean_lengths_and_wrong_scope_refuse (__main__.SourceDistributionTests.test_manifest_duplicate_fields_boolean_lengths_and_wrong_scope_refuse) ... ok
+2026-10-29T18:19:44.2468820Z test_manifest_is_non_circular_and_exact (__main__.SourceDistributionTests.test_manifest_is_non_circular_and_exact) ... ok
+2026-10-29T18:19:44.2475154Z test_pack_checks_count_and_member_bounds_before_hashing (__main__.SourceDistributionTests.test_pack_checks_count_and_member_bounds_before_hashing) ... ok
+2026-10-29T18:19:44.2620532Z test_pack_is_deterministic_and_inspection_preserves_payload (__main__.SourceDistributionTests.test_pack_is_deterministic_and_inspection_preserves_payload) ... ok
+2026-10-29T18:19:44.2626327Z test_pack_refuses_missing_extra_and_oversize_payload (__main__.SourceDistributionTests.test_pack_refuses_missing_extra_and_oversize_payload) ... ok
+2026-10-29T18:19:44.2909187Z test_private_parent_is_required_for_each_output (__main__.SourceDistributionTests.test_private_parent_is_required_for_each_output) ... ok
+2026-10-29T18:19:44.2920232Z test_publish_checks_archive_bound_before_hashing (__main__.SourceDistributionTests.test_publish_checks_archive_bound_before_hashing) ... ok
+2026-10-29T18:19:44.3154977Z test_publish_is_create_only_and_preserves_archive_bytes (__main__.SourceDistributionTests.test_publish_is_create_only_and_preserves_archive_bytes) ... ok
+2026-10-29T18:19:44.3359373Z test_publish_refuses_alias_existing_receipt_and_wrong_source_before_writes (__main__.SourceDistributionTests.test_publish_refuses_alias_existing_receipt_and_wrong_source_before_writes) ... ok
+2026-10-29T18:19:44.3637720Z test_relative_paths_are_refused_without_outputs (__main__.SourceDistributionTests.test_relative_paths_are_refused_without_outputs) ... ok
+2026-10-29T18:19:44.4315166Z test_unpack_preserves_original_source_closure_without_execution (__main__.SourceDistributionTests.test_unpack_preserves_original_source_closure_without_execution) ... ok
+2026-10-29T18:19:44.4424386Z test_unpack_validates_before_output_and_never_overwrites (__main__.SourceDistributionTests.test_unpack_validates_before_output_and_never_overwrites) ... ok
+2026-10-29T18:19:44.4694199Z test_unsafe_paths_symlink_and_compression_refuse (__main__.SourceDistributionTests.test_unsafe_paths_symlink_and_compression_refuse) ... ok
+2026-10-29T18:19:44.4889063Z test_version_comments_flags_truncation_and_pins_refuse (__main__.SourceDistributionTests.test_version_comments_flags_truncation_and_pins_refuse) ... ok
+2026-10-29T18:19:44.4890034Z 
+2026-10-29T18:19:44.4890286Z ----------------------------------------------------------------------
+2026-10-29T18:19:44.4890832Z Ran 21 tests in 0.368s
+2026-10-29T18:19:44.4891055Z 
+2026-10-29T18:19:44.4891177Z OK
+2026-10-29T18:19:44.5098427Z ##[group]Run python3 -I -S -B -Werror install/test_lexicon_registry.py
+2026-10-29T18:19:44.5098968Z [36;1mpython3 -I -S -B -Werror install/test_lexicon_registry.py[0m
+2026-10-29T18:19:44.5099401Z [36;1mpython3 -I -S -B -Werror install/test_repackage.py[0m
+2026-10-29T18:19:44.5121097Z shell: /usr/bin/bash -e {0}
+2026-10-29T18:19:44.5121348Z env:
+2026-10-29T18:19:44.5121620Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:44.5122329Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+2026-10-29T18:19:44.5122765Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:44.5123159Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:44.5123529Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:44.5123899Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+2026-10-29T18:19:44.5124230Z ##[endgroup]
+2026-10-29T18:19:44.7489993Z ..........
+2026-10-29T18:19:44.7490719Z ----------------------------------------------------------------------
+2026-10-29T18:19:44.7491396Z Ran 10 tests in 0.074s
+2026-10-29T18:19:44.7491677Z 
+2026-10-29T18:19:44.7492184Z OK
+2026-10-29T18:19:45.1247086Z .................
+2026-10-29T18:19:45.1247633Z ----------------------------------------------------------------------
+2026-10-29T18:19:45.1248219Z Ran 17 tests in 0.079s
+2026-10-29T18:19:45.1248439Z 
+2026-10-29T18:19:45.1248574Z OK
+2026-10-29T18:19:45.1462194Z ##[group]Run python3 -I -S -B -Werror examples/heldout-release-v1/build_plan.py --check
+2026-10-29T18:19:45.1462875Z [36;1mpython3 -I -S -B -Werror examples/heldout-release-v1/build_plan.py --check[0m
+2026-10-29T18:19:45.1463625Z [36;1mpython3 -I -S -B -Werror examples/heldout-release-v1/test_check_response.py[0m
+2026-10-29T18:19:45.1485637Z shell: /usr/bin/bash -e {0}
+2026-10-29T18:19:45.1485897Z env:
+2026-10-29T18:19:45.1486182Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:45.1486635Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+2026-10-29T18:19:45.1487079Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:45.1487463Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:45.1487834Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:45.1488207Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+2026-10-29T18:19:45.1488569Z ##[endgroup]
+2026-10-29T18:19:45.2514608Z {"bytes":21481,"encoding":"UNRUN","entailment":"UNPROVEN","native_execution":"UNRUN","sha256":"924f12b5453426e80f4f71aa0fd9c25d56fcdcf6a1cbf64ae3111ed032546750","source_inputs":{"criteria.json":"e97d9e31bd6350922f38b92d065a31b7ce92f798cd28b1bdecb5dd5b32657c5a","fixture.json":"4e318cd2a123c717b25d1a826968c227e1420df3dc8225a377473b58bfc8eded"},"status":"PLAN_REPRODUCED"}
+2026-10-29T18:19:45.5942370Z .............
+2026-10-29T18:19:45.5942887Z ----------------------------------------------------------------------
+2026-10-29T18:19:45.5943489Z Ran 13 tests in 0.187s
+2026-10-29T18:19:45.5943732Z 
+2026-10-29T18:19:45.5944071Z OK
+2026-10-29T18:19:45.6094952Z ##[group]Run python3 -I -S -B -Werror install/test_handoff_client.py -v
+2026-10-29T18:19:45.6095477Z [36;1mpython3 -I -S -B -Werror install/test_handoff_client.py -v[0m
+2026-10-29T18:19:45.6117404Z shell: /usr/bin/bash -e {0}
+2026-10-29T18:19:45.6117666Z env:
+2026-10-29T18:19:45.6117959Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:45.6118433Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+2026-10-29T18:19:45.6118866Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:45.6119274Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:45.6119649Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:45.6120024Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+2026-10-29T18:19:45.6120366Z ##[endgroup]
+2026-10-29T18:19:46.7279094Z test_actual_source_and_exact_single_submission (__main__.ClientControls.test_actual_source_and_exact_single_submission) ... ok
+2026-10-29T18:19:47.0235321Z test_binding_drift_refuses_before_dispatch (__main__.ClientControls.test_binding_drift_refuses_before_dispatch) ... ok
+2026-10-29T18:19:48.5556494Z test_fixed_session_and_closed_requests (__main__.ClientControls.test_fixed_session_and_closed_requests) ... ok
+2026-10-29T18:19:49.3436736Z test_overlong_stdin_retains_incomplete_prefix (__main__.ClientControls.test_overlong_stdin_retains_incomplete_prefix) ... ok
+2026-10-29T18:19:49.7574825Z test_pinned_request_file_at_cap_records_exact_bytes (__main__.ClientControls.test_pinned_request_file_at_cap_records_exact_bytes) ... ok
+2026-10-29T18:19:50.4805065Z test_request_file_missing_wrong_malformed_digest_no_dispatch (__main__.ClientControls.test_request_file_missing_wrong_malformed_digest_no_dispatch) ... ok
+2026-10-29T18:19:51.0239459Z test_request_file_option_pairing_and_exclusivity (__main__.ClientControls.test_request_file_option_pairing_and_exclusivity) ... ok
+2026-10-29T18:19:51.6634736Z test_request_file_symlink_nonregular_missing_and_overlimit_no_dispatch (__main__.ClientControls.test_request_file_symlink_nonregular_missing_and_overlimit_no_dispatch) ... ok
+2026-10-29T18:19:52.2469270Z test_source_drift_refuses_without_candidate (__main__.ClientControls.test_source_drift_refuses_without_candidate) ... ok
+2026-10-29T18:19:52.2470475Z 
+2026-10-29T18:19:52.2470836Z ----------------------------------------------------------------------
+2026-10-29T18:19:52.2471383Z Ran 9 tests in 6.491s
+2026-10-29T18:19:52.2471593Z 
+2026-10-29T18:19:52.2471878Z OK
+2026-10-29T18:19:52.2651578Z ##[group]Run python3 -I -S -B -Werror install/test_focus_page.py -v
+2026-10-29T18:19:52.2652336Z [36;1mpython3 -I -S -B -Werror install/test_focus_page.py -v[0m
+2026-10-29T18:19:52.2673691Z shell: /usr/bin/bash -e {0}
+2026-10-29T18:19:52.2673951Z env:
+2026-10-29T18:19:52.2674226Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:52.2674678Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+2026-10-29T18:19:52.2675110Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:52.2675499Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:52.2675884Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:52.2676268Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+2026-10-29T18:19:52.2676599Z ##[endgroup]
+2026-10-29T18:19:52.5719076Z test_admitted_refusals_are_counted_and_no_partial_candidate_is_saved (__main__.FocusPageTests.test_admitted_refusals_are_counted_and_no_partial_candidate_is_saved) ... ok
+2026-10-29T18:19:52.5729650Z test_closed_fields_exact_integer_offsets_and_unit_validation (__main__.FocusPageTests.test_closed_fields_exact_integer_offsets_and_unit_validation) ... ok
+2026-10-29T18:19:52.5734806Z test_describe_and_new_interface_recommend_complete_bounded_paging (__main__.FocusPageTests.test_describe_and_new_interface_recommend_complete_bounded_paging) ... ok
+2026-10-29T18:19:52.5841366Z test_each_worker_call_rechecks_frozen_inputs_and_stops_before_log_on_corruption (__main__.FocusPageTests.test_each_worker_call_rechecks_frozen_inputs_and_stops_before_log_on_corruption) ... ok
+2026-10-29T18:19:52.5857642Z test_exact_full_canonical_focus_reassembles_without_lost_fields (__main__.FocusPageTests.test_exact_full_canonical_focus_reassembles_without_lost_fields) ... ok
+2026-10-29T18:19:52.5871312Z test_invalid_full_focus_identity_shape_and_size_refuse_without_page (__main__.FocusPageTests.test_invalid_full_focus_identity_shape_and_size_refuse_without_page) ... ok
+2026-10-29T18:19:52.5878648Z test_original_arm_refuses_paged_focus_and_legacy_focus_is_unchanged (__main__.FocusPageTests.test_original_arm_refuses_paged_focus_and_legacy_focus_is_unchanged) ... ok
+2026-10-29T18:19:52.5891480Z test_page_response_is_bounded_and_eof_is_explicit (__main__.FocusPageTests.test_page_response_is_bounded_and_eof_is_explicit) ... ok
+2026-10-29T18:19:53.0767144Z test_session_call_bound_stays_32_with_paged_focus (__main__.FocusPageTests.test_session_call_bound_stays_32_with_paged_focus) ... ok
+2026-10-29T18:19:53.0768046Z 
+2026-10-29T18:19:53.0768319Z ----------------------------------------------------------------------
+2026-10-29T18:19:53.0768872Z Ran 9 tests in 0.518s
+2026-10-29T18:19:53.0769089Z 
+2026-10-29T18:19:53.0769215Z OK
+2026-10-29T18:19:53.0973636Z ##[group]Run python3 -I -S -B -Werror install/test_quorum_graph.py
+2026-10-29T18:19:53.0974152Z [36;1mpython3 -I -S -B -Werror install/test_quorum_graph.py[0m
+2026-10-29T18:19:53.0974652Z [36;1mpython3 -I -S -B -Werror examples/quorum-graph-v1/prepare_receipt.py --check[0m
+2026-10-29T18:19:53.0996200Z shell: /usr/bin/bash -e {0}
+2026-10-29T18:19:53.0996454Z env:
+2026-10-29T18:19:53.0996728Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:53.0997182Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+2026-10-29T18:19:53.0997609Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:53.0997992Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:53.0998365Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T18:19:53.0998745Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+2026-10-29T18:19:53.0999068Z ##[endgroup]
+2026-10-29T18:19:53.2183697Z test_frozen_graph_cases (__main__.FrozenGraphTests.test_frozen_graph_cases) ... ok
+2026-10-29T18:19:53.2197045Z test_frozen_predecessor_cases (__main__.FrozenGraphTests.test_frozen_predecessor_cases) ... ok
+2026-10-29T18:19:53.2198098Z test_non_json_host_shapes (__main__.FrozenGraphTests.test_non_json_host_shapes) ... ok
+2026-10-29T18:19:53.2199768Z test_result_mutation_cannot_poison_later_call (__main__.FrozenGraphTests.test_result_mutation_cannot_poison_later_call) ... ok
+2026-10-29T18:19:53.2200584Z 
+2026-10-29T18:19:53.2200829Z ----------------------------------------------------------------------
+2026-10-29T18:19:53.2201382Z Ran 4 tests in 0.006s
+2026-10-29T18:19:53.2201605Z 
+2026-10-29T18:19:53.2201904Z OK
+2026-10-29T18:19:53.2836392Z Traceback (most recent call last):
+2026-10-29T18:19:53.2845599Z   File "/home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport/examples/quorum-graph-v1/prepare_receipt.py", line 72, in <module>
+2026-10-29T18:19:53.2846431Z     main()
+2026-10-29T18:19:53.2846659Z     ~~~~^^
+2026-10-29T18:19:53.2847378Z   File "/home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport/examples/quorum-graph-v1/prepare_receipt.py", line 63, in main
+2026-10-29T18:19:53.2869679Z ##[error]    raise ValueError('receipt differs from retained inputs')
+2026-10-29T18:19:53.2875950Z ValueError: receipt differs from retained inputs
+2026-10-29T18:19:53.2918619Z ##[error]Process completed with exit code 1.
+2026-10-29T18:19:53.3094016Z Post job cleanup.
+2026-10-29T18:19:53.3966398Z [command]/usr/bin/git version
+2026-10-29T18:19:53.4012338Z git version 2.56.0
+2026-10-29T18:19:53.4052764Z Temporarily overriding HOME='/home/runner/work/_temp/e9245517-7555-4633-8e02-b8b4ae2ec1db' before making global git config changes
+2026-10-29T18:19:53.4054253Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-29T18:19:53.4059007Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport
+2026-10-29T18:19:53.4104163Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-29T18:19:53.4153675Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-29T18:19:53.4513433Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-29T18:19:53.4554085Z http.https://github.com/.extraheader
+2026-10-29T18:19:53.4587813Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-29T18:19:53.4626869Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-29T18:19:53.5004497Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-29T18:19:53.5062027Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-29T18:19:53.5517050Z Cleaning up orphan processes
+2026-10-29T18:19:53.5921070Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+

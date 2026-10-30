@@ -1,0 +1,10 @@
+test_body_first_and_owned_output (__main__.ContextTests.test_body_first_and_owned_output) ... ok
+test_complete_manual_results (__main__.ContextTests.test_complete_manual_results) ... ok
+test_independent_host_and_resource_probes (__main__.ContextTests.test_independent_host_and_resource_probes) ... ok
+test_independent_minimal_pairs (__main__.ContextTests.test_independent_minimal_pairs) ... ok
+test_independent_precedence_controls (__main__.ContextTests.test_independent_precedence_controls) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.316s
+
+OK

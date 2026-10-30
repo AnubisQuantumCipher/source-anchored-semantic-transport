@@ -1,0 +1,2 @@
+# Exact opaque fixtures must never undergo line-ending conversion or text diffing.
+*.bin binary

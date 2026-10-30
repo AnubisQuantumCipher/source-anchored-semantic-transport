@@ -1,0 +1,89 @@
+{
+  "bounds": {
+    "address_space_bytes": 1073741824,
+    "cpu_seconds_per_process": 600,
+    "each_stream_bytes": 1048576,
+    "parallel_proof_jobs": 1,
+    "per_file_bytes": 33554432,
+    "scratch_bytes": 268435456,
+    "wall_seconds_per_project": 600
+  },
+  "commands": [
+    [
+      "core-proof-03",
+      [
+        "/home/sicarii/opt/gnat/gnatprove-aarch64-linux-16.1.0-1/bin/gnatprove",
+        "-P",
+        "transport.gpr",
+        "-U",
+        "--level=2",
+        "--report=all",
+        "--warnings=error",
+        "--checks-as-errors=on",
+        "--proof-warnings=on",
+        "-j1"
+      ]
+    ],
+    [
+      "evaluation-proof-03",
+      [
+        "/home/sicarii/opt/gnat/gnatprove-aarch64-linux-16.1.0-1/bin/gnatprove",
+        "-P",
+        "evaluation/transport_eval.gpr",
+        "-U",
+        "--level=2",
+        "--report=all",
+        "--warnings=error",
+        "--checks-as-errors=on",
+        "--proof-warnings=on",
+        "-j1"
+      ]
+    ]
+  ],
+  "driver": {
+    "bytes": 4940,
+    "sha256": "b70596a01ee391c1d5b6afbe82f72bc249291917be781371edb3af7863e0906d"
+  },
+  "historical_measurements": {
+    "core-proof.json": {
+      "elapsed_ns": 185211263482,
+      "exit": 0,
+      "pin": {
+        "bytes": 62618,
+        "sha256": "86ece807bfee516a46fb917c5d3508e2973744aa1015ad6d083a9c7386af228b"
+      }
+    },
+    "evaluation-proof.json": {
+      "elapsed_ns": 205538431200,
+      "exit": 0,
+      "pin": {
+        "bytes": 76773,
+        "sha256": "a0ae0fde55eae102bf40e7682c65183e28f366b4d522d79589c0d5c0cdb9b048"
+      }
+    }
+  },
+  "limits": "One final resource-corrected attempt per incomplete project. No proof level/prover/contract/assertion changes, no Assume/Annotate, no unit filters, no source edits. No further automatic retries.",
+  "owner_budget": "Tranche06 plus prepaid tranche07; one existing development round.",
+  "prior_terminal_results": {
+    "core-proof": {
+      "bytes": 649,
+      "sha256": "7f2409b681b19cd4e393fef06613a3f6e1d3cf2a8f14ef17d4e1a43719952463"
+    },
+    "core-proof-02": {
+      "bytes": 650,
+      "sha256": "c28a75d495b67574614f36c81f6c226f7ae8a0dabd47eda1d333a2d4db058232"
+    },
+    "evaluation-proof": {
+      "bytes": 666,
+      "sha256": "9bc143795a4d10771f52bf8c309e72d1c80984e0abc246ae4c1b7f436821179d"
+    },
+    "evaluation-proof-02": {
+      "bytes": 667,
+      "sha256": "9b280b00f07ba35cc89e63fe9c862f411ce8db3f0e07e85a158653e4315dc7ea"
+    }
+  },
+  "reason": "Initial 120-second installer runner was unsuitable for proof: preserved successful core/evaluation historical elapsed_ns already exceed 120000000000. Two attempts retained. Correct proof harness allowance, not product runtime policy.",
+  "risk": "Longer proof computation spends finite engineering budget. Same trusted nonescaping toolchain assumption; this is not descendant containment proof.",
+  "schema": "transport/proof-resource-correction/1",
+  "status": "ADMITTED_NOT_EXECUTED"
+}

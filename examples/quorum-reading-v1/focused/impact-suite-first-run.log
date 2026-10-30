@@ -1,0 +1,10 @@
+test_body_first_and_owned_output (__main__.ImpactTests.test_body_first_and_owned_output) ... ok
+test_complete_manual_results (__main__.ImpactTests.test_complete_manual_results) ... ok
+test_hostile_host_pin_boundary (__main__.ImpactTests.test_hostile_host_pin_boundary) ... ok
+test_independent_minimal_pairs (__main__.ImpactTests.test_independent_minimal_pairs) ... ok
+test_independent_review_probes (__main__.ImpactTests.test_independent_review_probes) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.224s
+
+OK

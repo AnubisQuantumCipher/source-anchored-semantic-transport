@@ -1,0 +1,48 @@
+name: Adaptive receiving client evidence controls
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.14.10'
+          architecture: 'x64'
+          check-latest: false
+          allow-prereleases: false
+      - name: Portable observation-reader unit controls
+        env:
+          INVENTORY_HELD_UTILITY_SHA256: 37fcb93b3ed20edb98b62416d923fe4a8612496e77f218ef5367a4de7a80d983
+        run: |
+          python3 -I -S -B -Werror comparison/retrieval/client/test_inventory.py
+          python3 -I -S -B -O -Werror comparison/retrieval/client/test_inventory.py
+      - name: Retained local evidence and source inventory
+        run: |
+          python3 -I -S -B -Werror comparison/retrieval/client/prepare_receipt.py --check
+          python3 -I -S -B -Werror comparison/retrieval/prepare_receipt.py --check
+          python3 -I -S -B -Werror install/check_source.py
+      - name: Function-size and explicit-loop guard
+        run: |
+          python3 -I -S -B -Werror - <<'PY'
+          import ast
+          from pathlib import Path
+          root = Path('comparison/retrieval/client')
+          for name in ('entry.py', 'prepare_receipt.py', 'test_client.py',
+                       'test_inventory.py', 'test_postdispatch.py'):
+              with (root / name).open('rb') as source:
+                  raw = source.read(131073)
+              if len(raw) > 131072:
+                  raise ValueError('source byte bound: ' + name)
+              tree = ast.parse(raw)
+              for node in ast.walk(tree):
+                  if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+                      if node.end_lineno - node.lineno + 1 > 60:
+                          raise ValueError('function size: ' + name + ':' + node.name)
+                  if isinstance(node, ast.While):
+                      raise ValueError('explicit while loop requires separate review: ' + name)
+          print('Function-size and explicit-loop guard passes; no termination proof claimed')
+          PY

@@ -1,0 +1,129 @@
+{
+  "next_acceptance_evidence": "Commitexactreviewedsources and inspecthostedbefore/afterdiagnostics plus everyoriginaltest/recovery/source/receiptstep underunchanged5minutejob. Ifinsufficient, splitnormal/O jobswithsamecaps ratherthanweakenlimits.",
+  "own_seven_adversarial_probes": {
+    "outcome": "ALL_REFUSED",
+    "path": "/dev/shm/semantic-transport-quorum-v2-20261029/independent/export-ci-probes01.json",
+    "pin": {
+      "bytes": 1599,
+      "sha256": "fdbb347f38a684004f449e8241ded94ab89aaeb9f1e7848b1a518b59f177c91a"
+    }
+  },
+  "preserved_failure_scope": [
+    "Originalhostedreader controls normal/O andfrozenrecoverypassed butwholejobtimedout; lastsource/receipt stepUNRUN",
+    "Pre-cachefix checker specimen was reconstructed byhelper andlabelledsuch; reviewer hasno independentfullpre-editSHA anddoesnotattest itascontemporaneouslycopied snapshot",
+    "No originalproduct source/tests/fixtures/oracle/oldreceiptbytes edited"
+  ],
+  "retained_cache_counterexample": {
+    "outcome": "Exactcopiedsource+timestampvalidcontrolledpyc executesnon-sourcecode under-B; no repository/stdlibcachechanged",
+    "path": "/dev/shm/semantic-transport-quorum-v2-20261029/independent/receipt-cache-counterexample01/observation.json",
+    "pin": {
+      "bytes": 413,
+      "sha256": "8221b1474dbdcef0f827eb837dc876a711ca26c145bdd361baaa664a87620e14"
+    }
+  },
+  "review_model": "gpt-6.1-sol",
+  "reviewer_execution": "Onlyboundedgate/control/datareview andprivatecachecounterexample; no warmup execution or installedstdlibcachemutation; no model/providercalls",
+  "runs": [
+    {
+      "command": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "examples/export-reader-ci-warmup/test_continuity.py"
+      ],
+      "controls": 23,
+      "exit": 0,
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "f760fe4abfd7330dfd1d9bf4a62fef50375e5782a021f727a79f6d5ed3dc8694"
+    },
+    {
+      "command": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "examples/export-reader-ci-warmup/check_continuity.py"
+      ],
+      "controls": null,
+      "exit": 0,
+      "status": "PASS_EXACT_CI_TRANSFORMATION_AND_FULL_ORIGINAL_RECEIPT",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "fea0f2f6657bc1b76279b06720b2f5f6fb734a7400b6043998177bbce4479238"
+    },
+    {
+      "command": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-O",
+        "-Werror",
+        "examples/export-reader-ci-warmup/test_continuity.py"
+      ],
+      "controls": 23,
+      "exit": 0,
+      "status": "PASS",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "0ce87f8a564c9e73ffdf4b1b6bfc9be3b1fd607affff768169fe7a9e581233c0"
+    },
+    {
+      "command": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-O",
+        "-Werror",
+        "examples/export-reader-ci-warmup/check_continuity.py"
+      ],
+      "controls": null,
+      "exit": 0,
+      "status": "PASS_EXACT_CI_TRANSFORMATION_AND_FULL_ORIGINAL_RECEIPT",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "fea0f2f6657bc1b76279b06720b2f5f6fb734a7400b6043998177bbce4479238"
+    }
+  ],
+  "schema": "transport/independent-export-ci-warmup-final-review/2",
+  "source_before_after_equal": true,
+  "source_pins": {
+    ".github/workflows/export-reader.yml": {
+      "bytes": 2417,
+      "sha256": "91290da2469ae331304da7249fff8dd3409afada3ed0bbfbbc4fd5b574e4b78c"
+    },
+    "examples/export-reader-ci-warmup/check_continuity.py": {
+      "bytes": 7097,
+      "sha256": "7a49c235cefaa93d7e5c83775146777f3c0f789e8aca042e938e235867062a02"
+    },
+    "examples/export-reader-ci-warmup/test_continuity.py": {
+      "bytes": 5312,
+      "sha256": "d2a936762cef07d3981e1ce1c33a775ca55200e27cfbb9169ce9560ae4cccf6d"
+    },
+    "examples/independent-export-reader-v1/receipt.json": {
+      "bytes": 29562,
+      "sha256": "18c00ccaee6abd3f8568d6d07159e306d2921822e2be315df2da034d93262ed8"
+    },
+    "examples/independent-export-reader-v1/receipt.py": {
+      "bytes": 3256,
+      "sha256": "f946a4fbea4998db437cdacd93878b7a667190d457ee0fdfef76dd574c5b7770"
+    }
+  },
+  "status": "TESTED_SCOPED_PASS_HOSTED_COMPLETION_UNRUN",
+  "unproved": [
+    "Optimizedstdlibcachemissing ashostedrootcause remainshypothesis pendingbefore/after hostedimport/cache observations",
+    "No finalhostedjobpass yet; localgatecontrols cannotestablishfive-minuteCI completion",
+    "No applicationperformance/contextcost/semanticfidelity/whole-systemproof claim"
+  ],
+  "verified": [
+    "Actualworkflow exactfixedstdlibimports diagnostics andonecachepreparation processonly; originalreader normal/O/reproduction/check_source commandsunchanged",
+    "Job5min, actions/interpreter, childAS/CPU/FS/FD/wallbounds unchanged; readonlytests retain-B",
+    "Immutableoldworkflow snapshot andoldfullreceipt/codepinschecked; generatedfulloldreceipt matches afteroneexactworkflowrowreplacement",
+    "Workflow accepted onlyasliteral insertion+finalcheckercommand substitution; alteredtimeout/imports/tests/repro/additionalcommands/whitespace allrefuse",
+    "Newchecker executescompile(alreadypinnedbytes,dont_inherit=True); no projectcachedbytecodeconsult. Stubloadertrap verifiednormal/O",
+    "Failure receipt/twohostedtimeoutlogs fixedSHA/bytes checked; firstfailureandpreviouschecker specimensretained",
+    "23newcontrolrowsnormal/O+positivechecknormal/O pass; ownsevenworkflow/receiptnegativeprobes refuse"
+  ]
+}

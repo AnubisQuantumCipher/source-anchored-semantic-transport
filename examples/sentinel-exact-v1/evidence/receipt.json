@@ -1,0 +1,593 @@
+{
+  "actual_dispatched_roster": {
+    "bytes": 7496,
+    "sha256": "c9be4819e618941729cbe47635a4dd89f1406df6859406df3d67a8e28cf0bba2"
+  },
+  "artifacts": {
+    "build-input-04.json": {
+      "bytes": 9777,
+      "sha256": "026890f99f48236c64bce6fce85e6b2fd7578f8ca97a58aec6c9e137758f9b10"
+    },
+    "build-oracle/machine-diagnostics-01/CONTRACT.md": {
+      "bytes": 2213,
+      "sha256": "7f6bb08ebe8765614af065516f21f43c1ec5152abf07c6338c403d9834e1d01a"
+    },
+    "build-oracle/machine-diagnostics-01/STATUS.md": {
+      "bytes": 634,
+      "sha256": "834012b834d7c3024f74d559f6da4a65a9206e9defda6527d24234aa60df24aa"
+    },
+    "build-oracle/machine-independent-review-01/review.json": {
+      "bytes": 4427,
+      "sha256": "8619214cc8e466f7e76294c7a3f12e1041703cb3090b21871636cb368db5b472"
+    },
+    "build-oracle/mixed-annotations-01/concurrency-failure.json": {
+      "bytes": 491,
+      "sha256": "1852b9a21046a4663ecdf9a26bf9ed26a773653247128b397f790041484ab9d6"
+    },
+    "build-oracle/policy-source05-roster-review.json": {
+      "bytes": 4175,
+      "sha256": "04894e27be54d0e1bae72685570292f2eb278a914cc315e785446719669570a1"
+    },
+    "build-oracle/policy-source05-roster.json": {
+      "bytes": 7496,
+      "sha256": "c9be4819e618941729cbe47635a4dd89f1406df6859406df3d67a8e28cf0bba2"
+    },
+    "build-oracle/roster-omission-correction-01.json": {
+      "bytes": 1784,
+      "sha256": "542f4c567616dfd2b310b9ac1eabaa5fbe8d43f79710c7e85c887c728d8337a7"
+    },
+    "build-runs/attempt01/namespace-result.json": {
+      "bytes": 1373,
+      "sha256": "7e12da05470a3d238e4e2577abbdfc320e246ea0e749d8516cc2ad7f93d455f4"
+    },
+    "build-runs/attempt01/receipt.json": {
+      "bytes": 872,
+      "sha256": "1154afd42ced9103e1527f0868e698b93fbdb265813abc8c2c82383b7e435f1a"
+    },
+    "build-runs/attempt02/namespace-result.json": {
+      "bytes": 1373,
+      "sha256": "a68e3badd5a48938c1219830518afad27c884f868a4ab8f08c666d68d9e45a7a"
+    },
+    "build-runs/attempt02/receipt.json": {
+      "bytes": 872,
+      "sha256": "8ee18161523e7b7b42054b901b630d2fc3c06bffa31a54b58ae1a0f8c7ded425"
+    },
+    "build-runs/attempt03/namespace-result.json": {
+      "bytes": 6495,
+      "sha256": "343021e9f654026447897244f9e5f147a3f19a81d051755e5e3795a7ae366084"
+    },
+    "build-runs/attempt03/receipt.json": {
+      "bytes": 870,
+      "sha256": "ec3cf7689cd04586fa137d283fdafc746d76a5813d0dc48df7ab5e651e5743b6"
+    },
+    "build-runs/attempt04-admission.json": {
+      "bytes": 1392,
+      "sha256": "fd679d3e522f604a690f087ad94cf32f028db13f886f07b03c1b94e3712de9c1"
+    },
+    "build-runs/attempt04/namespace-result.json": {
+      "bytes": 6793,
+      "sha256": "f6714f7380d2cc14f08a90d1479f298406d35d7b840b2e3903ab314f5d5d0d8f"
+    },
+    "build-runs/attempt04/receipt.json": {
+      "bytes": 870,
+      "sha256": "86719321ed4403cb805efecb822f6369b8516f36d90ab383edcb20293e1e0e13"
+    },
+    "checkpoint-controls-independent-readback-01/review.json": {
+      "bytes": 1619,
+      "sha256": "693dfada46bfa285dbd4d92defea002daaa546505f3c0ac76ccdad0223a606cd"
+    },
+    "cli-integration-01/package/report.json": {
+      "bytes": 748,
+      "sha256": "d1a23d8575dcd7ebcadc533773ed00674ba49cb68adc6244ea318327b6f2712c"
+    },
+    "cli-integration-01/receipt.json": {
+      "bytes": 4748,
+      "sha256": "90f8d4a7962f94406c47c23f0ce8fbdc25218c4a6d4c9f790e1b65863567b72e"
+    },
+    "context-review/review.json": {
+      "bytes": 5806,
+      "sha256": "5f90d82a57ae68950318e149e871abb32c189c69363073a0932f93a4597ea004"
+    },
+    "foundation-publication-review-01/generator-boundary-first/counterexample.json": {
+      "bytes": 1744,
+      "sha256": "c52e1512117690fe94944ef19e9242dc320f3cea4c045ee794d32fde44b95919"
+    },
+    "foundation-publication-review-01/source05-retained-evidence-readback.json": {
+      "bytes": 2381,
+      "sha256": "dfea6622db43dfbb20aa763796583b21b2bd65bb3663e56c11cb622da91b1504"
+    },
+    "foundation-tests-mission-01/receipt.json": {
+      "bytes": 4988,
+      "sha256": "51f8c114a0369cfe322553a1a00f7cb71721846e5832942702100c9c7518b976"
+    },
+    "graph-build-01/spurious-label-self-review-counterexample.json": {
+      "bytes": 1072,
+      "sha256": "b1a689e780716d3e788170a37757ec306ed3e8bddcb33bcaac2cad763e2b02e2"
+    },
+    "graph-build-01/valid-append-first-counterexample.json": {
+      "bytes": 176,
+      "sha256": "6d0fd22f3ea35c33ae6da6f73e100d669f8697275bf50ca1fc1d338dc0056a59"
+    },
+    "graph-independent-review-01/registry-interleaving-counterexample-01.json": {
+      "bytes": 3632,
+      "sha256": "e00315d3ff58ca97fec7d050d576e91d5a097e1fe689308f34a8c6ec30729a62"
+    },
+    "graph-independent-review-01/source03-review-01.json": {
+      "bytes": 4750,
+      "sha256": "6f8615b31b9f3f20c8e9ebb0bbfb4f5bfdda4905cf5de0faf8693f405a929952"
+    },
+    "graph-independent-review-01/source04-review-02.json": {
+      "bytes": 4912,
+      "sha256": "653bcc27de97d6b74585e92964401f8247da8ab398db11fa8e6f1797356eb80d"
+    },
+    "native-proof-readback-01/readback.json": {
+      "bytes": 9031,
+      "sha256": "d488cdab05f38645e5aeb8deadb40b009ac433c4bccbe88aac782f1122e1d05c"
+    },
+    "native-proof-readback-source05/readback.json": {
+      "bytes": 8590,
+      "sha256": "b7c3ce374ac598563df217b9821dc7dca149fe0618a1d29746f2bc297abcc9fc"
+    },
+    "native-proof-readback-source05/roster-provenance-supplement.json": {
+      "bytes": 2290,
+      "sha256": "5d38a1d795e848d369c63612ea15c3f9fb9c0d92cb5b09453605e2c9fadfddd6"
+    },
+    "package-build-01/failed-source01/receipt.json": {
+      "bytes": 1074,
+      "sha256": "e9d10d6315ab5d173b8a6942d56383c2c727c1ae9450fbf091829ba3d1a2404d"
+    },
+    "package-build-01/tests-normal-01.stderr": {
+      "bytes": 3101,
+      "sha256": "dc77dda1111cde3e6bf1fb11376dcf4a7e168d310071c233a9700251990bad98"
+    },
+    "package-independent-review-01/controls.json": {
+      "bytes": 4580,
+      "sha256": "dc6a9bdd4db90870e09b9208f5d3d896e1f6ebe608b1cb4f743f5fe7e973730b"
+    },
+    "package-independent-review-02/review.json": {
+      "bytes": 5725,
+      "sha256": "98bb828652ee9b3c87b44152877da0167228c72be918ebac7ffe5ecaba9cdd4a"
+    },
+    "package-oracle-01/CONTRACT.md": {
+      "bytes": 4330,
+      "sha256": "403ad91840ff33494cdfa627fa9a145779636c33fc62f21805aa653fd4b7daa6"
+    },
+    "raw/attempt01/checks.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "raw/attempt01/checks.stdout": {
+      "bytes": 28,
+      "sha256": "fe2f1ac8e5653314e10b137c6c85f6502e1810bc746b079dd05308fc2c41ad46"
+    },
+    "raw/attempt01/proof.stderr": {
+      "bytes": 9608,
+      "sha256": "eb9d592af798b8c86c03602aac03bdcbf8ebdbcf745df52b33f04fc8ef66adef"
+    },
+    "raw/attempt01/proof/gnatprove/gnatprove.out": {
+      "bytes": 7569,
+      "sha256": "8b83bd2903821f9a92b505ee56ec233cec60ad38fd7f27daee047b61382f7f4d"
+    },
+    "raw/attempt02/checks.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "raw/attempt02/checks.stdout": {
+      "bytes": 28,
+      "sha256": "fe2f1ac8e5653314e10b137c6c85f6502e1810bc746b079dd05308fc2c41ad46"
+    },
+    "raw/attempt02/proof.stderr": {
+      "bytes": 9608,
+      "sha256": "eb9d592af798b8c86c03602aac03bdcbf8ebdbcf745df52b33f04fc8ef66adef"
+    },
+    "raw/attempt02/proof/gnatprove/gnatprove.out": {
+      "bytes": 7569,
+      "sha256": "8b83bd2903821f9a92b505ee56ec233cec60ad38fd7f27daee047b61382f7f4d"
+    },
+    "raw/attempt03/checks.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "raw/attempt03/checks.stdout": {
+      "bytes": 28,
+      "sha256": "fe2f1ac8e5653314e10b137c6c85f6502e1810bc746b079dd05308fc2c41ad46"
+    },
+    "raw/attempt03/proof.stderr": {
+      "bytes": 9588,
+      "sha256": "d8f10b717c03b34aead579788a44d73089329efdac53ed8caf908f605b78ff36"
+    },
+    "raw/attempt03/proof/gnatprove/gnatprove.out": {
+      "bytes": 7718,
+      "sha256": "51f1e87f263ed569c7f7b4aed120d3113f301b1f2ba3782139e40624c1d89374"
+    },
+    "raw/attempt04/checks.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "raw/attempt04/checks.stdout": {
+      "bytes": 28,
+      "sha256": "fe2f1ac8e5653314e10b137c6c85f6502e1810bc746b079dd05308fc2c41ad46"
+    },
+    "raw/attempt04/proof.stderr": {
+      "bytes": 9588,
+      "sha256": "d8f10b717c03b34aead579788a44d73089329efdac53ed8caf908f605b78ff36"
+    },
+    "raw/attempt04/proof/gnatprove/gnatprove.out": {
+      "bytes": 7718,
+      "sha256": "51f1e87f263ed569c7f7b4aed120d3113f301b1f2ba3782139e40624c1d89374"
+    },
+    "raw/attempt04/proof/gnatprove/sentinel_policy.spark": {
+      "bytes": 155112,
+      "sha256": "ddb487b6ac49427b51e0f2990d0b12853dd0f0fd096eb33914999862626796df"
+    }
+  },
+  "cli": {
+    "commands": [
+      {
+        "command": [
+          "/usr/bin/python3",
+          "-I",
+          "-S",
+          "-B",
+          "-Werror",
+          "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/sentinel-exact-v1/create_fixture.py",
+          "--out",
+          "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/cli-integration-01/fixture"
+        ],
+        "elapsed_ns": 155830558,
+        "returncode": 0,
+        "stdout_sha256": "172116b7b58ed003e3d6309b81cdb88c597ce50297a86c4991943d3da665c104"
+      },
+      {
+        "command": [
+          "/usr/bin/python3",
+          "-I",
+          "-S",
+          "-B",
+          "-Werror",
+          "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_sentinel_package.py",
+          "encode",
+          "--sidecar",
+          "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/cli-integration-01/fixture/sidecar.json",
+          "--artifacts",
+          "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/cli-integration-01/fixture/artifacts",
+          "--sidecar-sha256",
+          "105ac681f5f1444f6db78eaedf36960798a000558aa4fb89fa6e6cef3a61db9c",
+          "--registry-sha256",
+          "2a3e26e82878a404ce3d2b338a8bb8b362822de78f46361f1ca574ed1350ac9c",
+          "--reference",
+          "https://example.invalid/SENTINEL-DEMO/evidence.zip",
+          "--budget",
+          "200",
+          "--out",
+          "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/cli-integration-01/package"
+        ],
+        "elapsed_ns": 132005401,
+        "returncode": 0,
+        "stdout_sha256": "672210283954847a74fefc9a4e0d0b1d86b2440b1f29f167f868af3ce64d0aa8"
+      },
+      {
+        "command": [
+          "/usr/bin/python3",
+          "-I",
+          "-S",
+          "-B",
+          "-Werror",
+          "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_sentinel_package.py",
+          "inspect",
+          "--archive",
+          "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/cli-integration-01/package/evidence.zip",
+          "--share",
+          "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/cli-integration-01/package/share.txt"
+        ],
+        "elapsed_ns": 104464300,
+        "returncode": 0,
+        "stdout_sha256": "047dc68845a87d415f33108e214409aaab35783d82c66b8b95dcc452a89f1153"
+      },
+      {
+        "command": [
+          "/usr/bin/python3",
+          "-I",
+          "-S",
+          "-B",
+          "-Werror",
+          "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_sentinel_package.py",
+          "staging",
+          "--archive",
+          "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/cli-integration-01/package/evidence.zip",
+          "--share",
+          "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/cli-integration-01/package/share.txt",
+          "--out",
+          "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/cli-integration-01/staging.json"
+        ],
+        "elapsed_ns": 106791958,
+        "returncode": 0,
+        "stdout_sha256": "047dc68845a87d415f33108e214409aaab35783d82c66b8b95dcc452a89f1153"
+      }
+    ],
+    "fresh_agent": "NOT_PERFORMED",
+    "hosted_sharing": "UNTESTED_PLACEHOLDER_ONLY",
+    "native_qualification": "NOT_PERFORMED",
+    "oracle": "MANUAL_DEVELOPMENT_FIXTURE",
+    "report": {
+      "candidates": 3,
+      "container_profile": "sentinel/evidence-zip/1",
+      "execution_authority": "NONE",
+      "package_id": "08da954c56b02cb6de495674ac0c65b090559d279f2c8fac211c1617ab9eef12",
+      "probes": 5,
+      "qualification": "NOT_QUALIFIED",
+      "registry_sha256": "2a3e26e82878a404ce3d2b338a8bb8b362822de78f46361f1ca574ed1350ac9c",
+      "repair_links": 3,
+      "retained_failures": 2,
+      "retained_results": 15,
+      "schema": "sentinel/structural-report/1",
+      "semantic_completeness": "UNPROVEN",
+      "sidecar_sha256": "105ac681f5f1444f6db78eaedf36960798a000558aa4fb89fa6e6cef3a61db9c",
+      "status": "STRUCTURE_AND_EXACT_BYTES_ONLY",
+      "world_truth": "NOT_CERTIFIED"
+    },
+    "semantic_completeness": "UNPROVEN",
+    "source": {
+      "examples/sentinel-exact-v1/create_fixture.py": "110be857037a1b33ef3d0fc14b7b488e8017022d7165a466be05ed24217e1743",
+      "tests/test_transport_sentinel.py": "229d0c6b2629e495ed40e5fcdb3020294fb821385098e4755da1d8e98d761d34",
+      "tools/transport_document_io.py": "f8724d0ab7213d2641cbeec2baf40f1b0d878e148f5d764c025d352f65776d3a",
+      "tools/transport_sentinel.py": "52f15b46d9af6e80d56d9ce4769057300767cb1c4bdc5b759c1841f38104dfd3",
+      "tools/transport_sentinel_export.py": "eaa8bc075c67c499872d5ebfd6879bd5d2fe838a3e7e64d83503040d5fb93c62",
+      "tools/transport_sentinel_package.py": "b4e31179b8ebbb2183d765417c1cc3c2dc13e9d518e596781f6563c6be3f7f3b"
+    },
+    "status": "TESTED_LOCAL_CLI_EXACT_EVIDENCE"
+  },
+  "comparative_benefit": "NOT_PERFORMED",
+  "execution_authority": "NONE",
+  "external_human_validation": "NOT_PERFORMED",
+  "fresh_Sentinel_agent": "NOT_PERFORMED",
+  "machine_diagnostics": {
+    "entities": 37,
+    "flow_records": 65,
+    "proof_records": 50,
+    "scope": "CONSERVATIVE_MACHINE_DIAGNOSTICS_WITH_TEXT_SOURCE_ROSTER",
+    "sha256": "ddb487b6ac49427b51e0f2990d0b12853dd0f0fd096eb33914999862626796df",
+    "warn_error_records": 0
+  },
+  "model_tokens_and_cost": "NOT_MEASURED",
+  "native_driver_sha256": "be7987611c2ec63c1e98b098a6de752c72ac9c42df5557b21894e5304f82b901",
+  "native_parser_and_live_bridge": "NOT_SUPPLIED_BY_THIS_CHECKPOINT",
+  "native_proof": {
+    "assume": 0,
+    "categories": {
+      "Assertions": [
+        8,
+        0,
+        8,
+        0,
+        0
+      ],
+      "Concurrency": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Data Dependencies": [
+        25,
+        25,
+        0,
+        0,
+        0
+      ],
+      "Flow Dependencies": [
+        5,
+        5,
+        0,
+        0,
+        0
+      ],
+      "Functional Contracts": [
+        8,
+        0,
+        8,
+        0,
+        0
+      ],
+      "Initialization": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "LSP Verification": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Non-Aliasing": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Run-time Checks": [
+        34,
+        0,
+        34,
+        0,
+        0
+      ],
+      "Termination": [
+        35,
+        35,
+        0,
+        0,
+        0
+      ]
+    },
+    "entities": {
+      "Sentinel_Policy": 0,
+      "Sentinel_Policy.Accepted_Count": 0,
+      "Sentinel_Policy.All_Linked": 1,
+      "Sentinel_Policy.All_Match": 2,
+      "Sentinel_Policy.Answer_Admissible": 0,
+      "Sentinel_Policy.Authority": 0,
+      "Sentinel_Policy.Begin_Refinement": 2,
+      "Sentinel_Policy.Bind_Source": 1,
+      "Sentinel_Policy.Candidate_Of": 0,
+      "Sentinel_Policy.Claims_Valid": 3,
+      "Sentinel_Policy.Current_Challenge": 1,
+      "Sentinel_Policy.Current_Differs": 1,
+      "Sentinel_Policy.Current_Round": 0,
+      "Sentinel_Policy.Documentary_Of": 0,
+      "Sentinel_Policy.Eligible": 0,
+      "Sentinel_Policy.Expected_Of": 0,
+      "Sentinel_Policy.Failure_Count": 10,
+      "Sentinel_Policy.Failure_History": 0,
+      "Sentinel_Policy.Fatal": 0,
+      "Sentinel_Policy.History_Preserved": 19,
+      "Sentinel_Policy.Identity_Of": 0,
+      "Sentinel_Policy.Identity_Valid": 0,
+      "Sentinel_Policy.Initialize": 1,
+      "Sentinel_Policy.Initialized": 0,
+      "Sentinel_Policy.Link_Valid": 0,
+      "Sentinel_Policy.New_Candidate": 1,
+      "Sentinel_Policy.Qualification_Requested": 0,
+      "Sentinel_Policy.Questions_Of": 0,
+      "Sentinel_Policy.Record_Answer": 2,
+      "Sentinel_Policy.Refinement_Admissible": 0,
+      "Sentinel_Policy.Repairs_Valid": 0,
+      "Sentinel_Policy.Request_Qualification": 1,
+      "Sentinel_Policy.Result_Of": 0,
+      "Sentinel_Policy.Roster_Valid": 3,
+      "Sentinel_Policy.Session": 1,
+      "Sentinel_Policy.State_Of": 1,
+      "Sentinel_Policy.Valid": 0
+    },
+    "flow": 65,
+    "justified": 0,
+    "prover": 50,
+    "scope": "EXACT_SUPPLIED_SOURCE_ROSTER_POLICY_CONTRACTS_ONLY",
+    "sha256": "51f1e87f263ed569c7f7b4aed120d3113f301b1f2ba3782139e40624c1d89374",
+    "total": 115,
+    "unproved": 0,
+    "warnings": 0
+  },
+  "native_scope": "PURE_TYPED_POLICY_CONTRACTS_AND_STATIC_FIXTURES_ONLY",
+  "private_attachment_recovered": {
+    "bytes": 30451,
+    "sha256": "dfc54f7aa53be6165281963a89d30c3d42894fc8cb45865a94ae5aa4f99cde61"
+  },
+  "private_payload_publication": "NOT_PUBLISHED",
+  "python_tests": {
+    "builder_normal_and_optimized": 23,
+    "checkpoint_normal_and_optimized": 4,
+    "container_normal_and_optimized": 17,
+    "context_normal_and_optimized": 14,
+    "graph_normal_and_optimized": 25
+  },
+  "schema": "sentinel/source-checkpoint/1",
+  "semantic_completeness": "UNPROVEN",
+  "source": {
+    ".github/workflows/document-profile.yml": {
+      "bytes": 4310,
+      "sha256": "b01aac513023a3c54bbf7f473cd68372de4803738e4f95878d623d5f32089472"
+    },
+    "docs/SENTINEL.md": {
+      "bytes": 12720,
+      "sha256": "985db70a3789ee05da76857fae63c72643659f3a6ab78ce3d0cf7b51ef98fc77"
+    },
+    "examples/sentinel-exact-v1/create_fixture.py": {
+      "bytes": 1505,
+      "sha256": "110be857037a1b33ef3d0fc14b7b488e8017022d7165a466be05ed24217e1743"
+    },
+    "examples/sentinel-exact-v1/freeze_receipt.py": {
+      "bytes": 10584,
+      "sha256": "2cb7e7771395932bf798eee7bf1bdad3bc1a8571d14a728a7fe49646c5442dda"
+    },
+    "sentinel_native/sentinel_build_profile.py": {
+      "bytes": 6499,
+      "sha256": "0550bdf381ba1efd1bd4cac4b426756ad2293d98be79ad834dfa4c36fa1971a4"
+    },
+    "sentinel_native/sentinel_policy.adb": {
+      "bytes": 8467,
+      "sha256": "889348d21a6063f83976f0d51852d51064aeb5c43cf5a978a3ff5badbba5486f"
+    },
+    "sentinel_native/sentinel_policy.ads": {
+      "bytes": 13476,
+      "sha256": "a66f97c23cbaedd317ff0a073d2eab0116c13578aeaeb8a72e0bf77551e52c75"
+    },
+    "sentinel_native/sentinel_policy.gpr": {
+      "bytes": 607,
+      "sha256": "363494be1324111c0064a173e617d87390b49aa6d7d934c7d75b223aadf1ac7c"
+    },
+    "sentinel_native/sentinel_policy_checks.adb": {
+      "bytes": 210,
+      "sha256": "67c7956085d3a7e3d199fca0786aef953ce20b499ddf461556e1dc36aeed9032"
+    },
+    "sentinel_native/sentinel_policy_fixtures.adb": {
+      "bytes": 12827,
+      "sha256": "985154957f77ac9022c6633cb3ae75ed83dee3287ac6006c86838e3f788283e2"
+    },
+    "sentinel_native/sentinel_policy_fixtures.ads": {
+      "bytes": 84,
+      "sha256": "4aadb54ed5da460de5b6a5c84d611f8235e91db76b84f5e81aa9dcc3bd65d1d1"
+    },
+    "sentinel_native/sentinel_policy_proof.gpr": {
+      "bytes": 509,
+      "sha256": "57de11fe7e0c0573b2b531f8e5a526fb7069e8d75d92f8ef107873b93e0c46ee"
+    },
+    "sentinel_native/sentinel_qualification.py": {
+      "bytes": 11891,
+      "sha256": "575d1772b47e26a7b149f02612f33dd8da3fa1c1ac85a434c87c5c68eb5fead6"
+    },
+    "tests/check_sentinel_profile.py": {
+      "bytes": 1747,
+      "sha256": "ed6f1f46e888bb138468f4e1f91f42a5c0efc3222ec521a073d4ecd75d8c0e1b"
+    },
+    "tests/test_sentinel_checkpoint.py": {
+      "bytes": 5590,
+      "sha256": "ab0a4e9ba80d35e492912856eec0082ca2fb078bcc928ad2fde517c6ff7c23f5"
+    },
+    "tests/test_sentinel_qualification.py": {
+      "bytes": 25683,
+      "sha256": "f8f0b8c9bcdf975ab9b42c3abb32ba031f80e608cb7892e63b49c3863aba348d"
+    },
+    "tests/test_transport_document_context.py": {
+      "bytes": 9318,
+      "sha256": "7bc01877c646d11b10ff2f6e2a2e42828360462eeb1db345c8f3b7c1f1631fbc"
+    },
+    "tests/test_transport_sentinel.py": {
+      "bytes": 27883,
+      "sha256": "229d0c6b2629e495ed40e5fcdb3020294fb821385098e4755da1d8e98d761d34"
+    },
+    "tests/test_transport_sentinel_package.py": {
+      "bytes": 12090,
+      "sha256": "cb5ca372a395561981e1a03b4bb5bd24f1061da85fd520005e09b2c371321bf1"
+    },
+    "tools/build_sentinel_policy.py": {
+      "bytes": 5931,
+      "sha256": "773612d230cd91d8764b740031ba382563891337ae4a01f28aff2cf84effa779"
+    },
+    "tools/transport_document_context.py": {
+      "bytes": 3666,
+      "sha256": "84c599cf82d391bcd83aa092335bfb1a393610c0231e932099e223cd722dbbdc"
+    },
+    "tools/transport_sentinel.py": {
+      "bytes": 25423,
+      "sha256": "52f15b46d9af6e80d56d9ce4769057300767cb1c4bdc5b759c1841f38104dfd3"
+    },
+    "tools/transport_sentinel_export.py": {
+      "bytes": 4799,
+      "sha256": "eaa8bc075c67c499872d5ebfd6879bd5d2fe838a3e7e64d83503040d5fb93c62"
+    },
+    "tools/transport_sentinel_package.py": {
+      "bytes": 15129,
+      "sha256": "b4e31179b8ebbb2183d765417c1cc3c2dc13e9d518e596781f6563c6be3f7f3b"
+    }
+  },
+  "source_setup_bytes": 220948,
+  "status": "DEVELOPMENT_CHECKPOINT",
+  "world_truth": "NOT_CERTIFIED"
+}

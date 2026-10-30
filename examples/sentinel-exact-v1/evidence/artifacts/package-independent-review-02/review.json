@@ -1,0 +1,71 @@
+{
+  "schema": "sentinel/package-independent-source-review/1",
+  "verdict": "PASS_SCOPED_INERT_PORTABLE_CONTAINER",
+  "source": [
+    {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_sentinel_package.py",
+      "bytes": 15129,
+      "sha256": "b4e31179b8ebbb2183d765417c1cc3c2dc13e9d518e596781f6563c6be3f7f3b"
+    },
+    {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_sentinel_package.py",
+      "bytes": 12090,
+      "sha256": "cb5ca372a395561981e1a03b4bb5bd24f1061da85fd520005e09b2c371321bf1"
+    },
+    {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_sentinel.py",
+      "bytes": 25423,
+      "sha256": "52f15b46d9af6e80d56d9ce4769057300767cb1c4bdc5b759c1841f38104dfd3"
+    },
+    {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_sentinel_export.py",
+      "bytes": 4799,
+      "sha256": "eaa8bc075c67c499872d5ebfd6879bd5d2fe838a3e7e64d83503040d5fb93c62"
+    },
+    {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_document_io.py",
+      "bytes": 4332,
+      "sha256": "f8724d0ab7213d2641cbeec2baf40f1b0d878e148f5d764c025d352f65776d3a"
+    }
+  ],
+  "frozen_contract": {
+    "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/package-oracle-01/CONTRACT.md",
+    "bytes": 4330,
+    "sha256": "403ad91840ff33494cdfa627fa9a145779636c33fc62f21805aa653fd4b7daa6"
+  },
+  "controls": {
+    "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/package-independent-review-02/controls.json",
+    "bytes": 4752,
+    "sha256": "8ecb2d36ae2456c96e5112cb46050a74bee78b9815ba7e7ab184e2a5543dc1be"
+  },
+  "additional_negatives": {
+    "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/package-independent-review-02/additional-negatives.json",
+    "bytes": 1122,
+    "sha256": "e51c4dfce32bda55bb093f5791ab2ab14fd33a5ea7dc1e01fe1c59347086a272"
+  },
+  "retained_independent_first_failure": {
+    "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/package-independent-review-01/controls.json",
+    "bytes": 4580,
+    "sha256": "dc6a9bdd4db90870e09b9208f5d3d896e1f6ebe608b1cb4f743f5fe7e973730b"
+  },
+  "findings": [],
+  "verified_by_source_and_controls": [
+    "Complete source,17 test methods and frozen preimplementation contract read. Real graph fixtures, not a mocked graph verdict, passed normal/O with strict warnings; source pins unchanged before/after.",
+    "Strict ASCII complete share and canonical manifest bind package identity. PKG is an unfetched hint; no local path is asserted to be hosting. This is a distinct SENTINEL container and does not alter STS1/CRED or legacy document parser.",
+    "Archive bytes, entry count, member size and aggregate are bounded. Only canonical regular0600 fixed-time uncompressed entries survive; exact deterministic reserialization rejects local/central discrepancies, prefixes/trailers, ZIP64 deviations and ignored metadata. No extraction, subprocess, network or executable package load occurs.",
+    "Whole inventory sizes/digests, exact required files, fixed README, registry bytes and real sidecar semantics are verified. Recipient-held historical root is required independently of embedded history; complete append-only graph validation remains in the reviewed existing validator.",
+    "New-directory export and exclusive output creates reject existing outputs; final archive/share decode precedes report publication. Artifact reads hold nofollow descriptors, reject nonregulars and compare descriptor identity around bounded reads.",
+    "Seven additional independent literal refusals: memberCAP+1 on encode/import, entry261, registry257, local/central encryption flags and noncanonical local version. Valid result remains NOT_QUALIFIED/NONE.",
+    "CLI preserves stricter inherited resource limits and shorter pre-existing alarm while executing, applies30second command alarm, bounded refusal diagnostics. Limits apply to CLI; in-process callers retain responsibility for their process resource envelope."
+  ],
+  "failure_retention": [
+    "First independent normal/O suite attempts each produced two EFBIG export errors because reviewer wrongly used FSIZE131072, below valid fixture archive. Classified FAILED_REVIEW_HARNESS; exact original logs unchanged. Separate corrected run used declared ARCHIVE_CAP9437184 with same source/tests, not a product-source relaxation.",
+    "Root first authored fixture failures, accidental extra fixture discovery, graph source03 mutable-registry failure, earlier35-roster DIC omission and both actual failed policy proof attempts remain historical failures; none is erased by this container review."
+  ],
+  "unproved_and_excluded": [
+    "No native adapter/wire execution, actual policy proof, protocol qualification, action authority, authentication, author identity, OCR accuracy, whole-book completeness or semantic entailment is established. Existing source04 graph report remains STRUCTURE_AND_EXACT_BYTES_ONLY, NOT_QUALIFIED, UNPROVEN, NOT_CERTIFIED and NONE.",
+    "Pure tests use generated graph fixtures and private local temporary output. No maximum-size archive runtime campaign, remote hosting, power-loss recovery, hostile privileged filesystem mutation, model or human acceptance was performed.",
+    "No new source edits, native/compiler/prover/unshare/OCR/model calls, commit, push or publication authorization."
+  ],
+  "acceptance_boundary": "Source/portable-container evidence only. Parent separately owns frozen-source actual native policy admission/readback and any checkpoint publication."
+}

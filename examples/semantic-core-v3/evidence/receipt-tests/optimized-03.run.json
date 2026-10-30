@@ -1,0 +1,27 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-I",
+    "-S",
+    "-O",
+    "-B",
+    "-Werror",
+    "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/test_receipt.py",
+    "-v"
+  ],
+  "environment": {
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "PATH": "/usr/bin:/bin",
+    "TMPDIR": "/dev/shm/semantic-transport-core-20261029/receipt-tests"
+  },
+  "exit_code": 0,
+  "source_pins_before_after": {
+    "README.md": "1d1725f2965880682c42a7ac2a497901c2690f3bba624e56a1d4048030442195",
+    "receipt.json": "65d14e40816f44cb9cb0b0d89778dbfea2f57813fef6ef7ddecd7f4d86a7a580",
+    "receipt.py": "9c4de03f3661e0183de7df708403364b7a7526f1d0628af18791d7187c5fe2b9",
+    "run_controls.py": "f20d4a9f097bb7a50aa852dc462b8b27de8b61e48e7cebabd0fe25ee0addd8a0",
+    "test_receipt.py": "f4aedd2e8f864a6a74a8e32409264a450a530e089942d1b032dc0d604e45799b"
+  },
+  "wall_seconds": 2.3398314049700275
+}

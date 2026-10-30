@@ -1,0 +1,51 @@
+{
+  "schema": "sentinel/refinement-history-counterexample/1",
+  "status": "CONFIRMED_ACCEPTED_FORGED_HISTORICAL_IMPACT",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "freeze_sha256": "3453e80184eb54be684beb99e9d44020a42b3a3f89eb001b745c08509d55ecf7",
+  "source_pins_before": {
+    "tests/test_sentinel_challenges.py": "eceec3eda95580a0e53729d0be0c2d9bd262441a34af3ac4e9e2965bd054c7f2",
+    "tests/test_sentinel_meaning.py": "6479cdfa54c0ea9539ad1e3f2abb4280e3c26a10a78cca509cb1249d2b638b5a",
+    "tests/test_sentinel_refinement.py": "9a53cc79204a6c512752c9362510cb729947d1a2422e2b239788c3fb1f1859f3",
+    "tools/sentinel_v1/bindings.py": "1ca9e6952c7002cdcc74106e52cba2b1031fa1f6294fb0b3bf10978ca61b438a",
+    "tools/sentinel_v1/census.py": "89cdc5184c280a1c11b76ea323a2666f8a8938e3722c655bacd125e4e54b8992",
+    "tools/sentinel_v1/challenges.py": "98123cdb080593d8dd3e2e3d79018c8e56f6e52e005c1fbcd918c61dda818dfc",
+    "tools/sentinel_v1/common.py": "2463b4572553603511f968e977d9460cee5db859f0f0d3715139abfde35694f8",
+    "tools/sentinel_v1/graph.py": "6335d67aaa7855a01eeba3e047edd52b37af7823ce733765174b66eb1169918d",
+    "tools/sentinel_v1/locators.py": "f098c132f72dd95b1775dea48931919ea920fdeeae3f7183490d472a4b34cd8c",
+    "tools/sentinel_v1/refinement.py": "f9a28d014205939b5af46e88ceda1a99f347568d8291a2e1c3834ed04e0cf750"
+  },
+  "source_pins_after": {
+    "tests/test_sentinel_challenges.py": "eceec3eda95580a0e53729d0be0c2d9bd262441a34af3ac4e9e2965bd054c7f2",
+    "tests/test_sentinel_meaning.py": "6479cdfa54c0ea9539ad1e3f2abb4280e3c26a10a78cca509cb1249d2b638b5a",
+    "tests/test_sentinel_refinement.py": "9a53cc79204a6c512752c9362510cb729947d1a2422e2b239788c3fb1f1859f3",
+    "tools/sentinel_v1/bindings.py": "1ca9e6952c7002cdcc74106e52cba2b1031fa1f6294fb0b3bf10978ca61b438a",
+    "tools/sentinel_v1/census.py": "89cdc5184c280a1c11b76ea323a2666f8a8938e3722c655bacd125e4e54b8992",
+    "tools/sentinel_v1/challenges.py": "98123cdb080593d8dd3e2e3d79018c8e56f6e52e005c1fbcd918c61dda818dfc",
+    "tools/sentinel_v1/common.py": "2463b4572553603511f968e977d9460cee5db859f0f0d3715139abfde35694f8",
+    "tools/sentinel_v1/graph.py": "6335d67aaa7855a01eeba3e047edd52b37af7823ce733765174b66eb1169918d",
+    "tools/sentinel_v1/locators.py": "f098c132f72dd95b1775dea48931919ea920fdeeae3f7183490d472a4b34cd8c",
+    "tools/sentinel_v1/refinement.py": "f9a28d014205939b5af46e88ceda1a99f347568d8291a2e1c3834ed04e0cf750"
+  },
+  "original_round2_fields": {
+    "changed_nodes": [
+      "C1"
+    ],
+    "invalidated_nodes": [
+      "C1"
+    ]
+  },
+  "forged_round2_fields": {
+    "changed_nodes": [],
+    "invalidated_nodes": []
+  },
+  "forged_history_sha256": "f84f4529289c1e7b1bd68096ec56d125bd88ae0ed2be28adbfe7a5c81d134083",
+  "accepted_result_sha256": "291adffada61f186abe949310ff4d2d86299a264580885d7ccb5ce281e5b0d00",
+  "failure_scope": "history_checked and advance accept empty old changed/impact lists despite an actual C1 graph edit; historical raw answers/Q still replay correctly. No Python qualification or truth was granted.",
+  "root_cause": "recheck_prior reconstructs/replays historical Q but does not compare consecutive retained graphs and recompute changed_nodes plus conservative old/new closure.",
+  "minimal_repair": "Recompute every historical adjacent graph difference and old/new undirected impact closure from checked retained graph bytes. Require exact lists, not merely shape. Preserve this actual failure.",
+  "native_model_execution": "NONE",
+  "qualification": "NOT_QUALIFIED",
+  "execution_authority": "NONE"
+}

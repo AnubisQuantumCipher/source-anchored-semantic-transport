@@ -1,0 +1,128 @@
+{
+  "schema": "transport/native-legacy-regression/1",
+  "status": "PASS",
+  "native_core_receipt_sha256": "089c3f22e67a36efd45f7fbe89b626c91b74f0fe20e472ab8c6644edbc0473b2",
+  "additive_evaluator_sha256": {
+    "transport_eval.ads": "22f52d356bc99d09ad932f4cfca5c97446383d03f1ab5e217361eafad727e79d",
+    "transport_eval.adb": "260e066eb5b7b4d027b679bc1b4b05dcaae9fde9df8bfffc2b199232bea8ad35"
+  },
+  "build": {
+    "argv": [
+      "gprbuild",
+      "-p",
+      "-P",
+      "/dev/shm/semantic-transport-core-20261029/native/legacy_checks.gpr"
+    ],
+    "exit": 0,
+    "timeout_seconds": 120
+  },
+  "tests": [
+    {
+      "argv": [
+        "/dev/shm/semantic-transport-core-20261029/native/legacy-bin/transport_eval_checks"
+      ],
+      "timeout_seconds": 30,
+      "exit": 0,
+      "stdout_bytes": 0,
+      "stderr_bytes": 0
+    },
+    {
+      "argv": [
+        "/dev/shm/semantic-transport-core-20261029/native/legacy-bin/transport_bound_eval_checks"
+      ],
+      "timeout_seconds": 30,
+      "exit": 0,
+      "stdout_bytes": 0,
+      "stderr_bytes": 0
+    }
+  ],
+  "environment": {
+    "TMPDIR": "/dev/shm/semantic-transport-core-20261029/native/tmp",
+    "address_space_bytes": 1073741824
+  },
+  "unchanged_files": [
+    {
+      "path": "evaluation/tests/transport_eval_checks.adb",
+      "sha256": "2531e48d3a0d4e86e45ff970167dd2c76e706a995f388b2e2322b06440dcdc59",
+      "byte_identical_to_head": true
+    },
+    {
+      "path": "evaluation/tests/transport_bound_eval_checks.adb",
+      "sha256": "0acd1979a509d2c939b1f3c4c5c184f68356389f0bbf887bfab70c42a4f6c4a1",
+      "byte_identical_to_head": true
+    },
+    {
+      "path": "evaluation/src/transport_bound_eval.ads",
+      "sha256": "6990a1570b28abb5cee138eaef34979227fdbfa6b4ed916b66db6ba9fcd1c2f0",
+      "byte_identical_to_head": true
+    },
+    {
+      "path": "evaluation/src/transport_bound_eval.adb",
+      "sha256": "35bd6f195c90ff8695b958ac293a4708aca523a2b208d38fe8561d8e311f1e2f",
+      "byte_identical_to_head": true
+    },
+    {
+      "path": "evaluation/src/transport_bound_eval_parse.ads",
+      "sha256": "e4ff5b0f5153c83364a722b490212cfa11e338433340fc565714cc84f7b9142b",
+      "byte_identical_to_head": true
+    },
+    {
+      "path": "evaluation/src/transport_bound_eval_parse.adb",
+      "sha256": "3ab99926c247cd92790ba3482f5f24163270341cd7f181a16193823190f87314",
+      "byte_identical_to_head": true
+    },
+    {
+      "path": "evaluation/tests/checks.gpr",
+      "sha256": "74302d657d2ae36a6b4b5fed8a1f04ee03d1896836a45a88d69cfac1ffcbe210",
+      "byte_identical_to_head": true
+    },
+    {
+      "path": "evaluation/tests/bound_checks.gpr",
+      "sha256": "6ae967149e061ede307ab95cbaff6052c694e10ada01a9ffc5f76a79ae17f2c4",
+      "byte_identical_to_head": true
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "legacy-bound-01.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "legacy-bound-01.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "legacy-build-01.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "legacy-build-01.stdout",
+      "bytes": 653,
+      "sha256": "7c68bc2907273df4642241b8b49ca106d1f8009f738812e1447741ae562d0398"
+    },
+    {
+      "name": "legacy-eval-01.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "legacy-eval-01.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "legacy-prefix.json",
+      "bytes": 839,
+      "sha256": "e5f11bfe7dee22f95f52767a289c469c4b0851b2c7a0beb0f06ae7888529463e"
+    },
+    {
+      "name": "legacy_checks.gpr",
+      "bytes": 643,
+      "sha256": "93b2e4cf7a4af3e7f4b5f4be47d2546c06873b068d32af1c0d72f8e18bb059f6"
+    }
+  ],
+  "scope": "Both unchanged legacy native test programs built and executed against the additive evaluator; this does not requalify old package/runtime identities."
+}

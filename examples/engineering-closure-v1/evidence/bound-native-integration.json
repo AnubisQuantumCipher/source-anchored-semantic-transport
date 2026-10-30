@@ -1,0 +1,31 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-I",
+    "-S",
+    "-B",
+    "-Werror",
+    "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/install/test_bound_evaluation.py",
+    "--bundle",
+    "/dev/shm/semantic-transport-proof-closure-20261029/install-current/first-bundle",
+    "--native",
+    "/dev/shm/semantic-transport-proof-closure-20261029/source/evaluation/bin/transport_bound_eval_native",
+    "--evidence",
+    "/dev/shm/semantic-transport-proof-closure-20261029/bound-native-integration"
+  ],
+  "elapsed_ns": 2663254401,
+  "exit_code": 0,
+  "status": "SUCCESS",
+  "stderr": {
+    "bytes": 2917,
+    "sha256": "7daf43414ea55998a78ccc068424c9da6ef1d0f6f77f8a9a236d8aa31b54e1a0"
+  },
+  "stdout": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "storage_after": {
+    "bytes": 138354257,
+    "files": 2358
+  }
+}

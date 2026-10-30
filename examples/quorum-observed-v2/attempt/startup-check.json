@@ -1,0 +1,1 @@
+{"argv": ["/home/sicarii/.local/share/mise/installs/claude/2.1.280/claude", "--version"], "model_calls": 0, "returncode": 0, "runner_sha256": "c85c9e5f5dc755dad90e9335d42043b4efe37e9a623d0a74633733283fe9b6a0", "same_limits_function": true, "stderr": "", "stdout": "2.1.280 (Claude Code)\n"}

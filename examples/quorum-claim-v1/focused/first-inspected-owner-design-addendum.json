@@ -1,0 +1,10 @@
+{
+ "schema":"quorum/internal-role-relevance-addendum/1",
+ "status":"OWNER_DESIGN_DIRECTION_REQUIRES_INDEPENDENT_REVIEW_BEFORE_CODE",
+ "owner":"/root",
+ "ambiguity":"Pinned full-wire record_rules requires REF Dependency with relevant role but does not define semantic relevance or a closed role-position mapping.",
+ "adopted_internal_boundary":"For this syntactic structural stage only, every exact SOURCE-target REF edge may carry SOURCE,DEFINITION,EXCEPTION,CONTEXT or TASK_CONDITION. No guard-position mapping is inferred. Explicit primary-selector anchoring still requires SOURCE role. Source and Claim REF sets both need exact declared keys and supplied verified source bytes.",
+ "nonclaim":"Record semantic_role_relevance=UNPROVEN in every Claim result. Type/key/role-enum checks do not prove that the dependency is semantically relevant, complete or sufficient. No full ReplayResult or semantic-role qualification is admitted. Full-wire schema/protocol remains unchanged; this internal contract cannot silently pass its unresolved semantic relevance gate.",
+ "origin":"Direct owner message in existing parent task; this file records the design decision, not independent provenance authentication or runtime evidence.",
+ "required_evidence":"Independent actual-GPT-6.1 review must explicitly assess this addendum and its consequence ceiling before owner code admission. All original full-replay and product gates survive."
+}

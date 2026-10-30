@@ -1,0 +1,67 @@
+{
+  "schema":"quorum/source-membership-independent-code-review/1",
+  "reviewer":"/root/quorum_graph_oracle",
+  "classification":"OBSERVED_SOURCE_REVIEW_AND_TESTED_BOUNDED_COMPONENT",
+  "model_identity":{"required_actual_model":"gpt-6.1-sol","attestation_basis":"Parent dispatch/provider execution record; this JSON cannot independently authenticate its own model."},
+  "scope":"Frozen internal source/blob/quote integrity and selector-byte membership only. No product edits by reviewer, native builds, full replay, formal proof, installed decoder change, external participants or acceptance claim.",
+  "reviewed_source_pins":{
+    "tools/transport_quorum_source.py":"791e2ae4d8e08d563ba4ebef01b3e8588218bdc958e03656b0bf14dfce74e98f",
+    "tools/transport_quorum_input.py":"5b5667dd264b5caacbe501b84d8807928c65ee530ad5b1fdf08b21aba081b49e",
+    "tools/transport_quorum_shape.py":"b77d9bf35c266a60a508c1e245065c740130da147d253d5af85cda1cd3229012",
+    "install/test_quorum_source.py":"c974a469f6193b3c3549332a27b3c13337de415caf7f96073eee3c12c918bb07"
+  },
+  "frozen_contract_pins":{
+    "contract.json":"c233f1a44017359e5ba57a6cceaa669945dd54e8fd287b0c10719370f4b20771",
+    "oracle.json":"7a8a8b2e441278f7abf32ab7699bc0e70647f154ebd249eeecfb58985fbbcc8f"
+  },
+  "retained_first_failure":{
+    "source_sha256":"a8e037130128071da380df81b5d50c9c47f73bdc7b3b6927307c571da9f8e804",
+    "evidence":"independent-suite-first.json",
+    "result":"FAILED",
+    "detail":"Independent full-suite execution reproduced the owner's reported invalid-alias error mismatch: None alias returned SOURCE_INPUT_TYPE rather than frozen SOURCE_KEY_SHAPE. Complete-result/focused/body/ownership tests otherwise reported passing in that first run. First output and initial source snapshot remain retained.",
+    "second_owner_finding":"Initial source inspection also confirmed cumulative decoded-byte charge followed length mismatch, contrary to frozen charge-before-length precedence. This was reported by the owner and repaired by the implementation author; review claims no independent first discovery."
+  },
+  "repair_review":{
+    "alias_error":"Repaired _arguments checks immutable data type separately and delegates every invalid alias to _identifier then SOURCE_KEY_SHAPE, preserving exact host refusal semantics.",
+    "decoded_budget":"Repaired _binary performs predecode syntax/pad-bit/decoded-size inspection, then cumulative decoded-byte quota before per-item or declared length mismatch, and only then allocates decoded bytes.",
+    "disposition":"Both retained initial findings closed for the exact reviewed source after unchanged tests passed. Expectations were not adjusted."
+  },
+  "harness_review":{
+    "complete_results":"Frozen eighteen-case oracle compares complete component results, including output boundaries and exact indexes/pins.",
+    "focused_results":"Forty-nine independently frozen focused cases compare full errors and projected successful selector statuses; successful projections alone do not prove every index field. Complete-result cases and additional full newline-ID output cover complementary output checks.",
+    "host_and_ownership":"Harness probes exact host tuple/bytes/dict/string boundaries, malformed keys, bool/range/hash shape errors, Body-first precedence, and caller-dictionary/output separation.",
+    "matched_arm_limit":"The two named arms call the same checker with identical raw/original inputs. This supplies component repeatability and same-checker evidence, not a measured transport representation comparison or benefit result.",
+    "retention":"Create-only evidence output and exact fixture/source pins preserve first failures; per-case results retain both observed result and frozen expected value."
+  },
+  "independent_tests":[
+    {"evidence":"independent-suite-repair.json","status":"TESTED_PASS","command":"PYTHONDONTWRITEBYTECODE=1 timeout --kill-after=2s 30s python install/test_quorum_source.py --evidence CREATE_ONLY_PATH","coverage":"Frozen eighteen complete results, forty-nine focused controls and host/ownership tests; four test methods."},
+    {"evidence":"input-regression.json","status":"TESTED_PASS","command":"PYTHONDONTWRITEBYTECODE=1 timeout --kill-after=2s 30s python install/test_quorum_input.py --evidence CREATE_ONLY_PATH","coverage":"Existing seven-method raw/shape/bootstrap/work/refusal/control suite after private validated-Body extraction."},
+    {"evidence":"additional-probe-results-first.json","status":"TESTED_PASS","coverage":"Fourteen manually frozen additional source/precedence/resource/output probes plus hostile dictionary-key callback probe. Before/after source dependency pins identical.","oracle":"additional-probes.json","runner":"run-additional-probes.py"},
+    {"evidence":"strict-compile.json","status":"TESTED_PASS","coverage":"Python warnings-as-errors compilation in memory for reviewed source/input/shape/source-test files; no bytecode files written."}
+  ],
+  "additional_probe_coverage":[
+    "Source count refuses before malformed tuple-item traversal.",
+    "Actual physical byte charge precedes supplied duplicate IDs, including repeated references to the same bytes object.",
+    "Declared duplicate aliases precede supplied duplicates; reserved Q_RECORDS precedes alias-set mismatch; complete key mismatch precedes source hashing.",
+    "Each Blob encoding check precedes next Blob integrity, all quote integrity precedes any selector range, and all selector references precede any range failure.",
+    "Valid Base64 text that describes more than4096 bytes refuses length; malformed zero pad bits win over oversized decoded length.",
+    "Long source range with short self-bound quote returns DIFFERS; source/selector/logical IDs with pinned final-LF behavior remain exact in the complete output.",
+    "Host str-subclass dictionary keys refuse SOURCE_KEY_SHAPE without invoking overridden hash or equality during validation."
+  ],
+  "source_bound_inspection":{
+    "private_body_gate":"Compared with base commit34cc8bb. New _validated_body extracts the same ordered load_schema, _read_value, check_shape and _canonical_bytes sequence; public check_body_input retains its exact caught InputError envelope and success shape. Source entrypoint obtains its private Body only through this complete gate, with no caller-owned dict/boolean bypass.",
+    "host_data":"Exact builtin guards precede caller-key inspection. At most three fixed string keys are checked/snapshotted; no arbitrary host callback dispatch or traversal of oversized mapping is admitted. Source data remains immutable and opaque.",
+    "bounds":"Source tuple/count and actual aggregate bytes are checked before hashing; each physical alias remains charged and separately verified. Base64 text, pad bits, predicted allocation size and quota precede decode. Blob/quote data stay within stated per-item/cumulative bounds; index/source lookup loops inherit exact Body caps.",
+    "slice_argument":"static-inspection.json retains the exact AST: end-begin != len(quote) OR source[begin:end] != quote. Python short-circuits the OR, so the source slice occurs only after equal lengths. Earlier binary validation establishes len(quote)<=4096 and range validation establishes valid bounds. Thus this specific copied slice is bounded by the qualified quote limit. No total Python RSS theorem is asserted.",
+    "control_flow":"All reviewed functions are at most sixty physical lines in the AST report, with no project recursion found in source component. Python parser/serializer/hash/base64/runtime allocation behavior remains an explicit trusted/unproved boundary.",
+    "output":"Fresh private index dictionaries preserve exact keys/IDs; errors carry no partial success indexes; no original/Body/decoded quote is returned. Output retains source_authentication UNVERIFIED, current_authority NONE and freshness UNKNOWN."
+  },
+  "remaining_unproved_or_unrun":[
+    "Formal whole-component proof, total Python RSS bound and cryptographic/runtime implementation assurance",
+    "Full ReplayRequest/external identity/reference/global-ID/provenance/claim/manifest/graph/semantic aggregation qualification",
+    "Installed decoder/package publication, inherited native proof/recovery/interoperability gates",
+    "External-human source validity, natural-language entailment, measured transport advantage and product acceptance"
+  ],
+  "next_step":"Owner may retain this evidence and perform controlled publication of the exact tested bounded component under its existing gates. Any source change requires pin reconciliation and appropriate revalidation; this does not authorize full replay acceptance or a cap extension.",
+  "verdict":"NO_REMAINING_MATERIAL_COMPONENT_CODE_DEFECT_IDENTIFIED_FOR_EXACT_REPAIRED_SOURCE; BOUNDED_COMPONENT_TESTED_AND_REVIEWED; FULL_REPLAY_UNRUN_AND_PRODUCT_NOT_ACCEPTED"
+}

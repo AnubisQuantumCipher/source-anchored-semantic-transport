@@ -1,0 +1,39 @@
+{
+  "argv": [
+    "/home/sicarii/opt/gnat/gnatprove-aarch64-linux-16.1.0-1/bin/gnatprove",
+    "-P",
+    "transport.gpr",
+    "-U",
+    "--level=2",
+    "--report=all",
+    "--warnings=error",
+    "--checks-as-errors=on",
+    "--proof-warnings=on",
+    "-j1"
+  ],
+  "cwd": "/dev/shm/semantic-transport-proof-closure-20261029/source",
+  "elapsed_ns": 176758997429,
+  "environment": {
+    "GPR_PROJECT_PATH": "/home/sicarii/opt/gnat/gnatprove-aarch64-linux-16.1.0-1/lib/gnat:/home/sicarii/opt/gnat/auxiliary/share/gpr",
+    "LANG": "C",
+    "LC_ALL": "C",
+    "PATH": "/home/sicarii/opt/gnat/gnat-aarch64-linux-16.1.0-1/bin:/home/sicarii/opt/gnat/gprbuild-aarch64-linux-26.0.0-1/bin:/home/sicarii/opt/gnat/gnatprove-aarch64-linux-16.1.0-1/bin:/usr/bin:/bin",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "TMPDIR": "/dev/shm/semantic-transport-proof-closure-20261029/tmp",
+    "TZ": "UTC"
+  },
+  "exit_code": 0,
+  "status": "SUCCESS",
+  "stderr": {
+    "bytes": 58745,
+    "sha256": "e6c9981b5ca33b80698e81e92c254f7524501be218852ce45d8c5299f8ef0848"
+  },
+  "stdout": {
+    "bytes": 300,
+    "sha256": "324a182f8524444eadc9f317521098617f89b301fa895d7e0ab96f8f4f7aa6cf"
+  },
+  "storage_after": {
+    "bytes": 122181052,
+    "files": 1934
+  }
+}

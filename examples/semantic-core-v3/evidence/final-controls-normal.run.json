@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-I",
+    "-S",
+    "-B",
+    "-Werror",
+    "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/run_controls.py",
+    "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/evidence/final-controls-normal.json.gz"
+  ],
+  "environment": {
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "PATH": "/usr/bin:/bin",
+    "TMPDIR": "/dev/shm/semantic-transport-core-20261029/integration",
+    "TRANSPORT_CORE_NATIVE": "/dev/shm/semantic-transport-core-20261029/native/bin/transport_core_native",
+    "TRANSPORT_CORE_NATIVE_SHA256": "aa04e9aca4afa2663202eac7085329ac5e1f331057b418d3339c2ed17309c23b"
+  },
+  "exit_code": 0,
+  "wall_seconds": 0.24916825001128018
+}

@@ -1,0 +1,12 @@
+test_bootstrap_special_files_and_tamper (__main__.InputTests.test_bootstrap_special_files_and_tamper) ... ok
+test_explicit_work_refusal (__main__.InputTests.test_explicit_work_refusal) ... ok
+test_frozen_independent_shape_observations (__main__.InputTests.test_frozen_independent_shape_observations) ... ok
+test_frozen_raw (__main__.InputTests.test_frozen_raw) ... ok
+test_host_type_and_unchanged_unicode (__main__.InputTests.test_host_type_and_unchanged_unicode) ... ok
+test_review_regressions (__main__.InputTests.test_review_regressions) ... ok
+test_wrapper_constructions (__main__.InputTests.test_wrapper_constructions) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.803s
+
+OK

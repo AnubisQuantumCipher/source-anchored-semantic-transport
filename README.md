@@ -57,6 +57,7 @@ This is an open-source implementation under the [MIT license](LICENSE), targetin
 - A bounded, typed Boolean-expression interpreter for fixture bindings: it checks proposed patches against supplied states without executing candidate Python code.
 - An optional [source-bound obligation evaluator](docs/BOUND_EVALUATION.md) with distinct typed predicate bindings, conservative handling of conflicting reports, and checks that reject a submitted verdict when it disagrees with the computed result.
 - [Recomputed finite test receipts](docs/BOUND_TESTS.md) bind a proposed function replacement to a declared predicate and test table; supplied success claims cannot substitute for rerunning the bounded comparison. The [fresh workflow comparison](examples/bound-tests-v1/REPORT.md) records passing first drafts in both arms and higher measured overhead for transport.
+- [Deterministic QUORUM replay](examples/quorum-replay-v1/README.md) connects source and quotation checks, declared condition and exception structure, context-change dependencies, and retained readings through one qualified process entry point. The same checker accepts an original-document index or a matched meaning ZIP and recomputes the result.
 
 ## Start
 
@@ -107,6 +108,12 @@ The short formula is an entry point into the package. It cannot independently re
 - [Source review, interpretation gaps and governing records](docs/SOURCE_REVIEW.md)
 - [Reproducible handoff with corrections, revocation and missing evidence](examples/handoff-v1/README.md)
 - [Security boundaries](SECURITY.md)
+- [QUORUM source and quotation checks in development](examples/quorum-source-v1/README.md)
+- [QUORUM declared conditions and exceptions in development](examples/quorum-claim-v1/README.md)
+- [QUORUM change impact, dependency paths and retained history](examples/quorum-impact-v1/README.md)
+- [QUORUM exact task, registry and input-manifest bindings](examples/quorum-context-v1/README.md)
+- [QUORUM readings, challenges, withdrawals and stance counts](examples/quorum-reading-v1/README.md)
+- [Complete QUORUM replay from original documents or a meaning ZIP](examples/quorum-replay-v1/README.md)
 - [Contribution rules](CONTRIBUTING.md)
 - [License scope](LICENSE-SCOPE.md)
 

@@ -1,0 +1,350 @@
+﻿2026-10-29T16:13:28.5497488Z Current runner version: '2.338.0'
+2026-10-29T16:13:28.5522795Z ##[group]Runner Image Provisioner
+2026-10-29T16:13:28.5523705Z Hosted Compute Agent
+2026-10-29T16:13:28.5524325Z Version: 20261021.618
+2026-10-29T16:13:28.5525041Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-29T16:13:28.5525831Z Build Date: 2026-10-21T00:45:21Z
+2026-10-29T16:13:28.5526599Z Worker ID: {236912a8-37d7-4d6a-bb5b-57bae3757bb2}
+2026-10-29T16:13:28.5527341Z Region: westus2
+2026-10-29T16:13:28.5528234Z Cloud: Azure
+2026-10-29T16:13:28.5528887Z ##[endgroup]
+2026-10-29T16:13:28.5530401Z ##[group]Operating System
+2026-10-29T16:13:28.5531088Z Ubuntu
+2026-10-29T16:13:28.5531718Z 24.04.5
+2026-10-29T16:13:28.5532244Z LTS
+2026-10-29T16:13:28.5532811Z ##[endgroup]
+2026-10-29T16:13:28.5533599Z ##[group]Runner Image
+2026-10-29T16:13:28.5534264Z Image: ubuntu-24.04
+2026-10-29T16:13:28.5534958Z Version: 20261025.353.1
+2026-10-29T16:13:28.5536231Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-29T16:13:28.5538409Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+2026-10-29T16:13:28.5539451Z ##[endgroup]
+2026-10-29T16:13:28.5540664Z ##[group]GITHUB_TOKEN Permissions
+2026-10-29T16:13:28.5542572Z Contents: read
+2026-10-29T16:13:28.5543307Z Metadata: read
+2026-10-29T16:13:28.5543926Z ##[endgroup]
+2026-10-29T16:13:28.5546115Z Secret source: Actions
+2026-10-29T16:13:28.5547123Z Cache mode: write
+2026-10-29T16:13:28.5548624Z Prepare workflow directory
+2026-10-29T16:13:28.5943480Z Prepare all required actions
+2026-10-29T16:13:28.5990762Z Getting action download info
+2026-10-29T16:13:28.9319440Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-29T16:13:29.0524284Z Download action repository 'actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97' (SHA:5fda3b95a4ea91299a34e894583c3862153e4b97)
+2026-10-29T16:13:29.4115073Z Complete job name: portable
+2026-10-29T16:13:29.4991065Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-10-29T16:13:29.4992136Z with:
+2026-10-29T16:13:29.4992751Z   repository: AnubisQuantumCipher/source-anchored-semantic-transport
+2026-10-29T16:13:29.4996897Z   token: ***
+2026-10-29T16:13:29.4997326Z   ssh-strict: true
+2026-10-29T16:13:29.4997960Z   ssh-user: git
+2026-10-29T16:13:29.4998411Z   persist-credentials: true
+2026-10-29T16:13:29.4998889Z   clean: true
+2026-10-29T16:13:29.4999329Z   sparse-checkout-cone-mode: true
+2026-10-29T16:13:29.4999848Z   fetch-depth: 1
+2026-10-29T16:13:29.5000273Z   fetch-tags: false
+2026-10-29T16:13:29.5000715Z   show-progress: true
+2026-10-29T16:13:29.5001155Z   lfs: false
+2026-10-29T16:13:29.5001562Z   submodules: false
+2026-10-29T16:13:29.5002006Z   set-safe-directory: true
+2026-10-29T16:13:29.5002518Z   allow-unsafe-pr-checkout: false
+2026-10-29T16:13:29.5003289Z ##[endgroup]
+2026-10-29T16:13:29.7691841Z Syncing repository: AnubisQuantumCipher/source-anchored-semantic-transport
+2026-10-29T16:13:29.7694410Z ##[group]Getting Git version info
+2026-10-29T16:13:29.7696441Z Working directory is '/home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport'
+2026-10-29T16:13:29.7698230Z [command]/usr/bin/git version
+2026-10-29T16:13:29.7783512Z git version 2.56.0
+2026-10-29T16:13:29.7809908Z ##[endgroup]
+2026-10-29T16:13:29.7829684Z Temporarily overriding HOME='/home/runner/work/_temp/f5300139-6869-4f41-b3d4-2659b8e51360' before making global git config changes
+2026-10-29T16:13:29.7832189Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-29T16:13:29.7836843Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport
+2026-10-29T16:13:29.7890843Z Deleting the contents of '/home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport'
+2026-10-29T16:13:29.7897081Z ##[group]Initializing the repository
+2026-10-29T16:13:29.7903163Z [command]/usr/bin/git init /home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport
+2026-10-29T16:13:29.8018876Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-29T16:13:29.8020070Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-29T16:13:29.8021168Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-29T16:13:29.8021932Z hint: call:
+2026-10-29T16:13:29.8022335Z hint:
+2026-10-29T16:13:29.8022879Z hint: 	git config --global init.defaultBranch <name>
+2026-10-29T16:13:29.8023496Z hint:
+2026-10-29T16:13:29.8024084Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-29T16:13:29.8025026Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-29T16:13:29.8025751Z hint:
+2026-10-29T16:13:29.8026168Z hint: 	git branch -m <name>
+2026-10-29T16:13:29.8026641Z hint:
+2026-10-29T16:13:29.8027320Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-29T16:13:29.8030326Z Initialized empty Git repository in /home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport/.git/
+2026-10-29T16:13:29.8052123Z [command]/usr/bin/git remote add origin https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport
+2026-10-29T16:13:29.8134845Z ##[endgroup]
+2026-10-29T16:13:29.8136152Z ##[group]Disabling automatic garbage collection
+2026-10-29T16:13:29.8139835Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-29T16:13:29.8178757Z ##[endgroup]
+2026-10-29T16:13:29.8180248Z ##[group]Setting up auth
+2026-10-29T16:13:29.8187342Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-29T16:13:29.8230270Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-29T16:13:29.8664512Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-29T16:13:29.8722563Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-29T16:13:29.8967070Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-29T16:13:29.9012314Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-29T16:13:29.9258174Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-29T16:13:29.9308712Z ##[endgroup]
+2026-10-29T16:13:29.9310168Z ##[group]Fetching the repository
+2026-10-29T16:13:29.9322578Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +43faac3c4c75d63ce2651d49da4145696d2c96b7:refs/remotes/pull/13/merge
+2026-10-29T16:13:30.8265418Z From https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport
+2026-10-29T16:13:30.8269065Z  * [new ref]         43faac3c4c75d63ce2651d49da4145696d2c96b7 -> pull/13/merge
+2026-10-29T16:13:30.8273083Z ##[endgroup]
+2026-10-29T16:13:30.8274512Z ##[group]Determining the checkout info
+2026-10-29T16:13:30.8276071Z ##[endgroup]
+2026-10-29T16:13:30.8286454Z [command]/usr/bin/git sparse-checkout disable
+2026-10-29T16:13:30.8346592Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-29T16:13:30.8386644Z ##[group]Checking out the ref
+2026-10-29T16:13:30.8390265Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/13/merge
+2026-10-29T16:13:31.0874434Z Note: switching to 'refs/remotes/pull/13/merge'.
+2026-10-29T16:13:31.0875117Z 
+2026-10-29T16:13:31.0875593Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-29T16:13:31.0876688Z changes and commit them, and you can discard any commits you make in this
+2026-10-29T16:13:31.0878269Z state without impacting any branches by switching back to a branch.
+2026-10-29T16:13:31.0878830Z 
+2026-10-29T16:13:31.0879239Z If you want to create a new branch to retain commits you create, you may
+2026-10-29T16:13:31.0880107Z do so (now or later) by using -c with the switch command. Example:
+2026-10-29T16:13:31.0880606Z 
+2026-10-29T16:13:31.0880838Z   git switch -c <new-branch-name>
+2026-10-29T16:13:31.0881212Z 
+2026-10-29T16:13:31.0881458Z Or undo this operation with:
+2026-10-29T16:13:31.0881784Z 
+2026-10-29T16:13:31.0881977Z   git switch -
+2026-10-29T16:13:31.0882263Z 
+2026-10-29T16:13:31.0882707Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-29T16:13:31.0883294Z 
+2026-10-29T16:13:31.0883985Z HEAD is now at 43faac3 Merge c13b9a8a8dd1f6d3d2811705ab52ea9b85b1f303 into 4cdec4855a9ce9e4128dc6e7c7a8a26d9e974345
+2026-10-29T16:13:31.0900567Z ##[endgroup]
+2026-10-29T16:13:31.0958115Z [command]/usr/bin/git log -1 --format=%H
+2026-10-29T16:13:31.0994456Z 43faac3c4c75d63ce2651d49da4145696d2c96b7
+2026-10-29T16:13:31.1369031Z ##[group]Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+2026-10-29T16:13:31.1369563Z with:
+2026-10-29T16:13:31.1369833Z   python-version: 3.14.10
+2026-10-29T16:13:31.1370122Z   architecture: x64
+2026-10-29T16:13:31.1370383Z   check-latest: false
+2026-10-29T16:13:31.1370660Z   allow-prereleases: false
+2026-10-29T16:13:31.1373611Z   token: ***
+2026-10-29T16:13:31.1373941Z   update-environment: true
+2026-10-29T16:13:31.1374250Z   freethreaded: false
+2026-10-29T16:13:31.1374515Z ##[endgroup]
+2026-10-29T16:13:31.2678915Z ##[group]Installed versions
+2026-10-29T16:13:31.2696314Z Version 3.14.10 was not found in the local cache
+2026-10-29T16:13:32.8325333Z Version 3.14.10 is available for downloading
+2026-10-29T16:13:32.8326471Z Download from "https://github.com/actions/python-versions/releases/download/3.14.10-40336797752/python-3.14.10-linux-24.04-x64.tar.gz"
+2026-10-29T16:13:33.4854513Z Extract downloaded archive
+2026-10-29T16:13:33.5010318Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/7eab94fd-6263-4609-9b7c-02b37f127718 -f /home/runner/work/_temp/a1355f60-ba3b-4849-a25a-bd327d7834c9
+2026-10-29T16:13:35.7509305Z Execute installation script
+2026-10-29T16:13:35.7623788Z Check if Python hostedtoolcache folder exist...
+2026-10-29T16:13:35.7624395Z Create Python 3.14.10 folder
+2026-10-29T16:13:35.7638975Z Copy Python binaries to hostedtoolcache folder
+2026-10-29T16:13:36.2683191Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+2026-10-29T16:13:36.2726253Z Upgrading pip...
+2026-10-29T16:13:38.3840155Z Collecting pip
+2026-10-29T16:13:38.4488554Z Downloading pip-26.2.2-py3-none-any.whl.metadata (4.6 kB)
+2026-10-29T16:13:38.4625107Z Downloading pip-26.2.2-py3-none-any.whl (1.8 MB)
+2026-10-29T16:13:38.5668536Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 21.5 MB/s  0:00:00
+2026-10-29T16:13:38.5669218Z 
+2026-10-29T16:13:38.6814596Z Installing collected packages: pip
+2026-10-29T16:13:38.6815294Z Attempting uninstall: pip
+2026-10-29T16:13:38.6855809Z Found existing installation: pip 26.2.2
+2026-10-29T16:13:38.7183459Z Uninstalling pip-26.2.2:
+2026-10-29T16:13:38.7240598Z Successfully uninstalled pip-26.2.2
+2026-10-29T16:13:39.9043481Z Successfully installed pip-26.2.2
+2026-10-29T16:13:39.9668789Z Create complete file
+2026-10-29T16:13:39.9709304Z Successfully set up CPython (3.14.10)
+2026-10-29T16:13:39.9710293Z ##[endgroup]
+2026-10-29T16:13:39.9973789Z ##[group]Run sudo apt-get update
+2026-10-29T16:13:39.9974197Z [36;1msudo apt-get update[0m
+2026-10-29T16:13:39.9974567Z [36;1msudo apt-get install --yes --no-install-recommends ripgrep[0m
+2026-10-29T16:13:39.9974973Z [36;1m/usr/bin/rg --version[0m
+2026-10-29T16:13:40.0002679Z shell: /usr/bin/bash -e {0}
+2026-10-29T16:13:40.0003152Z env:
+2026-10-29T16:13:40.0003600Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T16:13:40.0004813Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+2026-10-29T16:13:40.0005636Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T16:13:40.0006377Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T16:13:40.0006868Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T16:13:40.0007280Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+2026-10-29T16:13:40.0007618Z ##[endgroup]
+2026-10-29T16:13:40.0961456Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-10-29T16:13:40.1231714Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+2026-10-29T16:13:40.1241609Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-10-29T16:13:40.1308779Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2026-10-29T16:13:40.1336909Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2026-10-29T16:13:40.1386780Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-10-29T16:13:40.2559512Z Get:7 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1406 kB]
+2026-10-29T16:13:40.2705018Z Get:8 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [310 kB]
+2026-10-29T16:13:40.2714596Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1707 kB]
+2026-10-29T16:13:40.2816311Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [343 kB]
+2026-10-29T16:13:40.2843514Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1809 kB]
+2026-10-29T16:13:40.2971019Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [411 kB]
+2026-10-29T16:13:40.2994902Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [14.3 kB]
+2026-10-29T16:13:40.3779282Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1146 kB]
+2026-10-29T16:13:40.3815194Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [231 kB]
+2026-10-29T16:13:40.3838711Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1223 kB]
+2026-10-29T16:13:40.4252223Z Get:18 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [669 kB]
+2026-10-29T16:13:40.4312213Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [246 kB]
+2026-10-29T16:13:40.4370982Z Get:19 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [605 kB]
+2026-10-29T16:13:43.3698652Z Fetched 10.5 MB in 1s (9930 kB/s)
+2026-10-29T16:13:44.4303845Z Reading package lists...
+2026-10-29T16:13:44.4696201Z Reading package lists...
+2026-10-29T16:13:44.6717979Z Building dependency tree...
+2026-10-29T16:13:44.6725169Z Reading state information...
+2026-10-29T16:13:44.8310626Z The following NEW packages will be installed:
+2026-10-29T16:13:44.8311343Z   ripgrep
+2026-10-29T16:13:44.8509294Z 0 upgraded, 1 newly installed, 0 to remove and 5 not upgraded.
+2026-10-29T16:13:44.8509866Z Need to get 1551 kB of archives.
+2026-10-29T16:13:44.8510438Z After this operation, 5335 kB of additional disk space will be used.
+2026-10-29T16:13:44.8511158Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-10-29T16:13:45.0092614Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 ripgrep amd64 14.1.0-1 [1551 kB]
+2026-10-29T16:13:45.7692670Z Fetched 1551 kB in 1s (2311 kB/s)
+2026-10-29T16:13:45.7918813Z Selecting previously unselected package ripgrep.
+2026-10-29T16:13:45.8192633Z (Reading database ... 
+2026-10-29T16:13:45.8193378Z (Reading database ... 5%
+2026-10-29T16:13:45.8194071Z (Reading database ... 10%
+2026-10-29T16:13:45.8194503Z (Reading database ... 15%
+2026-10-29T16:13:45.8194911Z (Reading database ... 20%
+2026-10-29T16:13:45.8195246Z (Reading database ... 25%
+2026-10-29T16:13:45.8195607Z (Reading database ... 30%
+2026-10-29T16:13:45.8196345Z (Reading database ... 35%
+2026-10-29T16:13:45.8196749Z (Reading database ... 40%
+2026-10-29T16:13:45.8197019Z (Reading database ... 45%
+2026-10-29T16:13:45.8197253Z (Reading database ... 50%
+2026-10-29T16:13:45.8242991Z (Reading database ... 55%
+2026-10-29T16:13:45.9885159Z (Reading database ... 60%
+2026-10-29T16:13:46.1746730Z (Reading database ... 65%
+2026-10-29T16:13:46.3827436Z (Reading database ... 70%
+2026-10-29T16:13:46.5918895Z (Reading database ... 75%
+2026-10-29T16:13:46.7739539Z (Reading database ... 80%
+2026-10-29T16:13:46.8900158Z (Reading database ... 85%
+2026-10-29T16:13:47.0289692Z (Reading database ... 90%
+2026-10-29T16:13:47.2011988Z (Reading database ... 95%
+2026-10-29T16:13:47.2012506Z (Reading database ... 100%
+2026-10-29T16:13:47.2013188Z (Reading database ... 215504 files and directories currently installed.)
+2026-10-29T16:13:47.2059787Z Preparing to unpack .../ripgrep_14.1.0-1_amd64.deb ...
+2026-10-29T16:13:47.2096062Z Unpacking ripgrep (14.1.0-1) ...
+2026-10-29T16:13:47.2757523Z Setting up ripgrep (14.1.0-1) ...
+2026-10-29T16:13:47.2783490Z Processing triggers for man-db (2.12.0-4build2) ...
+2026-10-29T16:13:47.2805035Z Not building database; man-db/auto-update is not 'true'.
+2026-10-29T16:13:47.9478040Z 
+2026-10-29T16:13:47.9478850Z Running kernel seems to be up-to-date.
+2026-10-29T16:13:47.9479179Z 
+2026-10-29T16:13:47.9479313Z No services need to be restarted.
+2026-10-29T16:13:47.9479548Z 
+2026-10-29T16:13:47.9488673Z No containers need to be restarted.
+2026-10-29T16:13:47.9488988Z 
+2026-10-29T16:13:47.9489203Z No user sessions are running outdated binaries.
+2026-10-29T16:13:47.9489523Z 
+2026-10-29T16:13:47.9489818Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-10-29T16:13:48.8581972Z ripgrep 14.1.0
+2026-10-29T16:13:48.8582248Z 
+2026-10-29T16:13:48.8582449Z features:-simd-accel,+pcre2
+2026-10-29T16:13:48.8582822Z simd(compile):+SSE2,-SSSE3,-AVX2
+2026-10-29T16:13:48.8583102Z simd(runtime):+SSE2,+SSSE3,+AVX2
+2026-10-29T16:13:48.8583298Z 
+2026-10-29T16:13:48.8583424Z PCRE2 10.42 is available (JIT is available)
+2026-10-29T16:13:48.8629376Z ##[group]Run native_workflow_tmp="$(mktemp -d)"
+2026-10-29T16:13:48.8629781Z [36;1mnative_workflow_tmp="$(mktemp -d)"[0m
+2026-10-29T16:13:48.8630180Z [36;1mpython3 -I -S -B -Werror comparison/workflow/test_workflow.py \[0m
+2026-10-29T16:13:48.8630649Z [36;1m  --root "$native_workflow_tmp/normal" --mode portable \[0m
+2026-10-29T16:13:48.8631073Z [36;1m  --expect-product-sha256 "$NATIVE_WORKFLOW_HELD_SHA256"[0m
+2026-10-29T16:13:48.8631530Z [36;1mpython3 -I -S -B -O -Werror comparison/workflow/test_workflow.py \[0m
+2026-10-29T16:13:48.8632018Z [36;1m  --root "$native_workflow_tmp/optimized" --mode portable --optimized \[0m
+2026-10-29T16:13:48.8632482Z [36;1m  --expect-product-sha256 "$NATIVE_WORKFLOW_HELD_SHA256"[0m
+2026-10-29T16:13:48.8633006Z [36;1mnative_workflow_t_pin="$(sha256sum "$native_workflow_tmp/normal/T-preparation.json")"[0m
+2026-10-29T16:13:48.8633618Z [36;1mnative_workflow_receipt_pin="$(sha256sum "$native_workflow_tmp/normal/receipt.json")"[0m
+2026-10-29T16:13:48.8634207Z [36;1mpython3 -I -S -B -Werror comparison/workflow/test_native_tools.py \[0m
+2026-10-29T16:13:48.8634652Z [36;1m  --campaign-root "$native_workflow_tmp/normal" \[0m
+2026-10-29T16:13:48.8635053Z [36;1m  --expect-campaign-sha256 "${native_workflow_t_pin%% *}" \[0m
+2026-10-29T16:13:48.8635546Z [36;1m  --expect-campaign-receipt-sha256 "${native_workflow_receipt_pin%% *}" \[0m
+2026-10-29T16:13:48.8635996Z [36;1m  --root "$native_workflow_tmp/native-tools"[0m
+2026-10-29T16:13:48.8658654Z shell: /usr/bin/bash -e {0}
+2026-10-29T16:13:48.8658973Z env:
+2026-10-29T16:13:48.8659367Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T16:13:48.8659965Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+2026-10-29T16:13:48.8660436Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T16:13:48.8660836Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T16:13:48.8661436Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T16:13:48.8661818Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+2026-10-29T16:13:48.8662322Z   NATIVE_WORKFLOW_HELD_SHA256: 4679aae738dd3efb9c4840e677ec6e55e8a423dd7c8522a0addf6612a6bbfbc1
+2026-10-29T16:13:48.8662780Z ##[endgroup]
+2026-10-29T16:13:57.2636352Z {"root":"/tmp/tmp.7U90xNF2xa/normal","status":"PASS"}
+2026-10-29T16:14:19.2523801Z {"root":"/tmp/tmp.7U90xNF2xa/optimized","status":"PASS"}
+2026-10-29T16:14:20.0019221Z {"arms":["original"],"authority":"NONE","calls":8,"native_operations_per_arm":6,"preparation":{"bytes":12064,"sha256":"e2c64e71fcadfa72dc7db37cb5872ce4bb26a10a7ea7945e81dbb0f764e9d4c3"},"receiver_benefit":"UNRUN","schema":"transport/native-tool-run-receipt/1","semantic_adequacy":"UNPROVEN","status":"PASS","strongest_baseline":"UNQUALIFIED"}
+2026-10-29T16:14:20.0165123Z ##[group]Run native_evidence_tmp="$(mktemp -d)"
+2026-10-29T16:14:20.0165565Z [36;1mnative_evidence_tmp="$(mktemp -d)"[0m
+2026-10-29T16:14:20.0165983Z [36;1mpython3 -I -S -B -Werror comparison/workflow/test_evidence.py \[0m
+2026-10-29T16:14:20.0166393Z [36;1m  --root "$native_evidence_tmp/normal" \[0m
+2026-10-29T16:14:20.0166776Z [36;1m  --expect-reader-sha256 "$NATIVE_WORKFLOW_READER_SHA256"[0m
+2026-10-29T16:14:20.0167399Z [36;1mpython3 -I -S -B -O -Werror comparison/workflow/test_evidence.py \[0m
+2026-10-29T16:14:20.0168271Z [36;1m  --root "$native_evidence_tmp/optimized" --optimized \[0m
+2026-10-29T16:14:20.0168742Z [36;1m  --expect-reader-sha256 "$NATIVE_WORKFLOW_READER_SHA256"[0m
+2026-10-29T16:14:20.0169176Z [36;1mpython3 -I -S -B -Werror comparison/workflow/ci/test_delta.py[0m
+2026-10-29T16:14:20.0169624Z [36;1mpython3 -I -S -B -O -Werror comparison/workflow/ci/test_delta.py[0m
+2026-10-29T16:14:20.0170147Z [36;1mpython3 -I -S -B -Werror comparison/workflow/ci/prepare_receipt.py --check[0m
+2026-10-29T16:14:20.0170694Z [36;1mpython3 -I -S -B -O -Werror comparison/workflow/ci/prepare_receipt.py --check[0m
+2026-10-29T16:14:20.0171227Z [36;1mpython3 -I -S -B -Werror comparison/retrieval/prepare_receipt.py --check[0m
+2026-10-29T16:14:20.0171687Z [36;1mpython3 -I -S -B -Werror install/check_source.py[0m
+2026-10-29T16:14:20.0172053Z [36;1mpython3 -I -S -B -Werror - <<'PY'[0m
+2026-10-29T16:14:20.0172328Z [36;1mimport ast[0m
+2026-10-29T16:14:20.0172552Z [36;1mfrom pathlib import Path[0m
+2026-10-29T16:14:20.0172828Z [36;1mroot = Path('comparison/workflow')[0m
+2026-10-29T16:14:20.0173252Z [36;1mfor name in ('native_workspace.py', 'test_workflow.py', 'test_boundaries.py',[0m
+2026-10-29T16:14:20.0173768Z [36;1m             'test_native_tools.py', 'test_evidence.py', 'prepare_receipt.py',[0m
+2026-10-29T16:14:20.0174200Z [36;1m             'ci/prepare_receipt.py', 'ci/test_delta.py'):[0m
+2026-10-29T16:14:20.0174552Z [36;1m    with (root / name).open('rb') as source:[0m
+2026-10-29T16:14:20.0174868Z [36;1m        raw = source.read(131073)[0m
+2026-10-29T16:14:20.0175135Z [36;1m    if len(raw) > 131072:[0m
+2026-10-29T16:14:20.0175435Z [36;1m        raise ValueError('source byte bound: ' + name)[0m
+2026-10-29T16:14:20.0175751Z [36;1m    tree = ast.parse(raw)[0m
+2026-10-29T16:14:20.0176009Z [36;1m    for node in ast.walk(tree):[0m
+2026-10-29T16:14:20.0176372Z [36;1m        if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):[0m
+2026-10-29T16:14:20.0176780Z [36;1m            if node.end_lineno - node.lineno + 1 > 60:[0m
+2026-10-29T16:14:20.0177192Z [36;1m                raise ValueError('function size: ' + name + ':' + node.name)[0m
+2026-10-29T16:14:20.0177593Z [36;1m        if isinstance(node, ast.While):[0m
+2026-10-29T16:14:20.0178158Z [36;1m            raise ValueError('explicit while requires separate review: ' + name)[0m
+2026-10-29T16:14:20.0178729Z [36;1mprint('Function-size and explicit-loop guards pass; no termination proof claimed')[0m
+2026-10-29T16:14:20.0179151Z [36;1mPY[0m
+2026-10-29T16:14:20.0199919Z shell: /usr/bin/bash -e {0}
+2026-10-29T16:14:20.0200341Z env:
+2026-10-29T16:14:20.0200604Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T16:14:20.0201044Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+2026-10-29T16:14:20.0201483Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T16:14:20.0201878Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T16:14:20.0202260Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T16:14:20.0202643Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+2026-10-29T16:14:20.0203163Z   NATIVE_WORKFLOW_READER_SHA256: fed2ceb65a2d55ba9f856b7bf92fc1c9157c64f44e5049e0dd0bd67d1e53d8dc
+2026-10-29T16:14:20.0203632Z ##[endgroup]
+2026-10-29T16:14:20.0834523Z Traceback (most recent call last):
+2026-10-29T16:14:20.0849367Z   File "/home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport/comparison/workflow/test_evidence.py", line 255, in <module>
+2026-10-29T16:14:20.0850663Z     main()
+2026-10-29T16:14:20.0850985Z     ~~~~^^
+2026-10-29T16:14:20.0852192Z   File "/home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport/comparison/workflow/test_evidence.py", line 250, in main
+2026-10-29T16:14:20.0853577Z     run(args.root, args.expect_reader_sha256, args.optimized)
+2026-10-29T16:14:20.0854182Z     ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T16:14:20.0855488Z   File "/home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport/comparison/workflow/test_evidence.py", line 189, in run
+2026-10-29T16:14:20.0857016Z     need(root.is_absolute() and root.parent == VROOT and not root.exists(), 'new private V root')
+2026-10-29T16:14:20.0858124Z     ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T16:14:20.0859540Z   File "/home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport/comparison/workflow/test_evidence.py", line 31, in need
+2026-10-29T16:14:20.0860771Z     raise AssertionError(reason)
+2026-10-29T16:14:20.0861156Z AssertionError: new private V root
+2026-10-29T16:14:20.0946300Z ##[error]Process completed with exit code 1.
+2026-10-29T16:14:20.1114045Z Post job cleanup.
+2026-10-29T16:14:20.2055120Z [command]/usr/bin/git version
+2026-10-29T16:14:20.2108133Z git version 2.56.0
+2026-10-29T16:14:20.2156717Z Temporarily overriding HOME='/home/runner/work/_temp/4c314ede-15d4-4509-9cc9-f4978c714a14' before making global git config changes
+2026-10-29T16:14:20.2158266Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-29T16:14:20.2163939Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport
+2026-10-29T16:14:20.2210143Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-29T16:14:20.2250169Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-29T16:14:20.2544577Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-29T16:14:20.2581072Z http.https://github.com/.extraheader
+2026-10-29T16:14:20.2601401Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-29T16:14:20.2649131Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-29T16:14:20.2937562Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-29T16:14:20.2988769Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-29T16:14:20.3414369Z Cleaning up orphan processes
+2026-10-29T16:14:20.3894558Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

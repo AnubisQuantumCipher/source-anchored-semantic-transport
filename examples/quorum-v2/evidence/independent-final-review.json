@@ -1,0 +1,485 @@
+{
+  "assurance_boundary": [
+    "Policy thresholds are TESTED deterministic computations over caller-held records; no formal theorem of the Python policy or process wrapper is claimed.",
+    "Assigned families and origin classes are held declarations. Provider authentication and statistical/error independence are NOT_ESTABLISHED.",
+    "Response UTF8 bytes are checked; stance interpretation is NOT_CHECKED. Prompt/settings/source fields in standalone mode are digest references only.",
+    "Live composition replays the exact admitted V1 closure and binds selected claim/task/source context. It preserves NEEDS_REVALIDATION, claim_truth NOT_ASSESSED, semantic_completeness UNPROVEN and authority NONE.",
+    "V1 registry remains at most8; the separate9-seat companion is supported with synthetic records. Actual9-family/provider observation was not performed by reviewer.",
+    "Original/transport live fixtures and relocation run locally on the admitted Omarchy/Python/runtime. No hosted CI success or portable runtime admission is inferred.",
+    "Python/OS/hash implementation and trusted filesystem/race assumptions remain; no execution-byte or whole-system proof.",
+    "No model or provider calls were made by this reviewer; any later two-family observational run requires separate frozen contract, prelaunch review and retained raw capture."
+  ],
+  "corrections": [
+    "Oracle revision02 only corrects unused admission latent reading digests in L13/L14; all87 expected outcomes unchanged, revision01 retained.",
+    "First adapter report had42 passes and A11 pending; first fake-closure probe was metadata-only. Final same43 include genuine public nine-seat V1 bound refusal and actual altered private replay module with self-consistent outer digests.",
+    "Local host-key overload callback observed and repaired by strict exact key types; original probe01 status label was incorrect and explicitly corrected; final probe03 refuses without callback.",
+    "Nested NUL path escaped as ValueError before fix; final same negative refuses without launching. Source original-share-null accounting defect repaired before own first authentic original-arm test."
+  ],
+  "final_observations": {
+    "adapter-normal-03/results.json.gz": {
+      "bytes": 6461,
+      "cases": 43,
+      "sha256": "71c78bfb43d97f37c7217a8eb87f9caf61669bfbe85a551335df35039c6ff8b6"
+    },
+    "adapter-optimized-03/results.json.gz": {
+      "bytes": 6461,
+      "cases": 43,
+      "sha256": "1cdfb2735f9c47f1a749baf2739cada07dbeffccde594f6793dc8d2a13bc743b"
+    },
+    "host-key-probe-03.json": {
+      "bytes": 268,
+      "sha256": "7bdea1dd45f96b447d36b2415a048aa2311680f77d839c90c90abfc1ab4782f9"
+    },
+    "nine-companion-normal-02/review.json": {
+      "bytes": 1764,
+      "sha256": "b2c89068eaa137199d98bfebc1310080cf00e003aecfbc7cf177a62603058155"
+    },
+    "nine-companion-optimized-02/review.json": {
+      "bytes": 1764,
+      "sha256": "f3c8c8951f64d164e6eef83b4aa5a467c88f6282cd94b1898643201aada417f4"
+    },
+    "nul-path-02/observation.json": {
+      "bytes": 1032,
+      "sha256": "0e4cb4ac922dd3063951de5966252f21f99bbd51d47030fa2cf4a7a8fb536081"
+    },
+    "nul-path-03/observation.json": {
+      "bytes": 990,
+      "sha256": "9915945fb0d1da28bc42236c56accd377656baf520d9fbb5ac8a2c651182c915"
+    },
+    "revision02/results-normal-03.json.gz": {
+      "bytes": 8552,
+      "cases": 87,
+      "sha256": "465f9a5f3999c7c7e1381de2688feecd5aad8b04cb9e57060823e7c52a61e9a0"
+    },
+    "revision02/results-optimized-03.json.gz": {
+      "bytes": 8555,
+      "cases": 87,
+      "sha256": "94262e594200c342fc486cdfbffb8c998de6e6917394d97a798d88cbbcb1b254"
+    }
+  },
+  "frozen_contracts": {
+    "docs/quorum-v2-contract.json": {
+      "bytes": 7981,
+      "sha256": "b18d82dedcfd9a90dfa4e6576ae453296c2f6f32baa222c5c83b27c0cbdd43ae"
+    },
+    "docs/quorum-v2-replay-admitted.json": {
+      "bytes": 3549,
+      "sha256": "3efde7878e3b61d7a8af2b2b99f27a9ef78c7fd9e421f8953fa96dd7a1238869"
+    },
+    "docs/quorum-v2-replay-contract.json": {
+      "bytes": 3388,
+      "sha256": "17173995c4dbbcd6ff16e9c6ac7bd92eca3b47193e4eb77635577623f74a9a52"
+    }
+  },
+  "frozen_oracles": {
+    "adapter-controls.json": {
+      "bytes": 15759,
+      "sha256": "340fd1bd5ad0809731f51fd7bcb13c1ba9cc4b70ebcfcb5344079fefe5be0e27"
+    },
+    "oracle-fixture-correction-01.json": {
+      "bytes": 670,
+      "sha256": "12311ee66f9867a7bb3e392351231c7b7405340774ec3dd0ea1679bb4200e70c"
+    },
+    "oracle.json": {
+      "bytes": 159821,
+      "sha256": "9c2a2324644ae312229b08d6bbe38280bf271327812548050c9f1a2b9e4da80b"
+    },
+    "revision02/oracle.json": {
+      "bytes": 159821,
+      "sha256": "20d24834b1890a6e09130ea58bdaa9e225ded525bdfcf96391f54d068ffde428"
+    }
+  },
+  "function_size_checks": [
+    {
+      "file": "tools/transport_quorum_v2.py",
+      "lines": 7,
+      "name": "arguments"
+    },
+    {
+      "file": "tools/transport_quorum_v2.py",
+      "lines": 11,
+      "name": "main"
+    },
+    {
+      "file": "tools/transport_quorum_v2_input.py",
+      "lines": 3,
+      "name": "need"
+    },
+    {
+      "file": "tools/transport_quorum_v2_input.py",
+      "lines": 2,
+      "name": "sha"
+    },
+    {
+      "file": "tools/transport_quorum_v2_input.py",
+      "lines": 3,
+      "name": "canonical"
+    },
+    {
+      "file": "tools/transport_quorum_v2_input.py",
+      "lines": 4,
+      "name": "fields"
+    },
+    {
+      "file": "tools/transport_quorum_v2_input.py",
+      "lines": 6,
+      "name": "text"
+    },
+    {
+      "file": "tools/transport_quorum_v2_input.py",
+      "lines": 3,
+      "name": "identifier"
+    },
+    {
+      "file": "tools/transport_quorum_v2_input.py",
+      "lines": 3,
+      "name": "digest"
+    },
+    {
+      "file": "tools/transport_quorum_v2_input.py",
+      "lines": 2,
+      "name": "integer"
+    },
+    {
+      "file": "tools/transport_quorum_v2_input.py",
+      "lines": 2,
+      "name": "array"
+    },
+    {
+      "file": "tools/transport_quorum_v2_input.py",
+      "lines": 19,
+      "name": "_depth"
+    },
+    {
+      "file": "tools/transport_quorum_v2_input.py",
+      "lines": 6,
+      "name": "_pairs"
+    },
+    {
+      "file": "tools/transport_quorum_v2_input.py",
+      "lines": 3,
+      "name": "_number"
+    },
+    {
+      "file": "tools/transport_quorum_v2_input.py",
+      "lines": 2,
+      "name": "_noninteger"
+    },
+    {
+      "file": "tools/transport_quorum_v2_input.py",
+      "lines": 11,
+      "name": "parse"
+    },
+    {
+      "file": "tools/transport_quorum_v2_input.py",
+      "lines": 16,
+      "name": "read_regular"
+    },
+    {
+      "file": "tools/transport_quorum_v2_input.py",
+      "lines": 2,
+      "name": "pin"
+    },
+    {
+      "file": "tools/transport_quorum_v2_policy.py",
+      "lines": 9,
+      "name": "_inputs"
+    },
+    {
+      "file": "tools/transport_quorum_v2_policy.py",
+      "lines": 19,
+      "name": "_reasons"
+    },
+    {
+      "file": "tools/transport_quorum_v2_policy.py",
+      "lines": 9,
+      "name": "_dispositions"
+    },
+    {
+      "file": "tools/transport_quorum_v2_policy.py",
+      "lines": 2,
+      "name": "_counts"
+    },
+    {
+      "file": "tools/transport_quorum_v2_policy.py",
+      "lines": 7,
+      "name": "_provenance"
+    },
+    {
+      "file": "tools/transport_quorum_v2_policy.py",
+      "lines": 18,
+      "name": "_verdict"
+    },
+    {
+      "file": "tools/transport_quorum_v2_policy.py",
+      "lines": 13,
+      "name": "_result"
+    },
+    {
+      "file": "tools/transport_quorum_v2_policy.py",
+      "lines": 9,
+      "name": "evaluate"
+    },
+    {
+      "file": "tools/transport_quorum_v2_process.py",
+      "lines": 6,
+      "name": "compatible_limits"
+    },
+    {
+      "file": "tools/transport_quorum_v2_process.py",
+      "lines": 8,
+      "name": "child_limits"
+    },
+    {
+      "file": "tools/transport_quorum_v2_process.py",
+      "lines": 32,
+      "name": "run_bounded"
+    },
+    {
+      "file": "tools/transport_quorum_v2_replay.py",
+      "lines": 5,
+      "name": "_held"
+    },
+    {
+      "file": "tools/transport_quorum_v2_replay.py",
+      "lines": 14,
+      "name": "_admitted"
+    },
+    {
+      "file": "tools/transport_quorum_v2_replay.py",
+      "lines": 6,
+      "name": "_closure_files"
+    },
+    {
+      "file": "tools/transport_quorum_v2_replay.py",
+      "lines": 22,
+      "name": "_setup"
+    },
+    {
+      "file": "tools/transport_quorum_v2_replay.py",
+      "lines": 17,
+      "name": "_accounting"
+    },
+    {
+      "file": "tools/transport_quorum_v2_replay.py",
+      "lines": 12,
+      "name": "_runtime_accounting"
+    },
+    {
+      "file": "tools/transport_quorum_v2_replay.py",
+      "lines": 5,
+      "name": "_document"
+    },
+    {
+      "file": "tools/transport_quorum_v2_replay.py",
+      "lines": 13,
+      "name": "_receipt"
+    },
+    {
+      "file": "tools/transport_quorum_v2_replay.py",
+      "lines": 24,
+      "name": "_selected"
+    },
+    {
+      "file": "tools/transport_quorum_v2_replay.py",
+      "lines": 11,
+      "name": "_context"
+    },
+    {
+      "file": "tools/transport_quorum_v2_replay.py",
+      "lines": 17,
+      "name": "compose"
+    },
+    {
+      "file": "tools/transport_quorum_v2_replay.py",
+      "lines": 23,
+      "name": "replay"
+    },
+    {
+      "file": "tools/transport_quorum_v2_replay.py",
+      "lines": 11,
+      "name": "arguments"
+    },
+    {
+      "file": "tools/transport_quorum_v2_replay.py",
+      "lines": 15,
+      "name": "main"
+    },
+    {
+      "file": "tools/transport_quorum_v2_schema.py",
+      "lines": 4,
+      "name": "context"
+    },
+    {
+      "file": "tools/transport_quorum_v2_schema.py",
+      "lines": 13,
+      "name": "policy"
+    },
+    {
+      "file": "tools/transport_quorum_v2_schema.py",
+      "lines": 14,
+      "name": "registry"
+    },
+    {
+      "file": "tools/transport_quorum_v2_schema.py",
+      "lines": 8,
+      "name": "binding"
+    },
+    {
+      "file": "tools/transport_quorum_v2_schema.py",
+      "lines": 19,
+      "name": "admissions"
+    },
+    {
+      "file": "tools/transport_quorum_v2_schema.py",
+      "lines": 15,
+      "name": "ballot"
+    },
+    {
+      "file": "tools/transport_quorum_v2_schema.py",
+      "lines": 9,
+      "name": "validate"
+    }
+  ],
+  "legacy_exact_bytes": [
+    {
+      "bytes": 27955,
+      "equal_to_02f0bfee": true,
+      "path": "install/transport_quorum_bootstrap.py",
+      "sha256": "03f2bf18a67b9a6d6ccf25fd506b252b38ac34c78f56153eb22b8ecfca5738ea"
+    },
+    {
+      "bytes": 32177,
+      "equal_to_02f0bfee": true,
+      "path": "tools/transport_quorum_body.schema.json",
+      "sha256": "b6c7cafc1d4f1703188f7bdcb2150316feadc6b870eda9495ee146e2f429f8aa"
+    },
+    {
+      "bytes": 9598,
+      "equal_to_02f0bfee": true,
+      "path": "tools/transport_quorum_claim.py",
+      "sha256": "c361d626536f4dbd1f1079b613a0ba52375e78af5b09295ef151e276010d5425"
+    },
+    {
+      "bytes": 12295,
+      "equal_to_02f0bfee": true,
+      "path": "tools/transport_quorum_context.py",
+      "sha256": "6ab179a99fecd5bba4c3a0df58ce6244dcd5d01a8484206d62d127aab62ffebe"
+    },
+    {
+      "bytes": 5524,
+      "equal_to_02f0bfee": true,
+      "path": "tools/transport_quorum_graph.py",
+      "sha256": "40edaed32f10d2803a3be59e33130d62f7724de3e67eeaadf9c8d823c5dc4902"
+    },
+    {
+      "bytes": 16564,
+      "equal_to_02f0bfee": true,
+      "path": "tools/transport_quorum_impact.py",
+      "sha256": "b97e87b2a63a036d87e776cd92980ba80c7ae11fbafe9860708c73dbf2bdbbf1"
+    },
+    {
+      "bytes": 4952,
+      "equal_to_02f0bfee": true,
+      "path": "tools/transport_quorum_input.py",
+      "sha256": "6a90037a747b0cc2965dcf1b7169220a9732a16080ca0f3ca7c3b24d0349d653"
+    },
+    {
+      "bytes": 63967,
+      "equal_to_02f0bfee": true,
+      "path": "tools/transport_quorum_protocol-rules.json",
+      "sha256": "437df64e8d4a21d985570c218ec8abb208f18b6d1cd2bc23fd07d36e46c1ee48"
+    },
+    {
+      "bytes": 16588,
+      "equal_to_02f0bfee": true,
+      "path": "tools/transport_quorum_reading.py",
+      "sha256": "ecc3ab465cff4f367d71ae6970bfba9e7917a53f1145aceb743fe3f8eb16cfd4"
+    },
+    {
+      "bytes": 34956,
+      "equal_to_02f0bfee": true,
+      "path": "tools/transport_quorum_replay.py",
+      "sha256": "af53ad9a704726ae97fd8b4ba0be909e1e1cb3870c1cd5ce96cd2e23c6421584"
+    },
+    {
+      "bytes": 16277,
+      "equal_to_02f0bfee": true,
+      "path": "tools/transport_quorum_shape.py",
+      "sha256": "6fef25a491be924fb310ecafe581da9da9f3dfa19baf44b956838745c95f2170"
+    },
+    {
+      "bytes": 11078,
+      "equal_to_02f0bfee": true,
+      "path": "tools/transport_quorum_source.py",
+      "sha256": "3a356f0e135900bdbe1ce1199579e8b08978b5f00a4ab499b709993466279616"
+    },
+    {
+      "bytes": 24910,
+      "equal_to_02f0bfee": true,
+      "path": "install/test_portable_handoff.py",
+      "sha256": "f8146be8e0b75ae38dea727f2983f4fb2e156775db8c075f3fbbeceb9da8c5bb"
+    },
+    {
+      "bytes": 9696,
+      "equal_to_02f0bfee": true,
+      "path": "install/transport_handoff_inputs.py",
+      "sha256": "e8250f03719d375ce660e8f262ef009ce2ca569bae37dcfb72ed10bfb3a91cc8"
+    },
+    {
+      "bytes": 8449,
+      "equal_to_02f0bfee": true,
+      "path": "install/transport_install_layout.py",
+      "sha256": "92bca5af352c244f0c70831a824030511b82a0017fd4834b4a8e6916a5ed422b"
+    },
+    {
+      "bytes": 17126,
+      "equal_to_02f0bfee": true,
+      "path": "install/transport_install_support.py",
+      "sha256": "f8e63f6265bb7e35b3a296e1ec463a15140a4e0106865334ce5140ff7d2586da"
+    }
+  ],
+  "retained_prior_observations": [
+    "revision02/results-normal-01.json.gz",
+    "revision02/results-optimized-01.json.gz",
+    "revision02/results-normal-02.json.gz",
+    "revision02/results-optimized-02.json.gz",
+    "adapter-normal-01/results.json.gz",
+    "adapter-normal-02/results.json.gz",
+    "adapter-optimized-02/results.json.gz",
+    "host-key-probe-01.json",
+    "host-key-probe-label-correction.json",
+    "host-key-probe-02.json",
+    "nul-path-01/observation.json"
+  ],
+  "schema": "quorum/independent-final-local-review/2",
+  "scope": "Additive closed informational family-threshold policy plus live admitted original V1 source replay. No whole-product acceptance or new formal proof.",
+  "smallest_next_step": "Retain these exact source/evidence pins, qualify the reproducible public checker/CI independently, and review any actual-model observational contract separately before dispatch.",
+  "source_pins": {
+    "tools/transport_quorum_v2.py": {
+      "bytes": 1294,
+      "sha256": "e2f25465de327642c870dc5dc3fcfe4f9f155955622ab96b633040312dcfd2f0"
+    },
+    "tools/transport_quorum_v2_input.py": {
+      "bytes": 3800,
+      "sha256": "39a0ba765ac123ee3d69573094923d96173ebe7965a594168f74dbe7d9ccb5cf"
+    },
+    "tools/transport_quorum_v2_policy.py": {
+      "bytes": 5362,
+      "sha256": "b4f31395cea75d81d5512ccaef49fa5c99e9f589e9096371714360803f947abb"
+    },
+    "tools/transport_quorum_v2_process.py": {
+      "bytes": 2782,
+      "sha256": "fdd5b229d4dba1f369a3a478b21952d0ae574642a6fa102a74505c82e0692297"
+    },
+    "tools/transport_quorum_v2_replay.py": {
+      "bytes": 12727,
+      "sha256": "5e7889ea91a6af60d361e0f2ca6118a1b14fdbc72034453297848ab1019c7f18"
+    },
+    "tools/transport_quorum_v2_schema.py": {
+      "bytes": 4059,
+      "sha256": "346e7a84c6267ef7d748991c305c8491a59531dc7f232cd902dde18d0f517c92"
+    }
+  },
+  "status": "INDEPENDENT_LOCAL_CHECKS_PASS"
+}

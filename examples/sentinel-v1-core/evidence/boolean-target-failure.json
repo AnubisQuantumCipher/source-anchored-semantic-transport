@@ -1,0 +1,20 @@
+{
+  "actual_status": "MATCH_REFERENCE",
+  "finding": "BOOLEAN_INTEGER_TARGET_ALIAS",
+  "input_freeze_sha256": "4b738519605edd1b8600aaf21b532a0b38e7eba066adbc80989c2b498265020d",
+  "invalid_field": "selector.start=false equals integer evidence0 in tuple comparison",
+  "locator_sha256": "a95f7f91a9eaf3a4cc4d8c0e058d5f16c8afb921e4662dd40d4cfe66ce0b1f93",
+  "pins": {
+    "tests/test_sentinel_challenges.py": "eceec3eda95580a0e53729d0be0c2d9bd262441a34af3ac4e9e2965bd054c7f2",
+    "tests/test_sentinel_common.py": "3c94991e2f0965eaff6693ea9ab37ac752b78a559cad0a70e4cd21747f074933",
+    "tests/test_sentinel_meaning.py": "c31ec7d41e5c55d40388e360e8ec1360fd44c159247ce4281dd587a13f782e83",
+    "tools/sentinel_v1/bindings.py": "9f4beee16004c8e2b3d30ff4cf8f079dae30a74fd9578589ee17a55e5b5360ea",
+    "tools/sentinel_v1/census.py": "7d800174aeb91dc0b30b47c3fc73e60ab72cd88ac1d0c25a332a4fbe18c53a24",
+    "tools/sentinel_v1/challenges.py": "98123cdb080593d8dd3e2e3d79018c8e56f6e52e005c1fbcd918c61dda818dfc",
+    "tools/sentinel_v1/common.py": "2463b4572553603511f968e977d9460cee5db859f0f0d3715139abfde35694f8",
+    "tools/sentinel_v1/graph.py": "6335d67aaa7855a01eeba3e047edd52b37af7823ce733765174b66eb1169918d",
+    "tools/sentinel_v1/locators.py": "f098c132f72dd95b1775dea48931919ea920fdeeae3f7183490d472a4b34cd8c"
+  },
+  "result_sha256": "6826d3e05cd4024867e09b044ec904e9e7bdf407e4c904a1d49fc376e3aab40c",
+  "scope": "BARE_STRUCTURAL_REPLAY_ONLY; NOT_QUALIFIED; source-bound resolver would reject exactbool"
+}

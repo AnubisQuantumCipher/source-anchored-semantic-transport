@@ -1,0 +1,11 @@
+{
+  "candidate": "Missing is MISSING. Existing regular nonsymlink candidate at most32768bytes is retained exactly as base64 with byte/hash identity; parsed dict is JSON_OBJECT, all malformed/nonobject JSON is INVALID_JSON_OBJECT. These do not establish answer validity. Over-cap/unsafe candidate remains an explicit capture refusal; original terminal journal remains preserved in place, with failure receipt and no model retry.",
+  "epoch": "BEFORE_REPAIR_AND_CONTROLS_AND_ACTORS",
+  "fixture_writer": "Owner creates exactly two reusable synthetic input journals at33554432 and33554433bytes under R/controls/trace-fixtures. Writer cap33554433bytes per input, total67108865bytes, CPU30/wall30/AS512MiB, no actor data/code. Helpers retain4MiB output bound; these are test inputs, not helper output allowances. Qualification report separates full-size source tests from lowered bound seam controls.",
+  "historical_capture_sha256": "72d979b4283a81b7132edbfdf1ec5fa20e6c167b8ffa2ae1d85ad17a9586f113",
+  "prepared_utc": "2026-10-29T16:55:51.598413+00:00",
+  "reason": "Actual independent review found missing or malformed saved candidates prevented terminal trace capture. Preserve first failed attempts instead of replacing them.",
+  "schema": "transport/failed-submission-retention-clarification/1",
+  "snapshot": "Reobserve candidate status/bytes, interface and launch after capture. Difference refuses; no missingcandidate substitution, automaticrepair, or inferredfinal.",
+  "version": "capture schema4; trace_support unchanged; existing bounds unchanged"
+}
