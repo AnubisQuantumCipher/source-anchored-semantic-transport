@@ -48,6 +48,12 @@ jobs:
           python3 -I -S -B -O -Werror tests/test_source_profile_partition.py
           python3 -I -S -B -Werror install/check_source.py
           python3 -I -S -B -O -Werror install/check_source.py
+      - name: Conditional reference comparison controls, without OCR or semantic proof claims
+        run: |
+          python3 -I -S -B -Werror tests/test_transport_document_fidelity.py
+          python3 -I -S -B -O -Werror tests/test_transport_document_fidelity.py
+          python3 -I -S -B -Werror tests/test_transport_document_fidelity_public.py
+          python3 -I -S -B -O -Werror tests/test_transport_document_fidelity_public.py
       - name: State native evidence boundary
         run: |
           echo 'Native70 controls require a separately qualified declared binary. Retained evidence is local Linux aarch64; no native build, proof or execution is claimed by this Linux x64 job.'
