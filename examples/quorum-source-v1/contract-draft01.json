@@ -1,0 +1,51 @@
+{
+  "schema":"quorum/internal-source-membership-contract/1",
+  "status":"DRAFT_OWNER_REVIEW_BEFORE_IMPLEMENTATION",
+  "owner":"/root",
+  "scope":"One internal pure source/blob/quote integrity and selector-byte-membership stage after the existing admitted canonical Body stage. No accepted ReplayResult, semantic comparison, graph/claim/manifest/reading eligibility closure, source authentication, currentness, authority, model call, original-file access or fetching. Full replay/product gates remain binding.",
+  "entrypoint":"check_source_membership(body_raw: object, originals: object) -> own bounded dict; runtime parameters must be exact builtins as below. Public success contains indexes and selector statuses, never original/body decoded copies.",
+  "body_stage":"Reuse existing check_body_input validation and exact error envelopes. A private _validated_body may return the newly parsed private canonical Body to the next stage, avoiding second parsing. Do not accept a caller-supplied boolean or decoded Body as validation authority. Existing pinned schema bootstrap is inherited; source stage adds no filesystem/network/model access. No repository change admitted by this draft.",
+  "originals_interface":{
+    "outer":"exact builtin tuple, at most15 entries",
+    "item":"exact builtin tuple of length3: (source_record_id, complete_source_key, original_bytes)",
+    "source_record_id":"exact builtin str; exact byte-for-byte alias ID of one Body.sources record. Preserve the pinned schema pattern-search behavior including admitted final-LF ID cases. No stricter fullmatch policy.",
+    "complete_source_key":"exact builtin dict with exactly logical_source_id, sha256, bytes. Snapshot these into local immutable builtin values before use. logical_source_id exact builtin str, ASCII<=32 bytes, pinned Id pattern-search semantics; sha256 exact builtin str/full64 lowercase hex; bytes exact builtin int0..65536, never bool.",
+    "original_bytes":"exact immutable builtin bytes, no bytearray/memoryview/subclass/path/provider/iterator",
+    "closed_set":"One supplied item per Body.sources alias. No missing/extra/duplicate aliases; each complete key equals its declared SourceVersion.key. Repeated complete keys under distinct aliases are allowed; every physical copy is independently charged/verified, with equal keys requiring equal actual bytes.",
+    "mutation_assumption":"Caller does not concurrently mutate caller-owned tuple-item key dictionaries during synchronous validation. Private Body is owned by this invocation. All key scalar fields are snapshotted before use; no output object aliases caller dictionaries. This assumption is explicit and unproved, as in existing graph boundary."
+  },
+  "packaging_boundary":"Body raw is exactly the complete external Q_RECORDS source for this component, excluded from originals and Body.sources. Charge len(body_raw)+sum(len(each original copy)) once; reserve one source slot for Q_RECORDS. Body metadata is not charged again as another source. No other ordinary container sources are represented: a wrapper with extra sources must include them explicitly in Body.sources/originals or refuse before this component. This stage does not build/check archive bytes or a final package/ReplayRequest/runtime pin.",
+  "caps":{
+    "body_raw_bytes":65536,
+    "ordinary_sources_excluding_Q_RECORDS":15,
+    "source_count_including_Q_RECORDS":16,
+    "combined_body_plus_actual_original_bytes":65536,
+    "one_blob_or_quote_decoded_bytes":4096,
+    "blob_records":96,
+    "selector_records":16,
+    "decoded_blob_plus_quote_bytes":65536,
+    "json_blob_depth":12,
+    "complete_canonical_result_bytes_including_reserved_LF":32768,
+    "inherited":"Existing Body96-record/depth12/text/shape/work/schema/runtime bounds and container131072-source65536 limits remain. Individual maxima need not fit together. No cap increase, truncation, hidden deduplication or partial result."
+  },
+  "stage_order":[
+    {"stage":"BODY_INPUT","rule":"Invoke inherited Body raw/shape validation first; preserve its exact status/error/stage refusal. Only continue with its private validated Body."},
+    {"stage":"SOURCE_ARGUMENTS","rule":"Check exact tuple/type/key shape; reject SOURCE_INPUT_TYPE or SOURCE_KEY_SHAPE. Check max(len(Body.sources),len(originals))+1<=16, else SOURCE_COUNT_BOUND. Malformed items examined in caller tuple order."},
+    {"stage":"SOURCE_BOUNDS","rule":"Before hashing/copying original bytes, require each actual length<=65536 and len(body_raw)+sum actual lengths<=65536; else SOURCE_BYTE_BOUND. Every alias copy is charged."},
+    {"stage":"SOURCE_SET","rule":"Body.sources alias IDs must be unique, else SOURCE_DECLARATION_DUPLICATE. Input alias IDs unique, else SOURCE_DUPLICATE_ID. Exact alias set required, else SOURCE_SET_MISMATCH. In lexical alias order require exact complete key equality, else SOURCE_KEY_MISMATCH. For repeated exact keys require equal actual bytes, else SOURCE_ALIAS_BYTES_CONFLICT. Never silently deduplicate."},
+    {"stage":"SOURCE_INTEGRITY","rule":"In lexical alias order require actual length equals key.bytes, else SOURCE_BYTES_MISMATCH; then actual SHA256 equals key.sha256, else SOURCE_HASH_MISMATCH. Opaque sources may be invalid UTF8, malformed JSON or instructions; never parse them here."},
+    {"stage":"BLOB_INTEGRITY","rule":"Blob IDs unique, else BLOB_DUPLICATE_ID. For every Body.blobs record in lexical ID order: strict canonical padded base64 including zero pad bits, decode/reencode equality, else BLOB_BASE64; decoded<=4096 and equal declared bytes, else BLOB_LENGTH_MISMATCH; exact SHA256, else BLOB_HASH_MISMATCH. Charge decoded-byte budget before allocation; overflow DECODED_BYTE_BOUND."},
+    {"stage":"BLOB_ENCODING","rule":"Immediately after each individual Blob integrity check, enforce its encoding: OPAQUE_BYTES no parse; STRICT_UTF8 strict scalar UTF8 decoding, else BLOB_UTF8; CANONICAL_JSON existing check_canonical_value raw rules (W01/W02, strict scalar UTF8/no BOM/duplicate keys/unsigned integer token spelling/depth12/canonical exact bytes), any failure BLOB_CANONICAL_JSON. Root may be any canonical JSON value admitted by that existing helper; no semantic interpretation. Check this Blob encoding before advancing to the next Blob."},
+    {"stage":"QUOTE_INTEGRITY","rule":"Selector IDs unique, else SELECTOR_DUPLICATE_ID. In lexical selector ID order verify each quote strict canonical padded base64/reencode equality (QUOTE_BASE64), decoded<=4096 and declared quote_bytes (QUOTE_LENGTH_MISMATCH), and SHA256 (QUOTE_HASH_MISMATCH). Charge cumulative blob+quote decoded bytes<=65536 first (DECODED_BYTE_BOUND). Complete all quote integrity checks before any selector range/membership result."},
+    {"stage":"SELECTOR_REFERENCE","rule":"In lexical selector ID order resolve full exact selector SourceKey among already verified originals; absent exact key SELECTOR_SOURCE_MISSING. Multiple aliases with same key have already been checked equal, so no ambiguous content selection."},
+    {"stage":"SELECTOR_RANGE","rule":"In lexical selector ID order require0<=begin<=end<=source.bytes. Empty interval is allowed only for an empty source with[0,0); otherwise SELECTOR_RANGE. All offsets are exact Body-schema builtin ints, no bool/float, no Unicode normalization, characters or tokens."},
+    {"stage":"MEMBERSHIP","rule":"Only after every integrity/reference/range check succeeds, compare each decoded quote to exact half-open source byte slice. Equality=>MATCH; inequality=>DIFFERS; empty original with[0,0)=>EMPTY_SOURCE_MATCH_NONPROBATIVE. DIFFERS is an accepted internal observation, not a false claim."},
+    {"stage":"OUTPUT_BOUNDS","rule":"Construct complete private output; require canonical bytes plus one reserved process LF<=32768, otherwise OUTPUT_BYTE_BOUND. No CLI exists here. No partial result or decoded original/body/quote returned."}
+  ],
+  "result_shapes":{
+    "success":{"status":"ok","stage":"SOURCE_BLOB_SELECTOR_ONLY","body_pin":{"bytes":"actual Body raw length","sha256":"actual Body raw SHA256"},"source_index":"array of {id,key}, one per physical SourceVersion alias, lexical ID order, complete key copied to private output","blob_index":"array of {id,kind,encoding,bytes,sha256}, lexical Blob ID order, no decoded content","selectors":"array of {id,status}, lexical selector ID order; status exactly MATCH|DIFFERS|EMPTY_SOURCE_MATCH_NONPROBATIVE","source_authentication":"UNVERIFIED","current_authority":"NONE","freshness":"UNKNOWN"},
+    "error":{"status":"error","stage":"exact failing stage from stage_order, or unchanged inherited Body stage","error":"exact named code, or unchanged inherited Body error"},
+    "closed":"Every listed field required; no extra/null fields. Error never includes success indexes or claims. Decoded contents never appear in either output. Named operational input errors are explicit; unexpected implementation exceptions are defects, not successful data. No authority or whole-system proof is inferred."
+  },
+  "bounded_implementation":"Sequential bounded source/blob/selector loops and at most15-source lookup scans per selector; fixed per-item scratch<=4096 decoded bytes, no recursive new traversal, no retained decoded Blob collection. Quote scratch/index planning must respect cumulative decoded and output caps. Existing canonical parser/serializer/hash/base64/runtime/OS allocation behavior remains trusted/unproved; no claim of a fixed total Python RSS follows. Keep short single-purpose helpers and inherited strict checks."
+}

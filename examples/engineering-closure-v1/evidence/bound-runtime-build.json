@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/home/sicarii/opt/gnat/gprbuild-aarch64-linux-26.0.0-1/bin/gprbuild",
+    "-p",
+    "-P",
+    "evaluation/transport_bound_eval.gpr",
+    "-j1"
+  ],
+  "elapsed_ns": 1252446993,
+  "exit_code": 0,
+  "status": "SUCCESS",
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "bytes": 603,
+    "sha256": "ff9bfa0e5156d9d040bfbb4879b05dc7046e447d7ea0c7fcde0de1ed410943dc"
+  },
+  "storage_after": {
+    "bytes": 136083964,
+    "files": 2162
+  }
+}

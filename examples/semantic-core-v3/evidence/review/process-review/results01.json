@@ -1,0 +1,607 @@
+{
+  "cases": [
+    {
+      "case": {
+        "expected_limits": {
+          "AS": [
+            134217728,
+            134217728
+          ],
+          "CPU": [
+            2,
+            2
+          ],
+          "FSIZE": [
+            65536,
+            65536
+          ],
+          "NOFILE": [
+            32,
+            32
+          ]
+        },
+        "id": "below_caps",
+        "limits": {
+          "AS": [
+            134217728,
+            268435456
+          ],
+          "CPU": [
+            2,
+            4
+          ],
+          "FSIZE": [
+            65536,
+            131072
+          ],
+          "NOFILE": [
+            32,
+            64
+          ]
+        }
+      },
+      "issues": [],
+      "pass": true,
+      "result": {
+        "argv": [
+          "/usr/bin/python3",
+          "-I",
+          "-S",
+          "-B",
+          "-c",
+          "import json,os,resource\ncategories={'AS':resource.RLIMIT_AS,'CPU':resource.RLIMIT_CPU,'FSIZE':resource.RLIMIT_FSIZE,'NOFILE':resource.RLIMIT_NOFILE}\nfds=[]\nfor name in os.listdir('/proc/self/fd'):\n try:fds.append([name,os.readlink('/proc/self/fd/'+name)])\n except FileNotFoundError:pass\nprint(json.dumps({'limits':{name:list(resource.getrlimit(value)) for name,value in categories.items()},'cwd':os.getcwd(),'fds':fds},sort_keys=True))\n"
+        ],
+        "elapsed_ns": 15015330,
+        "exit_code": 0,
+        "probe": {
+          "cwd": "/dev/shm/semantic-transport-core-20261029/evidence/process-review/below_caps",
+          "fds": [
+            [
+              "0",
+              "/dev/null"
+            ],
+            [
+              "1",
+              "pipe:[186508368]"
+            ],
+            [
+              "2",
+              "pipe:[186508369]"
+            ],
+            [
+              "3",
+              "/dev/shm/semantic-transport-core-20261029/evidence/process-review/below_caps"
+            ]
+          ],
+          "limits": {
+            "AS": [
+              134217728,
+              134217728
+            ],
+            "CPU": [
+              2,
+              2
+            ],
+            "FSIZE": [
+              65536,
+              65536
+            ],
+            "NOFILE": [
+              32,
+              32
+            ]
+          }
+        },
+        "status": "SUCCESS",
+        "stderr": "",
+        "stdout": "{\"cwd\": \"/dev/shm/semantic-transport-core-20261029/evidence/process-review/below_caps\", \"fds\": [[\"0\", \"/dev/null\"], [\"1\", \"pipe:[186508368]\"], [\"2\", \"pipe:[186508369]\"], [\"3\", \"/dev/shm/semantic-transport-core-20261029/evidence/process-review/below_caps\"]], \"limits\": {\"AS\": [134217728, 134217728], \"CPU\": [2, 2], \"FSIZE\": [65536, 65536], \"NOFILE\": [32, 32]}}\n"
+      },
+      "worker_exit": 0,
+      "worker_stderr": "",
+      "worker_stdout": "{\"argv\": [\"/usr/bin/python3\", \"-I\", \"-S\", \"-B\", \"-c\", \"import json,os,resource\\ncategories={'AS':resource.RLIMIT_AS,'CPU':resource.RLIMIT_CPU,'FSIZE':resource.RLIMIT_FSIZE,'NOFILE':resource.RLIMIT_NOFILE}\\nfds=[]\\nfor name in os.listdir('/proc/self/fd'):\\n try:fds.append([name,os.readlink('/proc/self/fd/'+name)])\\n except FileNotFoundError:pass\\nprint(json.dumps({'limits':{name:list(resource.getrlimit(value)) for name,value in categories.items()},'cwd':os.getcwd(),'fds':fds},sort_keys=True))\\n\"], \"elapsed_ns\": 15015330, \"exit_code\": 0, \"probe\": {\"cwd\": \"/dev/shm/semantic-transport-core-20261029/evidence/process-review/below_caps\", \"fds\": [[\"0\", \"/dev/null\"], [\"1\", \"pipe:[186508368]\"], [\"2\", \"pipe:[186508369]\"], [\"3\", \"/dev/shm/semantic-transport-core-20261029/evidence/process-review/below_caps\"]], \"limits\": {\"AS\": [134217728, 134217728], \"CPU\": [2, 2], \"FSIZE\": [65536, 65536], \"NOFILE\": [32, 32]}}, \"status\": \"SUCCESS\", \"stderr\": \"\", \"stdout\": \"{\\\"cwd\\\": \\\"/dev/shm/semantic-transport-core-20261029/evidence/process-review/below_caps\\\", \\\"fds\\\": [[\\\"0\\\", \\\"/dev/null\\\"], [\\\"1\\\", \\\"pipe:[186508368]\\\"], [\\\"2\\\", \\\"pipe:[186508369]\\\"], [\\\"3\\\", \\\"/dev/shm/semantic-transport-core-20261029/evidence/process-review/below_caps\\\"]], \\\"limits\\\": {\\\"AS\\\": [134217728, 134217728], \\\"CPU\\\": [2, 2], \\\"FSIZE\\\": [65536, 65536], \\\"NOFILE\\\": [32, 32]}}\\n\"}\n"
+    },
+    {
+      "case": {
+        "expected_limits": {
+          "AS": [
+            536870912,
+            536870912
+          ],
+          "CPU": [
+            120,
+            120
+          ],
+          "FSIZE": [
+            4194304,
+            4194304
+          ],
+          "NOFILE": [
+            128,
+            128
+          ]
+        },
+        "id": "above_caps",
+        "limits": {
+          "AS": [
+            805306368,
+            805306368
+          ],
+          "CPU": [
+            180,
+            180
+          ],
+          "FSIZE": [
+            8388608,
+            8388608
+          ],
+          "NOFILE": [
+            256,
+            256
+          ]
+        }
+      },
+      "issues": [],
+      "pass": true,
+      "result": {
+        "argv": [
+          "/usr/bin/python3",
+          "-I",
+          "-S",
+          "-B",
+          "-c",
+          "import json,os,resource\ncategories={'AS':resource.RLIMIT_AS,'CPU':resource.RLIMIT_CPU,'FSIZE':resource.RLIMIT_FSIZE,'NOFILE':resource.RLIMIT_NOFILE}\nfds=[]\nfor name in os.listdir('/proc/self/fd'):\n try:fds.append([name,os.readlink('/proc/self/fd/'+name)])\n except FileNotFoundError:pass\nprint(json.dumps({'limits':{name:list(resource.getrlimit(value)) for name,value in categories.items()},'cwd':os.getcwd(),'fds':fds},sort_keys=True))\n"
+        ],
+        "elapsed_ns": 68323394,
+        "exit_code": 0,
+        "probe": {
+          "cwd": "/dev/shm/semantic-transport-core-20261029/evidence/process-review/above_caps",
+          "fds": [
+            [
+              "0",
+              "/dev/null"
+            ],
+            [
+              "1",
+              "pipe:[186508375]"
+            ],
+            [
+              "2",
+              "pipe:[186508376]"
+            ],
+            [
+              "3",
+              "/dev/shm/semantic-transport-core-20261029/evidence/process-review/above_caps"
+            ]
+          ],
+          "limits": {
+            "AS": [
+              536870912,
+              536870912
+            ],
+            "CPU": [
+              120,
+              120
+            ],
+            "FSIZE": [
+              4194304,
+              4194304
+            ],
+            "NOFILE": [
+              128,
+              128
+            ]
+          }
+        },
+        "status": "SUCCESS",
+        "stderr": "",
+        "stdout": "{\"cwd\": \"/dev/shm/semantic-transport-core-20261029/evidence/process-review/above_caps\", \"fds\": [[\"0\", \"/dev/null\"], [\"1\", \"pipe:[186508375]\"], [\"2\", \"pipe:[186508376]\"], [\"3\", \"/dev/shm/semantic-transport-core-20261029/evidence/process-review/above_caps\"]], \"limits\": {\"AS\": [536870912, 536870912], \"CPU\": [120, 120], \"FSIZE\": [4194304, 4194304], \"NOFILE\": [128, 128]}}\n"
+      },
+      "worker_exit": 0,
+      "worker_stderr": "",
+      "worker_stdout": "{\"argv\": [\"/usr/bin/python3\", \"-I\", \"-S\", \"-B\", \"-c\", \"import json,os,resource\\ncategories={'AS':resource.RLIMIT_AS,'CPU':resource.RLIMIT_CPU,'FSIZE':resource.RLIMIT_FSIZE,'NOFILE':resource.RLIMIT_NOFILE}\\nfds=[]\\nfor name in os.listdir('/proc/self/fd'):\\n try:fds.append([name,os.readlink('/proc/self/fd/'+name)])\\n except FileNotFoundError:pass\\nprint(json.dumps({'limits':{name:list(resource.getrlimit(value)) for name,value in categories.items()},'cwd':os.getcwd(),'fds':fds},sort_keys=True))\\n\"], \"elapsed_ns\": 68323394, \"exit_code\": 0, \"probe\": {\"cwd\": \"/dev/shm/semantic-transport-core-20261029/evidence/process-review/above_caps\", \"fds\": [[\"0\", \"/dev/null\"], [\"1\", \"pipe:[186508375]\"], [\"2\", \"pipe:[186508376]\"], [\"3\", \"/dev/shm/semantic-transport-core-20261029/evidence/process-review/above_caps\"]], \"limits\": {\"AS\": [536870912, 536870912], \"CPU\": [120, 120], \"FSIZE\": [4194304, 4194304], \"NOFILE\": [128, 128]}}, \"status\": \"SUCCESS\", \"stderr\": \"\", \"stdout\": \"{\\\"cwd\\\": \\\"/dev/shm/semantic-transport-core-20261029/evidence/process-review/above_caps\\\", \\\"fds\\\": [[\\\"0\\\", \\\"/dev/null\\\"], [\\\"1\\\", \\\"pipe:[186508375]\\\"], [\\\"2\\\", \\\"pipe:[186508376]\\\"], [\\\"3\\\", \\\"/dev/shm/semantic-transport-core-20261029/evidence/process-review/above_caps\\\"]], \\\"limits\\\": {\\\"AS\\\": [536870912, 536870912], \\\"CPU\\\": [120, 120], \\\"FSIZE\\\": [4194304, 4194304], \\\"NOFILE\\\": [128, 128]}}\\n\"}\n"
+    },
+    {
+      "case": {
+        "expected_limits_subset": {
+          "FSIZE": [
+            0,
+            0
+          ]
+        },
+        "id": "zero_fsize",
+        "limits": {
+          "FSIZE": [
+            0,
+            131072
+          ]
+        }
+      },
+      "issues": [],
+      "pass": true,
+      "result": {
+        "argv": [
+          "/usr/bin/python3",
+          "-I",
+          "-S",
+          "-B",
+          "-c",
+          "import json,os,resource\ncategories={'AS':resource.RLIMIT_AS,'CPU':resource.RLIMIT_CPU,'FSIZE':resource.RLIMIT_FSIZE,'NOFILE':resource.RLIMIT_NOFILE}\nfds=[]\nfor name in os.listdir('/proc/self/fd'):\n try:fds.append([name,os.readlink('/proc/self/fd/'+name)])\n except FileNotFoundError:pass\nprint(json.dumps({'limits':{name:list(resource.getrlimit(value)) for name,value in categories.items()},'cwd':os.getcwd(),'fds':fds},sort_keys=True))\n"
+        ],
+        "elapsed_ns": 66961193,
+        "exit_code": 0,
+        "probe": {
+          "cwd": "/dev/shm/semantic-transport-core-20261029/evidence/process-review/zero_fsize",
+          "fds": [
+            [
+              "0",
+              "/dev/null"
+            ],
+            [
+              "1",
+              "pipe:[186508382]"
+            ],
+            [
+              "2",
+              "pipe:[186508383]"
+            ],
+            [
+              "3",
+              "/dev/shm/semantic-transport-core-20261029/evidence/process-review/zero_fsize"
+            ]
+          ],
+          "limits": {
+            "AS": [
+              536870912,
+              536870912
+            ],
+            "CPU": [
+              120,
+              120
+            ],
+            "FSIZE": [
+              0,
+              0
+            ],
+            "NOFILE": [
+              128,
+              128
+            ]
+          }
+        },
+        "status": "SUCCESS",
+        "stderr": "",
+        "stdout": "{\"cwd\": \"/dev/shm/semantic-transport-core-20261029/evidence/process-review/zero_fsize\", \"fds\": [[\"0\", \"/dev/null\"], [\"1\", \"pipe:[186508382]\"], [\"2\", \"pipe:[186508383]\"], [\"3\", \"/dev/shm/semantic-transport-core-20261029/evidence/process-review/zero_fsize\"]], \"limits\": {\"AS\": [536870912, 536870912], \"CPU\": [120, 120], \"FSIZE\": [0, 0], \"NOFILE\": [128, 128]}}\n"
+      },
+      "worker_exit": 0,
+      "worker_stderr": "",
+      "worker_stdout": "{\"argv\": [\"/usr/bin/python3\", \"-I\", \"-S\", \"-B\", \"-c\", \"import json,os,resource\\ncategories={'AS':resource.RLIMIT_AS,'CPU':resource.RLIMIT_CPU,'FSIZE':resource.RLIMIT_FSIZE,'NOFILE':resource.RLIMIT_NOFILE}\\nfds=[]\\nfor name in os.listdir('/proc/self/fd'):\\n try:fds.append([name,os.readlink('/proc/self/fd/'+name)])\\n except FileNotFoundError:pass\\nprint(json.dumps({'limits':{name:list(resource.getrlimit(value)) for name,value in categories.items()},'cwd':os.getcwd(),'fds':fds},sort_keys=True))\\n\"], \"elapsed_ns\": 66961193, \"exit_code\": 0, \"probe\": {\"cwd\": \"/dev/shm/semantic-transport-core-20261029/evidence/process-review/zero_fsize\", \"fds\": [[\"0\", \"/dev/null\"], [\"1\", \"pipe:[186508382]\"], [\"2\", \"pipe:[186508383]\"], [\"3\", \"/dev/shm/semantic-transport-core-20261029/evidence/process-review/zero_fsize\"]], \"limits\": {\"AS\": [536870912, 536870912], \"CPU\": [120, 120], \"FSIZE\": [0, 0], \"NOFILE\": [128, 128]}}, \"status\": \"SUCCESS\", \"stderr\": \"\", \"stdout\": \"{\\\"cwd\\\": \\\"/dev/shm/semantic-transport-core-20261029/evidence/process-review/zero_fsize\\\", \\\"fds\\\": [[\\\"0\\\", \\\"/dev/null\\\"], [\\\"1\\\", \\\"pipe:[186508382]\\\"], [\\\"2\\\", \\\"pipe:[186508383]\\\"], [\\\"3\\\", \\\"/dev/shm/semantic-transport-core-20261029/evidence/process-review/zero_fsize\\\"]], \\\"limits\\\": {\\\"AS\\\": [536870912, 536870912], \\\"CPU\\\": [120, 120], \\\"FSIZE\\\": [0, 0], \\\"NOFILE\\\": [128, 128]}}\\n\"}\n"
+    },
+    {
+      "case": {
+        "expected_limits_subset": {
+          "NOFILE": [
+            16,
+            16
+          ]
+        },
+        "id": "low_nofile",
+        "limits": {
+          "NOFILE": [
+            16,
+            32
+          ]
+        }
+      },
+      "issues": [],
+      "pass": true,
+      "result": {
+        "argv": [
+          "/usr/bin/python3",
+          "-I",
+          "-S",
+          "-B",
+          "-c",
+          "import json,os,resource\ncategories={'AS':resource.RLIMIT_AS,'CPU':resource.RLIMIT_CPU,'FSIZE':resource.RLIMIT_FSIZE,'NOFILE':resource.RLIMIT_NOFILE}\nfds=[]\nfor name in os.listdir('/proc/self/fd'):\n try:fds.append([name,os.readlink('/proc/self/fd/'+name)])\n except FileNotFoundError:pass\nprint(json.dumps({'limits':{name:list(resource.getrlimit(value)) for name,value in categories.items()},'cwd':os.getcwd(),'fds':fds},sort_keys=True))\n"
+        ],
+        "elapsed_ns": 14883876,
+        "exit_code": 0,
+        "probe": {
+          "cwd": "/dev/shm/semantic-transport-core-20261029/evidence/process-review/low_nofile",
+          "fds": [
+            [
+              "0",
+              "/dev/null"
+            ],
+            [
+              "1",
+              "pipe:[186508389]"
+            ],
+            [
+              "2",
+              "pipe:[186508390]"
+            ],
+            [
+              "3",
+              "/dev/shm/semantic-transport-core-20261029/evidence/process-review/low_nofile"
+            ]
+          ],
+          "limits": {
+            "AS": [
+              536870912,
+              536870912
+            ],
+            "CPU": [
+              120,
+              120
+            ],
+            "FSIZE": [
+              4194304,
+              4194304
+            ],
+            "NOFILE": [
+              16,
+              16
+            ]
+          }
+        },
+        "status": "SUCCESS",
+        "stderr": "",
+        "stdout": "{\"cwd\": \"/dev/shm/semantic-transport-core-20261029/evidence/process-review/low_nofile\", \"fds\": [[\"0\", \"/dev/null\"], [\"1\", \"pipe:[186508389]\"], [\"2\", \"pipe:[186508390]\"], [\"3\", \"/dev/shm/semantic-transport-core-20261029/evidence/process-review/low_nofile\"]], \"limits\": {\"AS\": [536870912, 536870912], \"CPU\": [120, 120], \"FSIZE\": [4194304, 4194304], \"NOFILE\": [16, 16]}}\n"
+      },
+      "worker_exit": 0,
+      "worker_stderr": "",
+      "worker_stdout": "{\"argv\": [\"/usr/bin/python3\", \"-I\", \"-S\", \"-B\", \"-c\", \"import json,os,resource\\ncategories={'AS':resource.RLIMIT_AS,'CPU':resource.RLIMIT_CPU,'FSIZE':resource.RLIMIT_FSIZE,'NOFILE':resource.RLIMIT_NOFILE}\\nfds=[]\\nfor name in os.listdir('/proc/self/fd'):\\n try:fds.append([name,os.readlink('/proc/self/fd/'+name)])\\n except FileNotFoundError:pass\\nprint(json.dumps({'limits':{name:list(resource.getrlimit(value)) for name,value in categories.items()},'cwd':os.getcwd(),'fds':fds},sort_keys=True))\\n\"], \"elapsed_ns\": 14883876, \"exit_code\": 0, \"probe\": {\"cwd\": \"/dev/shm/semantic-transport-core-20261029/evidence/process-review/low_nofile\", \"fds\": [[\"0\", \"/dev/null\"], [\"1\", \"pipe:[186508389]\"], [\"2\", \"pipe:[186508390]\"], [\"3\", \"/dev/shm/semantic-transport-core-20261029/evidence/process-review/low_nofile\"]], \"limits\": {\"AS\": [536870912, 536870912], \"CPU\": [120, 120], \"FSIZE\": [4194304, 4194304], \"NOFILE\": [16, 16]}}, \"status\": \"SUCCESS\", \"stderr\": \"\", \"stdout\": \"{\\\"cwd\\\": \\\"/dev/shm/semantic-transport-core-20261029/evidence/process-review/low_nofile\\\", \\\"fds\\\": [[\\\"0\\\", \\\"/dev/null\\\"], [\\\"1\\\", \\\"pipe:[186508389]\\\"], [\\\"2\\\", \\\"pipe:[186508390]\\\"], [\\\"3\\\", \\\"/dev/shm/semantic-transport-core-20261029/evidence/process-review/low_nofile\\\"]], \\\"limits\\\": {\\\"AS\\\": [536870912, 536870912], \\\"CPU\\\": [120, 120], \\\"FSIZE\\\": [4194304, 4194304], \\\"NOFILE\\\": [16, 16]}}\\n\"}\n"
+    },
+    {
+      "case": {
+        "expected_no_directory_fd": true,
+        "id": "directory_fd_closed"
+      },
+      "issues": [
+        "working directory descriptor leaked through exec"
+      ],
+      "pass": false,
+      "result": {
+        "argv": [
+          "/usr/bin/python3",
+          "-I",
+          "-S",
+          "-B",
+          "-c",
+          "import json,os,resource\ncategories={'AS':resource.RLIMIT_AS,'CPU':resource.RLIMIT_CPU,'FSIZE':resource.RLIMIT_FSIZE,'NOFILE':resource.RLIMIT_NOFILE}\nfds=[]\nfor name in os.listdir('/proc/self/fd'):\n try:fds.append([name,os.readlink('/proc/self/fd/'+name)])\n except FileNotFoundError:pass\nprint(json.dumps({'limits':{name:list(resource.getrlimit(value)) for name,value in categories.items()},'cwd':os.getcwd(),'fds':fds},sort_keys=True))\n"
+        ],
+        "elapsed_ns": 15883423,
+        "exit_code": 0,
+        "probe": {
+          "cwd": "/dev/shm/semantic-transport-core-20261029/evidence/process-review/directory_fd_closed",
+          "fds": [
+            [
+              "0",
+              "/dev/null"
+            ],
+            [
+              "1",
+              "pipe:[186507423]"
+            ],
+            [
+              "2",
+              "pipe:[186507424]"
+            ],
+            [
+              "3",
+              "/dev/shm/semantic-transport-core-20261029/evidence/process-review/directory_fd_closed"
+            ]
+          ],
+          "limits": {
+            "AS": [
+              536870912,
+              536870912
+            ],
+            "CPU": [
+              120,
+              120
+            ],
+            "FSIZE": [
+              4194304,
+              4194304
+            ],
+            "NOFILE": [
+              128,
+              128
+            ]
+          }
+        },
+        "status": "SUCCESS",
+        "stderr": "",
+        "stdout": "{\"cwd\": \"/dev/shm/semantic-transport-core-20261029/evidence/process-review/directory_fd_closed\", \"fds\": [[\"0\", \"/dev/null\"], [\"1\", \"pipe:[186507423]\"], [\"2\", \"pipe:[186507424]\"], [\"3\", \"/dev/shm/semantic-transport-core-20261029/evidence/process-review/directory_fd_closed\"]], \"limits\": {\"AS\": [536870912, 536870912], \"CPU\": [120, 120], \"FSIZE\": [4194304, 4194304], \"NOFILE\": [128, 128]}}\n"
+      },
+      "worker_exit": 0,
+      "worker_stderr": "",
+      "worker_stdout": "{\"argv\": [\"/usr/bin/python3\", \"-I\", \"-S\", \"-B\", \"-c\", \"import json,os,resource\\ncategories={'AS':resource.RLIMIT_AS,'CPU':resource.RLIMIT_CPU,'FSIZE':resource.RLIMIT_FSIZE,'NOFILE':resource.RLIMIT_NOFILE}\\nfds=[]\\nfor name in os.listdir('/proc/self/fd'):\\n try:fds.append([name,os.readlink('/proc/self/fd/'+name)])\\n except FileNotFoundError:pass\\nprint(json.dumps({'limits':{name:list(resource.getrlimit(value)) for name,value in categories.items()},'cwd':os.getcwd(),'fds':fds},sort_keys=True))\\n\"], \"elapsed_ns\": 15883423, \"exit_code\": 0, \"probe\": {\"cwd\": \"/dev/shm/semantic-transport-core-20261029/evidence/process-review/directory_fd_closed\", \"fds\": [[\"0\", \"/dev/null\"], [\"1\", \"pipe:[186507423]\"], [\"2\", \"pipe:[186507424]\"], [\"3\", \"/dev/shm/semantic-transport-core-20261029/evidence/process-review/directory_fd_closed\"]], \"limits\": {\"AS\": [536870912, 536870912], \"CPU\": [120, 120], \"FSIZE\": [4194304, 4194304], \"NOFILE\": [128, 128]}}, \"status\": \"SUCCESS\", \"stderr\": \"\", \"stdout\": \"{\\\"cwd\\\": \\\"/dev/shm/semantic-transport-core-20261029/evidence/process-review/directory_fd_closed\\\", \\\"fds\\\": [[\\\"0\\\", \\\"/dev/null\\\"], [\\\"1\\\", \\\"pipe:[186507423]\\\"], [\\\"2\\\", \\\"pipe:[186507424]\\\"], [\\\"3\\\", \\\"/dev/shm/semantic-transport-core-20261029/evidence/process-review/directory_fd_closed\\\"]], \\\"limits\\\": {\\\"AS\\\": [536870912, 536870912], \\\"CPU\\\": [120, 120], \\\"FSIZE\\\": [4194304, 4194304], \\\"NOFILE\\\": [128, 128]}}\\n\"}\n"
+    },
+    {
+      "case": {
+        "expected_exit": 7,
+        "expected_status": "EXIT_NONZERO",
+        "expected_stderr": "err-prefix",
+        "expected_stdout": "out-prefix",
+        "id": "nonzero",
+        "kind": "nonzero"
+      },
+      "issues": [],
+      "pass": true,
+      "result": {
+        "argv": [
+          "/usr/bin/python3",
+          "-I",
+          "-S",
+          "-B",
+          "-c",
+          "import os,sys;os.write(1,b'out-prefix');os.write(2,b'err-prefix');sys.exit(7)"
+        ],
+        "elapsed_ns": 9890599,
+        "exit_code": 7,
+        "status": "EXIT_NONZERO",
+        "stderr": "err-prefix",
+        "stdout": "out-prefix"
+      },
+      "worker_exit": 0,
+      "worker_stderr": "",
+      "worker_stdout": "{\"argv\": [\"/usr/bin/python3\", \"-I\", \"-S\", \"-B\", \"-c\", \"import os,sys;os.write(1,b'out-prefix');os.write(2,b'err-prefix');sys.exit(7)\"], \"elapsed_ns\": 9890599, \"exit_code\": 7, \"status\": \"EXIT_NONZERO\", \"stderr\": \"err-prefix\", \"stdout\": \"out-prefix\"}\n"
+    },
+    {
+      "case": {
+        "expected_exit": 0,
+        "expected_status": "SUCCESS",
+        "expected_stderr": "err-prefix",
+        "id": "stderr_success",
+        "kind": "stderr"
+      },
+      "issues": [],
+      "pass": true,
+      "result": {
+        "argv": [
+          "/usr/bin/python3",
+          "-I",
+          "-S",
+          "-B",
+          "-c",
+          "import os;os.write(2,b'err-prefix')"
+        ],
+        "elapsed_ns": 14758756,
+        "exit_code": 0,
+        "status": "SUCCESS",
+        "stderr": "err-prefix",
+        "stdout": ""
+      },
+      "worker_exit": 0,
+      "worker_stderr": "",
+      "worker_stdout": "{\"argv\": [\"/usr/bin/python3\", \"-I\", \"-S\", \"-B\", \"-c\", \"import os;os.write(2,b'err-prefix')\"], \"elapsed_ns\": 14758756, \"exit_code\": 0, \"status\": \"SUCCESS\", \"stderr\": \"err-prefix\", \"stdout\": \"\"}\n"
+    },
+    {
+      "case": {
+        "expected_reason": "CORE_CHILD_REFUSED_child",
+        "expected_status": "EXPLICIT_EXCEPTION",
+        "id": "bridge_stderr",
+        "kind": "bridge_stderr"
+      },
+      "issues": [],
+      "pass": true,
+      "result": {
+        "exception": "TransportError",
+        "reason": "CORE_CHILD_REFUSED_child",
+        "status": "EXPLICIT_EXCEPTION"
+      },
+      "worker_exit": 0,
+      "worker_stderr": "",
+      "worker_stdout": "{\"exception\": \"TransportError\", \"reason\": \"CORE_CHILD_REFUSED_child\", \"status\": \"EXPLICIT_EXCEPTION\"}\n"
+    },
+    {
+      "case": {
+        "cap": 128,
+        "expected_status": "REFUSED_OUTPUT_LIMIT",
+        "expected_stdout_length": 128,
+        "id": "overflow",
+        "kind": "output"
+      },
+      "issues": [],
+      "pass": true,
+      "result": {
+        "argv": [
+          "/usr/bin/python3",
+          "-I",
+          "-S",
+          "-B",
+          "-c",
+          "import os;os.write(1,b'x'*4096)"
+        ],
+        "elapsed_ns": 9403658,
+        "exit_code": -9,
+        "status": "REFUSED_OUTPUT_LIMIT",
+        "stderr": "",
+        "stdout": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      },
+      "worker_exit": 0,
+      "worker_stderr": "",
+      "worker_stdout": "{\"argv\": [\"/usr/bin/python3\", \"-I\", \"-S\", \"-B\", \"-c\", \"import os;os.write(1,b'x'*4096)\"], \"elapsed_ns\": 9403658, \"exit_code\": -9, \"status\": \"REFUSED_OUTPUT_LIMIT\", \"stderr\": \"\", \"stdout\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"}\n"
+    },
+    {
+      "case": {
+        "expected_status": "REFUSED_TIMEOUT",
+        "expected_stdout": "prefix",
+        "id": "timeout",
+        "kind": "timeout",
+        "timeout": 0.1
+      },
+      "issues": [],
+      "pass": true,
+      "result": {
+        "argv": [
+          "/usr/bin/python3",
+          "-I",
+          "-S",
+          "-B",
+          "-c",
+          "import os,time;os.write(1,b'prefix');time.sleep(30)"
+        ],
+        "elapsed_ns": 102519027,
+        "exit_code": -9,
+        "status": "REFUSED_TIMEOUT",
+        "stderr": "",
+        "stdout": "prefix"
+      },
+      "worker_exit": 0,
+      "worker_stderr": "",
+      "worker_stdout": "{\"argv\": [\"/usr/bin/python3\", \"-I\", \"-S\", \"-B\", \"-c\", \"import os,time;os.write(1,b'prefix');time.sleep(30)\"], \"elapsed_ns\": 102519027, \"exit_code\": -9, \"status\": \"REFUSED_TIMEOUT\", \"stderr\": \"\", \"stdout\": \"prefix\"}\n"
+    },
+    {
+      "case": {
+        "expected_exit": null,
+        "expected_status": "REFUSED_LAUNCH",
+        "id": "missing",
+        "kind": "missing"
+      },
+      "issues": [],
+      "pass": true,
+      "result": {
+        "argv": [
+          "/nonexistent/semantic-core-independent-no-such-tool"
+        ],
+        "elapsed_ns": 1919639,
+        "exit_code": null,
+        "status": "REFUSED_LAUNCH",
+        "stderr": "",
+        "stdout": ""
+      },
+      "worker_exit": 0,
+      "worker_stderr": "",
+      "worker_stdout": "{\"argv\": [\"/nonexistent/semantic-core-independent-no-such-tool\"], \"elapsed_ns\": 1919639, \"exit_code\": null, \"status\": \"REFUSED_LAUNCH\", \"stderr\": \"\", \"stdout\": \"\"}\n"
+    },
+    {
+      "case": {
+        "expected_reason": "invalid argv value",
+        "expected_status": "EXPLICIT_EXCEPTION",
+        "id": "invalid_argv",
+        "kind": "invalid_argv"
+      },
+      "issues": [],
+      "pass": true,
+      "result": {
+        "exception": "ValueError",
+        "reason": "invalid argv value",
+        "status": "EXPLICIT_EXCEPTION"
+      },
+      "worker_exit": 0,
+      "worker_stderr": "",
+      "worker_stdout": "{\"exception\": \"ValueError\", \"reason\": \"invalid argv value\", \"status\": \"EXPLICIT_EXCEPTION\"}\n"
+    }
+  ],
+  "pins": {
+    "snapshot/transport_core_bridge.py": "c8419dca6109a9387eecddc155883a25f6d9ada0f23a8f39092f275cbe463f3a",
+    "snapshot/transport_core_cli.py": "514dbfa17bd3b900eb779fe52b36c236aa14803dbbd04484e760518bfbccc5d1",
+    "snapshot/transport_core_process.py": "d709860912f804969e2b8d4b9a9789321c837e3f987db7e4836fe779884956b6"
+  },
+  "schema": "semantic-core-independent-process-review/1",
+  "status": "FAILED",
+  "whole_system_proof": "NOT_CLAIMED"
+}

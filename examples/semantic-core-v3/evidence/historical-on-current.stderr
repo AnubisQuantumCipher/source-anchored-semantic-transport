@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 323, in <module>
+    main()
+    ~~~~^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 310, in main
+    data = (json.dumps(expected(), sort_keys=True, separators=(',',':')) + '\n').encode()
+                       ~~~~~~~~^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 285, in expected
+    source = source_checks(root, evidence)
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 102, in source_checks
+    need(set(before) == source_names(root) and set(extra) == source_names(root, True),
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+         'source inventory coverage mismatch')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 35, in need
+    raise ValueError(message)
+ValueError: source inventory coverage mismatch

@@ -1,0 +1,12 @@
+Setup
+   [mkdir]        object directory for project Bound_Checks
+Compile
+   [Ada]          transport_bound_eval_checks.adb
+   [Ada]          transport_bound_eval.adb
+   [Ada]          transport_bound_eval_parse.adb
+   [Ada]          transport_eval.adb
+Bind
+   [gprbind]      transport_bound_eval_checks.bexch
+   [Ada]          transport_bound_eval_checks.ali
+Link
+   [link]         transport_bound_eval_checks.adb

@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "-I",
+    "-S",
+    "-B",
+    "-Werror",
+    "tests/test_transport_core_language.py"
+  ],
+  "exit_code": 1,
+  "head": "13681d09ea132f84e1c890d839122a9bd6a50672"
+}

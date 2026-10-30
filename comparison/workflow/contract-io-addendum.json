@@ -1,0 +1,15 @@
+{
+  "acceptance": "Retain first static failure and frozen v1. New fault tests verify output ambiguity/partial-frame behavior, not fabricate a complete transcript from a failed sink. No exception to source/authority/receipt acceptance gates.",
+  "base_contract_sha256": "4f341b46d3c71008bf405014191ec15a42d45f78a31024c22f06e02d2f33c2e7",
+  "oracle_sha256": "780c03a429efafd4d965cdd9045e165627810e77ee6df4e2aa28b229128f8ba4",
+  "prepared_utc": "2026-10-29T15:22:08.901528+00:00",
+  "review_sha256": "a1bc44f800fa59d326aae800c276f635890fe08acaba05011e4d8e6037a64fc4",
+  "rules": [
+    "Complete canonical JSON plus one LF, zero exit, and matching external receipt bytes are all required for prepare success. A missing/truncated response is never success.",
+    "An output sink can fail after any prefix. The CLI must not append a second JSON stdout record after an emission attempt. On output failure emit a bounded diagnostic refusal to stderr where possible and exit nonzero; stdout completeness cannot be guaranteed when its sink fails.",
+    "After possible API execution, outside-API failures conservatively report workspace_may_exist=true. API WorkflowError flags retain their exact phase. No rollback or automatic retry.",
+    "Raw CLI path strings must already equal their absolute canonical Path spelling, with no parent traversal, NUL or overlength values. API Path values are already normalized objects and receive canonical-structure validation."
+  ],
+  "schema": "transport/native-workflow-contract-io-addendum/1",
+  "scope": "Preexecution clarification of CLI sink failure; no product v1 executed, no golden bytes, API recovery, input validation, publication or success gate changed."
+}

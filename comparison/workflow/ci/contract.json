@@ -1,0 +1,17 @@
+{
+  "schema": "transport/native-workflow-ci-delta-contract/1",
+  "parent_commit": "e0d3175a0292f1661a165ad149ee310799a3a143",
+  "parent_reader_sha256": "fed2ceb65a2d55ba9f856b7bf92fc1c9157c64f44e5049e0dd0bd67d1e53d8dc",
+  "parent_receipt_sha256": "139d903318428502b481880a3284ea7e7d7e55997fbb22b1e9716f8fbcd0dfd2",
+  "only_parent_inventory_delta": "files.ci/native-source-workflow.yml",
+  "required_behavior": [
+    "Install the missing ripgrep dependency only on the ephemeral hosted runner before native tool controls.",
+    "Retain the failed hosted job log and exact parent workflow.",
+    "Recompute the parent inventory and require exact equality after restoring only the declared prior workflow pin in memory.",
+    "Reject missing or additional inventory fields, altered source pins, process streams and observations.",
+    "Record the current workflow, wrapper, tests, contract, documentation and failure evidence in a separate create-only receipt.",
+    "Preserve the sealed parent receipt, reader, product, tests and observations byte for byte.",
+    "Run normal and optimized interpreter checks and negative controls before publishing the correction."
+  ],
+  "claim": "CI dependency and evidence continuity correction only. No new codec behavior, SPARK property, semantic fidelity or continuation benefit is claimed."
+}

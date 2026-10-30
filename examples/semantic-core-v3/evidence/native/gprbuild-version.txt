@@ -1,0 +1,5 @@
+GPRBUILD 26.0.0 (2026-04-15) (aarch64-linux-gnu)
+Copyright (C) 2004-2026, AdaCore
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+

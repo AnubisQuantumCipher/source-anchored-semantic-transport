@@ -1,0 +1,18 @@
+test_bundle_pair_held_identity_refusals (__main__.PreparationControls.test_bundle_pair_held_identity_refusals) ... ok
+test_changed_source_and_missing_source (__main__.PreparationControls.test_changed_source_and_missing_source) ... ok
+test_duplicate_paths_bad_task_and_mutation_recheck (__main__.PreparationControls.test_duplicate_paths_bad_task_and_mutation_recheck) ... ok
+test_existing_output_preserved (__main__.PreparationControls.test_existing_output_preserved) ... ok
+test_function_limits_and_no_shell_subprocess_calls (__main__.PreparationControls.test_function_limits_and_no_shell_subprocess_calls) ... ok
+test_late_publication_failure_is_explicit_partial (__main__.PreparationControls.test_late_publication_failure_is_explicit_partial) ... ok
+test_original_exact_bytes_no_decoder_generic_interface_and_finish (__main__.PreparationControls.test_original_exact_bytes_no_decoder_generic_interface_and_finish) ... ok
+test_output_bundle_overlap_and_symlink_parent_refused (__main__.PreparationControls.test_output_bundle_overlap_and_symlink_parent_refused) ... ok
+test_preflight_metadata_mismatch_retains_failure_no_endpoint (__main__.PreparationControls.test_preflight_metadata_mismatch_retains_failure_no_endpoint) ... ok
+test_source_metadata_ids_duplicates_and_bounds (__main__.PreparationControls.test_source_metadata_ids_duplicates_and_bounds) ... ok
+test_transport_copy_focus_and_identical_catalog (__main__.PreparationControls.test_transport_copy_focus_and_identical_catalog) ... ok
+test_wrong_held_config (__main__.PreparationControls.test_wrong_held_config) ... ok
+test_wrong_python_task_and_unknown_fields (__main__.PreparationControls.test_wrong_python_task_and_unknown_fields) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 5.491s
+
+OK

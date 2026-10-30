@@ -1,0 +1,6 @@
+START bound-runtime-build
+bound-runtime-build SUCCESS
+START bound-native-integration
+bound-native-integration SUCCESS
+START bound-test-receipts
+bound-test-receipts SUCCESS

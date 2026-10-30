@@ -1,0 +1,15 @@
+# Fourth native clean-proof attempt: retained failure
+
+T4 remains **FAILED**. The build record is SUCCESS: exit0, complete capture and owned group absent. Proof then returned -9 with incomplete capture after the fixed round8 global proc census failed before identifying missing PID1032727. The only proof stdout is the64-byte Phase1 heading; stderr is empty. There is no complete gnatprove summary or generated Why3 config. The exact proof oracle is **NOT_SATISFIED**, and no zero-diagnostic/count/proof result follows.
+
+Correction: root initially called the missing PID foreign and immediately corrected that attribution. PID1032727 group/session/owner/creator/deletion cause remain **UNKNOWN**. This archive does not classify it as foreign, owned, hostile or harmless. Recorded timestamps describe observations, not authenticated creator/deletion times.
+
+The data-only archive has 142 unique regular members, 1316725 expanded bytes, and 0 explicit omissions. Symlinks and special test entries are never dereferenced; target strings alone are retained for links. Nested ZIPs are opaque bytes. Direct compiler objects/binaries/cache are excluded.
+
+Q/ preserves current Qv3 indexed source/design/baseline/control/failure/compaction and calendar histories. T4/source/ contains the exact38 held-manifest source/GPR files; other T4/ records are selected before/launch/build/proof/raw/terminal evidence. D/ includes the operative adoption/calendar02/v3 reviews, invalid administrative JSON originals as raw bytes, launch captures and full actual/earlier-failure reviews. No unrelated cgroup or future proposal is selected. Qv2 in the earlier collation plan is historical; actual launch used the independently reviewed Qv3/calendar02 adoption.
+
+Preserve distinct scopes:18 current narrow pure controls and a separate23 independent controls receipt were not rerun here. Earlier65 logic PASS coexists with aggregate FAILED_RESOURCE_BOUND. Three earlier actual Python controls apply only to their older pinned source. Restored Q1MiB is a separate observed readback, never retroactive compliance. T1/T2/T3/T4 remain failed; prior atime-cause attribution is UNKNOWN.
+
+Independent actual-review SHA256: 2bce039ee3163530abb5ea8942641e25e689924a9b7b03486ec78d5ec007c504. Engineering review is not external-human validation. Exact argv/cwd/environment and local tool/canonical/source identities are retained in raw records. These historical absolute-path drivers are not portable automatic launchers. No archived/native/CLI/model code, signal or proc census was executed by this collation.
+
+`python3 -I -S -B -Werror collate.py check` checks only bounded archive membership and byte/hash identities; add -O for the optimized data check. Complete selected source inventories are compared before/after; all archived bytes are read back. Access times are not source identity. Credential-pattern checks are heuristic only. No formal proof, whole-system assurance, semantic/study benefit, release or ACCEPTED_V1 is claimed.

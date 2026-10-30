@@ -1,0 +1,233 @@
+{
+  "boundary": "Focused invariants only; the provisional top receipt is not regenerated or accepted under any mutation. One copied example; no historical checkout duplicated.",
+  "checker_sha256": "9c4de03f3661e0183de7df708403364b7a7526f1d0628af18791d7187c5fe2b9",
+  "results": [
+    {
+      "actual": "ADMITTED",
+      "error": null,
+      "expected": "ADMITTED",
+      "id": "held_baseline",
+      "pass": true
+    },
+    {
+      "actual": "ADMITTED",
+      "error": null,
+      "expected": "ADMITTED",
+      "id": "failure_baseline",
+      "pass": true
+    },
+    {
+      "actual": "ADMITTED",
+      "error": null,
+      "expected": "ADMITTED",
+      "id": "controls_baseline",
+      "pass": true
+    },
+    {
+      "actual": "ADMITTED",
+      "error": null,
+      "expected": "ADMITTED",
+      "id": "native_baseline",
+      "pass": true
+    },
+    {
+      "actual": "ADMITTED",
+      "error": null,
+      "expected": "ADMITTED",
+      "id": "runtime_baseline",
+      "pass": true
+    },
+    {
+      "actual": "REFUSED",
+      "error": {
+        "reason": "pin mismatch: meaning.zip",
+        "type": "ValueError"
+      },
+      "expected": "REFUSED",
+      "id": "held_mutation_meaning.zip",
+      "pass": true
+    },
+    {
+      "actual": "REFUSED",
+      "error": {
+        "reason": "pin mismatch: lexicon.md",
+        "type": "ValueError"
+      },
+      "expected": "REFUSED",
+      "id": "held_mutation_lexicon.md",
+      "pass": true
+    },
+    {
+      "actual": "REFUSED",
+      "error": {
+        "reason": "pin mismatch: share.txt",
+        "type": "ValueError"
+      },
+      "expected": "REFUSED",
+      "id": "held_mutation_share.txt",
+      "pass": true
+    },
+    {
+      "actual": "REFUSED",
+      "error": {
+        "reason": "pin mismatch: core-envelope.json",
+        "type": "ValueError"
+      },
+      "expected": "REFUSED",
+      "id": "held_mutation_core-envelope.json",
+      "pass": true
+    },
+    {
+      "actual": "REFUSED",
+      "error": {
+        "reason": "pin mismatch: recipient-result.json",
+        "type": "ValueError"
+      },
+      "expected": "REFUSED",
+      "id": "held_mutation_recipient-result.json",
+      "pass": true
+    },
+    {
+      "actual": "REFUSED",
+      "error": {
+        "reason": "pin mismatch: replay.json",
+        "type": "ValueError"
+      },
+      "expected": "REFUSED",
+      "id": "held_mutation_replay.json",
+      "pass": true
+    },
+    {
+      "actual": "REFUSED",
+      "error": {
+        "reason": "pin mismatch: source.txt",
+        "type": "ValueError"
+      },
+      "expected": "REFUSED",
+      "id": "held_mutation_source.txt",
+      "pass": true
+    },
+    {
+      "actual": "REFUSED",
+      "error": {
+        "reason": "pin mismatch: model.json",
+        "type": "ValueError"
+      },
+      "expected": "REFUSED",
+      "id": "held_mutation_model.json",
+      "pass": true
+    },
+    {
+      "actual": "REFUSED",
+      "error": {
+        "reason": "held fixture coverage",
+        "type": "ValueError"
+      },
+      "expected": "REFUSED",
+      "id": "held_coverage",
+      "pass": true
+    },
+    {
+      "actual": "REFUSED",
+      "error": {
+        "reason": "original schema failures lost",
+        "type": "ValueError"
+      },
+      "expected": "REFUSED",
+      "id": "schema_failures_erased",
+      "pass": true
+    },
+    {
+      "actual": "REFUSED",
+      "error": {
+        "reason": "original descriptor failure lost",
+        "type": "ValueError"
+      },
+      "expected": "REFUSED",
+      "id": "process_failure_erased",
+      "pass": true
+    },
+    {
+      "actual": "REFUSED",
+      "error": {
+        "reason": "review retained raw failure pin",
+        "type": "ValueError"
+      },
+      "expected": "REFUSED",
+      "id": "corrected_proof03_pin_replaced",
+      "pass": true
+    },
+    {
+      "actual": "REFUSED",
+      "error": {
+        "reason": "review provenance pin",
+        "type": "ValueError"
+      },
+      "expected": "REFUSED",
+      "id": "provenance_record_changed",
+      "pass": true
+    },
+    {
+      "actual": "REFUSED",
+      "error": {
+        "reason": "independent controls",
+        "type": "ValueError"
+      },
+      "expected": "REFUSED",
+      "id": "control_failure",
+      "pass": true
+    },
+    {
+      "actual": "REFUSED",
+      "error": {
+        "reason": "independent native pin",
+        "type": "ValueError"
+      },
+      "expected": "REFUSED",
+      "id": "control_native_pin",
+      "pass": true
+    },
+    {
+      "actual": "REFUSED",
+      "error": {
+        "reason": "runtime dependency coverage",
+        "type": "ValueError"
+      },
+      "expected": "REFUSED",
+      "id": "runtime_dependency_omitted",
+      "pass": true
+    },
+    {
+      "actual": "REFUSED",
+      "error": {
+        "reason": "runtime source pin: tools/transport_core.py",
+        "type": "ValueError"
+      },
+      "expected": "REFUSED",
+      "id": "runtime_dependency_pin",
+      "pass": true
+    },
+    {
+      "actual": "REFUSED",
+      "error": {
+        "reason": "pin mismatch: evaluation/src/transport_eval.ads",
+        "type": "ValueError"
+      },
+      "expected": "REFUSED",
+      "id": "proof_source_byte",
+      "pass": true
+    },
+    {
+      "actual": "REFUSED",
+      "error": {
+        "reason": "proof contains unproved/justified checks",
+        "type": "ValueError"
+      },
+      "expected": "REFUSED",
+      "id": "proof03_replaced_with_proof04",
+      "pass": true
+    }
+  ],
+  "schema": "semantic-core-independent-receipt-probes/1",
+  "status": "PASS"
+}

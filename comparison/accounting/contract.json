@@ -1,0 +1,271 @@
+{
+  "schema": "transport/accounting-completeness-contract/1",
+  "scope": "Bounded deterministic coverage and attribution of source-pinned measurement claims against one frozen task-study inventory. No arithmetic totals, ratios, benefit, uncertainty, endpoint, authority, or acceptance decision.",
+  "root_order": [
+    "Freeze canonical plan bytes and hold their SHA256 outside the input tree.",
+    "Create evidence artifacts referring to that plan digest.",
+    "Freeze ledger bytes binding the plan, artifact sizes/digests and every slot disposition; hold its SHA256 externally.",
+    "Validate explicitly supplied bytes only. Never fetch, execute, discover files, infer a missing attempt or fill a missing measurement."
+  ],
+  "serialization": {
+    "all_inputs": "UTF-8 canonical JSON objects: sorted keys, compact separators, ensure_ascii=true, no final newline. Reject duplicate keys, extra fields, floats, nonfinite values, negative numbers, Boolean numeric values, invalid UTF-8, malformed JSON and noncanonical encodings.",
+    "integers": "JSON decimal integers from 0 through 9223372036854775807; raw numeric tokens at most 19 digits. Values retain their declared metric; no conversion or subtraction.",
+    "identifiers": "ASCII [A-Za-z][A-Za-z0-9_-]{0,47}; every ID field uses this rule except lowercase SHA256 digests.",
+    "strings": "reason is ASCII, at most 256 bytes. clock is an identifier. currency is exactly three uppercase ASCII letters. Other unconstrained strings are forbidden.",
+    "hash": "SHA256 over the exact supplied bytes; integrity against a held digest, not authentication. No self-hash or circular root.",
+    "output": "Canonical JSON plus one LF; refusal outputs contain only schema,status,reason,authority. Output overflow refuses without truncation."
+  },
+  "bounds": {
+    "request_bytes": 65536,
+    "plan_bytes": 65536,
+    "ledger_bytes": 65536,
+    "artifact_bytes_each": 65536,
+    "artifact_bytes_aggregate": 1048576,
+    "artifacts": 32,
+    "attempts": 32,
+    "slots": 128,
+    "measurements_aggregate": 128,
+    "JSON_depth": 12,
+    "output_bytes_including_LF": 131072,
+    "CLI_address_bytes": 268435456,
+    "CLI_CPU_seconds": 30,
+    "CLI_file_bytes": 131072,
+    "CLI_wall_seconds": 30
+  },
+  "plan": {
+    "exact_keys": [
+      "schema",
+      "attempts",
+      "slots"
+    ],
+    "schema_value": "transport/accounting-plan/1",
+    "attempts": "Nonempty ordered list, at most 32. IDs unique. Inventory includes every declared failed, unsafe and retry attempt; no successful replacement erases an earlier attempt.",
+    "attempt_exact_keys": [
+      "id",
+      "task",
+      "arm",
+      "cache",
+      "actor",
+      "role",
+      "outcome",
+      "retry_of"
+    ],
+    "attempt_fields": {
+      "id": "identifier",
+      "task": "identifier",
+      "arm": "identifier; study-defined treatment label, never ranked by this tool",
+      "cache": "cold|warm|uncontrolled",
+      "actor": "identifier of the responsible work actor/resource; equality is operator-declared identity",
+      "role": "sender|recipient|shared|administrative",
+      "outcome": "succeeded|failed|unsafe|unrun",
+      "retry_of": "null or an earlier attempt ID with the same task,arm,actor,role; cache and outcome may differ"
+    },
+    "slots": "Nonempty list, at most 128; IDs unique. Each slot refers to an existing attempt. The tuple attempt,phase,metric,currency is unique. Every attempt must contain a human_active_ns slot for EACH mandatory phase, required or explicitly prespecified not_applicable. Optional additional metric slots are allowed. Cross-product coverage must fit the independent slot cap; caps do not waive phase coverage. For each attempt the human_active_ns task slot must be required, never not_applicable; a model-only or unmeasured-human attempt therefore retains UNKNOWN human task effort instead of claiming an all-N/A completion.",
+    "mandatory_phases": [
+      "setup",
+      "annotation",
+      "inference",
+      "indexing",
+      "fetch",
+      "task",
+      "retry",
+      "correction",
+      "cleanup",
+      "maintenance"
+    ],
+    "slot_exact_keys": [
+      "id",
+      "attempt",
+      "phase",
+      "metric",
+      "currency",
+      "applicability",
+      "reason"
+    ],
+    "slot_fields": {
+      "id": "identifier",
+      "attempt": "existing attempt ID",
+      "phase": "one mandatory phase",
+      "metric": "one metric below",
+      "currency": "three uppercase ASCII letters only for money_minor_units; null otherwise",
+      "applicability": "required|not_applicable",
+      "reason": "empty when required; nonempty predeclared explanation when not_applicable. Missing, unobserved or inconvenient effort is not a valid not_applicable rationale; the tool checks presence, not the rationale's truth."
+    },
+    "metrics": {
+      "human_active_ns": "Recorded human active-work claim; never inferred from a machine/model interval.",
+      "model_elapsed_ns": "Recorded model elapsed duration, not human work.",
+      "machine_elapsed_ns": "Recorded machine elapsed duration, not human work.",
+      "provider_cumulative_input_tokens": "NONADDITIVE provider observation; never a per-call increment.",
+      "provider_cumulative_output_tokens": "NONADDITIVE provider observation; never a per-call increment.",
+      "provider_incremental_input_tokens": "Separately labelled per-call provider claim; cumulative evidence cannot fill this slot.",
+      "provider_incremental_output_tokens": "Separately labelled per-call provider claim; cumulative evidence cannot fill this slot.",
+      "money_minor_units": "Recorded amount in the exact slot currency's declared minor units; no currency conversion.",
+      "owner_admin_ns": "Administrative coordinating-owner budget claim, never participant work."
+    }
+  },
+  "ledger": {
+    "exact_keys": [
+      "schema",
+      "plan_sha256",
+      "artifacts",
+      "records"
+    ],
+    "schema_value": "transport/accounting-ledger/1",
+    "artifacts": "List, at most 32; unique IDs and unique SHA256 digests. Each exact object has id,bytes,sha256. Sizes are 1..65536; aggregate at most 1048576. Exactly these artifact bindings must be explicitly supplied, no missing or extra binding. Empty list allowed.",
+    "records": "Exactly one record for every plan slot, with no extra slot. Record order is immaterial. A duplicate or omitted slot refuses; it is not silently converted to UNKNOWN.",
+    "record_exact_keys": [
+      "slot",
+      "status",
+      "measurement",
+      "reason"
+    ],
+    "record_fields": {
+      "slot": "existing slot ID",
+      "status": "RECORDED|UNKNOWN|NOT_APPLICABLE",
+      "measurement": "globally unique measurement ID for RECORDED; null otherwise",
+      "reason": "empty for RECORDED and NOT_APPLICABLE; nonempty explanation for UNKNOWN"
+    },
+    "applicability": "A not_applicable slot requires NOT_APPLICABLE, and a required slot requires RECORDED or UNKNOWN. A required missing effort stays UNKNOWN; a ledger cannot newly excuse it. NOT_APPLICABLE justification is read from the frozen plan."
+  },
+  "artifact": {
+    "exact_keys": [
+      "schema",
+      "plan_sha256",
+      "measurements"
+    ],
+    "schema_value": "transport/accounting-evidence/1",
+    "plan_sha256": "Must equal the independently held plan digest, before interpreting measurements.",
+    "measurements": "Nonempty list; at most 128 aggregate across artifacts. Measurement IDs globally unique even across different resealed artifacts. Every supplied measurement must be referenced exactly once by a RECORDED ledger record; no unreferenced measurement may be selected away.",
+    "measurement_exact_keys": [
+      "id",
+      "slot",
+      "metric",
+      "currency",
+      "value",
+      "interval"
+    ],
+    "measurement_fields": {
+      "id": "identifier",
+      "slot": "must equal the referencing ledger slot",
+      "metric": "must equal that frozen slot's metric; no cumulative/incremental substitution",
+      "currency": "must equal that slot's currency",
+      "value": "bounded unsigned decimal integer claimed by this evidence; copied unchanged to output, never derived",
+      "interval": "required object for human_active_ns,model_elapsed_ns,machine_elapsed_ns,owner_admin_ns; null for other metrics"
+    },
+    "interval_exact_keys": [
+      "clock",
+      "start",
+      "end"
+    ],
+    "interval": "start and end are bounded integers with start<end; interval is [start,end) in a declared clock's native tick domain. Its difference is NOT computed or asserted equal to value. Clock truth, comparability and units are unverified. For the SAME declared actor, metric and clock, intervals of all RECORDED slots must be disjoint across tasks, arms, attempts and phases; exact adjacency is allowed. Different metric dimensions may overlap and are never added. Different clocks cannot establish disjointness: more than one clock for the same actor and time metric refuses as uncomparable. This deliberately refuses split-clock accounting rather than inventing a translation.",
+    "trust": "Artifacts are source-pinned claims about measurements, not authenticated observations or proof work occurred. The tool proves no clock trust, complete provenance, hidden-work detection or measured-value truth. Resealing with new globally distinct IDs cannot be detected as fraud; retain that limitation."
+  },
+  "core": {
+    "input": "validate(plan_bytes,held_plan_sha256,ledger_bytes,held_ledger_sha256,artifact_bindings). artifact_bindings is an explicit dictionary id -> exact bytes; no paths, code, callbacks or resource fetches in core.",
+    "steps": [
+      "Enforce byte bounds and held plan/ledger digest shapes and equality.",
+      "Parse canonical plan and ledger, enforce closed fields/types, inventory IDs, dimensions, retry relations and mandatory phase coverage.",
+      "Check exact binding IDs, artifact byte sizes/digests/aggregate; parse closed canonical artifacts and check plan identity.",
+      "Check measurement ID uniqueness, ledger exact slot coverage, status/applicability, measurement use exactly once and slot/metric/currency identity.",
+      "Check interval comparability and overlap without computing durations or totals.",
+      "Emit a deterministic slot-sorted report or named refusal; no partial successful report."
+    ],
+    "output_exact_keys": [
+      "schema",
+      "status",
+      "plan_sha256",
+      "ledger_sha256",
+      "slots",
+      "authority",
+      "measurement_truth",
+      "source_authentication",
+      "clock_trust",
+      "coverage_scope",
+      "hidden_work_detection",
+      "benefit",
+      "acceptance",
+      "attempts",
+      "prespecification_timing"
+    ],
+    "output_constants": {
+      "schema": "transport/accounting-completeness-report/1",
+      "authority": "NONE",
+      "measurement_truth": "UNPROVEN",
+      "source_authentication": "UNKNOWN",
+      "clock_trust": "UNKNOWN",
+      "coverage_scope": "DECLARED_FROZEN_INVENTORY_ONLY",
+      "hidden_work_detection": "NONE",
+      "benefit": "NOT_ASSESSED",
+      "acceptance": "NOT_ASSESSED",
+      "prespecification_timing": "NOT_VERIFIED"
+    },
+    "status": "RECORDED_COMPLETE iff all required slots are RECORDED and all other slots are correctly NOT_APPLICABLE; otherwise INCOMPLETE when at least one valid required slot is UNKNOWN. Neither status is product acceptance or verification that real work occurred.",
+    "slot_output": {
+      "base_exact_keys": [
+        "id",
+        "attempt",
+        "phase",
+        "metric",
+        "currency",
+        "status",
+        "reason"
+      ],
+      "RECORDED_additional_exact_keys": [
+        "measurement",
+        "artifact",
+        "artifact_sha256",
+        "value",
+        "interval",
+        "aggregation"
+      ],
+      "UNKNOWN_additional_exact_keys": [],
+      "NOT_APPLICABLE_additional_exact_keys": [],
+      "values": "id/attempt/phase/metric/currency are copied from the frozen slot; status from ledger. reason is empty for RECORDED, ledger reason for UNKNOWN, plan reason for NOT_APPLICABLE. measurement is source measurement ID; artifact is binding ID; artifact_sha256 is held artifact digest. value and interval copied unchanged from source claim. aggregation is NONADDITIVE_OBSERVATION for provider_cumulative metrics, NO_AGGREGATION otherwise. Sort slots by id. No additional fields."
+    },
+    "attempts_output": "attempts is an exact copy of the validated ordered plan attempts list, including every outcome/retry/task/arm/cache/actor/role record. Retrospective outcomes are allowed; no chronology or preregistration claim follows."
+  },
+  "refusals": {
+    "precedence": "First byte caps and held root digest checks. Canonical JSON parse precedes object interpretation. For parsed objects, cardinality maxima produce INPUT_BOUND before semantic schema/inventory checks. Empty plan attempts or slots produce PLAN_INVENTORY. Then plan schema/inventory/phase coverage; exact artifact binding IDs and pins; artifact schema/plan identity/global measurement ID uniqueness; ledger slot coverage; applicability; per-record measurement binding and once-only use; unused measurement; interval shape/comparability/overlap; output cap. Multiple independent simultaneous failures outside this ordering have no oracle priority claim.",
+    "codes": [
+      "INPUT_BOUND",
+      "PIN_MISMATCH",
+      "JSON_INVALID",
+      "CLI_IO",
+      "SCHEMA_INVALID",
+      "PLAN_INVENTORY",
+      "PHASE_COVERAGE",
+      "BINDING_MISMATCH",
+      "ARTIFACT_PIN",
+      "ARTIFACT_PLAN",
+      "MEASUREMENT_DUPLICATE",
+      "LEDGER_COVERAGE",
+      "APPLICABILITY",
+      "MEASUREMENT_BINDING",
+      "MEASUREMENT_UNUSED",
+      "INTERVAL_INVALID",
+      "INTERVAL_UNCOMPARABLE",
+      "INTERVAL_OVERLAP",
+      "OUTPUT_BOUND"
+    ],
+    "schema": "transport/accounting-completeness-refusal/1",
+    "status": "REFUSED",
+    "authority": "NONE"
+  },
+  "CLI": {
+    "invocation": "python3 -I -S -B -Werror comparison/accounting/check.py --request REQUEST --expect-plan-sha256 HELD_PLAN --expect-ledger-sha256 HELD_LEDGER",
+    "request_exact_keys": [
+      "schema",
+      "plan",
+      "ledger",
+      "artifacts"
+    ],
+    "schema_value": "transport/accounting-request/1",
+    "plan_and_ledger": "Each exact object has path,bytes,sha256; digest must match its corresponding explicit CLI held digest. Paths are explicit absolute regular files without symlink traversal; read bounded bytes and verify size/digest before core.",
+    "artifacts": "List of exact objects id,path,bytes,sha256. Must exactly match ledger artifact identities and sizes/digests. No directory scan, implicit artifact, provider, code execution, installation, credentials or resource fetching.",
+    "exit": "0 for valid RECORDED_COMPLETE or INCOMPLETE; 1 for REFUSED. Status must be read; exit0 does not imply completeness. Resource failures use REFUSED with fixed code, no raw exception text or partial success.",
+    "limits": "Thin CLI applies declared process limits; outer runner applies the 30-second wall cap. No artifact or payload selects implementation code. Output is stdout only; no overwrite, mutation or cleanup behavior.",
+    "path_grammar": "Path fields are nonempty absolute UTF-8 strings at most4096 encoded bytes, excluding NUL; they are serialized with ensure_ascii=true like all JSON strings. Path strings are the sole exception to the ASCII identifier/reason rules. Duplicate artifact IDs refuse BINDING_MISMATCH before dictionary conversion; no last-wins normalization."
+  },
+  "acceptance_link": "Existing acceptance contract clauses 5 and 6 and QUORUM product-comparison requirements; engineering only within the already authorized development round. Existing original-search/index/transfer/retrieval/native-workflow baselines remain unchanged. This freeze selects no study endpoint, sample, uncertainty rule, benefit threshold or strongest baseline. Administrative budget accounting remains separate under the execution amendment. This tool does not verify prespecification timing; independent external protocol freeze and chronology evidence remain prerequisites before a study.",
+  "supersedes": "contract.json first freeze retained; closed output spelling and timing limitations clarified."
+}

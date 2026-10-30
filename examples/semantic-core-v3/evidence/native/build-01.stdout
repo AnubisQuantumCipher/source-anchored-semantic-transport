@@ -1,0 +1,3 @@
+Compile
+   [Ada]          transport_core_native.adb
+gprbuild: *** compilation phase failed

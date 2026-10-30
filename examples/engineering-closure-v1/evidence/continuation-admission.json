@@ -1,0 +1,51 @@
+{
+  "budget": "One further 120-second attempt per incomplete project within prepaid tranche06; no automatic repeat.",
+  "commands": [
+    [
+      "core-proof-02",
+      [
+        "/home/sicarii/opt/gnat/gnatprove-aarch64-linux-16.1.0-1/bin/gnatprove",
+        "-P",
+        "transport.gpr",
+        "-U",
+        "--level=2",
+        "--report=all",
+        "--warnings=error",
+        "--checks-as-errors=on",
+        "--proof-warnings=on",
+        "-j1"
+      ]
+    ],
+    [
+      "evaluation-proof-02",
+      [
+        "/home/sicarii/opt/gnat/gnatprove-aarch64-linux-16.1.0-1/bin/gnatprove",
+        "-P",
+        "evaluation/transport_eval.gpr",
+        "-U",
+        "--level=2",
+        "--report=all",
+        "--warnings=error",
+        "--checks-as-errors=on",
+        "--proof-warnings=on",
+        "-j1"
+      ]
+    ]
+  ],
+  "driver": {
+    "bytes": 2140,
+    "sha256": "429cc861b20583ec5de3832c73116f4a9e400c4028d55a48492a0ffc06d04464"
+  },
+  "first_attempt_state": {
+    "bytes": 8866424,
+    "sha256": "e73d24bd68f4b7ce9ea3a3d5ad2632d4242ffbcb92a51be7d203ec04d9b45f32"
+  },
+  "proof_obligations": "UNCHANGED; no unit filter, prover-level escalation, assertion/contract weakening, or product runtime bound changes.",
+  "reason": "Two confirmed terminal 120-second timeouts, no complete reports. Retain first raw logs and proof working state; continue unchanged full -U commands with existing GNATprove incremental cache.",
+  "schema": "transport/native-proof-continuation/1",
+  "source_manifest": {
+    "bytes": 6248,
+    "sha256": "f8599641e22e62c99f29d31d57f033e2bfb7b582adb2e50c708e4b5ad35c9d64"
+  },
+  "status": "ADMITTED_NOT_EXECUTED"
+}

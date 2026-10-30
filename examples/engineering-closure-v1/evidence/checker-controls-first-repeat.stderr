@@ -1,0 +1,248 @@
+test_changed_installation (__main__.ReceiptControls.test_changed_installation) ... ERROR
+test_changed_source (__main__.ReceiptControls.test_changed_source) ... ERROR
+test_changed_stream (__main__.ReceiptControls.test_changed_stream) ... ERROR
+test_incomplete_proof_units (__main__.ReceiptControls.test_incomplete_proof_units) ... ERROR
+test_missing_log (__main__.ReceiptControls.test_missing_log) ... ERROR
+test_positive_baseline (__main__.ReceiptControls.test_positive_baseline) ... ERROR
+test_skipped_suite (__main__.ReceiptControls.test_skipped_suite) ... ERROR
+test_swallowed_suite_failure (__main__.ReceiptControls.test_swallowed_suite_failure) ... ERROR
+test_unproved_check (__main__.ReceiptControls.test_unproved_check) ... ERROR
+
+======================================================================
+ERROR: test_changed_installation (__main__.ReceiptControls.test_changed_installation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 35, in read
+    need(stat.S_ISREG(path.lstat().st_mode), 'regular receipt input required')
+                      ~~~~~~~~~~^^
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 661, in lstat
+    return os.lstat(self)
+           ~~~~~~~~^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/dev/shm/semantic-transport-proof-closure-20261029/tmp/engineering-closure-controls-eg8u49_7/install/bound_evaluation_fixtures.py'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/test_receipt.py", line 133, in setUp
+    self.baseline = self.checker.expected(self.root, self.here)
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 217, in expected
+    source = source_checks(root, evidence)
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 83, in source_checks
+    data = read(root / relative(name))
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 39, in read
+    raise ValueError('missing or unreadable receipt input: ' + str(path)) from error
+ValueError: missing or unreadable receipt input: /dev/shm/semantic-transport-proof-closure-20261029/tmp/engineering-closure-controls-eg8u49_7/install/bound_evaluation_fixtures.py
+
+======================================================================
+ERROR: test_changed_source (__main__.ReceiptControls.test_changed_source)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 35, in read
+    need(stat.S_ISREG(path.lstat().st_mode), 'regular receipt input required')
+                      ~~~~~~~~~~^^
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 661, in lstat
+    return os.lstat(self)
+           ~~~~~~~~^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/dev/shm/semantic-transport-proof-closure-20261029/tmp/engineering-closure-controls-0h63awcy/install/bound_evaluation_fixtures.py'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/test_receipt.py", line 133, in setUp
+    self.baseline = self.checker.expected(self.root, self.here)
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 217, in expected
+    source = source_checks(root, evidence)
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 83, in source_checks
+    data = read(root / relative(name))
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 39, in read
+    raise ValueError('missing or unreadable receipt input: ' + str(path)) from error
+ValueError: missing or unreadable receipt input: /dev/shm/semantic-transport-proof-closure-20261029/tmp/engineering-closure-controls-0h63awcy/install/bound_evaluation_fixtures.py
+
+======================================================================
+ERROR: test_changed_stream (__main__.ReceiptControls.test_changed_stream)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 35, in read
+    need(stat.S_ISREG(path.lstat().st_mode), 'regular receipt input required')
+                      ~~~~~~~~~~^^
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 661, in lstat
+    return os.lstat(self)
+           ~~~~~~~~^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/dev/shm/semantic-transport-proof-closure-20261029/tmp/engineering-closure-controls-qvzeq9j0/install/bound_evaluation_fixtures.py'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/test_receipt.py", line 133, in setUp
+    self.baseline = self.checker.expected(self.root, self.here)
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 217, in expected
+    source = source_checks(root, evidence)
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 83, in source_checks
+    data = read(root / relative(name))
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 39, in read
+    raise ValueError('missing or unreadable receipt input: ' + str(path)) from error
+ValueError: missing or unreadable receipt input: /dev/shm/semantic-transport-proof-closure-20261029/tmp/engineering-closure-controls-qvzeq9j0/install/bound_evaluation_fixtures.py
+
+======================================================================
+ERROR: test_incomplete_proof_units (__main__.ReceiptControls.test_incomplete_proof_units)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 35, in read
+    need(stat.S_ISREG(path.lstat().st_mode), 'regular receipt input required')
+                      ~~~~~~~~~~^^
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 661, in lstat
+    return os.lstat(self)
+           ~~~~~~~~^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/dev/shm/semantic-transport-proof-closure-20261029/tmp/engineering-closure-controls-v6v18hqw/install/bound_evaluation_fixtures.py'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/test_receipt.py", line 133, in setUp
+    self.baseline = self.checker.expected(self.root, self.here)
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 217, in expected
+    source = source_checks(root, evidence)
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 83, in source_checks
+    data = read(root / relative(name))
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 39, in read
+    raise ValueError('missing or unreadable receipt input: ' + str(path)) from error
+ValueError: missing or unreadable receipt input: /dev/shm/semantic-transport-proof-closure-20261029/tmp/engineering-closure-controls-v6v18hqw/install/bound_evaluation_fixtures.py
+
+======================================================================
+ERROR: test_missing_log (__main__.ReceiptControls.test_missing_log)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 35, in read
+    need(stat.S_ISREG(path.lstat().st_mode), 'regular receipt input required')
+                      ~~~~~~~~~~^^
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 661, in lstat
+    return os.lstat(self)
+           ~~~~~~~~^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/dev/shm/semantic-transport-proof-closure-20261029/tmp/engineering-closure-controls-w7u24434/install/bound_evaluation_fixtures.py'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/test_receipt.py", line 133, in setUp
+    self.baseline = self.checker.expected(self.root, self.here)
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 217, in expected
+    source = source_checks(root, evidence)
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 83, in source_checks
+    data = read(root / relative(name))
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 39, in read
+    raise ValueError('missing or unreadable receipt input: ' + str(path)) from error
+ValueError: missing or unreadable receipt input: /dev/shm/semantic-transport-proof-closure-20261029/tmp/engineering-closure-controls-w7u24434/install/bound_evaluation_fixtures.py
+
+======================================================================
+ERROR: test_positive_baseline (__main__.ReceiptControls.test_positive_baseline)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 35, in read
+    need(stat.S_ISREG(path.lstat().st_mode), 'regular receipt input required')
+                      ~~~~~~~~~~^^
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 661, in lstat
+    return os.lstat(self)
+           ~~~~~~~~^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/dev/shm/semantic-transport-proof-closure-20261029/tmp/engineering-closure-controls-hdh94fm1/install/bound_evaluation_fixtures.py'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/test_receipt.py", line 133, in setUp
+    self.baseline = self.checker.expected(self.root, self.here)
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 217, in expected
+    source = source_checks(root, evidence)
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 83, in source_checks
+    data = read(root / relative(name))
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 39, in read
+    raise ValueError('missing or unreadable receipt input: ' + str(path)) from error
+ValueError: missing or unreadable receipt input: /dev/shm/semantic-transport-proof-closure-20261029/tmp/engineering-closure-controls-hdh94fm1/install/bound_evaluation_fixtures.py
+
+======================================================================
+ERROR: test_skipped_suite (__main__.ReceiptControls.test_skipped_suite)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 35, in read
+    need(stat.S_ISREG(path.lstat().st_mode), 'regular receipt input required')
+                      ~~~~~~~~~~^^
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 661, in lstat
+    return os.lstat(self)
+           ~~~~~~~~^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/dev/shm/semantic-transport-proof-closure-20261029/tmp/engineering-closure-controls-z_4u0k0v/install/bound_evaluation_fixtures.py'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/test_receipt.py", line 133, in setUp
+    self.baseline = self.checker.expected(self.root, self.here)
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 217, in expected
+    source = source_checks(root, evidence)
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 83, in source_checks
+    data = read(root / relative(name))
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 39, in read
+    raise ValueError('missing or unreadable receipt input: ' + str(path)) from error
+ValueError: missing or unreadable receipt input: /dev/shm/semantic-transport-proof-closure-20261029/tmp/engineering-closure-controls-z_4u0k0v/install/bound_evaluation_fixtures.py
+
+======================================================================
+ERROR: test_swallowed_suite_failure (__main__.ReceiptControls.test_swallowed_suite_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 35, in read
+    need(stat.S_ISREG(path.lstat().st_mode), 'regular receipt input required')
+                      ~~~~~~~~~~^^
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 661, in lstat
+    return os.lstat(self)
+           ~~~~~~~~^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/dev/shm/semantic-transport-proof-closure-20261029/tmp/engineering-closure-controls-5xj0n_i4/install/bound_evaluation_fixtures.py'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/test_receipt.py", line 133, in setUp
+    self.baseline = self.checker.expected(self.root, self.here)
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 217, in expected
+    source = source_checks(root, evidence)
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 83, in source_checks
+    data = read(root / relative(name))
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 39, in read
+    raise ValueError('missing or unreadable receipt input: ' + str(path)) from error
+ValueError: missing or unreadable receipt input: /dev/shm/semantic-transport-proof-closure-20261029/tmp/engineering-closure-controls-5xj0n_i4/install/bound_evaluation_fixtures.py
+
+======================================================================
+ERROR: test_unproved_check (__main__.ReceiptControls.test_unproved_check)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 35, in read
+    need(stat.S_ISREG(path.lstat().st_mode), 'regular receipt input required')
+                      ~~~~~~~~~~^^
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 661, in lstat
+    return os.lstat(self)
+           ~~~~~~~~^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/dev/shm/semantic-transport-proof-closure-20261029/tmp/engineering-closure-controls-0dt8iovl/install/bound_evaluation_fixtures.py'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/test_receipt.py", line 133, in setUp
+    self.baseline = self.checker.expected(self.root, self.here)
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 217, in expected
+    source = source_checks(root, evidence)
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 83, in source_checks
+    data = read(root / relative(name))
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/engineering-closure-v1/receipt.py", line 39, in read
+    raise ValueError('missing or unreadable receipt input: ' + str(path)) from error
+ValueError: missing or unreadable receipt input: /dev/shm/semantic-transport-proof-closure-20261029/tmp/engineering-closure-controls-0dt8iovl/install/bound_evaluation_fixtures.py
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.385s
+
+FAILED (errors=9)

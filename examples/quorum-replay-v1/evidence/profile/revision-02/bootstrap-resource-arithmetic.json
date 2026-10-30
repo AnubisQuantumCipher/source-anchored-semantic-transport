@@ -1,0 +1,1 @@
+{"assurance":"exact rational arithmetic (not yet checker-covered)","ceiling":"Arithmetic only; not measured readcount, runtime timing or code correctness proof","exact":"146800640","formal":false,"parsed":"(4+2+3+1+1+1+2)*(16*131072+8388608)","status":"exact","tool_identity_sha256":"4c0ae28d2f41353332dbb29f1b6084cd275d08bad73a84942fbe6f500255d872"}

@@ -1,0 +1,11 @@
+Setup
+   [mkdir]        object directory for project Checks
+   [mkdir]        exec directory for project Checks
+Compile
+   [Ada]          transport_eval_checks.adb
+   [Ada]          transport_eval.adb
+Bind
+   [gprbind]      transport_eval_checks.bexch
+   [Ada]          transport_eval_checks.ali
+Link
+   [link]         transport_eval_checks.adb

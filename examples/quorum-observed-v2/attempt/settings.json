@@ -1,0 +1,40 @@
+{
+  "claude": {
+    "address_space": "NOT_CLAIMED_BOUNDED; existing installed model client, no install. Process wall/CPU/I-O bounded; peakRSS observed.",
+    "argv": [
+      "-p",
+      "--output-format",
+      "json",
+      "--model",
+      "sonnet",
+      "--effort",
+      "high",
+      "--safe-mode",
+      "--restricted",
+      "--tools",
+      "",
+      "--strict-mcp-config",
+      "--mcp-config",
+      "{\"mcpServers\":{}}",
+      "--disable-slash-commands",
+      "--setting-sources",
+      "",
+      "--no-session-persistence",
+      "--no-chrome"
+    ],
+    "cpu_seconds": 120,
+    "executable": "/home/sicarii/.local/share/mise/installs/claude/2.1.280/claude",
+    "file_bytes": 4194304,
+    "open_files": 128,
+    "stdout_stderr_total_bytes": 65536,
+    "timeout_seconds": 120
+  },
+  "gpt": {
+    "fork_turns": "none",
+    "model": "gpt-6.1-sol",
+    "output_bytes": 65536,
+    "reasoning_effort": "high",
+    "timeout_seconds": 120,
+    "tools": "prompt-prohibited, protocol only; actual calls checked"
+  }
+}

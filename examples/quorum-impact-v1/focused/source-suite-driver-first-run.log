@@ -1,0 +1,1 @@
+{"suite": "source", "execution": {"outcome": "returned", "exit_code": 0}, "receipt": {"path": "/dev/shm/semantic-transport-impact-controls-20261029/source-suite-first-run.json", "bytes": 13922, "sha256": "6c38fe658e84a70b5583cd71aec029d848f56d848d6c4cbaa9aa3bf8c5c5bd22"}, "source_pins_unchanged": true}

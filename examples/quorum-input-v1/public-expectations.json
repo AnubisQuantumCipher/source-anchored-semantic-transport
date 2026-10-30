@@ -1,0 +1,2536 @@
+{
+  "schema": "quorum/body-input-independent-public-expectations/1",
+  "origin_sha256": "bfc75f0ad3a696bea59538769a5faa8ecdb32174715f36fd2afdc2f8d62dd04d",
+  "basis": "Independent frozen-contract predicates evaluated before each product call, not copied product outputs. No full replay oracle.",
+  "cases": [
+    {
+      "id": "S000_MINIMAL",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "S001_V01",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "S002_ALL_RECORD_TYPES",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "C00_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C00_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C01_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C01_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C02_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C02_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C03_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C03_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C04_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C04_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C05_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C05_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C06_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C06_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C07_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C07_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C08_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C08_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C09_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C09_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C10_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C10_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C11_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C11_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C12_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C12_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C13_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C13_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C14_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C14_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C15_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C15_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C16_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C16_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C17_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C17_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C18_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C18_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C19_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C19_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C20_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C20_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C21_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C21_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C22_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C22_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C23_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C23_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C24_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C24_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C25_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C25_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C26_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C26_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C27_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C27_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C28_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "C28_UNKNOWN",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "I_TRUE",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "I_FALSE",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "I_ZERO",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "I_MAX",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "I_OVER",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "I_NEGATIVE",
+      "stage": "PREPARSE",
+      "allowed_errors": [
+        "INPUT_INTEGER_TOKEN"
+      ],
+      "predicates": [
+        {
+          "predicate": "wire unsigned integer lexical profile"
+        }
+      ]
+    },
+    {
+      "id": "I_STRING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "I_NULL",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "I_INTEGRAL_FLOAT",
+      "stage": "PREPARSE",
+      "allowed_errors": [
+        "INPUT_INTEGER_TOKEN"
+      ],
+      "predicates": [
+        {
+          "predicate": "wire unsigned integer lexical profile"
+        }
+      ]
+    },
+    {
+      "id": "I_FRACTION",
+      "stage": "PREPARSE",
+      "allowed_errors": [
+        "INPUT_INTEGER_TOKEN"
+      ],
+      "predicates": [
+        {
+          "predicate": "wire unsigned integer lexical profile"
+        }
+      ]
+    },
+    {
+      "id": "ID_EMPTY",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "ID_ONE",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "ID_MAX",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "ID_OVER",
+      "stage": "BOUNDS",
+      "allowed_errors": [
+        "INPUT_BYTE_FIELD_BOUND"
+      ],
+      "predicates": [
+        {
+          "cap": 32,
+          "code": "INPUT_BYTE_FIELD_BOUND",
+          "path": [
+            "policy",
+            "id"
+          ],
+          "utf8_bytes": 33
+        }
+      ]
+    },
+    {
+      "id": "ID_UNDERSCORE",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "ID_UNICODE",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "ID_FINAL_LF",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "ID_EMBEDDED_LF",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "B64_EMPTY",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "B64_GROUP",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "B64_PAD_ONE",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "B64_PAD_TWO",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "B64_FINAL_LF",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "B64_SPACE",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "B64_BAD_PAD",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "B64_BAD_BITS",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "B64_MAX",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "B64_OVER",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "SHA_LOWER",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "SHA_UPPER",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "SHA_SHORT",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "SHA_FINAL_LF",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "STR_TEXT_MIN",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "STR_TEXT_MAX",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "STR_TEXT_OVER",
+      "stage": "BOUNDS",
+      "allowed_errors": [
+        "INPUT_BYTE_FIELD_BOUND"
+      ],
+      "predicates": [
+        {
+          "cap": 1024,
+          "code": "INPUT_BYTE_FIELD_BOUND",
+          "path": [
+            "claims",
+            0,
+            "payload",
+            "uncertainty"
+          ],
+          "utf8_bytes": 1025
+        },
+        {
+          "cap": 1024,
+          "code": "INPUT_BYTE_FIELD_BOUND",
+          "path": [
+            "claims",
+            0,
+            "payload",
+            "uncertainty"
+          ],
+          "utf8_bytes": 1025
+        }
+      ]
+    },
+    {
+      "id": "STR_REASON_MIN",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "STR_REASON_MAX",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "STR_REASON_OVER",
+      "stage": "BOUNDS",
+      "allowed_errors": [
+        "INPUT_BYTE_FIELD_BOUND"
+      ],
+      "predicates": [
+        {
+          "cap": 1024,
+          "code": "INPUT_BYTE_FIELD_BOUND",
+          "path": [
+            "challenges",
+            0,
+            "reason"
+          ],
+          "utf8_bytes": 1025
+        }
+      ]
+    },
+    {
+      "id": "STR_LABEL_MIN",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "STR_LABEL_MAX",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "STR_LABEL_OVER",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "STR_REASON_EMPTY",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "STR_UNICODE_CHAR_COUNT",
+      "stage": "BOUNDS",
+      "allowed_errors": [
+        "INPUT_BYTE_FIELD_BOUND"
+      ],
+      "predicates": [
+        {
+          "cap": 1024,
+          "code": "INPUT_BYTE_FIELD_BOUND",
+          "path": [
+            "challenges",
+            0,
+            "reason"
+          ],
+          "utf8_bytes": 2048
+        }
+      ]
+    },
+    {
+      "id": "STR_ATTRIBUTION_UTF8_BOUNDARY",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "STR_ATTRIBUTION_UTF8_OVER",
+      "stage": "BOUNDS",
+      "allowed_errors": [
+        "INPUT_BYTE_FIELD_BOUND"
+      ],
+      "predicates": [
+        {
+          "cap": 1024,
+          "code": "INPUT_BYTE_FIELD_BOUND",
+          "path": [
+            "claims",
+            0,
+            "attribution"
+          ],
+          "utf8_bytes": 1026
+        }
+      ]
+    },
+    {
+      "id": "STR_ASSERTED_UTC_MAX",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "STR_ASSERTED_UTC_OVER",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "ONE_PAYLOAD_OPAQUE",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "ONE_PAYLOAD_NULL",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "ONE_PAYLOAD_MIXED",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "ONE_GUARD_FALSE",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "ONE_GUARD_REF",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "ONE_GUARD_NOT",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "ONE_GUARD_AND",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "ONE_GUARD_OR",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "ONE_GUARD_MIXED",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "ONE_GUARD_MISSING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "ONE_GUARD_BAD_OP",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "ONE_TARGET_CLAIM",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "ONE_TARGET_MIXED",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "ONE_TARGET_WRONG_BRANCH",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "ONE_NULL_PIN_PIN",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "ONE_NULL_PIN_NULL",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "ONE_NULL_PIN_EMPTY_OBJECT",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "ONE_NULL_PIN_STRING",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "ONE_IDENTITY_OBJECT",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "ONE_OPAQUE_TEXT_MAX",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "ONE_OPAQUE_TEXT_OVER",
+      "stage": "BOUNDS",
+      "allowed_errors": [
+        "INPUT_BYTE_FIELD_BOUND"
+      ],
+      "predicates": [
+        {
+          "cap": 4096,
+          "code": "INPUT_BYTE_FIELD_BOUND",
+          "path": [
+            "claims",
+            0,
+            "payload",
+            "text"
+          ],
+          "utf8_bytes": 4097
+        }
+      ]
+    },
+    {
+      "id": "ARRAY_RULE_IDS_DUP",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "ARRAY_SOURCE_KEYS_DUP",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "ARRAY_SOURCE_KEYS_DISTINCT",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "ARRAY_DEPENDENCY_IDS_DUP",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "ARRAY_RECORD_DUP",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "ARRAY_GUARD_EMPTY",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "ARRAY_GUARD_MAX",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "ARRAY_GUARD_OVER",
+      "stage": "BOUNDS",
+      "allowed_errors": [
+        "INPUT_RECORD_BOUND"
+      ],
+      "predicates": [
+        {
+          "cap": 32,
+          "code": "INPUT_RECORD_BOUND",
+          "length": 33,
+          "path": [
+            "claims",
+            0,
+            "payload",
+            "statement",
+            "condition",
+            "nodes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ARRAY_GUARD_ROOT_MAX",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "ARRAY_GUARD_ROOT_OVER",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "ARRAY_TASK_NONE",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "ARRAY_TASK_TWO",
+      "stage": "BOUNDS",
+      "allowed_errors": [
+        "INPUT_RECORD_BOUND"
+      ],
+      "predicates": [
+        {
+          "cap": 1,
+          "code": "INPUT_RECORD_BOUND",
+          "length": 2,
+          "path": [
+            "tasks"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ARRAY_BLOB_BYTES_MAX",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "ARRAY_BLOB_BYTES_OVER",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "CAP_sources_MAX",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "CAP_sources_OVER",
+      "stage": "BOUNDS",
+      "allowed_errors": [
+        "INPUT_RECORD_BOUND"
+      ],
+      "predicates": [
+        {
+          "cap": 16,
+          "code": "INPUT_RECORD_BOUND",
+          "length": 17,
+          "path": [
+            "sources"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAP_claims_MAX",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "CAP_claims_OVER",
+      "stage": "BOUNDS",
+      "allowed_errors": [
+        "INPUT_RECORD_BOUND"
+      ],
+      "predicates": [
+        {
+          "cap": 16,
+          "code": "INPUT_RECORD_BOUND",
+          "length": 17,
+          "path": [
+            "claims"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAP_selectors_MAX",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "CAP_selectors_OVER",
+      "stage": "BOUNDS",
+      "allowed_errors": [
+        "INPUT_RECORD_BOUND"
+      ],
+      "predicates": [
+        {
+          "cap": 16,
+          "code": "INPUT_RECORD_BOUND",
+          "length": 17,
+          "path": [
+            "selectors"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAP_dependencies_MAX",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "CAP_dependencies_OVER",
+      "stage": "BOUNDS",
+      "allowed_errors": [
+        "INPUT_RECORD_BOUND"
+      ],
+      "predicates": [
+        {
+          "cap": 64,
+          "code": "INPUT_RECORD_BOUND",
+          "length": 65,
+          "path": [
+            "dependencies"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAP_input_manifests_MAX",
+      "stage": "BOUNDS",
+      "allowed_errors": [
+        "INPUT_RECORD_BOUND"
+      ],
+      "predicates": [
+        {
+          "cap": 96,
+          "code": "INPUT_RECORD_BOUND",
+          "predicate": "aggregate record formula",
+          "total": 116
+        }
+      ]
+    },
+    {
+      "id": "CAP_input_manifests_OVER",
+      "stage": "PREPARSE",
+      "allowed_errors": [
+        "INPUT_BYTE_BOUND"
+      ],
+      "predicates": [
+        {
+          "bytes": 66373,
+          "cap": 65536,
+          "predicate": "raw byte cap"
+        }
+      ]
+    },
+    {
+      "id": "CAP_blobs_MAX",
+      "stage": "BOUNDS",
+      "allowed_errors": [
+        "INPUT_RECORD_BOUND"
+      ],
+      "predicates": [
+        {
+          "cap": 96,
+          "code": "INPUT_RECORD_BOUND",
+          "predicate": "aggregate record formula",
+          "total": 118
+        }
+      ]
+    },
+    {
+      "id": "CAP_blobs_OVER",
+      "stage": "BOUNDS",
+      "allowed_errors": [
+        "INPUT_RECORD_BOUND"
+      ],
+      "predicates": [
+        {
+          "cap": 96,
+          "code": "INPUT_RECORD_BOUND",
+          "length": 97,
+          "path": [
+            "blobs"
+          ]
+        },
+        {
+          "cap": 96,
+          "code": "INPUT_RECORD_BOUND",
+          "predicate": "aggregate record formula",
+          "total": 119
+        }
+      ]
+    },
+    {
+      "id": "CAP_provenance_MAX",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "CAP_provenance_OVER",
+      "stage": "BOUNDS",
+      "allowed_errors": [
+        "INPUT_RECORD_BOUND"
+      ],
+      "predicates": [
+        {
+          "cap": 32,
+          "code": "INPUT_RECORD_BOUND",
+          "length": 33,
+          "path": [
+            "provenance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAP_run_evidence_MAX",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "CAP_run_evidence_OVER",
+      "stage": "BOUNDS",
+      "allowed_errors": [
+        "INPUT_RECORD_BOUND"
+      ],
+      "predicates": [
+        {
+          "cap": 32,
+          "code": "INPUT_RECORD_BOUND",
+          "length": 33,
+          "path": [
+            "run_evidence"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAP_readings_MAX",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "CAP_readings_OVER",
+      "stage": "BOUNDS",
+      "allowed_errors": [
+        "INPUT_RECORD_BOUND"
+      ],
+      "predicates": [
+        {
+          "cap": 32,
+          "code": "INPUT_RECORD_BOUND",
+          "length": 33,
+          "path": [
+            "readings"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAP_challenges_MAX",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "CAP_challenges_OVER",
+      "stage": "BOUNDS",
+      "allowed_errors": [
+        "INPUT_RECORD_BOUND"
+      ],
+      "predicates": [
+        {
+          "cap": 32,
+          "code": "INPUT_RECORD_BOUND",
+          "length": 33,
+          "path": [
+            "challenges"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAP_reading_withdrawals_MAX",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "CAP_reading_withdrawals_OVER",
+      "stage": "BOUNDS",
+      "allowed_errors": [
+        "INPUT_RECORD_BOUND"
+      ],
+      "predicates": [
+        {
+          "cap": 32,
+          "code": "INPUT_RECORD_BOUND",
+          "length": 33,
+          "path": [
+            "reading_withdrawals"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAP_updates_MAX",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "CAP_updates_OVER",
+      "stage": "BOUNDS",
+      "allowed_errors": [
+        "INPUT_RECORD_BOUND"
+      ],
+      "predicates": [
+        {
+          "cap": 8,
+          "code": "INPUT_RECORD_BOUND",
+          "length": 9,
+          "path": [
+            "updates"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAP_history_MAX",
+      "stage": "BOUNDS",
+      "allowed_errors": [
+        "INPUT_RECORD_BOUND"
+      ],
+      "predicates": [
+        {
+          "cap": 96,
+          "code": "INPUT_RECORD_BOUND",
+          "predicate": "aggregate record formula",
+          "total": 118
+        }
+      ]
+    },
+    {
+      "id": "CAP_history_OVER",
+      "stage": "BOUNDS",
+      "allowed_errors": [
+        "INPUT_RECORD_BOUND"
+      ],
+      "predicates": [
+        {
+          "cap": 96,
+          "code": "INPUT_RECORD_BOUND",
+          "length": 97,
+          "path": [
+            "history"
+          ]
+        },
+        {
+          "cap": 96,
+          "code": "INPUT_RECORD_BOUND",
+          "predicate": "aggregate record formula",
+          "total": 119
+        }
+      ]
+    },
+    {
+      "id": "MAX_LOCAL_COLLECTIONS_ONLY",
+      "stage": "PREPARSE",
+      "allowed_errors": [
+        "INPUT_BYTE_BOUND"
+      ],
+      "predicates": [
+        {
+          "bytes": 225242,
+          "cap": 65536,
+          "predicate": "raw byte cap"
+        }
+      ]
+    },
+    {
+      "id": "literal_V01_MATCH",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "literal_V02_OPAQUE_AGREE",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "literal_V03_MISMATCH_AGREE",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "literal_V04_INELIGIBLE_DISSENT",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "literal_V05_CHANGED",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "literal_V06_MISSING_PREDECESSOR",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "literal_V07_SELF_CYCLE",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "literal_V08_TWO_EVENT_CYCLE",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "literal_V09_PRESENT_PREDECESSOR",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "literal_V10_MISSING_REF",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "literal_V11_REF_INCONSISTENT",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "literal_V12_RAW_RESPONSE_TAMPER",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "literal_V13_CORE_VERDICT",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "literal_V14_BOOL_OFFSET",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "literal_V15_FLOAT_OFFSET",
+      "stage": "PREPARSE",
+      "allowed_errors": [
+        "INPUT_INTEGER_TOKEN"
+      ],
+      "predicates": [
+        {
+          "predicate": "wire unsigned integer lexical profile"
+        }
+      ]
+    },
+    {
+      "id": "literal_V16_VERSION",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "literal_V17_FALSE_QUOTE",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "literal_V18_MISSING_SEAT",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "literal_V19_ABSTENTION",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "literal_V20_DUPLICATE_CONFLICT",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "closure_C00_ADMITTED_V1",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "closure_C01_RULE_VERSION",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_UNADMITTED"
+      ],
+      "predicates": [
+        {
+          "predicate": "non-V1 present type-str record version",
+          "values": [
+            "V2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "closure_C02_POLICY_VERSION",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_UNADMITTED"
+      ],
+      "predicates": [
+        {
+          "predicate": "non-V1 present type-str record version",
+          "values": [
+            "V2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "closure_C03_REGISTRY_VERSION",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_UNADMITTED"
+      ],
+      "predicates": [
+        {
+          "predicate": "non-V1 present type-str record version",
+          "values": [
+            "V2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "closure_C04_TASK_VERSION",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_UNADMITTED"
+      ],
+      "predicates": [
+        {
+          "predicate": "non-V1 present type-str record version",
+          "values": [
+            "V2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "closure_C05_MISSING_RULE",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_UNADMITTED"
+      ],
+      "predicates": [
+        {
+          "kinds": [
+            "SOURCE_MEMBERSHIP_V1",
+            "Q_DECLARATION_IDENTITY_V1",
+            "DECLARED_DEPENDENCY_IMPACT_V1"
+          ],
+          "predicate": "missing/duplicate/unknown admitted rule-kind set"
+        }
+      ]
+    },
+    {
+      "id": "closure_C06_EXTRA_FIFTH_RULE",
+      "stage": "BOUNDS",
+      "allowed_errors": [
+        "INPUT_RECORD_BOUND"
+      ],
+      "predicates": [
+        {
+          "cap": 4,
+          "code": "INPUT_RECORD_BOUND",
+          "length": 5,
+          "path": [
+            "rules"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "closure_C07_UNKNOWN_KIND_WITHIN_CAP",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_UNADMITTED"
+      ],
+      "predicates": [
+        {
+          "kinds": [
+            "SOURCE_MEMBERSHIP_V1",
+            "Q_DECLARATION_IDENTITY_V1",
+            "DECLARED_DEPENDENCY_IMPACT_V1",
+            "UNRECOGNIZED_KIND"
+          ],
+          "predicate": "missing/duplicate/unknown admitted rule-kind set"
+        }
+      ]
+    },
+    {
+      "id": "closure_C08_DUPLICATE_KIND_WITHIN_CAP",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_UNADMITTED"
+      ],
+      "predicates": [
+        {
+          "kinds": [
+            "SOURCE_MEMBERSHIP_V1",
+            "Q_DECLARATION_IDENTITY_V1",
+            "DECLARED_DEPENDENCY_IMPACT_V1",
+            "SOURCE_MEMBERSHIP_V1"
+          ],
+          "predicate": "missing/duplicate/unknown admitted rule-kind set"
+        }
+      ]
+    },
+    {
+      "id": "closure_C09_TASK_RULE_SUBSTITUTION",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "closure_C10_WRONG_REGISTRY_ID",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "closure_C11_WRONG_POLICY_ID",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "closure_C12_MANIFEST_RULE_SUBSTITUTION",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "closure_C13_MANIFEST_RULE_OMISSION",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_CLOSED_SCHEMA"
+      ],
+      "predicates": [
+        {
+          "predicate": "frozen independent jsonschema rejection"
+        }
+      ]
+    },
+    {
+      "id": "closure_C14_INLINE_REGISTRY_VERSION",
+      "stage": "SCHEMA",
+      "allowed_errors": [
+        "INPUT_UNADMITTED"
+      ],
+      "predicates": [
+        {
+          "predicate": "non-V1 present type-str record version",
+          "values": [
+            "V2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "closure_C15_SAME_OLD_DIFFERENT_PREDECESSORS",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    },
+    {
+      "id": "closure_C16_SAME_EFFECT_DIFFERENT_IDS",
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "allowed_errors": [],
+      "predicates": [
+        {
+          "predicate": "all scoped contract predicates passed; frozen oracle shape ACCEPT"
+        }
+      ]
+    }
+  ]
+}

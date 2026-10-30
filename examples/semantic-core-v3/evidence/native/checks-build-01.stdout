@@ -1,0 +1,5 @@
+Setup
+   [mkdir]        object directory for project Transport_Core_Checks
+Compile
+   [Ada]          core_checks.adb
+gprbuild: *** compilation phase failed

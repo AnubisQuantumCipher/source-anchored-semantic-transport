@@ -1,0 +1,241 @@
+{
+  "schema": "transport/independent-reader-review/1",
+  "reviewer_model": "gpt-6.1-sol",
+  "source": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/install/read_transport_export.py",
+  "source_sha256": "9d1ce785ddf0bdb3ccf1200f157b21215be0e041a3901313b42c4eab863d60a9",
+  "status": "FINDING_REQUIRES_RESOLUTION",
+  "actions": [
+    "Read frozen contract-audit/contract.md and root oracle.json.",
+    "Read complete reader source, inspect bounded parsing, schema projections, file opening, membership, byte retention, limits, publication and claims.",
+    "AST inspection of all functions and assertions.",
+    "Run preserved isolated short stdout write injection; no producer/native/runtime execution or product mutation."
+  ],
+  "findings": [
+    {
+      "id": "R01_STDOUT_SHORT_WRITE",
+      "severity": "P2",
+      "title": "One-shot stdout writes refuse after emitting a partial success record",
+      "line": 687,
+      "additional_lines": [
+        707,
+        728
+      ],
+      "description": "A valid positive short count from os.write(1,line) raises STDOUT_WRITE. The selected file is removed correctly, but a success-record prefix remains in stdout; inspect has the same pattern. Error stderr writes also ignore short counts. This contradicts the literal no partial successful stdout contract and fails recoverable short writes.",
+      "repro": "review/short_stdout_repro.py",
+      "observed": "review/short_stdout_repro.json",
+      "recommendation": "Use a bounded write-all operation for recoverable short writes on stdout and stderr. Resolve the literal arbitrary-stream no-partial-on-failure promise explicitly: previously emitted stream bytes cannot generally be rolled back. Preserve nonzero failure, no accepted output and complete-record acceptance rules; do not silently weaken the frozen contract."
+    }
+  ],
+  "structural_checks": {
+    "functions": [
+      {
+        "name": "_require",
+        "lines": 3
+      },
+      {
+        "name": "_exact_keys",
+        "lines": 3
+      },
+      {
+        "name": "_digest",
+        "lines": 3
+      },
+      {
+        "name": "_integer",
+        "lines": 3
+      },
+      {
+        "name": "_string",
+        "lines": 3
+      },
+      {
+        "name": "_identity",
+        "lines": 5
+      },
+      {
+        "name": "_record",
+        "lines": 11
+      },
+      {
+        "name": "_lexical_guard",
+        "lines": 22
+      },
+      {
+        "name": "_json_integer",
+        "lines": 4
+      },
+      {
+        "name": "_json_noninteger",
+        "lines": 2
+      },
+      {
+        "name": "_json_pairs",
+        "lines": 7
+      },
+      {
+        "name": "_string_cost",
+        "lines": 5
+      },
+      {
+        "name": "_tree_guard",
+        "lines": 27
+      },
+      {
+        "name": "_parse_json",
+        "lines": 16
+      },
+      {
+        "name": "_path_parts",
+        "lines": 19
+      },
+      {
+        "name": "_open_directory",
+        "lines": 19
+      },
+      {
+        "name": "_names",
+        "lines": 8
+      },
+      {
+        "name": "_file_stat",
+        "lines": 4
+      },
+      {
+        "name": "_file_identity",
+        "lines": 2
+      },
+      {
+        "name": "_read_descriptor",
+        "lines": 9
+      },
+      {
+        "name": "_read_member",
+        "lines": 23
+      },
+      {
+        "name": "_validate_sources",
+        "lines": 14
+      },
+      {
+        "name": "_source_projection",
+        "lines": 3
+      },
+      {
+        "name": "_validate_roster",
+        "lines": 25
+      },
+      {
+        "name": "_validate_explanation",
+        "lines": 26
+      },
+      {
+        "name": "_validate_runtime",
+        "lines": 13
+      },
+      {
+        "name": "_validate_manifest",
+        "lines": 17
+      },
+      {
+        "name": "_validate_metadata",
+        "lines": 28
+      },
+      {
+        "name": "_checked_member",
+        "lines": 6
+      },
+      {
+        "name": "_load_export",
+        "lines": 31
+      },
+      {
+        "name": "_read_open_directory",
+        "lines": 19
+      },
+      {
+        "name": "_os_error",
+        "lines": 8
+      },
+      {
+        "name": "read_export",
+        "lines": 20
+      },
+      {
+        "name": "_limits",
+        "lines": 12
+      },
+      {
+        "name": "_arguments",
+        "lines": 14
+      },
+      {
+        "name": "_inspect",
+        "lines": 17
+      },
+      {
+        "name": "_selected",
+        "lines": 11
+      },
+      {
+        "name": "_receipt",
+        "lines": 9
+      },
+      {
+        "name": "_json_line",
+        "lines": 5
+      },
+      {
+        "name": "_write_bytes",
+        "lines": 9
+      },
+      {
+        "name": "_remove_output",
+        "lines": 7
+      },
+      {
+        "name": "_output_parent",
+        "lines": 10
+      },
+      {
+        "name": "_publish",
+        "lines": 34
+      },
+      {
+        "name": "_run",
+        "lines": 11
+      },
+      {
+        "name": "main",
+        "lines": 18
+      },
+      {
+        "name": "__init__",
+        "lines": 3
+      },
+      {
+        "name": "error",
+        "lines": 2
+      }
+    ],
+    "assert_nodes": [],
+    "direct_self_calls": []
+  },
+  "verified": "Static contract/source review and isolated injected short-write behavior only. Source SHA matches requested pin. No definite other defect identified.",
+  "unproved": [
+    "Whole-system proof",
+    "Hostile concurrent same-UID mutation isolation",
+    "All OS interruption/crash behavior",
+    "Actual producer interoperability (owner owns this qualification)",
+    "Exhaustive parser/filesystem behavior"
+  ],
+  "acceptance_evidence_required": [
+    "Resolve R01 and preserve regression evidence under unchanged bounds",
+    "Independent rereview of exact repaired SHA",
+    "Owner full oracle and actual producer qualification receipts"
+  ],
+  "limitations": [
+    "Independent engineering review, not formal verification or external human validation.",
+    "No memory files used; no product changed.",
+    "Oracle initially requested under contract-audit/ was absent; actual root oracle.json read."
+  ]
+}

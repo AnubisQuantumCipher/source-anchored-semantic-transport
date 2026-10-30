@@ -1,0 +1,52 @@
+[
+  {
+    "command": [
+      "python3",
+      "-I",
+      "-S",
+      "-B",
+      "-Werror",
+      "examples/semantic-core-v3-ci/check_continuity.py"
+    ],
+    "exit_code": 0,
+    "output_prefix": "check_continuity-normal"
+  },
+  {
+    "command": [
+      "python3",
+      "-I",
+      "-S",
+      "-B",
+      "-Werror",
+      "examples/semantic-core-v3-ci/test_continuity.py"
+    ],
+    "exit_code": 0,
+    "output_prefix": "test_continuity-normal"
+  },
+  {
+    "command": [
+      "python3",
+      "-I",
+      "-S",
+      "-B",
+      "-Werror",
+      "-O",
+      "examples/semantic-core-v3-ci/check_continuity.py"
+    ],
+    "exit_code": 0,
+    "output_prefix": "check_continuity-optimized"
+  },
+  {
+    "command": [
+      "python3",
+      "-I",
+      "-S",
+      "-B",
+      "-Werror",
+      "-O",
+      "examples/semantic-core-v3-ci/test_continuity.py"
+    ],
+    "exit_code": 0,
+    "output_prefix": "test_continuity-optimized"
+  }
+]

@@ -1,0 +1,8 @@
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=/home/sicarii/opt/gnat/gnat-aarch64-linux-16.1.0-1/bin/../libexec/gcc/aarch64-linux-gnu/16.1.0/lto-wrapper
+Target: aarch64-linux-gnu
+Configured with: ../src/configure --prefix=/home/runner/work/GNAT-FSF-builds/GNAT-FSF-builds/sbx/aarch64-linux/gcc/install --with-build-time-tools=/home/runner/work/GNAT-FSF-builds/GNAT-FSF-builds/sbx/aarch64-linux/binutils/install/bin --enable-languages=c,ada,c++ --enable-libstdcxx --enable-libstdcxx-threads --enable-libada --with-pkgversion=GNAT-FSF-builds --disable-nls --without-libiconv-prefix --disable-libstdcxx-pch --enable-lto --disable-multilib --enable-threads=posix --enable-default-pie --with-gnu-ld --with-gnu-as --with-mpfr=/home/runner/work/GNAT-FSF-builds/GNAT-FSF-builds/sbx/aarch64-linux/mpfr/install --with-gmp=/home/runner/work/GNAT-FSF-builds/GNAT-FSF-builds/sbx/aarch64-linux/gmp/install --with-mpc=/home/runner/work/GNAT-FSF-builds/GNAT-FSF-builds/sbx/aarch64-linux/mpc/install --with-isl=/home/runner/work/GNAT-FSF-builds/GNAT-FSF-builds/sbx/aarch64-linux/isl/install --build=aarch64-linux-gnu
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 16.1.0 (GNAT-FSF-builds) 

@@ -1,0 +1,18 @@
+{
+  "schema": "quorum/body-input-contract-correction/1",
+  "reason": "The v2 component summary omitted the existing normative top-level schema admission rule. Independent implementation review caught the wrong refusal category; neither version accepted the input.",
+  "normative_source_sha256": "345c58ac03d0855fd65122cd4db5870ad0962362cb03265abeb63a79a0682abd",
+  "rule": "After BOUNDS, a present string Body.schema other than quorum/replay-body/1 is INPUT_UNADMITTED/SCHEMA. Missing or nonstring schema remains INPUT_CLOSED_SCHEMA/SCHEMA. Nested schema constants retain closed-shape checks; this correction adds no new version or compatibility.",
+  "control": {
+    "base": "minimal-body.json",
+    "set": {"schema": "quorum/replay-body/2"},
+    "expected": {"status": "error", "stage": "SCHEMA", "error": "INPUT_UNADMITTED"}
+  },
+  "existing_fixture_override": {
+    "id": "literal_V16_VERSION",
+    "stage": "SCHEMA",
+    "allowed_errors": ["INPUT_UNADMITTED"],
+    "reason": "This already frozen candidate changes Body.schema. The initial independent public-predicate table shared the omitted admission rule; the normative protocol requires this refusal. Preserve its original INPUT_CLOSED_SCHEMA expectation and the failed comparison in unit-repair-results-02.json."
+  },
+  "retention": "Preserve original v2 and the independent first probe returning INPUT_CLOSED_SCHEMA; no acceptance gate changes."
+}

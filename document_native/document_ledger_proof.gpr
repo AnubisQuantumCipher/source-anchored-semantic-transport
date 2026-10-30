@@ -1,0 +1,14 @@
+project Document_Ledger_Proof is
+   for Source_Dirs use (".");
+   for Source_Files use
+     ("document_frame_ledger.ads", "document_frame_ledger.adb");
+   for Object_Dir use external ("DOCUMENT_PROOF_OBJ");
+   package Compiler is
+      for Default_Switches ("Ada") use
+        ("-gnat2022", "-gnatwa", "-gnatwe", "-gnatVa", "-gnata", "-gnatf");
+   end Compiler;
+   package Prove is
+      for Proof_Switches ("Ada") use
+        ("--level=2", "--report=all", "--warnings=error", "-j1");
+   end Prove;
+end Document_Ledger_Proof;

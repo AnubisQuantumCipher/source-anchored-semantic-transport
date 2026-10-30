@@ -1,0 +1,54 @@
+{
+  "schema":"quorum/body-input-v2-and-raw-reader-review/1",
+  "reviewer":"/root/quorum_graph_oracle",
+  "classification":"OBSERVED_FOCUSED_DOCUMENT_SOURCE_AND_RAW_DIAGNOSTIC_REVIEW",
+  "scope":"Consolidated contract comparison and current raw-reader review only. No product edits, shape evaluator execution, native builds, full replay or acceptance claim.",
+  "inspected_inputs":[
+    {"path":"/dev/shm/semantic-transport-wire-input-20261029/contract-v2.json","bytes":11698,"sha256":"18d180241243baeb7dd362cf833abedfcc5e099b489034c3ead8d547054181d6"},
+    {"path":"/dev/shm/semantic-transport-wire-input-20261029/raw-controls-corrections-v2.json","bytes":7953,"sha256":"ae9f844e102b15399cb6338db25548914e2203f83846277e42131e2f6e2ba843"},
+    {"path":"/dev/shm/semantic-transport-wire-input-20261029/schema-path-inspection.json","bytes":2637,"sha256":"a716f4c45941b95edf353c6059359040f5061e1604066b3138628e8db162864e"},
+    {"path":"/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_quorum_input.py","bytes":4549,"sha256":"e8022045563c3eddf8b7b79fd6a52d6e201b69fa6b9af07149e80e00e3958bd1"}
+  ],
+  "contract_comparison":{
+    "disposition":"NO_NEW_MATERIAL_DOCUMENT_BLOCKER_IDENTIFIED",
+    "observations":[
+      "V2 retains the accepted exact PREPARSE/stage semantics, twenty-digit preconversion resource limit, fixed-pattern search parity and no-premature-replay boundary.",
+      "Explicit Body record formula matches the existing count rule: body Registry and Policy, body Registry Seats, all array records, and each embedded Manifest Registry plus its Seats. Guard/pin/key dictionaries remain outside that record count without escaping raw bytes/depth/work caps.",
+      "Text mapping preserves separate UTF8 byte versus schema character limits, the qualified1024-byte fields, fixed Id/Sha256 constraints, Base64 wire-text exception and deferred decoded-base64 semantics. It makes no source/hash verification claim.",
+      "Bounds walk may defer missing/wrong-type fields to closed shape while independently enforcing known present correctly typed limits; it must never use such deferral to accept malformed input.",
+      "Schema-path report records a finite local reference DAG with a nineteen-node longest path under the proposed one-child/frame-local design. That evidence remains source inspection/computation, conditional on the actual evaluator preserving the design; it does not independently establish runtime correctness or a formal bound proof.",
+      "Canonical shape success remains BODY_INPUT_SHAPE_ONLY. References, installed runtime, graphs, semantic interpretation, aggregation and source/current authority remain outside this component."
+    ],
+    "freeze_conclusion":"The consolidated files are compatible with earlier reviewed decisions and may be pinned for the finite shape component. No external participant prerequisite applies to this local engineering item."
+  },
+  "first_findings":[
+    {
+      "id":"I01",
+      "severity":"COMPONENT_CONTRACT_MISMATCH_REQUIRES_REPAIR_BEFORE_QUALIFICATION",
+      "location":"transport_quorum_input.py:_token",
+      "issue":"The digit ceiling is checked inside the token scan before the full token grammar is known. A token having more than twenty digits followed by fraction/exponent syntax reports INPUT_INTEGER_BOUND even though the frozen contract reserves that code for an otherwise unsigned decimal and requires malformed numeric spelling to report INPUT_INTEGER_TOKEN.",
+      "counterexamples":["123456789012345678901.0","123456789012345678901e0"],
+      "expected":{"status":"error","stage":"PREPARSE","error":"INPUT_INTEGER_TOKEN"},
+      "observed":{"status":"error","stage":"PREPARSE","error":"INPUT_INTEGER_BOUND"},
+      "risk":"Both candidates refuse; no false acceptance or authority escalation observed. The discrepancy breaks deterministic frozen refusal semantics and leaves a missing precedence control.",
+      "action":"Finish bounded numeric-token grammar validation before applying the otherwise-unsigned-decimal digit ceiling, or retain an explicitly reviewed contract change. Add these literal controls, retain the first outputs and rerun them plus existing digit/lexical controls after the narrow repair. Reviewer makes no product edit."
+    }
+  ],
+  "first_raw_probe_outputs":[
+    {"raw_ascii":"123456789012345678901.0","output":{"status":"error","stage":"PREPARSE","error":"INPUT_INTEGER_BOUND"}},
+    {"raw_ascii":"123456789012345678901e0","output":{"status":"error","stage":"PREPARSE","error":"INPUT_INTEGER_BOUND"}},
+    {"raw_ascii":"123456789012345678901","output":{"status":"error","stage":"PREPARSE","error":"INPUT_INTEGER_BOUND"}},
+    {"raw_ascii":"12345678901234567890","output":{"status":"ok","stage":"CANONICAL_VALUE_ONLY"}},
+    {"raw_hex":"225c756438303022","output":{"status":"error","stage":"PREPARSE","error":"INPUT_ENCODING"}},
+    {"raw_hex":"225c75643833645c756465303022","output":{"status":"error","stage":"CANONICAL_BYTES","error":"INPUT_NONCANONICAL"}}
+  ],
+  "raw_probe_execution":"Actual current check_canonical_value was called for the six literal inputs with PYTHONDONTWRITEBYTECODE=1; all first outputs above are retained. The Body wrapper and shape evaluator were not invoked.",
+  "other_raw_source_observations":[
+    "Exact bytes/type/length and strict UTF8/BOM gates precede lexical scanning and json_value.",
+    "Lexical scanning ignores string numeric spellings, bounds depth and walks each token segment; scalar walk visits decoded object keys via bounded iterator frames and rejects unpaired surrogates.",
+    "Private canonical diagnostic emits CANONICAL_VALUE_ONLY and no body copy, acceptance or semantic dimension. Body wrapper remains incomplete until its separately reviewed shape dependency exists; no wrapper qualification is asserted."
+  ],
+  "smallest_sound_next_step":"Owner pins the v2 inputs, performs the narrow I01 raw-token repair with additive controls, then implements the bounded shape evaluator under the admitted design. Independent implementation/branch/counter review and frozen test evidence remain required before component qualification.",
+  "remaining_unproved_or_unrun":["Actual shape evaluator, work counters and complete wrapper qualification","Formal proof and inherited runtime/recovery/interoperability gates","Full replay identity/reference/graph/semantic qualification","External-human benefit and product acceptance"],
+  "verdict":"V2_CONTRACT_FREEZE_COMPATIBLE; RAW_READER_I01_REPAIR_REQUIRED; NO_FULL_REPLAY_ACCEPTANCE_CLAIM"
+}

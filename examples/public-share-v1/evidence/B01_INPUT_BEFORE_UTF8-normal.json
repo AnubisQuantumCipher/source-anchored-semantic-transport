@@ -1,0 +1,1 @@
+{"budget":131072,"budget_type":"int","exception":"PublicShareError","id":"B01_INPUT_BEFORE_UTF8","input":{"bytes":131073,"sha256":"5636a1cb044bba050975425902c321b0f7fbfdaab709624a2cafa1743d2be519"},"reason":"PUBLIC_SHARE_INPUT_BOUND","scope":"PURE_API_BOUNDARY_ONLY","source":{"bytes":18120,"sha256":"cba055858360c177f25bd510c24ebdf31833e8ed550f362c55d946acbfc766b9"}}

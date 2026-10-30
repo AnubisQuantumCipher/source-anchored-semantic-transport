@@ -1,0 +1,39 @@
+{
+  "boundary": "Actual decode/envelope/evaluate branches; courier and binary-pinning helpers mocked. Any native call raises. No real package or native run claimed.",
+  "bridge_sha256": "fa65f65d9021b1c14470ff46cef5686dcc91d951a323073006ed2607dafcb5d7",
+  "expected": {
+    "entailment": "NOT_CHECKED",
+    "execution_authority": "NONE",
+    "interpretation_entailment": "UNPROVEN",
+    "model_sha256": null,
+    "nodes": [],
+    "reading_status": "PROPOSED_STRUCTURED_READING",
+    "result": null,
+    "semantic_scope": "NONE_NO_MODEL",
+    "status": "NOT_EVALUATED",
+    "translation": "NOT_IN_FRAGMENT",
+    "world_truth": "NOT_CERTIFIED"
+  },
+  "issues": [],
+  "result": {
+    "entailment": "NOT_CHECKED",
+    "execution_authority": "NONE",
+    "grammar": "transport/meaning/3",
+    "interpretation_entailment": "UNPROVEN",
+    "model_sha256": null,
+    "nodes": [],
+    "package_identity": "STS1:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "payload_sha256": "fedd0352010084a6be2310527d259e4f5c8cdd191edeedebe2af60570e7b5026",
+    "reading_status": "PROPOSED_STRUCTURED_READING",
+    "result": null,
+    "satisfaction": "MODEL_RELATIVE_MAY_BE_VACUOUS",
+    "schema": "transport/core-result/3",
+    "semantic_completeness": "UNPROVEN",
+    "semantic_scope": "NONE_NO_MODEL",
+    "source_sha256": "7b7792312113133c4afa973accbbb2e14edacc6c03e08826288a032d64f010b0",
+    "status": "NOT_EVALUATED",
+    "translation": "NOT_IN_FRAGMENT",
+    "world_truth": "NOT_CERTIFIED"
+  },
+  "status": "PASS"
+}

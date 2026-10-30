@@ -1,0 +1,84 @@
+{
+  "boundary": "Mocked courier/native objects test only replay comparison and receipt control; no package/native execution claimed",
+  "results": [
+    {
+      "error": null,
+      "id": "matching_values",
+      "pass": true,
+      "result": {
+        "archive_bytes": 7,
+        "character_convention": "Unicode code points; no platform compliance claim",
+        "exact_source_recovery": "BYTE_COMPARISON_PASS",
+        "frame_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+        "model_sha256": "ba436ad25fbb367e184536561e69db3261e09a0ce6a47db4261412711c86eb68",
+        "native_sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "nodes": [
+          {
+            "node": 0,
+            "outcome": "UNKNOWN",
+            "sort": "FACT",
+            "truth": "UNRESOLVED"
+          }
+        ],
+        "package_identity": "STS1:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+        "pair": "/dev/shm/semantic-transport-core-20261029/evidence/delta-review/matching_values/product",
+        "replay": "ORIGINAL_RECOVERED_VALUES_MATCH",
+        "result": {
+          "node": 0,
+          "outcome": "UNKNOWN",
+          "sort": "FACT",
+          "truth": "UNRESOLVED"
+        },
+        "share_characters": 5,
+        "status": "EVALUATED_SUPPLIED_MODEL"
+      }
+    },
+    {
+      "error": null,
+      "id": "absent_model",
+      "pass": true,
+      "result": {
+        "archive_bytes": 7,
+        "character_convention": "Unicode code points; no platform compliance claim",
+        "exact_source_recovery": "BYTE_COMPARISON_PASS",
+        "model_sha256": null,
+        "nodes": [],
+        "package_identity": "STS1:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+        "pair": "/dev/shm/semantic-transport-core-20261029/evidence/delta-review/absent_model/product",
+        "replay": "NOT_EVALUATED",
+        "result": null,
+        "share_characters": 5,
+        "status": "NOT_EVALUATED"
+      }
+    },
+    {
+      "error": "CORE_REPLAY_MISMATCH",
+      "id": "status_changed",
+      "pass": true,
+      "result": null
+    },
+    {
+      "error": "CORE_REPLAY_MISMATCH",
+      "id": "nodes_changed",
+      "pass": true,
+      "result": null
+    },
+    {
+      "error": "CORE_REPLAY_MISMATCH",
+      "id": "result_changed",
+      "pass": true,
+      "result": null
+    },
+    {
+      "error": "CORE_PLAN_VERSION",
+      "id": "invalid_plan_missing_model",
+      "pass": true
+    }
+  ],
+  "schema": "semantic-core-independent-replay-guard/1",
+  "source_sha256": {
+    "transport_core.py": "c186f9e9a78060fd03e95c339d2c5b31e7558fd37e6f4b7f12e8538bf952e6cd",
+    "transport_core_bridge.py": "c11226a6f16f55a4ebc5ffea976be9f58b6b14725d3fadc9943f8c401fb1cda6"
+  },
+  "status": "PASS"
+}
