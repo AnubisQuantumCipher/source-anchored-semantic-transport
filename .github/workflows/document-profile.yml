@@ -54,6 +54,20 @@ jobs:
           python3 -I -S -B -O -Werror tests/test_transport_document_fidelity.py
           python3 -I -S -B -Werror tests/test_transport_document_fidelity_public.py
           python3 -I -S -B -O -Werror tests/test_transport_document_fidelity_public.py
+      - name: SENTINEL exact evidence and context controls, without native qualification
+        run: |
+          python3 -I -S -B -Werror tests/check_sentinel_profile.py
+          python3 -I -S -B -O -Werror tests/check_sentinel_profile.py
+          python3 -I -S -B -Werror tests/test_transport_document_context.py
+          python3 -I -S -B -O -Werror tests/test_transport_document_context.py
+          python3 -I -S -B -Werror tests/test_transport_sentinel.py
+          python3 -I -S -B -O -Werror tests/test_transport_sentinel.py
+          python3 -I -S -B -Werror tests/test_transport_sentinel_package.py
+          python3 -I -S -B -O -Werror tests/test_transport_sentinel_package.py
+          python3 -I -S -B -Werror tests/test_sentinel_qualification.py
+          python3 -I -S -B -O -Werror tests/test_sentinel_qualification.py
+          python3 -I -S -B -Werror tests/test_sentinel_checkpoint.py
+          python3 -I -S -B -O -Werror tests/test_sentinel_checkpoint.py
       - name: State native evidence boundary
         run: |
           echo 'Native70 controls require a separately qualified declared binary. Retained evidence is local Linux aarch64; no native build, proof or execution is claimed by this Linux x64 job.'

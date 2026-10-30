@@ -1,0 +1,67 @@
+{
+  "schema": "sentinel/graph-independent-source-review/2",
+  "reviewed_utc": "2026-10-30T05:16:56.619968+00:00",
+  "verdict": "PASS_SCOPED_SOURCE04_STRUCTURE_EXPORT",
+  "source_pins": [
+    {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_sentinel.py",
+      "bytes": 25423,
+      "sha256": "52f15b46d9af6e80d56d9ce4769057300767cb1c4bdc5b759c1841f38104dfd3"
+    },
+    {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_sentinel_export.py",
+      "bytes": 4799,
+      "sha256": "eaa8bc075c67c499872d5ebfd6879bd5d2fe838a3e7e64d83503040d5fb93c62"
+    },
+    {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_sentinel.py",
+      "bytes": 27883,
+      "sha256": "229d0c6b2629e495ed40e5fcdb3020294fb821385098e4755da1d8e98d761d34"
+    }
+  ],
+  "control_receipts": [
+    {
+      "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/graph-independent-review-01/source04-controls/receipt.json",
+      "bytes": 3238,
+      "sha256": "50c29856e4807595c67320d31dc9dad14515d41661d5af349f17b0071144ef33"
+    },
+    {
+      "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/graph-independent-review-01/source04-independent-regressions.json",
+      "bytes": 1271,
+      "sha256": "a0f8f5d7f5b69ef54fffcb0062296bdb860b9713ea6f5b5b4f6e0a1edf4b0ca7"
+    }
+  ],
+  "prior_failed_source03": [
+    {
+      "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/graph-independent-review-01/source03-review-01.json",
+      "bytes": 4750,
+      "sha256": "6f8615b31b9f3f20c8e9ebb0bbfb4f5bfdda4905cf5de0faf8693f405a929952"
+    },
+    {
+      "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/graph-independent-review-01/registry-interleaving-counterexample-01.json",
+      "bytes": 3632,
+      "sha256": "e00315d3ff58ca97fec7d050d576e91d5a097e1fe689308f34a8c6ec30729a62"
+    }
+  ],
+  "contract06": {
+    "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/graph-oracle/operational-exact-01/CONTRACT-06.json",
+    "bytes": 2486,
+    "sha256": "e58cd11f223d22a6ba06362a2d240d520ae4596350208387d0b6e3070699375c"
+  },
+  "G3_closure": "Exactdict snapshot inspects at most257 entries, retains at most256 exactstr/immutablebytes entries, bounds each/aggregate before hashing, RuntimeError refuses. Context/final closure use only that snapshot. Export consumes parsed checked raw/context and never rereads caller map.",
+  "actual_results": "25 original/new pure controls normal and optimized PASS; independent original-caller-only replacement-after-hash refuses for BOTH validator and exporter. Independent positive late caller-value/key mutation leaves held private bytes stable for BOTH. All four additional interleaving regressions PASS without allowing instrumentation to mutate internal snapshot.",
+  "reviewed": [
+    "Full source03 validator/exporter/test and all history/profile contracts; complete source04 delta and three added tests read. No source04 code changes beyond bounded registry capture/final-closure correction and corresponding tests.",
+    "Exact canonical raw/registry pins, bounded closed types/counts, actual source/quote selectors, typed reference identity, complete candidate/probe matrices, exact comparison diagnostics and documentary ledger distinction.",
+    "Immutable exact prior snapshot prefixes, independently held immediate previous SHA, bounded acyclic snapshot progression and repair/counterexample chronology. Prior failures and original literal expected answers remain retained.",
+    "No opaque receipt, imported status, model agreement, SHA alone or Python Boolean grants qualification. Export remains NOT_QUALIFIED staging manifest, not admitted native wire."
+  ],
+  "remaining_blockers": [],
+  "required_future_boundaries": [
+    "Future native adapter must require complete one-source projection or refuse multi-source sets; source_set_sha256 is not a literal source hash.",
+    "Required context, adjudication, actual actor execution and oracle provenance need separately frozen verification; merely resolving their pins cannot set complete/no-blocker fields.",
+    "Expected Q/source/oracle/policy identities are caller-held unauthenticated roots; validator alone does not attest pre-generation commitment or independently adjudicated oracle truth."
+  ],
+  "scope": "Pure evidence-byte/structure validation and export only. No native/Popen/compiler/prover/model/OCR/actual document-intake campaign or source edit in this review. General semantic/OCR requirement remains NOT_MET; no Q qualification or whole-system proof.",
+  "smallest_next_step": "Owner may review/integrate this exact frozen validator/exporter behind its stated NOT_QUALIFIED boundary; any portable container or native adapter needs separate source/test/identity acceptance."
+}

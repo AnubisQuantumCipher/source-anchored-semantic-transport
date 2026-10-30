@@ -1,0 +1,22 @@
+{
+  "schema": "sentinel/endpoint-sort-counterexample/1",
+  "status": "CONFIRMED_ACCEPTED_INCOMPATIBLE_ENDPOINT_SORTS_UNDER_DECLARED_NEW_CONTRACT",
+  "source_graph_sha256": "6335d67aaa7855a01eeba3e047edd52b37af7823ce733765174b66eb1169918d",
+  "input_sha256": "b6492cf697ea9c2a7a146f191caa8d50823ab6975cbd1fb2a20f3113ff0baed9",
+  "result_sha256": "cff4db294917dbba92d2b1ccdb9f0ebef4210b498ba0aa3548fc662c2ab44566",
+  "registry_sha256": "46878c2005e4fc12883faea6a6ae379279d79d89c8db549250f54202b0c0a406",
+  "edge": {
+    "from": "C1",
+    "to": "OTHER",
+    "kind": "HAS_ARGUMENT"
+  },
+  "endpoint_kinds": [
+    "ENTITY",
+    "TIME"
+  ],
+  "old_structural_scope": "Only label/reference checks were enforced; old29pure tests remain PASS only in that narrower scope.",
+  "new_admitted_requirement": "Strict closed relation endpoint kinds; this edge must refuse.",
+  "native_or_model_execution": "NONE",
+  "qualification": "NOT_QUALIFIED",
+  "execution_authority": "NONE"
+}
