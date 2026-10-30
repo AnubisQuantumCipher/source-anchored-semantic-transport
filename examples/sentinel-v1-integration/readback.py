@@ -59,8 +59,11 @@ def receipt():
     if matrix['status'] != 'UNRUN_FOR_FINAL_COMBINED_REVISION':
         raise ValueError('preparatory matrix cannot grant final acceptance')
     count = checked_source(snapshot)
-    return {'schema': 'sast/public-integration-readback/1',
+    return {'schema': 'sast/public-integration-readback/2',
             'classification': 'CHECKED_METADATA_AND_SYNTHETIC_BYTES_ONLY',
+            'previous_public_receipt': pin(raw(HERE / 'receipt.json')),
+            'previous_receipt_scope': 'HISTORICAL_BYTES_ONLY_NOT_RETARGETED',
+            'workflow_context_profile': pin(raw(ROOT / 'tests/test_manifest_signing_workflow.py')),
             'inputs': {name: pin(data) for name, data in inputs.items()},
             'current_source_files_checked': count,
             'public_support': {name: pin(raw(HERE / name)) for name in SUPPORT},
@@ -79,7 +82,7 @@ def main():
     parser.add_argument('--check', action='store_true')
     args = parser.parse_args()
     value = (json.dumps(receipt(), sort_keys=True, indent=2) + '\n').encode('ascii')
-    target = HERE / 'receipt.json'
+    target = HERE / 'receipt-ci-context-v2.json'
     if args.check:
         if raw(target) != value:
             raise ValueError('derived receipt differs; retain prior receipt and review source change')

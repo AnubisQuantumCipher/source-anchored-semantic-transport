@@ -59,6 +59,19 @@ and probabilistic-loop compliance remain **UNPROVEN_UNWAIVED**. No local
 CBMC/HOL/assembly proof, production-key admission or FIPS module validation is
 claimed. Workflow definition is preparation; its fresh hosted result is pending.
 
+The [first hosted signing attempt](https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/actions/runs/41049181112), at source `e9c0d321d94c29be5e028badd1e3237bb5f0b21f`,
+was FAILED_BEFORE_ANY_JOB: job-level `env` used the unavailable `runner` context.
+The repair exports all three signing paths through quoted `$RUNNER_TEMP` and
+`$GITHUB_ENV` in the first runner command, following GitHub's
+[context availability](https://docs.github.com/en/actions/reference/workflows-and-actions/contexts).
+A bounded standard-library regression checks this closed workflow profile,
+rejects the original invalid job declaration and verifies the exact path export.
+It is not a general YAML validator. The repaired hosted workflow remains UNRUN.
+
+The new `receipt-ci-context-v2.json` has schema2 and binds the changed workflow,
+readback and regression source. The pushed `receipt.json` remains unchanged as
+historical evidence; its bytes are pinned by the new receipt.
+
 ## Required acceptance
 
 The [machine-readable matrix](../examples/sentinel-v1-integration/acceptance-matrix.json)

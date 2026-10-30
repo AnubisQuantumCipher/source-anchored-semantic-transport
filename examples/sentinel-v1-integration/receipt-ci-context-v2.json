@@ -1,0 +1,63 @@
+{
+  "classification": "CHECKED_METADATA_AND_SYNTHETIC_BYTES_ONLY",
+  "combined_revision_acceptance": "NOT_ESTABLISHED",
+  "current_source_files_checked": 26,
+  "execution_authority": "NONE",
+  "historical_receipts": "UNCHANGED_NOT_RETARGETED",
+  "inputs": {
+    "acceptance-matrix.json": {
+      "bytes": 10595,
+      "sha256": "1b8b6ea0c38a8969c37b619cf4fead5188e0e9f115ccd6462e74315177c628ab"
+    },
+    "source-snapshot.json": {
+      "bytes": 30026,
+      "sha256": "e43efc9a58fa71af744b4944e2acaa8ab91b8170254c11e42800cfc67a917a9b"
+    },
+    "synthetic-source.txt": {
+      "bytes": 200,
+      "sha256": "f57071bec3bd1cd44111bdce1d107adb3e27c687800ca56e8651bd52af378567"
+    }
+  },
+  "integration_doc": {
+    "bytes": 7599,
+    "sha256": "3f027fcad2b3d3c3b66dfbe7886aa618665ec6b46845019472cc7eeb2f40c7df"
+  },
+  "previous_public_receipt": {
+    "bytes": 1771,
+    "sha256": "cceb97526e10b4ce594f81d92c389a5658af8cfd6b6e48feeb91abfc8e5df11f"
+  },
+  "previous_receipt_scope": "HISTORICAL_BYTES_ONLY_NOT_RETARGETED",
+  "private_originals": "HASH_IDENTITIES_ONLY_NOT_PUBLICLY_REPRODUCED",
+  "public_support": {
+    "README.md": {
+      "bytes": 3251,
+      "sha256": "c21b5f57514dd102a52ea6c97d638852484d40bf8bffd628a6b9dad262aac770"
+    },
+    "ci_gate.py": {
+      "bytes": 4188,
+      "sha256": "1eede1f44bcdd178ca879f50552e70ce1721ce4c8f5e3b177169edcb73d77ab9"
+    },
+    "readback.py": {
+      "bytes": 4265,
+      "sha256": "c58fbd9c862012b140094041c25221e088e63bbedcef9c5866e151746686fd7c"
+    }
+  },
+  "schema": "sast/public-integration-readback/2",
+  "semantic_entailment": "UNPROVEN",
+  "static_profile": {
+    "bytes": 4105,
+    "sha256": "dab0dd6934f6913c8934afce423411632d12272114621318a6927784a03e8b83"
+  },
+  "synthetic_fixture": {
+    "bytes": 200,
+    "sha256": "f57071bec3bd1cd44111bdce1d107adb3e27c687800ca56e8651bd52af378567"
+  },
+  "workflow": {
+    "bytes": 2641,
+    "sha256": "0e9de1f95977802ffde43f41890a16eee7ef6663bf7f4c0967448fe7ec8a0d72"
+  },
+  "workflow_context_profile": {
+    "bytes": 4688,
+    "sha256": "69d7a2e34496b2a79fa96ef680ef067ae90ce609095814174c958a47564b97a9"
+  }
+}
