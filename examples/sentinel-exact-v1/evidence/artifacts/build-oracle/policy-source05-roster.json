@@ -1,0 +1,272 @@
+{
+  "schema": "sentinel/proof-roster/1",
+  "status": "SOURCE_DERIVED_FROZEN_BEFORE_PROVER",
+  "unit": "sentinel_policy",
+  "sources": {
+    "sentinel_native/sentinel_policy.ads": "a66f97c23cbaedd317ff0a073d2eab0116c13578aeaeb8a72e0bf77551e52c75",
+    "sentinel_native/sentinel_policy.adb": "889348d21a6063f83976f0d51852d51064aeb5c43cf5a978a3ff5badbba5486f",
+    "sentinel_native/sentinel_policy.gpr": "363494be1324111c0064a173e617d87390b49aa6d7d934c7d75b223aadf1ac7c",
+    "sentinel_native/sentinel_policy_proof.gpr": "57de11fe7e0c0573b2b531f8e5a526fb7069e8d75d92f8ef107873b93e0c46ee"
+  },
+  "entities": [
+    {
+      "name": "Sentinel_Policy",
+      "file": "sentinel_policy.ads",
+      "line": 1,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.Session",
+      "file": "sentinel_policy.ads",
+      "line": 200,
+      "minimum_proved_checks": 1,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.Valid",
+      "file": "sentinel_policy.ads",
+      "line": 63,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.Initialized",
+      "file": "sentinel_policy.ads",
+      "line": 64,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.Identity_Of",
+      "file": "sentinel_policy.ads",
+      "line": 65,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.Questions_Of",
+      "file": "sentinel_policy.ads",
+      "line": 66,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.Current_Round",
+      "file": "sentinel_policy.ads",
+      "line": 67,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.Candidate_Of",
+      "file": "sentinel_policy.ads",
+      "line": 68,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.Accepted_Count",
+      "file": "sentinel_policy.ads",
+      "line": 69,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.Expected_Of",
+      "file": "sentinel_policy.ads",
+      "line": 71,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.Qualification_Requested",
+      "file": "sentinel_policy.ads",
+      "line": 73,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.Fatal",
+      "file": "sentinel_policy.ads",
+      "line": 75,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.Eligible",
+      "file": "sentinel_policy.ads",
+      "line": 76,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.State_Of",
+      "file": "sentinel_policy.ads",
+      "line": 77,
+      "minimum_proved_checks": 1,
+      "explicit_postcondition": true
+    },
+    {
+      "name": "Sentinel_Policy.Authority",
+      "file": "sentinel_policy.ads",
+      "line": 81,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.Failure_History",
+      "file": "sentinel_policy.ads",
+      "line": 83,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.Failure_Count",
+      "file": "sentinel_policy.ads",
+      "line": 85,
+      "minimum_proved_checks": 1,
+      "explicit_postcondition": true
+    },
+    {
+      "name": "Sentinel_Policy.Documentary_Of",
+      "file": "sentinel_policy.ads",
+      "line": 91,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.Result_Of",
+      "file": "sentinel_policy.ads",
+      "line": 93,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.History_Preserved",
+      "file": "sentinel_policy.ads",
+      "line": 95,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.Answer_Admissible",
+      "file": "sentinel_policy.ads",
+      "line": 97,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.Refinement_Admissible",
+      "file": "sentinel_policy.ads",
+      "line": 101,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.Initialize",
+      "file": "sentinel_policy.ads",
+      "line": 105,
+      "minimum_proved_checks": 1,
+      "explicit_postcondition": true
+    },
+    {
+      "name": "Sentinel_Policy.Bind_Source",
+      "file": "sentinel_policy.ads",
+      "line": 123,
+      "minimum_proved_checks": 1,
+      "explicit_postcondition": true
+    },
+    {
+      "name": "Sentinel_Policy.Record_Answer",
+      "file": "sentinel_policy.ads",
+      "line": 135,
+      "minimum_proved_checks": 1,
+      "explicit_postcondition": true
+    },
+    {
+      "name": "Sentinel_Policy.Request_Qualification",
+      "file": "sentinel_policy.ads",
+      "line": 160,
+      "minimum_proved_checks": 1,
+      "explicit_postcondition": true
+    },
+    {
+      "name": "Sentinel_Policy.Begin_Refinement",
+      "file": "sentinel_policy.ads",
+      "line": 169,
+      "minimum_proved_checks": 1,
+      "explicit_postcondition": true
+    },
+    {
+      "name": "Sentinel_Policy.Identity_Valid",
+      "file": "sentinel_policy.adb",
+      "line": 2,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.Roster_Valid",
+      "file": "sentinel_policy.adb",
+      "line": 9,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.Link_Valid",
+      "file": "sentinel_policy.adb",
+      "line": 16,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.Claims_Valid",
+      "file": "sentinel_policy.adb",
+      "line": 27,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.All_Linked",
+      "file": "sentinel_policy.adb",
+      "line": 33,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.Repairs_Valid",
+      "file": "sentinel_policy.adb",
+      "line": 37,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.New_Candidate",
+      "file": "sentinel_policy.adb",
+      "line": 44,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.All_Match",
+      "file": "sentinel_policy.adb",
+      "line": 71,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.Current_Differs",
+      "file": "sentinel_policy.adb",
+      "line": 87,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    },
+    {
+      "name": "Sentinel_Policy.Current_Challenge",
+      "file": "sentinel_policy.adb",
+      "line": 91,
+      "minimum_proved_checks": 0,
+      "explicit_postcondition": false
+    }
+  ]
+}

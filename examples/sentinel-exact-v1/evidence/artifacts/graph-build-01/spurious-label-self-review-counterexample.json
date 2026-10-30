@@ -1,0 +1,28 @@
+{
+  "status": "UNSUPPORTED_LABEL_ACCEPTED_STRUCTURALLY",
+  "source_sha256": "7a3d2d6aae417b017f7c0ff29c62322522f068dd8489c8b927d206ab98cac9fc",
+  "counterexample_statuses": [
+    "SPURIOUS_RELATIVE_TO_ORACLE",
+    "SPURIOUS_RELATIVE_TO_ORACLE"
+  ],
+  "actual_result_statuses": [
+    "MISMATCH",
+    "MISMATCH"
+  ],
+  "report": {
+    "schema": "sentinel/structural-report/1",
+    "sidecar_sha256": "23b840084916e90dbd59e5ff0ecc2285c1143c373c3387d7e361792c1194d1de",
+    "registry_sha256": "185534c93d8ffe57e1db9c3530b191a3fcbc3f53d4bc60e5c4c75f6d527776e6",
+    "status": "STRUCTURE_AND_EXACT_BYTES_ONLY",
+    "candidates": 3,
+    "probes": 5,
+    "retained_results": 15,
+    "retained_failures": 2,
+    "repair_links": 3,
+    "qualification": "NOT_QUALIFIED",
+    "semantic_completeness": "UNPROVEN",
+    "world_truth": "NOT_CERTIFIED",
+    "execution_authority": "NONE"
+  },
+  "limits": "No authority bypass: qualification remains NOT_QUALIFIED. Unsupported SPURIOUS label still misleading for native-derived exact mismatch; refuse label in narrow operational profile."
+}
