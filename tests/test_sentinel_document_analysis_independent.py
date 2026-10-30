@@ -67,9 +67,12 @@ def mutate_block(packet, kind, change):
     return raw, held, canonical(index), blocks
 
 
-def declared_record_fixture(raw=LITERAL, retained_failure=False):
+def declared_record_fixture(raw=LITERAL, retained_failure=False, job_id=None):
     """Synthetic declared evidence only; this fixture never invokes a provider."""
-    packet = planned(raw); job = first_job(packet); prepared = prepare(packet)
+    packet = planned(raw)
+    selected = rows(parse(packet[2]), packet[3], 'job_blocks')
+    job = first_job(packet) if job_id is None else next(row for row in selected if row['id'] == job_id)
+    prepared = prepare(packet, job['id'])
     request = parse(prepared['request']); start, end = job['span']
     node = {'id': 'C1', 'kind': 'PROPOSITION', 'origin': 'SOURCE_OCCURRENCE',
         'text': 'Synthetic recorded-byte replay fixture, not actual generation.',
