@@ -1,0 +1,50 @@
+name: Portable document profile controls
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  portable-controls:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      TRANSPORT_DOCUMENT_TEST_SCRATCH: ${{ runner.temp }}/document-profile-fixtures
+      TRANSPORT_DOCUMENT_BUNDLE_TEST_SCRATCH: ${{ runner.temp }}/document-profile-bundle
+      TRANSPORT_DOCUMENT_TEST_PURE: '1'
+      TRANSPORT_DOCUMENT_REQUIRE_XML: '1'
+      TRANSPORT_DOCUMENT_XML_PATH: ${{ runner.temp }}/document-profile-deps
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.14.10'
+          architecture: 'x64'
+          check-latest: false
+          allow-prereleases: false
+      - name: Install only the hash-pinned universal test dependency into temporary storage
+        run: |
+          python3 -I -B -m pip --disable-pip-version-check install --no-cache-dir --no-compile --no-deps --require-hashes --only-binary=:all: --target "$TRANSPORT_DOCUMENT_XML_PATH" -r tests/document-profile-requirements.txt
+      - name: AST and function-size guard
+        run: |
+          python3 -I -S -B -Werror tests/check_document_profile.py
+          python3 -I -S -B -O -Werror tests/check_document_profile.py
+      - name: Pure bundle, OCR and media controls in normal and optimized modes
+        run: |
+          python3 -I -S -B -Werror tests/test_transport_document_bundle.py
+          python3 -I -S -B -O -Werror tests/test_transport_document_bundle.py
+          python3 -I -S -B -Werror tests/test_transport_document_ocr_controls.py
+          python3 -I -S -B -O -Werror tests/test_transport_document_ocr_controls.py
+          python3 -I -S -B -Werror tests/test_transport_document_media_controls.py
+          python3 -I -S -B -O -Werror tests/test_transport_document_media_controls.py
+      - name: Pure bounded developer helper controls in normal and optimized modes
+        run: |
+          python3 -I -S -B -Werror tests/test_document_build_helper.py
+          python3 -I -S -B -O -Werror tests/test_document_build_helper.py
+      - name: Explicit static source profile partition controls
+        run: |
+          python3 -I -S -B -Werror tests/test_source_profile_partition.py
+          python3 -I -S -B -O -Werror tests/test_source_profile_partition.py
+          python3 -I -S -B -Werror install/check_source.py
+          python3 -I -S -B -O -Werror install/check_source.py
+      - name: State native evidence boundary
+        run: |
+          echo 'Native70 controls require a separately qualified declared binary. Retained evidence is local Linux aarch64; no native build, proof or execution is claimed by this Linux x64 job.'
