@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 MODULES = ('__init__.py', 'build_provider.py', 'fetch_sources.py', 'manifest.py')
 PRODUCTION = tuple('tools/manifest_signing/' + name for name in MODULES) + (
     'tools/transport_signed_document.py',)
-CONTROLS = ('tests/test_manifest_signing_native.py',
+CONTROLS = ('tests/test_manifest_signing_workflow.py', 'tests/test_manifest_signing_native.py',
             'tests/test_transport_signed_document.py', 'tests/check_manifest_signing.py',
             'examples/sentinel-v1-integration/ci_gate.py',
             'examples/sentinel-v1-integration/readback.py')

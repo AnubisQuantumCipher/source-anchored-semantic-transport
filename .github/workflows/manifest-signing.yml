@@ -6,10 +6,6 @@ jobs:
   actual-provider-and-signed-controls:
     runs-on: ubuntu-24.04
     timeout-minutes: 10
-    env:
-      SAST_MLDSA87_SOURCE: ${{ runner.temp }}/manifest-signing/source
-      SAST_MLDSA87_BUILD: ${{ runner.temp }}/manifest-signing/normal
-      SAST_MLDSA87_RNG_FAULT_ROOT: ${{ runner.temp }}/manifest-signing
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
@@ -20,8 +16,16 @@ jobs:
           architecture: 'x64'
           check-latest: false
           allow-prereleases: false
+      - name: Declare runner-local signing directories
+        run: |
+          printf '%s\n' \
+            "SAST_MLDSA87_SOURCE=$RUNNER_TEMP/manifest-signing/source" \
+            "SAST_MLDSA87_BUILD=$RUNNER_TEMP/manifest-signing/normal" \
+            "SAST_MLDSA87_RNG_FAULT_ROOT=$RUNNER_TEMP/manifest-signing" >> "$GITHUB_ENV"
       - name: Explicit additive source profile and public metadata readback
         run: |
+          python3 -I -S -B -Werror tests/test_manifest_signing_workflow.py
+          python3 -I -S -B -O -Werror tests/test_manifest_signing_workflow.py
           python3 -I -S -B -Werror tests/check_manifest_signing.py
           python3 -I -S -B -O -Werror tests/check_manifest_signing.py
           python3 -I -S -B -Werror examples/sentinel-v1-integration/readback.py --check

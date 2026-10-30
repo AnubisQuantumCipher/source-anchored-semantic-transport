@@ -2,10 +2,12 @@
 
 This directory records preparation, not combined-main acceptance. All content in
 `synthetic-source.txt` is an authored PUBLIC SYNTHETIC fixture. The derived
-`receipt.json` checks its exact bytes and declared repository source identities;
+`receipt-ci-context-v2.json` checks its exact bytes and declared repository source identities;
 it runs no semantic evaluator, model, native provider or decoder.
 
 ```sh
+python3 -I -S -B -Werror tests/test_manifest_signing_workflow.py
+python3 -I -S -B -O -Werror tests/test_manifest_signing_workflow.py
 python3 -I -S -B -Werror tests/check_manifest_signing.py
 python3 -I -S -B -Werror examples/sentinel-v1-integration/readback.py --check
 python3 -I -S -B -O -Werror examples/sentinel-v1-integration/readback.py --check
@@ -43,3 +45,10 @@ separate observations with unchanged original provenance.
 
 All executable entrypoints preserve stricter inherited soft and hard resource
 limits; their declared ceilings are maximum requests, without fallback.
+
+The original `receipt.json` is preserved unchanged for its historical source
+epoch. Current `readback.py --check` checks schema2 in
+`receipt-ci-context-v2.json`, which also pins those original receipt bytes. The
+new epoch covers the workflow startup-context repair and the closed signing
+workflow regression profile. It does not retarget the pushed receipt or claim
+generic YAML validation. The repaired hosted run remains UNRUN.
