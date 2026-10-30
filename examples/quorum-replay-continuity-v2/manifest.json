@@ -1,0 +1,72 @@
+{
+  "continuity_files": {
+    "examples/quorum-replay-continuity-v2/README.md": {
+      "bytes": 4264,
+      "sha256": "7f91d62bcb1b05abe52bcdc21672b5d21a4216e7d6c3b4c52322dff92c5585e1"
+    },
+    "examples/quorum-replay-continuity-v2/check_continuity.py": {
+      "bytes": 9124,
+      "sha256": "089a2613a35b65778ddd717442b77c063b0f55981e3befcb76f639e36238bd24"
+    },
+    "examples/quorum-replay-continuity-v2/test_continuity.py": {
+      "bytes": 5661,
+      "sha256": "b41b2a79d4f465c03167f35c841b686354f76613739d0bca0411f6f6d6ee90d6"
+    }
+  },
+  "historical_commit": "3e0d8602353e42a772927c8adaa32a73e7cc3b0a",
+  "historical_file_count": 701,
+  "historical_receipt": {
+    "bytes": 159799,
+    "sha256": "dea96022cc7751075a1d8f5fff760cf4d34745b074162e592049542e6367c8c2"
+  },
+  "intentional_mismatches": {
+    ".github/workflows/quorum-replay.yml": {
+      "current": {
+        "bytes": 1876,
+        "sha256": "027fb2e5639146cb81bdc465a0ca26408fbaf28d834e97dae83d43432f5fb47f"
+      },
+      "historical": {
+        "bytes": 926,
+        "sha256": "a302885a5eabbdee6fd2e3a85e63937daa0343d0e7e238af1fc86d89dafa2785"
+      },
+      "replacement": "historical-replay-and-current-continuity"
+    },
+    "README.md": {
+      "current": {
+        "bytes": 10990,
+        "sha256": "a677447c717b78ed5a72e070fece598d7d50d7fa5fb028eb48ea08abc7e58995"
+      },
+      "historical": {
+        "bytes": 8783,
+        "sha256": "4a9f2ed165c237ad9150c61727f3dbe5eb2a119af20f57e8639a9fc84dc0063f"
+      },
+      "insertion": {
+        "bytes": 2207,
+        "sha256": "3bcb0e1b4be61fc45a067c2fb06994afd9b4827d051069031ea8f2bc414bd70c"
+      },
+      "insertion_offset": 474,
+      "replacement": "exact-dated-section-insertion"
+    }
+  },
+  "schema": "quorum/source-continuity/2",
+  "separate_source_names": [
+    "install/prepare_quorum_sender.py",
+    "install/test_quorum_claim.py",
+    "install/test_quorum_context.py",
+    "install/test_quorum_graph.py",
+    "install/test_quorum_impact.py",
+    "install/test_quorum_input.py",
+    "install/test_quorum_reading.py",
+    "install/test_quorum_sender.py",
+    "install/test_quorum_source.py",
+    "install/test_quorum_v2.py",
+    "install/test_quorum_v2_coherence.py",
+    "install/test_quorum_v2_replay.py",
+    "tools/transport_quorum_v2.py",
+    "tools/transport_quorum_v2_input.py",
+    "tools/transport_quorum_v2_policy.py",
+    "tools/transport_quorum_v2_process.py",
+    "tools/transport_quorum_v2_replay.py",
+    "tools/transport_quorum_v2_schema.py"
+  ]
+}
