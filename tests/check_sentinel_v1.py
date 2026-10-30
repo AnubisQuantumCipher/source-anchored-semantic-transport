@@ -6,9 +6,12 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 MODULES = ('__init__', 'common', 'bindings', 'census', 'graph', 'locators', 'challenges',
            'refinement', 'assessments', 'comparison', 'bundle', 'cli', 'jobs', 'analysis',
-           'native_build', 'native')
+           'native_build', 'native', 'native_runtime', 'document_analysis', 'collection',
+           'collection_document', 'document_client', 'document_display')
 TESTS = ('common', 'meaning', 'locators', 'challenges', 'refinement', 'assessments',
-         'analysis', 'bundle', 'adversarial')
+         'analysis', 'bundle', 'adversarial', 'native_build', 'native_runtime', 'native',
+         'analysis_boundaries', 'document_analysis', 'document_analysis_independent', 'collection',
+         'collection_document', 'document_client', 'document_display')
 CORE = ('__init__', 'common', 'bindings', 'census', 'graph', 'locators', 'challenges', 'refinement')
 
 
@@ -44,7 +47,7 @@ def main():
     files = {entry.name for entry in directory.iterdir() if entry.name != '__pycache__'}
     expected = {name + '.py' for name in MODULES}
     required = {name + '.py' for name in CORE} if core else expected
-    if not required <= files <= expected or len(expected) > 16:
+    if not required <= files <= expected or len(expected) > 22:
         raise ValueError('closed additive module inventory mismatch: ' + repr(files ^ expected))
     count = sum(checked_tree(directory / name, True) for name in sorted(files))
     suites = TESTS[:5] if core else TESTS

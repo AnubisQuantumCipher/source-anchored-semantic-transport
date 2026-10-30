@@ -16,14 +16,18 @@ jobs:
           allow-prereleases: false
       - name: Closed source inventory and bounded control profile
         run: |
-          python3 -I -S -B -Werror tests/check_sentinel_v1.py --core
+          python3 -I -S -B -Werror tests/check_sentinel_v1.py
           python3 -I -S -B -Werror examples/sentinel-v1-core/freeze_core.py --check
           python3 -I -S -B -Werror examples/sentinel-v1-core/check_endpoints.py
       - name: Normal and optimized additive controls
         shell: bash
         run: |
           set -euo pipefail
-          suites=(common meaning locators challenges refinement)
+          fixture_tmp=$(mktemp -d /dev/shm/sentinel-ci.XXXXXX)
+          chmod 700 "$fixture_tmp"
+          export TMPDIR="$fixture_tmp"
+          trap 'rm -rf -- "$fixture_tmp"' EXIT
+          suites=(common meaning locators challenges refinement assessments analysis bundle adversarial native_build native_runtime native analysis_boundaries document_analysis document_analysis_independent collection collection_document document_client document_display)
           for suite in "${suites[@]}"; do
             python3 -I -S -B -Werror "tests/test_sentinel_${suite}.py"
             python3 -I -S -B -O -Werror "tests/test_sentinel_${suite}.py"
