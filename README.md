@@ -4,6 +4,38 @@ Carry a readable relational formula, its meaning keys, and the original evidence
 
 One encoding produces a compact share text, a matched meaning ZIP, and a readable lexicon. The ZIP carries the exact sources, typed relationships, qualifications, uncertainty, provenance, operator definitions, and recovery instructions. The receiving decoder checks the pair and exposes the recovered material for a human or an AI to explain.
 
+## Development status — 2026-10-30
+
+**Main and the development checkpoint provide different capabilities.** Main at
+`4cdec4855a9ce9e4128dc6e7c7a8a26d9e974345` provides the original source-anchored
+transport, typed records, receiving tools and bounded evaluators described below.
+[PR #15](https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport/pull/15)
+adds large-document transport and readings, **QUORUM** replay of declared readings
+and context, **SENTINEL** proposed meaning graphs and finite-question qualification
+controls, and **ML-DSA-87** manifest endorsement. These additions are development
+code; this status note does not make them available on main.
+
+At development source `6d1dc268511ffa81777c7e4bbceadd6863392f62`, all 52 selected
+local invocations and all 19 hosted PR workflow jobs passed. A separately checked
+actual signed/native round trip recovered a 58-byte synthetic fixture; its three
+negative controls refused after reading only the manifest. These are scoped
+execution results. The later reconciliation repair at `99ac7a0` has focused and
+independent passing controls and a passing combined 54-invocation regression;
+all 19 hosted PR workflows/jobs and reported steps also passed at that exact
+source. Independent retained-evidence review also passed for the 54-invocation
+local result. These results remain scoped to that exact code revision.
+
+Read the [development guide and evidence boundaries](docs/DEVELOPMENT_STATUS.md)
+for the feature matrix, architecture, commands and exact source identities.
+SENTINEL proposals are not established meanings; qualification is relative to a
+set of independently fixed finite questions, reference evidence and admissibility
+policy. Grammar3 conclusions remain model-relative where a supplied model is
+bound. Unknown mandatory evidence blocks qualification. The native policy proof
+covers its admissibility contracts, not English truth. Signing endorses integrity
+under an admitted key; it does not establish authorship, world truth or action authority. Whole-book
+semantic completeness, OCR fidelity, full fresh native/installed compatibility,
+real-client and human benefit evidence, and release acceptance remain open.
+
 The [checked continuation case](docs/CHECKED_CONTINUATION.md) now follows a fresh agent from source retrieval to a proposed patch, exact submission, finite-domain behavior checks and separate source review. Both transport and the original-document baseline passed after a real submission defect was repaired. The initial failures remain available; this case does not show that transport outperforms the baseline.
 
 This is an open-source implementation under the [MIT license](LICENSE), targeting Omarchy. It is a **development checkpoint**, with bounded local functionality and explicit acceptance limits. It is not an official client plugin, an Omarchy marketplace release, or a claim of complete natural-language understanding.
