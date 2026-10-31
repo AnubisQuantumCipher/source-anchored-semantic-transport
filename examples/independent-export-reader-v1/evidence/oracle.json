@@ -1,0 +1,99 @@
+{
+  "schema": "transport/independent-export-reader-oracle/1",
+  "kind": "DEVELOPMENT_NOT_HELDOUT",
+  "frozen_before_reader_implementation": true,
+  "source_commit": "7ba5178d9672d84ccd49d1a37637bc9de4913324",
+  "contract": "contract-audit/contract.md",
+  "positives": [
+    {
+      "id": "P01_OPAQUE_UNICODE_EMPTY",
+      "source_ids": [
+        "OPAQUE",
+        "MULTILINGUAL",
+        "EMPTY"
+      ],
+      "expected": "Reader outputs equal separately held original bytes, exact text and metadata; order retained."
+    },
+    {
+      "id": "P02_TYPED_METADATA",
+      "expected": "Typed metadata v2 preserved as unverified bytes and data; complete source and explanation recovered exactly."
+    },
+    {
+      "id": "P03_EMPTY_EXPLANATION",
+      "expected": "Zero explanation bytes accepted."
+    },
+    {
+      "id": "P04_EQUIVALENT_JSON",
+      "expected": "Whitespace and escaped JSON keys allowed with independently replaced pin; raw metadata bytes preserved."
+    }
+  ],
+  "negative_expectation": "Explicit ExportReadError or nonzero CLI; no accepted output remains; never execute any embedded string.",
+  "negatives": [
+    "old pin after coherent export replacement",
+    "altered source byte",
+    "altered explanation byte",
+    "altered metadata byte",
+    "missing source",
+    "extra source",
+    "missing manifest",
+    "extra root file",
+    "truncated JSON",
+    "duplicate JSON keys",
+    "duplicate source ID",
+    "duplicate roster path",
+    "unsorted roster",
+    "wrong source order in explanation",
+    "wrong source order in metadata",
+    "wrong source digest",
+    "wrong source length",
+    "wrong package identity",
+    "unsupported export schema",
+    "unsupported explanation schema",
+    "unsupported runtime schema",
+    "unsupported runtime decoder",
+    "unsupported metadata schema",
+    "authority changed",
+    "explanation role changed",
+    "source path traversal",
+    "backslash alias",
+    "export self roster",
+    "invalid UTF8",
+    "surrogate",
+    "float",
+    "NaN",
+    "huge integer",
+    "nesting overflow",
+    "field overflow",
+    "aggregate bytes overflow",
+    "source aggregate overflow",
+    "explanation overflow",
+    "too many sources",
+    "root symlink",
+    "ancestor symlink",
+    "source symlink",
+    "metadata symlink",
+    "hardlink",
+    "FIFO",
+    "nested source directory",
+    "existing output",
+    "output symlink ancestor",
+    "unknown selected source"
+  ],
+  "boundary_tests": [
+    "source aggregate exactly65536 accepted when total within cap",
+    "one beyond source cap rejected",
+    "total exactly131072 accepted when independently populated valid metadata permits it",
+    "one beyond total cap rejected",
+    "source count16 accepted;17 rejected"
+  ],
+  "baseline": {
+    "kind": "Original files plus independently held SHA256 index; same source bytes, explanation and metadata; ordinary exact copy and hash verification.",
+    "comparison": "Byte equality only. This development comparator measures reader correctness; no task-time, cost, compaction or behavioral advantage claim."
+  },
+  "independence": {
+    "implementer": "Fresh context sees format contract and engineering controls only; no producer/core/tests.",
+    "oracle": "Owner writes independent tests from frozen outcomes; actual installed producer used only to create compatible positive exports.",
+    "external_validation": "NOT_PERFORMED"
+  },
+  "claim_ceiling": "Pinned-export integrity and exact selected artifact recovery; original byte comparison separately performed by harness. Not source authentication, semantic fidelity, complete external endpoint or human validation."
+}

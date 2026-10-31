@@ -1,0 +1,34 @@
+{
+  "schema":"quorum/claim-independent-ci-harness-addendum/1",
+  "reviewer":"/root/quorum_graph_oracle",
+  "scope":"Only the added portable probe loader/modes/assertions and final CI-matching suite. Prior source audit, role-ceiling review, first observations and retained events remain unchanged.",
+  "final_pins":{
+    "tools/transport_quorum_claim.py":"ec502414c70b0b577c66134a485f3063a3b5893515d22c5d547f72cc3d72a43b",
+    "tools/transport_quorum_source.py":"3a356f0e135900bdbe1ce1199579e8b08978b5f00a4ab499b709993466279616",
+    "tools/transport_quorum_input.py":"6a90037a747b0cc2965dcf1b7169220a9732a16080ca0f3ca7c3b24d0349d653",
+    "tools/transport_quorum_shape.py":"6fef25a491be924fb310ecafe581da9da9f3dfa19baf44b956838745c95f2170",
+    "install/test_quorum_claim.py":"2cb5c9eefd3a346b9daa6b15db3e55daea9d06a70075e8fc0e987d8357088772"
+  },
+  "prior_harness_pin":"1093cce6c93cabdea9825467b5639741695dd5652b3b998d4f6118a2c296fdd9",
+  "delta_review":[
+    "Thirteen additional probe definitions retain their preimplementation manifest SHA256. Candidate Body/original recipe bytes are separately hash-checked before reconstruction.",
+    "All runtime fixture paths resolve through ROOT/examples/quorum-claim-v1; temporary preparation paths are not needed for CI execution.",
+    "Only the two explicitly frozen modes are allowed: originals_list and source_output_cap_one. Unknown modes fail instead of silently running a different case. Exact immutable byte/tuple reconstruction is preserved for the remaining cases.",
+    "SOURCE output-cap fault injection is scoped and restored by patch.object. It verifies gate/error propagation and is explicitly not a naturally reachable overflow claim.",
+    "Each added case compares the complete frozen error/result under both existing named arms. Public API assertion still requires exactly body_raw/originals, preventing an arbitrary root/schema option from being added unnoticed.",
+    "Existing twenty-two complete examples, forty-five complete minimal-pair controls and ownership checks remain unchanged. No expectation was weakened, removed or checker-derived.",
+    "All final harness functions remain at most sixty physical lines; warnings-as-errors in-memory compilation passed."
+  ],
+  "execution":{
+    "status":"TESTED_PASS",
+    "test_methods":4,
+    "command":"PYTHONDONTWRITEBYTECODE=1 timeout --kill-after=2s 30s python -W error install/test_quorum_claim.py --evidence CREATE_ONLY_PATH",
+    "receipt":"independent-suite-ci-final.json",
+    "warnings":"Warnings treated as errors; passed.",
+    "product_source":"Unchanged exact claim/source/input/shape identities listed above."
+  },
+  "regression_scope":"Owner separately reports verified input/source regression receipts on these same module identities. This delta review does not claim to have rerun those suites; its own execution is the final four-method Claim suite.",
+  "retention":"Old harness retained by owner as evidence/pre-ci-test_quorum_claim.py.txt. Prior independent code review, initial suite receipt, complementary probe results, capacity event and reviewer AST-check failure/resolution remain unchanged.",
+  "verdict":"NO_MATERIAL_ADDED_HARNESS_DEFECT_IDENTIFIED; FINAL_FOUR_METHOD_SUITE_PASSED_ON_EXACT_CI_PINS",
+  "remaining_limits":"Informational exact structure only. Semantic role relevance UNPROVEN, full-reference closure NOT_EVALUATED, full replay UNRUN and product NOT_ACCEPTED remain binding."
+}

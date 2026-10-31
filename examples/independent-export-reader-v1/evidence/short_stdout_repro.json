@@ -1,0 +1,9 @@
+{
+  "source_sha256": "9d1ce785ddf0bdb3ccf1200f157b21215be0e041a3901313b42c4eab863d60a9",
+  "error": "STDOUT_WRITE",
+  "stdout_hex": "7b22737461747573223a2245",
+  "stdout_is_complete_success_json": false,
+  "selected_file_remains": false,
+  "injected_fault": "stdout write returns valid positive short count",
+  "producer_invoked": false
+}

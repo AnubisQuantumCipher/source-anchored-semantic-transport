@@ -1,0 +1,103 @@
+{
+  "schema": "transport/private-staging-mode-oracle/1",
+  "status": "LITERAL_DATA_FROZEN_BEFORE_STAGING_REPAIR",
+  "scope": "Deterministic qualification of new configurable staging paths only. Do not repair, chmod, restage or retry the frozen live first-attempt receivers. The original WORKFLOW_PARENT_PRIVATE failure remains a failed comparison.",
+  "authorship": "Independent directory-mode expectations authored from the declared privacy requirement and the observed parents=True creation failure. No expected mode or disposition is produced by the staging implementation-under-test.",
+  "retained_failure": {
+    "path": "/dev/shm/semantic-transport-receiving-20261029/receivers/transport",
+    "observed_mode": "0755",
+    "disposition": "WORKFLOW_PARENT_PRIVATE",
+    "repair_in_place": "FORBIDDEN",
+    "model_retry": "FORBIDDEN"
+  },
+  "private_boundary": {
+    "anchor": "An independently admitted absolute existing nonsymlink directory owned by the current effective UID with exact permission mode0700. The anchor and every descendant parent used for staging must be checked. System ancestors outside this explicit private anchor, such as /dev/shm, are not asserted private.",
+    "new_paths": "Create each missing directory explicitly with mode0700; never assume parents=True applies the leaf mode to missing ancestors. Check the resulting type, owner and exact mode before descending or writing payload files. No symlink components, dot/dotdot components or absolute-path escape from the admitted anchor.",
+    "existing_paths": "Existing real current-UID directories with exact mode0700 may be used as parents. Any existing permission mismatch, unexpected owner, symlink or nondirectory refuses before creating a child or writing a payload. Never silently chmod an existing path.",
+    "publication": "Payload destinations are create-only. Existing payload files are never overwritten. All receiver parent paths must pass privacy checks before staging source/package/interface files or invoking native workspace preparation. Directory validation itself does not certify source correctness or semantic completeness.",
+    "revalidation": "Recheck all declared private parents before a write/publication boundary. An injected mode change before that recheck refuses and leaves the changed directory unchanged. Same-UID races after a check remain outside the guarantee; no OS confinement or atomic whole-tree publication is claimed.",
+    "partial_failure": "Retain newly created private directories and failure evidence. Do not clean up unrelated content or grant extra permissions after a failure. A restrictive umask that produces a mode other than0700 must yield an explicit refusal unless a separately documented new-directory-only construction guarantees0700 before any descent; this oracle's baseline case expects refusal.",
+    "modes": "All modes below are literal octal strings including the leading0. Exact comparison uses permission/set-ID/sticky bits, not merely absence of group/other write. Owner identity is checked separately from permission bits.",
+    "test_boundary": "Implementations may expose a bounded private-directory/chain preflight helper for these data cases. Tests operate only on a new synthetic tmpfs tree under a private test anchor. No recovered source, model, live receiver, shell source payload or frozen staging script is executed."
+  },
+  "cases": [
+    {
+      "id": "all_missing_receiver_ancestors_umask_0022",
+      "input": {"anchor_mode": "0700", "anchor_owner": "CURRENT_EUID", "existing": [], "requested_relative": "receivers/transport/input", "umask": "0022"},
+      "expected": {"disposition": "PASS", "modes": {"receivers": "0700", "receivers/transport": "0700", "receivers/transport/input": "0700"}, "existing_modes_changed": false, "payload_writes_before_private_preflight": 0}
+    },
+    {
+      "id": "all_missing_receiver_ancestors_umask_0000",
+      "input": {"anchor_mode": "0700", "anchor_owner": "CURRENT_EUID", "existing": [], "requested_relative": "receivers/original/input", "umask": "0000"},
+      "expected": {"disposition": "PASS", "modes": {"receivers": "0700", "receivers/original": "0700", "receivers/original/input": "0700"}, "existing_modes_changed": false, "payload_writes_before_private_preflight": 0}
+    },
+    {
+      "id": "all_missing_receiver_ancestors_umask_0077",
+      "input": {"anchor_mode": "0700", "anchor_owner": "CURRENT_EUID", "existing": [], "requested_relative": "receivers/transport/input", "umask": "0077"},
+      "expected": {"disposition": "PASS", "modes": {"receivers": "0700", "receivers/transport": "0700", "receivers/transport/input": "0700"}, "existing_modes_changed": false, "payload_writes_before_private_preflight": 0}
+    },
+    {
+      "id": "already_private_parents_preserved",
+      "input": {"anchor_mode": "0700", "anchor_owner": "CURRENT_EUID", "existing": [{"path": "receivers", "kind": "directory", "mode": "0700", "owner": "CURRENT_EUID"}, {"path": "receivers/transport", "kind": "directory", "mode": "0700", "owner": "CURRENT_EUID", "marker_utf8": "KEEP_EXISTING_MARKER"}], "requested_relative": "receivers/transport/input", "umask": "0022"},
+      "expected": {"disposition": "PASS", "modes": {"receivers": "0700", "receivers/transport": "0700", "receivers/transport/input": "0700"}, "existing_modes_changed": false, "marker_utf8": "KEEP_EXISTING_MARKER", "payload_writes_before_private_preflight": 0}
+    },
+    {
+      "id": "existing_receiver_parent_0755_refuses_without_chmod",
+      "input": {"anchor_mode": "0700", "anchor_owner": "CURRENT_EUID", "existing": [{"path": "receivers", "kind": "directory", "mode": "0700", "owner": "CURRENT_EUID"}, {"path": "receivers/transport", "kind": "directory", "mode": "0755", "owner": "CURRENT_EUID", "marker_utf8": "KEEP_FAILED_PARENT"}], "requested_relative": "receivers/transport/input", "umask": "0022"},
+      "expected": {"disposition": "REFUSED", "category": "EXISTING_PARENT_NOT_PRIVATE", "modes": {"receivers": "0700", "receivers/transport": "0755"}, "must_not_exist": ["receivers/transport/input"], "marker_utf8": "KEEP_FAILED_PARENT", "payload_writes": 0, "automatic_chmod": false}
+    },
+    {
+      "id": "existing_receiver_root_0755_refuses_before_descending",
+      "input": {"anchor_mode": "0700", "anchor_owner": "CURRENT_EUID", "existing": [{"path": "receivers", "kind": "directory", "mode": "0755", "owner": "CURRENT_EUID"}], "requested_relative": "receivers/transport/input", "umask": "0022"},
+      "expected": {"disposition": "REFUSED", "category": "EXISTING_PARENT_NOT_PRIVATE", "modes": {"receivers": "0755"}, "must_not_exist": ["receivers/transport"], "payload_writes": 0, "automatic_chmod": false}
+    },
+    {
+      "id": "existing_group_read_parent_0740_refuses",
+      "input": {"anchor_mode": "0700", "anchor_owner": "CURRENT_EUID", "existing": [{"path": "receivers", "kind": "directory", "mode": "0740", "owner": "CURRENT_EUID"}], "requested_relative": "receivers/original/input", "umask": "0022"},
+      "expected": {"disposition": "REFUSED", "modes": {"receivers": "0740"}, "must_not_exist": ["receivers/original"], "payload_writes": 0, "automatic_chmod": false}
+    },
+    {
+      "id": "existing_owner_mode_0500_refuses",
+      "input": {"anchor_mode": "0700", "anchor_owner": "CURRENT_EUID", "existing": [{"path": "receivers", "kind": "directory", "mode": "0500", "owner": "CURRENT_EUID"}], "requested_relative": "receivers/original/input", "umask": "0022"},
+      "expected": {"disposition": "REFUSED", "modes": {"receivers": "0500"}, "must_not_exist": ["receivers/original"], "payload_writes": 0, "automatic_chmod": false}
+    },
+    {
+      "id": "anchor_0755_refuses",
+      "input": {"anchor_mode": "0755", "anchor_owner": "CURRENT_EUID", "existing": [], "requested_relative": "receivers/transport/input", "umask": "0022"},
+      "expected": {"disposition": "REFUSED", "anchor_mode": "0755", "must_not_exist": ["receivers"], "payload_writes": 0, "automatic_chmod": false}
+    },
+    {
+      "id": "parent_symlink_refuses",
+      "input": {"anchor_mode": "0700", "anchor_owner": "CURRENT_EUID", "existing": [{"path": "private-target", "kind": "directory", "mode": "0700", "owner": "CURRENT_EUID"}, {"path": "receivers", "kind": "symlink", "target_relative": "private-target"}], "requested_relative": "receivers/transport/input", "umask": "0022"},
+      "expected": {"disposition": "REFUSED", "symlink_unchanged": true, "must_not_exist": ["private-target/transport"], "payload_writes": 0}
+    },
+    {
+      "id": "parent_regular_file_refuses",
+      "input": {"anchor_mode": "0700", "anchor_owner": "CURRENT_EUID", "existing": [{"path": "receivers", "kind": "regular_file", "raw_utf8": "KEEP_REGULAR_FILE"}], "requested_relative": "receivers/transport/input", "umask": "0022"},
+      "expected": {"disposition": "REFUSED", "regular_file_utf8": "KEEP_REGULAR_FILE", "payload_writes": 0}
+    },
+    {
+      "id": "lexical_parent_escape_refuses",
+      "input": {"anchor_mode": "0700", "anchor_owner": "CURRENT_EUID", "existing": [], "requested_relative": "../escape/input", "umask": "0022"},
+      "expected": {"disposition": "REFUSED", "payload_writes": 0, "outside_anchor_created": false}
+    },
+    {
+      "id": "absolute_requested_path_refuses",
+      "input": {"anchor_mode": "0700", "anchor_owner": "CURRENT_EUID", "existing": [], "requested_relative": "/outside/input", "umask": "0022"},
+      "expected": {"disposition": "REFUSED", "payload_writes": 0, "outside_anchor_created": false}
+    },
+    {
+      "id": "restrictive_umask_no_silent_permission_repair",
+      "input": {"anchor_mode": "0700", "anchor_owner": "CURRENT_EUID", "existing": [], "requested_relative": "receivers/transport/input", "umask": "0777"},
+      "expected": {"disposition": "REFUSED", "created_receivers_mode": "0000", "must_not_exist": ["receivers/transport"], "payload_writes": 0, "automatic_existing_path_chmod": false}
+    }
+  ],
+  "additional_control_specifications": [
+    {"id": "wrong_owner_refuses", "fixture": "Bounded stat-result seam reports owner OTHER_EUID for an existing otherwise0700 parent; do not chown actual files or use privilege.", "expected": {"disposition": "REFUSED", "payload_writes": 0, "chown": "FORBIDDEN"}},
+    {"id": "mode_drift_before_use_refuses", "fixture": "Create a private synthetic chain, then change only its synthetic receiver parent to0755 before the required pre-use recheck.", "expected": {"disposition": "REFUSED", "changed_parent_mode": "0755", "payload_writes": 0, "automatic_chmod": false}},
+    {"id": "existing_payload_refuses", "fixture": "Under a valid synthetic private chain, precreate the intended payload file with literal bytes KEEP_PAYLOAD; invoke only the new create-only staging writer, if exposed.", "expected": {"disposition": "REFUSED", "payload_utf8": "KEEP_PAYLOAD", "overwrite": false}},
+    {"id": "frozen_live_paths_untouched", "fixture": "Read-only before/after mode/content pins of live first-attempt parent and answer paths; no permissions or bytes changed by synthetic controls.", "expected": {"changed": false, "model_calls": 0, "live_path_repair": false}}
+  ],
+  "execution_limits": {"synthetic_cases": 18, "maximum_path_components": 8, "maximum_fixture_files": 128, "maximum_total_fixture_bytes": 1048576, "helper_wall_seconds": 30, "helper_cpu_seconds": 30, "helper_address_bytes": 536870912, "helper_file_bytes": 4194304},
+  "nonclaims": {"os_confinement": "UNPROVEN", "same_uid_race_exclusion": "UNPROVEN", "source_correctness": "NOT_ASSESSED", "semantic_completeness": "UNPROVEN", "first_attempt_transport_outcome": "FAILED_RETAINED", "new_model_attempt": "UNRUN", "authority": "NONE"}
+}

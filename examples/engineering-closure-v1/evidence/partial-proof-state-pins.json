@@ -1,0 +1,12 @@
+{
+  "attempt-01-proof-state.tar.gz": {
+    "availability": "PINNED_LOCAL_ONLY; not needed for receipt checking",
+    "bytes": 8866424,
+    "sha256": "e73d24bd68f4b7ce9ea3a3d5ad2632d4242ffbcb92a51be7d203ec04d9b45f32"
+  },
+  "attempt-02-proof-state.tar.gz": {
+    "availability": "PINNED_LOCAL_ONLY; not needed for receipt checking",
+    "bytes": 8714075,
+    "sha256": "74a3c853986f46b507dc638138c77f45dbf23d4ab2dbea9b864dee7f83169b39"
+  }
+}

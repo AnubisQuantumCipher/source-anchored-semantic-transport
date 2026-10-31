@@ -1,0 +1,117 @@
+{
+  "acceptance_evidence_required": "Exact publication-copy and Git/hosted readback for this data checkpoint. Fresh clean-proof acceptance still requires its separately authorized complete source-bound proof evidence and independent review.",
+  "archive_observations": {
+    "archive_code_execution": "NONE",
+    "declared_intentional_symlink_omissions": 16,
+    "expanded_bytes": 461155,
+    "extraction": "NONE",
+    "live_member_sources_matched": 281,
+    "member_permission_mode": "regular 0644; no executable bits",
+    "regular_members": 281
+  },
+  "artifact_pins": {
+    "README.md": {
+      "bytes": 1836,
+      "sha256": "1909cef53be2e7f6f09f8bf2fe74513bc69cb349febd9a637a1f9622188574f9"
+    },
+    "evidence.zip": {
+      "bytes": 196219,
+      "sha256": "5444ffb8d654869d41d389b0fa0d356479df2da655fae2fd5c388d5356583965"
+    },
+    "index.json": {
+      "bytes": 50696,
+      "sha256": "deb68209ccc3115e80d43cedac0f0e63ff67701d22f42fbc35b077a8ccc3d66d"
+    }
+  },
+  "blocking_publication_findings_remaining": [],
+  "decision": "PASS_FAILED_ATTEMPT_DATA_PUBLICATION_REVIEW",
+  "fresh_clean_proof": "UNESTABLISHED",
+  "new_formal_proof": "NONE",
+  "observed_attempt": {
+    "authority": "NONE",
+    "clean_reproduction": "UNESTABLISHED",
+    "fresh_complete_prover_summary": "ABSENT_IN_RETAINED_ACTUAL_EVIDENCE",
+    "independent_original_review": "VERIFIED_FAILED_ATTEMPT_CLEAN_REPRODUCTION_UNESTABLISHED",
+    "native_build": "SUCCESS; returncode zero; capture_complete true",
+    "native_proof": "FAILED; reason tree special; returncode -15; capture_complete false",
+    "offending_path_type_creator": "UNKNOWN_NOT_RECORDED",
+    "parent_launcher_exit": 1
+  },
+  "product_acceptance": false,
+  "publication": "NOT_PERFORMED_BY_THIS_REVIEW",
+  "remaining_limits": [
+    "This review verifies publication-byte integrity and factual outcome boundaries. It does not repeat the native build/proof or establish clean proof completion, a mathematical counterexample, semantic correctness or acceptance.",
+    "Omitted generated outputs and installed toolchain bytes are not part of this archive. Their full contents were not requalified by this collation review; the retained terminal inventory/local task and original independent review remain the stated provenance.",
+    "The native proof capture is incomplete. Exact offending filesystem entry, peak proof storage and complete prover results remain unestablished; successful shutdown/final identity checks do not repair those gaps.",
+    "Configured model-review identity is preserved as engineering provenance. No independent provider/runtime attestation, external-human validation, hostile same-user isolation or whole-system proof is added.",
+    "No source writes, cleanup, gate changes, native execution, retry, model campaign or archived-script execution occurred. Only this additive review receipt is written."
+  ],
+  "reviewer": "accounting_publication_review",
+  "schema": "transport/failed-clean-proof-publication-review/1",
+  "scope": "Read-only independent bounded archive/index/source/readability review. This verdict qualifies preservation of a failed attempt; it does not qualify fresh proof completion.",
+  "selected_evidence_pins": {
+    "attempt/before.json": {
+      "bytes": 10920,
+      "sha256": "c6e0d35858349999cc14bc54fdcbf1dca7c29bdbf1d70d4fcf66970aaa091455"
+    },
+    "attempt/build-process.json": {
+      "bytes": 2019,
+      "sha256": "87d618eaf5c3d779f510a14db32e5ca1f5b157c9826423b746fb9c0f50341ef2"
+    },
+    "attempt/build.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "attempt/build.stdout": {
+      "bytes": 686,
+      "sha256": "2c15fd0920dfc79ffe3772558e716c1fc6c1bbcf57acf92c2d291ab99771fe72"
+    },
+    "attempt/launch-admission.json": {
+      "bytes": 787,
+      "sha256": "81a555ffe48a65b1672da1132a5cafebdb78664a26ff9ceab889ba389efee244"
+    },
+    "attempt/proof-process.json": {
+      "bytes": 2278,
+      "sha256": "d6f1663ca16fb0e3bda1e1a716693b1fb6059ff039a7ce58b8ff8ae5622532a2"
+    },
+    "attempt/proof.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "attempt/proof.stdout": {
+      "bytes": 155,
+      "sha256": "69a3389efb77199c9dd6f5aaf376dbcced2e7ef1d4edbca98643c88cb7d3578d"
+    },
+    "attempt/terminal.json": {
+      "bytes": 75552,
+      "sha256": "cd0897fae6ef6f9e0996e24dff36ca704cc92d7bf0fa989f81c7910f5c9d3ba5"
+    },
+    "owner/clean-proof-attempt-review-01.json": {
+      "bytes": 7142,
+      "sha256": "f862c13b5ed93ae6766e1e7a34d67b07f40474b7d56778d85159a724f2c4d49b"
+    },
+    "owner/clean-proof-special-entry-diagnosis-01.json": {
+      "bytes": 8397,
+      "sha256": "8b32e173a21643873651a9a1e2c454a84d69f1804073bacbac1ec7a80fd5a7e4"
+    },
+    "owner/proof-collation-first-failure-01.json": {
+      "bytes": 725,
+      "sha256": "8f4e20921349dd5db4f4b2ba0bb8d84200547272c5bb03dd3f28e230a0b8c372"
+    }
+  },
+  "smallest_sound_next_step": "Publish the exact qualified failed-attempt data files and this additive review with destination/source readback while retaining FAILED and UNKNOWN labels. Any repaired attempt remains separately admitted and separately evidenced.",
+  "source_head": "b8aefc51a51d6f391e58460b95074f28f654f50a",
+  "verified": [
+    "Held ZIP digest/size match index and current readback. Exactly 281 unique lexical-safe relative names match the complete index; all archive members are regular nonexecutable files, use supported compression and are unencrypted. Each member and the expanded aggregate were read under fixed bounds.",
+    "Every indexed size/SHA256 matches the archived member and its current live source bytes. All design-root regular files are represented. Selected task raw streams/process/terminal/configuration records and fixed owner evidence match their original live files. Content consistency checks retain mtime/ctime and exclude access-time changes caused by reading.",
+    "All 16 explicit omissions are intentional design/helper-test symlink aliases. Mode and target strings match live lstat/readlink observations without dereferencing. They are distinct from the unrecorded native proof offender and do not identify or explain that offender.",
+    "Exact original independent review bytes match f862c13b5ed93ae6766e1e7a34d67b07f40474b7d56778d85159a724f2c4d49b. Its pinned raw/task/owner files match live readback; its failed-attempt verdict and assurance exclusions are preserved.",
+    "Build and proof raw stdout/stderr hashes match their process receipts. Build success/capture completion, proof failure/capture incompleteness, cleanup/absence observations, owner launch identity and parent failure captures reconcile. Terminal records all six final source/copy/canonical/tools/environment/inventory checks without recorded final-check failures.",
+    "Diagnosis explicitly retains UNKNOWN path/type/creator and distinguishes observed monitor refusal from a hypothetical tool IPC explanation. No complete fresh proof summary is present in retained terminal inventory. Source/proof correctness is not inferred from successful final identity checks.",
+    "The first root collation failure receipt is included byte-for-byte: access-time comparison error, no archive written, no source modification. Its failed empty destination remains present and distinct from this successor collation path.",
+    "README accurately reports FAILED with clean reproduction unestablished, incomplete proof capture and UNKNOWN offender. It labels the configured GPT-6.1 review as engineering review, separates any repaired retry, and makes no semantic-fidelity, external-user-benefit, model-world-truth or product-acceptance claim.",
+    "README and index explicitly omit generated objects, ALI/VC/session artifacts and the unqualified newly built executable from publication while retaining selected raw records and terminal inventory at the original local task. No self-contained installed-toolchain/cache archive is claimed.",
+    "The referenced native REPRODUCE.md was inspected as text; it requires complete fresh proof evidence and preserves prior incremental-proof and assurance exclusions. No listed native command was executed.",
+    "Fixed private-key/provider-token/GitHub-token/AWS-access-key raw-byte patterns matched no archived member. This remains a heuristic scan, not proof that arbitrary secrets cannot exist."
+  ]
+}

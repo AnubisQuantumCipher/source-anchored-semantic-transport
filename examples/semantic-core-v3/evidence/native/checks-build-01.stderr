@@ -1,0 +1,8 @@
+core_checks.adb:9:06: warning: array aggregate using () is an obsolescent syntax, use [] instead [-gnatwj]
+core_checks.adb:9:07: warning: array aggregate using () is an obsolescent syntax, use [] instead [-gnatwj]
+core_checks.adb:10:07: warning: array aggregate using () is an obsolescent syntax, use [] instead [-gnatwj]
+core_checks.adb:11:07: warning: array aggregate using () is an obsolescent syntax, use [] instead [-gnatwj]
+core_checks.adb:13:06: warning: array aggregate using () is an obsolescent syntax, use [] instead [-gnatwj]
+core_checks.adb:13:07: warning: array aggregate using () is an obsolescent syntax, use [] instead [-gnatwj]
+core_checks.adb:14:07: warning: array aggregate using () is an obsolescent syntax, use [] instead [-gnatwj]
+core_checks.adb:15:07: warning: array aggregate using () is an obsolescent syntax, use [] instead [-gnatwj]

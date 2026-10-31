@@ -1,0 +1,11 @@
+project Document_Checks is
+   for Source_Dirs use (".");
+   for Object_Dir use external ("DOCUMENT_NATIVE_OBJ");
+   for Exec_Dir use external ("DOCUMENT_NATIVE_BIN");
+   for Main use ("document_ledger_checks.adb");
+   package Compiler is
+      for Default_Switches ("Ada") use
+        ("-gnat2022", "-gnatwa", "-gnatwe", "-gnatVa", "-gnata", "-gnatf",
+         "-O2", "-g", "-fstack-usage");
+   end Compiler;
+end Document_Checks;

@@ -1,0 +1,189 @@
+test_01_encode_and_fresh_recipient_recover_exact_source_model_and_verdict (test_transport_core_bridge.CoreBridgeTests.test_01_encode_and_fresh_recipient_recover_exact_source_model_and_verdict) ... ERROR
+test_02_model_changes_preserve_unknown_and_conditional_satisfaction (test_transport_core_bridge.CoreBridgeTests.test_02_model_changes_preserve_unknown_and_conditional_satisfaction) ... 
+  test_02_model_changes_preserve_unknown_and_conditional_satisfaction (test_transport_core_bridge.CoreBridgeTests.test_02_model_changes_preserve_unknown_and_conditional_satisfaction) (name='guard-unknown') ... ERROR
+  test_02_model_changes_preserve_unknown_and_conditional_satisfaction (test_transport_core_bridge.CoreBridgeTests.test_02_model_changes_preserve_unknown_and_conditional_satisfaction) (name='exception-active') ... ERROR
+  test_02_model_changes_preserve_unknown_and_conditional_satisfaction (test_transport_core_bridge.CoreBridgeTests.test_02_model_changes_preserve_unknown_and_conditional_satisfaction) (name='event-false') ... ERROR
+test_03_missing_model_is_not_evaluated (test_transport_core_bridge.CoreBridgeTests.test_03_missing_model_is_not_evaluated) ... ERROR
+test_04_cli_draft_matches_literal_requirement_scope (test_transport_core_bridge.CoreBridgeTests.test_04_cli_draft_matches_literal_requirement_scope) ... FAIL
+test_05_envelope_model_source_operator_and_version_tampering_refused (test_transport_core_bridge.CoreBridgeTests.test_05_envelope_model_source_operator_and_version_tampering_refused) ... ok
+test_06_present_malformed_model_is_never_treated_as_absent (test_transport_core_bridge.CoreBridgeTests.test_06_present_malformed_model_is_never_treated_as_absent) ... ok
+test_07_authored_tree_and_role_binding_mismatches_refused (test_transport_core_bridge.CoreBridgeTests.test_07_authored_tree_and_role_binding_mismatches_refused) ... ok
+test_08_clock_source_requires_explicit_documentary_translation_status (test_transport_core_bridge.CoreBridgeTests.test_08_clock_source_requires_explicit_documentary_translation_status) ... ERROR
+test_09_swapped_archive_and_truncated_archive_refuse_before_evaluation (test_transport_core_bridge.CoreBridgeTests.test_09_swapped_archive_and_truncated_archive_refuse_before_evaluation) ... ERROR
+test_10_missing_and_conflicting_tuples_stay_unresolved (test_transport_core_bridge.CoreBridgeTests.test_10_missing_and_conflicting_tuples_stay_unresolved) ... ERROR
+test_11_dependency_pin_and_private_parent_errors_refuse (test_transport_core_bridge.CoreBridgeTests.test_11_dependency_pin_and_private_parent_errors_refuse) ... ok
+
+======================================================================
+ERROR: test_01_encode_and_fresh_recipient_recover_exact_source_model_and_verdict (test_transport_core_bridge.CoreBridgeTests.test_01_encode_and_fresh_recipient_recover_exact_source_model_and_verdict)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_core_bridge.py", line 102, in test_01_encode_and_fresh_recipient_recover_exact_source_model_and_verdict
+    root, result, plan, model = self.encoded()
+                                ~~~~~~~~~~~~^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_core_bridge.py", line 83, in encoded
+    result = bridge.encode(SOURCE, canonical(plan), model_raw, *self.common(root))
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_core_bridge.py", line 129, in encode
+    call(argv, root, 'encode')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_core_bridge.py", line 60, in call
+    require(result['status'] == 'SUCCESS' and result['exit_code'] == 0
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            and result['stderr'] == b'', 'CORE_CHILD_REFUSED_' + label)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_schema.py", line 44, in require
+    raise TransportError(message)
+transport_wire.TransportError: CORE_CHILD_REFUSED_encode
+
+======================================================================
+ERROR: test_02_model_changes_preserve_unknown_and_conditional_satisfaction (test_transport_core_bridge.CoreBridgeTests.test_02_model_changes_preserve_unknown_and_conditional_satisfaction) (name='guard-unknown')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_core_bridge.py", line 133, in test_02_model_changes_preserve_unknown_and_conditional_satisfaction
+    _, result, _, _ = self.encoded(name, truths)
+                      ~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_core_bridge.py", line 83, in encoded
+    result = bridge.encode(SOURCE, canonical(plan), model_raw, *self.common(root))
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_core_bridge.py", line 129, in encode
+    call(argv, root, 'encode')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_core_bridge.py", line 60, in call
+    require(result['status'] == 'SUCCESS' and result['exit_code'] == 0
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            and result['stderr'] == b'', 'CORE_CHILD_REFUSED_' + label)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_schema.py", line 44, in require
+    raise TransportError(message)
+transport_wire.TransportError: CORE_CHILD_REFUSED_encode
+
+======================================================================
+ERROR: test_02_model_changes_preserve_unknown_and_conditional_satisfaction (test_transport_core_bridge.CoreBridgeTests.test_02_model_changes_preserve_unknown_and_conditional_satisfaction) (name='exception-active')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_core_bridge.py", line 133, in test_02_model_changes_preserve_unknown_and_conditional_satisfaction
+    _, result, _, _ = self.encoded(name, truths)
+                      ~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_core_bridge.py", line 83, in encoded
+    result = bridge.encode(SOURCE, canonical(plan), model_raw, *self.common(root))
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_core_bridge.py", line 129, in encode
+    call(argv, root, 'encode')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_core_bridge.py", line 60, in call
+    require(result['status'] == 'SUCCESS' and result['exit_code'] == 0
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            and result['stderr'] == b'', 'CORE_CHILD_REFUSED_' + label)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_schema.py", line 44, in require
+    raise TransportError(message)
+transport_wire.TransportError: CORE_CHILD_REFUSED_encode
+
+======================================================================
+ERROR: test_02_model_changes_preserve_unknown_and_conditional_satisfaction (test_transport_core_bridge.CoreBridgeTests.test_02_model_changes_preserve_unknown_and_conditional_satisfaction) (name='event-false')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_core_bridge.py", line 133, in test_02_model_changes_preserve_unknown_and_conditional_satisfaction
+    _, result, _, _ = self.encoded(name, truths)
+                      ~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_core_bridge.py", line 83, in encoded
+    result = bridge.encode(SOURCE, canonical(plan), model_raw, *self.common(root))
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_core_bridge.py", line 129, in encode
+    call(argv, root, 'encode')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_core_bridge.py", line 60, in call
+    require(result['status'] == 'SUCCESS' and result['exit_code'] == 0
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            and result['stderr'] == b'', 'CORE_CHILD_REFUSED_' + label)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_schema.py", line 44, in require
+    raise TransportError(message)
+transport_wire.TransportError: CORE_CHILD_REFUSED_encode
+
+======================================================================
+ERROR: test_03_missing_model_is_not_evaluated (test_transport_core_bridge.CoreBridgeTests.test_03_missing_model_is_not_evaluated)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_core_bridge.py", line 139, in test_03_missing_model_is_not_evaluated
+    root, result, _, _ = self.encoded(model_present=False)
+                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_core_bridge.py", line 83, in encoded
+    result = bridge.encode(SOURCE, canonical(plan), model_raw, *self.common(root))
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_core_bridge.py", line 129, in encode
+    call(argv, root, 'encode')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_core_bridge.py", line 60, in call
+    require(result['status'] == 'SUCCESS' and result['exit_code'] == 0
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            and result['stderr'] == b'', 'CORE_CHILD_REFUSED_' + label)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_schema.py", line 44, in require
+    raise TransportError(message)
+transport_wire.TransportError: CORE_CHILD_REFUSED_encode
+
+======================================================================
+ERROR: test_08_clock_source_requires_explicit_documentary_translation_status (test_transport_core_bridge.CoreBridgeTests.test_08_clock_source_requires_explicit_documentary_translation_status)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_core_bridge.py", line 220, in test_08_clock_source_requires_explicit_documentary_translation_status
+    result = bridge.encode(source, canonical(plan), canonical(model), *self.common(root))
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_core_bridge.py", line 129, in encode
+    call(argv, root, 'encode')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_core_bridge.py", line 60, in call
+    require(result['status'] == 'SUCCESS' and result['exit_code'] == 0
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            and result['stderr'] == b'', 'CORE_CHILD_REFUSED_' + label)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_schema.py", line 44, in require
+    raise TransportError(message)
+transport_wire.TransportError: CORE_CHILD_REFUSED_encode
+
+======================================================================
+ERROR: test_09_swapped_archive_and_truncated_archive_refuse_before_evaluation (test_transport_core_bridge.CoreBridgeTests.test_09_swapped_archive_and_truncated_archive_refuse_before_evaluation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_core_bridge.py", line 227, in test_09_swapped_archive_and_truncated_archive_refuse_before_evaluation
+    first, _, _, _ = self.encoded('first')
+                     ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_core_bridge.py", line 83, in encoded
+    result = bridge.encode(SOURCE, canonical(plan), model_raw, *self.common(root))
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_core_bridge.py", line 129, in encode
+    call(argv, root, 'encode')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_core_bridge.py", line 60, in call
+    require(result['status'] == 'SUCCESS' and result['exit_code'] == 0
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            and result['stderr'] == b'', 'CORE_CHILD_REFUSED_' + label)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_schema.py", line 44, in require
+    raise TransportError(message)
+transport_wire.TransportError: CORE_CHILD_REFUSED_encode
+
+======================================================================
+ERROR: test_10_missing_and_conflicting_tuples_stay_unresolved (test_transport_core_bridge.CoreBridgeTests.test_10_missing_and_conflicting_tuples_stay_unresolved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_core_bridge.py", line 250, in test_10_missing_and_conflicting_tuples_stay_unresolved
+    result = bridge.evaluate(plan, finite, SOURCE, self.native, self.native_sha, root, name)
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_core_bridge.py", line 163, in evaluate
+    raw = call([str(native), str(path)], root, label + '-native')
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_core_bridge.py", line 60, in call
+    require(result['status'] == 'SUCCESS' and result['exit_code'] == 0
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            and result['stderr'] == b'', 'CORE_CHILD_REFUSED_' + label)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_schema.py", line 44, in require
+    raise TransportError(message)
+transport_wire.TransportError: CORE_CHILD_REFUSED_missing-native
+
+======================================================================
+FAIL: test_04_cli_draft_matches_literal_requirement_scope (test_transport_core_bridge.CoreBridgeTests.test_04_cli_draft_matches_literal_requirement_scope)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_core_bridge.py", line 151, in test_04_cli_draft_matches_literal_requirement_scope
+    self.assertEqual(run.returncode, 0, run.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : b'Traceback (most recent call last):\n  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_core_cli.py", line 88, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_core_cli.py", line 74, in main\n    resource.setrlimit(resource.RLIMIT_FSIZE, (4194304, 4194304))\n    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: not allowed to raise maximum limit\n'
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.207s
+
+FAILED (failures=1, errors=8)

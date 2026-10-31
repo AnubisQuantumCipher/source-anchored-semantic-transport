@@ -1,0 +1,58 @@
+{
+  "schema": "quorum/body-input-independent-prefreeze-review/1",
+  "reviewer": "/root/quorum_graph_oracle",
+  "classification": "OBSERVED_DOCUMENT_AND_EXISTING_SOURCE_REVIEW_NOT_IMPLEMENTATION_QUALIFICATION",
+  "scope": "Private canonical raw reader and pinned Body closed-shape validation only. No product edits, parser implementation, native builds, full replay execution, external participants or acceptance claims.",
+  "model_identity": {"requirement":"Actual gpt-6.1-sol reviewer", "attestation_basis":"Parent dispatch/provider record; this artifact cannot independently attest its own execution model."},
+  "inspected_inputs": [
+    {"path":"/dev/shm/semantic-transport-wire-input-20261029/proposal.json","bytes":11522,"sha256":"d87da2f41249d6d8f4996751710a24c785671744bdda7476219e2db98597a5c3"},
+    {"path":"/dev/shm/semantic-transport-wire-input-20261029/raw-controls.json","bytes":15488,"sha256":"c01ac5d93f932af82bab36246b026c0f5072fc273a995b96afdb64b0e7b8991f"},
+    {"path":"/dev/shm/semantic-transport-wire-input-20261029/minimal-body.json","bytes":1732,"sha256":"11d544c1e01527f22213f6b6f0af0366e9c135fd75a8b588f333a1d88ae7a827"},
+    {"path":"/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_schema.py","bytes":8622,"sha256":"1c324b661314bd3a92f23b4502207f38a483baa6565d479838de450f110eeb1a"},
+    {"path":"/dev/shm/semantic-transport-wire-20261029/revision-02/quorum-body.schema.json","bytes":32177,"sha256":"b6c7cafc1d4f1703188f7bdcb2150316feadc6b870eda9495ee146e2f429f8aa"},
+    {"path":"/dev/shm/semantic-transport-wire-20261029/revision-02/protocol-rules.json","bytes":32750,"sha256":"345c58ac03d0855fd65122cd4db5870ad0962362cb03265abeb63a79a0682abd"},
+    {"path":"/dev/shm/semantic-transport-wire-20261029/revision-02/review-closure/stage-order-addendum.json","bytes":2202,"sha256":"a51582e68b906d367d51c240f1406399c978cb8eac37cbe22f9466c0daf7fb58"}
+  ],
+  "first_findings": [
+    {
+      "id":"R01",
+      "severity":"PREFREEZE_COMPONENT_CONTRACT_BLOCKER",
+      "issue":"The declared failure interface requires status/error/stage, but most private raw control expectations omit stage. PREPARSE lists several checks without defining complete mixed-failure precedence. Exact failure envelopes cannot be tested unchanged without guessing.",
+      "action":"Freeze exact private/public stage labels and a deterministic PREPARSE suborder. Add a retained corrected oracle or stage table covering every raw failure code, plus representative mixed-failure controls. Do not overwrite first expectations. Preserve existing BOUNDS before ADMISSION and no partial body/dimensions on failure."
+    },
+    {
+      "id":"R02",
+      "severity":"PREFREEZE_COMPONENT_RESOURCE_BLOCKER",
+      "issue":"Unsigned lexical spelling alone permits a byte-capped but very long integer. json_value delegates parse_int to the Python runtime, whose conversion limit and cost are not frozen by the proposal. A preconversion integer-token resource limit is missing.",
+      "action":"Freeze a named finite digit ceiling and bounded refusal before json_value/int conversion. Every valid pinned Body integer field fits a small finite token length; keep the additional resource ceiling explicit and distinguish it from malformed integer spelling. Include boundary and just-over-bound raw literal recipes. Co-reviewer proposes a twenty-digit resource ceiling and INPUT_INTEGER_BOUND/PREPARSE; sole owner must adopt exact semantics before coding. No valid Body integer maximum may be silently reduced."
+    },
+    {
+      "id":"R03",
+      "severity":"PREFREEZE_SCHEMA_PARITY_BLOCKER",
+      "issue":"Proposal permits direct fullmatch for the three pinned patterns, but JSON Schema pattern matching uses search semantics. The pinned Id and Base64 patterns use dollar end anchors that can match before a final newline. Thus Id A followed by LF and Base64 AAAA followed by LF match the pinned patterns under search but not fullmatch.",
+      "observed_check":"Standard-library re.search returned true and re.fullmatch returned false for both exact pinned patterns and those literal strings. This tests pattern semantics only, not the proposed component.",
+      "action":"For this shape-only increment use exact fixed-pattern search semantics and separately apply explicitly frozen protocol byte/identifier/base64 rules. Alternatively retain a separately named stronger protocol gate with its own controls; never report stricter fullmatch as identical pinned-schema behavior. Do not change the pinned schema silently."
+    }
+  ],
+  "positive_observations": [
+    "Smallest meaningful boundary is check_body_input(raw: object) returning only status ok/stage BODY_INPUT_SHAPE_ONLY. It grants no accepted_result or replay dimension.",
+    "Existing json_value enforces byte cap, duplicate decoded object-key detection, depth preflight, strict UTF-8 decode and parser rejection of float/constants. It does not itself reject negative integer spellings or escaped unpaired Unicode surrogates.",
+    "Proposal correctly requires a bounded outside-string lexical gate, scalar validation of all decoded strings and keys, and final exact canonical byte equality without Unicode/line-ending/case normalization.",
+    "A paired surrogate escape may decode to a scalar but remains noncanonical compared with literal UTF-8; an unpaired surrogate must refuse encoding before canonical serialization. Canonical UTF-8 equality alone is too late to satisfy an explicit preparse scalar gate.",
+    "Pinned-schema specialization is sufficient in principle if every permitted keyword, reference form and branch is handled and unsupported fragments fail closed. Exact local reference DAG and schema digest must be verified before use; no remote schema fetching.",
+    "oneOf requires exactly one successful branch, allOf all branches, contains the exact frozen four-kind form, and uniqueItems complete type-aware structural identity. Boolean/integer equality must never use Python True==1 as schema equality.",
+    "Existing parser/serializer recursion is an explicit trusted-runtime exclusion under raw-byte and depth caps. No whole-system recursion-free, memory-proof or formal-correctness claim follows.",
+    "BODY-local bounds must not claim aggregate original-source, enclosing-package, installed runtime, identity/reference or downstream semantic bounds without those inputs. Earlier fifth-rule BOUNDS refusal remains mandatory."
+  ],
+  "implementation_review_obligations": [
+    "Enforce declared work/frame/scratch/byte-visit ceilings before scheduling, copying, encoding or comparing; sequentially schedule attacker-controlled arrays. Every schema alternative and canonical uniqueness byte visit must be charged.",
+    "Retain deterministic INPUT_WORK_BOUND refusal; quotas are a bounded component profile, not proof that all individually maximal schema fields fit simultaneously. Demonstrate admitted positive boundary fixtures fit the actually implemented evaluator before claiming qualification.",
+    "Do not publish a candidate body on error. Unknown/malformed fields or container types must not cause unsafe indexing during earlier bounds/admission walks.",
+    "Add focused wrapper controls for exact integer-vs-bool, malformed container types, missing/extra fields, oneOf/allOf, fixed patterns, Unicode scalar/byte bounds, duplicate kind/admission precedence, and resource overflow. Existing private scalar-reader controls cannot qualify the Body evaluator by themselves."
+  ],
+  "coordination": "Findings sent directly to sole owner and contract author. Existing proposal/raw controls are preserved; any correction must be additive and separately pinned. No participant access is required for this admitted local component item.",
+  "budget": "Finite task remains within existing owner tranche ending epoch 1793258040. No reset, new engineering round, paid assessor campaign or cap extension is requested.",
+  "remaining_unproved": ["Actual component implementation, static analysis and runtime results", "Worst-case work/resource argument for the actual evaluator", "Complete replay/original-source identity/reference qualification", "Installed decoder/runtime, proof/recovery/interoperability gates", "External-human validity/advantage and product acceptance"],
+  "smallest_sound_next_step": "Sole owner adopts additive exact stage/digit-limit/pattern clarifications and the corresponding manual controls, freezes their identities, then implements only the bounded internal reader/shape component with the stated quotas. Review actual implementation before claiming component qualification.",
+  "verdict":"NOT_YET_ADMITTED_AS_WRITTEN; R01_R02_R03_REQUIRE_NARROW_CONTRACT_CORRECTIONS; NO_EXTERNAL_GATE_BLOCKS_LOCAL_CORRECTION"
+}

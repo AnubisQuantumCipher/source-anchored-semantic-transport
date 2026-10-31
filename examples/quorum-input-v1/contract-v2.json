@@ -1,0 +1,149 @@
+{
+  "admission_schema": {
+    "entrypoint": "#/$defs/ReplayBody only",
+    "reference_boundary": "Task.rule_ids and Manifest.rule_specs shape/cardinality/uniqueItems enforced here; exact equality to Body records remains REFERENCES and is not claimed.",
+    "rules": "Within count<=4, missing/duplicate/unknown present kind set gives INPUT_UNADMITTED/SCHEMA; malformed rule container/record/kind types are INPUT_CLOSED_SCHEMA/SCHEMA. Exactly one of each four known kinds required.",
+    "shape_failure": "All unknown/missing/extra properties and other shape failures give INPUT_CLOSED_SCHEMA/SCHEMA.",
+    "versions": "Present type-str Registry/Policy/TaskView/RuleSpec version other than V1, including inline registries, gives INPUT_UNADMITTED/SCHEMA. Missing/wrong-type version fields are closed shape failures."
+  },
+  "bounds_exact_scope": {
+    "local_arrays": "Every known Body array and nested array uses its exact pinned maxItems. More than4 Body.rules entries is INPUT_RECORD_BOUND/BOUNDS before admission. Existing maxima remain unchanged.",
+    "priority": "Bounds before schema admission. Evaluate independent length caps of present correctly typed known containers first; missing or wrong-type fields are deferred to SCHEMA, never indexed unsafely. Malformed content is never accepted by skipping a bounds term. Compute complete aggregate record formula only once all its required container shapes are available; otherwise schema must refuse.",
+    "record_arrays": [
+      "sources",
+      "rules",
+      "tasks",
+      "claims",
+      "selectors",
+      "dependencies",
+      "input_manifests",
+      "blobs",
+      "provenance",
+      "run_evidence",
+      "readings",
+      "challenges",
+      "reading_withdrawals",
+      "updates",
+      "history"
+    ],
+    "record_formula": "2 + len(body.registry.seats) + sum(len(body[name]) for name in record_arrays) + sum(1 + len(manifest.registry_snapshot.seats) for manifest in body.input_manifests). The constant2 is one body Registry and one body Policy. Inline Registry copies and their Seats are charged each time. Body, keys/pins, statement/guard/node dictionaries, and result dictionaries are not counted as record objects. Refuse total>96 with INPUT_RECORD_BOUND/BOUNDS.",
+    "source_limits_excluded": "Body-local bounds do not establish enclosing archive bytes, aggregate original bytes, Q_RECORDS source count, descriptor closure or external source bounds. Source/claim graph-node identity/count and uniqueness are later REFERENCES/GRAPHS checks.",
+    "text_mapping": {
+      "Base64": "encoded string maxLength5464 and pinned pattern-search; exempt from generic4096-byte literal text ceiling. Decoded bytes, zero pad bits and canonical base64 are later W04 checks.",
+      "Id": "ASCII and<=32 UTF8 bytes; exact pinned pattern-search semantics still applied at SCHEMA. ASCII does not silently imply a new fullmatch rule.",
+      "Sha256": "fixed pinned64-character pattern and maxLength; ASCII shape only, not digest verification.",
+      "asserted_utc": "Explicit<=1024 UTF8 bytes; pinned64-character maximum remains separately in shape validation.",
+      "failure": "Known text byte overflow gives INPUT_BYTE_FIELD_BOUND/BOUNDS.",
+      "ordinary_text": "Known schema string fields have<=4096 UTF8 bytes unless a smaller or qualified byte cap below applies. Pinned character min/maxLength remains separately enforced.",
+      "other_smaller_character_caps": "Seat.declared_label and SourceVersion.media_type keep pinned128-character limits and generic4096-byte ceiling. No extra exceptions to count_rules[2] qualified field cap were found.",
+      "schema_maxLength1024": "Every known string field with pinned maxLength1024 also has<=1024 UTF8 bytes. This covers Challenge.reason, Claim.attribution, HistoryEntry.note, IdentityEvidence.assertion, OpaquePayload.omitted_scope/uncertainty, Provenance.author_claim/limitations, ReadingWithdrawal.reason, RunEvidence.model_id_claim/provider_claim/provider_run_id_claim, Seat.declared_model_id, StructuredPayload.omitted_scope/uncertainty, UpdateNotice.correction_text. Unreachable Reason.detail and UntrustedReceipt.claimed_verdict are not admitted entrypoints here.",
+      "unknown_or_wrong_type_fields": "Do not invent a byte-limit interpretation for an unknown property or a wrong-type value. Such input cannot pass SCHEMA. Its memory/traversal remains globally capped by PREPARSE bytes/value/depth limits."
+    }
+  },
+  "canonical_final": "After successful prior stages, require existing canonical(parsed)==raw exactly; mismatch INPUT_NONCANONICAL/CANONICAL_BYTES. Preserve scalar UTF8, key order/escape rules and no final LF. This compares input serialization only, not source identity.",
+  "contract_id": "quorum/body-input-development-contract/2",
+  "errors": [
+    "INPUT_TYPE",
+    "INPUT_BYTE_BOUND",
+    "INPUT_ENCODING",
+    "INPUT_DEPTH",
+    "INPUT_INTEGER_TOKEN",
+    "INPUT_INTEGER_BOUND",
+    "INPUT_JSON",
+    "INPUT_RECORD_BOUND",
+    "INPUT_BYTE_FIELD_BOUND",
+    "INPUT_UNADMITTED",
+    "INPUT_CLOSED_SCHEMA",
+    "INPUT_NONCANONICAL",
+    "INPUT_WORK_BOUND",
+    "INPUT_SCHEMA_UNSUPPORTED"
+  ],
+  "evaluator": {
+    "algorithm": "Explicit DFS frame stack<=128. Each frame performs basic validations then maintains ref/allOf/oneOf/properties/items continuation indices and child boolean result in that same frame. Schedule at most one child at a time; no all-array stack push. oneOf exactly one branch succeeds; allOf every branch succeeds.",
+    "artifact": "One exact pinned local schema, no arbitrary schema interface. Reject changed schema/unsupported construct INPUT_SCHEMA_UNSUPPORTED/BOOTSTRAP.",
+    "contains": "Only exact four pinned rule-kind contains fragments, implemented by same four-kind count check after verifying their exact pinned shape. No arbitrary contains engine.",
+    "equality": "Exact JSON structural equality with bool distinct from integer; no Python True==1 shortcut for const/enum/uniqueItems. Canonical complete item keys may implement uniqueItems with charged scratch/byte budgets.",
+    "functions": "No project recursion; short functions; no uncontrolled dynamic callbacks/dispatch or code in input. Existing json_value/canonical stdlib recursive internals remain explicit bounded-depth trusted exclusions.",
+    "keywords": [
+      "$defs",
+      "$id",
+      "$schema",
+      "$ref",
+      "description",
+      "title",
+      "type",
+      "properties",
+      "required",
+      "additionalProperties",
+      "items",
+      "minItems",
+      "maxItems",
+      "uniqueItems",
+      "minLength",
+      "maxLength",
+      "minimum",
+      "maximum",
+      "pattern",
+      "enum",
+      "const",
+      "oneOf",
+      "allOf",
+      "contains",
+      "minContains",
+      "maxContains"
+    ],
+    "patterns": "Only fixed precompiled re.search semantics for exact three pinned patterns; no fullmatch equivalence claim. Check string length before pattern processing.",
+    "refs": "Only pinned local #/$defs references, validated acyclic before candidate processing; metadata $schema is inert."
+  },
+  "originals_retained": true,
+  "owner": "/root",
+  "pins": {
+    "protocol_rules_sha256": "345c58ac03d0855fd65122cd4db5870ad0962362cb03265abeb63a79a0682abd",
+    "schema_path_inspection_sha256": "a716f4c45941b95edf353c6059359040f5061e1604066b3138628e8db162864e",
+    "transport_schema_sha256": "1c324b661314bd3a92f23b4502207f38a483baa6565d479838de450f110eeb1a",
+    "wire_schema_sha256": "b6c7cafc1d4f1703188f7bdcb2150316feadc6b870eda9495ee146e2f429f8aa"
+  },
+  "preparse_exact_order": [
+    "type(raw) is bytes, else INPUT_TYPE/PREPARSE; then 0<len(raw)<=65536, else INPUT_BYTE_BOUND/PREPARSE, before copy/decode.",
+    "Strict UTF8 decoding and explicit BOM rejection, else INPUT_ENCODING/PREPARSE. No normalization.",
+    "Bounded left-to-right scan outside strings. Track quote/escape and container depth. First offending depth token gives INPUT_DEPTH/PREPARSE; first offending unsigned-number lexical token gives INPUT_INTEGER_TOKEN/PREPARSE. All numbers must be 0 or positive decimal with no leading zeros; reject sign including -0, fraction, exponent, NaN and infinity. Ignore numeric spellings inside strings. Every digit token is at most20 digits before int conversion; a longer otherwise unsigned decimal gives INPUT_INTEGER_BOUND/PREPARSE. At end unterminated quote or unmatched delimiter state gives INPUT_JSON/PREPARSE.",
+    "Call existing transport_schema.json_value(raw,65536); any TransportError becomes INPUT_JSON/PREPARSE. Do not infer precise reason from its message. Existing duplicate decoded keys, syntax, floats/constants and depth refusals remain in force.",
+    "Iterative bounded walk of every decoded object key and string value rejects any unpaired surrogate code point with INPUT_ENCODING/PREPARSE. Parser emits only JSON builtin types; do not accept caller-supplied mutable object trees."
+  ],
+  "public_interface": {
+    "failure": {
+      "error": "ONE_DECLARED_CODE",
+      "stage": "PREPARSE|BOUNDS|SCHEMA|CANONICAL_BYTES|BOOTSTRAP",
+      "status": "error"
+    },
+    "input": "exact bytes only; nonempty; length<=65536; no conversion/fetch/decompression",
+    "private_value": "A bounded private parsed value may flow to the validator; public success does not return/copy it.",
+    "signature": "check_body_input(raw: object) -> dict[str, object]",
+    "success": {
+      "stage": "BODY_INPUT_SHAPE_ONLY",
+      "status": "ok"
+    }
+  },
+  "qualification": "Freeze exact contract/control/addendum/schema/parser/runtime pins, obtain independent review, then implement only this boundary. Test-only existing jsonschema supplies shape parity, not wire semantics or resource/lexical/canonical oracles. Retain all raw first outcomes and additive corrections. Inherited full proof/runtime/recovery/interoperability/external-human/product gates remain binding.",
+  "resource_counters": {
+    "active_schema_frames": 128,
+    "candidate_bytes": 65536,
+    "canonical_item_bytes_visited": 1048576,
+    "canonical_scratch_bytes": 131072,
+    "ceiling_status": "Explicit proposed work ceilings, not a guarantee every simultaneous field maximum fits. Owner must freeze counters and retain quota-refusal controls; no original cap is raised.",
+    "charging": "Check quota before work/push/copy/encoding. Primitive steps count each schema application, ref dispatch, continuation transition, property/item schedule, contains count and uniqueness comparison. Byte budget counts each examined/encoded uniqueness byte. Exhaustion gives INPUT_WORK_BOUND at current stage with no partial dimensions. Raw byte scan and scalar walk are bounded separately by their declared byte/value caps.",
+    "decoded_value_visits": 65536,
+    "frame_evidence": "schema-path-inspection.json measured reachable pinned Body schema/reference DAG longest descent19 schema nodes, including union/ref transitions.128 frames is sufficient for this design if continuation state uses no extra frames and exactly one child is active. This is source inspection/computation, not formal proof or actual implementation evidence.",
+    "metadata_depth": 12,
+    "primitive_steps": 1048576,
+    "schema_file_bytes": 32768,
+    "schema_nodes": 519,
+    "timeout_seconds_per_test": 30
+  },
+  "scope": "Internal exact-byte PREPARSE, Body-local BOUNDS, admitted-profile closed shape and canonical-byte comparison only. Return no accepted_result/ReplayResult, source identity, source membership, semantics, graph correctness, aggregation, freshness or authority claim.",
+  "status": "OWNER_DECISIONS_CONSOLIDATED_REQUIRES_EXACT_FREEZE_BEFORE_CODE",
+  "supersedes_for_next_admission": [
+    "proposal.json",
+    "proposal-addendum.json"
+  ]
+}

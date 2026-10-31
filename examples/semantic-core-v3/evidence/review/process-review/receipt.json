@@ -1,0 +1,123 @@
+{
+  "builds": "NONE",
+  "cli_setup_error_controls": "PASS",
+  "files": [
+    {
+      "bytes": 349,
+      "path": "bridge_stderr/child.json",
+      "sha256": "974360e7b9554f5c2a69814523c4d86737f3a785216db77d5f963bfe1f4be0d6"
+    },
+    {
+      "bytes": 10,
+      "path": "bridge_stderr/child.stderr",
+      "sha256": "46dc64f0d5a20b08855dff81d85770b02b887c6c82ee03ece2d527d2d218d964"
+    },
+    {
+      "bytes": 0,
+      "path": "bridge_stderr/child.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 968,
+      "path": "error-results.json",
+      "sha256": "04b4853e49f1d97f94ab7dfdba95aaee7adb0a0c330304f34f20fb19bc15d108"
+    },
+    {
+      "bytes": 2065,
+      "path": "error_checks.py",
+      "sha256": "9b24b9ed3b6c4b3b586300a055b7d741ed7fac87df6cb219246587854cd4251d"
+    },
+    {
+      "bytes": 26643,
+      "path": "results01.json",
+      "sha256": "291b86081279a2ab5ff073e3354c456e97dd6c82bdbe2e69011af391a82b6baa"
+    },
+    {
+      "bytes": 348,
+      "path": "results02/bridge_stderr/child.json",
+      "sha256": "9c3a7ee1291a697b93bb968ee87d7859bdd4a2bdaa1054843c17bc886685f08c"
+    },
+    {
+      "bytes": 10,
+      "path": "results02/bridge_stderr/child.stderr",
+      "sha256": "46dc64f0d5a20b08855dff81d85770b02b887c6c82ee03ece2d527d2d218d964"
+    },
+    {
+      "bytes": 0,
+      "path": "results02/bridge_stderr/child.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 24628,
+      "path": "results02/results01.json",
+      "sha256": "27b8a6bb270e8fe25a9c7fe78bda145bee8c360a5ae5ee1fb3c97dfbb48002e6"
+    },
+    {
+      "bytes": 4220,
+      "path": "results02/run_checks.py",
+      "sha256": "917cfdabf2ccb2851a16fb394fa24f8d93554929e428daf33ddf558f3f48fe17"
+    },
+    {
+      "bytes": 9997,
+      "path": "results02/snapshot/transport_core_bridge.py",
+      "sha256": "c8419dca6109a9387eecddc155883a25f6d9ada0f23a8f39092f275cbe463f3a"
+    },
+    {
+      "bytes": 3796,
+      "path": "results02/snapshot/transport_core_cli.py",
+      "sha256": "514dbfa17bd3b900eb779fe52b36c236aa14803dbbd04484e760518bfbccc5d1"
+    },
+    {
+      "bytes": 2650,
+      "path": "results02/snapshot/transport_core_process.py",
+      "sha256": "4bf942e5d3eff91a5f676c42554ac5bb4800c22d702c9544fb92851925d8b838"
+    },
+    {
+      "bytes": 2689,
+      "path": "results02/worker.py",
+      "sha256": "02247dd9bcfcd65a54d130701523fdf1534b1476cdeec1e22df4c525a230873f"
+    },
+    {
+      "bytes": 2705,
+      "path": "review01.txt",
+      "sha256": "6cf970c1eb56b3b09076dc90fc743264968b8164d156a56959ee9b015d8a90bc"
+    },
+    {
+      "bytes": 1979,
+      "path": "review02.txt",
+      "sha256": "50372b07b4b8cb1464d13a73b47a5c075bfd75b39c2e14d8c31433290f708798"
+    },
+    {
+      "bytes": 4220,
+      "path": "run_checks.py",
+      "sha256": "917cfdabf2ccb2851a16fb394fa24f8d93554929e428daf33ddf558f3f48fe17"
+    },
+    {
+      "bytes": 9997,
+      "path": "snapshot/transport_core_bridge.py",
+      "sha256": "c8419dca6109a9387eecddc155883a25f6d9ada0f23a8f39092f275cbe463f3a"
+    },
+    {
+      "bytes": 3796,
+      "path": "snapshot/transport_core_cli.py",
+      "sha256": "514dbfa17bd3b900eb779fe52b36c236aa14803dbbd04484e760518bfbccc5d1"
+    },
+    {
+      "bytes": 2626,
+      "path": "snapshot/transport_core_process.py",
+      "sha256": "d709860912f804969e2b8d4b9a9789321c837e3f987db7e4836fe779884956b6"
+    },
+    {
+      "bytes": 2689,
+      "path": "worker.py",
+      "sha256": "02247dd9bcfcd65a54d130701523fdf1534b1476cdeec1e22df4c525a230873f"
+    }
+  ],
+  "implementation_edits": "NONE",
+  "original_failure_retained": true,
+  "proof": "UNRUN",
+  "resource_and_process_controls": "PASS",
+  "schema": "semantic-core-independent-process-receipt/1",
+  "status": "REPAIRED_TESTED",
+  "whole_system_assurance": "NOT_CLAIMED"
+}

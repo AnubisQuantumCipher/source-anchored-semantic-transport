@@ -1,0 +1,10 @@
+{
+  "schema": "transport/public-receiving-contract-clarification/1",
+  "contract_sha256": "7ea4477e4a51f05c274cbea7cdd5c5b68b08c88f50f2c550f180ca8e088622a2",
+  "epoch": "BEFORE_IMPLEMENTATION_AND_RECEIVER_DISPATCH",
+  "required_span_coverage": "Each required span needs one valid citation in the same identified source and revision containing the entire required interval. A whole-source citation can cover several paragraphs. Disjoint/gapped unions never establish coverage; no bridging source IDs or revisions.",
+  "submission_equality": "Exact UTF-8 bytes of answer.json must equal the sole complete observed plaintext final message. No parsing, trimming, newline insertion/removal, JSON reserialization or substitution. Save answer.json without a terminal LF and return its exact contents. A mismatch is a separate observed protocol failure, retained without retry or repair.",
+  "evaluation_visibility": "The oracle, gold obligations, checker controls and other-arm outputs are evaluator-only. Receivers may access only their declared source/package/interface/dependency paths and their new answer path by protocol. This is not filesystem confinement; hidden access and backend plaintext dispatch equality remain UNKNOWN.",
+  "assessment_masking": "The assessor receives anonymized first-answer bytes, the same original-source oracle and frozen rubric; no arm mapping or execution trace. Narrative details may reveal an arm. Masking is protocol-only, not proven blinding or independent model errors.",
+  "selection": "Full existing SC_MAIN task retained: controller external definitions/maintenance, both reviews, approval history/revocation and attributed uncertain quantity. No invented pending correction. No other fixture cases added or removed from existing suites."
+}

@@ -1,0 +1,136 @@
+{
+  "acceptance_evidence": "Exact repaired source/schema/runtime/frozen contract/control pins, no regression across literal/parity controls, prompt special-file refusal, prework counter enforcement, corrected byte/admission stages, strict analysis and retained raw first failures. This is component acceptance evidence only.",
+  "concurrent_owner_edit_note": "Owner repaired top-level schema admission while this review ran. Initial raw refusal and later report-current source pins are both retained. The first probe files did not independently snapshot source at each call, so do not present them as a single immutable-version run. Re-run final affected controls with before/after source pins after repairs.",
+  "findings": [
+    {
+      "evidence": "resource-probes-first.json fifo_schema: child timed out and was killed after1second; no INPUT_SCHEMA_UNSUPPORTED envelope. The probe creates only a temporary /dev/shm FIFO and never edits product files.",
+      "id": "I02_SCHEMA_SPECIAL_FILE",
+      "issue": "is_symlink followed by Path.open does not require regular file and can block on FIFO before digest/byte check. The fixed schema path is a trusted bootstrap input, but its failure mode must remain bounded.",
+      "location": "transport_quorum_shape.load_schema",
+      "narrow_fix": "Open with os.O_RDONLY|os.O_NONBLOCK|os.O_NOFOLLOW, fstat descriptor and require stat.S_ISREG before bounded32769-byte read; ensure closure on every path. Reuse existing runtime_file regular-file approach. Retain byte/digest caps and BOOTSTRAP refusal.",
+      "required_retest": "Regular pinned file succeeds; FIFO, directory and symlink refuse promptly without blocking; wrong digest/oversized regular file refuse; exact source pins recorded before/after.",
+      "severity": "COMPONENT_ADMISSION_BLOCKER",
+      "status": "OPEN"
+    },
+    {
+      "evidence": "Minimal Body with mode=X repeated4097 yields INPUT_CLOSED_SCHEMA/SCHEMA; frozen known-string field byte cap requires INPUT_BYTE_FIELD_BOUND/BOUNDS. Literal candidate retained as literal-const-over4096.json.",
+      "id": "I03_IMPLICIT_STRING_BYTE_CAP",
+      "issue": "_limits applies text byte limits only to nodes whose type keyword is string. Known string-valued const/enum fields are omitted, contrary to frozen generic4096-UTF8-byte ceiling. Such input is later refused rather than falsely accepted, but at the wrong stage.",
+      "location": "transport_quorum_shape._limits/_text_limit",
+      "narrow_fix": "Recognize known string fields represented by explicit type:string, string const or all-string enum; apply the frozen generic/qualified byte mapping there. Preserve later exact const/enum semantics, no new schema relaxation.",
+      "required_retest": "Over4096 mode and RuleSpec.kind fail BOUNDS before admission/schema; ordinary admitted fixture and existing text/Id/Base64 byte exceptions retain their expected stages.",
+      "severity": "FROZEN_CONTRACT_STAGE_MISMATCH",
+      "status": "OPEN"
+    },
+    {
+      "evidence": "resource-probes-first.json zero_byte_budget: _canonical_size(x repeated1024) consumes1025 primitive steps before INPUT_WORK_BOUND while bytes starts/remains0.",
+      "id": "I04_BYTE_QUOTA_BEFORE_ENCODING",
+      "issue": "Canonical uniqueness string sizing UTF8-encodes characters before charging the total encoded-byte quota at function end. With byte budget already exhausted it still processes/encodes the entire string. Primitive-step limits remain finite and the operation eventually refuses, but the frozen prework byte-quota control is not implemented as claimed.",
+      "location": "transport_quorum_shape._string_size",
+      "narrow_fix": "Charge quote/escape/UTF8 byte widths before the corresponding byte work/encoding, using bounded scalar-width classification, or reserve a documented conservative byte bound before traversal and retain explicit cap accounting. Keep actual canonical key length cross-check and scratch bound.",
+      "required_retest": "Exhausted byte quota refuses before processing an arbitrarily long string; exact byte/scratch boundary controls and ordinary uniqueness agree with independent shape oracle.",
+      "severity": "FROZEN_RESOURCE_CONTROL_MISMATCH",
+      "status": "OPEN"
+    },
+    {
+      "evidence": "raw-probes-first.json unknown_top_schema retains first wrong-stage result. Owner added explicit present-string check; report-current source contains it.",
+      "id": "I05_UNKNOWN_BODY_SCHEMA",
+      "issue": "Initial implementation treated present unknown top-level Body schema as INPUT_CLOSED_SCHEMA rather than INPUT_UNADMITTED required by revision02.",
+      "location": "transport_quorum_shape._admission",
+      "narrow_fix": "Already applied by owner; retain correction receipt and test present unknown schema versus missing/nonstring schema and earlier bounds failures.",
+      "severity": "FROZEN_ADMISSION_MAPPING",
+      "status": "OWNER_REPAIR_OBSERVED_PENDING_FINAL_SOURCE_BOUND_RETEST"
+    }
+  ],
+  "initial_inspected_source_pins": {
+    "reader": "14a4105d184cd0964af07e4eec71a33c010e2ba65342631e8ce373e625f1b369",
+    "schema": "b6c7cafc1d4f1703188f7bdcb2150316feadc6b870eda9495ee146e2f429f8aa",
+    "shape": "e1f4cb324daecbc9e4d0077df1e4c8f95c141ccefead73bd28e04d7b5bcbb26e"
+  },
+  "limitations": "Probe scripts run existing Python only, without native builds/network/product edits. Bare shape parity is finite TESTED evidence. Actual evaluator formal/resource proof, bootstrap installation identity, runtime closure, full wire/references/graphs/recomputation/import/recovery/interoperability and external human/product gates remain UNPROVEN/UNRUN.",
+  "pins_at_report": [
+    {
+      "bytes": 4570,
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_quorum_input.py",
+      "sha256": "14a4105d184cd0964af07e4eec71a33c010e2ba65342631e8ce373e625f1b369"
+    },
+    {
+      "bytes": 15510,
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_quorum_shape.py",
+      "sha256": "b77d9bf35c266a60a508c1e245065c740130da147d253d5af85cda1cd3229012"
+    },
+    {
+      "bytes": 32177,
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_quorum_body.schema.json",
+      "sha256": "b6c7cafc1d4f1703188f7bdcb2150316feadc6b870eda9495ee146e2f429f8aa"
+    },
+    {
+      "bytes": 8622,
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_schema.py",
+      "sha256": "1c324b661314bd3a92f23b4502207f38a483baa6565d479838de450f110eeb1a"
+    },
+    {
+      "bytes": 11698,
+      "path": "/home/sicarii/Projects/source-anchored-semantic-transport/evidence/acceptance-v1-preflight-20261029/engineering-admission-01/input-freeze-01/contract-v2.json",
+      "sha256": "18d180241243baeb7dd362cf833abedfcc5e099b489034c3ead8d547054181d6"
+    },
+    {
+      "bytes": 7953,
+      "path": "/home/sicarii/Projects/source-anchored-semantic-transport/evidence/acceptance-v1-preflight-20261029/engineering-admission-01/input-freeze-01/raw-controls-corrections-v2.json",
+      "sha256": "ae9f844e102b15399cb6338db25548914e2203f83846277e42131e2f6e2ba843"
+    },
+    {
+      "bytes": 795,
+      "path": "/home/sicarii/Projects/source-anchored-semantic-transport/evidence/acceptance-v1-preflight-20261029/engineering-admission-01/input-freeze-01/owner-v2-adoption.json",
+      "sha256": "b01c9c611ceee406443d87298305798eb9fa0d03c167c1e192b01c8fd319cd2b"
+    },
+    {
+      "bytes": 23023,
+      "path": "/dev/shm/semantic-transport-wire-input-20261029/code-review-01/raw-probes-first.json",
+      "sha256": "2227548b5689bc116af643e12f991c3e8071b2a95af38b209350f1150f6eb66f"
+    },
+    {
+      "bytes": 73232,
+      "path": "/dev/shm/semantic-transport-wire-input-20261029/code-review-01/shape-probes-first.json",
+      "sha256": "cd43e78b0084e56ef2c90a98063b60367a305c9c24e16888446e098c386dbfba"
+    },
+    {
+      "bytes": 1158,
+      "path": "/dev/shm/semantic-transport-wire-input-20261029/code-review-01/resource-probes-first.json",
+      "sha256": "96c21e08bb8a1b3098f138dc02966e07b80d4b9129feb3f1ed300dc0ea917262"
+    }
+  ],
+  "positive_observations": [
+    "Raw gate checks exact bytes/nonempty/cap, UTF8/BOM, lexical grammar/digit/depth, existing duplicate/syntax parser and iterative scalar validation in declared order. Repaired long-integer malformed-token probe returns lexical error before digit resource error.",
+    "Evaluator uses explicit DFS frames, one active child per frame and frame-local continuations. oneOf child outcomes count without turning a single failed alternative into parent failure; exactly one success is required. allOf and ordinary child failures propagate conjunctively. No project recursion was found.",
+    "Pinned schema hash prevents arbitrary schema substitution; inventory restricts keyword/pattern/ref forms and fixed local definition DAG is checked. Contains is limited by the exact pinned artifact; no network reference or runtime jsonschema dependency occurs.",
+    "Type-sensitive scalar equality and canonical item keys distinguish bool from integer. Collection limits are checked by the bounds pass before array child traversal; aggregate record formula includes inline registry snapshots and seats.",
+    "No false shape acceptance observed among the independently pinned207-control corpus. Integral floats, UTF8 text overflow, aggregate record overflow and total byte overflow are appropriately stricter than bare JSON Schema shape acceptance. The retained V13 handwritten expectation discrepancy remains unchanged and is independently refused.",
+    "Public output remains only staged component success/error; no accepted_result, body copy, source validity, meaning, currentness or authority is supplied."
+  ],
+  "reviewer": "/root/quorum_wire_review",
+  "runs": [
+    {
+      "artifact": "raw-probes-first.json",
+      "command": "timeout30s /usr/bin/python3 -I -S -B -Werror [bounded raw fixture/probe script]",
+      "exit_code": 0,
+      "result": "All retained raw-controls and v2 corrected literal expectations matched; focused unknown-schema first failure preserved."
+    },
+    {
+      "artifact": "shape-probes-first.json",
+      "command": "timeout30s /usr/bin/python3 -I -S -B -Werror [pinned207 independent shape-control comparison script]",
+      "exit_code": 0,
+      "result": "No false shape acceptance. Shape-accept/refined-component-refusal differences are explicit lexical/byte/aggregate stages."
+    },
+    {
+      "artifact": "resource-probes-first.json",
+      "command": "timeout30s /usr/bin/python3 -I -S -B -Werror [constant-field/zero-quota/FIFO probes with nested1second child timeout]",
+      "exit_code": 0,
+      "result": "Findings I02-I04 observed; zero-step quota correctly refuses."
+    }
+  ],
+  "schema": "quorum/body-input-independent-code-review/1",
+  "scope": "Internal reader/Body-local bounds/shape/canonical stages only; no full wire replay acceptance, source identity, interpretation, authority, native proof or external validation.",
+  "smallest_sound_next_step": "Owner makes the three narrow repairs, retains first evidence, then runs pinned source-stable affected controls and frozen harness. Do not mark this component qualified before source-bound repair readback and applicable strict checks.",
+  "status": "FIXES_REQUIRED_BEFORE_COMPONENT_ACCEPTANCE"
+}

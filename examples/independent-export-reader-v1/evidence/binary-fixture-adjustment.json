@@ -1,0 +1,10 @@
+{
+  "schema": "transport/reader-release-adjustment/1",
+  "utc": "2026-10-29T11:36:10.896510+00:00",
+  "prior_receipt_sha256": "3c6547c0660a28ba13f23a5a1ebff1ca7e8ae640c09b3306fadca1ad2ad0ee0a",
+  "finding": "git diff --cached --check reports exact CRLF bytes as trailing whitespace in opaque .bin fixtures",
+  "repair": "Local .gitattributes marks all .bin artifacts binary; exact fixture bytes unchanged; prevents Git text conversion. No runtime, oracle, source or proof change.",
+  "first_check_exit_code": 2,
+  "first_check_output": "examples/independent-export-reader-v1/fixtures/plain/export/sources/MULTILINGUAL.bin:1: trailing whitespace.\n+All reviewers may comment unless withdrawn.\\r\\n\nexamples/independent-export-reader-v1/fixtures/plain/originals/MULTILINGUAL.bin:1: trailing whitespace.\n+All reviewers may comment unless withdrawn.\\r\\n",
+  "prior_source_review": "review/release-review.json outside original frozen receipt"
+}

@@ -1,0 +1,102 @@
+.E..........E.E.E.
+======================================================================
+ERROR: test_complete_evidence_matches (__main__.ReceiptChecks.test_complete_evidence_matches)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/test_receipt.py", line 43, in test_complete_evidence_matches
+    result = RECEIPT.check(self.root, self.example)
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/receipt.py", line 461, in check
+    observed = expected(root, example)
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/receipt.py", line 433, in expected
+    sources |= runtime_sources(root, example, native_pin)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/receipt.py", line 419, in runtime_sources
+    check_pin(root, item)
+    ~~~~~~~~~^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/receipt.py", line 137, in check_pin
+    got = pin(base, item['path'])
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/receipt.py", line 56, in pin
+    raw = read(base, name)
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/receipt.py", line 43, in read
+    info = target.stat()
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 654, in stat
+    return os.stat(self, follow_symlinks=follow_symlinks)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/dev/shm/semantic-transport-core-20261029/evidence/checker-review/tmp/semantic-core-receipt-dim65x8j/tools/transport_archive.py'
+
+======================================================================
+ERROR: test_original_failure_erasure_refused (__main__.ReceiptChecks.test_original_failure_erasure_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/test_receipt.py", line 101, in test_original_failure_erasure_refused
+    RECEIPT.expected(self.root, self.example)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/receipt.py", line 433, in expected
+    sources |= runtime_sources(root, example, native_pin)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/receipt.py", line 419, in runtime_sources
+    check_pin(root, item)
+    ~~~~~~~~~^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/receipt.py", line 137, in check_pin
+    got = pin(base, item['path'])
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/receipt.py", line 56, in pin
+    raw = read(base, name)
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/receipt.py", line 43, in read
+    info = target.stat()
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 654, in stat
+    return os.stat(self, follow_symlinks=follow_symlinks)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/dev/shm/semantic-transport-core-20261029/evidence/checker-review/tmp/semantic-core-receipt-2f6wm198/tools/transport_archive.py'
+
+======================================================================
+ERROR: test_relocated_input_pair_change_refused (__main__.ReceiptChecks.test_relocated_input_pair_change_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/test_receipt.py", line 141, in test_relocated_input_pair_change_refused
+    RECEIPT.expected(self.root, self.example)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/receipt.py", line 433, in expected
+    sources |= runtime_sources(root, example, native_pin)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/receipt.py", line 419, in runtime_sources
+    check_pin(root, item)
+    ~~~~~~~~~^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/receipt.py", line 137, in check_pin
+    got = pin(base, item['path'])
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/receipt.py", line 56, in pin
+    raw = read(base, name)
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/receipt.py", line 43, in read
+    info = target.stat()
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 654, in stat
+    return os.stat(self, follow_symlinks=follow_symlinks)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/dev/shm/semantic-transport-core-20261029/evidence/checker-review/tmp/semantic-core-receipt-c08hqcvq/tools/transport_archive.py'
+
+======================================================================
+ERROR: test_swapped_archive_refused_even_after_inventory_regeneration (__main__.ReceiptChecks.test_swapped_archive_refused_even_after_inventory_regeneration)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/test_receipt.py", line 73, in test_swapped_archive_refused_even_after_inventory_regeneration
+    RECEIPT.expected(self.root, self.example)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/receipt.py", line 433, in expected
+    sources |= runtime_sources(root, example, native_pin)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/receipt.py", line 419, in runtime_sources
+    check_pin(root, item)
+    ~~~~~~~~~^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/receipt.py", line 137, in check_pin
+    got = pin(base, item['path'])
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/receipt.py", line 56, in pin
+    raw = read(base, name)
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/semantic-core-v3/receipt.py", line 43, in read
+    info = target.stat()
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 654, in stat
+    return os.stat(self, follow_symlinks=follow_symlinks)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/dev/shm/semantic-transport-core-20261029/evidence/checker-review/tmp/semantic-core-receipt-viw8ogyt/tools/transport_archive.py'
+
+----------------------------------------------------------------------
+Ran 18 tests in 1.979s
+
+FAILED (errors=4)

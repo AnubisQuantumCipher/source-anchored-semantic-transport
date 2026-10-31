@@ -1,0 +1,3 @@
+Σ[ACCESS_NOTICE,Q_RECORDS,TIMETABLE_AFTER,TIMETABLE_BEFORE] I[none] U[none] R[none]
+STS1:47a656bf7bb2d666d5b63771b1c716fec057e910bbd2b0faab41a71e946fb9e6
+attached:meaning.zip

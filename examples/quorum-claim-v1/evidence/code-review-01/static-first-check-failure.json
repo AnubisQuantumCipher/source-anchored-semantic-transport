@@ -1,0 +1,1 @@
+{"event":"AST_IDENTITY_ASSERTION_FAILED","retention":"First AssertionError retained; no product defect inferred without locating the difference.","schema":"quorum/independent-inspection-check-failure/1","source":"Reviewer static-inspection script, not product suite","status":"INVESTIGATING_EXPECTED_REFACTOR_DIFFERENCE"}

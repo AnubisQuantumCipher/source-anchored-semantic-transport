@@ -1,0 +1,22 @@
+{
+  "modules": [
+    {
+      "path": "/dev/shm/semantic-transport-core-20261029/evidence/schema-review/results02/reviewed-modules/transport_core.py",
+      "sha256": "517552f59b1e06a60f8ad2da74932e2d20b305474cf168c1a156002186ad9239"
+    },
+    {
+      "path": "/dev/shm/semantic-transport-core-20261029/evidence/schema-review/results02/reviewed-modules/transport_schema.py",
+      "sha256": "1c324b661314bd3a92f23b4502207f38a483baa6565d479838de450f110eeb1a"
+    },
+    {
+      "path": "/dev/shm/semantic-transport-core-20261029/evidence/schema-review/results02/reviewed-modules/transport_wire.py",
+      "sha256": "2a0fa77da78ae4591fc296f6ce4f62e961c68ed992479ffe59974e236b0f58c4"
+    },
+    {
+      "path": "/dev/shm/semantic-transport-core-20261029/evidence/schema-review/results02/reviewed-modules/transport_operators.py",
+      "sha256": "b638b57693d26238ec2c461b810ad665008a8b59886ed0be53f0dbc71809f417"
+    }
+  ],
+  "native_sha256": "e02d6247069b8e4657ebe44f7fcc81459e0c0de1e09aa7c6f44df41a036aca68",
+  "oracle_sha256": "c8cc2970b3816e3187a9d7e150521b8667fd92ebf0ffd7dd1498c558906da709"
+}

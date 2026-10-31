@@ -1,0 +1,58 @@
+{
+  "schema": "transport/independent-reader-release-review/1",
+  "reviewer_model": "gpt-6.1-sol",
+  "status": "NO_ACTIONABLE_RELEASE_BLOCKER_IDENTIFIED",
+  "pins": {
+    "install/read_transport_export.py": {
+      "bytes": 29108,
+      "sha256": "4fc3f3475d9686ed87d6c6227dfe6edd63f12a53b9cb56821f26407a30310c67"
+    },
+    "install/test_export_reader.py": {
+      "bytes": 19937,
+      "sha256": "818bae441299abce11faa03c05b0a0d91495e6fba3e95a7e318805df5b46e386"
+    },
+    "install/export_reader_test_fixtures.py": {
+      "bytes": 19345,
+      "sha256": "8eb88a6a3f48bd6d24c0f526aea3a4e2fd46e054116a9ad77885c074aeaa5fce"
+    },
+    "examples/independent-export-reader-v1/reproduce.py": {
+      "bytes": 6508,
+      "sha256": "548fe90e6c57e29149f854a26bdbdc3ff0d4d69c78f92926eac070bc23d33426"
+    },
+    "examples/independent-export-reader-v1/receipt.py": {
+      "bytes": 3256,
+      "sha256": "f946a4fbea4998db437cdacd93878b7a667190d457ee0fdfef76dd574c5b7770"
+    },
+    "docs/EXPORT_READER.md": {
+      "bytes": 4004,
+      "sha256": "23e84cbb381aafdbe3d683e12973bca43af000727ab89f1250f2880ca51f39f6"
+    },
+    ".github/workflows/export-reader.yml": {
+      "bytes": 1107,
+      "sha256": "9ae346ce0d846dffd13eba24933e952eb59c32933547686452baf793f1c87ef6"
+    }
+  },
+  "actions": [
+    "Read final docs/EXPORT_READER.md, example README, CI workflow, owner-checks.json, entire reproduce.py and receipt.py.",
+    "Inspect test harness isolated fixture-module loading, oracle override/default, hash pin and child interpreter argv, stdout/err bounds, CLI entrypoints and standard-library import boundary.",
+    "Run python3 -I -S -B -Werror examples/independent-export-reader-v1/receipt.py --check: exit0, PASS; receipt source and retained observations match.",
+    "AST syntax parse all reviewed Python source without compilation/cache writes."
+  ],
+  "findings": [],
+  "assessment": {
+    "reader_pin": "Matches repaired independently reviewed SHA4fc3f3475d9686ed87d6c6227dfe6edd63f12a53b9cb56821f26407a30310c67.",
+    "oracle_portability": "--oracle accepts explicit Path and remains hash-pinned; default resolves repository-local evidence relative to resolved script path. No temporary development path dependency.",
+    "isolated_imports": "Test fixture loaded explicitly by absolute source path; -I -S does not remove required sibling module lookup because ordinary import lookup is not used. Reader itself standard library only.",
+    "replay": "Reproduce copies standalone reader plus export and separately compares source originals/text/metadata. Child -I -S -B argv requires no native/producer package. Filesystem arrangement is explicitly not hostile isolation.",
+    "claims": "Docs and receipt retain TESTED/UNPROVEN and NOT_PERFORMED boundaries; exact exported bytes do not assert semantic fidelity, authenticity, human validation or whole-system proof.",
+    "output_bounds": "Reader bounds were reviewed earlier; replay child FSIZE and bounded reads/writes constrain retained output. Receipt bounded inventory and byte limits apply to trusted release-tree inputs.",
+    "scope": "Suitable for new-file development checkpoint only; no merge/tag/product-release acceptance inferred."
+  },
+  "limitations": [
+    "No normal/optimized campaign rerun; owner observations read and source-bound receipt checked, not independently regenerated.",
+    "GitHub workflow not remotely executed in this review; Python 3.14.10 setup availability and hosted runner behavior remain CI evidence requirements.",
+    "Receipt and replay harnesses consume trusted release fixtures, not adversarial filesystem trees.",
+    "Not external organization or human validation; no whole-system proof."
+  ],
+  "smallest_sound_next_step": "Publish only the authorized source-bound checkpoint with these receipts; obtain actual hosted CI outcome before claiming that workflow passes."
+}

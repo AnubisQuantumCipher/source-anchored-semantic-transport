@@ -1,0 +1,853 @@
+{
+  "authorship": "Independent GPT-6.1 source reviewer; observed lifecycle whitelist values and explicitly authored boundary expectations, not collector output. No product implementation executed.",
+  "boundary_cases": [
+    {
+      "expected": {
+        "disposition": "PROJECT",
+        "projection": {
+          "fields": {
+            "started_at": 0,
+            "type": "task_complete"
+          },
+          "kind": "TASK_LIFECYCLE_METADATA"
+        }
+      },
+      "id": "started_at_zero",
+      "input": {
+        "payload": {
+          "started_at": 0,
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "disposition": "PROJECT",
+        "projection": {
+          "fields": {
+            "started_at": 9223372036854775807,
+            "type": "task_complete"
+          },
+          "kind": "TASK_LIFECYCLE_METADATA"
+        }
+      },
+      "id": "started_at_max_counter",
+      "input": {
+        "payload": {
+          "started_at": 9223372036854775807,
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "category": "lifecycle_value_type_or_bound",
+        "disposition": "REFUSE",
+        "field": "started_at"
+      },
+      "id": "started_at_over_max_counter",
+      "input": {
+        "payload": {
+          "started_at": 9223372036854775808,
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "category": "lifecycle_value_type_or_bound",
+        "disposition": "REFUSE",
+        "field": "started_at"
+      },
+      "id": "started_at_negative",
+      "input": {
+        "payload": {
+          "started_at": -1,
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "category": "lifecycle_value_type_or_bound",
+        "disposition": "REFUSE",
+        "field": "started_at"
+      },
+      "id": "started_at_true",
+      "input": {
+        "payload": {
+          "started_at": true,
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "category": "lifecycle_value_type_or_bound",
+        "disposition": "REFUSE",
+        "field": "started_at"
+      },
+      "id": "started_at_false",
+      "input": {
+        "payload": {
+          "started_at": false,
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "category": "lifecycle_value_type_or_bound",
+        "disposition": "REFUSE",
+        "field": "started_at"
+      },
+      "id": "started_at_float_zero",
+      "input": {
+        "payload": {
+          "started_at": 0.0,
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "category": "lifecycle_value_type_or_bound",
+        "disposition": "REFUSE",
+        "field": "started_at"
+      },
+      "id": "started_at_float_positive",
+      "input": {
+        "payload": {
+          "started_at": 1.5,
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "disposition": "PROJECT",
+        "projection": {
+          "fields": {
+            "started_at": null,
+            "type": "task_complete"
+          },
+          "kind": "TASK_LIFECYCLE_METADATA"
+        }
+      },
+      "id": "started_at_null",
+      "input": {
+        "payload": {
+          "started_at": null,
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "disposition": "PROJECT",
+        "projection": {
+          "fields": {
+            "started_at": "2026-10-29T00:00:00Z",
+            "type": "task_complete"
+          },
+          "kind": "TASK_LIFECYCLE_METADATA"
+        }
+      },
+      "id": "started_at_historical_string",
+      "input": {
+        "payload": {
+          "started_at": "2026-10-29T00:00:00Z",
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "disposition": "PROJECT",
+        "projection": {
+          "fields": {
+            "started_at": "1793293474",
+            "type": "task_complete"
+          },
+          "kind": "TASK_LIFECYCLE_METADATA"
+        }
+      },
+      "id": "started_at_numeric_string_stays_string",
+      "input": {
+        "payload": {
+          "started_at": "1793293474",
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "category": "lifecycle_value_type_or_bound",
+        "disposition": "REFUSE",
+        "field": "started_at"
+      },
+      "id": "started_at_empty_string",
+      "input": {
+        "payload": {
+          "started_at": "",
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "disposition": "PROJECT",
+        "projection": {
+          "fields": {
+            "started_at": "tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt",
+            "type": "task_complete"
+          },
+          "kind": "TASK_LIFECYCLE_METADATA"
+        }
+      },
+      "id": "started_at_string_at_limit",
+      "input": {
+        "payload": {
+          "started_at": "tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt",
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "category": "lifecycle_value_type_or_bound",
+        "disposition": "REFUSE",
+        "field": "started_at"
+      },
+      "id": "started_at_overlong_string",
+      "input": {
+        "payload": {
+          "started_at": "ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt",
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "category": "lifecycle_value_type_or_bound",
+        "disposition": "REFUSE",
+        "field": "started_at"
+      },
+      "id": "started_at_list",
+      "input": {
+        "payload": {
+          "started_at": [],
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "category": "lifecycle_value_type_or_bound",
+        "disposition": "REFUSE",
+        "field": "started_at"
+      },
+      "id": "started_at_object",
+      "input": {
+        "payload": {
+          "started_at": {},
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "disposition": "PROJECT",
+        "projection": {
+          "fields": {
+            "completed_at": 0,
+            "type": "task_complete"
+          },
+          "kind": "TASK_LIFECYCLE_METADATA"
+        }
+      },
+      "id": "completed_at_zero",
+      "input": {
+        "payload": {
+          "completed_at": 0,
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "disposition": "PROJECT",
+        "projection": {
+          "fields": {
+            "completed_at": 9223372036854775807,
+            "type": "task_complete"
+          },
+          "kind": "TASK_LIFECYCLE_METADATA"
+        }
+      },
+      "id": "completed_at_max_counter",
+      "input": {
+        "payload": {
+          "completed_at": 9223372036854775807,
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "category": "lifecycle_value_type_or_bound",
+        "disposition": "REFUSE",
+        "field": "completed_at"
+      },
+      "id": "completed_at_over_max_counter",
+      "input": {
+        "payload": {
+          "completed_at": 9223372036854775808,
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "category": "lifecycle_value_type_or_bound",
+        "disposition": "REFUSE",
+        "field": "completed_at"
+      },
+      "id": "completed_at_negative",
+      "input": {
+        "payload": {
+          "completed_at": -1,
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "category": "lifecycle_value_type_or_bound",
+        "disposition": "REFUSE",
+        "field": "completed_at"
+      },
+      "id": "completed_at_true",
+      "input": {
+        "payload": {
+          "completed_at": true,
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "category": "lifecycle_value_type_or_bound",
+        "disposition": "REFUSE",
+        "field": "completed_at"
+      },
+      "id": "completed_at_false",
+      "input": {
+        "payload": {
+          "completed_at": false,
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "category": "lifecycle_value_type_or_bound",
+        "disposition": "REFUSE",
+        "field": "completed_at"
+      },
+      "id": "completed_at_float_zero",
+      "input": {
+        "payload": {
+          "completed_at": 0.0,
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "category": "lifecycle_value_type_or_bound",
+        "disposition": "REFUSE",
+        "field": "completed_at"
+      },
+      "id": "completed_at_float_positive",
+      "input": {
+        "payload": {
+          "completed_at": 1.5,
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "disposition": "PROJECT",
+        "projection": {
+          "fields": {
+            "completed_at": null,
+            "type": "task_complete"
+          },
+          "kind": "TASK_LIFECYCLE_METADATA"
+        }
+      },
+      "id": "completed_at_null",
+      "input": {
+        "payload": {
+          "completed_at": null,
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "disposition": "PROJECT",
+        "projection": {
+          "fields": {
+            "completed_at": "2026-10-29T00:00:00Z",
+            "type": "task_complete"
+          },
+          "kind": "TASK_LIFECYCLE_METADATA"
+        }
+      },
+      "id": "completed_at_historical_string",
+      "input": {
+        "payload": {
+          "completed_at": "2026-10-29T00:00:00Z",
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "disposition": "PROJECT",
+        "projection": {
+          "fields": {
+            "completed_at": "1793293474",
+            "type": "task_complete"
+          },
+          "kind": "TASK_LIFECYCLE_METADATA"
+        }
+      },
+      "id": "completed_at_numeric_string_stays_string",
+      "input": {
+        "payload": {
+          "completed_at": "1793293474",
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "category": "lifecycle_value_type_or_bound",
+        "disposition": "REFUSE",
+        "field": "completed_at"
+      },
+      "id": "completed_at_empty_string",
+      "input": {
+        "payload": {
+          "completed_at": "",
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "disposition": "PROJECT",
+        "projection": {
+          "fields": {
+            "completed_at": "tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt",
+            "type": "task_complete"
+          },
+          "kind": "TASK_LIFECYCLE_METADATA"
+        }
+      },
+      "id": "completed_at_string_at_limit",
+      "input": {
+        "payload": {
+          "completed_at": "tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt",
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "category": "lifecycle_value_type_or_bound",
+        "disposition": "REFUSE",
+        "field": "completed_at"
+      },
+      "id": "completed_at_overlong_string",
+      "input": {
+        "payload": {
+          "completed_at": "ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt",
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "category": "lifecycle_value_type_or_bound",
+        "disposition": "REFUSE",
+        "field": "completed_at"
+      },
+      "id": "completed_at_list",
+      "input": {
+        "payload": {
+          "completed_at": [],
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "category": "lifecycle_value_type_or_bound",
+        "disposition": "REFUSE",
+        "field": "completed_at"
+      },
+      "id": "completed_at_object",
+      "input": {
+        "payload": {
+          "completed_at": {},
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "disposition": "PROJECT",
+        "projection": {
+          "fields": {
+            "type": "task_complete"
+          },
+          "kind": "TASK_LIFECYCLE_METADATA"
+        }
+      },
+      "id": "absent_lifecycle_fields_stay_absent",
+      "input": {
+        "payload": {
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "disposition": "PROJECT",
+        "projection": {
+          "fields": {
+            "completed_at": "2026-10-29T00:00:00Z",
+            "started_at": 0,
+            "type": "task_complete"
+          },
+          "kind": "TASK_LIFECYCLE_METADATA"
+        }
+      },
+      "id": "mixed_integer_and_string_preserved",
+      "input": {
+        "payload": {
+          "completed_at": "2026-10-29T00:00:00Z",
+          "started_at": 0,
+          "type": "task_complete"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "category": "outer_timestamp_type",
+        "disposition": "REFUSE",
+        "field": "timestamp"
+      },
+      "id": "outer_timestamp_integer_still_refused",
+      "input": {
+        "payload": {
+          "started_at": 0,
+          "type": "task_started"
+        },
+        "timestamp": 0,
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "category": "session_timestamp_type",
+        "disposition": "REFUSE",
+        "field": "timestamp"
+      },
+      "id": "session_timestamp_integer_still_refused",
+      "input": {
+        "payload": {
+          "id": "synthetic",
+          "timestamp": 0
+        },
+        "type": "session_meta"
+      }
+    },
+    {
+      "expected": {
+        "disposition": "PROJECT",
+        "projection": {
+          "fields": {
+            "started_at": 0,
+            "type": "task_started"
+          },
+          "kind": "TASK_LIFECYCLE_METADATA"
+        }
+      },
+      "id": "unknown_lifecycle_fields_not_exported",
+      "input": {
+        "payload": {
+          "custom_timestamp": {
+            "arbitrary": "PRIVATE"
+          },
+          "private_context": "SECRET_LIFECYCLE_NOT_EXPORTED",
+          "started_at": 0,
+          "type": "task_started"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "disposition": "IGNORE",
+        "projection": null
+      },
+      "id": "irrelevant_route_not_broadened",
+      "input": {
+        "payload": {
+          "completed_at": -1,
+          "started_at": true,
+          "type": "unrelated"
+        },
+        "type": "event_msg"
+      }
+    },
+    {
+      "expected": {
+        "disposition": "IGNORE",
+        "projection": null
+      },
+      "id": "turn_context_lifecycle_not_exported",
+      "input": {
+        "payload": {
+          "completed_at": 0,
+          "started_at": 0
+        },
+        "type": "turn_context"
+      }
+    }
+  ],
+  "first_failure": "Owner reports both first collector CLIs refused integer started_at under the original frozen string/null policy. Preserve exact first command/stdout/stderr/exit and original sources before compatibility execution. This file does not replace or relabel that failure; raw failure receipts must be bound into owner recovery admission.",
+  "governing_delta": {
+    "failure_disposition": "Named bounded CAPTURE_REFUSED or test-visible projection refusal. Exact reason wording may differ, but must identify offending field/category. Never omit malformed recognized fields to emit success.",
+    "fields": "Only payload.started_at and payload.completed_at expand from historical nonempty string of at most128Unicode code points or null to additionally admit exact Python/JSON int (not bool) in inclusive range0..9223372036854775807.",
+    "preservation": "Return selected integers unchanged with their JSON integer type. Preserve strings/null exactly. Do not coerce numeric strings, floats, Boolean values, absent fields or unknown keys. Invalid recognized value refuses visibly.",
+    "routes": "Only outer event_msg with object payload.type task_started or task_complete; existing metadata routes unchanged.",
+    "unchanged": "Outer timestamp and session timestamp remain historical string/null only. Existing duration_ms and time_to_first_token_ms types/bounds, model/usage/session rules, lineage, byte/line/tool/final limits, source/input mutation checks and first-submission/final separation remain binding.",
+    "units": "UNKNOWN; raw observed lifecycle scalars do not declare units. No timestamp conversion, arithmetic, subtraction, duration recomputation, ordering/consistency validation, timezone inference, billing, work or latency inference."
+  },
+  "historical_bindings": {
+    "capture": {
+      "bytes": 7443,
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/comparison/receiving/capture_trace.py",
+      "sha256": "5ed181397da893717156ef5534a1c5e2569ba1ad97055ec6da577996e4ebbea0"
+    },
+    "session_locators": {
+      "bytes": 1013,
+      "path": "/dev/shm/semantic-transport-receiving-20261029/runs/session-locators.json",
+      "sha256": "921e214576fb87bfed03299f89133389148951b88b3a13c467e747690f20f83d"
+    },
+    "support": {
+      "bytes": 11456,
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/comparison/receiving/trace_support.py",
+      "sha256": "98072fbca48490e256947a8eb70810013207333a9d73071e3f5e07053455deaf"
+    },
+    "terminal_observation": {
+      "bytes": 817,
+      "path": "/dev/shm/semantic-transport-receiving-20261029/runs/terminal-observation.json",
+      "sha256": "ca2c03bb535884186d8801cdaedbce098ec5b40c7a7eeba40cca560e10f45cf4"
+    },
+    "trace_oracle": {
+      "bytes": 44406,
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/comparison/receiving/trace-oracle.json",
+      "sha256": "63e56f759adc3ef76ea6bfa3ced6c048456103d15e180713dde093c782920934"
+    }
+  },
+  "nonclaims": {
+    "actor_retry": "FORBIDDEN",
+    "arithmetic": "NONE",
+    "authority": "NONE",
+    "benefit": "NOT_ESTABLISHED",
+    "first_transport_outcome": "FAILED_RETAINED_NO_REPAIR",
+    "interpretation": "NOT_ASSESSED",
+    "semantic_completeness": "UNPROVEN",
+    "units": "UNKNOWN"
+  },
+  "observed_literal_cases": [
+    {
+      "expected": {
+        "disposition": "PROJECT",
+        "projection": {
+          "fields": {
+            "started_at": 1793293474,
+            "timestamp": "2026-10-29T17:04:34.420Z",
+            "type": "task_started"
+          },
+          "kind": "TASK_LIFECYCLE_METADATA"
+        }
+      },
+      "id": "observed_transport_started",
+      "input": {
+        "payload": {
+          "started_at": 1793293474,
+          "type": "task_started"
+        },
+        "timestamp": "2026-10-29T17:04:34.420Z",
+        "type": "event_msg"
+      },
+      "journal_thread": "01a1889e-d9eb-73f2-b9bf-4dbcb21988f2",
+      "line": 2
+    },
+    {
+      "expected": {
+        "disposition": "PROJECT",
+        "projection": {
+          "fields": {
+            "completed_at": 1793293597,
+            "duration_ms": 122908,
+            "started_at": 1793293474,
+            "time_to_first_token_ms": 3409,
+            "timestamp": "2026-10-29T17:06:37.326Z",
+            "type": "task_complete"
+          },
+          "kind": "TASK_LIFECYCLE_METADATA"
+        }
+      },
+      "id": "observed_transport_complete",
+      "input": {
+        "payload": {
+          "completed_at": 1793293597,
+          "duration_ms": 122908,
+          "started_at": 1793293474,
+          "time_to_first_token_ms": 3409,
+          "type": "task_complete"
+        },
+        "timestamp": "2026-10-29T17:06:37.326Z",
+        "type": "event_msg"
+      },
+      "journal_thread": "01a1889e-d9eb-73f2-b9bf-4dbcb21988f2",
+      "line": 109
+    },
+    {
+      "expected": {
+        "disposition": "PROJECT",
+        "projection": {
+          "fields": {
+            "started_at": 1793293468,
+            "timestamp": "2026-10-29T17:04:28.883Z",
+            "type": "task_started"
+          },
+          "kind": "TASK_LIFECYCLE_METADATA"
+        }
+      },
+      "id": "observed_original_started",
+      "input": {
+        "payload": {
+          "started_at": 1793293468,
+          "type": "task_started"
+        },
+        "timestamp": "2026-10-29T17:04:28.883Z",
+        "type": "event_msg"
+      },
+      "journal_thread": "01a1889e-c3e8-7d93-93d3-43521004798d",
+      "line": 2
+    },
+    {
+      "expected": {
+        "disposition": "PROJECT",
+        "projection": {
+          "fields": {
+            "completed_at": 1793293521,
+            "duration_ms": 52614,
+            "started_at": 1793293468,
+            "time_to_first_token_ms": 5507,
+            "timestamp": "2026-10-29T17:05:21.479Z",
+            "type": "task_complete"
+          },
+          "kind": "TASK_LIFECYCLE_METADATA"
+        }
+      },
+      "id": "observed_original_complete",
+      "input": {
+        "payload": {
+          "completed_at": 1793293521,
+          "duration_ms": 52614,
+          "started_at": 1793293468,
+          "time_to_first_token_ms": 5507,
+          "type": "task_complete"
+        },
+        "timestamp": "2026-10-29T17:05:21.479Z",
+        "type": "event_msg"
+      },
+      "journal_thread": "01a1889e-c3e8-7d93-93d3-43521004798d",
+      "line": 44
+    }
+  ],
+  "observed_sources": [
+    {
+      "bytes": 388947,
+      "path": "/home/sicarii/.codex/sessions/2026/10/29/rollout-2026-10-29T13-04-34-01a1889e-d9eb-73f2-b9bf-4dbcb21988f2.jsonl",
+      "read_scope": "Only event_msg task_started/task_complete whitelist projection; no reasoning or other context exported.",
+      "sha256": "69d97795962482e201618cce05dd2974cdd2c4b1edcd4933a80d0e580535f654",
+      "thread_id": "01a1889e-d9eb-73f2-b9bf-4dbcb21988f2"
+    },
+    {
+      "bytes": 361246,
+      "path": "/home/sicarii/.codex/sessions/2026/10/29/rollout-2026-10-29T13-04-28-01a1889e-c3e8-7d93-93d3-43521004798d.jsonl",
+      "read_scope": "Only event_msg task_started/task_complete whitelist projection; no reasoning or other context exported.",
+      "sha256": "f9167d921169dcbc175de157a70c6dbf14373286af0169cf515fb4a214b94f9e",
+      "thread_id": "01a1889e-c3e8-7d93-93d3-43521004798d"
+    }
+  ],
+  "qualification_requirements": [
+    "Freeze this exact oracle and compatibility code/test/source/runtime pins before executing repair controls.",
+    "Retain old support/capture and original trace oracle unchanged as historical evidence. Create a versioned compatibility source or explicit new pin; do not repin old receipts.",
+    "Run observed literal and boundary expectations in ordinary and optimized Python, retaining first streams/results and named refusals. No expected projection may be computed by the new implementation.",
+    "Run the complete applicable historical metadata/collector/checker suites with all original expectations unchanged, plus compatibility cases. Changed support requires current checker qualification against that new support pin.",
+    "Keep source-lineage/input-mutation, finite limits, missing/invalid candidate evidence and incomplete/multiple/no-final controls binding. Prove no raw reasoning or session/turn-context payload is newly exported; exact tool payload retention remains unchanged.",
+    "Recovery reads the exact pinned terminal journals and first saved submissions only, uses new create-only capture outputs, and retains original failed capture directories/streams. No agent dispatch, answer repair, source revision, restaging of first paths or comparison-outcome relabeling.",
+    "A compatibility control pass establishes only finite tested projection behavior. Actual repaired capture is a separate evidence recovery observation, with hidden access/backend authenticity and semantics unchanged."
+  ],
+  "schema": "transport/trace-lifecycle-integer-literal-oracle/1",
+  "scope": "Collector compatibility and evidence recovery from the SAME two already terminal first-attempt journals only. Not a model retry, new receiver, new source trial, repaired transport outcome or benefit/acceptance campaign.",
+  "status": "FROZEN_LITERAL_EXPECTATIONS_BEFORE_COMPATIBILITY_IMPLEMENTATION"
+}

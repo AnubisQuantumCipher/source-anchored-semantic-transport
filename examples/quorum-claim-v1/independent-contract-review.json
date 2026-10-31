@@ -1,0 +1,45 @@
+{
+  "schema":"quorum/claim-structure-independent-contract-review/1",
+  "reviewer":"/root/quorum_graph_oracle",
+  "classification":"OBSERVED_DOCUMENT_REVIEW_NOT_IMPLEMENTATION_QUALIFICATION",
+  "scope":"Bounded exact Claim/DeclarationSource structure only. No product edits, implementation execution, native builds, model campaign, full replay or acceptance claim.",
+  "reviewed_pins":[
+    {"path":"/dev/shm/semantic-transport-claim-structure-20261029/contract.json","bytes":11328,"sha256":"8a55255115c34b9a96d43a073404193f29701725058a9caeda69c83ed9a93ce0"},
+    {"path":"/dev/shm/semantic-transport-claim-structure-20261029/owner-design-addendum.json","bytes":1430,"sha256":"fcac41fa63e61297e7da01e0d46f3d09a4ac58634691e7e58b0767141ebfd592"},
+    {"path":"/dev/shm/semantic-transport-claim-structure-20261029/contract-draft01.json","bytes":10828,"sha256":"fbfe7c7c41fa03024eb6d17677b1440d8b7df28031f94ce5f33208ea90cfd66b"},
+    {"path":"/dev/shm/semantic-transport-claim-structure-20261029/contract-draft02.json","bytes":11302,"sha256":"97f0131e1a91bd5e0c19092ff2b45d87b26539d5024f234fc7fd0ae357de1a26"},
+    {"path":"/dev/shm/semantic-transport-claim-structure-20261029/correction-01.json","bytes":537,"sha256":"c67c259f417ef5f1b1782265d607cba797a5867291fab3f4d32fa75a39a17cae"}
+  ],
+  "explicit_role_addendum_review":{
+    "disposition":"SOUND_NARROW_SYNTACTIC_BOUNDARY_WITH_UNPROVEN_SEMANTIC_RELEVANCE",
+    "reasoning":[
+      "A SOURCE-target Dependency under any of SOURCE, DEFINITION, EXCEPTION, CONTEXT or TASK_CONDITION can establish only that the Claim declared an exact REF SourceKey edge. It does not establish relevance, sufficiency or applicability.",
+      "The selected primary source still requires a declared owning-Claim SOURCE-role SOURCE-target edge with the complete identical key. The broader REF role allowance does not relax that separate anchoring rule.",
+      "Every successful Claim entry preserves semantic_role_relevance=UNPROVEN; the complete result preserves full_reference_closure=NOT_EVALUATED, semantic_completeness=UNPROVEN, source_authentication=UNVERIFIED, current_authority=NONE and freshness=UNKNOWN.",
+      "The original full-wire relevant-role requirement remains unresolved and binding. This internal structure result must not be used as evidence that the full semantic relevance/reference/applicability gate passed. The addendum changes no full-wire schema/protocol or product policy.",
+      "All dependency records and their original roles remain bound by the exact Body input rather than being relabelled, inferred from guard position or discarded."
+    ],
+    "consequence_ceiling":"Informational exact structure/declared identity links only; no natural-language entailment, Boolean theorem, truth or authority."
+  },
+  "retained_prefreeze_corrections":[
+    {"id":"C01_BATCH_PRECEDENCE","origin":"Independent reviewer clarification","status":"DOCUMENT_CORRECTION_OBSERVED","detail":"Each structural Claim in lexical order validates both complete guards, then that Claim REF closure, before the next Claim. Thus an earlier Claim missing REF edge precedes a later Claim bad root. Source/comparison processing follows only after all Claim guard/REF validation."},
+    {"id":"C02_SHARED_SOURCE_ELIGIBILITY","origin":"Independent reviewer clarification","status":"DOCUMENT_CORRECTION_OBSERVED","detail":"Selected source is parsed once per Claim, with at most sixteen parses, not cached as another Claim's eligibility. Each Claim independently needs its payload/source REF union under its own owning dependencies. Body/source integrity gate is still performed once per invocation."},
+    {"id":"C03_SELECTOR_CARDINALITY","origin":"Sole-owner finding/correction","status":"DOCUMENT_CORRECTION_OBSERVED","detail":"Both zero and multiple structural selectors refuse CLAIM_SELECTOR_CARDINALITY. Earlier zero-selector unresolved-success proposal remains retained in draft02; correction-01 records the change. No first proposal was silently overwritten."}
+  ],
+  "source_and_claim_guard_review":[
+    "Claim Statement shape is inherited from the complete pinned Body gate. Parsed source must independently satisfy the fixed closed DeclarationSource schema; no caller-selected root/schema/reference or decoded object can confer validation.",
+    "Both condition and exception guards require root-last, strictly earlier operand indices and full root reachability, with shape and integer bounds checked first. REF is a leaf, not an evaluated proposition or operand index. No simplification, operand reordering or Boolean evaluation is admitted.",
+    "Each Claim guard/REF check runs before its later unresolved-scope or quote/structure mismatch outcomes. On the comparison lane, parsed source guard and source REF checks run even when the Statements differ. Missing source-only definition links cannot be hidden by emitting DIFFERS first.",
+    "Exact source and Claim REF target sets form a required union per Claim: owning declared SOURCE-target edge first, then already verified exact supplied SourceKey. Missing declaration and missing target remain distinct refusal states.",
+    "Partial/empty source scope resolves insufficient before quote mismatch; full nonempty DIFFERS resolves NOT_CHECKED_MISSING_EVIDENCE. Opaque/insufficient/unmatched-quote lanes do not parse source declarations and therefore make no source guard/REF closure qualification claim.",
+    "Complete source-component integrity and output bounds execute first and remain unchanged through a private owned bundle. New fixed DeclarationSource entrypoint must preserve exact schema bootstrap/inventory/work limits and Body behavior."
+  ],
+  "omission_review":{
+    "disposition":"EXPLICIT_COMPONENT_LIMITS_ONLY_NOT_FULL_REPLAY_WAIVERS",
+    "limits":"Full dependency DAG/unrelated target closure, unused Dependency ownership, Task/Manifest/Reading/runtime pins, global cross-role IDs, actual assessor eligibility, semantic role relevance and external-human validity remain outside this stage.",
+    "required_boundary":"MATCHED_DECLARATION_STRUCTURE_ONLY may describe exact closed statements under this local stage. It cannot be reported as full applicability, complete semantic/reference closure, source authentication, independent assessor agreement or accepted replay. Full_reference_closure remains NOT_EVALUATED in every successful result."
+  },
+  "oracle_status":"COMPLETE_LITERAL_ORACLE_PENDING_SEPARATE_REVIEW; this document alone is not code admission or runtime evidence.",
+  "next_step":"Review and freeze the author's complete component-result oracle, including nontraditional REF role versus primary SOURCE anchoring, source-only missing REF on structure mismatch, source/Claim guard failures, batch precedence and cardinality controls. Only then may owner admit finite component coding under unchanged original caps.",
+  "verdict":"NO_REMAINING_MATERIAL_DOCUMENT_BLOCKER_IDENTIFIED_FOR_EXACT_CURRENT_CONTRACT_ADDENDUM; COMPLETE_ORACLE_AND_IMPLEMENTATION_UNRUN"
+}

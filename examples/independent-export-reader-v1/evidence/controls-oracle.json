@@ -1,0 +1,1301 @@
+{
+  "acceptance_ceiling": "Independent development controls only. Not external-human validation, formal proof, or producer acceptance.",
+  "contract": "contract-audit/contract.md",
+  "failure_contract": {
+    "api": "ExportReadError with nonempty stable .code across identical calls",
+    "cli": "nonzero status; zero stdout bytes; no accepted newly created output; existing bytes untouched"
+  },
+  "fixtures": {
+    "empty": "",
+    "explanation": "Unverified explanation: café, Ω, 日本語.\r\nNo authority.\n",
+    "identity": "STS1:a4c5ea9f7f7615d53e801931c84d992e5e58b214f13991258fde12b9a9507b4b",
+    "multilingual": "English | Ελληνικά | 日本語 | العربية | 🙂\r\n",
+    "opaque_hex": "0001027fff80fe0a0d00",
+    "runtime": "detached documentary paths; no installed decoder needed"
+  },
+  "frozen_before_test_code": true,
+  "kind": "DEVELOPMENT_NOT_HELDOUT",
+  "positive_contract": {
+    "authority": "NONE",
+    "metadata": "original serialized bytes preserved exactly, parsed values remain unverified",
+    "ordered_sources": "OPAQUE, MULTILINGUAL, EMPTY unless boundary case specifies replacement",
+    "selected_status": "EXACT_PINNED_EXPORT_BYTES_RECOVERED",
+    "source_bytes": "independently constructed original bytes compared by equality",
+    "status": "VERIFIED_AGAINST_PINNED_EXPORT"
+  },
+  "rows": [
+    {
+      "detail": "Three sources OPAQUE, MULTILINGUAL, EMPTY preserve order and bytes; metadata v1.",
+      "expected": "ACCEPT",
+      "id": "P01_OPAQUE_UNICODE_EMPTY",
+      "kind": "positive",
+      "mutation": "base"
+    },
+    {
+      "detail": "Metadata v2 opaque nested data retained verbatim and unverified.",
+      "expected": "ACCEPT",
+      "id": "P02_TYPED_METADATA",
+      "kind": "positive",
+      "mutation": "v2"
+    },
+    {
+      "detail": "Empty explanation is valid.",
+      "expected": "ACCEPT",
+      "id": "P03_EMPTY_EXPLANATION",
+      "kind": "positive",
+      "mutation": "empty_explanation"
+    },
+    {
+      "detail": "Whitespace and escaped equivalent keys are valid under independently refreshed pin.",
+      "expected": "ACCEPT",
+      "id": "P04_EQUIVALENT_JSON",
+      "kind": "positive",
+      "mutation": "escaped_json"
+    },
+    {
+      "detail": "Embedded execution and role instructions remain bytes; runtime referenced paths are never accessed.",
+      "expected": "ACCEPT",
+      "id": "P05_INERT_INSTRUCTIONS",
+      "kind": "positive",
+      "mutation": "inert"
+    },
+    {
+      "detail": "Opaque metadata integer with twenty decimal digits is valid.",
+      "expected": "ACCEPT",
+      "id": "P06_INTEGER20",
+      "kind": "positive",
+      "mutation": "integer20"
+    },
+    {
+      "detail": "An empty sole source is valid.",
+      "expected": "ACCEPT",
+      "id": "P07_EMPTY_SOURCE",
+      "kind": "positive",
+      "mutation": "empty_source"
+    },
+    {
+      "detail": "Opaque metadata object with exactly 256 keys is valid.",
+      "expected": "ACCEPT",
+      "id": "P08_FIELD256",
+      "kind": "positive",
+      "mutation": "field256"
+    },
+    {
+      "detail": "Metadata root-inclusive maximum container depth exactly 12 is valid.",
+      "expected": "ACCEPT",
+      "id": "P09_DEPTH12",
+      "kind": "positive",
+      "mutation": "depth12"
+    },
+    {
+      "detail": "Runtime root-inclusive maximum container depth exactly 12 is valid.",
+      "expected": "ACCEPT",
+      "id": "P10_RUNTIME_DEPTH12",
+      "kind": "positive",
+      "mutation": "runtime_depth12"
+    },
+    {
+      "detail": "Opaque metadata integer token -0 is valid and remains raw bytes.",
+      "expected": "ACCEPT",
+      "id": "P11_NEGATIVE_ZERO",
+      "kind": "positive",
+      "mutation": "negative_zero"
+    },
+    {
+      "detail": "Source bytes aggregate exactly 65536; physical package below total cap.",
+      "expected": "ACCEPT",
+      "id": "B01_SOURCE65536",
+      "kind": "positive",
+      "mutation": "source65536"
+    },
+    {
+      "detail": "Valid metadata independently padded until physical member byte sum is exactly 131072.",
+      "expected": "ACCEPT",
+      "id": "B02_TOTAL131072",
+      "kind": "positive",
+      "mutation": "total131072"
+    },
+    {
+      "detail": "Exactly sixteen sources and nineteen regular artifact files.",
+      "expected": "ACCEPT",
+      "id": "B03_SOURCES16",
+      "kind": "positive",
+      "mutation": "sources16"
+    },
+    {
+      "detail": "Exactly 65536 explanation bytes, package below total cap.",
+      "expected": "ACCEPT",
+      "id": "B04_EXPLANATION65536",
+      "kind": "positive",
+      "mutation": "explanation65536"
+    },
+    {
+      "detail": "Source ID with exactly 32 permitted characters.",
+      "expected": "ACCEPT",
+      "id": "B05_ID32",
+      "kind": "positive",
+      "mutation": "id32"
+    },
+    {
+      "detail": "Coherent altered source and all related hashes, old external manifest pin retained.",
+      "expected": "REJECT",
+      "id": "N001_OLD_PIN",
+      "kind": "negative",
+      "mutation": "old_pin"
+    },
+    {
+      "detail": "One source byte altered without adjusting hashes.",
+      "expected": "REJECT",
+      "id": "N002_TAMPERED_SOURCE",
+      "kind": "negative",
+      "mutation": "tampered_source"
+    },
+    {
+      "detail": "Explanation changed without adjusting hashes.",
+      "expected": "REJECT",
+      "id": "N003_TAMPERED_EXPLANATION",
+      "kind": "negative",
+      "mutation": "tampered_explanation"
+    },
+    {
+      "detail": "Metadata changed without adjusting hashes.",
+      "expected": "REJECT",
+      "id": "N004_TAMPERED_METADATA",
+      "kind": "negative",
+      "mutation": "tampered_metadata"
+    },
+    {
+      "detail": "Declared source absent.",
+      "expected": "REJECT",
+      "id": "N005_MISSING_SOURCE",
+      "kind": "negative",
+      "mutation": "missing_source"
+    },
+    {
+      "detail": "Unlisted source file present.",
+      "expected": "REJECT",
+      "id": "N006_EXTRA_SOURCE",
+      "kind": "negative",
+      "mutation": "extra_source"
+    },
+    {
+      "detail": "export.json absent.",
+      "expected": "REJECT",
+      "id": "N007_MISSING_MANIFEST",
+      "kind": "negative",
+      "mutation": "missing_manifest"
+    },
+    {
+      "detail": "Unlisted root file present.",
+      "expected": "REJECT",
+      "id": "N008_EXTRA_ROOT",
+      "kind": "negative",
+      "mutation": "extra_root"
+    },
+    {
+      "detail": "Repeated source ID in manifest sources.",
+      "expected": "REJECT",
+      "id": "N009_DUPLICATE_SOURCE",
+      "kind": "negative",
+      "mutation": "duplicate_source"
+    },
+    {
+      "detail": "Repeated manifest roster path.",
+      "expected": "REJECT",
+      "id": "N010_DUPLICATE_PATH",
+      "kind": "negative",
+      "mutation": "duplicate_path"
+    },
+    {
+      "detail": "Manifest roster order reversed.",
+      "expected": "REJECT",
+      "id": "N011_UNSORTED_ROSTER",
+      "kind": "negative",
+      "mutation": "unsorted_roster"
+    },
+    {
+      "detail": "Explanation source projection reversed.",
+      "expected": "REJECT",
+      "id": "N012_EXPLANATION_ORDER",
+      "kind": "negative",
+      "mutation": "explanation_order"
+    },
+    {
+      "detail": "Metadata sources reversed with coherent roster hash.",
+      "expected": "REJECT",
+      "id": "N013_METADATA_ORDER",
+      "kind": "negative",
+      "mutation": "metadata_order"
+    },
+    {
+      "detail": "Wrong source digest in manifest.",
+      "expected": "REJECT",
+      "id": "N014_SOURCE_HASH",
+      "kind": "negative",
+      "mutation": "source_hash"
+    },
+    {
+      "detail": "Wrong source length in manifest.",
+      "expected": "REJECT",
+      "id": "N015_SOURCE_LENGTH",
+      "kind": "negative",
+      "mutation": "source_length"
+    },
+    {
+      "detail": "Wrong explanation package identity.",
+      "expected": "REJECT",
+      "id": "N016_IDENTITY",
+      "kind": "negative",
+      "mutation": "identity"
+    },
+    {
+      "detail": "Wrong metadata identity with coherent roster hash.",
+      "expected": "REJECT",
+      "id": "N017_METADATA_IDENTITY",
+      "kind": "negative",
+      "mutation": "metadata_identity"
+    },
+    {
+      "detail": "Root package identity malformed.",
+      "expected": "REJECT",
+      "id": "N018_IDENTITY_FORMAT",
+      "kind": "negative",
+      "mutation": "identity_format"
+    },
+    {
+      "detail": "Unknown export schema.",
+      "expected": "REJECT",
+      "id": "N019_EXPORT_SCHEMA",
+      "kind": "negative",
+      "mutation": "export_schema"
+    },
+    {
+      "detail": "Unknown explanation schema.",
+      "expected": "REJECT",
+      "id": "N020_EXPLANATION_SCHEMA",
+      "kind": "negative",
+      "mutation": "explanation_schema"
+    },
+    {
+      "detail": "Unknown export runtime schema.",
+      "expected": "REJECT",
+      "id": "N021_RUNTIME_SCHEMA",
+      "kind": "negative",
+      "mutation": "runtime_schema"
+    },
+    {
+      "detail": "Unknown documentary decoder schema.",
+      "expected": "REJECT",
+      "id": "N022_DECODER_SCHEMA",
+      "kind": "negative",
+      "mutation": "decoder_schema"
+    },
+    {
+      "detail": "Unknown documentary decoder version.",
+      "expected": "REJECT",
+      "id": "N023_DECODER_VERSION",
+      "kind": "negative",
+      "mutation": "decoder_version"
+    },
+    {
+      "detail": "Unknown decoded metadata schema.",
+      "expected": "REJECT",
+      "id": "N024_METADATA_SCHEMA",
+      "kind": "negative",
+      "mutation": "metadata_schema"
+    },
+    {
+      "detail": "Execution authority raised in assurance.",
+      "expected": "REJECT",
+      "id": "N025_AUTHORITY",
+      "kind": "negative",
+      "mutation": "authority"
+    },
+    {
+      "detail": "Execution authority raised in explanation.",
+      "expected": "REJECT",
+      "id": "N026_EXPLANATION_AUTHORITY",
+      "kind": "negative",
+      "mutation": "explanation_authority"
+    },
+    {
+      "detail": "Explanation role changed.",
+      "expected": "REJECT",
+      "id": "N027_ROLE",
+      "kind": "negative",
+      "mutation": "role"
+    },
+    {
+      "detail": "Source path traversal.",
+      "expected": "REJECT",
+      "id": "N028_TRAVERSAL",
+      "kind": "negative",
+      "mutation": "traversal"
+    },
+    {
+      "detail": "Source path backslash alias.",
+      "expected": "REJECT",
+      "id": "N029_BACKSLASH",
+      "kind": "negative",
+      "mutation": "backslash"
+    },
+    {
+      "detail": "Source absolute path.",
+      "expected": "REJECT",
+      "id": "N030_ABSOLUTE_PATH",
+      "kind": "negative",
+      "mutation": "absolute_path"
+    },
+    {
+      "detail": "export.json appears in its own roster.",
+      "expected": "REJECT",
+      "id": "N031_SELF_ROSTER",
+      "kind": "negative",
+      "mutation": "self_roster"
+    },
+    {
+      "detail": "Two individually bounded sources total 65537 bytes.",
+      "expected": "REJECT",
+      "id": "N032_SOURCE_AGGREGATE_OVER",
+      "kind": "negative",
+      "mutation": "source_aggregate_over"
+    },
+    {
+      "detail": "One source has 65537 bytes.",
+      "expected": "REJECT",
+      "id": "N033_SOURCE_INDIVIDUAL_OVER",
+      "kind": "negative",
+      "mutation": "source_individual_over"
+    },
+    {
+      "detail": "Physical member byte sum exactly 131073.",
+      "expected": "REJECT",
+      "id": "N034_TOTAL_OVER",
+      "kind": "negative",
+      "mutation": "total_over"
+    },
+    {
+      "detail": "Explanation contains 65537 bytes.",
+      "expected": "REJECT",
+      "id": "N035_EXPLANATION_OVER",
+      "kind": "negative",
+      "mutation": "explanation_over"
+    },
+    {
+      "detail": "Seventeen sources.",
+      "expected": "REJECT",
+      "id": "N036_SOURCES17",
+      "kind": "negative",
+      "mutation": "sources17"
+    },
+    {
+      "detail": "Source ID has 33 characters.",
+      "expected": "REJECT",
+      "id": "N037_ID33",
+      "kind": "negative",
+      "mutation": "id33"
+    },
+    {
+      "detail": "Source ID contains lowercase characters.",
+      "expected": "REJECT",
+      "id": "N038_ID_LOWER",
+      "kind": "negative",
+      "mutation": "id_lower"
+    },
+    {
+      "detail": "Export root is a symlink.",
+      "expected": "REJECT",
+      "id": "N039_ROOT_SYMLINK",
+      "kind": "negative",
+      "mutation": "root_symlink"
+    },
+    {
+      "detail": "Input ancestor is a symlink.",
+      "expected": "REJECT",
+      "id": "N040_ANCESTOR_SYMLINK",
+      "kind": "negative",
+      "mutation": "ancestor_symlink"
+    },
+    {
+      "detail": "A source leaf is a symlink.",
+      "expected": "REJECT",
+      "id": "N041_SOURCE_SYMLINK",
+      "kind": "negative",
+      "mutation": "source_symlink"
+    },
+    {
+      "detail": "Metadata leaf is a symlink.",
+      "expected": "REJECT",
+      "id": "N042_METADATA_SYMLINK",
+      "kind": "negative",
+      "mutation": "metadata_symlink"
+    },
+    {
+      "detail": "Manifest leaf is a symlink.",
+      "expected": "REJECT",
+      "id": "N043_MANIFEST_SYMLINK",
+      "kind": "negative",
+      "mutation": "manifest_symlink"
+    },
+    {
+      "detail": "sources directory is a symlink.",
+      "expected": "REJECT",
+      "id": "N044_SOURCES_SYMLINK",
+      "kind": "negative",
+      "mutation": "sources_symlink"
+    },
+    {
+      "detail": "Source inode has a second hardlink.",
+      "expected": "REJECT",
+      "id": "N045_HARDLINK",
+      "kind": "negative",
+      "mutation": "hardlink"
+    },
+    {
+      "detail": "Manifest inode has a second hardlink.",
+      "expected": "REJECT",
+      "id": "N046_MANIFEST_HARDLINK",
+      "kind": "negative",
+      "mutation": "manifest_hardlink"
+    },
+    {
+      "detail": "Declared source is replaced by FIFO.",
+      "expected": "REJECT",
+      "id": "N047_FIFO",
+      "kind": "negative",
+      "mutation": "fifo"
+    },
+    {
+      "detail": "Nested directory appears inside sources.",
+      "expected": "REJECT",
+      "id": "N048_NESTED_DIRECTORY",
+      "kind": "negative",
+      "mutation": "nested_directory"
+    },
+    {
+      "detail": "Unlisted root directory appears.",
+      "expected": "REJECT",
+      "id": "N049_EXTRA_DIRECTORY",
+      "kind": "negative",
+      "mutation": "extra_directory"
+    },
+    {
+      "detail": "Empty metadata bytes with coherent roster.",
+      "expected": "REJECT",
+      "id": "N050_METADATA_EMPTY",
+      "kind": "negative",
+      "mutation": "metadata_empty"
+    },
+    {
+      "detail": "Empty export.json with its matching external pin.",
+      "expected": "REJECT",
+      "id": "N051_MANIFEST_EMPTY",
+      "kind": "negative",
+      "mutation": "manifest_empty"
+    },
+    {
+      "detail": "Boolean replaces source byte count.",
+      "expected": "REJECT",
+      "id": "N052_BOOL_LENGTH",
+      "kind": "negative",
+      "mutation": "bool_length"
+    },
+    {
+      "detail": "Negative source byte count.",
+      "expected": "REJECT",
+      "id": "N053_NEGATIVE_LENGTH",
+      "kind": "negative",
+      "mutation": "negative_length"
+    },
+    {
+      "detail": "Raw envelope declared byte count is zero.",
+      "expected": "REJECT",
+      "id": "N054_ENVELOPE_ZERO",
+      "kind": "negative",
+      "mutation": "envelope_zero"
+    },
+    {
+      "detail": "Uppercase digest is rejected.",
+      "expected": "REJECT",
+      "id": "N055_UPPERCASE_HASH",
+      "kind": "negative",
+      "mutation": "uppercase_hash"
+    },
+    {
+      "detail": "Declared absent input exceeds 131072 bytes.",
+      "expected": "REJECT",
+      "id": "N056_INPUT_OVER",
+      "kind": "negative",
+      "mutation": "input_over"
+    },
+    {
+      "detail": "Documentary renderer path is wrong.",
+      "expected": "REJECT",
+      "id": "N057_RENDERER_PATH",
+      "kind": "negative",
+      "mutation": "renderer_path"
+    },
+    {
+      "detail": "Documentary base manifest path is wrong.",
+      "expected": "REJECT",
+      "id": "N058_BASE_MANIFEST_PATH",
+      "kind": "negative",
+      "mutation": "base_manifest_path"
+    },
+    {
+      "detail": "Metadata artifact name is wrong.",
+      "expected": "REJECT",
+      "id": "N059_METADATA_PATH",
+      "kind": "negative",
+      "mutation": "metadata_path"
+    },
+    {
+      "detail": "Unknown manifest root key.",
+      "expected": "REJECT",
+      "id": "N060_UNKNOWN_ROOT",
+      "kind": "negative",
+      "mutation": "unknown_root"
+    },
+    {
+      "detail": "Unknown manifest source-record key.",
+      "expected": "REJECT",
+      "id": "N061_UNKNOWN_SOURCE",
+      "kind": "negative",
+      "mutation": "unknown_source"
+    },
+    {
+      "detail": "Unknown metadata top-level key.",
+      "expected": "REJECT",
+      "id": "N062_UNKNOWN_METADATA",
+      "kind": "negative",
+      "mutation": "unknown_metadata"
+    },
+    {
+      "detail": "Empty metadata media_type.",
+      "expected": "REJECT",
+      "id": "N063_MEDIA_TYPE_EMPTY",
+      "kind": "negative",
+      "mutation": "media_type_empty"
+    },
+    {
+      "detail": "Metadata interpretations is object instead of list.",
+      "expected": "REJECT",
+      "id": "N064_INTERPRETATIONS_OBJECT",
+      "kind": "negative",
+      "mutation": "interpretations_object"
+    },
+    {
+      "detail": "Metadata coverage is list instead of object.",
+      "expected": "REJECT",
+      "id": "N065_COVERAGE_LIST",
+      "kind": "negative",
+      "mutation": "coverage_list"
+    },
+    {
+      "detail": "Metadata v2 meaning_units is object instead of list.",
+      "expected": "REJECT",
+      "id": "N066_MEANING_UNITS_OBJECT",
+      "kind": "negative",
+      "mutation": "meaning_units_object"
+    },
+    {
+      "detail": "Metadata v1 improperly adds meaning_units.",
+      "expected": "REJECT",
+      "id": "N067_V1_MEANING_UNITS",
+      "kind": "negative",
+      "mutation": "v1_meaning_units"
+    },
+    {
+      "detail": "Opaque metadata object has 257 fields.",
+      "expected": "REJECT",
+      "id": "N068_FIELD257",
+      "kind": "negative",
+      "mutation": "field257"
+    },
+    {
+      "detail": "Metadata container depth 13.",
+      "expected": "REJECT",
+      "id": "N069_DEPTH13",
+      "kind": "negative",
+      "mutation": "depth13"
+    },
+    {
+      "detail": "Documentary runtime container depth 13.",
+      "expected": "REJECT",
+      "id": "N070_RUNTIME_DEPTH13",
+      "kind": "negative",
+      "mutation": "runtime_depth13"
+    },
+    {
+      "detail": "Duplicate literal object key.",
+      "expected": "REJECT",
+      "id": "J_MANIFEST_DUPLICATE_KEY",
+      "kind": "negative",
+      "mutation": "json_syntax",
+      "syntax": "duplicate_key",
+      "target": "manifest"
+    },
+    {
+      "detail": "Escape-equivalent duplicate object key.",
+      "expected": "REJECT",
+      "id": "J_MANIFEST_ESCAPED_DUPLICATE",
+      "kind": "negative",
+      "mutation": "json_syntax",
+      "syntax": "escaped_duplicate",
+      "target": "manifest"
+    },
+    {
+      "detail": "Truncated JSON object.",
+      "expected": "REJECT",
+      "id": "J_MANIFEST_TRUNCATED",
+      "kind": "negative",
+      "mutation": "json_syntax",
+      "syntax": "truncated",
+      "target": "manifest"
+    },
+    {
+      "detail": "Invalid UTF-8 byte.",
+      "expected": "REJECT",
+      "id": "J_MANIFEST_UTF8",
+      "kind": "negative",
+      "mutation": "json_syntax",
+      "syntax": "utf8",
+      "target": "manifest"
+    },
+    {
+      "detail": "UTF-8 BOM.",
+      "expected": "REJECT",
+      "id": "J_MANIFEST_BOM",
+      "kind": "negative",
+      "mutation": "json_syntax",
+      "syntax": "bom",
+      "target": "manifest"
+    },
+    {
+      "detail": "Unpaired surrogate string value.",
+      "expected": "REJECT",
+      "id": "J_MANIFEST_SURROGATE",
+      "kind": "negative",
+      "mutation": "json_syntax",
+      "syntax": "surrogate",
+      "target": "manifest"
+    },
+    {
+      "detail": "Unpaired surrogate object key.",
+      "expected": "REJECT",
+      "id": "J_MANIFEST_SURROGATE_KEY",
+      "kind": "negative",
+      "mutation": "json_syntax",
+      "syntax": "surrogate_key",
+      "target": "manifest"
+    },
+    {
+      "detail": "Floating point literal 1.25.",
+      "expected": "REJECT",
+      "id": "J_MANIFEST_FLOAT",
+      "kind": "negative",
+      "mutation": "json_syntax",
+      "syntax": "float",
+      "target": "manifest"
+    },
+    {
+      "detail": "Exponent literal 1e1.",
+      "expected": "REJECT",
+      "id": "J_MANIFEST_EXPONENT",
+      "kind": "negative",
+      "mutation": "json_syntax",
+      "syntax": "exponent",
+      "target": "manifest"
+    },
+    {
+      "detail": "NaN literal.",
+      "expected": "REJECT",
+      "id": "J_MANIFEST_NAN",
+      "kind": "negative",
+      "mutation": "json_syntax",
+      "syntax": "nan",
+      "target": "manifest"
+    },
+    {
+      "detail": "Infinity literal.",
+      "expected": "REJECT",
+      "id": "J_MANIFEST_INFINITY",
+      "kind": "negative",
+      "mutation": "json_syntax",
+      "syntax": "infinity",
+      "target": "manifest"
+    },
+    {
+      "detail": "Twenty-one decimal digit integer token.",
+      "expected": "REJECT",
+      "id": "J_MANIFEST_INTEGER21",
+      "kind": "negative",
+      "mutation": "json_syntax",
+      "syntax": "integer21",
+      "target": "manifest"
+    },
+    {
+      "detail": "Duplicate literal object key.",
+      "expected": "REJECT",
+      "id": "J_METADATA_DUPLICATE_KEY",
+      "kind": "negative",
+      "mutation": "json_syntax",
+      "syntax": "duplicate_key",
+      "target": "metadata"
+    },
+    {
+      "detail": "Escape-equivalent duplicate object key.",
+      "expected": "REJECT",
+      "id": "J_METADATA_ESCAPED_DUPLICATE",
+      "kind": "negative",
+      "mutation": "json_syntax",
+      "syntax": "escaped_duplicate",
+      "target": "metadata"
+    },
+    {
+      "detail": "Truncated JSON object.",
+      "expected": "REJECT",
+      "id": "J_METADATA_TRUNCATED",
+      "kind": "negative",
+      "mutation": "json_syntax",
+      "syntax": "truncated",
+      "target": "metadata"
+    },
+    {
+      "detail": "Invalid UTF-8 byte.",
+      "expected": "REJECT",
+      "id": "J_METADATA_UTF8",
+      "kind": "negative",
+      "mutation": "json_syntax",
+      "syntax": "utf8",
+      "target": "metadata"
+    },
+    {
+      "detail": "UTF-8 BOM.",
+      "expected": "REJECT",
+      "id": "J_METADATA_BOM",
+      "kind": "negative",
+      "mutation": "json_syntax",
+      "syntax": "bom",
+      "target": "metadata"
+    },
+    {
+      "detail": "Unpaired surrogate string value.",
+      "expected": "REJECT",
+      "id": "J_METADATA_SURROGATE",
+      "kind": "negative",
+      "mutation": "json_syntax",
+      "syntax": "surrogate",
+      "target": "metadata"
+    },
+    {
+      "detail": "Unpaired surrogate object key.",
+      "expected": "REJECT",
+      "id": "J_METADATA_SURROGATE_KEY",
+      "kind": "negative",
+      "mutation": "json_syntax",
+      "syntax": "surrogate_key",
+      "target": "metadata"
+    },
+    {
+      "detail": "Floating point literal 1.25.",
+      "expected": "REJECT",
+      "id": "J_METADATA_FLOAT",
+      "kind": "negative",
+      "mutation": "json_syntax",
+      "syntax": "float",
+      "target": "metadata"
+    },
+    {
+      "detail": "Exponent literal 1e1.",
+      "expected": "REJECT",
+      "id": "J_METADATA_EXPONENT",
+      "kind": "negative",
+      "mutation": "json_syntax",
+      "syntax": "exponent",
+      "target": "metadata"
+    },
+    {
+      "detail": "NaN literal.",
+      "expected": "REJECT",
+      "id": "J_METADATA_NAN",
+      "kind": "negative",
+      "mutation": "json_syntax",
+      "syntax": "nan",
+      "target": "metadata"
+    },
+    {
+      "detail": "Infinity literal.",
+      "expected": "REJECT",
+      "id": "J_METADATA_INFINITY",
+      "kind": "negative",
+      "mutation": "json_syntax",
+      "syntax": "infinity",
+      "target": "metadata"
+    },
+    {
+      "detail": "Twenty-one decimal digit integer token.",
+      "expected": "REJECT",
+      "id": "J_METADATA_INTEGER21",
+      "kind": "negative",
+      "mutation": "json_syntax",
+      "syntax": "integer21",
+      "target": "metadata"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_MANIFEST_SCHEMA",
+      "key": "schema",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "manifest"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_MANIFEST_PACKAGE_IDENTITY",
+      "key": "package_identity",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "manifest"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_MANIFEST_SOURCES",
+      "key": "sources",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "manifest"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_MANIFEST_EXPLANATION",
+      "key": "explanation",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "manifest"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_MANIFEST_INPUTS",
+      "key": "inputs",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "manifest"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_MANIFEST_METADATA_ARTIFACT",
+      "key": "metadata_artifact",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "manifest"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_MANIFEST_RUNTIME",
+      "key": "runtime",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "manifest"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_MANIFEST_FILES",
+      "key": "files",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "manifest"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_MANIFEST_ASSURANCE",
+      "key": "assurance",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "manifest"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_METADATA_SCHEMA",
+      "key": "schema",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "metadata"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_METADATA_IDENTITY",
+      "key": "identity",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "metadata"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_METADATA_SOURCES",
+      "key": "sources",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "metadata"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_METADATA_INTERPRETATIONS",
+      "key": "interpretations",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "metadata"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_METADATA_UNCERTAINTIES",
+      "key": "uncertainties",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "metadata"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_METADATA_RELATIONS",
+      "key": "relations",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "metadata"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_METADATA_COVERAGE",
+      "key": "coverage",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "metadata"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_METADATA_ASSURANCE",
+      "key": "assurance",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "metadata"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_METADATA_V2_SCHEMA",
+      "key": "schema",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "metadata_v2"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_METADATA_V2_IDENTITY",
+      "key": "identity",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "metadata_v2"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_METADATA_V2_SOURCES",
+      "key": "sources",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "metadata_v2"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_METADATA_V2_INTERPRETATIONS",
+      "key": "interpretations",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "metadata_v2"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_METADATA_V2_UNCERTAINTIES",
+      "key": "uncertainties",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "metadata_v2"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_METADATA_V2_RELATIONS",
+      "key": "relations",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "metadata_v2"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_METADATA_V2_COVERAGE",
+      "key": "coverage",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "metadata_v2"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_METADATA_V2_ASSURANCE",
+      "key": "assurance",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "metadata_v2"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_METADATA_V2_MEANING_UNITS",
+      "key": "meaning_units",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "metadata_v2"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_RUNTIME_SCHEMA",
+      "key": "schema",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "runtime"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_RUNTIME_RENDERER",
+      "key": "renderer",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "runtime"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_RUNTIME_BASE_MANIFEST",
+      "key": "base_manifest",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "runtime"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_RUNTIME_BASE_DECODER",
+      "key": "base_decoder",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "runtime"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_RUNTIME_BOUNDARY",
+      "key": "boundary",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "runtime"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_EXPLANATION_SCHEMA",
+      "key": "schema",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "explanation"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_EXPLANATION_PACKAGE_IDENTITY",
+      "key": "package_identity",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "explanation"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_EXPLANATION_SOURCES",
+      "key": "sources",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "explanation"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_EXPLANATION_TEXT_ARTIFACT",
+      "key": "text_artifact",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "explanation"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_EXPLANATION_INPUT_ENVELOPE_BYTES",
+      "key": "input_envelope_bytes",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "explanation"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_EXPLANATION_INPUT_ENVELOPE_SHA256",
+      "key": "input_envelope_sha256",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "explanation"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_EXPLANATION_ROLE",
+      "key": "role",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "explanation"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_EXPLANATION_EXECUTION_AUTHORITY",
+      "key": "execution_authority",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "explanation"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_EXPLANATION_FACTUAL_CERTIFICATION",
+      "key": "factual_certification",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "explanation"
+    },
+    {
+      "detail": "Required key absent.",
+      "expected": "REJECT",
+      "id": "M_EXPLANATION_LOGICAL_ENVELOPE_RECONSTRUCTION",
+      "key": "logical_envelope_reconstruction",
+      "kind": "negative",
+      "mutation": "missing_key",
+      "target": "explanation"
+    },
+    {
+      "detail": "Create-only selected source output refuses existing file and preserves original bytes.",
+      "expected": "REJECT",
+      "id": "C01_EXISTING_OUTPUT",
+      "kind": "cli_negative",
+      "mutation": "existing_output"
+    },
+    {
+      "detail": "Selected output parent chain contains symlink; no output created.",
+      "expected": "REJECT",
+      "id": "C02_OUTPUT_ANCESTOR_SYMLINK",
+      "kind": "cli_negative",
+      "mutation": "output_ancestor_symlink"
+    },
+    {
+      "detail": "Unknown selected source ID refuses without output.",
+      "expected": "REJECT",
+      "id": "C03_UNKNOWN_SOURCE",
+      "kind": "cli_negative",
+      "mutation": "unknown_source"
+    },
+    {
+      "detail": "Output leaf is symlink; referent preserved.",
+      "expected": "REJECT",
+      "id": "C04_OUTPUT_LEAF_SYMLINK",
+      "kind": "cli_negative",
+      "mutation": "output_leaf_symlink"
+    },
+    {
+      "detail": "Output leaf FIFO rejected without blocking.",
+      "expected": "REJECT",
+      "id": "C05_OUTPUT_FIFO",
+      "kind": "cli_negative",
+      "mutation": "output_fifo"
+    },
+    {
+      "detail": "No expected pin supplied.",
+      "expected": "REJECT",
+      "id": "C06_MISSING_PIN",
+      "kind": "cli_negative",
+      "mutation": "missing_pin"
+    },
+    {
+      "detail": "Uppercase expected pin rejected.",
+      "expected": "REJECT",
+      "id": "C07_UPPERCASE_PIN",
+      "kind": "cli_negative",
+      "mutation": "uppercase_pin"
+    },
+    {
+      "detail": "Malformed expected pin rejected.",
+      "expected": "REJECT",
+      "id": "C08_SHORT_PIN",
+      "kind": "cli_negative",
+      "mutation": "short_pin"
+    },
+    {
+      "detail": "Missing output parent not created.",
+      "expected": "REJECT",
+      "id": "C09_UNREQUESTED_DIRECTORY",
+      "kind": "cli_negative",
+      "mutation": "missing_parent"
+    },
+    {
+      "detail": "Metadata output existing file preserved.",
+      "expected": "REJECT",
+      "id": "C10_METADATA_EXISTING_OUTPUT",
+      "kind": "cli_negative",
+      "mutation": "metadata_existing"
+    },
+    {
+      "detail": "Explanation output existing file preserved.",
+      "expected": "REJECT",
+      "id": "C11_TEXT_EXISTING_OUTPUT",
+      "kind": "cli_negative",
+      "mutation": "text_existing"
+    },
+    {
+      "detail": "Reader AST imports only standard library and no subprocess/network/FFI/producer modules; documentary evidence only.",
+      "expected": "ACCEPT",
+      "id": "S01_STATIC_IMPORT_BOUNDARY",
+      "kind": "static",
+      "mutation": "static_imports"
+    }
+  ],
+  "schema": "transport/independent-reader-controls-oracle/1",
+  "upstream_oracle": "oracle.json"
+}

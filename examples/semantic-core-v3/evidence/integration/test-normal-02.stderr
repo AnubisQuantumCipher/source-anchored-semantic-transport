@@ -1,0 +1,16 @@
+test_01_encode_and_fresh_recipient_recover_exact_source_model_and_verdict (test_transport_core_bridge.CoreBridgeTests.test_01_encode_and_fresh_recipient_recover_exact_source_model_and_verdict) ... ok
+test_02_model_changes_preserve_unknown_and_conditional_satisfaction (test_transport_core_bridge.CoreBridgeTests.test_02_model_changes_preserve_unknown_and_conditional_satisfaction) ... ok
+test_03_missing_model_is_not_evaluated (test_transport_core_bridge.CoreBridgeTests.test_03_missing_model_is_not_evaluated) ... ok
+test_04_cli_draft_matches_literal_requirement_scope (test_transport_core_bridge.CoreBridgeTests.test_04_cli_draft_matches_literal_requirement_scope) ... ok
+test_05_envelope_model_source_operator_and_version_tampering_refused (test_transport_core_bridge.CoreBridgeTests.test_05_envelope_model_source_operator_and_version_tampering_refused) ... ok
+test_06_present_malformed_model_is_never_treated_as_absent (test_transport_core_bridge.CoreBridgeTests.test_06_present_malformed_model_is_never_treated_as_absent) ... ok
+test_07_authored_tree_and_role_binding_mismatches_refused (test_transport_core_bridge.CoreBridgeTests.test_07_authored_tree_and_role_binding_mismatches_refused) ... ok
+test_08_clock_source_requires_explicit_documentary_translation_status (test_transport_core_bridge.CoreBridgeTests.test_08_clock_source_requires_explicit_documentary_translation_status) ... ok
+test_09_swapped_archive_and_truncated_archive_refuse_before_evaluation (test_transport_core_bridge.CoreBridgeTests.test_09_swapped_archive_and_truncated_archive_refuse_before_evaluation) ... ok
+test_10_missing_and_conflicting_tuples_stay_unresolved (test_transport_core_bridge.CoreBridgeTests.test_10_missing_and_conflicting_tuples_stay_unresolved) ... ok
+test_11_dependency_pin_and_private_parent_errors_refuse (test_transport_core_bridge.CoreBridgeTests.test_11_dependency_pin_and_private_parent_errors_refuse) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 7.056s
+
+OK

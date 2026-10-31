@@ -1,0 +1,46 @@
+{
+  "cause": "Five retained create-only-output sentinel files use .json filenames but contain exact b-preserve data. Process classification attempted JSON parsing outside record namespaces. These are valid retained negative-test inputs, not malformed processrecords.",
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "comparison/workflow/prepare_receipt.py"
+      ],
+      "exit_code": 1,
+      "stderr": "REFUSED: Expecting value: line 1 column 1 (char 0)\n",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "comparison/workflow/prepare_receipt.py",
+        "--check"
+      ],
+      "exit_code": 1,
+      "stderr": "REFUSED: Expecting value: line 1 column 1 (char 0)\n",
+      "stdout": ""
+    }
+  ],
+  "corrective_scope": "Identify process records by declared capture/top-level campaign namespaces before JSON classification, never by presence of sibling stdout. Require native schedule records/streams explicitly. Source codec/core/nativeproduct unchanged.",
+  "raw_artifacts": {
+    "observations.zip": {
+      "bytes": 1492780,
+      "sha256": "df165c9a93d407eb6885b11367dcf50de79513b4bf5332707682d49598d42fa5"
+    },
+    "origins.json": {
+      "bytes": 400559,
+      "sha256": "cb0cf1c8bab207193c0dd834408810f2ce5351b155a330227aa4bf2b0e46057c"
+    }
+  },
+  "reader_sha256": "e055c46cf3c01aa2805bddded836ab0c878d07c1d9839534d095fef6718deb85",
+  "schema": "transport/retained-first-artifact-failure/1",
+  "status": "FAILED_BEFORE_RECEIPT_CREATED"
+}

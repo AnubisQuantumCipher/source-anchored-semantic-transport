@@ -1,0 +1,55 @@
+[
+  {
+    "name": "replay-normal",
+    "argv": [
+      "python3",
+      "-I",
+      "-S",
+      "-B",
+      "-Werror",
+      "install/test_quorum_replay.py"
+    ],
+    "exit_code": 0,
+    "elapsed_ns": 327484242
+  },
+  {
+    "name": "replay-optimized",
+    "argv": [
+      "python3",
+      "-I",
+      "-S",
+      "-B",
+      "-O",
+      "-Werror",
+      "install/test_quorum_replay.py"
+    ],
+    "exit_code": 0,
+    "elapsed_ns": 315600086
+  },
+  {
+    "name": "old-replay-receipt",
+    "argv": [
+      "python3",
+      "-I",
+      "-S",
+      "-B",
+      "examples/quorum-replay-v1/prepare_receipt.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "elapsed_ns": 122734304
+  },
+  {
+    "name": "source-check",
+    "argv": [
+      "python3",
+      "-I",
+      "-S",
+      "-B",
+      "-Werror",
+      "install/check_source.py"
+    ],
+    "exit_code": 0,
+    "elapsed_ns": 593760106
+  }
+]

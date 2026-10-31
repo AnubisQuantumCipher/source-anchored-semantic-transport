@@ -1,0 +1,20 @@
+test_actor_event_action_exception_mutations_do_not_match_old_bindings (test_transport_core_language.CoreLanguageTests.test_actor_event_action_exception_mutations_do_not_match_old_bindings) ... ok
+test_clock_quantities_and_old_controller_stay_outside (test_transport_core_language.CoreLanguageTests.test_clock_quantities_and_old_controller_stay_outside) ... ok
+test_declared_reserved_markers_are_case_insensitively_rejected (test_transport_core_language.CoreLanguageTests.test_declared_reserved_markers_are_case_insensitively_rejected) ... ok
+test_document_padding_and_truncation_never_parse_a_prefix (test_transport_core_language.CoreLanguageTests.test_document_padding_and_truncation_never_parse_a_prefix) ... ok
+test_exact_translation_checks_tree_and_source_bindings (test_transport_core_language.CoreLanguageTests.test_exact_translation_checks_tree_and_source_bindings) ... ok
+test_literal_complete_source_tree_and_byte_bindings (test_transport_core_language.CoreLanguageTests.test_literal_complete_source_tree_and_byte_bindings) ... ok
+test_multiword_labels_remain_opaque_and_anchored (test_transport_core_language.CoreLanguageTests.test_multiword_labels_remain_opaque_and_anchored) ... ok
+test_no_exception_has_literal_conditional_norm_scope (test_transport_core_language.CoreLanguageTests.test_no_exception_has_literal_conditional_norm_scope) ... ok
+test_one_optional_newline_and_exact_source_hash (test_transport_core_language.CoreLanguageTests.test_one_optional_newline_and_exact_source_hash) ... ok
+test_outside_source_has_no_checked_translation_despite_valid_authored_tree (test_transport_core_language.CoreLanguageTests.test_outside_source_has_no_checked_translation_despite_valid_authored_tree) ... ok
+test_removed_exception_or_event_never_silently_matches (test_transport_core_language.CoreLanguageTests.test_removed_exception_or_event_never_silently_matches) ... ok
+test_scope_operand_and_type_mutations_are_refused (test_transport_core_language.CoreLanguageTests.test_scope_operand_and_type_mutations_are_refused) ... ok
+test_type_and_resource_limits_fail_closed (test_transport_core_language.CoreLanguageTests.test_type_and_resource_limits_fail_closed) ... ok
+test_unicode_controls_numbers_and_noncanonical_labels_stay_outside (test_transport_core_language.CoreLanguageTests.test_unicode_controls_numbers_and_noncanonical_labels_stay_outside) ... ok
+test_untrusted_authored_objects_are_bounded_before_serialization (test_transport_core_language.CoreLanguageTests.test_untrusted_authored_objects_are_bounded_before_serialization) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.007s
+
+OK

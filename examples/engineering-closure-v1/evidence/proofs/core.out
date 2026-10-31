@@ -1,0 +1,118 @@
+=========================
+Summary of SPARK analysis
+=========================
+
+------------------------------------------------------------------------------------------------------------------------
+SPARK Analysis results        Total         Flow                                          Provers   Justified   Unproved
+------------------------------------------------------------------------------------------------------------------------
+Data Dependencies                63           63                                                .           .          .
+Flow Dependencies                 .            .                                                .           .          .
+Initialization                   57           57                                                .           .          .
+Non-Aliasing                      .            .                                                .           .          .
+Run-time Checks                 413            .                            413 (CVC5 99%, Z3 1%)           .          .
+Assertions                       71            .    71 (CVC5 83%, Trivial 2%, Z3 12%, altergo 2%)           .          .
+Functional Contracts            146            .    146 (CVC5 97%, Trivial 2%, Z3 1%, altergo 0%)           .          .
+LSP Verification                  .            .                                                .           .          .
+Termination                      63           63                                                .           .          .
+Concurrency                       .            .                                                .           .          .
+------------------------------------------------------------------------------------------------------------------------
+Total                           813    183 (23%)                                        630 (77%)           .          .
+
+
+max steps used for successful proof: 16948
+
+============================
+Most difficult proved checks
+============================
+
+transport_temporal_parse.ads:10:14: postcondition proved in max 1 seconds
+transport_temporal_format.adb:154:13: assertion proved in max 1 seconds
+
+========================
+Detailed analysis report
+========================
+
+Analyzed 11 units
+in unit transport_buffers, 4 subprograms and packages out of 4 analyzed
+  Transport_Buffers at transport_buffers.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Transport_Buffers.Append at transport_buffers.ads:16 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (18 checks)
+  Transport_Buffers.Equal at transport_buffers.ads:30 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (7 checks)
+  Transport_Buffers.Read_Token at transport_buffers.ads:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (13 checks)
+in unit transport_decoder, 6 subprograms and packages out of 6 analyzed
+  Transport_Decoder at transport_decoder.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Transport_Decoder.Check at transport_decoder.ads:11 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (3 checks)
+  Transport_Decoder.Decode at transport_decoder.ads:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Transport_Decoder.Expand at transport_decoder.adb:75 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (4 checks)
+  Transport_Decoder.Step at transport_decoder.adb:43 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (5 checks)
+  Transport_Decoder.Symbol_Op at transport_decoder.adb:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (6 checks)
+in unit transport_graph_parse, 7 subprograms and packages out of 7 analyzed
+  Transport_Graph_Parse at transport_graph_parse.ads:5 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Transport_Graph_Parse.Header at transport_graph_parse.adb:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Transport_Graph_Parse.Read_Graph at transport_graph_parse.ads:6 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (8 checks)
+  Transport_Graph_Parse.Read_Map at transport_graph_parse.ads:12 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (10 checks)
+  Transport_Graph_Parse.Read_Node at transport_graph_parse.adb:41 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (22 checks)
+  Transport_Graph_Parse.Read_Path at transport_graph_parse.ads:19 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (22 checks)
+  Transport_Graph_Parse.Read_U16 at transport_graph_parse.adb:19 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (6 checks)
+in unit transport_graphs, 6 subprograms and packages out of 6 analyzed
+  Transport_Graphs at transport_graphs.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Transport_Graphs.Check at transport_graphs.ads:76 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Transport_Graphs.Node_Preserved at transport_graphs.ads:50 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (21 checks)
+  Transport_Graphs.Preserves at transport_graphs.ads:66 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (4 checks)
+  Transport_Graphs.Valid_Map at transport_graphs.ads:44 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Transport_Graphs.Well_Formed at transport_graphs.ads:32 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (11 checks)
+in unit transport_io, 0 subprograms and packages out of 0 analyzed
+in unit transport_native, 0 subprograms and packages out of 0 analyzed
+in unit transport_paths, 8 subprograms and packages out of 8 analyzed
+  Transport_Paths at transport_paths.ads:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Transport_Paths.Advance at transport_paths.ads:10 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (5 checks)
+  Transport_Paths.Follow at transport_paths.ads:31 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (3 checks)
+  Transport_Paths.Image at transport_paths.ads:38 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Transport_Paths.Prove_Path_Preservation at transport_paths.ads:56 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (21 checks)
+  Transport_Paths.Prove_Step at transport_paths.adb:43 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (6 checks)
+  Transport_Paths.Same_Observation at transport_paths.ads:42 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (13 checks)
+  Transport_Paths.Trace at transport_paths.ads:20 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (32 checks)
+in unit transport_temporal, 14 subprograms and packages out of 14 analyzed
+  Transport_Temporal at transport_temporal.ads:1 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Transport_Temporal.Admitted at transport_temporal.ads:52 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (15 checks)
+  Transport_Temporal.Coverage_Valid at transport_temporal.ads:103 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Transport_Temporal.Empty at transport_temporal.ads:74 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Transport_Temporal.Evaluate at transport_temporal.ads:155 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Transport_Temporal.First_Point at transport_temporal.ads:89 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (2 checks)
+  Transport_Temporal.In_Window at transport_temporal.ads:66 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Transport_Temporal.Known at transport_temporal.ads:45 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Transport_Temporal.Last_Point at transport_temporal.ads:83 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (2 checks)
+  Transport_Temporal.Open_Prefix at transport_temporal.ads:125 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (11 checks)
+  Transport_Temporal.Prove_Empty_Exclusion at transport_temporal.ads:141 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Transport_Temporal.Prove_Whole_Coverage at transport_temporal.ads:146 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Transport_Temporal.Whole_Window at transport_temporal.ads:111 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (9 checks)
+  Transport_Temporal.Witness at transport_temporal.ads:95 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (5 checks)
+in unit transport_temporal_format, 17 subprograms and packages out of 17 analyzed
+  Transport_Temporal_Format at transport_temporal_format.ads:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Transport_Temporal_Format.Base_Matches at transport_temporal_format.ads:85 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (3 checks)
+  Transport_Temporal_Format.Base_Valid at transport_temporal_format.ads:37 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (3 checks)
+  Transport_Temporal_Format.Coverage_Matches at transport_temporal_format.ads:98 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (3 checks)
+  Transport_Temporal_Format.Coverage_Valid at transport_temporal_format.ads:47 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (3 checks)
+  Transport_Temporal_Format.Event_Matches at transport_temporal_format.ads:108 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (21 checks)
+  Transport_Temporal_Format.Event_Valid at transport_temporal_format.ads:54 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (17 checks)
+  Transport_Temporal_Format.Fields_Match at transport_temporal_format.ads:118 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (11 checks)
+  Transport_Temporal_Format.Fields_Valid at transport_temporal_format.ads:62 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (15 checks)
+  Transport_Temporal_Format.Frame_Valid at transport_temporal_format.ads:127 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (9 checks)
+  Transport_Temporal_Format.Projection at transport_temporal_format.ads:19 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (9 checks)
+  Transport_Temporal_Format.Prove_Frame_Validity at transport_temporal_format.ads:141 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (26 checks)
+  Transport_Temporal_Format.Represents at transport_temporal_format.ads:133 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (5 checks)
+  Transport_Temporal_Format.Scope_Matches at transport_temporal_format.ads:71 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (37 checks)
+  Transport_Temporal_Format.Scope_Valid at transport_temporal_format.ads:32 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (5 checks)
+  Transport_Temporal_Format.Shape at transport_temporal_format.ads:24 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (5 checks)
+  Transport_Temporal_Format.Value at transport_temporal_format.ads:12 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+in unit transport_temporal_parse, 9 subprograms and packages out of 9 analyzed
+  Transport_Temporal_Parse at transport_temporal_parse.ads:5 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Transport_Temporal_Parse.Read_Base at transport_temporal_parse.adb:96 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (10 checks)
+  Transport_Temporal_Parse.Read_Coverage at transport_temporal_parse.adb:131 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (6 checks)
+  Transport_Temporal_Parse.Read_Event at transport_temporal_parse.adb:159 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (22 checks)
+  Transport_Temporal_Parse.Read_Fields at transport_temporal_parse.adb:18 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (22 checks)
+  Transport_Temporal_Parse.Read_History at transport_temporal_parse.adb:187 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (29 checks)
+  Transport_Temporal_Parse.Read_Model at transport_temporal_parse.ads:6 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (3 checks)
+  Transport_Temporal_Parse.Read_Scope at transport_temporal_parse.adb:57 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (54 checks)
+  Transport_Temporal_Parse.Word at transport_temporal_parse.adb:5 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (15 checks)
+in unit transport_types, 1 subprograms and packages out of 1 analyzed
+  Transport_Types at transport_types.ads:1 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)

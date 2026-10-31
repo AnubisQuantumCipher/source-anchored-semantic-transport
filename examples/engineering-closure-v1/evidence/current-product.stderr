@@ -1,0 +1,14 @@
+test_existing_output_is_preserved (__main__.ProductControls.test_existing_output_is_preserved) ... ok
+test_functions_are_bounded_in_size (__main__.ProductControls.test_functions_are_bounded_in_size) ... ok
+test_mcp_actual_sdk_stdio (__main__.ProductControls.test_mcp_actual_sdk_stdio) ... ok
+test_mcp_source_page_review (__main__.ProductControls.test_mcp_source_page_review) ... ok
+test_mutated_installed_members_refuse (__main__.ProductControls.test_mutated_installed_members_refuse) ... ok
+test_optional_historical_runtime_incompatibility (__main__.ProductControls.test_optional_historical_runtime_incompatibility) ... ok
+test_render_verify_and_nonrepair (__main__.ProductControls.test_render_verify_and_nonrepair) ... ok
+test_swapped_and_altered_packages_refuse (__main__.ProductControls.test_swapped_and_altered_packages_refuse) ... ok
+test_validate_recover_and_selected_focus (__main__.ProductControls.test_validate_recover_and_selected_focus) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 8.096s
+
+OK

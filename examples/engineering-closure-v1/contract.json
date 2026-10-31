@@ -1,0 +1,86 @@
+{
+  "negative_controls": [
+    "changed_source",
+    "missing_log",
+    "changed_stream",
+    "incomplete_proof_units",
+    "unproved_check",
+    "swallowed_suite_failure",
+    "skipped_suite",
+    "changed_installation",
+    "source_inventory_omission",
+    "changed_original_installation",
+    "portable_inner_failure",
+    "weakened_proof_contract",
+    "omitted_suite"
+  ],
+  "proofs": [
+    {
+      "label": "core",
+      "project": "transport.gpr",
+      "stem": "core-proof-03",
+      "total_row": "Total                           813    183 (23%)                                        630 (77%)           .          .",
+      "unit_rows": [
+        "in unit transport_buffers, 4 subprograms and packages out of 4 analyzed",
+        "in unit transport_decoder, 6 subprograms and packages out of 6 analyzed",
+        "in unit transport_graph_parse, 7 subprograms and packages out of 7 analyzed",
+        "in unit transport_graphs, 6 subprograms and packages out of 6 analyzed",
+        "in unit transport_io, 0 subprograms and packages out of 0 analyzed",
+        "in unit transport_native, 0 subprograms and packages out of 0 analyzed",
+        "in unit transport_paths, 8 subprograms and packages out of 8 analyzed",
+        "in unit transport_temporal, 14 subprograms and packages out of 14 analyzed",
+        "in unit transport_temporal_format, 17 subprograms and packages out of 17 analyzed",
+        "in unit transport_temporal_parse, 9 subprograms and packages out of 9 analyzed",
+        "in unit transport_types, 1 subprograms and packages out of 1 analyzed"
+      ]
+    },
+    {
+      "label": "evaluation",
+      "project": "evaluation/transport_eval.gpr",
+      "stem": "evaluation-proof-03",
+      "total_row": "Total                          1120    279 (25%)                                        841 (75%)           .          .",
+      "unit_rows": [
+        "in unit transport_bound_eval, 6 subprograms and packages out of 6 analyzed",
+        "in unit transport_bound_eval_io, 0 subprograms and packages out of 0 analyzed",
+        "in unit transport_bound_eval_native, 0 subprograms and packages out of 0 analyzed",
+        "in unit transport_bound_eval_parse, 5 subprograms and packages out of 5 analyzed",
+        "in unit transport_buffers, 4 subprograms and packages out of 4 analyzed",
+        "in unit transport_child_harness, 7 subprograms and packages out of 7 analyzed",
+        "in unit transport_decoder, 6 subprograms and packages out of 6 analyzed",
+        "in unit transport_eval, 12 subprograms and packages out of 12 analyzed",
+        "in unit transport_eval_native, 0 subprograms and packages out of 0 analyzed",
+        "in unit transport_eval_parse, 5 subprograms and packages out of 5 analyzed",
+        "in unit transport_graph_parse, 7 subprograms and packages out of 7 analyzed",
+        "in unit transport_graphs, 6 subprograms and packages out of 6 analyzed",
+        "in unit transport_io, 0 subprograms and packages out of 0 analyzed",
+        "in unit transport_native, 0 subprograms and packages out of 0 analyzed",
+        "in unit transport_paths, 8 subprograms and packages out of 8 analyzed",
+        "in unit transport_temporal, 14 subprograms and packages out of 14 analyzed",
+        "in unit transport_temporal_format, 17 subprograms and packages out of 17 analyzed",
+        "in unit transport_temporal_parse, 9 subprograms and packages out of 9 analyzed",
+        "in unit transport_types, 1 subprograms and packages out of 1 analyzed"
+      ]
+    },
+    {
+      "label": "bound",
+      "project": "evaluation/transport_bound_eval_proof.gpr",
+      "stem": "bound-proof",
+      "total_row": "Total                           214    57 (27%)                    157 (73%)           .          .",
+      "unit_rows": [
+        "in unit transport_bound_eval, 6 subprograms and packages out of 6 analyzed",
+        "in unit transport_bound_eval_parse, 5 subprograms and packages out of 5 analyzed",
+        "in unit transport_eval, 12 subprograms and packages out of 12 analyzed"
+      ]
+    }
+  ],
+  "schema": "transport/engineering-closure-contract/1",
+  "scope": "Receipt checks retained observations; does not rerun proof or tests.",
+  "suite_counts": {
+    "bound-native-integration": 22,
+    "bound-test-receipts": 13,
+    "product": 9,
+    "test_evidence_finish": 14,
+    "test_handoff_prepare": 13,
+    "test_handoff_reader": 13
+  }
+}

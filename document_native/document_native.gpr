@@ -1,0 +1,15 @@
+project Document_Native is
+   for Source_Dirs use (".", "../src");
+   for Excluded_Source_Files use ("transport_buffers.adb");
+   package Naming is
+      for Body ("Transport_Buffers") use "document_transport_buffers.adb";
+   end Naming;
+   for Object_Dir use external ("DOCUMENT_NATIVE_OBJ");
+   for Exec_Dir use external ("DOCUMENT_NATIVE_BIN");
+   for Main use ("document_native_decode.adb");
+   package Compiler is
+      for Default_Switches ("Ada") use
+        ("-gnat2022", "-gnatwa", "-gnatwe", "-gnatVa", "-gnata", "-gnatf",
+         "-O2", "-g", "-fstack-usage");
+   end Compiler;
+end Document_Native;

@@ -1,0 +1,3 @@
+Σ[SOURCE,CORE,MODEL] I[FORMAL_READING:proposed] U[none] R[none]
+STS1:fc757c0f5a8da57154e47e4e6277e4429dfbd01e089e844f2b6a9a36ebc0c755
+attached:meaning.zip

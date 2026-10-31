@@ -1,0 +1,17 @@
+{
+  "findings": [
+    {
+      "evidence": "root-unit-results.json",
+      "finding": "Invalid alias type returned SOURCE_INPUT_TYPE rather than frozen SOURCE_KEY_SHAPE.",
+      "id": "R01",
+      "status": "FAILED_FIRST_TEST"
+    },
+    {
+      "finding": "Cumulative decoded-byte budget must be charged after syntax before per-item declared/maximum length refusal. Existing code checked item length first.",
+      "id": "R02",
+      "scope": "Literal contract and helper order; public cumulative overflow may be dominated by Body input bound, not asserted reachable here.",
+      "status": "OBSERVED_CODE_ORDER_MISMATCH"
+    }
+  ],
+  "schema": "quorum/source-first-review-findings/1"
+}

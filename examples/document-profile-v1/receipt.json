@@ -1,0 +1,53 @@
+{
+  "buffer": {
+    "flow": 10,
+    "justified": 0,
+    "prover": 46,
+    "scope": "Transport_Buffers and Transport_Types, originalunchangedcontracts. Proof compiled body named transport_buffers.adb in copiedsourceepoch. Current document_transport_buffers.adb is byte-identical3ec236...; explicitfilenamebridge, not a new whole-project proof.",
+    "total": 56,
+    "unproved": 0
+  },
+  "controls": "70nativeintegrationcontrols passednormal+optimized on exactf26c6... current-final-source runtime; prior6c464 likewise passed. Privatefixtures/evidence retained separately. HostednewCI initiallyNOTRUN; no external-human/behavioral-superiority acceptance.",
+  "history": "Oldsources/binaries/proofreceipts unchanged; failedresourceharnesses/reviews/controltestfixtures preserved in owner evidence, not relabeledPASS. No suppliedbooks, extractedreadings or privatenarratives inthispublicreceipt.",
+  "ledger": {
+    "flow": 10,
+    "justified": 0,
+    "prover": 6,
+    "scope": "Frameledgercontracts only. Report produced by actualqualified boundedhelper on current declaredsource.",
+    "total": 16,
+    "unproved": 0
+  },
+  "native_epochs": {
+    "bounded_helper_build": "f26c6a6b4a4c8afa8a886eb2cf09d465f6f7eba6b57d48ddd589e2f1b5b0a5ef",
+    "previous_qualified_integration": "6c4645c2e6d993b88d661ed0c1dbff5058e2160ae6dd83280152adecbef4545e",
+    "qualified_integration": "f26c6a6b4a4c8afa8a886eb2cf09d465f6f7eba6b57d48ddd589e2f1b5b0a5ef"
+  },
+  "reports": {
+    "buffer-gnatprove.out": {
+      "bytes": 2500,
+      "sha256": "2b27f41a84e944bcd58d92ce99aba4f8660414777f0741feed166f140edab46d"
+    },
+    "ledger-gnatprove.out": {
+      "bytes": 2983,
+      "sha256": "8ec86102153129b4ba1c19eedadb04a5ea2cbedc36dcc6550e7af925261661b9"
+    }
+  },
+  "schema": "transport/document-source-proof-receipt/1",
+  "separation": {
+    "English_entailment": "UNPROVEN",
+    "Python_orchestration": "TESTED_NOT_FORMALLY_PROVED",
+    "arbitrary_document_semantic_completeness": "UNPROVEN",
+    "author_authentication": "NOT_ESTABLISHED",
+    "whole_project_fresh_1368_proof": "UNESTABLISHED"
+  },
+  "sources": {
+    "document_native/document_buffer_proof.gpr": "90a5556a63a5df38973ba34c66367b52c87e699f9eca62b40ad75a71097951d6",
+    "document_native/document_frame_ledger.adb": "0da91855cd03e619eefa007b62e9f67bf444f3bd1a410f37dd7ea7e496b2d892",
+    "document_native/document_frame_ledger.ads": "d81bb2645858663c76d4779e1c77d6ac9294328146fd52842e76c1cfc0e591b1",
+    "document_native/document_ledger_proof.gpr": "1ba41d11f914329876afd36d70d40114b602c1e7242d8b81e26c51137add57d9",
+    "document_native/document_native.gpr": "ba0360b2a8fea998913575157a9741dac8a830b41fdb45c09db13765dfcac7cf",
+    "document_native/document_transport_buffers.adb": "3ec23690172db979830931de1d93bb910e65cc26add97401982877f495721c0e",
+    "src/transport_buffers.ads": "a7e6ce5fe6624749e633f226c1d8eda4b18d6b95af0af5ce6d59bf95d38e6c87",
+    "src/transport_types.ads": "2fc8ee4c6bd04e1926ca0d0ea78ebfd502ce3c01eada2f63f9698dd65efaf752"
+  }
+}

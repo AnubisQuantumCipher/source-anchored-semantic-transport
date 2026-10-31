@@ -1,0 +1,27 @@
+{
+  "argv": [
+    "/dev/shm/semantic-transport-proof-closure-20261029/install-current/first-bundle/bin/semantic-transport",
+    "render",
+    "/dev/shm/semantic-transport-proof-closure-20261029/current-export/pair/share.txt",
+    "/dev/shm/semantic-transport-proof-closure-20261029/current-export/export",
+    "--archive",
+    "/dev/shm/semantic-transport-proof-closure-20261029/current-export/pair/meaning.zip",
+    "--explanation",
+    "/dev/shm/semantic-transport-proof-closure-20261029/current-export/envelope.json"
+  ],
+  "elapsed_ns": 199310139,
+  "exit_code": 0,
+  "status": "SUCCESS",
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "bytes": 472,
+    "sha256": "1939376034601a7d7f2fbede3ddd9115e76ac7bc64477150761fc504e93d45ac"
+  },
+  "storage_after": {
+    "bytes": 122376616,
+    "files": 1966
+  }
+}

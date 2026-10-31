@@ -1,0 +1,105 @@
+"""Read-only postimplementation API boundary controls; no archive extraction."""
+import hashlib
+import io
+import json
+import os
+from pathlib import Path
+import resource
+import stat
+import sys
+import types
+import zipfile
+
+HERE=Path(__file__).resolve().parent
+CORE_PIN='4b44797d3455ca8c2cef28156422be2734825df4df90f539f6801c551ef78b87'
+INDEX_PIN='6675534c34d930833dbbab573de75b638d51c702051a9f4ce14c37b834b08771'
+ZIP_PIN='0d1305b3ce41d8fbe815664d84dd2e2b20acec0abe45d4cc070e00d7e49ade1e'
+EXPECTED={'overflow':('REFUSED','OUTPUT_BOUND',131299),
+          'exact-plan':('INCOMPLETE',None,98022),
+          'exact-ledger':('INCOMPLETE',None,102720)}
+
+
+def need(condition,reason):
+    if not condition:
+        raise ValueError(reason)
+
+
+def sha(raw):
+    return hashlib.sha256(raw).hexdigest()
+
+
+def canonical(value):
+    return json.dumps(value,ensure_ascii=True,sort_keys=True,separators=(',',':')).encode('ascii')
+
+
+def read(path):
+    descriptor=os.open(path,os.O_RDONLY|os.O_NOFOLLOW|os.O_NONBLOCK)
+    with os.fdopen(descriptor,'rb') as stream:
+        before=os.fstat(stream.fileno())
+        need(stat.S_ISREG(before.st_mode) and 0<before.st_size<=65536,'source bound/type')
+        raw=stream.read(65537);after=os.fstat(stream.fileno())
+    keys=('st_dev','st_ino','st_size','st_mtime_ns','st_ctime_ns')
+    need(len(raw)==before.st_size and len(raw)<=65536 and all(
+        getattr(before,k)==getattr(after,k) for k in keys),'source changed')
+    return raw
+
+
+def fixtures():
+    raw=read(HERE/'boundary-review-index.json');need(sha(raw)==INDEX_PIN,'index pin')
+    index=json.loads(raw);data=read(HERE/'boundary-review-fixtures.zip')
+    need(sha(data)==ZIP_PIN==index['archive_sha256'],'archive pin')
+    need(len(index['files'])<=16 and sum(v['bytes'] for v in index['files'].values())<=524288,'fixture budget')
+    result={}
+    with zipfile.ZipFile(io.BytesIO(data)) as archive:
+        members=archive.infolist();need(len(members)==len(index['files']),'member count')
+        need(len({v.filename for v in members})==len(members),'duplicate member')
+        need({v.filename for v in members}==set(index['files']),'member set')
+        for info in members:
+            pin=index['files'][info.filename]
+            need(stat.S_ISREG(info.external_attr>>16) and not info.flag_bits&1,'member mode')
+            need(info.file_size==pin['bytes'] and 0<info.file_size<=65536,'member size')
+            with archive.open(info) as stream:
+                raw=stream.read(65537)
+            need(len(raw)==pin['bytes'] and sha(raw)==pin['sha256'],'member bytes')
+            result[info.filename]=raw
+    return result
+
+
+def subject():
+    path=HERE.parent/'accounting.py';raw=read(path);need(sha(raw)==CORE_PIN,'core pin')
+    module=types.ModuleType('boundary_checked_core');module.__file__=str(path)
+    exec(compile(raw,str(path),'exec',dont_inherit=True),module.__dict__)
+    return module
+
+
+def run_case(module,data,name):
+    prefix=name+'/';plan=data[prefix+'plan.json'];ledger=data[prefix+'ledger.json']
+    bindings={Path(k).stem:v for k,v in data.items() if k.startswith(prefix+'Evidence')}
+    actual=module.validate(plan,sha(plan),ledger,sha(ledger),bindings)
+    status,reason,expected_size=EXPECTED[name]
+    need(actual['status']==status and actual.get('reason')==reason,'literal status/reason')
+    unchecked=module.checked(plan,sha(plan),ledger,sha(ledger),bindings)
+    size=len(canonical(unchecked))+1;need(size==expected_size,'literal report byte count')
+    if name=='overflow':
+        need(size>131072 and actual==module.refusal('OUTPUT_BOUND'),'bounded refusal shape')
+    elif name=='exact-plan':
+        need(len(plan)==65536 and size<=131072,'exact plan cap')
+    else:
+        need(len(ledger)==65536 and size<=131072,'exact ledger cap')
+    return dict(case=name,status='PASS',observed_status=actual['status'],
+        plan_bytes=len(plan),ledger_bytes=len(ledger),checked_report_bytes=size)
+
+
+def main():
+    resource.setrlimit(resource.RLIMIT_AS,(268435456,268435456))
+    resource.setrlimit(resource.RLIMIT_CPU,(30,30))
+    need(len(sys.argv)==1,'no data-selected options')
+    module=subject();data=fixtures()
+    results=[run_case(module,data,name) for name in EXPECTED]
+    print(json.dumps(dict(schema='transport/accounting-boundary-test-run/1',status='TESTED',
+        core_sha256=CORE_PIN,index_sha256=INDEX_PIN,archive_sha256=ZIP_PIN,
+        optimized=bool(sys.flags.optimize),test_kind='POST_IMPLEMENTATION_API_ONLY',results=results),sort_keys=True))
+
+
+if __name__=='__main__':
+    main()

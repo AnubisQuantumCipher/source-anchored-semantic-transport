@@ -1,0 +1,108 @@
+name: Source and installer controls
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  source-controls:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Select explicit CI Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.14.10'
+          architecture: 'x64'
+          check-latest: false
+          allow-prereleases: false
+      - name: Check CI Python against unchanged executable bound
+        run: |
+          python3 -I -S -B -Werror - <<'PY'
+          import json
+          from pathlib import Path
+          import stat
+          import sys
+          path = Path(sys.executable).resolve()
+          info = path.stat()
+          print(json.dumps({'python': str(path), 'version': sys.version.split()[0],
+                            'bytes': info.st_size, 'max_bytes': 4194304}, sort_keys=True))
+          if sys.version_info[:3] != (3, 14, 10):
+              raise SystemExit('Unexpected CI Python version')
+          if not stat.S_ISREG(info.st_mode) or not 0 < info.st_size <= 4194304:
+              raise SystemExit('CI Python exceeds the unchanged executable byte bound')
+          PY
+      - name: Reproduce pinned source inventory
+        run: python3 -I -S -B -Werror install/prepare_source.py --check
+      - name: Bounded installer mechanics
+        run: python3 -I -S -B -Werror install/test_install_support.py -v
+      - name: Closed source and transformation controls
+        run: python3 -I -S -B -Werror install/test_install_layout.py -v
+      - name: Portable pinned source distribution controls
+        run: python3 -I -S -B -Werror install/test_source_distribution.py -v
+      - name: Exact readable dictionaries and qualified native reuse
+        run: |
+          python3 -I -S -B -Werror install/test_lexicon_registry.py
+          python3 -I -S -B -Werror install/test_repackage.py
+      - name: Held-out source-bound response controls
+        run: |
+          python3 -I -S -B -Werror examples/heldout-release-v1/build_plan.py --check
+          python3 -I -S -B -Werror examples/heldout-release-v1/test_check_response.py
+      - name: Original-document handoff client controls
+        run: python3 -I -S -B -Werror install/test_handoff_client.py -v
+      - name: Bounded focus pagination and session controls
+        run: python3 -I -S -B -Werror install/test_focus_page.py -v
+      - name: Independent bounded QUORUM graph development oracle
+        run: |
+          python3 -I -S -B -Werror install/test_quorum_graph.py
+          python3 -I -S -B -Werror examples/quorum-graph-v1/prepare_receipt.py --check
+      - name: QUORUM canonical input and frozen schema controls
+        run: |
+          python3 -I -S -B -Werror install/test_quorum_input.py
+          python3 -I -S -B -Werror examples/quorum-input-v1/prepare_receipt.py --check
+      - name: QUORUM exact sources and quote membership
+        run: |
+          python3 -I -S -B -Werror install/test_quorum_source.py
+          python3 -I -S -B -Werror examples/quorum-source-v1/prepare_receipt.py --check
+      - name: QUORUM declared conditions and exceptions
+        run: |
+          python3 -I -S -B -Werror install/test_quorum_claim.py
+          python3 -I -S -B -Werror examples/quorum-claim-v1/prepare_receipt.py --check
+      - name: QUORUM declared change impact and retained history
+        run: |
+          python3 -I -S -B -Werror install/test_quorum_impact.py
+          python3 -I -S -B -O -Werror install/test_quorum_impact.py
+          python3 -I -S -B -Werror examples/quorum-impact-v1/prepare_receipt.py --check
+      - name: QUORUM exact task and preassessment context
+        run: |
+          python3 -I -S -B -Werror install/test_quorum_context.py
+          python3 -I -S -B -O -Werror install/test_quorum_context.py
+          python3 -I -S -B -Werror examples/quorum-context-v1/prepare_receipt.py --check
+      - name: QUORUM reading references and retained stance counts
+        run: |
+          python3 -I -S -B -Werror install/test_quorum_reading.py
+          python3 -I -S -B -O -Werror install/test_quorum_reading.py
+          python3 -I -S -B -Werror examples/quorum-reading-v1/prepare_receipt.py --check
+      - name: Response contracts and checked draft submission
+        run: |
+          response_checks=$(mktemp -d)
+          test_pin=$(python3 -I -S -B -Werror install/freeze_response_contract_tests.py --output "$response_checks/inputs.json")
+          python3 -I -S -B -Werror install/test_response_contract.py --freeze "$response_checks/inputs.json" --expect-freeze-sha256 "$test_pin" --evidence "$response_checks/contract"
+          python3 -I -S -B -Werror install/test_checked_finish.py --freeze "$response_checks/inputs.json" --expect-freeze-sha256 "$test_pin" --evidence "$response_checks/finish"
+      - name: Bounded patch and typed expression controls
+        run: python3 -I -S -B -Werror install/test_fixture_expression.py
+      - name: Source-linked citation controls
+        run: |
+          python3 -I -S -B -Werror install/test_response_evidence.py
+          evidence_checks=$(mktemp -d)
+          python3 -I -S -B -Werror install/test_evidence_finish.py --evidence "$evidence_checks/controls"
+      - name: Source-bound evaluation contract and lowering controls
+        run: |
+          bound_checks=$(mktemp -d)
+          python3 -I -S -B -Werror install/test_bound_evaluation.py --structure-only --evidence "$bound_checks/controls"
+          python3 -I -S -B -Werror install/test_finite_check.py
+      - name: Reproduce retained three-hop evidence
+        run: |
+          python3 -I -S -B -Werror examples/repeated-handoff-v1/results/reproduce/check_public.py --expect-closure-sha256 651e8d75f7697be0ef977943a043d59c104dd9e792a938f86b898f5f1a3a4e61
+          python3 -I -S -B -Werror examples/repeated-handoff-v1/results/reproduce/check_witness.py
+      - name: Parse source and enforce installer function size
+        run: python3 -I -S -B -Werror install/check_source.py

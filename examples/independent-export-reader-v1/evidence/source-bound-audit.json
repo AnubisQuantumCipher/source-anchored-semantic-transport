@@ -1,0 +1,53 @@
+{
+  "audit_sha256": "08180bb835067148eac1dce44e80d1dcb1f6e6dbd6bd74e48e7a4c2b2e054b9a",
+  "contract_sha256": "1b87e0f219a3d41137bf149745fe8c19b3887fd573493d451e94dc8d77406a58",
+  "mutations": "Only create-only audit files under assigned directory",
+  "producer_difference": "Only BASE_RUNTIME_SHA256 differs in exporter source",
+  "reviewer": "actual GPT-6.1 model; not external human",
+  "schema": "independent-export-contract-audit/1",
+  "source_head": "7ba5178d9672d84ccd49d1a37637bc9de4913324",
+  "sources": [
+    {
+      "bytes": 15514,
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_export.py",
+      "sha256": "25c4be3901cbb244ada0d20cc196ef407395b10df76dc997c1b015d536b37c6d"
+    },
+    {
+      "bytes": 8622,
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_schema.py",
+      "sha256": "1c324b661314bd3a92f23b4502207f38a483baa6565d479838de450f110eeb1a"
+    },
+    {
+      "bytes": 6691,
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_wire.py",
+      "sha256": "2a0fa77da78ae4591fc296f6ce4f62e961c68ed992479ffe59974e236b0f58c4"
+    },
+    {
+      "bytes": 16463,
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_package.py",
+      "sha256": "c7746908cb1885914f83aa3d4ed97ca57b5f44a86f6442ca1ad837d76ea9810d"
+    },
+    {
+      "bytes": 18326,
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_plan.py",
+      "sha256": "2dcfca9bd9ccec1c1bb7635bc6e080b7b6d8bda8b7a86dd48a1b7191c090af71"
+    },
+    {
+      "bytes": 25791,
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_export.py",
+      "sha256": "1d5846dbe3108118973f7021a09d3b71f51e733e697d2aae22f1425467f1d65d"
+    },
+    {
+      "bytes": 10834,
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/docs/HANDOFF_READER.md",
+      "sha256": "b1b27a65baa5fa217ef76f5227ec20fd39213641bcfde684aa5bede3db25c5d2"
+    },
+    {
+      "bytes": 15514,
+      "path": "/home/sicarii/Projects/source-anchored-semantic-transport/evidence/semantic-handoff-v1/positive-02/transport/decoder/tools/transport_export.py",
+      "sha256": "3f1584fed40a8fadd29bb425abcab1db2732e33df1de82942a1ef294e2ea2a16"
+    }
+  ],
+  "status": "SOURCE_INSPECTED_NOT_RUNTIME_TESTED",
+  "tests_run": false
+}

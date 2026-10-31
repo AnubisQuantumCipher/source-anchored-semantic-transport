@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/dev/shm/semantic-transport-proof-closure-20261029/source/evaluation/tests/bin/transport_eval_checks"
+  ],
+  "elapsed_ns": 41946812,
+  "exit_code": 0,
+  "status": "SUCCESS",
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "storage_after": {
+    "bytes": 81374110,
+    "files": 1176
+  }
+}

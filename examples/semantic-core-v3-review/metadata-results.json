@@ -1,0 +1,25 @@
+{
+  "cases": [
+    {
+      "id": "boolean_exit",
+      "observed": "REFUSED",
+      "pass": true,
+      "reason": "native proof scope"
+    },
+    {
+      "id": "float_exit",
+      "observed": "REFUSED",
+      "pass": true,
+      "reason": "native proof scope"
+    },
+    {
+      "id": "contradictory_detail",
+      "observed": "REFUSED",
+      "pass": true,
+      "reason": "contradictory detailed proof"
+    }
+  ],
+  "earlier_issue": "Initial checker admitted proof.process_exit=False via Python equality; repaired exact-int guard now rejects it. Earlier focused observation remains in tool transcript; no acceptance receipt was regenerated.",
+  "schema": "semantic-core-independent-final-metadata-controls/1",
+  "status": "PASS"
+}

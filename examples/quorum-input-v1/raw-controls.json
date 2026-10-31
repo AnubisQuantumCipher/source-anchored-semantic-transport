@@ -1,0 +1,329 @@
+{
+  "boundary_success": "minimal-body.json is a manually specified source artifact serialized for exact bytes; oracle expectations were chosen independently of any checker. Freeze/review it against the pinned independent schema oracle before admission.",
+  "bounded_recipes": [
+    {
+      "construction": "ASCII byte [ repeated12, then ASCII0, then ] repeated12",
+      "expected": {
+        "stage": "CANONICAL_VALUE_ONLY",
+        "status": "ok"
+      },
+      "id": "r_depth12",
+      "scope": "PRIVATE_CANONICAL_READER"
+    },
+    {
+      "construction": "ASCII byte [ repeated13, then ASCII0, then ] repeated13",
+      "expected": {
+        "error": "INPUT_DEPTH",
+        "status": "error"
+      },
+      "id": "r_depth13",
+      "scope": "PRIVATE_CANONICAL_READER"
+    },
+    {
+      "construction": "ASCII space repeated65537; do not parse before byte gate",
+      "expected": {
+        "error": "INPUT_BYTE_BOUND",
+        "status": "error"
+      },
+      "id": "r_byte_overflow",
+      "scope": "ANY_RAW_ENTRY"
+    },
+    {
+      "construction": "empty exact bytes",
+      "expected": {
+        "error": "INPUT_BYTE_BOUND",
+        "status": "error"
+      },
+      "id": "r_empty",
+      "scope": "ANY_RAW_ENTRY"
+    },
+    {
+      "construction": "bytearray of ASCII null",
+      "expected": {
+        "error": "INPUT_TYPE",
+        "status": "error"
+      },
+      "id": "r_bytearray",
+      "scope": "ANY_RAW_ENTRY"
+    }
+  ],
+  "controls": [
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "stage": "CANONICAL_VALUE_ONLY",
+        "status": "ok"
+      },
+      "id": "r_null",
+      "raw_hex": "6e756c6c"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "stage": "CANONICAL_VALUE_ONLY",
+        "status": "ok"
+      },
+      "id": "r_zero",
+      "raw_hex": "30"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "stage": "CANONICAL_VALUE_ONLY",
+        "status": "ok"
+      },
+      "id": "r_positive",
+      "raw_hex": "313233"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "stage": "CANONICAL_VALUE_ONLY",
+        "status": "ok"
+      },
+      "id": "r_boolean",
+      "raw_hex": "74727565"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "stage": "CANONICAL_VALUE_ONLY",
+        "status": "ok"
+      },
+      "id": "r_number_spellings_in_string",
+      "raw_hex": "222d3020316533204e614e22"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "stage": "CANONICAL_VALUE_ONLY",
+        "status": "ok"
+      },
+      "id": "r_composed",
+      "raw_hex": "22c3a922"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "stage": "CANONICAL_VALUE_ONLY",
+        "status": "ok"
+      },
+      "id": "r_decomposed",
+      "raw_hex": "2265cc8122"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "error": "INPUT_INTEGER_TOKEN",
+        "status": "error"
+      },
+      "id": "r_negative",
+      "raw_hex": "2d31"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "error": "INPUT_INTEGER_TOKEN",
+        "status": "error"
+      },
+      "id": "r_negative_zero",
+      "raw_hex": "2d30"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "error": "INPUT_INTEGER_TOKEN",
+        "status": "error"
+      },
+      "id": "r_decimal",
+      "raw_hex": "312e30"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "error": "INPUT_INTEGER_TOKEN",
+        "status": "error"
+      },
+      "id": "r_exponent",
+      "raw_hex": "316532"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "error": "INPUT_INTEGER_TOKEN",
+        "status": "error"
+      },
+      "id": "r_nan",
+      "raw_hex": "4e614e"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "error": "INPUT_INTEGER_TOKEN",
+        "status": "error"
+      },
+      "id": "r_infinity",
+      "raw_hex": "496e66696e697479"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "error": "INPUT_INTEGER_TOKEN",
+        "status": "error"
+      },
+      "id": "r_leading_zero",
+      "raw_hex": "3031"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "error": "INPUT_JSON",
+        "status": "error"
+      },
+      "id": "r_duplicate",
+      "raw_hex": "7b2261223a302c2261223a317d"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "error": "INPUT_JSON",
+        "status": "error"
+      },
+      "id": "r_nested_duplicate",
+      "raw_hex": "7b2261223a7b2262223a302c2262223a317d7d"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "error": "INPUT_JSON",
+        "status": "error"
+      },
+      "id": "r_escaped_duplicate",
+      "raw_hex": "7b2261223a302c225c7530303631223a317d"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "error": "INPUT_JSON",
+        "status": "error"
+      },
+      "id": "r_trailing",
+      "raw_hex": "6e756c6c2066616c7365"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "error": "INPUT_JSON",
+        "status": "error"
+      },
+      "id": "r_truncated",
+      "raw_hex": "7b2261223a"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "error": "INPUT_ENCODING",
+        "status": "error"
+      },
+      "id": "r_bom",
+      "raw_hex": "efbbbf7b7d"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "error": "INPUT_ENCODING",
+        "status": "error"
+      },
+      "id": "r_invalid_utf8",
+      "raw_hex": "22c32822"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "error": "INPUT_ENCODING",
+        "status": "error"
+      },
+      "id": "r_unpaired_surrogate",
+      "raw_hex": "225c756438303022"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "error": "INPUT_NONCANONICAL",
+        "status": "error"
+      },
+      "id": "r_whitespace",
+      "raw_hex": "206e756c6c"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "error": "INPUT_NONCANONICAL",
+        "status": "error"
+      },
+      "id": "r_final_lf",
+      "raw_hex": "6e756c6c0a"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "error": "INPUT_NONCANONICAL",
+        "status": "error"
+      },
+      "id": "r_escaped_ascii",
+      "raw_hex": "225c753030363122"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "error": "INPUT_NONCANONICAL",
+        "status": "error"
+      },
+      "id": "r_unsorted_keys",
+      "raw_hex": "7b2262223a302c2261223a307d"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "stage": "CANONICAL_VALUE_ONLY",
+        "status": "ok"
+      },
+      "id": "r_escaped_newline",
+      "raw_hex": "225c6e22"
+    },
+    {
+      "call_scope": "BODY_WRAPPER",
+      "expected": {
+        "stage": "BODY_INPUT_SHAPE_ONLY",
+        "status": "ok"
+      },
+      "id": "b_minimal",
+      "raw_hex": "7b22626c6f6273223a5b5d2c226368616c6c656e676573223a5b5d2c22636c61696d73223a5b5d2c22646570656e64656e63696573223a5b5d2c22686973746f7279223a5b5d2c22696e7075745f6d616e696665737473223a5b5d2c226d6f6465223a22505552455f494e464f524d4154494f4e414c5f5245504c4159222c22706f6c696379223a7b2261637475616c5f6d6f64656c5f6f62736572766174696f6e5f706f6c696379223a22494e454c494749424c455f554e5645524946494544222c226167677265676174696f6e5f72756c65223a22494e444550454e44454e545f4649454c44535f4e4f5f5448524553484f4c44222c22617574686f72697479223a224e4f4e45222c2266726573686e657373223a22554e4b4e4f574e222c226964223a22504f4c494359222c226973737565725f706f6c696379223a22554e41555448454e544943415445445f494e464f524d4154494f4e414c5f51554152414e54494e45222c226d616e75616c5f6f62736572766174696f6e5f706f6c696379223a224d414e55414c5f46495854555245535f4f4e4c595f4e4f545f4d4f44454c5f52554e53222c226d697373696e675f6465636c617265645f74617267657473223a22524546555345222c22736f757263655f636c61696d5f6379636c6573223a22524546555345222c227374727563747572616c5f636f6d70617269736f6e223a22434c41494d5f4c4556454c5f4f4e4c59222c227570646174655f7072656465636573736f725f6379636c6573223a22524546555345222c2276657273696f6e223a225631227d2c2270726f76656e616e6365223a5b5d2c2272656164696e675f7769746864726177616c73223a5b5d2c2272656164696e6773223a5b5d2c227265676973747279223a7b226964223a225245474953545259222c226964656e746974795f706f6c696379223a224e4f5f41555448454e5449434154494f4e5f4d414e55414c5f464958545552455f4f525f554e56455249464945445f4f4e4c59222c22736368656d61223a2271756f72756d2f7374617469632d736561742d72656769737472792f31222c227365617473223a5b5d2c2276657273696f6e223a225631227d2c2272756c6573223a5b7b22636f6e73657175656e63655f6365696c696e67223a22494e464f524d4154494f4e414c222c22657865637574696f6e223a2244455445524d494e49535449435f5245504c41595f4f4e4c59222c226964223a2252554c455f30222c226b696e64223a22534f555243455f4d454d424552534849505f5631222c2276657273696f6e223a225631227d2c7b22636f6e73657175656e63655f6365696c696e67223a22494e464f524d4154494f4e414c222c22657865637574696f6e223a2244455445524d494e49535449435f5245504c41595f4f4e4c59222c226964223a2252554c455f31222c226b696e64223a22515f4445434c41524154494f4e5f4944454e544954595f5631222c2276657273696f6e223a225631227d2c7b22636f6e73657175656e63655f6365696c696e67223a22494e464f524d4154494f4e414c222c22657865637574696f6e223a2244455445524d494e49535449435f5245504c41595f4f4e4c59222c226964223a2252554c455f32222c226b696e64223a224445434c415245445f444550454e44454e43595f494d504143545f5631222c2276657273696f6e223a225631227d2c7b22636f6e73657175656e63655f6365696c696e67223a22494e464f524d4154494f4e414c222c22657865637574696f6e223a2244455445524d494e49535449435f5245504c41595f4f4e4c59222c226964223a2252554c455f33222c226b696e64223a225245434f524445445f5354414e43455f434f554e54535f5631222c2276657273696f6e223a225631227d5d2c2272756e5f65766964656e6365223a5b5d2c22736368656d61223a2271756f72756d2f7265706c61792d626f64792f31222c2273656c6563746f7273223a5b5d2c22736f7572636573223a5b5d2c227461736b73223a5b7b22636c61696d5f726f7374657273223a5b5d2c22636f6e746578745f646570656e64656e63795f696473223a5b5d2c2266726573686e657373223a22554e4b4e4f574e222c226964223a225441534b222c22706f6c6963795f6964223a22504f4c494359222c2272656769737472795f6964223a225245474953545259222c2272756c655f696473223a5b2252554c455f30222c2252554c455f31222c2252554c455f32222c2252554c455f33225d2c2273656c65637465645f736f7572636573223a5b5d2c227461736b5f74657874223a6e756c6c2c2276657273696f6e223a225631227d5d2c2275706461746573223a5b5d7d"
+    },
+    {
+      "call_scope": "BODY_WRAPPER",
+      "expected": {
+        "error": "INPUT_CLOSED_SCHEMA",
+        "stage": "SCHEMA",
+        "status": "error"
+      },
+      "id": "b_empty_object",
+      "raw_hex": "7b7d"
+    },
+    {
+      "call_scope": "BODY_WRAPPER",
+      "expected": {
+        "error": "INPUT_NONCANONICAL",
+        "stage": "CANONICAL_BYTES",
+        "status": "error"
+      },
+      "id": "b_noncanonical_minimal",
+      "raw_hex": "7b22626c6f6273223a5b5d2c226368616c6c656e676573223a5b5d2c22636c61696d73223a5b5d2c22646570656e64656e63696573223a5b5d2c22686973746f7279223a5b5d2c22696e7075745f6d616e696665737473223a5b5d2c226d6f6465223a22505552455f494e464f524d4154494f4e414c5f5245504c4159222c22706f6c696379223a7b2261637475616c5f6d6f64656c5f6f62736572766174696f6e5f706f6c696379223a22494e454c494749424c455f554e5645524946494544222c226167677265676174696f6e5f72756c65223a22494e444550454e44454e545f4649454c44535f4e4f5f5448524553484f4c44222c22617574686f72697479223a224e4f4e45222c2266726573686e657373223a22554e4b4e4f574e222c226964223a22504f4c494359222c226973737565725f706f6c696379223a22554e41555448454e544943415445445f494e464f524d4154494f4e414c5f51554152414e54494e45222c226d616e75616c5f6f62736572766174696f6e5f706f6c696379223a224d414e55414c5f46495854555245535f4f4e4c595f4e4f545f4d4f44454c5f52554e53222c226d697373696e675f6465636c617265645f74617267657473223a22524546555345222c22736f757263655f636c61696d5f6379636c6573223a22524546555345222c227374727563747572616c5f636f6d70617269736f6e223a22434c41494d5f4c4556454c5f4f4e4c59222c227570646174655f7072656465636573736f725f6379636c6573223a22524546555345222c2276657273696f6e223a225631227d2c2270726f76656e616e6365223a5b5d2c2272656164696e675f7769746864726177616c73223a5b5d2c2272656164696e6773223a5b5d2c227265676973747279223a7b226964223a225245474953545259222c226964656e746974795f706f6c696379223a224e4f5f41555448454e5449434154494f4e5f4d414e55414c5f464958545552455f4f525f554e56455249464945445f4f4e4c59222c22736368656d61223a2271756f72756d2f7374617469632d736561742d72656769737472792f31222c227365617473223a5b5d2c2276657273696f6e223a225631227d2c2272756c6573223a5b7b22636f6e73657175656e63655f6365696c696e67223a22494e464f524d4154494f4e414c222c22657865637574696f6e223a2244455445524d494e49535449435f5245504c41595f4f4e4c59222c226964223a2252554c455f30222c226b696e64223a22534f555243455f4d454d424552534849505f5631222c2276657273696f6e223a225631227d2c7b22636f6e73657175656e63655f6365696c696e67223a22494e464f524d4154494f4e414c222c22657865637574696f6e223a2244455445524d494e49535449435f5245504c41595f4f4e4c59222c226964223a2252554c455f31222c226b696e64223a22515f4445434c41524154494f4e5f4944454e544954595f5631222c2276657273696f6e223a225631227d2c7b22636f6e73657175656e63655f6365696c696e67223a22494e464f524d4154494f4e414c222c22657865637574696f6e223a2244455445524d494e49535449435f5245504c41595f4f4e4c59222c226964223a2252554c455f32222c226b696e64223a224445434c415245445f444550454e44454e43595f494d504143545f5631222c2276657273696f6e223a225631227d2c7b22636f6e73657175656e63655f6365696c696e67223a22494e464f524d4154494f4e414c222c22657865637574696f6e223a2244455445524d494e49535449435f5245504c41595f4f4e4c59222c226964223a2252554c455f33222c226b696e64223a225245434f524445445f5354414e43455f434f554e54535f5631222c2276657273696f6e223a225631227d5d2c2272756e5f65766964656e6365223a5b5d2c22736368656d61223a2271756f72756d2f7265706c61792d626f64792f31222c2273656c6563746f7273223a5b5d2c22736f7572636573223a5b5d2c227461736b73223a5b7b22636c61696d5f726f7374657273223a5b5d2c22636f6e746578745f646570656e64656e63795f696473223a5b5d2c2266726573686e657373223a22554e4b4e4f574e222c226964223a225441534b222c22706f6c6963795f6964223a22504f4c494359222c2272656769737472795f6964223a225245474953545259222c2272756c655f696473223a5b2252554c455f30222c2252554c455f31222c2252554c455f32222c2252554c455f33225d2c2273656c65637465645f736f7572636573223a5b5d2c227461736b5f74657874223a6e756c6c2c2276657273696f6e223a225631227d5d2c2275706461746573223a5b5d7d0a"
+    }
+  ],
+  "retention": "Preserve all original proposal artifacts and first outputs; corrections are additive and separately pinned.",
+  "schema": "quorum/body-input-raw-controls-proposal/1",
+  "scope": "Private canonical reader and Body wrapper controls are separate. Private canonical-value success is not Body shape or replay success. No implementation generated expected outcomes. Raw bytes are hex to preserve BOM/UTF8/escape distinctions.",
+  "status": "HAND_AUTHORED_EXPECTATIONS_UNRUN",
+  "unicode_invariant": "r_composed and r_decomposed must remain distinct raw/decoded strings; do not normalize either. Their acceptance does not establish semantic equivalence."
+}
