@@ -6,6 +6,7 @@ not prove host scheduling, arbitrary-code sandboxing, or semantic fidelity.
 import ctypes
 import fcntl
 import hashlib
+import importlib.machinery
 import importlib.util
 import os
 from pathlib import Path
@@ -48,19 +49,118 @@ def runtime_dependencies():
         close_phase(owned, tuple(owned))
 
 
+CORE_CAP = 65536
+CORE_NAME = 'transport_document_supervisor'
+IDENTITY = 'contained core source identity'
+
+
+def declared_core_digest():
+    if len(sys.argv) < 4:
+        raise ValueError(IDENTITY)
+    digest = sys.argv[3]
+    if len(digest) != 64 or any(c not in '0123456789abcdef' for c in digest):
+        raise ValueError(IDENTITY)
+    return digest
+
+
+def contained_core_bytes(digest):
+    raw = os.pread(3, CORE_CAP + 1, 0)
+    if len(raw) > CORE_CAP or hashlib.sha256(raw).hexdigest() != digest:
+        raise ValueError(IDENTITY)
+    return raw
+
+
+def write_all(fd, raw):
+    written = 0
+    for _ in range(CORE_CAP):
+        if written == len(raw):
+            return
+        count = os.write(fd, raw[written:])
+        if type(count) is not int or count <= 0:
+            raise ValueError(IDENTITY)
+        written += count
+    if written != len(raw):
+        raise ValueError(IDENTITY)
+
+
+def reread_matches(fd, raw, digest):
+    os.lseek(fd, 0, os.SEEK_SET)
+    check = os.pread(fd, CORE_CAP + 1, 0)
+    if check != raw or hashlib.sha256(check).hexdigest() != digest:
+        raise ValueError(IDENTITY)
+
+
+def seal_core(fd):
+    seals = (fcntl.F_SEAL_SHRINK | fcntl.F_SEAL_GROW | fcntl.F_SEAL_WRITE |
+             fcntl.F_SEAL_SEAL)
+    if fcntl.fcntl(fd, fcntl.F_ADD_SEALS, seals) != 0:
+        raise ValueError(IDENTITY)
+
+
+def sealed_core_fd(raw, digest):
+    fd = os.memfd_create('sast-contained-core', os.MFD_CLOEXEC | os.MFD_ALLOW_SEALING)
+    try:
+        write_all(fd, raw)
+        reread_matches(fd, raw, digest)
+        seal_core(fd)
+        return fd
+    except BaseException:
+        os.close(fd)
+        raise
+
+
+class CheckedSourceLoader(importlib.machinery.SourceFileLoader):
+    def __init__(self, fullname, path, digest):
+        super().__init__(fullname, path)
+        self.digest = digest
+
+    def get_code(self, fullname):
+        prefix = '/proc/self/fd/'
+        number = self.path[len(prefix):] if self.path.startswith(prefix) else ''
+        if fullname != self.name or not number.isascii() or not number.isdecimal():
+            raise ValueError(IDENTITY)
+        if str(int(number)) != number:
+            raise ValueError(IDENTITY)
+        source = self.get_data(self.path)
+        if len(source) > CORE_CAP or hashlib.sha256(source).hexdigest() != self.digest:
+            raise ValueError(IDENTITY)
+        return self.source_to_code(source, self.path)
+
+    def set_data(self, path, data, *, _mode=0o666):
+        raise ValueError(IDENTITY)
+
+
+def load_sealed_module(fd, digest):
+    # Leave fd open: loaded_source reopens this sealed snapshot as __file__.
+    path = '/proc/self/fd/' + str(fd)
+    loader = CheckedSourceLoader(CORE_NAME, path, digest)
+    spec = importlib.util.spec_from_loader(loader.name, loader)
+    if spec is None or spec.name != CORE_NAME or spec.origin != path:
+        raise ValueError(IDENTITY)
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
+    try:
+        loader.exec_module(module)
+    except BaseException:
+        sys.modules.pop(spec.name, None)
+        raise
+    if module.__file__ != path or module.__name__ != CORE_NAME:
+        sys.modules.pop(spec.name, None)
+        raise ValueError(IDENTITY)
+    return module
+
+
+def load_contained_core():
+    digest = declared_core_digest()
+    raw = contained_core_bytes(digest)
+    return load_sealed_module(sealed_core_fd(raw, digest), digest)
+
+
 def load_core():
     if __name__ != '__main__':
         import transport_document_supervisor
         return transport_document_supervisor
-    spec = importlib.util.spec_from_loader('transport_document_supervisor', loader=None)
-    module = importlib.util.module_from_spec(spec)
-    module.__file__ = '/proc/self/fd/3'
-    raw = os.pread(3, 65537, 0)
-    if len(raw) > 65536 or hashlib.sha256(raw).hexdigest() != sys.argv[3]:
-        raise ValueError('contained core source identity')
-    sys.modules[spec.name] = module
-    exec(compile(raw, module.__file__, 'exec', dont_inherit=True), module.__dict__)
-    return module
+    return load_contained_core()
 
 
 core = load_core()
