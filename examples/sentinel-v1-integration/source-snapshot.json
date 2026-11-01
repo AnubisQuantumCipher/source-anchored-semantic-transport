@@ -51,8 +51,8 @@
       "sha256": "8d0e1152322dcb3a0504901046559ce507b584a88e4ce89320c2a66ea1e8e962"
     },
     "tools/transport_document.py": {
-      "bytes": 35865,
-      "sha256": "f2b86ca3b6bf984114331bd3c49dbb2256106ded5658444b7bb183794620db6a"
+      "bytes": 39680,
+      "sha256": "749a3ba165b326ea46c0d10f7bbc79881f4549cf796d2699d982c1f5b4f61755"
     },
     "tools/transport_document_archive.py": {
       "bytes": 4916,

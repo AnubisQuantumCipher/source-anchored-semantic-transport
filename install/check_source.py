@@ -19,20 +19,30 @@ DOCUMENT_NAMES = ('build_document_decoder.py', 'package_document_decoder.py',
                   'transport_document_archive.py', 'transport_document_cli.py',
                   'transport_document_media.py', 'transport_document_ocr.py',
                   'transport_document_reading.py')
+# Tracked supervisor source is outside the fixed 128-file legacy budget.
+# Untracked containment and workflow adapters stay out of this committed roster.
+SUPERVISOR_NAMES = ('transport_document_supervisor.py',)
 
 
 def partition(selected, root=ROOT):
     document = {root / 'tools' / name for name in DOCUMENT_NAMES}
+    supervisor = {root / 'tools' / name for name in SUPERVISOR_NAMES}
     if len(set(selected)) != len(selected):
         raise ValueError('duplicate static-analysis input')
     if not document.issubset(selected):
         raise ValueError('declared document source roster missing')
-    legacy = [path for path in selected if path not in document]
+    present = supervisor.intersection(selected)
+    if present and present != supervisor:
+        raise ValueError('declared supervisor source missing')
+    legacy = [path for path in selected if path not in document and path not in present]
     if not 1 <= len(legacy) <= 128:
         raise ValueError('legacy source file bound exceeded')
     if len(document) != 9:
         raise ValueError('fixed document source file bound exceeded')
-    return [('legacy', legacy), ('document', sorted(document))]
+    profiles = [('legacy', legacy), ('document', sorted(document))]
+    if present:
+        profiles.append(('transport-supervisor/1', sorted(present)))
+    return profiles
 
 
 def sources():
