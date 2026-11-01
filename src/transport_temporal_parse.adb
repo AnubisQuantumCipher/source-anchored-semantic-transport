@@ -196,21 +196,44 @@ package body Transport_Temporal_Parse with SPARK_Mode is
       History := [others => (others => <>)];
       Result := Ok;
       for I in 1 .. Count loop
+         pragma Loop_Invariant (Result = Ok);
+         pragma Loop_Invariant
+           (for all J in 1 .. I - 1 =>
+              Event_Valid (Values, Fixed_Fields + (J - 1) * Event_Fields));
+         pragma Loop_Invariant
+           (for all J in 1 .. I - 1 =>
+              Event_Matches
+                (Values, Fixed_Fields + (J - 1) * Event_Fields, History (J)));
+         pragma Loop_Invariant
+           (for all J in I .. Max_Events =>
+              History (J) = Observation'(others => <>));
          Read_Event
            (Values, Fixed_Fields + (I - 1) * Event_Fields, History (I), Result);
          if Result /= Ok then
+            pragma Assert
+              (not Event_Valid
+                 (Values, Fixed_Fields + (I - 1) * Event_Fields));
+            pragma Assert
+              (for some J in 1 .. Count =>
+                 not Event_Valid
+                   (Values, Fixed_Fields + (J - 1) * Event_Fields));
+            pragma Assert
+              (for all J in Count + 1 .. Max_Events =>
+                 History (J) = Observation'(others => <>));
             return;
          end if;
-         pragma Loop_Invariant (Result = Ok);
-         pragma Loop_Invariant
-           (for all J in 1 .. I =>
-              Event_Valid (Values, Fixed_Fields + (J - 1) * Event_Fields));
-         pragma Loop_Invariant
-           (for all J in 1 .. I =>
-              Event_Matches (Values, Fixed_Fields + (J - 1) * Event_Fields, History (J)));
-         pragma Loop_Invariant
-           (for all J in I + 1 .. Max_Events => History (J) = Observation'(others => <>));
       end loop;
+      pragma Assert (Result = Ok);
+      pragma Assert
+        (for all J in 1 .. Count =>
+           Event_Valid (Values, Fixed_Fields + (J - 1) * Event_Fields));
+      pragma Assert
+        (for all J in 1 .. Count =>
+           Event_Matches
+             (Values, Fixed_Fields + (J - 1) * Event_Fields, History (J)));
+      pragma Assert
+        (for all J in Count + 1 .. Max_Events =>
+           History (J) = Observation'(others => <>));
    end Read_History;
 
    procedure Read_Model

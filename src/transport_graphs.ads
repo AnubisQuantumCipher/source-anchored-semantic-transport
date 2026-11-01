@@ -63,15 +63,29 @@ package Transport_Graphs with SPARK_Mode is
           Map (Original.Nodes (I).Children (J)) =
           Candidate.Nodes (Map (I)).Children (J)));
 
+   function All_Nodes
+     (Original, Candidate : Graph; Map : Node_Map) return Boolean
+   with Global => null,
+     Pre => Valid_Map (Original, Candidate, Map),
+     Post => All_Nodes'Result =
+       (for all I in 1 .. Original.Count =>
+          Node_Preserved (Original, Candidate, Map, I));
+
+   function Images_Cover
+     (Original, Candidate : Graph; Map : Node_Map) return Boolean
+   with Global => null,
+     Post => Images_Cover'Result =
+       (for all J in 1 .. Candidate.Count =>
+          (for some I in 1 .. Original.Count => Map (I) = J));
+
    function Preserves (Original, Candidate : Graph; Map : Node_Map)
-      return Boolean is
-     (Valid_Map (Original, Candidate, Map) and then
-      Map (Original.Root) = Candidate.Root and then
-      (for all I in 1 .. Original.Count =>
-        Node_Preserved (Original, Candidate, Map, I)) and then
-      (for all J in 1 .. Candidate.Count =>
-        (for some I in 1 .. Original.Count => Map (I) = J)))
-   with Global => null;
+      return Boolean
+   with Global => null,
+     Post => Preserves'Result =
+       (Valid_Map (Original, Candidate, Map) and then
+        Map (Original.Root) = Candidate.Root and then
+        All_Nodes (Original, Candidate, Map) and then
+        Images_Cover (Original, Candidate, Map));
 
    procedure Check
      (Original, Candidate : Graph; Map : Node_Map; Result : out Status)
