@@ -30,7 +30,7 @@ SOURCE = b'REQ_AUDIT: When E, A shall Q, unless X.\n'
 CLI = ROOT / 'tools/transport_core_cli.py'
 LIMIT = 131072
 LEGACY_PINS = {
-    'tools/transport_package.py': 'c7746908cb1885914f83aa3d4ed97ca57b5f44a86f6442ca1ad837d76ea9810d',
+    'tools/transport_package.py': '60b2ea0d70dcb208328177f71ec4e884f74aeb28fc9d410d3504b8a2e03eddd4',
     'tools/transport_requirement_language.py': 'e9bd5b8fa360da23f9c2fd55aea9597260da453083b8ab64462a031e444d965b',
     'tools/transport_schema.py': '1c324b661314bd3a92f23b4502207f38a483baa6565d479838de450f110eeb1a',
 }
