@@ -1,0 +1,13 @@
+project Legacy_Checks is
+   for Source_Dirs use
+     ("/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/evaluation/tests",
+      "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/evaluation/src",
+      "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/src");
+   for Object_Dir use "legacy-obj";
+   for Exec_Dir use "legacy-bin";
+   for Main use ("transport_eval_checks.adb", "transport_bound_eval_checks.adb");
+   package Compiler is
+      for Default_Switches ("Ada") use
+        ("-gnat2022", "-gnatwa", "-gnatwe", "-gnatVa", "-gnata", "-gnatf", "-O2", "-g");
+   end Compiler;
+end Legacy_Checks;

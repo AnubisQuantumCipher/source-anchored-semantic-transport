@@ -1,0 +1,25 @@
+{
+  "automatic_retry": false,
+  "contract_unchanged": true,
+  "errors": [
+    "Duplicate ZIP causes UserWarning to escape explicit refusal under -Werror",
+    "Directory artifact raises IsADirectoryError before regular-file validation; descriptor cleanup requires repair"
+  ],
+  "source": [
+    {
+      "bytes": 14637,
+      "preimage": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/package-build-01/failed-source01/transport_sentinel_package.py",
+      "sha256": "5a740f9bfa8836c36e3c22b013b54a71da87cb9be274ba3ad52b359f0636420a",
+      "source": "tools/transport_sentinel_package.py"
+    },
+    {
+      "bytes": 12082,
+      "preimage": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/package-build-01/failed-source01/test_transport_sentinel_package.py",
+      "sha256": "7e7536698ec38ed9d0995c6c565f93c13ae90e26c535e409caf6dbf5f952ff08",
+      "source": "tests/test_transport_sentinel_package.py"
+    }
+  ],
+  "status": "FAILED",
+  "test_entry": "python3 -I -S -B -Werror tests/test_transport_sentinel_package.py",
+  "tests_run": 39
+}

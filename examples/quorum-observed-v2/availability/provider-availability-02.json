@@ -1,0 +1,1 @@
+{"executable": "/home/sicarii/.local/share/mise/installs/claude/2.1.280/claude", "model_calls": 0, "no_credentials_retained": true, "returncode": 0, "status": {"apiProvider": "firstParty", "authMethod": "claude.ai", "loggedIn": true, "subscriptionType": "max"}, "stderr_bytes": 0}

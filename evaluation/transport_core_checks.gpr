@@ -1,0 +1,11 @@
+project Transport_Core_Checks is
+   for Source_Dirs use ("tests", "src", "../src");
+   for Object_Dir use external ("TRANSPORT_CORE_OBJ", "core-checks-obj");
+   for Exec_Dir use external ("TRANSPORT_CORE_BIN", "core-checks-bin");
+   for Main use ("core_checks.adb");
+   package Compiler is
+      for Default_Switches ("Ada") use
+        ("-gnat2022", "-gnatwa", "-gnatwe", "-gnatVa", "-gnata", "-gnatf",
+         "-O2", "-g", "-fstack-usage");
+   end Compiler;
+end Transport_Core_Checks;

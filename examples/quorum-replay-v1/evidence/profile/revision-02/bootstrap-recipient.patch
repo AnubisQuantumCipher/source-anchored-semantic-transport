@@ -1,0 +1,103 @@
+--- /home/sicarii/Work/semantic-transport-bound-evaluation-20261028/install/transport_quorum_bootstrap.py
++++ /home/sicarii/Work/semantic-transport-bound-evaluation-20261028/install/transport_quorum_bootstrap.py
+@@ -479,19 +479,20 @@
+     return _matches(_read(value['path'], cap), value, 'CHECKER_FILE_IDENTITY')
+ 
+ 
+-def _originals(inv, body):
+-    rows = inv['originals']
+-    auxiliary = inv['auxiliary']
+-    # Carrier slots are fixed; aggregate admission belongs after pure PREPARSE.
++def _originals(inv):
+     result = []
+-    for row in rows:
++    for row in inv['originals']:
+         raw = _matches(_read(row['path'], CAP), row['key'], 'CHECKER_FILE_IDENTITY')
+         result.append((row['alias'], dict(row['key']), raw))
+-    aux = None
+-    if auxiliary is not None:
+-        raw = _matches(_read(auxiliary['path'], CAP), auxiliary['key'], 'CHECKER_FILE_IDENTITY')
+-        aux = (auxiliary['alias'], dict(auxiliary['key']), raw, dict(auxiliary['held_key']))
+-    return tuple(result), aux
++    return tuple(result)
++
++
++def _auxiliary(inv):
++    row = inv['auxiliary']
++    if row is None:
++        return None
++    raw = _matches(_read(row['path'], CAP), row['key'], 'CHECKER_FILE_IDENTITY')
++    return row['alias'], dict(row['key']), raw, dict(row['held_key'])
+ 
+ 
+ def _original_index(package, body, originals):
+@@ -504,7 +505,7 @@
+     _need(value['sources'] == expected, 'CHECKER_FILE_IDENTITY')
+ 
+ 
+-def _transport(inv, package, body, originals, allowed):
++def _transport(inv, package, allowed):
+     share = _carrier(inv['share'], 131072)
+     module = _load('transport_mcp', allowed)
+     try:
+@@ -512,27 +513,33 @@
+     except (ValueError, OSError, KeyError, TypeError, RuntimeError) as error:
+         raise HostError('CHECKER_FILE_IDENTITY') from error
+     _audit(allowed)
+-    expected = {alias: raw for alias, key, raw in originals}
+-    _need(len(expected) == len(originals) and 'Q_RECORDS' not in expected,
++    declarations = {row['alias']: row['key'] for row in inv['originals']}
++    _need(len(declarations) == len(inv['originals']) and 'Q_RECORDS' not in declarations,
+           'CHECKER_FILE_IDENTITY')
+-    expected['Q_RECORDS'] = body
+     actual = receiver.decoded['sources']
+-    _need(type(actual) is list and len(actual) == len(expected), 'CHECKER_FILE_IDENTITY')
+-    _need([item['id'] for item in actual] == sorted(expected, key=_canonical),
++    expected_ids = sorted(list(declarations) + ['Q_RECORDS'], key=_canonical)
++    _need(type(actual) is list and [row['id'] for row in actual] == expected_ids,
+           'CHECKER_FILE_IDENTITY')
+     _need(receiver.decoded['schema'] == 'transport/decoded/1', 'CHECKER_FILE_IDENTITY')
+     for field in ('interpretations', 'uncertainties', 'relations'):
+         _need(receiver.decoded[field] == [], 'CHECKER_FILE_IDENTITY')
++    body, originals = None, []
+     for row in actual:
+         _need(row['label'] == 'Exact fixture ' + row['id']
+               and row['media_type'] == 'application/octet-stream'
+               and row['provenance'] == 'Manually supplied frozen original bytes; no semantic qualification.',
+               'CHECKER_FILE_IDENTITY')
+-        raw = expected[row['id']]
+-        _need(row['bytes'] == len(raw) and row['sha256'] == _sha(raw),
+-              'CHECKER_FILE_IDENTITY')
+-    recovered = {row['id']: row['data'] for row in actual}
+-    _need(recovered == expected, 'CHECKER_FILE_IDENTITY')
++        raw = row['data']
++        _need(type(raw) is bytes, 'CHECKER_FILE_IDENTITY')
++        _matches(raw, row, 'CHECKER_FILE_IDENTITY')
++        if row['id'] == 'Q_RECORDS':
++            body = _matches(raw, inv['body'], 'CHECKER_FILE_IDENTITY')
++        else:
++            key = dict(declarations[row['id']])
++            _matches(raw, key, 'CHECKER_FILE_IDENTITY')
++            originals.append((row['id'], key, raw))
++    _need(type(body) is bytes, 'CHECKER_FILE_IDENTITY')
++    return body, tuple(originals)
+ 
+ 
+ def _arguments(argv):
+@@ -577,12 +584,13 @@
+ def _run(inv, entry, desc, allowed):
+     request = _carrier(inv['request'], 131072)
+     envelope = _carrier(inv['envelope'], 131072)
+-    body = _carrier(inv['body'], 131072)
+     package = _carrier(inv['package'], 131072)
+-    originals, auxiliary = _originals(inv, body)
++    auxiliary = _auxiliary(inv)
+     if inv['arm'] == 'transport':
+-        _transport(inv, package, body, originals, allowed)
++        body, originals = _transport(inv, package, allowed)
+     else:
++        body = _carrier(inv['body'], 131072)
++        originals = _originals(inv)
+         _original_index(package, body, originals)
+     sys.path.insert(0, str(_path(desc['checker_root']) / 'tools'))
+     _preload(QUORUM_PRELOAD, allowed)

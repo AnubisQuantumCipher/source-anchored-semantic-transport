@@ -1,0 +1,22 @@
+{
+  "schema":"quorum/body-input-independent-prefreeze-review-addendum/1",
+  "reviewer":"/root/quorum_graph_oracle",
+  "classification":"OBSERVED_ADDITIVE_DOCUMENT_REVIEW_NOT_IMPLEMENTATION_QUALIFICATION",
+  "original_review":"independent-boundary-review.json remains unchanged, including all first findings.",
+  "reviewed_addendum":{"path":"/dev/shm/semantic-transport-wire-input-20261029/proposal-addendum.json","sha256":"009102373a48b259ceb6af5fc2518b922f8cbea21920b087e6a476bb31fd9e54"},
+  "input_pin_check":"All original review input digests and byte lengths were rechecked and matched; the additive proposal digest was checked and matched.",
+  "dispositions":[
+    {"id":"R01","status":"DOCUMENT_CORRECTION_OBSERVED","evidence":"Addendum supplies every omitted raw failure stage and an explicit PREPARSE order: exact type/length, UTF8/BOM, byte-order lexical/depth checks, parser grammar/duplicates, decoded scalar validation. Later Body stages and no-partial-result behavior remain distinct."},
+    {"id":"R02","status":"DOCUMENT_CORRECTION_OBSERVED","evidence":"Addendum imposes twenty unsigned decimal digits before int conversion, adds distinct INPUT_INTEGER_BOUND/PREPARSE, and supplies literal boundary/overflow hex inputs. All integer maxima reachable from pinned ReplayBody remain below this resource ceiling. Strings remain exempt."},
+    {"id":"R03","status":"DOCUMENT_CORRECTION_OBSERVED","evidence":"Addendum requires fixed bounded pattern-search semantics for exact pinned-schema parity after maxLength, preserving later base64 or stricter identifier checks as separately named protocol work. This resolves the fullmatch mismatch without changing the schema."}
+  ],
+  "admission_boundary":"No remaining R01/R02/R03 document blocker is identified for the proposed bounded internal component once the sole owner adopts and freezes both the proposal and additive correction. This is not qualification of an implementation, a complete schema validator, a full replay pipeline or installed software.",
+  "requirements_for_actual_component_qualification":[
+    "Owner freezes exact function/interface, quotas, error/stage tables, pinned schema and unchanged literal controls before implementation.",
+    "Actual iterative evaluator must charge each dispatch/branch/property/item/comparison and canonical byte visit before consuming quotas, with bounded frames/scratch and explicit work refusal. No unbounded private compilation or candidate traversal may hide outside counters.",
+    "Run the frozen reader controls and wrapper controls, then independently check shape parity and relevant oneOf/allOf/type-sensitive equality/pattern/bounds cases. Do not claim prospective ceilings prove all valid combinations fit.",
+    "Any implementation deviation or observed failing first output remains retained; no partial value or replay acceptance is emitted on error."
+  ],
+  "evidence_limit":"Only source/document inspection, exact input fingerprint checks and the recorded fixed-pattern semantics experiment were performed by this reviewer. No proposed parser/evaluator executed; no product source edited; no full replay or formal proof claimed.",
+  "verdict":"NARROW_DOCUMENT_BLOCKERS_CLOSED_BY_ADDITIVE_PROPOSAL_SUBJECT_TO_OWNER_FREEZE; IMPLEMENTATION_AND_QUALIFICATION_UNRUN"
+}

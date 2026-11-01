@@ -1,0 +1,78 @@
+{
+  "runner_sha256": "6bf1821c244db00747c02b7d9900d9fe5f41c005ee616ee04c262d2d74b5f91b",
+  "model_calls": 0,
+  "cases": [
+    {
+      "status": "COMPLETE",
+      "input_bytes_sent": 14,
+      "exit": 0,
+      "error": null,
+      "unit": "semantic-observe-047f4ed150af4aab9178296feb37e81c.service",
+      "verified_properties": {
+        "LoadState": "loaded",
+        "ActiveState": "active",
+        "ControlGroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/semantic-observe-047f4ed150af4aab9178296feb37e81c.service",
+        "MemoryMax": "536870912",
+        "MemorySwapMax": "0",
+        "KillMode": "control-group"
+      },
+      "cleanup": {
+        "confirmed": true,
+        "unit_properties": {
+          "LoadState": "not-found",
+          "ActiveState": "inactive",
+          "ControlGroup": "",
+          "MemoryMax": "infinity",
+          "MemorySwapMax": "infinity",
+          "KillMode": "control-group"
+        },
+        "cgroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/semantic-observe-047f4ed150af4aab9178296feb37e81c.service",
+        "stop_exit": 5,
+        "stop_capture_status": "COMPLETE"
+      },
+      "elapsed_seconds": 0.10389380401466042,
+      "accepted_process": true,
+      "stdout_sha256": "83a62704bef29180bc79a7998550e440c2e346749aa2fd297c1dd2fcc3bb2ff0",
+      "stdout_text": "{\"keys\": [\"CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC\", \"DISABLE_AUTOUPDATER\", \"HOME\", \"LANG\", \"PATH\"], \"input\": \"public-prompt\"}\n",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_text": "",
+      "case": "environment"
+    },
+    {
+      "status": "INCOMPLETE_INPUT",
+      "input_bytes_sent": 8192,
+      "exit": 0,
+      "error": null,
+      "unit": "semantic-observe-8912cc4cb3a44ecda12afdbee89cd7e3.service",
+      "verified_properties": {
+        "LoadState": "loaded",
+        "ActiveState": "active",
+        "ControlGroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/semantic-observe-8912cc4cb3a44ecda12afdbee89cd7e3.service",
+        "MemoryMax": "536870912",
+        "MemorySwapMax": "0",
+        "KillMode": "control-group"
+      },
+      "cleanup": {
+        "confirmed": true,
+        "unit_properties": {
+          "LoadState": "not-found",
+          "ActiveState": "inactive",
+          "ControlGroup": "",
+          "MemoryMax": "infinity",
+          "MemorySwapMax": "infinity",
+          "KillMode": "control-group"
+        },
+        "cgroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/semantic-observe-8912cc4cb3a44ecda12afdbee89cd7e3.service",
+        "stop_exit": 5,
+        "stop_capture_status": "COMPLETE"
+      },
+      "elapsed_seconds": 0.05488251999486238,
+      "accepted_process": false,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_text": "",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_text": "",
+      "case": "early-close"
+    }
+  ]
+}

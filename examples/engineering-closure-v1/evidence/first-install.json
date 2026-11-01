@@ -1,0 +1,35 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-I",
+    "-S",
+    "-B",
+    "-Werror",
+    "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/install/transport_install.py",
+    "build",
+    "/dev/shm/semantic-transport-proof-closure-20261029/install-current/first-bundle",
+    "--expect-source",
+    "e1796ecd8ba6bab8d4e8694cbe73f27315eaac0e0ffe8016abfac0fd9a5827c6",
+    "--receipt",
+    "/dev/shm/semantic-transport-proof-closure-20261029/install-current/first-build",
+    "--gprbuild",
+    "/home/sicarii/opt/gnat/gprbuild-aarch64-linux-26.0.0-1/bin/gprbuild",
+    "--compiler-bin",
+    "/home/sicarii/opt/gnat/gnat-aarch64-linux-16.1.0-1/bin"
+  ],
+  "elapsed_ns": 2574873786,
+  "exit_code": 0,
+  "status": "SUCCESS",
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "bytes": 4245,
+    "sha256": "678ccc5f2c1f1bfb2eea2541500ae5a92edfd43c2b15b140f57fd3a09d958364"
+  },
+  "storage_after": {
+    "bytes": 83757564,
+    "files": 1311
+  }
+}

@@ -1,0 +1,33 @@
+[
+  {
+    "command": [
+      "/usr/bin/python",
+      "-I",
+      "-S",
+      "-B",
+      "-Werror",
+      "-X",
+      "pycache_prefix=/dev/shm/semantic-transport-replay-integration-20261029/portable-core-tests-01/unused-cache",
+      "install/test_quorum_replay.py",
+      "--evidence",
+      "/dev/shm/semantic-transport-replay-integration-20261029/portable-core-tests-01/normal.json"
+    ],
+    "exit_code": 1
+  },
+  {
+    "command": [
+      "/usr/bin/python",
+      "-I",
+      "-S",
+      "-B",
+      "-Werror",
+      "-X",
+      "pycache_prefix=/dev/shm/semantic-transport-replay-integration-20261029/portable-core-tests-01/unused-cache",
+      "-O",
+      "install/test_quorum_replay.py",
+      "--evidence",
+      "/dev/shm/semantic-transport-replay-integration-20261029/portable-core-tests-01/optimized.json"
+    ],
+    "exit_code": 1
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "excluded_from_formal_claim": [
+    "Wire byte-to-field functional correspondence",
+    "Python validator and lowering",
+    "Source-language conformance and English entailment",
+    "OS/C file IO and output",
+    "Compiler and runtime correctness",
+    "Report authentication and world truth",
+    "Whole product acceptance"
+  ],
+  "legacy": [
+    {
+      "legacy_prefix_unchanged": true,
+      "path": "evaluation/src/transport_eval.ads"
+    },
+    {
+      "legacy_prefix_unchanged": true,
+      "path": "evaluation/src/transport_eval.adb"
+    }
+  ],
+  "native_contract_scope": "Evaluator Step denotation, typed finite model/tree validity, evaluator prefix/tail result contract; parser validity/reset and AORTE",
+  "new_proof_run_by_reviewer": false,
+  "observed_report": {
+    "flow": "342",
+    "justified": "0",
+    "prover": "1026",
+    "total": "1368",
+    "unproved": "0"
+  },
+  "schema": "semantic-core-independent-proof04-scope/1",
+  "source_pins": {
+    "gnatprove.out": "eb4499a33700abec16c3942482841c42525d49092288a4c252dc358ff0073d87",
+    "proof-04.stderr": "684ef5a803fdab729e4d1f6e2efa14785c94dfa3c27e59218d7909fd009dc069",
+    "proof-04.stdout": "2108d020cfe9fc287483dab36856f3f229d3b0f12466d5870f875c03f92d7305",
+    "transport_core_parse.adb": "c0b8efb1690b7558771450ba6be192e5b824f596a53712a174b3e7bdc23c6e61",
+    "transport_core_parse.ads": "e63c01c17bfc40bc1e2c26d36fa61f3970837790ecd0d712cc1314c13700a30b",
+    "transport_eval.adb": "260e066eb5b7b4d027b679bc1b4b05dcaae9fde9df8bfffc2b199232bea8ad35",
+    "transport_eval.ads": "22f52d356bc99d09ad932f4cfca5c97446383d03f1ab5e217361eafad727e79d"
+  }
+}

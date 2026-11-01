@@ -1,0 +1,14 @@
+project Sentinel_Wire is
+   for Source_Dirs use (".");
+   for Source_Files use
+     ("sentinel_policy.ads", "sentinel_policy.adb",
+      "sentinel_wire_io.ads", "sentinel_wire_io.adb", "sentinel_wire_main.adb");
+   for Object_Dir use external ("DOCUMENT_NATIVE_OBJ");
+   for Exec_Dir use external ("DOCUMENT_NATIVE_BIN");
+   for Main use ("sentinel_wire_main.adb");
+   package Compiler is
+      for Default_Switches ("Ada") use
+        ("-gnat2022", "-gnatwa", "-gnatwe", "-gnatVa", "-gnata", "-gnatf",
+         "-O2", "-g", "-fstack-usage");
+   end Compiler;
+end Sentinel_Wire;

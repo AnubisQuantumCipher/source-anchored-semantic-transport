@@ -1,0 +1,52 @@
+{
+  "schema":"quorum/source-membership-independent-prefreeze-review/1",
+  "reviewer":"/root/quorum_graph_oracle",
+  "classification":"OBSERVED_DOCUMENT_REVIEW_NOT_IMPLEMENTATION_QUALIFICATION",
+  "inspected_contract":{"path":"/dev/shm/semantic-transport-source-membership-20261029/contract.json","sha256":"9f8e4eb6db6f113acc1120931ed13efdf8472a51a12b76c1c56884ab16917ede"},
+  "normative_protocol":{"path":"/dev/shm/semantic-transport-wire-20261029/revision-02/protocol-rules.json","sha256":"345c58ac03d0855fd65122cd4db5870ad0962362cb03265abeb63a79a0682abd"},
+  "first_findings":[
+    {
+      "id":"S01",
+      "severity":"PREFREEZE_HOST_RESOURCE_CLARIFICATION",
+      "issue":"Caller-supplied source_record_id is described as exact str and equal to a declared alias, but no explicit length-first bounded ID validation is stated before hashing/sorting. A caller may supply an arbitrarily large string despite the fifteen-item cap. Complete SourceKey dict field checking must also avoid traversing arbitrary extra keys before exact cardinality rejection.",
+      "action":"Pin source alias validation as len<=32 followed by ASCII and exact pinned pattern-search, with an exact SOURCE_ARGUMENTS error. Check key dict type, exact len3 and constant required-key probes before arbitrary traversal. Preserve final-LF pattern behavior rather than silently strengthening fullmatch."
+    },
+    {
+      "id":"S02",
+      "severity":"PREFREEZE_DECODE_RESOURCE_CLARIFICATION",
+      "issue":"The admitted Base64 text maximum5464 can describe more than4096 decoded bytes. A decode-then-length-check implementation would exceed the stated4096 per-item scratch promise. The declared cumulative decoded-byte charging must occur before allocation.",
+      "action":"Pin bounded predecode syntax/padding/pad-bit checks and decoded-length calculation, enforce per-item and cumulative decoded bounds before decoded allocation, then use decode/reencode equality. Preserve exact BASE64-before-LENGTH precedence for mixed malformed/oversized data, or explicitly review a different retained precedence before implementation."
+    },
+    {
+      "id":"S03",
+      "severity":"PREFREEZE_JSON_BLOB_RESOURCE_CLARIFICATION",
+      "issue":"CANONICAL_JSON uses check_canonical_value, whose twenty-digit numeric resource ceiling was justified for Body-schema integer fields. Arbitrary JSON blobs are not Body-shaped and may contain a W02-valid unsigned decimal longer than twenty digits. Mapping every helper failure to BLOB_CANONICAL_JSON obscures a newly adopted resource limit as malformed wire syntax.",
+      "action":"Explicitly adopt a bounded JSON-Blob numeric profile and distinguish a numeric/work resource refusal, or choose a separately bounded existing parser lane. Preserve unsigned integer, duplicate-key, scalar UTF8, depth and exact canonical requirements; no semantic interpretation follows. Add literal boundary/overflow controls."
+    },
+    {
+      "id":"S04",
+      "severity":"PREFREEZE_MEMBERSHIP_SEMANTICS_CLARIFICATION",
+      "issue":"MEMBERSHIP lists equality, inequality and then empty-original status without explicit precedence. An empty original with selector[0,0) and a correctly self-bound nonempty quote must remain DIFFERS, rather than taking an unconditional empty-source match override.",
+      "action":"Require quote equality before assigning either MATCH or EMPTY_SOURCE_MATCH_NONPROBATIVE. Empty equal quote/slice gets the nonprobative status; nonempty unequal quote gets DIFFERS. Add both literal cases."
+    },
+    {
+      "id":"S05",
+      "severity":"PREFREEZE_RESERVED_SOURCE_CLOSURE_CLARIFICATION",
+      "issue":"Q_RECORDS is explicitly excluded from originals and Body.sources by packaging text, but no exact reserved-alias refusal is named. The existing protocol forbids using the Q_RECORDS source as original/selector/dependency evidence.",
+      "action":"Make reserved physical Q_RECORDS source separation an enforced input/wrapper precondition with exact error, including Body.sources.id==Q_RECORDS if physical aliases use those IDs. Do not grant source membership to the metadata source or silently count it twice."
+    }
+  ],
+  "positive_observations":[
+    "Existing canonical Body validation remains the sole raw-to-private-Body gate; no caller boolean or decoded dict grants validation authority.",
+    "Exact tuples/builtin scalar keys/immutable source bytes, no fetching and explicit concurrent-mutation assumption preserve a narrow synchronous host boundary.",
+    "Physical alias copies are separately charged and verified; same complete key under different aliases is allowed only with equal actual bytes. Body raw consumes exactly the reserved Q_RECORDS source slot and byte charge once.",
+    "Source/Blob/quote length and SHA256 checks precede membership observations. Well-bound unequal quotes are DIFFERS; integrity mismatch is refusal with no partial indexes.",
+    "Opaque source bytes are never parsed as instructions or assumed UTF8. STRICT_UTF8 and CANONICAL_JSON Blob lanes are separate; interpreting Blob data or claiming model provenance remains outside this component.",
+    "Pinned Id search behavior remains intact; digest strings use complete lowercase full-hex shape. Complete SourceKeys compare exact Body values with no normalization or implicit version selection.",
+    "Result is internal SOURCE_BLOB_SELECTOR_ONLY with source_authentication UNVERIFIED, current_authority NONE and freshness UNKNOWN. No accepted_result, English entailment, reference closure or full replay conclusion is emitted."
+  ],
+  "coordination":"All findings sent directly to author and sole owner before freeze. Separate independent literal controls are being prepared by /root/quorum_input_controls. This first review is retained even if later addenda close the findings.",
+  "unproved_or_unrun":["Complete frozen component result oracle","Actual component implementation and tests","Allocation/counter enforcement and hash/base64 runtime behavior","Full replay identity/reference/provenance/graph/semantic qualification","Inherited proof/runtime/recovery/interoperability and external-human/product gates"],
+  "smallest_sound_next_step":"Resolve these narrow boundary semantics in an additive retained contract correction, freeze complete literal outputs, then admit only this bounded membership component within the existing reconciled tranche.",
+  "verdict":"NARROW_PREFREEZE_CLARIFICATIONS_REQUIRED; NO_PARTICIPANT_GATE_BLOCKS_LOCAL_ENGINEERING"
+}

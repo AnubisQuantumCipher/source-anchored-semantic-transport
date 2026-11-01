@@ -1,0 +1,44 @@
+{
+  "failed_head": "14e99040efd6833f4f0d0fca7853edcabdda5290",
+  "finding": "Added README bullet changed one file included by the historical QUORUM replay receipt. All other derived receipt fields matched. Both hosted workflows retained their failed receipt step.",
+  "hosted_successor_CI": "PENDING",
+  "local_checks": {
+    "independent_followup": "PASS",
+    "normal": "REPLAY_RECEIPT_CHECKED",
+    "optimized": "REPLAY_RECEIPT_CHECKED"
+  },
+  "pins": {
+    "README.md": {
+      "bytes": 8783,
+      "sha256": "4a9f2ed165c237ad9150c61727f3dbe5eb2a119af20f57e8639a9fc84dc0063f"
+    },
+    "comparison/accounting/evidence/ci-first-PR-failure.log.txt": {
+      "bytes": 18716,
+      "sha256": "4fbc1cbcb724836da2714b0f1d8485885615aff8631c902c516573dd7896fb0e"
+    },
+    "comparison/accounting/evidence/ci-first-failure.log.txt": {
+      "bytes": 17745,
+      "sha256": "644229e8caad9faf4fca705917f97f6a887ea5d9a80b540d1a6a30cf18b5eb6c"
+    },
+    "comparison/accounting/evidence/ci-first-final.json": {
+      "bytes": 8806,
+      "sha256": "cc0c807172aabb4c1d7376a51e857b0d04445b9120811fc8e517de2b945925bb"
+    },
+    "comparison/accounting/evidence/ci-repair-review.json": {
+      "bytes": 3565,
+      "sha256": "0235da4f01613caf025c71e4a206313cdc44e5d6c26515c96d0c445c7c7526d2"
+    },
+    "examples/quorum-replay-v1/prepare_receipt.py": {
+      "bytes": 9171,
+      "sha256": "d488ab2f765d1fab32c65a6c3e47775673a0d63f76bd552d867c90aa1adc61c6"
+    },
+    "examples/quorum-replay-v1/receipt.json": {
+      "bytes": 159799,
+      "sha256": "dea96022cc7751075a1d8f5fff760cf4d34745b074162e592049542e6367c8c2"
+    }
+  },
+  "previous_accounting_receipts": "Preserved as evidence at14e9904; their old README digest describes that historical source, not this successor. Accounting product and test bytes remain identical.",
+  "product_acceptance": false,
+  "repair": "Restore README exact historical bytes from39da9cd. Keep newaccountingAPI/CLI/tests/docs and alloriginalreceipts/checkers/workflowstrings unchanged. No testorfunctionality removed.",
+  "schema": "transport/accounting-ci-repair/1"
+}

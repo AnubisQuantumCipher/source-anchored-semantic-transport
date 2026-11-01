@@ -1,0 +1,137 @@
+"""Bounded postimplementation exact-cap and output-boundary controls."""
+import copy
+import hashlib
+import json
+from pathlib import Path
+import sys
+import types
+
+HERE=Path(__file__).resolve().parent
+CORE=HERE.parent/'accounting.py'
+HELD='4b44797d3455ca8c2cef28156422be2734825df4df90f539f6801c551ef78b87'
+CAP=65536
+MAX=9223372036854775807
+
+
+def canonical(value):
+    return json.dumps(value,ensure_ascii=True,sort_keys=True,separators=(',',':')).encode('ascii')
+
+
+def sha(raw):
+    return hashlib.sha256(raw).hexdigest()
+
+
+def load_core():
+    raw=CORE.read_bytes()
+    if sha(raw)!=HELD:
+        raise ValueError('held core differs')
+    module=types.ModuleType('boundary_subject');module.__file__=str(CORE)
+    exec(compile(raw,str(CORE),'exec'),module.__dict__)
+    return module
+
+
+def identifier(prefix,index):
+    return (prefix+str(index)).ljust(48,'x')
+
+
+def inventory(module):
+    attempts=[dict(id=identifier('Attempt',i),task=identifier('Task',i),
+        arm=identifier('Arm',i),cache='uncontrolled',actor=identifier('Actor',i),
+        role='administrative',outcome='succeeded',retry_of=None) for i in range(2)]
+    slots=[]
+    for a in attempts:
+        for phase in module.PHASES:
+            for metric in module.METRICS:
+                if len(slots)>=128:
+                    break
+                slots.append(dict(id=identifier('Slot',len(slots)),attempt=a['id'],phase=phase,
+                    metric=metric,currency='USD' if metric=='money_minor_units' else None,
+                    applicability='required',reason=''))
+    # Retain every mandatory human phase of both attempts before filling extras.
+    required=[s for s in slots if s['metric']=='human_active_ns']
+    extras=[s for s in slots if s['metric']!='human_active_ns']
+    for a in attempts:
+        for phase in module.PHASES:
+            if not any(s['attempt']==a['id'] and s['phase']==phase for s in required):
+                required.append(dict(id=identifier('Human',len(required)),attempt=a['id'],
+                    phase=phase,metric='human_active_ns',currency=None,applicability='required',reason=''))
+    return dict(schema='transport/accounting-plan/1',attempts=attempts,slots=(required+extras)[:128])
+
+
+def fill(document,rows,target):
+    room=target-len(canonical(document))
+    for row in rows:
+        if room<=0:
+            break
+        prefix=row['reason']
+        available=256-len(prefix)
+        controls=min(available,room//6)
+        row['reason']+='\x01'*controls;room-=controls*6;available-=controls
+        plain=min(available,room)
+        row['reason']+='x'*plain;room-=plain
+    return len(canonical(document))==target
+
+
+def fixture(module,n_na,n_unknown):
+    plan=inventory(module);eligible=[s for s in plan['slots'] if not(
+        s['metric']=='human_active_ns' and s['phase']=='task')]
+    na={s['id'] for s in eligible[:n_na]};remaining=[s for s in plan['slots'] if s['id'] not in na]
+    unknown={s['id'] for s in remaining[:n_unknown]}
+    for slot in plan['slots']:
+        if slot['id'] in na:
+            slot.update(applicability='not_applicable',reason='Synthetic boundary fixture.')
+    fill(plan,[s for s in plan['slots'] if s['id'] in na],CAP)
+    plan_raw=canonical(plan);plan_sha=sha(plan_raw);measurements=[];records=[]
+    for index,slot in enumerate(plan['slots']):
+        status='NOT_APPLICABLE' if slot['id'] in na else ('UNKNOWN' if slot['id'] in unknown else 'RECORDED')
+        key=identifier('Measurement',index)
+        records.append(dict(slot=slot['id'],status=status,measurement=key if status=='RECORDED' else None,
+            reason='No measurement in synthetic fixture.' if status=='UNKNOWN' else ''))
+        if status=='RECORDED':
+            interval=dict(clock='Clock'.ljust(48,'x'),start=MAX-2*index-2,end=MAX-2*index-1) if slot['metric'] in module.TIME_METRICS else None
+            measurements.append(dict(id=key,slot=slot['id'],metric=slot['metric'],currency=slot['currency'],value=MAX,interval=interval))
+    evidence=canonical(dict(schema='transport/accounting-evidence/1',plan_sha256=plan_sha,measurements=measurements))
+    name='Evidence'.ljust(48,'x');bindings={name:evidence} if measurements else {}
+    artifacts=[dict(id=name,bytes=len(evidence),sha256=sha(evidence))] if measurements else []
+    ledger=dict(schema='transport/accounting-ledger/1',plan_sha256=plan_sha,artifacts=artifacts,records=records)
+    fill(ledger,[r for r in records if r['status']=='UNKNOWN'],CAP)
+    return plan_raw,canonical(ledger),bindings
+
+
+def main():
+    module=load_core();output=HERE/'boundary-review-evidence';output.mkdir(exist_ok=False)
+    observations=[];max_report=0;winner=None
+    for n_na in range(20,46):
+        for n_unknown in range(20,61):
+            plan,ledger,bindings=fixture(module,n_na,n_unknown)
+            if len(plan)>CAP or len(ledger)>CAP or any(len(b)>CAP for b in bindings.values()):
+                continue
+            result=module.validate(plan,sha(plan),ledger,sha(ledger),bindings)
+            if result['status']=='REFUSED' and result['reason']!='OUTPUT_BOUND':
+                raise ValueError('fixture invalid: '+json.dumps(result))
+            report=module.checked(plan,sha(plan),ledger,sha(ledger),bindings)
+            size=len(canonical(report))+1
+            if size>max_report:
+                max_report=size;winner=(plan,ledger,bindings,result,size,n_na,n_unknown)
+            if len(plan)==CAP and len(ledger)==CAP:
+                observations.append(dict(n_na=n_na,n_unknown=n_unknown,plan_bytes=len(plan),ledger_bytes=len(ledger),status=result['status'],reason=result.get('reason'),report_bytes=size))
+            if result['status']=='REFUSED':
+                break
+        if winner and winner[3]['status']=='REFUSED':
+            break
+    if winner is None:
+        raise ValueError('no valid bounded fixture')
+    plan,ledger,bindings,result,size,n_na,n_unknown=winner
+    for name,raw in {'plan.json':plan,'ledger.json':ledger,**{name+'.json':raw for name,raw in bindings.items()}}.items():
+        (output/name).write_bytes(raw)
+    receipt=dict(schema='transport/accounting-boundary-review/1',source_sha256=HELD,
+        fixture_kind='POST_IMPLEMENTATION_BOUNDARY_CONTROLS_NOT_PREFROZEN_DATA',
+        exact_cap_observations=observations,max_observed_report_bytes=size,winning_NA=n_na,winning_UNKNOWN=n_unknown,
+        actual=result,files={p.name:dict(bytes=p.stat().st_size,sha256=sha(p.read_bytes())) for p in output.iterdir()},
+        output_upper_bound_proved=False)
+    (output/'receipt.json').write_bytes(canonical(receipt)+b'\n')
+    print(json.dumps(receipt,sort_keys=True))
+
+
+if __name__=='__main__':
+    main()

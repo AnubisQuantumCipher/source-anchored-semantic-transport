@@ -1,0 +1,19 @@
+test_changed_installation (__main__.ReceiptControls.test_changed_installation) ... ok
+test_changed_original_installation (__main__.ReceiptControls.test_changed_original_installation) ... ok
+test_changed_source (__main__.ReceiptControls.test_changed_source) ... ok
+test_changed_stream (__main__.ReceiptControls.test_changed_stream) ... ok
+test_incomplete_proof_units (__main__.ReceiptControls.test_incomplete_proof_units) ... ok
+test_missing_log (__main__.ReceiptControls.test_missing_log) ... ok
+test_omitted_suite (__main__.ReceiptControls.test_omitted_suite) ... ok
+test_portable_inner_failure (__main__.ReceiptControls.test_portable_inner_failure) ... ok
+test_positive_baseline (__main__.ReceiptControls.test_positive_baseline) ... ok
+test_skipped_suite (__main__.ReceiptControls.test_skipped_suite) ... ok
+test_source_inventory_omission (__main__.ReceiptControls.test_source_inventory_omission) ... ok
+test_swallowed_suite_failure (__main__.ReceiptControls.test_swallowed_suite_failure) ... ok
+test_unproved_check (__main__.ReceiptControls.test_unproved_check) ... ok
+test_weakened_proof_contract (__main__.ReceiptControls.test_weakened_proof_contract) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.345s
+
+OK

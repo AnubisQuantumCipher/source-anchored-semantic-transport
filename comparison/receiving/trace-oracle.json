@@ -1,0 +1,386 @@
+{
+  "schema": "transport/public-receiving-trace-oracle/1",
+  "status": "FROZEN_LITERAL_EXPECTATIONS_BEFORE_IMPLEMENTATION",
+  "contract": {
+    "path": "comparison/receiving/contract.json",
+    "sha256": "7ea4477e4a51f05c274cbea7cdd5c5b68b08c88f50f2c550f180ca8e088622a2"
+  },
+  "authorship": "Independent source-authored synthetic data and expected projections. No expected result is obtained from a collector, product checker, live actor or implementation-under-test. Data strings are never executed.",
+  "scope": "One public development dry run. Native files and the same ordinary tools are available to both receiving arms. The older handoff-client restrictions and 32-call quota are not adopted. This oracle qualifies metadata projection and retained collector protocol controls; it is not heldout, study, benefit or product acceptance evidence.",
+  "historical_sources": [
+    {
+      "role": "phase_aware_capture",
+      "path": "/home/sicarii/Projects/source-anchored-semantic-transport/evidence/semantic-omission-v1/trace-tools-01/capture_trace.py",
+      "sha256": "dfa2a0fd39db5eb258ac1ffed6236101a46323489917da624c8fbaf5fe7c2aab"
+    },
+    {
+      "role": "trace_support",
+      "path": "/home/sicarii/Projects/source-anchored-semantic-transport/evidence/semantic-omission-v1/trace-tools-01/trace_support.py",
+      "sha256": "7c0d3f4730af0bb39df1db6369767c30a8dcd6c81880033b37f079888e5e2add"
+    }
+  ],
+  "projection_contract": {
+    "function_boundary": "One already parsed JSON record enters metadata projection. Return exactly expected.projection, including null when ignored, or an explicit bounded refusal. The scanner separately adds line, offset and representation=WHITELISTED_FIELDS_NOT_RAW_RECORD. Metadata comparisons are structural JSON equality; no field may be silently inserted, dropped or coerced.",
+    "routes": [
+      "outer session_meta with object payload -> SESSION_METADATA; select payload id, session_id, timestamp, cli_version",
+      "outer turn_context with object payload -> TURN_MODEL_METADATA; select payload model, model_provider, model_slug, reasoning_effort, effort; no selected keys -> null",
+      "outer event_msg with object payload.type task_started or task_complete -> TASK_LIFECYCLE_METADATA; select payload type, started_at, completed_at, duration_ms, time_to_first_token_ms and, when present, outer timestamp as fields.timestamp",
+      "outer token_usage_record or token_count with object payload and absent or matching payload.type, or outer event_msg with object payload.type token_count -> OBSERVED_USAGE_RECORD",
+      "all other routes, including reasoning and arbitrary payloads with token_count-shaped nested data, -> null without exporting or validating unrelated private fields"
+    ],
+    "session_strings": "id, session_id and cli_version when present must be nonempty strings of at most 256 Unicode code points. UUID equality and lineage are checked separately. Payload timestamp, when present, must be null or a nonempty string of at most 128 Unicode code points. No date parsing or timestamp subtraction.",
+    "model_strings": "Every present recognized model key must be a nonempty string of at most 256 Unicode code points. Null, Boolean, numeric, list and object recognized model values refuse. No normalization, alias resolution or backend-attestation inference.",
+    "lifecycle_strings": "started_at and completed_at and outer record timestamp, when present, must be null or nonempty strings of at most 128 Unicode code points. Unknown lifecycle keys are omitted.",
+    "timing_values": "duration_ms and time_to_first_token_ms when present must be null or exact JSON integers in [0,9223372036854775807]. Boolean, negative, floating-point, string, list or object recognized timing values refuse. Null remains null and means UNKNOWN, never zero.",
+    "usage_scalars": ["input_tokens", "cached_input_tokens", "output_tokens", "reasoning_output_tokens", "total_tokens", "input_token_count", "output_token_count"],
+    "usage_groups": ["usage", "thread_token_usage", "turn_token_usage", "total_token_usage", "last_token_usage", "token_usage"],
+    "usage_values": "Recognized scalar token fields, direct or inside recognized groups, must be exact JSON integers in [0,9223372036854775807]. Null, Boolean, negative, floating-point, string, list and object recognized scalar values refuse. Each recognized group is null or an object; null remains null and means UNKNOWN. Unknown keys inside a group are omitted, regardless of value. An empty recognized group projects as {}.",
+    "usage_containers": "Read direct payload scalar/group fields and optional payload.info scalar/group fields. info must be object or null when present; null is UNKNOWN and contributes no fields. A recognized scalar/group name present in both direct payload and info refuses even if values agree; do not silently overwrite or merge snapshots. A recognized group in an irrelevant record is not a metadata route.",
+    "usage_output": "OBSERVED_USAGE_RECORD always carries aggregation=NONE. Keep every admitted observation separately, including identical or decreasing snapshots. Do not sum, subtract, derive missing totals, infer cache ratios, check arithmetic consistency, infer billing or claim actual human work. An eligible usage record with no selected fields projects fields={}.",
+    "unknown_fields": "Never export raw session_meta, turn_context, info or lifecycle payloads. Unrecognized fields are ignored; no recursion through arbitrary nested private data. Global JSON framing, duplicate-key, depth and resource controls still apply before projection.",
+    "missing_values": "An absent recognized field stays absent. Missing metadata is UNKNOWN in the report policy, not a fabricated null/zero value. Only explicitly admitted null timestamps, timing values and groups remain literal null.",
+    "failure": "A malformed recognized value causes CAPTURE_REFUSED or an explicit test-visible projection refusal; it must never be silently omitted to produce a passing capture. Failure reason text need not equal this oracle's category string, but must name the offending category/field. No successful final report may be emitted after refusal.",
+    "bounds": {
+      "maximum_numeric_value": 9223372036854775807,
+      "maximum_model_string_codepoints": 256,
+      "maximum_session_identifier_or_cli_codepoints": 256,
+      "maximum_timestamp_codepoints": 128,
+      "maximum_rollout_bytes": 33554432,
+      "maximum_line_bytes": 1048576,
+      "maximum_lines": 32768,
+      "maximum_tool_events_combined": 768,
+      "maximum_metadata_events_including_first_session_meta": 256,
+      "maximum_observed_finals": 8,
+      "maximum_output_bytes": 4194304,
+      "maximum_json_container_depth": 64,
+      "maximum_json_object_fields": 1024
+    },
+    "first_record": "The initial session_meta is both lineage-checked and projected once as SESSION_METADATA. It counts toward the existing 256 metadata-event budget. It is not exported raw. Do not skip its id/CLI fields merely because the scanner consumes it separately for lineage."
+  },
+  "metadata_cases": [
+    {
+      "id": "session_minimal_selected_fields",
+      "input": {"type": "session_meta", "payload": {"id": "00000000-0000-0000-0000-000000000001", "session_id": "session-synthetic", "timestamp": "2026-10-29T00:00:00Z", "cli_version": "synthetic-cli-1", "creator_id": "SECRET_CREATOR_DO_NOT_EXPORT", "base_instructions": "SECRET_INSTRUCTIONS_DO_NOT_EXPORT"}},
+      "expected": {"disposition": "PROJECT", "projection": {"kind": "SESSION_METADATA", "fields": {"id": "00000000-0000-0000-0000-000000000001", "session_id": "session-synthetic", "timestamp": "2026-10-29T00:00:00Z", "cli_version": "synthetic-cli-1"}}}
+    },
+    {
+      "id": "session_absent_fields_stay_absent",
+      "input": {"type": "session_meta", "payload": {"id": "00000000-0000-0000-0000-000000000001", "source": {"private": "SECRET_SOURCE_NOT_METADATA"}}},
+      "expected": {"disposition": "PROJECT", "projection": {"kind": "SESSION_METADATA", "fields": {"id": "00000000-0000-0000-0000-000000000001"}}}
+    },
+    {
+      "id": "session_null_timestamp_unknown",
+      "input": {"type": "session_meta", "payload": {"id": "00000000-0000-0000-0000-000000000001", "timestamp": null}},
+      "expected": {"disposition": "PROJECT", "projection": {"kind": "SESSION_METADATA", "fields": {"id": "00000000-0000-0000-0000-000000000001", "timestamp": null}}}
+    },
+    {
+      "id": "legacy_model_keys_unchanged",
+      "input": {"type": "turn_context", "payload": {"model": "gpt-6.1-sol", "model_provider": "openai", "model_slug": "gpt-6.1-sol", "reasoning_effort": "high", "effort": "high", "user_instructions": "SECRET_USER_INSTRUCTIONS", "raw_reasoning": "SECRET_REASONING"}},
+      "expected": {"disposition": "PROJECT", "projection": {"kind": "TURN_MODEL_METADATA", "fields": {"model": "gpt-6.1-sol", "model_provider": "openai", "model_slug": "gpt-6.1-sol", "reasoning_effort": "high", "effort": "high"}}}
+    },
+    {
+      "id": "turn_context_without_selected_fields",
+      "input": {"type": "turn_context", "payload": {"user_instructions": "SECRET_USER_INSTRUCTIONS", "token_usage": {"input_tokens": false}}},
+      "expected": {"disposition": "IGNORE", "projection": null}
+    },
+    {
+      "id": "task_started_timestamp_only",
+      "input": {"timestamp": "2026-10-29T00:00:01Z", "type": "event_msg", "payload": {"type": "task_started", "started_at": "2026-10-29T00:00:01Z", "task_id": "SECRET_TASK_ID", "instructions": "SECRET_LIFECYCLE_INSTRUCTIONS"}},
+      "expected": {"disposition": "PROJECT", "projection": {"kind": "TASK_LIFECYCLE_METADATA", "fields": {"type": "task_started", "timestamp": "2026-10-29T00:00:01Z", "started_at": "2026-10-29T00:00:01Z"}}}
+    },
+    {
+      "id": "task_complete_zero_and_positive_timings",
+      "input": {"timestamp": "2026-10-29T00:00:02Z", "type": "event_msg", "payload": {"type": "task_complete", "started_at": "2026-10-29T00:00:01Z", "completed_at": "2026-10-29T00:00:02Z", "duration_ms": 1000, "time_to_first_token_ms": 0, "cost": 99.99, "reasoning": "SECRET_LIFECYCLE_REASONING"}},
+      "expected": {"disposition": "PROJECT", "projection": {"kind": "TASK_LIFECYCLE_METADATA", "fields": {"type": "task_complete", "timestamp": "2026-10-29T00:00:02Z", "started_at": "2026-10-29T00:00:01Z", "completed_at": "2026-10-29T00:00:02Z", "duration_ms": 1000, "time_to_first_token_ms": 0}}}
+    },
+    {
+      "id": "task_complete_nulls_are_unknown",
+      "input": {"timestamp": null, "type": "event_msg", "payload": {"type": "task_complete", "started_at": null, "completed_at": null, "duration_ms": null, "time_to_first_token_ms": null}},
+      "expected": {"disposition": "PROJECT", "projection": {"kind": "TASK_LIFECYCLE_METADATA", "fields": {"type": "task_complete", "timestamp": null, "started_at": null, "completed_at": null, "duration_ms": null, "time_to_first_token_ms": null}}}
+    },
+    {
+      "id": "task_complete_maximum_integer",
+      "input": {"type": "event_msg", "payload": {"type": "task_complete", "duration_ms": 9223372036854775807, "time_to_first_token_ms": 9223372036854775807}},
+      "expected": {"disposition": "PROJECT", "projection": {"kind": "TASK_LIFECYCLE_METADATA", "fields": {"type": "task_complete", "duration_ms": 9223372036854775807, "time_to_first_token_ms": 9223372036854775807}}}
+    },
+    {
+      "id": "new_usage_thread_and_turn_groups",
+      "input": {"type": "token_usage_record", "payload": {"usage": {"input_tokens": 13, "cached_input_tokens": 4, "output_tokens": 3, "reasoning_output_tokens": 1, "total_tokens": 16, "secret": "SECRET_USAGE_PRIVATE"}, "thread_token_usage": {"input_tokens": 29, "output_tokens": 5, "total_tokens": 34}, "turn_token_usage": {"input_tokens": 13, "output_tokens": 3, "total_tokens": 16}, "account": "SECRET_ACCOUNT", "billed_cost": "SECRET_BILLING"}},
+      "expected": {"disposition": "PROJECT", "projection": {"kind": "OBSERVED_USAGE_RECORD", "fields": {"usage": {"input_tokens": 13, "cached_input_tokens": 4, "output_tokens": 3, "reasoning_output_tokens": 1, "total_tokens": 16}, "thread_token_usage": {"input_tokens": 29, "output_tokens": 5, "total_tokens": 34}, "turn_token_usage": {"input_tokens": 13, "output_tokens": 3, "total_tokens": 16}}, "aggregation": "NONE"}}
+    },
+    {
+      "id": "new_usage_matching_payload_type",
+      "input": {"type": "token_usage_record", "payload": {"type": "token_usage_record", "usage": {"input_tokens": 0}, "thread_token_usage": null, "turn_token_usage": {}}},
+      "expected": {"disposition": "PROJECT", "projection": {"kind": "OBSERVED_USAGE_RECORD", "fields": {"usage": {"input_tokens": 0}, "thread_token_usage": null, "turn_token_usage": {}}, "aggregation": "NONE"}}
+    },
+    {
+      "id": "legacy_token_count_info_total_last",
+      "input": {"type": "event_msg", "payload": {"type": "token_count", "info": {"total_token_usage": {"input_tokens": 50, "cached_input_tokens": 20, "output_tokens": 7, "reasoning_output_tokens": 2, "total_tokens": 57}, "last_token_usage": {"input_tokens": 9, "output_tokens": 1, "total_tokens": 10}, "model_context_window": 999999, "secret": "SECRET_INFO"}}},
+      "expected": {"disposition": "PROJECT", "projection": {"kind": "OBSERVED_USAGE_RECORD", "fields": {"total_token_usage": {"input_tokens": 50, "cached_input_tokens": 20, "output_tokens": 7, "reasoning_output_tokens": 2, "total_tokens": 57}, "last_token_usage": {"input_tokens": 9, "output_tokens": 1, "total_tokens": 10}}, "aggregation": "NONE"}}
+    },
+    {
+      "id": "legacy_direct_scalars_and_token_usage",
+      "input": {"type": "token_count", "payload": {"input_tokens": 0, "cached_input_tokens": 0, "output_tokens": 1, "reasoning_output_tokens": 0, "total_tokens": 1, "input_token_count": 0, "output_token_count": 1, "token_usage": {"input_tokens": 0, "output_tokens": 1}}},
+      "expected": {"disposition": "PROJECT", "projection": {"kind": "OBSERVED_USAGE_RECORD", "fields": {"input_tokens": 0, "cached_input_tokens": 0, "output_tokens": 1, "reasoning_output_tokens": 0, "total_tokens": 1, "input_token_count": 0, "output_token_count": 1, "token_usage": {"input_tokens": 0, "output_tokens": 1}}, "aggregation": "NONE"}}
+    },
+    {
+      "id": "usage_maximum_integer_no_total_inference",
+      "input": {"type": "token_usage_record", "payload": {"usage": {"input_tokens": 9223372036854775807, "output_tokens": 9223372036854775807}}},
+      "expected": {"disposition": "PROJECT", "projection": {"kind": "OBSERVED_USAGE_RECORD", "fields": {"usage": {"input_tokens": 9223372036854775807, "output_tokens": 9223372036854775807}}, "aggregation": "NONE"}}
+    },
+    {
+      "id": "usage_all_null_groups_unknown",
+      "input": {"type": "token_usage_record", "payload": {"usage": null, "thread_token_usage": null, "turn_token_usage": null, "total_token_usage": null, "last_token_usage": null, "token_usage": null}},
+      "expected": {"disposition": "PROJECT", "projection": {"kind": "OBSERVED_USAGE_RECORD", "fields": {"usage": null, "thread_token_usage": null, "turn_token_usage": null, "total_token_usage": null, "last_token_usage": null, "token_usage": null}, "aggregation": "NONE"}}
+    },
+    {
+      "id": "usage_null_info_unknown_no_invention",
+      "input": {"type": "event_msg", "payload": {"type": "token_count", "info": null}},
+      "expected": {"disposition": "PROJECT", "projection": {"kind": "OBSERVED_USAGE_RECORD", "fields": {}, "aggregation": "NONE"}}
+    },
+    {
+      "id": "usage_unknown_nested_fields_never_exported",
+      "input": {"type": "token_usage_record", "payload": {"usage": {"input_tokens": 3, "unknown_boolean": false, "unknown_negative": -1, "unknown_float": 0.25, "unknown_nested": {"input_tokens": false, "secret": "SECRET_NESTED"}}, "private_nested": {"usage": {"output_tokens": false}}}},
+      "expected": {"disposition": "PROJECT", "projection": {"kind": "OBSERVED_USAGE_RECORD", "fields": {"usage": {"input_tokens": 3}}, "aggregation": "NONE"}}
+    },
+    {
+      "id": "irrelevant_payload_not_token_route",
+      "input": {"type": "reasoning", "payload": {"type": "token_count", "usage": {"input_tokens": false}, "text": "SECRET_REASONING"}},
+      "expected": {"disposition": "IGNORE", "projection": null}
+    },
+    {
+      "id": "irrelevant_event_not_lifecycle_or_usage",
+      "input": {"type": "event_msg", "payload": {"type": "agent_reasoning", "duration_ms": false, "usage": {"input_tokens": -1}, "text": "SECRET_REASONING"}},
+      "expected": {"disposition": "IGNORE", "projection": null}
+    },
+    {
+      "id": "irrelevant_nonobject_payload",
+      "input": {"type": "unrelated", "payload": ["SECRET_ARRAY"]},
+      "expected": {"disposition": "IGNORE", "projection": null}
+    },
+    {
+      "id": "conflicting_usage_payload_type_ignored",
+      "input": {"type": "token_usage_record", "payload": {"type": "agent_reasoning", "usage": {"input_tokens": 1}, "text": "SECRET_REASONING"}},
+      "expected": {"disposition": "IGNORE", "projection": null}
+    },
+    {
+      "id": "usage_scalar_boolean_refuses",
+      "input": {"type": "token_usage_record", "payload": {"input_tokens": true}},
+      "expected": {"disposition": "REFUSE", "category": "recognized_token_value", "field": "input_tokens"}
+    },
+    {
+      "id": "usage_group_boolean_refuses",
+      "input": {"type": "token_usage_record", "payload": {"thread_token_usage": {"total_tokens": false}}},
+      "expected": {"disposition": "REFUSE", "category": "recognized_token_value", "field": "thread_token_usage.total_tokens"}
+    },
+    {
+      "id": "usage_negative_refuses",
+      "input": {"type": "event_msg", "payload": {"type": "token_count", "info": {"last_token_usage": {"output_tokens": -1}}}},
+      "expected": {"disposition": "REFUSE", "category": "recognized_token_value", "field": "info.last_token_usage.output_tokens"}
+    },
+    {
+      "id": "usage_integral_float_refuses",
+      "input": {"type": "token_usage_record", "payload": {"usage": {"input_tokens": 1.0}}},
+      "expected": {"disposition": "REFUSE", "category": "recognized_token_value", "field": "usage.input_tokens"}
+    },
+    {
+      "id": "usage_nonintegral_float_refuses",
+      "input": {"type": "token_usage_record", "payload": {"turn_token_usage": {"output_tokens": 0.5}}},
+      "expected": {"disposition": "REFUSE", "category": "recognized_token_value", "field": "turn_token_usage.output_tokens"}
+    },
+    {
+      "id": "usage_integer_above_bound_refuses",
+      "input": {"type": "token_usage_record", "payload": {"usage": {"total_tokens": 9223372036854775808}}},
+      "expected": {"disposition": "REFUSE", "category": "recognized_token_value", "field": "usage.total_tokens"}
+    },
+    {
+      "id": "usage_null_scalar_refuses",
+      "input": {"type": "token_usage_record", "payload": {"usage": {"total_tokens": null}}},
+      "expected": {"disposition": "REFUSE", "category": "recognized_token_value", "field": "usage.total_tokens"}
+    },
+    {
+      "id": "usage_string_scalar_refuses",
+      "input": {"type": "token_usage_record", "payload": {"usage": {"input_tokens": "12"}}},
+      "expected": {"disposition": "REFUSE", "category": "recognized_token_value", "field": "usage.input_tokens"}
+    },
+    {
+      "id": "usage_group_scalar_refuses",
+      "input": {"type": "token_usage_record", "payload": {"usage": true}},
+      "expected": {"disposition": "REFUSE", "category": "recognized_usage_group", "field": "usage"}
+    },
+    {
+      "id": "usage_group_array_refuses",
+      "input": {"type": "token_usage_record", "payload": {"thread_token_usage": []}},
+      "expected": {"disposition": "REFUSE", "category": "recognized_usage_group", "field": "thread_token_usage"}
+    },
+    {
+      "id": "usage_info_array_refuses",
+      "input": {"type": "event_msg", "payload": {"type": "token_count", "info": []}},
+      "expected": {"disposition": "REFUSE", "category": "recognized_usage_container", "field": "info"}
+    },
+    {
+      "id": "usage_duplicate_container_name_refuses",
+      "input": {"type": "event_msg", "payload": {"type": "token_count", "usage": {"input_tokens": 3}, "info": {"usage": {"input_tokens": 3}}}},
+      "expected": {"disposition": "REFUSE", "category": "ambiguous_usage_container", "field": "usage"}
+    },
+    {
+      "id": "timing_boolean_refuses",
+      "input": {"type": "event_msg", "payload": {"type": "task_complete", "duration_ms": true}},
+      "expected": {"disposition": "REFUSE", "category": "recognized_timing_value", "field": "duration_ms"}
+    },
+    {
+      "id": "timing_negative_refuses",
+      "input": {"type": "event_msg", "payload": {"type": "task_complete", "time_to_first_token_ms": -1}},
+      "expected": {"disposition": "REFUSE", "category": "recognized_timing_value", "field": "time_to_first_token_ms"}
+    },
+    {
+      "id": "timing_float_refuses",
+      "input": {"type": "event_msg", "payload": {"type": "task_complete", "duration_ms": 1.0}},
+      "expected": {"disposition": "REFUSE", "category": "recognized_timing_value", "field": "duration_ms"}
+    },
+    {
+      "id": "timing_above_bound_refuses",
+      "input": {"type": "event_msg", "payload": {"type": "task_complete", "duration_ms": 9223372036854775808}},
+      "expected": {"disposition": "REFUSE", "category": "recognized_timing_value", "field": "duration_ms"}
+    },
+    {
+      "id": "timestamp_boolean_refuses",
+      "input": {"timestamp": false, "type": "event_msg", "payload": {"type": "task_complete"}},
+      "expected": {"disposition": "REFUSE", "category": "recognized_timestamp", "field": "timestamp"}
+    },
+    {
+      "id": "model_null_refuses",
+      "input": {"type": "turn_context", "payload": {"model": null}},
+      "expected": {"disposition": "REFUSE", "category": "recognized_model_string", "field": "model"}
+    },
+    {
+      "id": "model_boolean_refuses",
+      "input": {"type": "turn_context", "payload": {"effort": true}},
+      "expected": {"disposition": "REFUSE", "category": "recognized_model_string", "field": "effort"}
+    },
+    {
+      "id": "model_empty_refuses",
+      "input": {"type": "turn_context", "payload": {"model": ""}},
+      "expected": {"disposition": "REFUSE", "category": "recognized_model_string", "field": "model"}
+    },
+    {
+      "id": "session_cli_nonstr_refuses",
+      "input": {"type": "session_meta", "payload": {"cli_version": 1}},
+      "expected": {"disposition": "REFUSE", "category": "recognized_session_string", "field": "cli_version"}
+    }
+  ],
+  "sequence_cases": [
+    {
+      "id": "cumulative_observations_not_summed_or_repaired",
+      "input_records": [
+        {"type": "token_usage_record", "payload": {"thread_token_usage": {"input_tokens": 100, "output_tokens": 10, "total_tokens": 999}}},
+        {"type": "token_usage_record", "payload": {"thread_token_usage": {"input_tokens": 100, "output_tokens": 10, "total_tokens": 999}}},
+        {"type": "token_usage_record", "payload": {"thread_token_usage": {"input_tokens": 7, "output_tokens": 1, "total_tokens": 8}}}
+      ],
+      "expected_projections_literal": [
+        {"kind": "OBSERVED_USAGE_RECORD", "fields": {"thread_token_usage": {"input_tokens": 100, "output_tokens": 10, "total_tokens": 999}}, "aggregation": "NONE"},
+        {"kind": "OBSERVED_USAGE_RECORD", "fields": {"thread_token_usage": {"input_tokens": 100, "output_tokens": 10, "total_tokens": 999}}, "aggregation": "NONE"},
+        {"kind": "OBSERVED_USAGE_RECORD", "fields": {"thread_token_usage": {"input_tokens": 7, "output_tokens": 1, "total_tokens": 8}}, "aggregation": "NONE"}
+      ],
+      "expected_summary": {"aggregation": "NONE", "billed_cost": "UNKNOWN_NOT_REPORTED", "derived_total": "FORBIDDEN", "decreasing_or_inconsistent_snapshot": "RETAINED_NOT_REPAIRED"}
+    }
+  ],
+  "limit_case_specification": {
+    "construction_policy": "These finite declarative fixture specifications construct data only, never executable source. The test author may materialize repeated scalar strings, records or byte padding using the explicit counts below. Expected outcomes are literal and must not be computed by the implementation-under-test. Record constructors use the literal templates in this document, compact UTF-8 JSON and LF framing unless a case explicitly removes LF. Boundary counts include the initial session_meta. Large limit data need not be stored in this oracle.",
+    "cases": [
+      {"id": "model_string_at_limit", "construction": {"template": {"type": "turn_context", "payload": {"model": "REPLACE_DATA_STRING"}}, "replace_data_string": {"field": "payload.model", "codepoint": "m", "count": 256}}, "expected": {"disposition": "PROJECT", "kind": "TURN_MODEL_METADATA", "field": "model", "unchanged_codepoint": "m", "unchanged_count": 256}},
+      {"id": "model_string_over_limit", "construction": {"template": {"type": "turn_context", "payload": {"model": "REPLACE_DATA_STRING"}}, "replace_data_string": {"field": "payload.model", "codepoint": "m", "count": 257}}, "expected": {"disposition": "REFUSE", "category": "model_string_bound"}},
+      {"id": "timestamp_at_limit", "construction": {"template": {"type": "event_msg", "payload": {"type": "task_complete", "completed_at": "REPLACE_DATA_STRING"}}, "replace_data_string": {"field": "payload.completed_at", "codepoint": "t", "count": 128}}, "expected": {"disposition": "PROJECT", "kind": "TASK_LIFECYCLE_METADATA", "field": "completed_at", "unchanged_codepoint": "t", "unchanged_count": 128}},
+      {"id": "timestamp_over_limit", "construction": {"template": {"type": "event_msg", "payload": {"type": "task_complete", "completed_at": "REPLACE_DATA_STRING"}}, "replace_data_string": {"field": "payload.completed_at", "codepoint": "t", "count": 129}}, "expected": {"disposition": "REFUSE", "category": "timestamp_bound"}},
+      {"id": "cli_string_over_limit", "construction": {"template": {"type": "session_meta", "payload": {"id": "00000000-0000-0000-0000-000000000001", "cli_version": "REPLACE_DATA_STRING"}}, "replace_data_string": {"field": "payload.cli_version", "codepoint": "v", "count": 257}}, "expected": {"disposition": "REFUSE", "category": "session_string_bound"}},
+      {"id": "metadata_events_at_limit", "construction": {"initial": "matching_lineage_first_record", "repeat_record": {"type": "turn_context", "payload": {"model": "gpt-6.1-sol"}}, "repeat_count": 255}, "expected": {"disposition": "CAPTURE", "metadata_count": 256, "first_kind": "SESSION_METADATA", "remaining_kind": "TURN_MODEL_METADATA"}},
+      {"id": "metadata_events_over_limit", "construction": {"initial": "matching_lineage_first_record", "repeat_record": {"type": "turn_context", "payload": {"model": "gpt-6.1-sol"}}, "repeat_count": 256}, "expected": {"disposition": "REFUSE", "category": "metadata_event_bound"}},
+      {"id": "tool_events_at_limit", "construction": {"initial": "matching_lineage_first_record", "repeat_record": {"type": "response_item", "payload": {"type": "function_call", "name": "synthetic_data_only", "call_id": "literal-repeated-id", "arguments": "{}"}}, "repeat_count": 768}, "expected": {"disposition": "CAPTURE", "tool_event_count": 768, "deduplication": "NONE"}},
+      {"id": "tool_events_over_limit", "construction": {"initial": "matching_lineage_first_record", "repeat_record": {"type": "response_item", "payload": {"type": "function_call", "name": "synthetic_data_only", "call_id": "literal-repeated-id", "arguments": "{}"}}, "repeat_count": 769}, "expected": {"disposition": "REFUSE", "category": "tool_event_bound"}},
+      {"id": "json_depth_at_limit", "construction": {"raw_json_array_nesting": 64, "leaf": 0}, "expected": {"disposition": "PARSE", "container_depth": 64}},
+      {"id": "json_depth_over_limit", "construction": {"raw_json_array_nesting": 65, "leaf": 0}, "expected": {"disposition": "REFUSE", "category": "json_depth_bound"}},
+      {"id": "json_object_fields_at_limit", "construction": {"raw_json_object_field_count": 1024, "keys": "unique ASCII k plus nonnegative decimal index", "value": 0}, "expected": {"disposition": "PARSE", "object_fields": 1024}},
+      {"id": "json_object_fields_over_limit", "construction": {"raw_json_object_field_count": 1025, "keys": "unique ASCII k plus nonnegative decimal index", "value": 0}, "expected": {"disposition": "REFUSE", "category": "json_object_field_bound"}},
+      {"id": "line_bytes_at_limit", "construction": {"initial": "matching_lineage_first_record", "raw_line_template": "{\"type\":\"ignored\",\"payload\":\"ASCII_a_padding\"}\n", "pad_to_total_line_bytes": 1048576}, "expected": {"disposition": "CAPTURE", "ignored_line_exported": false}},
+      {"id": "line_bytes_over_limit", "construction": {"initial": "matching_lineage_first_record", "raw_line_template": "{\"type\":\"ignored\",\"payload\":\"ASCII_a_padding\"}\n", "pad_to_total_line_bytes": 1048577}, "expected": {"disposition": "REFUSE", "category": "line_byte_bound"}},
+      {"id": "line_count_at_limit", "construction": {"initial": "matching_lineage_first_record", "repeat_record": {"type": "ignored", "payload": {}}, "repeat_count": 32767}, "expected": {"disposition": "CAPTURE", "total_lines": 32768}},
+      {"id": "line_count_over_limit", "construction": {"initial": "matching_lineage_first_record", "repeat_record": {"type": "ignored", "payload": {}}, "repeat_count": 32768}, "expected": {"disposition": "REFUSE", "category": "line_count_bound"}},
+      {"id": "rollout_bytes_at_limit", "construction": {"initial": "matching_lineage_first_record", "remaining": "complete LF-terminated ignored JSON object records with ASCII string padding", "total_bytes": 33554432, "each_line_at_most_bytes": 1048576, "total_lines_at_most": 32768}, "expected": {"disposition": "CAPTURE", "source_bytes": 33554432}},
+      {"id": "rollout_bytes_over_limit", "construction": {"initial": "matching_lineage_first_record", "remaining": "complete LF-terminated ignored JSON object records with ASCII string padding", "total_bytes": 33554433, "each_line_at_most_bytes": 1048576, "total_lines_at_most": 32768}, "expected": {"disposition": "REFUSE", "category": "rollout_byte_bound"}},
+      {"id": "output_bytes_at_limit", "construction": {"boundary": "support.write", "ASCII_codepoint": "x", "count": 4194304}, "expected": {"disposition": "WRITE_EXACT", "bytes": 4194304}},
+      {"id": "output_bytes_over_limit", "construction": {"boundary": "support.write", "ASCII_codepoint": "x", "count": 4194305}, "expected": {"disposition": "REFUSE", "category": "output_byte_bound"}},
+      {"id": "finals_at_limit", "construction": {"initial": "matching_lineage_first_record", "repeat_record": {"type": "response_item", "payload": {"type": "message", "role": "assistant", "phase": "final_answer", "content": [{"type": "output_text", "text": "{}"}]}}, "repeat_count": 8}, "expected": {"disposition": "CAPTURE", "final_count": 8, "final_capture_state": "MULTIPLE_OBSERVED_FINALS_NO_SELECTION", "final_selection": "NONE_ALL_OBSERVATIONS_RETAINED"}},
+      {"id": "finals_over_limit", "construction": {"initial": "matching_lineage_first_record", "repeat_record": {"type": "response_item", "payload": {"type": "message", "role": "assistant", "phase": "final_answer", "content": [{"type": "output_text", "text": "{}"}]}}, "repeat_count": 9}, "expected": {"disposition": "REFUSE", "category": "final_count_bound"}}
+    ]
+  },
+  "protocol_fixture_specification": {
+    "policy": "Retain historical collector controls and exact-tool/final/lineage behavior. Cases below are data fixtures, not commands. Harness-only file creation, mutation and terminal-state injection must be finite and documented. Pin untouched original control sources and run their complete applicable controls in addition to these cases. No agent/model/data execution is permitted by this oracle.",
+    "matching_lineage_first_record": {
+      "type": "session_meta",
+      "payload": {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "session_id": "synthetic-session",
+        "timestamp": "2026-10-29T00:00:00Z",
+        "cli_version": "synthetic-cli",
+        "source": {"subagent": {"thread_spawn": {"parent_thread_id": "00000000-0000-0000-0000-000000000002", "agent_path": "/root/synthetic_receiver"}}},
+        "base_instructions": "SECRET_BASE_INSTRUCTIONS_NOT_EXPORTED"
+      }
+    },
+    "expected_lineage_arguments": {"expected_thread": "00000000-0000-0000-0000-000000000001", "expected_parent": "00000000-0000-0000-0000-000000000002", "expected_agent_path": "/root/synthetic_receiver"},
+    "expected_lineage_literal": {"thread_id": "00000000-0000-0000-0000-000000000001", "parent_thread_id": "00000000-0000-0000-0000-000000000002", "agent_path": "/root/synthetic_receiver", "identity_status": "OBSERVED_RECORD_MATCH_ONLY"},
+    "final_projection_cases": [
+      {"id": "legacy_channel_final", "input": {"timestamp": "2026-10-29T00:00:02Z", "type": "response_item", "payload": {"type": "message", "role": "assistant", "channel": "final", "content": [{"type": "text", "text": " {\"narrative\":\"exact\"}\n"}]}}, "expected": {"disposition": "PROJECT", "projection": {"timestamp": "2026-10-29T00:00:02Z", "text": " {\"narrative\":\"exact\"}\n", "plaintext_complete": true, "channel": "final", "phase": null, "plaintext_parts": 1, "representation": "WHITELISTED_PLAINTEXT_FINAL_PROJECTION"}}},
+      {"id": "current_phase_final", "input": {"type": "response_item", "payload": {"type": "message", "role": "assistant", "phase": "final_answer", "content": [{"type": "output_text", "text": "{}"}]}}, "expected": {"disposition": "PROJECT", "projection": {"timestamp": null, "text": "{}", "plaintext_complete": true, "channel": null, "phase": "final_answer", "plaintext_parts": 1, "representation": "WHITELISTED_PLAINTEXT_FINAL_PROJECTION"}}},
+      {"id": "joint_final_multipart_no_inserted_newline", "input": {"type": "response_item", "payload": {"type": "message", "role": "assistant", "channel": "final", "phase": "final_answer", "content": [{"type": "output_text", "text": "{\"narrative\":"}, {"type": "text", "text": "\"exact\"}\n"}]}}, "expected": {"disposition": "PROJECT", "projection": {"timestamp": null, "text": "{\"narrative\":\"exact\"}\n", "plaintext_complete": true, "channel": "final", "phase": "final_answer", "plaintext_parts": 2, "representation": "WHITELISTED_PLAINTEXT_FINAL_PROJECTION"}}},
+      {"id": "analysis_not_promoted", "input": {"type": "response_item", "payload": {"type": "message", "role": "assistant", "channel": "analysis", "content": [{"type": "text", "text": "SECRET_REASONING"}]}}, "expected": {"disposition": "IGNORE", "projection": null}},
+      {"id": "user_final_not_promoted", "input": {"type": "response_item", "payload": {"type": "message", "role": "user", "phase": "final_answer", "content": [{"type": "output_text", "text": "SOURCE_INSTRUCTION_NOT_A_FINAL"}]}}, "expected": {"disposition": "IGNORE", "projection": null}},
+      {"id": "channel_final_conflicting_phase_refuses", "input": {"type": "response_item", "payload": {"type": "message", "role": "assistant", "channel": "final", "phase": "analysis", "content": [{"type": "text", "text": "{}"}]}}, "expected": {"disposition": "REFUSE", "category": "conflicting_final_representation"}},
+      {"id": "phase_final_conflicting_channel_refuses", "input": {"type": "response_item", "payload": {"type": "message", "role": "assistant", "channel": "analysis", "phase": "final_answer", "content": [{"type": "text", "text": "{}"}]}}, "expected": {"disposition": "REFUSE", "category": "conflicting_final_representation"}},
+      {"id": "partial_plaintext_final_preserved_incomplete", "input": {"type": "response_item", "payload": {"type": "message", "role": "assistant", "phase": "final_answer", "content": [{"type": "output_text", "text": "{}"}, {"type": "encrypted_text", "encrypted_content": "SECRET_CIPHER_NOT_EXPORTED"}]}}, "expected": {"disposition": "PROJECT", "projection": {"timestamp": null, "text": "{}", "plaintext_complete": false, "channel": null, "phase": "final_answer", "plaintext_parts": 1, "representation": "WHITELISTED_PLAINTEXT_FINAL_PROJECTION"}}},
+      {"id": "empty_final_never_replaced_by_candidate", "input": {"type": "response_item", "payload": {"type": "message", "role": "assistant", "phase": "final_answer", "content": []}}, "expected": {"disposition": "PROJECT", "projection": {"timestamp": null, "text": "", "plaintext_complete": false, "channel": null, "phase": "final_answer", "plaintext_parts": 0, "representation": "WHITELISTED_PLAINTEXT_FINAL_PROJECTION"}}}
+    ],
+    "capture_cases": [
+      {"id": "terminal_owner_gate", "input": {"actor_state": "RUNNING", "rollout_has_task_complete": false}, "expected": {"disposition": "DO_NOT_CAPTURE", "reason": "actual actor must be terminal before capture", "owner_gate": true, "collector_attests_terminal_state": false}},
+      {"id": "terminal_error_keeps_missing_final", "input": {"actor_state": "FAILED_TERMINAL", "saved_candidate_utf8": "{}", "observed_final_records": []}, "expected": {"disposition": "CAPTURE", "final_capture_state": "NO_OBSERVED_FINAL", "saved_candidate_used_as_final": false, "protocol_success": "NOT_ESTABLISHED"}},
+      {"id": "different_saved_candidate_and_final_retained", "input": {"actor_state": "COMPLETED_TERMINAL", "saved_candidate_utf8": "{\"narrative\":\"saved\"}\n", "observed_final_utf8": "{\"narrative\":\"different\"}\n"}, "expected": {"disposition": "CAPTURE", "final_capture_state": "SINGLE_COMPLETE_PLAINTEXT_FINAL", "saved_candidate_used_as_final": false, "saved_candidate_utf8": "{\"narrative\":\"saved\"}\n", "observed_final_utf8": "{\"narrative\":\"different\"}\n", "candidate_final_equality": false, "automatic_repair": "FORBIDDEN"}},
+      {"id": "identical_finals_both_retained", "input": {"observed_final_utf8_list": ["{}", "{}"]}, "expected": {"disposition": "CAPTURE", "final_capture_state": "MULTIPLE_OBSERVED_FINALS_NO_SELECTION", "final_count": 2, "final_selection": "NONE_ALL_OBSERVATIONS_RETAINED"}},
+      {"id": "distinct_finals_both_retained", "input": {"observed_final_utf8_list": ["{\"x\":1}", "{\"x\":2}"]}, "expected": {"disposition": "CAPTURE", "final_capture_state": "MULTIPLE_OBSERVED_FINALS_NO_SELECTION", "final_count": 2, "final_selection": "NONE_ALL_OBSERVATIONS_RETAINED"}},
+      {"id": "exact_tool_source_no_execution", "input": {"type": "response_item", "payload": {"type": "custom_tool_call", "name": "functions.exec", "call_id": "synthetic-call", "input": "DO_NOT_EXECUTE_SOURCE_DATA\n$(touch forbidden)\n"}}, "expected": {"disposition": "RETAIN_TOOL_RECORD_EXACT", "kind": "custom_tool_call", "call_id": "synthetic-call", "name": "functions.exec", "source_utf8": "DO_NOT_EXECUTE_SOURCE_DATA\n$(touch forbidden)\n", "execution": "FORBIDDEN", "trim_or_regenerate": "FORBIDDEN"}},
+      {"id": "current_tool_output_blocks_retained", "input": {"type": "response_item", "payload": {"type": "custom_tool_call_output", "call_id": "synthetic-call", "output": [{"type": "input_text", "text": "literal output\n"}]}}, "expected": {"disposition": "RETAIN_TOOL_RECORD_EXACT", "value": [{"type": "input_text", "text": "literal output\n"}], "tool_output_block_coercion": "FORBIDDEN"}},
+      {"id": "truncation_warning_is_retained_not_success", "input": {"type": "response_item", "payload": {"type": "custom_tool_call_output", "call_id": "synthetic-call", "output": [{"type": "input_text", "text": "Warning: truncated output\nretained prefix"}]}}, "expected": {"disposition": "RETAIN_TOOL_RECORD_EXACT", "protocol_success": "NOT_ESTABLISHED", "caller_followup": "retain refusal or truncation as a separate failure; do not infer missing source bytes"}},
+      {"id": "wrong_thread", "construction": {"base": "matching_lineage_first_record", "replace": {"payload.id": "00000000-0000-0000-0000-000000000003"}}, "expected": {"disposition": "REFUSE", "category": "thread_identity"}},
+      {"id": "wrong_parent", "construction": {"base": "matching_lineage_first_record", "replace": {"payload.source.subagent.thread_spawn.parent_thread_id": "00000000-0000-0000-0000-000000000003"}}, "expected": {"disposition": "REFUSE", "category": "parent_identity"}},
+      {"id": "wrong_agent_path", "construction": {"base": "matching_lineage_first_record", "replace": {"payload.source.subagent.thread_spawn.agent_path": "/root/other_receiver"}}, "expected": {"disposition": "REFUSE", "category": "agent_path_identity"}},
+      {"id": "missing_subagent_source", "construction": {"base": "matching_lineage_first_record", "remove": "payload.source"}, "expected": {"disposition": "REFUSE", "category": "missing_subagent_source"}},
+      {"id": "wrong_first_record_type", "input": {"type": "turn_context", "payload": {"model": "gpt-6.1-sol"}}, "expected": {"disposition": "REFUSE", "category": "first_record_session_meta"}},
+      {"id": "duplicate_json_key", "input_raw_utf8": "{\"type\":\"ignored\",\"type\":\"event_msg\",\"payload\":{}}\n", "expected": {"disposition": "REFUSE", "category": "duplicate_json_field"}},
+      {"id": "truncated_json_syntax", "input_raw_utf8": "{\"type\":\"event_msg\",\"payload\":{\"type\":\"token_count\"}\n", "expected": {"disposition": "REFUSE", "category": "incomplete_json_framing"}},
+      {"id": "missing_jsonl_terminator", "input_raw_utf8": "{\"type\":\"ignored\",\"payload\":{}}", "expected": {"disposition": "REFUSE", "category": "truncated_jsonl_terminator"}},
+      {"id": "source_nonobject_record", "input_raw_utf8": "[]\n", "expected": {"disposition": "REFUSE", "category": "source_record_object"}},
+      {"id": "nonfinite_json_number", "input_raw_utf8": "{\"type\":\"token_usage_record\",\"payload\":{\"usage\":{\"input_tokens\":NaN}}}\n", "expected": {"disposition": "REFUSE", "category": "nonfinite_json_constant"}},
+      {"id": "rollout_growth_during_scan", "construction": {"action": "append complete ignored record after initial fstat and before scan-end fstat"}, "expected": {"disposition": "REFUSE", "category": "trace_changed_during_capture"}},
+      {"id": "rollout_mutation_after_scan", "construction": {"action": "replace one source byte after scan but before second source read"}, "expected": {"disposition": "REFUSE", "category": "trace_changed_after_capture"}},
+      {"id": "candidate_interface_launch_mutation", "construction": {"action": "separately mutate candidate, interface and launch after initial pins and before final input checks"}, "expected": {"disposition": "REFUSE_EACH_VARIANT", "category": "trial_inputs_changed"}},
+      {"id": "existing_or_symlink_output", "construction": {"action": "separately supply existing output directory and output symlink"}, "expected": {"disposition": "REFUSE_EACH_VARIANT", "category": "new_external_capture_required"}},
+      {"id": "source_symlink_or_special_file", "construction": {"action": "separately supply rollout symlink and nonregular file without executing it"}, "expected": {"disposition": "REFUSE_EACH_VARIANT", "category": "regular_nonsymlink_source_required"}}
+    ]
+  },
+  "qualification_receipt_requirements": [
+    "Pin this raw oracle, contract, versioned capture/support code, unchanged historical controls and exact Python executable before any controls or actor launch.",
+    "Run deterministic literal metadata/sequence/final cases and finite limit/protocol fixtures in both ordinary and optimized Python; assertions alone are not enforcement.",
+    "Retain raw first command/stdout/stderr/exit, all expected/actual projections and failures. Check exact exported fields and absence of SECRET markers from projected metadata/final text; tool payloads remain exact data and are not subject to blanket metadata redaction.",
+    "Require the initial session metadata projection, unchanged exact tool bytes, all observed finals, lineage/input mutation refusals, JSON framing refusals and file-growth controls. Do not waive inherited controls to admit new metadata.",
+    "Freeze actual task/oracle/native source/runtime/launch identities and obtain actual GPT-6.1 review before either actual receiver. A control pass does not grant OS confinement, hidden-access exclusion, backend plaintext attestation or semantic acceptance."
+  ],
+  "nonclaims": {
+    "implementation": "UNRUN_NO_IMPLEMENTATION_AUTHORIZED_BY_THIS_ORACLE",
+    "actual_receivers": "UNRUN",
+    "metadata_math": "No arithmetic consistency, token summation, timing subtraction or monetary inference",
+    "authority": "NONE",
+    "semantic_completeness": "UNPROVEN",
+    "backend_attestation": "UNKNOWN",
+    "hidden_access": "UNKNOWN",
+    "os_confinement": "UNPROVEN",
+    "product_acceptance": "NOT_ESTABLISHED"
+  }
+}

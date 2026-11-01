@@ -1,0 +1,1674 @@
+{
+  "benefit": "NOT_MEASURED; identical checker and annotation development parity only",
+  "external_validation": "EXTERNAL_VALIDATION_PENDING",
+  "files": [
+    {
+      "bytes": 5798,
+      "path": ".github/workflows/source.yml",
+      "sha256": "2fdfd41a519c3ad992c9ce9e2d740db7ba64d3a7de56bd6d413a8e639ba4aa5a"
+    },
+    {
+      "bytes": 5113,
+      "path": "examples/quorum-impact-v1/I01_NO_UPDATES/body.json",
+      "sha256": "c529b27ea34a4a0df2e10a0bfe53225cb4ff9b4549d5ac2b8d4c62424c21977f"
+    },
+    {
+      "bytes": 806,
+      "path": "examples/quorum-impact-v1/I01_NO_UPDATES/expected-first.json",
+      "sha256": "f631a3fd0d4d8a30406f8e0b882d9b872ce1f860779e107501e0461ee515b71c"
+    },
+    {
+      "bytes": 759,
+      "path": "examples/quorum-impact-v1/I01_NO_UPDATES/expected.json",
+      "sha256": "bae3bfc41986dfd951337e8903514a018ed83d91e8aede8e45620074257b829c"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-impact-v1/I01_NO_UPDATES/held-update-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-impact-v1/I01_NO_UPDATES/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 5706,
+      "path": "examples/quorum-impact-v1/I02_REPLACEMENT/body.json",
+      "sha256": "7c942b0602ca2dcecf8f90c3578526f9c3c831794cc0d2d47383224ba4262c66"
+    },
+    {
+      "bytes": 1270,
+      "path": "examples/quorum-impact-v1/I02_REPLACEMENT/expected-first.json",
+      "sha256": "60764fb255c1e37eae2b37d3a0882596ff0080e476b5aa1b81eaf9d888710a7c"
+    },
+    {
+      "bytes": 1223,
+      "path": "examples/quorum-impact-v1/I02_REPLACEMENT/expected.json",
+      "sha256": "94de6a636ed12c31fea3e38953ca8e6d5735b2ac61d68805f484c33bda9a9842"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-impact-v1/I02_REPLACEMENT/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-impact-v1/I02_REPLACEMENT/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 7007,
+      "path": "examples/quorum-impact-v1/I03_TRANSITIVE/body.json",
+      "sha256": "54b62bc476e961987d3efb45c585bb8cb10fdca897fe6a61653207c093b643f4"
+    },
+    {
+      "bytes": 1661,
+      "path": "examples/quorum-impact-v1/I03_TRANSITIVE/expected.json",
+      "sha256": "bc198bd7c4cf02ede3653a31d3bae698f860879eff0e70de1e522972738f1030"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-impact-v1/I03_TRANSITIVE/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-impact-v1/I03_TRANSITIVE/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 6028,
+      "path": "examples/quorum-impact-v1/I04_PARALLEL_IDS/body.json",
+      "sha256": "fa34db369519b69a8809318cfdb038a646d84b8c5d9fa78415f19f6adad5eb32"
+    },
+    {
+      "bytes": 1408,
+      "path": "examples/quorum-impact-v1/I04_PARALLEL_IDS/expected.json",
+      "sha256": "31df3ade90969a2e2b64a5d234055e4f9758b3860fd26d53903c3de564071c77"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-impact-v1/I04_PARALLEL_IDS/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-impact-v1/I04_PARALLEL_IDS/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 6301,
+      "path": "examples/quorum-impact-v1/I05_IDENTICAL_EFFECTS/body.json",
+      "sha256": "135a430e634ee044656127a8efb68e9e875651caaaaf84d789d8d5d3d66ad40c"
+    },
+    {
+      "bytes": 1702,
+      "path": "examples/quorum-impact-v1/I05_IDENTICAL_EFFECTS/expected.json",
+      "sha256": "268835fc41981f61fd97c888177fc2ee372fe9fee662c2f79092498414a8de00"
+    },
+    {
+      "bytes": 295,
+      "path": "examples/quorum-impact-v1/I05_IDENTICAL_EFFECTS/held-update-pins.json",
+      "sha256": "5a5f3d4d194b4b991ea5d9cfcb0562f4d77aaa5ae0cf1bd1b090503f7163a18a"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-impact-v1/I05_IDENTICAL_EFFECTS/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 8294,
+      "path": "examples/quorum-impact-v1/I06_SAME_OLD_DIFFERENT_PREDECESSORS/body.json",
+      "sha256": "7a0be8df97fc5e46a774afc00284f7eef53bcfc02e923c78e910bce61bb4691f"
+    },
+    {
+      "bytes": 2296,
+      "path": "examples/quorum-impact-v1/I06_SAME_OLD_DIFFERENT_PREDECESSORS/expected.json",
+      "sha256": "5c17373095942ab2ed3a8bb68da797d1672e8e2f588bda534273e641ededde5c"
+    },
+    {
+      "bytes": 560,
+      "path": "examples/quorum-impact-v1/I06_SAME_OLD_DIFFERENT_PREDECESSORS/held-update-pins.json",
+      "sha256": "b1de9fed8e63fecf4707df9b0ee4498ae665642fb2d95d28ddce35dbe2943e2f"
+    },
+    {
+      "bytes": 1362,
+      "path": "examples/quorum-impact-v1/I06_SAME_OLD_DIFFERENT_PREDECESSORS/originals.json",
+      "sha256": "623feec1a9f6897431abd43963d3153e90155b3d39d467733818622a9fcead65"
+    },
+    {
+      "bytes": 5590,
+      "path": "examples/quorum-impact-v1/I07_WITHDRAWAL/body.json",
+      "sha256": "6fcf43137a13fc12d0726febab444463ce2c66960b54ac1acbaa749141d39b98"
+    },
+    {
+      "bytes": 1223,
+      "path": "examples/quorum-impact-v1/I07_WITHDRAWAL/expected.json",
+      "sha256": "10ec280c5df257e1c531d79a47f2add6aae2ba6761bb6a4b7d23d6c086171aaf"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-impact-v1/I07_WITHDRAWAL/held-update-pins.json",
+      "sha256": "706d7d7a65c95fbaeef64b6fed149d1f366c5556e3cf78ea7dc68c29c11d2727"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-impact-v1/I07_WITHDRAWAL/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 5646,
+      "path": "examples/quorum-impact-v1/I08_ATTRIBUTED_CORRECTION/body.json",
+      "sha256": "7b24c9f35dda2c1a8eb983dea20a5a8a607187e11e783869bdfde1ed2f3764c6"
+    },
+    {
+      "bytes": 1223,
+      "path": "examples/quorum-impact-v1/I08_ATTRIBUTED_CORRECTION/expected.json",
+      "sha256": "cdc291a7a52b43c7f309d4a3d915d12818001afb79ca492ed305d18669516c78"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-impact-v1/I08_ATTRIBUTED_CORRECTION/held-update-pins.json",
+      "sha256": "2c26b19f3b72ebba0fc8af801683a84234a61f721e3b262481fba5865437ab7d"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-impact-v1/I08_ATTRIBUTED_CORRECTION/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 5706,
+      "path": "examples/quorum-impact-v1/I09_UNRELATED_SEED/body.json",
+      "sha256": "f44bb7df211009511cf9c2291399c6a7ee370e99694262d68b0b6c96ea3dd28a"
+    },
+    {
+      "bytes": 1045,
+      "path": "examples/quorum-impact-v1/I09_UNRELATED_SEED/expected.json",
+      "sha256": "e8cf9029591fa531a5d009e28def8e604fa638d320ec92ffafd1ca8f34eceed9"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-impact-v1/I09_UNRELATED_SEED/held-update-pins.json",
+      "sha256": "991080e3ca80aaea47f8174e459eda5d703ac0ac37b01102c95c55276bd260ec"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-impact-v1/I09_UNRELATED_SEED/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 5706,
+      "path": "examples/quorum-impact-v1/I10_MISSING_SOURCE_TARGET/body.json",
+      "sha256": "bc852450e036f729da175b455444bc3f83501edc5b77af16542d7e9088f136d8"
+    },
+    {
+      "bytes": 87,
+      "path": "examples/quorum-impact-v1/I10_MISSING_SOURCE_TARGET/expected.json",
+      "sha256": "7abd72f5ffe933349157359e8e91a246896e1ea276f3e4e2e2cd67ac3c62259f"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-impact-v1/I10_MISSING_SOURCE_TARGET/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-impact-v1/I10_MISSING_SOURCE_TARGET/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 7005,
+      "path": "examples/quorum-impact-v1/I11_BAD_CLAIM_TARGET_PIN/body.json",
+      "sha256": "ac103b6d3afca48efa2007030b3e129350fb693043e9921a77785a0ee682fa68"
+    },
+    {
+      "bytes": 82,
+      "path": "examples/quorum-impact-v1/I11_BAD_CLAIM_TARGET_PIN/expected.json",
+      "sha256": "f2018a7bc7a0db528bc273c72109572b226e88dda019c63330314bc5b591ee34"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-impact-v1/I11_BAD_CLAIM_TARGET_PIN/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-impact-v1/I11_BAD_CLAIM_TARGET_PIN/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 7307,
+      "path": "examples/quorum-impact-v1/I12_CLAIM_CYCLE/body.json",
+      "sha256": "98a19c3d0b8f284f93444143f0d5119d40ac401854554b1f4a62ddb846da070a"
+    },
+    {
+      "bytes": 84,
+      "path": "examples/quorum-impact-v1/I12_CLAIM_CYCLE/expected.json",
+      "sha256": "52ccfd018480913dc1fae635445c8c9853e61c25fd8b8b4ec0991f91b29b3bd5"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-impact-v1/I12_CLAIM_CYCLE/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-impact-v1/I12_CLAIM_CYCLE/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 5710,
+      "path": "examples/quorum-impact-v1/I13_MISSING_PREDECESSOR/body.json",
+      "sha256": "c68fe12f0b659bd99894dd43fe9aae040b13f53e7d6052c0910e871ea8297fd0"
+    },
+    {
+      "bytes": 85,
+      "path": "examples/quorum-impact-v1/I13_MISSING_PREDECESSOR/expected.json",
+      "sha256": "cd59d1bd87c4c55a944fbe4ff4944f5e141165e60705e0d0d7cc87eadbba399d"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-impact-v1/I13_MISSING_PREDECESSOR/held-update-pins.json",
+      "sha256": "462853c1b5dc118e5ed1940eff56e07aec3960e92038c1409a40d496a91318f2"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-impact-v1/I13_MISSING_PREDECESSOR/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 5705,
+      "path": "examples/quorum-impact-v1/I14_SELF_PREDECESSOR/body.json",
+      "sha256": "7f37826f69da35cbf625f5341be10d54f66954332b808584ca4473d715ca7902"
+    },
+    {
+      "bytes": 83,
+      "path": "examples/quorum-impact-v1/I14_SELF_PREDECESSOR/expected.json",
+      "sha256": "2303d697adf879fb304c0d03605840ec2856bde5b84138fa092de1a186bcec7e"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-impact-v1/I14_SELF_PREDECESSOR/held-update-pins.json",
+      "sha256": "fd26bfc75d60a8dd0240c291e5cd48f1bacbc6e878238fe8aae2c54495d58424"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-impact-v1/I14_SELF_PREDECESSOR/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 5705,
+      "path": "examples/quorum-impact-v1/I15_BAD_UPDATE_KIND/body.json",
+      "sha256": "739d34da091a3ad2f0531d3385e151f1eb7372ffeedde714db0bd523b306f056"
+    },
+    {
+      "bytes": 79,
+      "path": "examples/quorum-impact-v1/I15_BAD_UPDATE_KIND/expected.json",
+      "sha256": "2666fad2a9d1e757e25a0868921e74ada365055073aec93699f874a0c8b5e0c8"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-impact-v1/I15_BAD_UPDATE_KIND/held-update-pins.json",
+      "sha256": "fdec475747c35344b9900746478bc1cacf8442f72d75702367bb65b836cc7c97"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-impact-v1/I15_BAD_UPDATE_KIND/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 5706,
+      "path": "examples/quorum-impact-v1/I16_MISSING_HELD_PIN/body.json",
+      "sha256": "7c942b0602ca2dcecf8f90c3578526f9c3c831794cc0d2d47383224ba4262c66"
+    },
+    {
+      "bytes": 71,
+      "path": "examples/quorum-impact-v1/I16_MISSING_HELD_PIN/expected.json",
+      "sha256": "24965cdaec46d310310776908719759951ae151bb9f994a289b94c5885f9a669"
+    },
+    {
+      "bytes": 33,
+      "path": "examples/quorum-impact-v1/I16_MISSING_HELD_PIN/held-update-pins.json",
+      "sha256": "81dcdd8475ef1a1dd8008ff7106daee3c74b5c560aafc23c9f4e4cd274e2fbcc"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-impact-v1/I16_MISSING_HELD_PIN/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 5706,
+      "path": "examples/quorum-impact-v1/I17_STALE_HELD_PIN/body.json",
+      "sha256": "7c942b0602ca2dcecf8f90c3578526f9c3c831794cc0d2d47383224ba4262c66"
+    },
+    {
+      "bytes": 74,
+      "path": "examples/quorum-impact-v1/I17_STALE_HELD_PIN/expected.json",
+      "sha256": "9f8c06bd9a4ab17bf06bd81120c53132d88ca350eae596e040081fbcbb9735c0"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-impact-v1/I17_STALE_HELD_PIN/held-update-pins.json",
+      "sha256": "a051007e98a693ee7c758d3fb011049619d819d1cde7978ef7e169664e695190"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-impact-v1/I17_STALE_HELD_PIN/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 5706,
+      "path": "examples/quorum-impact-v1/I18_DUPLICATE_HELD_PIN/body.json",
+      "sha256": "7c942b0602ca2dcecf8f90c3578526f9c3c831794cc0d2d47383224ba4262c66"
+    },
+    {
+      "bytes": 77,
+      "path": "examples/quorum-impact-v1/I18_DUPLICATE_HELD_PIN/expected.json",
+      "sha256": "78bccd3d494163dddab071ddbe19ac28158f592927abe5fdd4dab4bf8e63a175"
+    },
+    {
+      "bytes": 294,
+      "path": "examples/quorum-impact-v1/I18_DUPLICATE_HELD_PIN/held-update-pins.json",
+      "sha256": "d3465acb477cf8fbc876998223c393ffe42b753bddc86bb3a86baf2141b06db1"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-impact-v1/I18_DUPLICATE_HELD_PIN/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 5706,
+      "path": "examples/quorum-impact-v1/I19_BOOL_PIN_LENGTH/body.json",
+      "sha256": "7c942b0602ca2dcecf8f90c3578526f9c3c831794cc0d2d47383224ba4262c66"
+    },
+    {
+      "bytes": 75,
+      "path": "examples/quorum-impact-v1/I19_BOOL_PIN_LENGTH/expected.json",
+      "sha256": "92de501e3b15c4b09f7fddb428ebab3de4b85b9671e864c5a47ec6b9c1efb2c4"
+    },
+    {
+      "bytes": 164,
+      "path": "examples/quorum-impact-v1/I19_BOOL_PIN_LENGTH/held-update-pins.json",
+      "sha256": "9dc75b8581735b7eea92f8051b0238be7b497f01b8824449eadf95eafd3c8e05"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-impact-v1/I19_BOOL_PIN_LENGTH/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 5706,
+      "path": "examples/quorum-impact-v1/I20_PIN_COUNT_BEFORE_ITEM/body.json",
+      "sha256": "7c942b0602ca2dcecf8f90c3578526f9c3c831794cc0d2d47383224ba4262c66"
+    },
+    {
+      "bytes": 76,
+      "path": "examples/quorum-impact-v1/I20_PIN_COUNT_BEFORE_ITEM/expected.json",
+      "sha256": "af94570d1cc0ec9f69f5e4ac29e0906fc26ed0a7d7b42bd19521f6569833b7fc"
+    },
+    {
+      "bytes": 77,
+      "path": "examples/quorum-impact-v1/I20_PIN_COUNT_BEFORE_ITEM/held-update-pins.json",
+      "sha256": "8bef10ced9bb5a456adaf8e5f5ca1f36e24762aac34426b28a3b0836d893cec6"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-impact-v1/I20_PIN_COUNT_BEFORE_ITEM/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 6423,
+      "path": "examples/quorum-impact-v1/I21_RETAINED_FIRST_OUTPUT/body.json",
+      "sha256": "95ee6cf17472578a6843282082dde9dd9fbb97ce8eff925605b32c2d44d324c0"
+    },
+    {
+      "bytes": 1598,
+      "path": "examples/quorum-impact-v1/I21_RETAINED_FIRST_OUTPUT/expected.json",
+      "sha256": "5570b7422c1442a1608161edda13877abb5de13441bfc79917cfc7d6d2db1b6e"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-impact-v1/I21_RETAINED_FIRST_OUTPUT/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 1182,
+      "path": "examples/quorum-impact-v1/I21_RETAINED_FIRST_OUTPUT/originals.json",
+      "sha256": "107424257469cfa042cd5697c27fcadbc4ab68f973c95cf87613abdd618bfaa5"
+    },
+    {
+      "bytes": 6421,
+      "path": "examples/quorum-impact-v1/I22_ALREADY_RECORDED/body.json",
+      "sha256": "48802fa944b2c8160b1ca3b16ffa7800f97513fa09fcac42c79e480205be2db0"
+    },
+    {
+      "bytes": 1599,
+      "path": "examples/quorum-impact-v1/I22_ALREADY_RECORDED/expected.json",
+      "sha256": "034e58e57e9751c5bc86e918835d626685ab4f922817c5382e90cfa2789b5be7"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-impact-v1/I22_ALREADY_RECORDED/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 1941,
+      "path": "examples/quorum-impact-v1/I22_ALREADY_RECORDED/originals.json",
+      "sha256": "c02d0b5eae7fc6643297f4e31c03182a9ce16eeb600f22a496b452401f4ad480"
+    },
+    {
+      "bytes": 6413,
+      "path": "examples/quorum-impact-v1/I23_PRIOR_ARTIFACT_MISMATCH/body.json",
+      "sha256": "d6934532cbb8cfffaffab20b81f7ca7184b37ff385fa187a1fc04f7b33b75534"
+    },
+    {
+      "bytes": 83,
+      "path": "examples/quorum-impact-v1/I23_PRIOR_ARTIFACT_MISMATCH/expected.json",
+      "sha256": "d34a3c3b3e656da5ed1738c5e43fcc0960b4c09e828303c3f856f250d537f29d"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-impact-v1/I23_PRIOR_ARTIFACT_MISMATCH/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 1176,
+      "path": "examples/quorum-impact-v1/I23_PRIOR_ARTIFACT_MISMATCH/originals.json",
+      "sha256": "144fdb086eb5fa0873c296391141f68e31c2f51e7eefac5f1069dec032225678"
+    },
+    {
+      "bytes": 6001,
+      "path": "examples/quorum-impact-v1/I24_EVIDENCE_RECORD_PIN/body.json",
+      "sha256": "f5437c01dffa60aa4b676e73be1f435cb3bcf944742d7afa472c83f436b13ed2"
+    },
+    {
+      "bytes": 1223,
+      "path": "examples/quorum-impact-v1/I24_EVIDENCE_RECORD_PIN/expected.json",
+      "sha256": "94c0435ee48ad892caf14ea193d0b3c27038d4b6b1e6348c4d016917e453365f"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-impact-v1/I24_EVIDENCE_RECORD_PIN/held-update-pins.json",
+      "sha256": "d6266f44e4c049ae1f22497aeeb96ae4cdd6ac9c495d1c633aab36099b93cf3c"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-impact-v1/I24_EVIDENCE_RECORD_PIN/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 6002,
+      "path": "examples/quorum-impact-v1/I25_STALE_EVIDENCE_RECORD_PIN/body.json",
+      "sha256": "f58871375c8ca32d09cf2543a11c3b371d766bb7f13a3677161d6677ab4d04ec"
+    },
+    {
+      "bytes": 87,
+      "path": "examples/quorum-impact-v1/I25_STALE_EVIDENCE_RECORD_PIN/expected.json",
+      "sha256": "e5799b5674835fd99f9d061fa7be14bf06d3754e2e1ae4475cff318eec767fd4"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-impact-v1/I25_STALE_EVIDENCE_RECORD_PIN/held-update-pins.json",
+      "sha256": "d6266f44e4c049ae1f22497aeeb96ae4cdd6ac9c495d1c633aab36099b93cf3c"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-impact-v1/I25_STALE_EVIDENCE_RECORD_PIN/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 11178,
+      "path": "examples/quorum-impact-v1/I26_SIXTY_FOUR_PATHS/body.json",
+      "sha256": "c875b79f82d4f1ebafd9a58a77df831a7a583a2a68cc273d377e6426d12d5615"
+    },
+    {
+      "bytes": 14348,
+      "path": "examples/quorum-impact-v1/I26_SIXTY_FOUR_PATHS/expected.json",
+      "sha256": "de98484876617160e83817c7edc4f3393f421dab012bfb3f9046bb61b5f83719"
+    },
+    {
+      "bytes": 163,
+      "path": "examples/quorum-impact-v1/I26_SIXTY_FOUR_PATHS/held-update-pins.json",
+      "sha256": "afc10aac7e350a051d86f3c16b70a95fa0281c0a30d3e812344f9c41031ee396"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-impact-v1/I26_SIXTY_FOUR_PATHS/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 11773,
+      "path": "examples/quorum-impact-v1/I27_SECOND_TRIGGER_PATH_LIMIT/body.json",
+      "sha256": "18adae0e54dbeeaa7a7dfb35ef29061f11c0aa21d610aa8ff818c44081ffec76"
+    },
+    {
+      "bytes": 69,
+      "path": "examples/quorum-impact-v1/I27_SECOND_TRIGGER_PATH_LIMIT/expected.json",
+      "sha256": "fbf2d16a96ac366c54fa61dc995978f4734c6e1128d32f0b6011a4e575d18ff8"
+    },
+    {
+      "bytes": 295,
+      "path": "examples/quorum-impact-v1/I27_SECOND_TRIGGER_PATH_LIMIT/held-update-pins.json",
+      "sha256": "5a5f3d4d194b4b991ea5d9cfcb0562f4d77aaa5ae0cf1bd1b090503f7163a18a"
+    },
+    {
+      "bytes": 940,
+      "path": "examples/quorum-impact-v1/I27_SECOND_TRIGGER_PATH_LIMIT/originals.json",
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    },
+    {
+      "bytes": 2957,
+      "path": "examples/quorum-impact-v1/README.md",
+      "sha256": "298ffb94f96323293d5b9492dc6d8ec6a75b6e3b04b1a6ee859d8b51cafa20d8"
+    },
+    {
+      "bytes": 1355,
+      "path": "examples/quorum-impact-v1/base-preview-first.json",
+      "sha256": "72d07716ccac2330eb63c9f86e9e95a3009b8ac60c39efbd4a6dd69a7eb10819"
+    },
+    {
+      "bytes": 1355,
+      "path": "examples/quorum-impact-v1/base-preview.json",
+      "sha256": "05afed44a0cf83941e476db4556d9bf9d996db5377616044a240ff419b0e0cc5"
+    },
+    {
+      "bytes": 328,
+      "path": "examples/quorum-impact-v1/code-review-01/artifact-location.json",
+      "sha256": "841a3151d618742fe96d9a5460a78e5dd3103beaa6a6b1b595e231bd6eacc8a6"
+    },
+    {
+      "bytes": 166808,
+      "path": "examples/quorum-impact-v1/code-review-01/assertions-disabled-results.json",
+      "sha256": "03ede60562e9e16954e2fb7adbd0a5a6eb3140e217ac856e36e137e202dac8ed"
+    },
+    {
+      "bytes": 345456,
+      "path": "examples/quorum-impact-v1/code-review-01/final-ci-assertions-disabled-results.json",
+      "sha256": "678b2e9aa9938f4b57b3f3d02c3cc48458c8ba27a2a6b0c7d967c7e9b0fc3e71"
+    },
+    {
+      "bytes": 345456,
+      "path": "examples/quorum-impact-v1/code-review-01/final-ci-normal-results.json",
+      "sha256": "678b2e9aa9938f4b57b3f3d02c3cc48458c8ba27a2a6b0c7d967c7e9b0fc3e71"
+    },
+    {
+      "bytes": 4793,
+      "path": "examples/quorum-impact-v1/code-review-01/final-ci-review-addendum.json",
+      "sha256": "a8b800b7f5168c499422831b910138d5d0537448eb21c28d405846c4b2c4aa40"
+    },
+    {
+      "bytes": 322806,
+      "path": "examples/quorum-impact-v1/code-review-01/first-owner-suite-results.json",
+      "sha256": "71520ebb8384ea7b4106eef880623b4b5dbda8c216941f68ce5fa9e8fe0101fe"
+    },
+    {
+      "bytes": 166807,
+      "path": "examples/quorum-impact-v1/code-review-01/first-probe-results.json",
+      "sha256": "7bcf025ca35d9f494b54ed0116b42f568ff1dbdb9610546b36cf034f96db4777"
+    },
+    {
+      "bytes": 8130,
+      "path": "examples/quorum-impact-v1/code-review-01/independent-code-review.json",
+      "sha256": "f1d8501ad5d1133bc789dc3df6c0e5156ebd9030d512a644187251c9a5c17b58"
+    },
+    {
+      "bytes": 3091,
+      "path": "examples/quorum-impact-v1/code-review-01/probe-expectations.json",
+      "sha256": "b761f6f55f1e94ccf312eb81b9fa9e1a479f227bf2ac10ca91ab856aa954388b"
+    },
+    {
+      "bytes": 9598,
+      "path": "examples/quorum-impact-v1/code-review-01/reviewed-transport_quorum_claim.py.txt",
+      "sha256": "c361d626536f4dbd1f1079b613a0ba52375e78af5b09295ef151e276010d5425"
+    },
+    {
+      "bytes": 15970,
+      "path": "examples/quorum-impact-v1/code-review-01/reviewed-transport_quorum_impact.py.txt",
+      "sha256": "aafd1c7040f28c41eae483822e2ab7c8e83f6058fa370e1ef36139cee8d70a18"
+    },
+    {
+      "bytes": 5564,
+      "path": "examples/quorum-impact-v1/code-review-01/run-independent-probes.py",
+      "sha256": "2ff4f625b03d0133785b642a00162938cf26be13bb79cb99b9cc0e8c31ff6360"
+    },
+    {
+      "bytes": 3026,
+      "path": "examples/quorum-impact-v1/code-review-01/static-check.json",
+      "sha256": "b0dd1657808b815861bfb913982a5d91932855c96bb4c29f589f545286052037"
+    },
+    {
+      "bytes": 11665,
+      "path": "examples/quorum-impact-v1/contract-draft01.json",
+      "sha256": "b46af2a68d16f37cbaa2a0af8b84a9abcc4c98f09f4f62410ba9b31ef3b5463f"
+    },
+    {
+      "bytes": 12866,
+      "path": "examples/quorum-impact-v1/contract-draft02.json",
+      "sha256": "e952f3662af90df6221e224a35a67b4613a12ebc5f26835527188f2dec49c542"
+    },
+    {
+      "bytes": 14326,
+      "path": "examples/quorum-impact-v1/contract-draft03.json",
+      "sha256": "0351f46ae2a123e0f53cd09c2151ce3975f2bcbc99e476b6b44f4164c68d2e69"
+    },
+    {
+      "bytes": 14279,
+      "path": "examples/quorum-impact-v1/contract.json",
+      "sha256": "d61e10e00460aa3dcff68748f5f3e30149d92a4df8a0dd64d34f9f7acd0e718d"
+    },
+    {
+      "bytes": 1681,
+      "path": "examples/quorum-impact-v1/correct_preview.py",
+      "sha256": "f9edb341d0377111d39a144ff7972f807db1d7ed1d31dd8a4a4ea33a3d79c6ae"
+    },
+    {
+      "bytes": 345456,
+      "path": "examples/quorum-impact-v1/evidence/context-integration-independent-results.json",
+      "sha256": "805b102468f7ffe93e9be402d3ebbc9f7d4700f9d358187cec3bc5a05a5ddf1b"
+    },
+    {
+      "bytes": 345456,
+      "path": "examples/quorum-impact-v1/evidence/context-integration-root-results.json",
+      "sha256": "805b102468f7ffe93e9be402d3ebbc9f7d4700f9d358187cec3bc5a05a5ddf1b"
+    },
+    {
+      "bytes": 637,
+      "path": "examples/quorum-impact-v1/evidence/first-harness-failure.json",
+      "sha256": "fa39a75434723260b89b77e72eef7530d6541d42cd72721523b6f650f4eef560"
+    },
+    {
+      "bytes": 7268,
+      "path": "examples/quorum-impact-v1/evidence/first-harness.py.txt",
+      "sha256": "9aba5454c59ff5d6212c5795dbe19173474ff4881ed17c1156537b2a6218b615"
+    },
+    {
+      "bytes": 345456,
+      "path": "examples/quorum-impact-v1/evidence/independent-unit-results.json",
+      "sha256": "678b2e9aa9938f4b57b3f3d02c3cc48458c8ba27a2a6b0c7d967c7e9b0fc3e71"
+    },
+    {
+      "bytes": 66850,
+      "path": "examples/quorum-impact-v1/evidence/pre-context-integration-receipt.json",
+      "sha256": "706d2c862f26407b55672a7cfafbb27e0ea9a27de876a7e0532d171527f1ac96"
+    },
+    {
+      "bytes": 345456,
+      "path": "examples/quorum-impact-v1/evidence/root-unit-ci-results.json",
+      "sha256": "678b2e9aa9938f4b57b3f3d02c3cc48458c8ba27a2a6b0c7d967c7e9b0fc3e71"
+    },
+    {
+      "bytes": 322671,
+      "path": "examples/quorum-impact-v1/evidence/root-unit-first.json",
+      "sha256": "cc7fe36e8be6a617de39e61316e2271ef5f7dfb69fc628cf013fe694cdf75dc8"
+    },
+    {
+      "bytes": 322806,
+      "path": "examples/quorum-impact-v1/evidence/root-unit-second.json",
+      "sha256": "71520ebb8384ea7b4106eef880623b4b5dbda8c216941f68ce5fa9e8fe0101fe"
+    },
+    {
+      "bytes": 14279,
+      "path": "examples/quorum-impact-v1/focused/adopted-contract.json",
+      "sha256": "d61e10e00460aa3dcff68748f5f3e30149d92a4df8a0dd64d34f9f7acd0e718d"
+    },
+    {
+      "bytes": 577,
+      "path": "examples/quorum-impact-v1/focused/adopted-pre-freeze-correction.json",
+      "sha256": "0eadd7fbc7a4e4232050a80b69c137dea45a1699faa1a580d585a54a2f78c919"
+    },
+    {
+      "bytes": 3719,
+      "path": "examples/quorum-impact-v1/focused/audit-literals.py",
+      "sha256": "ebc7b29bbb194ae1c275a9bb6d01ab4ba4385b216da1c5b41fc737db01a36ddb"
+    },
+    {
+      "bytes": 57,
+      "path": "examples/quorum-impact-v1/focused/claim-suite-driver-first-run.json",
+      "sha256": "03059a63c279435d2b607b05b39be668bee72d0d0c167b51f3aad5407356193f"
+    },
+    {
+      "bytes": 302,
+      "path": "examples/quorum-impact-v1/focused/claim-suite-driver-first-run.log",
+      "sha256": "47df89338980c814a0deb790da257f66bc8418508ba5b3dfdeb0430e22aa7279"
+    },
+    {
+      "bytes": 130782,
+      "path": "examples/quorum-impact-v1/focused/claim-suite-evidence-first-run.json",
+      "sha256": "c0eb26df2090490874b763739d47cdcaa0ea2077105d907b37743353f50dc7e6"
+    },
+    {
+      "bytes": 13915,
+      "path": "examples/quorum-impact-v1/focused/claim-suite-first-run.json",
+      "sha256": "a55377fbfd88e6a506f51c62d41fb77e20ea80be54553609cbd4fa1f2be343da"
+    },
+    {
+      "bytes": 474,
+      "path": "examples/quorum-impact-v1/focused/claim-suite-first-run.log",
+      "sha256": "5b7dea103d80ea309cf070e10352b67672363a2c33f5eb52bdbcbe1bf75d8c57"
+    },
+    {
+      "bytes": 1292,
+      "path": "examples/quorum-impact-v1/focused/clarification-history.json",
+      "sha256": "155a7bc68c28d9491ce960c0bd3689d6baa40d0c2b366c6cd62d95eca64f1608"
+    },
+    {
+      "bytes": 14326,
+      "path": "examples/quorum-impact-v1/focused/contract-at-fixture-freeze.json",
+      "sha256": "0351f46ae2a123e0f53cd09c2151ce3975f2bcbc99e476b6b44f4164c68d2e69"
+    },
+    {
+      "bytes": 1747,
+      "path": "examples/quorum-impact-v1/focused/contract-expectation-resolution.json",
+      "sha256": "e6fe72300847fa42ac2f17d7e6ff4030bf8b59057ef8ec751d53cdf303d3a9a1"
+    },
+    {
+      "bytes": 14081,
+      "path": "examples/quorum-impact-v1/focused/first-inspected-contract.json",
+      "sha256": "0aca58d27469675f1049753db475f56e7096bbdb87256d30e66fdfa9a29ae26a"
+    },
+    {
+      "bytes": 103257,
+      "path": "examples/quorum-impact-v1/focused/handwritten-expectations.json",
+      "sha256": "c3eaf465ae17db703b318793f51609afef680179c5ed011155696cf435db9ab8"
+    },
+    {
+      "bytes": 57,
+      "path": "examples/quorum-impact-v1/focused/hostile-first-command.json",
+      "sha256": "03059a63c279435d2b607b05b39be668bee72d0d0c167b51f3aad5407356193f"
+    },
+    {
+      "bytes": 256,
+      "path": "examples/quorum-impact-v1/focused/hostile-first-command.log",
+      "sha256": "9831d3c10619accfd63af752dc8ac2c3b3bc6e1b6b5beb57dc95bb8048f35c41"
+    },
+    {
+      "bytes": 156,
+      "path": "examples/quorum-impact-v1/focused/hostile-first-outputs/HP00_OUTER_LIST.json",
+      "sha256": "e857831ae758e0ca6a1b661c5176229137ac07c21d40f3d1c84303e75b106816"
+    },
+    {
+      "bytes": 156,
+      "path": "examples/quorum-impact-v1/focused/hostile-first-outputs/HP01_OUTER_SUBCLASS.json",
+      "sha256": "690fd3efd07c12143441ec8fb178b28c123762fbe747d9d91d2bc06f449830a4"
+    },
+    {
+      "bytes": 156,
+      "path": "examples/quorum-impact-v1/focused/hostile-first-outputs/HP02_ITEM_LIST.json",
+      "sha256": "b828967291a8d7480af5d186f38ae3d95929ffe309d547ca284978c50bdc8d6d"
+    },
+    {
+      "bytes": 156,
+      "path": "examples/quorum-impact-v1/focused/hostile-first-outputs/HP03_ITEM_SUBCLASS.json",
+      "sha256": "5af98bd6c055cb45d28859aa0fd07a393d8d69e38c7eb2a591fd9153c3222ba4"
+    },
+    {
+      "bytes": 156,
+      "path": "examples/quorum-impact-v1/focused/hostile-first-outputs/HP04_EVENT_SUBCLASS.json",
+      "sha256": "e6fe81474bc8a4fa0238a0ca082490a598f1e726b43bb1c5c686039a889b68d1"
+    },
+    {
+      "bytes": 156,
+      "path": "examples/quorum-impact-v1/focused/hostile-first-outputs/HP05_SHA_SUBCLASS.json",
+      "sha256": "545d9123e44c1945a6d4315e37ea8ba9bc7d1a7f10e95568767672c24d8be17f"
+    },
+    {
+      "bytes": 156,
+      "path": "examples/quorum-impact-v1/focused/hostile-first-outputs/HP06_LENGTH_SUBCLASS.json",
+      "sha256": "2115d4c598750152f03d33c948d8cb53dafb52a2956ba95351386e253e27b4d5"
+    },
+    {
+      "bytes": 156,
+      "path": "examples/quorum-impact-v1/focused/hostile-first-outputs/HP07_BOOL_LENGTH.json",
+      "sha256": "bc2ec7aae5c6ff9b1859e5eb41ebcdd279137e9a724832eaf231f2535a33ea3d"
+    },
+    {
+      "bytes": 156,
+      "path": "examples/quorum-impact-v1/focused/hostile-first-outputs/HP08_EVENT_NONE.json",
+      "sha256": "fb0d15a02db568c2c08212b2e0c2c762962a02e275f58feb402f626c10b2ac66"
+    },
+    {
+      "bytes": 156,
+      "path": "examples/quorum-impact-v1/focused/hostile-first-outputs/HP09_SHA_NONE.json",
+      "sha256": "445838ef672e05a1ed901857fae120575a851b2fdaf7490a2631e68f9d6d3d1c"
+    },
+    {
+      "bytes": 157,
+      "path": "examples/quorum-impact-v1/focused/hostile-first-outputs/HP10_NEGATIVE_LENGTH.json",
+      "sha256": "8f17f8dee8716dbc561db17ec2fd456708ec3f38e19ff2bdcaea313417e9abb7"
+    },
+    {
+      "bytes": 157,
+      "path": "examples/quorum-impact-v1/focused/hostile-first-outputs/HP11_INVALID_ID.json",
+      "sha256": "d899153916d95657b4895fe77392e02db3f5c44130f7a9bc9cbbd74533703b98"
+    },
+    {
+      "bytes": 157,
+      "path": "examples/quorum-impact-v1/focused/hostile-first-outputs/HP12_UPPER_SHA.json",
+      "sha256": "567ba1967ce4e95aa12b8ec77d176e517a5045dfc838aa7199d9d0d1628a77b3"
+    },
+    {
+      "bytes": 157,
+      "path": "examples/quorum-impact-v1/focused/hostile-first-outputs/HP13_LENGTH_OVER.json",
+      "sha256": "9efaddec560851c72751e2546357556179ca8232c2add894996664241ce2fd13"
+    },
+    {
+      "bytes": 157,
+      "path": "examples/quorum-impact-v1/focused/hostile-first-outputs/HP14_COUNT_BEFORE_HOSTILE_ITEMS.json",
+      "sha256": "09f7e785e14969d45f3bba5152520e6c91759b5938094ac7c69ac46b2a9452cf"
+    },
+    {
+      "bytes": 152,
+      "path": "examples/quorum-impact-v1/focused/hostile-first-outputs/HP15_FINAL_LF_ID_ARGUMENT.json",
+      "sha256": "36954514215383ab09677962962bf35d6d83b818339dbfbe4befebef38d68b62"
+    },
+    {
+      "bytes": 157,
+      "path": "examples/quorum-impact-v1/focused/hostile-first-outputs/HP16_HUGE_ID.json",
+      "sha256": "7daf6064883eeb0ba248e8d9c059f823f9735704ff06fc03947d1f520aace252"
+    },
+    {
+      "bytes": 157,
+      "path": "examples/quorum-impact-v1/focused/hostile-first-outputs/HP17_NONASCII_ID.json",
+      "sha256": "0d46c820b5b4f8e5a4f742fe3a9eba5107819fdcaa690340df591d4650578763"
+    },
+    {
+      "bytes": 157,
+      "path": "examples/quorum-impact-v1/focused/hostile-first-outputs/HP18_SHORT_SHA.json",
+      "sha256": "679d87c30935db931cc8d664d14c878517da6fe2fadf9e070d983f5fb3eeb12d"
+    },
+    {
+      "bytes": 146,
+      "path": "examples/quorum-impact-v1/focused/hostile-first-outputs/HP19_BODY_BEFORE_HOSTILE_PINS.json",
+      "sha256": "4067bf5942952dd01ec499f09a60789fe584f6828fbb96cf17bbf2f1c93d4ce9"
+    },
+    {
+      "bytes": 154,
+      "path": "examples/quorum-impact-v1/focused/hostile-first-outputs/HP20_SOURCE_BEFORE_HOSTILE_PINS.json",
+      "sha256": "1891f7a157354e4e8814aa718f6737e9412b6c445d5040a97d3ff4b3421d4094"
+    },
+    {
+      "bytes": 25427,
+      "path": "examples/quorum-impact-v1/focused/hostile-first-run.json",
+      "sha256": "a4386f4195bb99aa9ea64bbb2afcc8c294e7310c0a55d162a2cab5b4bcfec11c"
+    },
+    {
+      "bytes": 4081,
+      "path": "examples/quorum-impact-v1/focused/hostile-pin-expectations.json",
+      "sha256": "9d4b1341b49e84ba10f19247db6a24bd5ad4f703fe80d5b0f8269bc0297c1edf"
+    },
+    {
+      "bytes": 57,
+      "path": "examples/quorum-impact-v1/focused/input-suite-driver-first-run.json",
+      "sha256": "03059a63c279435d2b607b05b39be668bee72d0d0c167b51f3aad5407356193f"
+    },
+    {
+      "bytes": 302,
+      "path": "examples/quorum-impact-v1/focused/input-suite-driver-first-run.log",
+      "sha256": "f969cc839b7b797901cef7d8e8040a2da1ecb171f18b1e665c32f2140a94182b"
+    },
+    {
+      "bytes": 61555,
+      "path": "examples/quorum-impact-v1/focused/input-suite-evidence-first-run.json",
+      "sha256": "d19a7b96e2eb9506f20fdd8bc256f9f2347e3221229ffb71cf5ef0422f3935f9"
+    },
+    {
+      "bytes": 13916,
+      "path": "examples/quorum-impact-v1/focused/input-suite-first-run.json",
+      "sha256": "271e88e4d6e30e3300f8570decfe904608abc598d70205105e47f38335ae6cc0"
+    },
+    {
+      "bytes": 729,
+      "path": "examples/quorum-impact-v1/focused/input-suite-first-run.log",
+      "sha256": "92cc6d1390f8bdae4653b4e69c04770ec3d5374db160418947fed8f3ce49172f"
+    },
+    {
+      "bytes": 12348,
+      "path": "examples/quorum-impact-v1/focused/literal-audit-first-run.json",
+      "sha256": "bb3574f8d131c23db34cb4f8f9af56ef081a12254344525e94faf093996e66b7"
+    },
+    {
+      "bytes": 228,
+      "path": "examples/quorum-impact-v1/focused/literal-audit-first-run.log",
+      "sha256": "fecee478c38a086ab51f617cace38190fadae1543253b19697aee660e40611e3"
+    },
+    {
+      "bytes": 7991,
+      "path": "examples/quorum-impact-v1/focused/pre-oracle-freeze.json",
+      "sha256": "d346b938d720b3b7af4a03ee26e9d5c0de1422813f9296bb249d3c559f78fced"
+    },
+    {
+      "bytes": 206,
+      "path": "examples/quorum-impact-v1/focused/prepare-first-run.log",
+      "sha256": "ecd407c546fba8fc9d0c83847bf92382f025807f06915f5e91a1679b6ec5189e"
+    },
+    {
+      "bytes": 19057,
+      "path": "examples/quorum-impact-v1/focused/prepare.py",
+      "sha256": "dc1b1423f79fdd3e857578677d4fbc0d9dc6d368a2d04d8e2d50e763e746484b"
+    },
+    {
+      "bytes": 57,
+      "path": "examples/quorum-impact-v1/focused/product-first-command.json",
+      "sha256": "03059a63c279435d2b607b05b39be668bee72d0d0c167b51f3aad5407356193f"
+    },
+    {
+      "bytes": 281,
+      "path": "examples/quorum-impact-v1/focused/product-first-command.log",
+      "sha256": "42f39c789fe136eec9292deba32a47f3471e61c39203f50d8cd6afb3aad5c16e"
+    },
+    {
+      "bytes": 31551,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/B00_PATH_LIMIT_INCLUSIVE.comparison.json",
+      "sha256": "df4018ff1649f8651d3dc8f82938b466ed531be5936a26f57517206f9105b2ba"
+    },
+    {
+      "bytes": 15395,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/B00_PATH_LIMIT_INCLUSIVE.json",
+      "sha256": "62c39e705c6b2427961c9fcb020ff75b96f77212cdc4bc32a135e0f6ca8c8772"
+    },
+    {
+      "bytes": 1028,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/B01_PATH_LIMIT_ALL_TRIGGERS.comparison.json",
+      "sha256": "92b9ea44ceb1a413824ae46acc1de045513e952be6cc6a7533be6b39d9e69dc8"
+    },
+    {
+      "bytes": 130,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/B01_PATH_LIMIT_ALL_TRIGGERS.json",
+      "sha256": "0ea74eacaa81f53d602a1d816d5eab9f90e48e91e2c9084994beb4885017ecff"
+    },
+    {
+      "bytes": 1036,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/D00_DEPENDENCY_CYCLE.comparison.json",
+      "sha256": "8f686ffdb1feea4d85e8b58532c69307b3043a056b6ac9578c9ab0faad5212e4"
+    },
+    {
+      "bytes": 145,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/D00_DEPENDENCY_CYCLE.json",
+      "sha256": "1d46064e66cc3d66c5c95956f41ed11ee1aaea358ff097c853da81301e389af9"
+    },
+    {
+      "bytes": 1052,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/D01_CLAIM_TARGET_MISSING.comparison.json",
+      "sha256": "56d60c76fe7adbacedeed311c16ff5f005c6739ee7e5c7fb118607c6127a4085"
+    },
+    {
+      "bytes": 147,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/D01_CLAIM_TARGET_MISSING.json",
+      "sha256": "d2b183222ef12c008792b6580e6ba98ef6aa56b1974d4ec1067c70f98bff8b2d"
+    },
+    {
+      "bytes": 1032,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/D02_CLAIM_TARGET_PIN.comparison.json",
+      "sha256": "07a26a1399496eab75eeb2d46d0e6a040bf1004c752fb363884711a0ba3577eb"
+    },
+    {
+      "bytes": 143,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/D02_CLAIM_TARGET_PIN.json",
+      "sha256": "e0ac3c25651f3e0d1b1b63ebeada50323f8f136ad4cc1c26a2bfe58484387a9a"
+    },
+    {
+      "bytes": 1057,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/D03_SOURCE_TARGET_MISSING.comparison.json",
+      "sha256": "d278341c7307b7a2361187fa07ba8b476c4aca901740e95b0384ada70f28f53f"
+    },
+    {
+      "bytes": 148,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/D03_SOURCE_TARGET_MISSING.json",
+      "sha256": "2615679d47ef7a0fee934033d9535b22cf445c23f064f1e28c23f488a21ec269"
+    },
+    {
+      "bytes": 4646,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/E00_COMPLETE_BLOB_PIN.comparison.json",
+      "sha256": "5461c19ff9d5c27af2e10606a07ab11774f4166e9dd568acad1e2cc6e7be21a7"
+    },
+    {
+      "bytes": 1948,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/E00_COMPLETE_BLOB_PIN.json",
+      "sha256": "ed1dc3f09959bbbec56393dcd1dea15e7c9f27c21751dfe2c4dc445ececb241c"
+    },
+    {
+      "bytes": 1036,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/E01_STALE_KIND_PIN.comparison.json",
+      "sha256": "af9cfe7445628719299af36610c32f2015ad04c848341dee4757b707c283a36e"
+    },
+    {
+      "bytes": 148,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/E01_STALE_KIND_PIN.json",
+      "sha256": "98cbd5090c7a2c1d3905f47c9d8cf8888bd58118ef72d42c021870706116c197"
+    },
+    {
+      "bytes": 1048,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/E02_STALE_ENCODING_PIN.comparison.json",
+      "sha256": "f90cb1d7e89be42cc87da1961ae89ae2c936b7efa14669e1a1570dc77ab8ff27"
+    },
+    {
+      "bytes": 148,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/E02_STALE_ENCODING_PIN.json",
+      "sha256": "550e9370324c86d237e2ffaf6291ad57fdf02010a86768bdc205ed19c680cb24"
+    },
+    {
+      "bytes": 1056,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/E03_WRONG_KIND_FRESH_PIN.comparison.json",
+      "sha256": "b7a01b8633d7df7a9cd0e06ed454ea0d142f83f61f51d4578bd6510d0816f87a"
+    },
+    {
+      "bytes": 149,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/E03_WRONG_KIND_FRESH_PIN.json",
+      "sha256": "76fc6bad352152ac011cf86781be1944c9dda47a88abdbfa90f9a36695ca5dc9"
+    },
+    {
+      "bytes": 5438,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/H00_PRIOR_EVENT.comparison.json",
+      "sha256": "961a7ec5d0122ee2bf0d7595fdc60f62137ef262f083255088ed485e52188dea"
+    },
+    {
+      "bytes": 2353,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/H00_PRIOR_EVENT.json",
+      "sha256": "b357d2a830fef1675ebf535423ce2513d8d54110e2891506be8bfebd1612a476"
+    },
+    {
+      "bytes": 6251,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/H01_REPEATED_PRIOR.comparison.json",
+      "sha256": "9f1ce685ab58cba65caf7f06bf62318eb1bbb3814cd750d1b455f417dc299c83"
+    },
+    {
+      "bytes": 2755,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/H01_REPEATED_PRIOR.json",
+      "sha256": "075e9c3b12fe9806dedc5c9a2c4ea862c8516965782d3455b59f9d31b84c5e33"
+    },
+    {
+      "bytes": 5461,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/H02_OPAQUE_HISTORY_ORDER.comparison.json",
+      "sha256": "ed1b1b6a6a48c83507b5b772dbe0d61d36f932eaa44c1d3c61cb9e8a123a4c88"
+    },
+    {
+      "bytes": 2351,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/H02_OPAQUE_HISTORY_ORDER.json",
+      "sha256": "6879b855beca09cdc42a142fb8fee5c74f311bef333deb72b1eaf3837a59e11c"
+    },
+    {
+      "bytes": 1052,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/H03_HISTORY_SOURCE_MISSING.comparison.json",
+      "sha256": "d3db02f82307ff8b24a99aadb9fb441d04bf244172495dfa4fa33895e74e7c36"
+    },
+    {
+      "bytes": 144,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/H03_HISTORY_SOURCE_MISSING.json",
+      "sha256": "65b1c37c18cd46ec8c619495e96f3ad6c697c57b339ace1016062f54f99cb451"
+    },
+    {
+      "bytes": 1052,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/H04_HISTORY_EVENT_MISMATCH.comparison.json",
+      "sha256": "ca86cc1982fd4dc7ae0eabeaaa3f9562c0be318106960c5b1d6b7b3dd59bace3"
+    },
+    {
+      "bytes": 144,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/H04_HISTORY_EVENT_MISMATCH.json",
+      "sha256": "36397378e275cbd744b89a7698a9954d7a4f0625fddde2d128fc778b1d675f8b"
+    },
+    {
+      "bytes": 3333,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/I00_NO_NOTICES.comparison.json",
+      "sha256": "52ad37324710e29e5cb109189c706fe5c8f6122374fb738e80f2636d43a9b293"
+    },
+    {
+      "bytes": 1302,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/I00_NO_NOTICES.json",
+      "sha256": "e89cdc5ed777fc821aab4275ada78977eae95c7036be137bec309053aae7e02b"
+    },
+    {
+      "bytes": 4610,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/I01_CHAIN.comparison.json",
+      "sha256": "9ae17080acce70c499a1ca3cfd3413de745325bf670dd75892c6efca267adc2d"
+    },
+    {
+      "bytes": 1948,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/I01_CHAIN.json",
+      "sha256": "d4e0d5fdf7e75624e88e726de3a5b4eb53d1d0a4959a8cba80ca909edd5c630d"
+    },
+    {
+      "bytes": 4625,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/I02_WITHDRAWAL.comparison.json",
+      "sha256": "e5f363ebde80a1b040bf27b3c60d8bd1d210c0dff15087d429ea32c271c187a1"
+    },
+    {
+      "bytes": 1948,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/I02_WITHDRAWAL.json",
+      "sha256": "e6b7a2c616069840fef56467fdd0ce338ee74becc6f54b78c41088b97eb38487"
+    },
+    {
+      "bytes": 5989,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/I03_IDENTICAL_EFFECT_IDS.comparison.json",
+      "sha256": "ad496bdf3e79f59747288c0b1d52cc6c244d42954e309cee4321f6082d6dc62d"
+    },
+    {
+      "bytes": 2615,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/I03_IDENTICAL_EFFECT_IDS.json",
+      "sha256": "6c77a32bf501610424ed3aa8c19262fa2222ea074e54e8b42854d0462e4ecec5"
+    },
+    {
+      "bytes": 5983,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/I04_CONFLICT.comparison.json",
+      "sha256": "11c04f670f3ce9463f2115d2374458adaa9ff9657937bf3204fdf2f2183a8754"
+    },
+    {
+      "bytes": 2630,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/I04_CONFLICT.json",
+      "sha256": "e4a9e7e6154b30e6dc4db83b1431bb3a28c25cb2b9cb4663b264f0560149dafa"
+    },
+    {
+      "bytes": 7200,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/I05_SAME_OLD_DIFFERENT_PREDECESSORS.comparison.json",
+      "sha256": "5daf19aa8e7e0fbdb56dfd46e31922eef3f8d3054d69763fcaa063e19b63a812"
+    },
+    {
+      "bytes": 3204,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/I05_SAME_OLD_DIFFERENT_PREDECESSORS.json",
+      "sha256": "b4c56c8852ccbe68723024d3ead4e4325c808fd753b5b3b69a1545aa73cdd15c"
+    },
+    {
+      "bytes": 5396,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/I06_PARALLEL_LABELS.comparison.json",
+      "sha256": "9cfb904b68ed55064dcd748e87ac6a28031c435a907842ccd76dc9e15e996192"
+    },
+    {
+      "bytes": 2326,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/I06_PARALLEL_LABELS.json",
+      "sha256": "782545d5c99a54af043d4eee90c8725c91d30575ee0692a7d7c8d4e6c80481a3"
+    },
+    {
+      "bytes": 4658,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/I07_PHYSICAL_SOURCE_ALIAS.comparison.json",
+      "sha256": "275b6a9d29d8b1850fc5ecd7456e6e7d943b5272909130defe1fc13c19dc49ff"
+    },
+    {
+      "bytes": 1948,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/I07_PHYSICAL_SOURCE_ALIAS.json",
+      "sha256": "6d5171c6c1c131f92612beab5ce666c0d5cbc8339860ff1046c127001d45d5ca"
+    },
+    {
+      "bytes": 1007,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/P00_PIN_SET_MISSING.comparison.json",
+      "sha256": "fcd8c68000830ddce29669b82c42d8b1343cdc854ea583e1c8b24421aafbc7a1"
+    },
+    {
+      "bytes": 132,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/P00_PIN_SET_MISSING.json",
+      "sha256": "9fc838f7f59db05fd874e7fd857f75f0d55348b06096cd691fe17b032067599c"
+    },
+    {
+      "bytes": 998,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/P01_PIN_DIGEST.comparison.json",
+      "sha256": "ebf4409a1b8446dbe25db6bf32e86298cca581e48b80d71b81d37e22145f88b2"
+    },
+    {
+      "bytes": 135,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/P01_PIN_DIGEST.json",
+      "sha256": "31a1419934a41e70d3ce1c325d9fa8783d19a19eb794dc9084f21a4eb0871e90"
+    },
+    {
+      "bytes": 1015,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/P02_PIN_BOOL_LENGTH.comparison.json",
+      "sha256": "67ed20b7f5dcdb5abce4422e4887f6cc1a35d92eeb1e42376c30a726db862230"
+    },
+    {
+      "bytes": 136,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/P02_PIN_BOOL_LENGTH.json",
+      "sha256": "219e14c7c0986b7065acebf94c4d6721676400b16a33975c8200221c9a7a0958"
+    },
+    {
+      "bytes": 1038,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/P03_PIN_COUNT_BEFORE_ITEMS.comparison.json",
+      "sha256": "380006983ea384ccb8ffd632a92c2fd19c5fb4b45f3cc4c4517085438685b5b3"
+    },
+    {
+      "bytes": 137,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/P03_PIN_COUNT_BEFORE_ITEMS.json",
+      "sha256": "d68681bfdb56acb9c2b7b122751e66564aacb4f26afd641b53aa1c11302c05a6"
+    },
+    {
+      "bytes": 4670,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/P04_FINAL_LF_EVENT_ID.comparison.json",
+      "sha256": "1a547e76a6daa7c388ad7c57fb46675ae6665cb5a02fdfb4b962cc1e4362e329"
+    },
+    {
+      "bytes": 1960,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/P04_FINAL_LF_EVENT_ID.json",
+      "sha256": "f7eb311716264ee263df30d399503e70fa081f0f7de276c9b1eb898773db2dba"
+    },
+    {
+      "bytes": 1020,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/P05_PIN_LENGTH_BOUND.comparison.json",
+      "sha256": "d491d6d3c3da89b898f91bc04baa6b04f43b910d7a473af7767ed07f0dfac006"
+    },
+    {
+      "bytes": 137,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/P05_PIN_LENGTH_BOUND.json",
+      "sha256": "8ae17f194b5a772ac873251ab04a91093def8a4cf3b1c688a25fcbdf0975e11f"
+    },
+    {
+      "bytes": 1047,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/U00_PREDECESSOR_MISSING.comparison.json",
+      "sha256": "721e834b47e4ba7bb238c730e8873581023d4ba1aacf63d955ca44cd06391aa0"
+    },
+    {
+      "bytes": 146,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/U00_PREDECESSOR_MISSING.json",
+      "sha256": "e1b35822383c11619ef9f409e110dad9a75c5e155f5d5a2b24f506db86d93868"
+    },
+    {
+      "bytes": 1034,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/U01_SELF_PREDECESSOR.comparison.json",
+      "sha256": "a8ed710f84f3626062aea2d05374c6fdabfb49f4771a8c963a02af6239d12cbd"
+    },
+    {
+      "bytes": 144,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/U01_SELF_PREDECESSOR.json",
+      "sha256": "38d29e3a187a69b7b838b49dd226c6ccebba354f55e234cb4cb077016bad8bfe"
+    },
+    {
+      "bytes": 1017,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/U02_OLD_LOGICAL.comparison.json",
+      "sha256": "0edcd69abf2a2a60df2a8119be52d163d82955dd37dec842e7411119f48293a6"
+    },
+    {
+      "bytes": 143,
+      "path": "examples/quorum-impact-v1/focused/product-first-outputs/U02_OLD_LOGICAL.json",
+      "sha256": "a04fab42d9e974943f5c0b0b87537be3fbf6a93f7e180af65b05ccb430343d5d"
+    },
+    {
+      "bytes": 120317,
+      "path": "examples/quorum-impact-v1/focused/product-first-run.json",
+      "sha256": "9157ec13e311915ece617b8f86c4d680525a70f8134b6f639e50eb54c792cdda"
+    },
+    {
+      "bytes": 7501,
+      "path": "examples/quorum-impact-v1/focused/product-source-pins-after.json",
+      "sha256": "1cfa7f6ad9d489d3518605d85c26aa55bc5817ca4db185ad8fd9847107432567"
+    },
+    {
+      "bytes": 7501,
+      "path": "examples/quorum-impact-v1/focused/product-source-pins-before.json",
+      "sha256": "1cfa7f6ad9d489d3518605d85c26aa55bc5817ca4db185ad8fd9847107432567"
+    },
+    {
+      "bytes": 8751,
+      "path": "examples/quorum-impact-v1/focused/product-verification-receipt.json",
+      "sha256": "deede9d9d1204e943d69c12e731b231292f57afb2a37fb96821d2a15ca28bea2"
+    },
+    {
+      "bytes": 10011,
+      "path": "examples/quorum-impact-v1/focused/raw/B00_PATH_LIMIT_INCLUSIVE.body.json",
+      "sha256": "5733330a9aaf9596a9f47d5cce45bc55dd3107d24c47f893756e710ec7a8dd19"
+    },
+    {
+      "bytes": 10584,
+      "path": "examples/quorum-impact-v1/focused/raw/B01_PATH_LIMIT_ALL_TRIGGERS.body.json",
+      "sha256": "8241f8cf52268eb178411c7bb3ff0987c7c9d03bd9b6e1ad4f40168a473e66ce"
+    },
+    {
+      "bytes": 5835,
+      "path": "examples/quorum-impact-v1/focused/raw/D00_DEPENDENCY_CYCLE.body.json",
+      "sha256": "5788c37862e6f57db68159f5fb7eb6d79366642c0b19d8a2a9cff511f5c98021"
+    },
+    {
+      "bytes": 5841,
+      "path": "examples/quorum-impact-v1/focused/raw/D01_CLAIM_TARGET_MISSING.body.json",
+      "sha256": "5472828716f2d6902e617cfe45b8da1241fb8f46b7ae8983629ec29e1eec1e1a"
+    },
+    {
+      "bytes": 5838,
+      "path": "examples/quorum-impact-v1/focused/raw/D02_CLAIM_TARGET_PIN.body.json",
+      "sha256": "c33ba5447ce32cb01ae09dcc4bac98a95723e4fa400a15629f6e9a133a7a57fc"
+    },
+    {
+      "bytes": 5839,
+      "path": "examples/quorum-impact-v1/focused/raw/D03_SOURCE_TARGET_MISSING.body.json",
+      "sha256": "048f5f2343b6b0e2187421c1cccf1588c2ec47fefb9641a2a9ed79e72bb4f132"
+    },
+    {
+      "bytes": 6117,
+      "path": "examples/quorum-impact-v1/focused/raw/E00_COMPLETE_BLOB_PIN.body.json",
+      "sha256": "035edc452b0c967c655162a852b15b0dd09302941b74726bc18f8fac0ddaae49"
+    },
+    {
+      "bytes": 6108,
+      "path": "examples/quorum-impact-v1/focused/raw/E01_STALE_KIND_PIN.body.json",
+      "sha256": "65952357e2eede25bfb8ec2eb1ba170b5cc6063bc1ec1d5226e4240645917c76"
+    },
+    {
+      "bytes": 6116,
+      "path": "examples/quorum-impact-v1/focused/raw/E02_STALE_ENCODING_PIN.body.json",
+      "sha256": "a9d7ba25e52a5f61be86e79f60ca4bd13711143735d340c4652aa4d17bd988f3"
+    },
+    {
+      "bytes": 6108,
+      "path": "examples/quorum-impact-v1/focused/raw/E03_WRONG_KIND_FRESH_PIN.body.json",
+      "sha256": "5c5a360f803de837d4b98f0258e92112f899d67f209ba94d88f7975b32133449"
+    },
+    {
+      "bytes": 6576,
+      "path": "examples/quorum-impact-v1/focused/raw/H00_PRIOR_EVENT.body.json",
+      "sha256": "5cf539e9a71503960075a2d0aec43e09364f52d101df93542e717fabb4d710cd"
+    },
+    {
+      "bytes": 6891,
+      "path": "examples/quorum-impact-v1/focused/raw/H01_REPEATED_PRIOR.body.json",
+      "sha256": "26ddce9fba335bc53b375f75787ecddd24e6f68c2fd1c4a65d5cb5cb8d98de97"
+    },
+    {
+      "bytes": 6576,
+      "path": "examples/quorum-impact-v1/focused/raw/H02_OPAQUE_HISTORY_ORDER.body.json",
+      "sha256": "d38a1c77c1f8fae77cd7be8fec4a1e91fedc0fd233ff9ed32a934a049cfcb7a3"
+    },
+    {
+      "bytes": 6154,
+      "path": "examples/quorum-impact-v1/focused/raw/H03_HISTORY_SOURCE_MISSING.body.json",
+      "sha256": "ed18f5af0d3df3011509ee673c2e2a4508217a2479380f7163c687f329ce1259"
+    },
+    {
+      "bytes": 6573,
+      "path": "examples/quorum-impact-v1/focused/raw/H04_HISTORY_EVENT_MISMATCH.body.json",
+      "sha256": "5f1090a11b1e2733c82aa8c26b99c7a26b86242e2e1cf192882a5370eaf64538"
+    },
+    {
+      "bytes": 5266,
+      "path": "examples/quorum-impact-v1/focused/raw/I00_NO_NOTICES.body.json",
+      "sha256": "a041a426aa77900b51947466c118a797a42ef0f73adb98d176b691a61cf72a52"
+    },
+    {
+      "bytes": 5838,
+      "path": "examples/quorum-impact-v1/focused/raw/I01_CHAIN.body.json",
+      "sha256": "c21f744d99b5cd7b1e18269bee7c6af0f5310b2baa5e998a5fec96af6ff01c5f"
+    },
+    {
+      "bytes": 5724,
+      "path": "examples/quorum-impact-v1/focused/raw/I02_WITHDRAWAL.body.json",
+      "sha256": "2a73ee667c8c54dd9b8ede12206a83587dea132778be9c7d087dbf2c8b49cf7b"
+    },
+    {
+      "bytes": 6411,
+      "path": "examples/quorum-impact-v1/focused/raw/I03_IDENTICAL_EFFECT_IDS.body.json",
+      "sha256": "eb8bdd63543ccfe831e711c52a3808a00d7bb60462607ce770364c6fa7578e39"
+    },
+    {
+      "bytes": 6297,
+      "path": "examples/quorum-impact-v1/focused/raw/I04_CONFLICT.body.json",
+      "sha256": "25d57a0499e02f621239a970146372450de507ecfe27322c642fc133d8a8cc93"
+    },
+    {
+      "bytes": 7215,
+      "path": "examples/quorum-impact-v1/focused/raw/I05_SAME_OLD_DIFFERENT_PREDECESSORS.body.json",
+      "sha256": "d45d6c5088bd2fd9fd8cf74018124ae4d9fdab2362538075be66cae34fa37515"
+    },
+    {
+      "bytes": 6141,
+      "path": "examples/quorum-impact-v1/focused/raw/I06_PARALLEL_LABELS.body.json",
+      "sha256": "df4becd5332814f482cbe20e9f0adb591bd3819a1418a4a97d74ce39d9ef6482"
+    },
+    {
+      "bytes": 6116,
+      "path": "examples/quorum-impact-v1/focused/raw/I07_PHYSICAL_SOURCE_ALIAS.body.json",
+      "sha256": "d4f63f1632409b0878e64165134ef88289061517e3e03b9d8ec821cf132743f5"
+    },
+    {
+      "bytes": 5838,
+      "path": "examples/quorum-impact-v1/focused/raw/P00_PIN_SET_MISSING.body.json",
+      "sha256": "c21f744d99b5cd7b1e18269bee7c6af0f5310b2baa5e998a5fec96af6ff01c5f"
+    },
+    {
+      "bytes": 5838,
+      "path": "examples/quorum-impact-v1/focused/raw/P01_PIN_DIGEST.body.json",
+      "sha256": "c21f744d99b5cd7b1e18269bee7c6af0f5310b2baa5e998a5fec96af6ff01c5f"
+    },
+    {
+      "bytes": 5838,
+      "path": "examples/quorum-impact-v1/focused/raw/P02_PIN_BOOL_LENGTH.body.json",
+      "sha256": "c21f744d99b5cd7b1e18269bee7c6af0f5310b2baa5e998a5fec96af6ff01c5f"
+    },
+    {
+      "bytes": 5838,
+      "path": "examples/quorum-impact-v1/focused/raw/P03_PIN_COUNT_BEFORE_ITEMS.body.json",
+      "sha256": "c21f744d99b5cd7b1e18269bee7c6af0f5310b2baa5e998a5fec96af6ff01c5f"
+    },
+    {
+      "bytes": 5840,
+      "path": "examples/quorum-impact-v1/focused/raw/P04_FINAL_LF_EVENT_ID.body.json",
+      "sha256": "3b7c7f4a29a24b8fe99777e268bd870ed35f5ac0e74442f6e4b9cea7c70290a3"
+    },
+    {
+      "bytes": 5838,
+      "path": "examples/quorum-impact-v1/focused/raw/P05_PIN_LENGTH_BOUND.body.json",
+      "sha256": "c21f744d99b5cd7b1e18269bee7c6af0f5310b2baa5e998a5fec96af6ff01c5f"
+    },
+    {
+      "bytes": 5843,
+      "path": "examples/quorum-impact-v1/focused/raw/U00_PREDECESSOR_MISSING.body.json",
+      "sha256": "6f5816fc161dd879099b4a9fea8217647fbbaf4f989c59e6f5427d8e17a5d110"
+    },
+    {
+      "bytes": 5838,
+      "path": "examples/quorum-impact-v1/focused/raw/U01_SELF_PREDECESSOR.body.json",
+      "sha256": "da1f21e84a066610043be7a979c1baaa0739ce55f1c37eaa5e430b41372b7bf3"
+    },
+    {
+      "bytes": 5836,
+      "path": "examples/quorum-impact-v1/focused/raw/U02_OLD_LOGICAL.body.json",
+      "sha256": "0dd2f6b318cbc86345f5187e3a0cf8507b83a00480f91beb69c7f522f08ff7d5"
+    },
+    {
+      "bytes": 1184,
+      "path": "examples/quorum-impact-v1/focused/ready-receipt.json",
+      "sha256": "7f84f90a986b149c726a7425c118610074c6e59716b770dd892cd177057ca2ab"
+    },
+    {
+      "bytes": 11665,
+      "path": "examples/quorum-impact-v1/focused/retained-contract-draft01.json",
+      "sha256": "b46af2a68d16f37cbaa2a0af8b84a9abcc4c98f09f4f62410ba9b31ef3b5463f"
+    },
+    {
+      "bytes": 12866,
+      "path": "examples/quorum-impact-v1/focused/retained-contract-draft02.json",
+      "sha256": "e952f3662af90df6221e224a35a67b4613a12ebc5f26835527188f2dec49c542"
+    },
+    {
+      "bytes": 6917,
+      "path": "examples/quorum-impact-v1/focused/run-hostile-first.py",
+      "sha256": "f1cdb9327d72c5276b5fc5e7e5e8b99f3744aeef480ff24529cb4738518a070d"
+    },
+    {
+      "bytes": 6868,
+      "path": "examples/quorum-impact-v1/focused/run-product-first.py",
+      "sha256": "a26cc2d79b21e0e7522aba57434ca7a9242456386a5f87af932fac718114a440"
+    },
+    {
+      "bytes": 2319,
+      "path": "examples/quorum-impact-v1/focused/run-regression-suites-first.py",
+      "sha256": "144f3fca4990f2a60dcb7f8dacd889654b2f29de43ce95b241424b22f78c1296"
+    },
+    {
+      "bytes": 633,
+      "path": "examples/quorum-impact-v1/focused/runner-preparation.json",
+      "sha256": "1b9a03dba222aea63bd1ec323c7fe29b7b990fbe69c8368b2028c327ef451676"
+    },
+    {
+      "bytes": 57,
+      "path": "examples/quorum-impact-v1/focused/source-suite-driver-first-run.json",
+      "sha256": "03059a63c279435d2b607b05b39be668bee72d0d0c167b51f3aad5407356193f"
+    },
+    {
+      "bytes": 304,
+      "path": "examples/quorum-impact-v1/focused/source-suite-driver-first-run.log",
+      "sha256": "dfcf095a8a7d11389e543e32d0cc8e7289f628cba31ceed462fbae23eafce445"
+    },
+    {
+      "bytes": 82149,
+      "path": "examples/quorum-impact-v1/focused/source-suite-evidence-first-run.json",
+      "sha256": "92425619e0e13d46f80971d216be013569ea6b25a9356d0ddcb28886041c22f6"
+    },
+    {
+      "bytes": 13922,
+      "path": "examples/quorum-impact-v1/focused/source-suite-first-run.json",
+      "sha256": "6c38fe658e84a70b5583cd71aec029d848f56d848d6c4cbaa9aa3bf8c5c5bd22"
+    },
+    {
+      "bytes": 788,
+      "path": "examples/quorum-impact-v1/focused/source-suite-first-run.log",
+      "sha256": "cd78ac5ecfa006b4fa64c3e672d98b9122c409e11681301c6c7ca4cdeb79b090"
+    },
+    {
+      "bytes": 1502,
+      "path": "examples/quorum-impact-v1/freeze.json",
+      "sha256": "fb70b5c0e41379d653ae0da8004de3fdac0f2270384b09e03b484306ecda7679"
+    },
+    {
+      "bytes": 17637,
+      "path": "examples/quorum-impact-v1/oracle.json",
+      "sha256": "f871cb750e770a15ea37a98f0e47eede7cdd5d98dee451f585715d4111552b8b"
+    },
+    {
+      "bytes": 577,
+      "path": "examples/quorum-impact-v1/pre-freeze-correction.json",
+      "sha256": "0eadd7fbc7a4e4232050a80b69c137dea45a1699faa1a580d585a54a2f78c919"
+    },
+    {
+      "bytes": 6883,
+      "path": "examples/quorum-impact-v1/prepare_oracle.py",
+      "sha256": "f6a30cc3026bd6b46b0df243bf6abe7498e69da9689d78d66f6eed88d33fe42e"
+    },
+    {
+      "bytes": 3598,
+      "path": "examples/quorum-impact-v1/prepare_receipt.py",
+      "sha256": "acbdec04939d42c6da08a051786e27a81bdd466c71b63c900dadb7641bb80d93"
+    },
+    {
+      "bytes": 15218,
+      "path": "examples/quorum-impact-v1/prepare_remaining.py",
+      "sha256": "a8fd8ea471c36a3fb85b8a586431b8656bfe0f37f890fba1c95824158050bdf5"
+    },
+    {
+      "bytes": 166808,
+      "path": "examples/quorum-impact-v1/review-01/assertions-disabled-results.json",
+      "sha256": "03ede60562e9e16954e2fb7adbd0a5a6eb3140e217ac856e36e137e202dac8ed"
+    },
+    {
+      "bytes": 3944,
+      "path": "examples/quorum-impact-v1/review-01/author-oracle-inspection.json",
+      "sha256": "eb7e8dfacc7af786a120721f2439be608fedd141e179df5c9f365fe5d5871450"
+    },
+    {
+      "bytes": 322806,
+      "path": "examples/quorum-impact-v1/review-01/first-owner-suite-results.json",
+      "sha256": "71520ebb8384ea7b4106eef880623b4b5dbda8c216941f68ce5fa9e8fe0101fe"
+    },
+    {
+      "bytes": 166807,
+      "path": "examples/quorum-impact-v1/review-01/first-probe-results.json",
+      "sha256": "7bcf025ca35d9f494b54ed0116b42f568ff1dbdb9610546b36cf034f96db4777"
+    },
+    {
+      "bytes": 8130,
+      "path": "examples/quorum-impact-v1/review-01/independent-code-review.json",
+      "sha256": "f1d8501ad5d1133bc789dc3df6c0e5156ebd9030d512a644187251c9a5c17b58"
+    },
+    {
+      "bytes": 7440,
+      "path": "examples/quorum-impact-v1/review-01/independent-prefreeze-review.json",
+      "sha256": "8e319da4ea74c2214c623095b1ae2c3be8192e328b7dddb86122f8bcd358403b"
+    },
+    {
+      "bytes": 8057,
+      "path": "examples/quorum-impact-v1/review-01/literal-inspection.json",
+      "sha256": "7296976dec39ee3676469a0b4c3df4a3c6320d9329803d2a364acb7a8b1492db"
+    },
+    {
+      "bytes": 3091,
+      "path": "examples/quorum-impact-v1/review-01/probe-expectations.json",
+      "sha256": "b761f6f55f1e94ccf312eb81b9fa9e1a479f227bf2ac10ca91ab856aa954388b"
+    },
+    {
+      "bytes": 9598,
+      "path": "examples/quorum-impact-v1/review-01/reviewed-transport_quorum_claim.py.txt",
+      "sha256": "c361d626536f4dbd1f1079b613a0ba52375e78af5b09295ef151e276010d5425"
+    },
+    {
+      "bytes": 15970,
+      "path": "examples/quorum-impact-v1/review-01/reviewed-transport_quorum_impact.py.txt",
+      "sha256": "aafd1c7040f28c41eae483822e2ab7c8e83f6058fa370e1ef36139cee8d70a18"
+    },
+    {
+      "bytes": 5564,
+      "path": "examples/quorum-impact-v1/review-01/run-independent-probes.py",
+      "sha256": "2ff4f625b03d0133785b642a00162938cf26be13bb79cb99b9cc0e8c31ff6360"
+    },
+    {
+      "bytes": 3026,
+      "path": "examples/quorum-impact-v1/review-01/static-check.json",
+      "sha256": "b0dd1657808b815861bfb913982a5d91932855c96bb4c29f589f545286052037"
+    },
+    {
+      "bytes": 1750,
+      "path": "install/check_source.py",
+      "sha256": "c30004ded45fcccad45b3d9cea7602dd7a23654d83d88eeeafd97d1b76ac0cc3"
+    },
+    {
+      "bytes": 15092,
+      "path": "install/test_quorum_impact.py",
+      "sha256": "365c8742b912fa76aaf03dd88729dcf3587dafa67c53175ddeb9deebe35d1235"
+    },
+    {
+      "bytes": 32177,
+      "path": "tools/transport_quorum_body.schema.json",
+      "sha256": "b6c7cafc1d4f1703188f7bdcb2150316feadc6b870eda9495ee146e2f429f8aa"
+    },
+    {
+      "bytes": 9598,
+      "path": "tools/transport_quorum_claim.py",
+      "sha256": "c361d626536f4dbd1f1079b613a0ba52375e78af5b09295ef151e276010d5425"
+    },
+    {
+      "bytes": 5524,
+      "path": "tools/transport_quorum_graph.py",
+      "sha256": "40edaed32f10d2803a3be59e33130d62f7724de3e67eeaadf9c8d823c5dc4902"
+    },
+    {
+      "bytes": 16222,
+      "path": "tools/transport_quorum_impact.py",
+      "sha256": "3ad91c1acb9a68ce249df23aefd0caa776bd0ccc82e29887264ef730728a1b42"
+    },
+    {
+      "bytes": 4952,
+      "path": "tools/transport_quorum_input.py",
+      "sha256": "6a90037a747b0cc2965dcf1b7169220a9732a16080ca0f3ca7c3b24d0349d653"
+    },
+    {
+      "bytes": 16277,
+      "path": "tools/transport_quorum_shape.py",
+      "sha256": "6fef25a491be924fb310ecafe581da9da9f3dfa19baf44b956838745c95f2170"
+    },
+    {
+      "bytes": 11078,
+      "path": "tools/transport_quorum_source.py",
+      "sha256": "3a356f0e135900bdbe1ce1199579e8b08978b5f00a4ab499b709993466279616"
+    },
+    {
+      "bytes": 8622,
+      "path": "tools/transport_schema.py",
+      "sha256": "1c324b661314bd3a92f23b4502207f38a483baa6565d479838de450f110eeb1a"
+    },
+    {
+      "bytes": 6691,
+      "path": "tools/transport_wire.py",
+      "sha256": "2a0fa77da78ae4591fc296f6ce4f62e961c68ed992479ffe59974e236b0f58c4"
+    }
+  ],
+  "formal_proof": "UNPROVEN",
+  "full_replay": "UNRUN",
+  "installed_decoder": "UNCHANGED_NOT_INTEGRATED",
+  "observed_output_records": 189,
+  "observed_test_methods": 5,
+  "product_acceptance": false,
+  "schema": "quorum/impact-component-receipt/1",
+  "status": "TESTED"
+}

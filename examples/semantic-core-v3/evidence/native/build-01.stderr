@@ -1,0 +1,2 @@
+transport_eval.ads:204:58: error: mixed logical operators in expression
+transport_eval.ads:212:59: error: mixed logical operators in expression

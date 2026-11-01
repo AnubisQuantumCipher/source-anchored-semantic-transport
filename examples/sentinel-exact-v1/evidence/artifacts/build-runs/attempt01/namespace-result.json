@@ -1,0 +1,43 @@
+{
+  "capture": {
+    "complete": true,
+    "inventory": "capture/inventory.json",
+    "payload_bytes": 23223408,
+    "readonly_qualified": true
+  },
+  "cleanup": {
+    "ownership": "private PID namespace",
+    "remaining": 0
+  },
+  "external_bytes": 24308064,
+  "failures": [
+    "ValueError:tool warning, error or unproved diagnostic"
+  ],
+  "identity_after": {
+    "assumption": "hostile host and concurrent writes outside namespace are not attested; TOCTOU remains UNPROVEN",
+    "files": 2494,
+    "roster_sha256": "fb63b34c2b8a880c2eee1205f8d7158ae7bf733ee74af65c5638d36cb405109a",
+    "scope": "exact previously declared tool/compiler/runtime/system-library roster",
+    "status": "CHECKED"
+  },
+  "identity_before": {
+    "assumption": "hostile host and concurrent writes outside namespace are not attested; TOCTOU remains UNPROVEN",
+    "files": 2494,
+    "roster_sha256": "fb63b34c2b8a880c2eee1205f8d7158ae7bf733ee74af65c5638d36cb405109a",
+    "scope": "exact previously declared tool/compiler/runtime/system-library roster",
+    "status": "CHECKED"
+  },
+  "namespaces": {
+    "mnt": "mnt:[4026532939]",
+    "net": "net:[4026532973]",
+    "pid": "pid:[4026532971]",
+    "user": "user:[4026532904]"
+  },
+  "readonly_qualified": true,
+  "status": "FAILED",
+  "terminal_cleanup": {
+    "ownership": "private PID namespace",
+    "remaining": 0
+  },
+  "worker": null
+}

@@ -1,0 +1,93 @@
+{
+  "classification": "JACKAL_EXACT_ARITHMETIC_OF_SUPPLIED_OBSERVED_FILE_LENGTHS_NOT_CODE_CORRECTNESS",
+  "results": {
+    "main_original_bytes": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"assurance\":\"exact rational arithmetic (not yet checker-covered)\",\"engine_output\":\"status=exact parsed=3+3+222 exact=228 approx=228\",\"fields\":{\"approx\":\"228\",\"exact\":\"228\",\"parsed\":\"3+3+222\",\"status\":\"exact\"},\"formal\":false,\"identities\":{\"evaluator_sha256\":\"4c0ae28d2f41353332dbb29f1b6084cd275d08bad73a84942fbe6f500255d872\"},\"lane\":\"rat\",\"non_claims\":[\"NOT formal-bounded: this lane carries no Lean-checked certificate\",\"The epistemic class above is the STRONGEST claim this result supports\",\"exact rational arithmetic (not yet checker-covered)\"],\"status\":\"exact\"}"
+        }
+      ],
+      "structuredContent": {
+        "assurance": "exact rational arithmetic (not yet checker-covered)",
+        "engine_output": "status=exact parsed=3+3+222 exact=228 approx=228",
+        "fields": {
+          "approx": "228",
+          "exact": "228",
+          "parsed": "3+3+222",
+          "status": "exact"
+        },
+        "formal": false,
+        "identities": {
+          "evaluator_sha256": "4c0ae28d2f41353332dbb29f1b6084cd275d08bad73a84942fbe6f500255d872"
+        },
+        "lane": "rat",
+        "non_claims": [
+          "NOT formal-bounded: this lane carries no Lean-checked certificate",
+          "The epistemic class above is the STRONGEST claim this result supports",
+          "exact rational arithmetic (not yet checker-covered)"
+        ],
+        "status": "exact"
+      }
+    },
+    "fixed_checker_file_total_bytes": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"assurance\":\"exact rational arithmetic (not yet checker-covered)\",\"engine_output\":\"status=exact parsed=27955+32177+9598+12295+5524+16564+4952+63967+16588+34956+16277+11078+24910+9696+8449+17126 exact=312112 approx=312112\",\"fields\":{\"approx\":\"312112\",\"exact\":\"312112\",\"parsed\":\"27955+32177+9598+12295+5524+16564+4952+63967+16588+34956+16277+11078+24910+9696+8449+17126\",\"status\":\"exact\"},\"formal\":false,\"identities\":{\"evaluator_sha256\":\"4c0ae28d2f41353332dbb29f1b6084cd275d08bad73a84942fbe6f500255d872\"},\"lane\":\"rat\",\"non_claims\":[\"NOT formal-bounded: this lane carries no Lean-checked certificate\",\"The epistemic class above is the STRONGEST claim this result supports\",\"exact rational arithmetic (not yet checker-covered)\"],\"status\":\"exact\"}"
+        }
+      ],
+      "structuredContent": {
+        "assurance": "exact rational arithmetic (not yet checker-covered)",
+        "engine_output": "status=exact parsed=27955+32177+9598+12295+5524+16564+4952+63967+16588+34956+16277+11078+24910+9696+8449+17126 exact=312112 approx=312112",
+        "fields": {
+          "approx": "312112",
+          "exact": "312112",
+          "parsed": "27955+32177+9598+12295+5524+16564+4952+63967+16588+34956+16277+11078+24910+9696+8449+17126",
+          "status": "exact"
+        },
+        "formal": false,
+        "identities": {
+          "evaluator_sha256": "4c0ae28d2f41353332dbb29f1b6084cd275d08bad73a84942fbe6f500255d872"
+        },
+        "lane": "rat",
+        "non_claims": [
+          "NOT formal-bounded: this lane carries no Lean-checked certificate",
+          "The epistemic class above is the STRONGEST claim this result supports",
+          "exact rational arithmetic (not yet checker-covered)"
+        ],
+        "status": "exact"
+      }
+    },
+    "decoder_snapshot_file_total_bytes": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"assurance\":\"exact rational arithmetic (not yet checker-covered)\",\"engine_output\":\"status=exact parsed=4891+1104+998+3632+5304+1685392+4577+3869+14663+7730+8988+4048+8934+15514+7817+12294+10007+11653+8848+1997+16463+14831+5381+8408+30442+3423+7413+8622+8167+6809+5034+6691 exact=1943944 approx=1943944\",\"fields\":{\"approx\":\"1943944\",\"exact\":\"1943944\",\"parsed\":\"4891+1104+998+3632+5304+1685392+4577+3869+14663+7730+8988+4048+8934+15514+7817+12294+10007+11653+8848+1997+16463+14831+5381+8408+30442+3423+7413+8622+8167+6809+5034+6691\",\"status\":\"exact\"},\"formal\":false,\"identities\":{\"evaluator_sha256\":\"4c0ae28d2f41353332dbb29f1b6084cd275d08bad73a84942fbe6f500255d872\"},\"lane\":\"rat\",\"non_claims\":[\"NOT formal-bounded: this lane carries no Lean-checked certificate\",\"The epistemic class above is the STRONGEST claim this result supports\",\"exact rational arithmetic (not yet checker-covered)\"],\"status\":\"exact\"}"
+        }
+      ],
+      "structuredContent": {
+        "assurance": "exact rational arithmetic (not yet checker-covered)",
+        "engine_output": "status=exact parsed=4891+1104+998+3632+5304+1685392+4577+3869+14663+7730+8988+4048+8934+15514+7817+12294+10007+11653+8848+1997+16463+14831+5381+8408+30442+3423+7413+8622+8167+6809+5034+6691 exact=1943944 approx=1943944",
+        "fields": {
+          "approx": "1943944",
+          "exact": "1943944",
+          "parsed": "4891+1104+998+3632+5304+1685392+4577+3869+14663+7730+8988+4048+8934+15514+7817+12294+10007+11653+8848+1997+16463+14831+5381+8408+30442+3423+7413+8622+8167+6809+5034+6691",
+          "status": "exact"
+        },
+        "formal": false,
+        "identities": {
+          "evaluator_sha256": "4c0ae28d2f41353332dbb29f1b6084cd275d08bad73a84942fbe6f500255d872"
+        },
+        "lane": "rat",
+        "non_claims": [
+          "NOT formal-bounded: this lane carries no Lean-checked certificate",
+          "The epistemic class above is the STRONGEST claim this result supports",
+          "exact rational arithmetic (not yet checker-covered)"
+        ],
+        "status": "exact"
+      }
+    }
+  }
+}
+

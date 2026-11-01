@@ -1,0 +1,178 @@
+{
+  "assurance_boundary": [
+    "Python tested, no new formal proof",
+    "Held labels are not authenticated model/provider identity and do not prove independent errors",
+    "Different aliases may denote the same underlying model; no external alias registry is inferred",
+    "Threshold votes assess recorded support only: source truth NOT_ASSESSED, interpretation NOT_CHECKED, authority NONE",
+    "Nine-seat positives remain SYNTHETIC_ONLY; original V1 seat bound remains8",
+    "No model calls executed by this reviewer"
+  ],
+  "before_implementation_oracle": {
+    "bytes": 55867,
+    "sha256": "6e82c5fe36f649e1f4b2897a7035834ed05f262325d8bff940fdc0646146205c"
+  },
+  "code_review": "Registry validates at most9 seats, exact string model_id keys have exactly one family value; every registry row is checked before admissions and candidate eligibility. Repeated coherent assignments are allowed. Existing set-based family count unchanged. Held-root mismatch remains higher priority.",
+  "current_source_pins": {
+    "docs/quorum-v2-coherence-addendum.json": {
+      "bytes": 55867,
+      "sha256": "6e82c5fe36f649e1f4b2897a7035834ed05f262325d8bff940fdc0646146205c"
+    },
+    "install/test_quorum_v2_coherence.py": {
+      "bytes": 2626,
+      "sha256": "20678cffa9b4c38e7bc0fa32726220c7983d4c0d8f87362eaa2e926ee60c3a91"
+    },
+    "tools/transport_quorum_v2.py": {
+      "bytes": 1294,
+      "sha256": "e2f25465de327642c870dc5dc3fcfe4f9f155955622ab96b633040312dcfd2f0"
+    },
+    "tools/transport_quorum_v2_input.py": {
+      "bytes": 3800,
+      "sha256": "39a0ba765ac123ee3d69573094923d96173ebe7965a594168f74dbe7d9ccb5cf"
+    },
+    "tools/transport_quorum_v2_policy.py": {
+      "bytes": 5362,
+      "sha256": "b4f31395cea75d81d5512ccaef49fa5c99e9f589e9096371714360803f947abb"
+    },
+    "tools/transport_quorum_v2_process.py": {
+      "bytes": 2782,
+      "sha256": "fdd5b229d4dba1f369a3a478b21952d0ae574642a6fa102a74505c82e0692297"
+    },
+    "tools/transport_quorum_v2_replay.py": {
+      "bytes": 12727,
+      "sha256": "5e7889ea91a6af60d361e0f2ca6118a1b14fdbc72034453297848ab1019c7f18"
+    },
+    "tools/transport_quorum_v2_schema.py": {
+      "bytes": 4281,
+      "sha256": "d756de0c3b3bf89b85a26450f3bd426653ef2e3928d3397405944cb75968d745"
+    }
+  },
+  "evidence_paths": {
+    "adapter": "adapter-{normal,optimized}-04/results.json.gz",
+    "nine": "nine-companion-{normal,optimized}-03/review.json",
+    "policy": "revision02/results-{normal,optimized}-04.json.gz"
+  },
+  "literal_cases": 9,
+  "next_acceptance_evidence": "Current-source continuity gate and CI exact commands, then separately scoped observed two-seat prelaunch review and actual retained outcomes.",
+  "old_review": {
+    "bytes": 15412,
+    "sha256": "0017e360e9f164c0860f5fcbf034b336b2c68322671664b1c28e7f14d419367c"
+  },
+  "old_review_scope_correction": "The first review missed that one literal model ID could receive several held family labels. Prior review and sealed source/evidence remain unchanged; this version fixes internal label coherence only.",
+  "retained_first_failure": {
+    "failed_cases": [
+      "C01_SAME_MODEL_CONFLICT",
+      "C06_UNUSED_CONFLICT",
+      "C07_REVERSED_CONFLICT"
+    ],
+    "path": "/dev/shm/semantic-transport-quorum-v2-20261029/independent/coherence-before-01.json",
+    "pin": {
+      "bytes": 603,
+      "sha256": "c42b47174f13ccc6b22840d1d0b8ef16943ec2b7f3b8a47525fb5836e3d872ad"
+    }
+  },
+  "review_model": "gpt-6.1-sol",
+  "runs": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/install/test_quorum_v2_coherence.py"
+      ],
+      "exit": 0,
+      "label": "coherence",
+      "mode": "normal",
+      "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.002s\n\nOK\n",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "/dev/shm/semantic-transport-quorum-v2-20261029/independent/run_independent_coherence04.py"
+      ],
+      "exit": 0,
+      "label": "policy",
+      "mode": "normal",
+      "stderr": "",
+      "stdout": "{\"cases\": 87, \"failed\": [], \"source_pins\": {\"tools/transport_quorum_v2.py\": \"e2f25465de327642c870dc5dc3fcfe4f9f155955622ab96b633040312dcfd2f0\", \"tools/transport_quorum_v2_input.py\": \"39a0ba765ac123ee3d69573094923d96173ebe7965a594168f74dbe7d9ccb5cf\", \"tools/transport_quorum_v2_policy.py\": \"b4f31395cea75d81d5512ccaef49fa5c99e9f589e9096371714360803f947abb\", \"tools/transport_quorum_v2_process.py\": \"fdd5b229d4dba1f369a3a478b21952d0ae574642a6fa102a74505c82e0692297\", \"tools/transport_quorum_v2_replay.py\": \"5e7889ea91a6af60d361e0f2ca6118a1b14fdbc72034453297848ab1019c7f18\", \"tools/transport_quorum_v2_schema.py\": \"d756de0c3b3bf89b85a26450f3bd426653ef2e3928d3397405944cb75968d745\"}}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "/dev/shm/semantic-transport-quorum-v2-20261029/independent/run_adapter_coherence04.py"
+      ],
+      "exit": 0,
+      "label": "adapter",
+      "mode": "normal",
+      "stderr": "",
+      "stdout": "{\"path\": \"/dev/shm/semantic-transport-quorum-v2-20261029/independent/adapter-normal-04/results.json.gz\", \"failed\": [], \"cases\": 43}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "/dev/shm/semantic-transport-quorum-v2-20261029/independent/run_nine_companion_coherence04.py"
+      ],
+      "exit": 0,
+      "label": "nine",
+      "mode": "normal",
+      "stderr": "",
+      "stdout": "{\"path\": \"/dev/shm/semantic-transport-quorum-v2-20261029/independent/nine-companion-normal-03/review.json\", \"status\": \"PASS\", \"accounting\": {\"policy_input_bytes\": 13936, \"replay_metadata_bytes\": 10884, \"declared_carrier_bytes\": 15775, \"conservative_message_total_bytes\": 40595, \"message_budget_bytes\": 65536, \"contained_source_bytes_counted_again\": true, \"shared_checker_helper_bytes\": 312112, \"shared_python_executable_bytes\": 67720, \"decoder_bundle_declared_file_bytes\": 1938640, \"external_runtime_declared_bytes\": 2123288, \"setup_accounting\": \"SEPARATE_CATEGORIES_MAY_SHARE_FILES\", \"setup_not_counted\": \"Python standard library, transitive libraries and operating system\"}}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/install/test_quorum_v2_coherence.py"
+      ],
+      "exit": 0,
+      "label": "coherence",
+      "mode": "optimized",
+      "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.002s\n\nOK\n",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "/dev/shm/semantic-transport-quorum-v2-20261029/independent/run_independent_coherence04.py"
+      ],
+      "exit": 0,
+      "label": "policy",
+      "mode": "optimized",
+      "stderr": "",
+      "stdout": "{\"cases\": 87, \"failed\": [], \"source_pins\": {\"tools/transport_quorum_v2.py\": \"e2f25465de327642c870dc5dc3fcfe4f9f155955622ab96b633040312dcfd2f0\", \"tools/transport_quorum_v2_input.py\": \"39a0ba765ac123ee3d69573094923d96173ebe7965a594168f74dbe7d9ccb5cf\", \"tools/transport_quorum_v2_policy.py\": \"b4f31395cea75d81d5512ccaef49fa5c99e9f589e9096371714360803f947abb\", \"tools/transport_quorum_v2_process.py\": \"fdd5b229d4dba1f369a3a478b21952d0ae574642a6fa102a74505c82e0692297\", \"tools/transport_quorum_v2_replay.py\": \"5e7889ea91a6af60d361e0f2ca6118a1b14fdbc72034453297848ab1019c7f18\", \"tools/transport_quorum_v2_schema.py\": \"d756de0c3b3bf89b85a26450f3bd426653ef2e3928d3397405944cb75968d745\"}}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "/dev/shm/semantic-transport-quorum-v2-20261029/independent/run_adapter_coherence04.py"
+      ],
+      "exit": 0,
+      "label": "adapter",
+      "mode": "optimized",
+      "stderr": "",
+      "stdout": "{\"path\": \"/dev/shm/semantic-transport-quorum-v2-20261029/independent/adapter-optimized-04/results.json.gz\", \"failed\": [], \"cases\": 43}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "/dev/shm/semantic-transport-quorum-v2-20261029/independent/run_nine_companion_coherence04.py"
+      ],
+      "exit": 0,
+      "label": "nine",
+      "mode": "optimized",
+      "stderr": "",
+      "stdout": "{\"path\": \"/dev/shm/semantic-transport-quorum-v2-20261029/independent/nine-companion-optimized-03/review.json\", \"status\": \"PASS\", \"accounting\": {\"policy_input_bytes\": 13936, \"replay_metadata_bytes\": 10905, \"declared_carrier_bytes\": 15775, \"conservative_message_total_bytes\": 40616, \"message_budget_bytes\": 65536, \"contained_source_bytes_counted_again\": true, \"shared_checker_helper_bytes\": 312112, \"shared_python_executable_bytes\": 67720, \"decoder_bundle_declared_file_bytes\": 1938640, \"external_runtime_declared_bytes\": 2123288, \"setup_accounting\": \"SEPARATE_CATEGORIES_MAY_SHARE_FILES\", \"setup_not_counted\": \"Python standard library, transitive libraries and operating system\"}}\n"
+    }
+  ],
+  "schema": "quorum/independent-coherence-review/2",
+  "status": "TESTED_SCOPED_PASS"
+}

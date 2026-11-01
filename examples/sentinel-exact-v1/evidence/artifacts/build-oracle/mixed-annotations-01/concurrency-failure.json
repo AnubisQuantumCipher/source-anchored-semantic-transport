@@ -1,0 +1,7 @@
+{
+  "action": "Retain both logs; one separately namespaced optimized rerun, no source/assertion changes. CI already sequential.",
+  "normal": "18 passed",
+  "optimized": "18 attempted,1 ERROR in setUp",
+  "reason": "Root launched normal and optimized tests concurrently against shared scratch census while one removed its own temporary child. Optimized control failed closed with FileNotFoundError; no product proof or policy pass inferred.",
+  "status": "FAILED_TEST_HARNESS_CONCURRENCY"
+}

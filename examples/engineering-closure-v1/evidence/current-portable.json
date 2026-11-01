@@ -1,0 +1,35 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-I",
+    "-S",
+    "-B",
+    "-Werror",
+    "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/install/test_portable_handoff.py",
+    "--sender-bundle",
+    "/dev/shm/semantic-transport-proof-closure-20261029/install-current/first-bundle",
+    "--receiver-bundle",
+    "/dev/shm/semantic-transport-proof-closure-20261029/install-current/second-bundle",
+    "--mismatched-bundle",
+    "/home/sicarii/Projects/source-anchored-semantic-transport/evidence/semantic-handoff-v1/positive-02/transport/decoder",
+    "--expect-runtime-sha256",
+    "683527cac47425759c750cbc5190acbd249fcec43a79b3bea99727fb51688819",
+    "--evidence",
+    "/dev/shm/semantic-transport-proof-closure-20261029/install-current/portable"
+  ],
+  "elapsed_ns": 4139446808,
+  "exit_code": 0,
+  "status": "SUCCESS",
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "bytes": 136,
+    "sha256": "cb206f6791dfd81d90b6d0201b8770a4a72755c196498d00b7a33f8fe179b6fb"
+  },
+  "storage_after": {
+    "bytes": 95571257,
+    "files": 1666
+  }
+}

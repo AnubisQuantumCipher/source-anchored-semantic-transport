@@ -1,0 +1,69 @@
+{
+  "schema": "sentinel/independent-registry-interleaving-counterexample/1",
+  "created_utc": "2026-10-30T05:10:45.086067+00:00",
+  "status": "CONFIRMED_WRONG_GREEN_SOURCE03",
+  "source_preimage": [
+    {
+      "original": {
+        "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_sentinel.py",
+        "bytes": 24753,
+        "sha256": "7fdc618b73a020c164e98b8d0291756d37e5adfcdb88f6b043332c6000b2f370"
+      },
+      "retained": {
+        "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/graph-independent-review-01/source03-preimage/transport_sentinel.py",
+        "bytes": 24753,
+        "sha256": "7fdc618b73a020c164e98b8d0291756d37e5adfcdb88f6b043332c6000b2f370"
+      }
+    },
+    {
+      "original": {
+        "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_sentinel_export.py",
+        "bytes": 4799,
+        "sha256": "eaa8bc075c67c499872d5ebfd6879bd5d2fe838a3e7e64d83503040d5fb93c62"
+      },
+      "retained": {
+        "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/graph-independent-review-01/source03-preimage/transport_sentinel_export.py",
+        "bytes": 4799,
+        "sha256": "eaa8bc075c67c499872d5ebfd6879bd5d2fe838a3e7e64d83503040d5fb93c62"
+      }
+    },
+    {
+      "original": {
+        "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_sentinel.py",
+        "bytes": 25280,
+        "sha256": "2ff44aed14f1f08a9f2a0a54f346529c6ce9666372a24ad5debfc63ce019d7c2"
+      },
+      "retained": {
+        "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/graph-independent-review-01/source03-preimage/test_transport_sentinel.py",
+        "bytes": 25280,
+        "sha256": "2ff44aed14f1f08a9f2a0a54f346529c6ce9666372a24ad5debfc63ce019d7c2"
+      }
+    }
+  ],
+  "normal_control": "REFUSED as expected: DocumentError: artifact pin mismatch",
+  "interleaving": [
+    "manifest calculated before mutation; same caller dict switched before resolve"
+  ],
+  "observed": {
+    "schema": "sentinel/structural-report/1",
+    "sidecar_sha256": "105ac681f5f1444f6db78eaedf36960798a000558aa4fb89fa6e6cef3a61db9c",
+    "registry_sha256": "703264af1767a306c66d8b629b32846203df6170e029e3dbd01ace1c088449e7",
+    "status": "STRUCTURE_AND_EXACT_BYTES_ONLY",
+    "candidates": 3,
+    "probes": 5,
+    "retained_results": 15,
+    "retained_failures": 2,
+    "repair_links": 3,
+    "qualification": "NOT_QUALIFIED",
+    "semantic_completeness": "UNPROVEN",
+    "world_truth": "NOT_CERTIFIED",
+    "execution_authority": "NONE"
+  },
+  "held_registry_sha256": "703264af1767a306c66d8b629b32846203df6170e029e3dbd01ace1c088449e7",
+  "actual_used_registry_sha256": "2a3e26e82878a404ce3d2b338a8bb8b362822de78f46361f1ca574ed1350ac9c",
+  "old_NOTE_sha256": "574ef95d2aa2373f574064251f3a1659ccc7f7d595f4ac087bd9720e97b811f0",
+  "used_NOTE_sha256": "f8c00e2a49ed3eee2db00c781fb0b2537c4d57014d585536f1f713f363744c9a",
+  "raw_sha256": "105ac681f5f1444f6db78eaedf36960798a000558aa4fb89fa6e6cef3a61db9c",
+  "scope": "Deterministic pure mock of in-process caller dictionary mutation at the manifest/resolve boundary. No model/native/process/source edit or external host interference. Existing22normal/O PASS remains unchanged; this extra control exposes a missing registry snapshot.",
+  "required_fix": "Validate bounded exact dict/byte inventory, take one bounded snapshot before manifest hash, keep only that snapshot in context and use it for final reachability. Export must use checked snapshot and parsed raw solely; no reread caller artifacts."
+}

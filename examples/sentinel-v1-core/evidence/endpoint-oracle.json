@@ -1,0 +1,131 @@
+{
+  "schema": "sentinel/meaning-edge-endpoint-oracle/1",
+  "cases": [
+    {
+      "relation": "HAS_ARGUMENT",
+      "source_kind": "PREDICATE",
+      "target_kind": "ENTITY",
+      "allowed": true
+    },
+    {
+      "relation": "HAS_ARGUMENT",
+      "source_kind": "EVENT",
+      "target_kind": "REFERENCE",
+      "allowed": true
+    },
+    {
+      "relation": "HAS_ARGUMENT",
+      "source_kind": "ENTITY",
+      "target_kind": "TIME",
+      "allowed": false
+    },
+    {
+      "relation": "EXCEPTION_TO",
+      "source_kind": "EXCEPTION",
+      "target_kind": "PROPOSITION",
+      "allowed": true
+    },
+    {
+      "relation": "EXCEPTION_TO",
+      "source_kind": "ENTITY",
+      "target_kind": "PROPOSITION",
+      "allowed": false
+    },
+    {
+      "relation": "CONDITION_OF",
+      "source_kind": "PROPOSITION",
+      "target_kind": "EVENT",
+      "allowed": true
+    },
+    {
+      "relation": "QUANTIFIES",
+      "source_kind": "QUANTIFIER",
+      "target_kind": "ARGUMENT",
+      "allowed": true
+    },
+    {
+      "relation": "NEGATES",
+      "source_kind": "NEGATION",
+      "target_kind": "MODALITY",
+      "allowed": true
+    },
+    {
+      "relation": "NEGATES",
+      "source_kind": "MODALITY",
+      "target_kind": "PROPOSITION",
+      "allowed": false
+    },
+    {
+      "relation": "UNCERTAINTY_OF",
+      "source_kind": "UNCERTAINTY",
+      "target_kind": "EXCEPTION",
+      "allowed": true
+    },
+    {
+      "relation": "ATTRIBUTED_TO",
+      "source_kind": "PROPOSITION",
+      "target_kind": "ATTRIBUTION",
+      "allowed": true
+    },
+    {
+      "relation": "ATTRIBUTED_TO",
+      "source_kind": "ATTRIBUTION",
+      "target_kind": "PROPOSITION",
+      "allowed": false
+    },
+    {
+      "relation": "TEMPORALLY_BEFORE",
+      "source_kind": "EVENT",
+      "target_kind": "TIME",
+      "allowed": true
+    },
+    {
+      "relation": "TEMPORALLY_BEFORE",
+      "source_kind": "ENTITY",
+      "target_kind": "TIME",
+      "allowed": false
+    },
+    {
+      "relation": "REVISES",
+      "source_kind": "REVISION",
+      "target_kind": "REVISION",
+      "allowed": true
+    },
+    {
+      "relation": "REVISES",
+      "source_kind": "PROPOSITION",
+      "target_kind": "PROPOSITION",
+      "allowed": false
+    },
+    {
+      "relation": "SUPPORTS",
+      "source_kind": "OPAQUE",
+      "target_kind": "ENTITY",
+      "allowed": true
+    },
+    {
+      "relation": "CONTRADICTS",
+      "source_kind": "REFERENCE",
+      "target_kind": "CONDITION",
+      "allowed": true
+    },
+    {
+      "relation": "DEPENDS_ON",
+      "source_kind": "OPAQUE",
+      "target_kind": "DOCUMENT_STRUCTURE",
+      "allowed": true
+    },
+    {
+      "relation": "HAS_ARGUMENT",
+      "source_kind": "OPAQUE",
+      "target_kind": "ENTITY",
+      "allowed": false
+    }
+  ],
+  "separate_checks": [
+    "Same ID still refuses even if kinds match; duplicate edges still refuse.",
+    "Cycles still refuse for DEPENDS_ON/REVISES/TEMPORALLY_BEFORE; broad documentary sorts do not waive these checks.",
+    "Previously accepted ENTITY->TIME HAS_ARGUMENT must refuse after correction.",
+    "Fixed existing literal controls must remain; no weakening prior negative controls to accept malformed input."
+  ]
+}

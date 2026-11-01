@@ -1,0 +1,85 @@
+{
+  "first_failure_retained": "test-normal-01.failure.json",
+  "held_fixture": {
+    "archive": {
+      "bytes": 20611,
+      "path": "test-normal-02/test_01_encode_and_fresh_recipient_recover_exact_source_model_and_verdict/sender/product/meaning.zip",
+      "sha256": "3aebe91453dfe5ec629aea13bd74e7b1396722d52f9150646530bc4774db5663"
+    },
+    "recipient_result": {
+      "bytes": 1403,
+      "path": "test-normal-02/test_01_encode_and_fresh_recipient_recover_exact_source_model_and_verdict/recipient/work/receive-result.json",
+      "sha256": "3f4d92052355e6012053367484afe1832ca53442880be51c976c364132c18d35"
+    },
+    "recovered_model": {
+      "bytes": 614,
+      "path": "test-normal-02/test_01_encode_and_fresh_recipient_recover_exact_source_model_and_verdict/recipient/work/receive-MODEL.bin",
+      "sha256": "6c02674beb5a21f055e6b6f6ed2da1aa566fa7d28ecab520db6441b5f27207bf"
+    },
+    "recovered_source": {
+      "bytes": 40,
+      "path": "test-normal-02/test_01_encode_and_fresh_recipient_recover_exact_source_model_and_verdict/recipient/work/receive-SOURCE.bin",
+      "sha256": "bcf1a15f7e368bd9d54036a7d4c3e3f72904443871f8e6ea2ba8079f0e30882e"
+    },
+    "share": {
+      "bytes": 155,
+      "path": "test-normal-02/test_01_encode_and_fresh_recipient_recover_exact_source_model_and_verdict/sender/product/share.txt",
+      "sha256": "11f2bee5d404028be48a314ed74f5a7cd5c5fb14ad496bf0be73129a87bee521"
+    }
+  },
+  "legacy_module_pins_unchanged": true,
+  "norm_truth_invariant": "UNRESOLVED even for SATISFIED/VIOLATED",
+  "runs": [
+    {
+      "exit_code": 0,
+      "logs": {
+        "stderr": {
+          "bytes": 2013,
+          "sha256": "2ded3985383ca283d91a7df43be5389052e819cab44d10c42f56ebf755aeaf45"
+        },
+        "stdout": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "path": "test-normal-02.run.json",
+      "sha256": "84dcd6dd7b2a471e4c5671b26abcfd1b054ace4f62a3eec3ce237e1871f7915d",
+      "wall_seconds": 7.143669371027499
+    },
+    {
+      "exit_code": 0,
+      "logs": {
+        "stderr": {
+          "bytes": 2013,
+          "sha256": "91e7c1c9af3505ee62786347e184277b9122eb1dda9bd941bb348d55ab0d1873"
+        },
+        "stdout": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "path": "test-optimized-02.run.json",
+      "sha256": "623c35e22bfc51716cb77627b23f39c5808cedacdc774c24c69bf0cd5c948d1b",
+      "wall_seconds": 6.66451058909297
+    }
+  ],
+  "schema": "transport/core-integration-receipt/1",
+  "scope": "Pinned native grammar3 evaluation after exact source/model recovery through unchanged qualified courier; fresh process and directory, not a fresh AI receiving trial.",
+  "source_pins": {
+    "tests/test_transport_core_bridge.py": "e9a40a540f4e8c9d0ab69e3bbfc7e98f9ee2689eae09f87100b15c55327530d0",
+    "tools/transport_core.py": "517552f59b1e06a60f8ad2da74932e2d20b305474cf168c1a156002186ad9239",
+    "tools/transport_core_bridge.py": "c8419dca6109a9387eecddc155883a25f6d9ada0f23a8f39092f275cbe463f3a",
+    "tools/transport_core_cli.py": "514dbfa17bd3b900eb779fe52b36c236aa14803dbbd04484e760518bfbccc5d1",
+    "tools/transport_core_language.py": "8652bb99fd9c0083f5e979db3603d79662db41c37a709cb1e73afb9cfbcb2f91",
+    "tools/transport_core_process.py": "d709860912f804969e2b8d4b9a9789321c837e3f987db7e4836fe779884956b6"
+  },
+  "status": "TESTED",
+  "test_methods_per_mode": 11,
+  "unproved": [
+    "General natural-language meaning",
+    "Model adequacy or truth in the world",
+    "Semantic completeness",
+    "Python formal verification",
+    "Whole-system formal proof"
+  ]
+}

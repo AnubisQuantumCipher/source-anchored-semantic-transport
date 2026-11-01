@@ -1,0 +1,16 @@
+Setup
+   [mkdir]        object directory for project Transport_Bound_Eval
+Compile
+   [Ada]          transport_bound_eval_native.adb
+   [C]            transport_bound_eval_file.c
+   [Ada]          transport_bound_eval.adb
+   [Ada]          transport_bound_eval_io.adb
+   [Ada]          transport_bound_eval_parse.adb
+   [Ada]          transport_eval.adb
+Bind
+   [gprbind]      transport_bound_eval_native.bexch
+   [Ada]          transport_bound_eval_native.ali
+Link
+   [archive]      libtransport_bound_eval.a
+   [index]        libtransport_bound_eval.a
+   [link]         transport_bound_eval_native.adb

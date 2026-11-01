@@ -1,0 +1,1 @@
+{"archive":{"bytes":1703,"name":"deflate9-setup.zip","sha256":"4c318e9cfcd547760bb3ef570cf505cf522e1ce7d2e46cc63da41fa90a9b2124"},"manifest":{"bytes":616,"sha256":"db673d242b76e44d3c042f73b9cef4b35049ed730c5b2fd0d80d629c329a2b20"},"phase":"setup","profile":"deflate9","reader":"comparison/transfer/transfer.py restore API v1","schema":"transport/conventional-transfer-binding/1"}

@@ -1,0 +1,9 @@
+test_original_coherent_invocation_forgery (__main__.Prelaunch.test_original_coherent_invocation_forgery) ... ok
+test_original_coherent_stdout_forgery (__main__.Prelaunch.test_original_coherent_stdout_forgery) ... ok
+test_transport_coherent_invocation_forgery (__main__.Prelaunch.test_transport_coherent_invocation_forgery) ... ok
+test_transport_coherent_stdout_forgery (__main__.Prelaunch.test_transport_coherent_stdout_forgery) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.014s
+
+OK

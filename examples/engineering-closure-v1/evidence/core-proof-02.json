@@ -1,0 +1,29 @@
+{
+  "argv": [
+    "/home/sicarii/opt/gnat/gnatprove-aarch64-linux-16.1.0-1/bin/gnatprove",
+    "-P",
+    "transport.gpr",
+    "-U",
+    "--level=2",
+    "--report=all",
+    "--warnings=error",
+    "--checks-as-errors=on",
+    "--proof-warnings=on",
+    "-j1"
+  ],
+  "elapsed_ns": 120017456168,
+  "exit_code": -9,
+  "status": "REFUSED_TIMEOUT",
+  "stderr": {
+    "bytes": 29070,
+    "sha256": "be4640559f286302f16dc6ef0032895d9969987a02f3707eb5c9ef58a97cc5f3"
+  },
+  "stdout": {
+    "bytes": 155,
+    "sha256": "69a3389efb77199c9dd6f5aaf376dbcced2e7ef1d4edbca98643c88cb7d3578d"
+  },
+  "storage_after": {
+    "bytes": 97731556,
+    "files": 1764
+  }
+}

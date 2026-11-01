@@ -1,0 +1,53 @@
+name: Work accounting completeness controls
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  accounting-controls:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.14.10'
+          architecture: 'x64'
+          check-latest: false
+          allow-prereleases: false
+      - name: Syntax and function-size guard
+        run: |
+          python3 -I -S -B -Werror - <<'PY'
+          import ast
+          from pathlib import Path
+          files = (
+              'comparison/accounting/accounting.py',
+              'comparison/accounting/check.py',
+              'comparison/accounting/run_tests.py',
+              'comparison/accounting/tests/run_independent_v5.py',
+              'comparison/accounting/tests/boundary_check.py',
+          )
+          for name in files:
+              with Path(name).open('rb') as source:
+                  raw = source.read(131073)
+              if len(raw) > 131072:
+                  raise ValueError('source byte bound: ' + name)
+              compile(raw, name, 'exec', dont_inherit=True)
+              tree = ast.parse(raw, filename=name)
+              for node in ast.walk(tree):
+                  if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+                      if node.end_lineno - node.lineno + 1 > 60:
+                          raise ValueError('function size: ' + name + ':' + node.name)
+          print('Syntax and function-size guard passes; no termination proof claimed')
+          PY
+      - name: Frozen portable controls in normal and optimized modes
+        run: |
+          set -euo pipefail
+          umask 077
+          accounting_scratch="$(mktemp -d "$RUNNER_TEMP/work-accounting.XXXXXX")"
+          python3 -I -S -B -Werror comparison/accounting/run_tests.py \
+            --scratch-parent "$accounting_scratch" \
+            --capacity-root "$accounting_scratch"
+      - name: Read-only API input and output boundary controls
+        run: |
+          python3 -I -S -B -Werror comparison/accounting/tests/boundary_check.py
+          python3 -I -S -B -O -Werror comparison/accounting/tests/boundary_check.py

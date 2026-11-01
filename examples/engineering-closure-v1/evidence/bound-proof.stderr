@@ -1,0 +1,645 @@
+ info: aspect Always_Terminates on "Preserve_Step" has been proved, subprogram will terminate
+--> transport_bound_eval.adb:2:14
+
+ info: data dependencies proved
+--> transport_bound_eval.adb:4:16
+
+ info: index check proved
+--> transport_bound_eval.adb:6:44
+
+ info: index check proved
+--> transport_bound_eval.adb:6:56
+
+ info: precondition proved
+--> transport_bound_eval.adb:7:14
+
+ info: postcondition proved
+--> transport_bound_eval.adb:7:14
+
+ info: precondition proved
+--> transport_bound_eval.adb:7:46
+
+ info: assertion proved
+--> transport_bound_eval.adb:12:25
+
+ info: index check proved
+--> transport_bound_eval.adb:12:37
+
+ info: index check proved
+--> transport_bound_eval.adb:12:57
+
+ info: assertion proved
+--> transport_bound_eval.adb:15:25
+
+ info: index check proved
+--> transport_bound_eval.adb:15:37
+
+ info: index check proved
+--> transport_bound_eval.adb:15:58
+
+ info: aspect Always_Terminates on "Preserve_Prefix" has been proved, subprogram will terminate
+--> transport_bound_eval.adb:19:14
+
+ info: data dependencies proved
+--> transport_bound_eval.adb:22:16
+
+ info: index check proved
+--> transport_bound_eval.adb:24:50
+
+ info: index check proved
+--> transport_bound_eval.adb:24:62
+
+ info: postcondition proved
+--> transport_bound_eval.adb:25:14
+
+ info: range check proved
+--> transport_bound_eval.adb:25:59
+
+ info: precondition proved
+--> transport_bound_eval.adb:26:08
+
+ info: range check proved
+--> transport_bound_eval.adb:26:17
+
+ info: index check proved
+--> transport_bound_eval.adb:26:30
+
+ info: precondition proved
+--> transport_bound_eval.adb:26:44
+
+ info: range check proved
+--> transport_bound_eval.adb:26:53
+
+ info: index check proved
+--> transport_bound_eval.adb:26:66
+
+ info: precondition proved
+--> transport_bound_eval.adb:30:10
+
+ info: loop invariant initialization proved
+--> transport_bound_eval.adb:32:13
+
+ info: loop invariant preservation proved
+--> transport_bound_eval.adb:32:13
+
+ info: range check proved
+--> transport_bound_eval.adb:32:51
+
+ info: precondition proved
+--> transport_bound_eval.adb:33:15
+
+ info: range check proved
+--> transport_bound_eval.adb:33:24
+
+ info: index check proved
+--> transport_bound_eval.adb:33:37
+
+ info: precondition proved
+--> transport_bound_eval.adb:34:17
+
+ info: range check proved
+--> transport_bound_eval.adb:34:26
+
+ info: index check proved
+--> transport_bound_eval.adb:34:39
+
+ info: initialization of "Before" proved
+--> transport_bound_eval.adb:39:07
+
+ info: precondition proved
+--> transport_bound_eval.adb:44:24
+
+ info: precondition proved
+--> transport_bound_eval.adb:45:10
+
+ info: loop invariant initialization proved
+--> transport_bound_eval.adb:46:33
+
+ info: loop invariant preservation proved
+--> transport_bound_eval.adb:46:33
+
+ info: loop invariant initialization proved
+--> transport_bound_eval.adb:48:13
+
+ info: loop invariant preservation proved
+--> transport_bound_eval.adb:48:13
+
+ info: range check proved
+--> transport_bound_eval.adb:48:51
+
+ info: index check proved
+--> transport_bound_eval.adb:49:23
+
+ info: precondition proved
+--> transport_bound_eval.adb:49:28
+
+ info: range check proved
+--> transport_bound_eval.adb:49:37
+
+ info: index check proved
+--> transport_bound_eval.adb:49:50
+
+ info: loop invariant initialization proved
+--> transport_bound_eval.adb:51:13
+
+ info: loop invariant preservation proved
+--> transport_bound_eval.adb:51:13
+
+ info: overflow check proved
+--> transport_bound_eval.adb:51:28
+
+ info: index check proved
+--> transport_bound_eval.adb:51:56
+
+ info: implicit aspect Always_Terminates on "Resolve_Mask" has been proved, subprogram will terminate
+--> transport_bound_eval.ads:7:13
+
+ info: data dependencies proved
+--> transport_bound_eval.ads:10:09
+
+ info: postcondition proved
+--> transport_bound_eval.ads:12:08
+
+ info: implicit aspect Always_Terminates on "Consistent" has been proved, subprogram will terminate
+--> transport_bound_eval.ads:16:13
+
+ info: data dependencies proved
+--> transport_bound_eval.ads:20:09
+
+ info: aspect Always_Terminates on "Evaluate" has been proved, subprogram will terminate
+--> transport_bound_eval.ads:22:14
+
+ info: initialization of "Result" proved
+--> transport_bound_eval.ads:22:59
+
+ info: data dependencies proved
+--> transport_bound_eval.ads:23:09
+
+ info: postcondition proved
+--> transport_bound_eval.ads:26:08
+
+ info: index check proved
+--> transport_bound_eval.ads:27:19
+
+ info: precondition proved
+--> transport_bound_eval.ads:27:24
+
+ info: range check proved
+--> transport_bound_eval.ads:27:33
+
+ info: index check proved
+--> transport_bound_eval.ads:27:46
+
+ info: index check proved
+--> transport_bound_eval.ads:29:19
+ info: implicit aspect Always_Terminates on "Word" has been proved, subprogram will terminate
+--> transport_bound_eval_parse.adb:2:13
+
+ info: data dependencies proved
+--> transport_bound_eval_parse.adb:3:09
+
+ info: postcondition proved
+--> transport_bound_eval_parse.adb:4:14
+
+ info: index check proved
+--> transport_bound_eval_parse.adb:7:29
+
+ info: overflow check proved
+--> transport_bound_eval_parse.adb:7:68
+
+ info: index check proved
+--> transport_bound_eval_parse.adb:7:68
+
+ info: aspect Always_Terminates on "Nodes_From_Wire" has been proved, subprogram will terminate
+--> transport_bound_eval_parse.adb:10:14
+
+ info: initialization of "T" proved
+--> transport_bound_eval_parse.adb:11:45
+
+ info: initialization of "Observed" proved
+--> transport_bound_eval_parse.adb:12:07
+
+ info: initialization of "Valid" proved
+--> transport_bound_eval_parse.adb:12:36
+
+ info: data dependencies proved
+--> transport_bound_eval_parse.adb:13:09
+
+ info: postcondition proved
+--> transport_bound_eval_parse.adb:14:14
+
+ info: initialization of "Base" proved
+--> transport_bound_eval_parse.adb:16:07
+
+ info: initialization of "Left" proved
+--> transport_bound_eval_parse.adb:16:13
+
+ info: initialization of "Right" proved
+--> transport_bound_eval_parse.adb:16:19
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> transport_bound_eval_parse.adb:21:27
+
+ info: overflow check proved
+--> transport_bound_eval_parse.adb:22:30
+
+ info: overflow check proved
+--> transport_bound_eval_parse.adb:22:40
+
+ info: overflow check proved
+--> transport_bound_eval_parse.adb:23:24
+
+ info: index check proved
+--> transport_bound_eval_parse.adb:23:24
+
+ info: overflow check proved
+--> transport_bound_eval_parse.adb:24:32
+
+ info: index check proved
+--> transport_bound_eval_parse.adb:24:32
+
+ info: range check proved
+--> transport_bound_eval_parse.adb:28:42
+
+ info: overflow check proved
+--> transport_bound_eval_parse.adb:28:53
+
+ info: index check proved
+--> transport_bound_eval_parse.adb:28:53
+
+ info: overflow check proved
+--> transport_bound_eval_parse.adb:29:57
+
+ info: index check proved
+--> transport_bound_eval_parse.adb:29:57
+
+ info: range check proved
+--> transport_bound_eval_parse.adb:32:40
+
+ info: overflow check proved
+--> transport_bound_eval_parse.adb:32:60
+
+ info: index check proved
+--> transport_bound_eval_parse.adb:32:60
+
+ info: precondition proved
+--> transport_bound_eval_parse.adb:33:18
+
+ info: overflow check proved
+--> transport_bound_eval_parse.adb:33:35
+
+ info: precondition proved
+--> transport_bound_eval_parse.adb:34:19
+
+ info: overflow check proved
+--> transport_bound_eval_parse.adb:34:36
+
+ info: range check proved
+--> transport_bound_eval_parse.adb:38:30
+
+ info: range check proved
+--> transport_bound_eval_parse.adb:39:31
+
+ info: index check proved
+--> transport_bound_eval_parse.adb:51:14
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> transport_bound_eval_parse.adb:52:37
+
+ info: index check proved
+--> transport_bound_eval_parse.adb:55:33
+
+ info: index check proved
+--> transport_bound_eval_parse.adb:58:33
+
+ info: index check proved
+--> transport_bound_eval_parse.adb:62:50
+
+ info: initialization of "Count" proved
+--> transport_bound_eval_parse.adb:69:07
+
+ info: initialization of "Candidate" proved
+--> transport_bound_eval_parse.adb:70:07
+
+ info: initialization of "Candidate_Observed" proved
+--> transport_bound_eval_parse.adb:71:07
+
+ info: initialization of "Valid" proved
+--> transport_bound_eval_parse.adb:72:07
+
+ info: precondition proved
+--> transport_bound_eval_parse.adb:83:16
+
+ info: overflow check proved
+--> transport_bound_eval_parse.adb:85:31
+
+ info: overflow check proved
+--> transport_bound_eval_parse.adb:85:45
+
+ info: range check proved
+--> transport_bound_eval_parse.adb:89:30
+
+ info: precondition proved
+--> transport_bound_eval_parse.adb:90:32
+
+ info: implicit aspect Always_Terminates on "Connected" has been proved, subprogram will terminate
+--> transport_bound_eval_parse.ads:13:13
+
+ info: data dependencies proved
+--> transport_bound_eval_parse.ads:14:09
+
+ info: aspect Always_Terminates on "Read" has been proved, subprogram will terminate
+--> transport_bound_eval_parse.ads:16:14
+
+ info: initialization of "T" proved
+--> transport_bound_eval_parse.ads:17:51
+
+ info: initialization of "Observed" proved
+--> transport_bound_eval_parse.ads:18:07
+
+ info: initialization of "Result" proved
+--> transport_bound_eval_parse.ads:18:36
+
+ info: data dependencies proved
+--> transport_bound_eval_parse.ads:19:09
+
+ info: postcondition proved
+--> transport_bound_eval_parse.ads:21:08
+
+ info: precondition proved
+--> transport_bound_eval_parse.ads:22:70
+ info: index check proved
+--> transport_eval.adb:10:37
+
+ info: index check proved
+--> transport_eval.adb:14:37
+
+ info: index check proved
+--> transport_eval.adb:15:37
+
+ info: index check proved
+--> transport_eval.adb:28:49
+
+ info: index check proved
+--> transport_eval.adb:30:47
+
+ info: index check proved
+--> transport_eval.adb:31:46
+
+ info: index check proved
+--> transport_eval.adb:33:71
+
+ info: index check proved
+--> transport_eval.adb:36:52
+
+ info: index check proved
+--> transport_eval.adb:37:52
+
+ info: aspect Always_Terminates on "Preserve_Step" has been proved, subprogram will terminate
+--> transport_eval.adb:41:14
+
+ info: data dependencies proved
+--> transport_eval.adb:43:16
+
+ info: index check proved
+--> transport_eval.adb:45:44
+
+ info: index check proved
+--> transport_eval.adb:45:56
+
+ info: precondition proved
+--> transport_eval.adb:46:14
+
+ info: postcondition proved
+--> transport_eval.adb:46:14
+
+ info: precondition proved
+--> transport_eval.adb:46:46
+
+ info: assertion proved
+--> transport_eval.adb:51:25
+
+ info: index check proved
+--> transport_eval.adb:51:37
+
+ info: index check proved
+--> transport_eval.adb:51:57
+
+ info: assertion proved
+--> transport_eval.adb:54:25
+
+ info: index check proved
+--> transport_eval.adb:54:37
+
+ info: index check proved
+--> transport_eval.adb:54:58
+
+ info: aspect Always_Terminates on "Preserve_Prefix" has been proved, subprogram will terminate
+--> transport_eval.adb:58:14
+
+ info: data dependencies proved
+--> transport_eval.adb:61:16
+
+ info: index check proved
+--> transport_eval.adb:63:50
+
+ info: index check proved
+--> transport_eval.adb:63:62
+
+ info: postcondition proved
+--> transport_eval.adb:64:14
+
+ info: range check proved
+--> transport_eval.adb:64:59
+
+ info: precondition proved
+--> transport_eval.adb:65:08
+
+ info: range check proved
+--> transport_eval.adb:65:17
+
+ info: precondition proved
+--> transport_eval.adb:65:40
+
+ info: range check proved
+--> transport_eval.adb:65:49
+
+ info: precondition proved
+--> transport_eval.adb:69:10
+
+ info: loop invariant initialization proved
+--> transport_eval.adb:71:13
+
+ info: loop invariant preservation proved
+--> transport_eval.adb:71:13
+
+ info: range check proved
+--> transport_eval.adb:71:51
+
+ info: precondition proved
+--> transport_eval.adb:72:15
+
+ info: range check proved
+--> transport_eval.adb:72:24
+
+ info: precondition proved
+--> transport_eval.adb:72:47
+
+ info: range check proved
+--> transport_eval.adb:72:56
+
+ info: initialization of "Before" proved
+--> transport_eval.adb:77:07
+
+ info: precondition proved
+--> transport_eval.adb:82:24
+
+ info: precondition proved
+--> transport_eval.adb:83:10
+
+ info: loop invariant initialization proved
+--> transport_eval.adb:84:33
+
+ info: loop invariant preservation proved
+--> transport_eval.adb:84:33
+
+ info: loop invariant initialization proved
+--> transport_eval.adb:86:13
+
+ info: loop invariant preservation proved
+--> transport_eval.adb:86:13
+
+ info: range check proved
+--> transport_eval.adb:86:51
+
+ info: index check proved
+--> transport_eval.adb:87:23
+
+ info: precondition proved
+--> transport_eval.adb:87:28
+
+ info: range check proved
+--> transport_eval.adb:87:37
+
+ info: loop invariant initialization proved
+--> transport_eval.adb:89:13
+
+ info: loop invariant preservation proved
+--> transport_eval.adb:89:13
+
+ info: overflow check proved
+--> transport_eval.adb:89:28
+
+ info: index check proved
+--> transport_eval.adb:89:56
+
+ info: implicit aspect Always_Terminates on "Kind" has been proved, subprogram will terminate
+--> transport_eval.ads:25:13
+
+ info: data dependencies proved
+--> transport_eval.ads:27:09
+
+ info: implicit aspect Always_Terminates on "Typed_Node" has been proved, subprogram will terminate
+--> transport_eval.ads:29:13
+
+ info: data dependencies proved
+--> transport_eval.ads:30:09
+
+ info: postcondition proved
+--> transport_eval.ads:31:14
+
+ info: index check proved
+--> transport_eval.ads:37:37
+
+ info: index check proved
+--> transport_eval.ads:41:37
+
+ info: index check proved
+--> transport_eval.ads:42:37
+
+ info: implicit aspect Always_Terminates on "Well_Formed" has been proved, subprogram will terminate
+--> transport_eval.ads:44:13
+
+ info: index check proved
+--> transport_eval.ads:45:44
+
+ info: range check proved
+--> transport_eval.ads:46:52
+
+ info: data dependencies proved
+--> transport_eval.ads:47:09
+
+ info: implicit aspect Always_Terminates on "Negate" has been proved, subprogram will terminate
+--> transport_eval.ads:49:13
+
+ info: data dependencies proved
+--> transport_eval.ads:53:09
+
+ info: implicit aspect Always_Terminates on "Both" has been proved, subprogram will terminate
+--> transport_eval.ads:55:13
+
+ info: data dependencies proved
+--> transport_eval.ads:59:09
+
+ info: implicit aspect Always_Terminates on "Judge" has been proved, subprogram will terminate
+--> transport_eval.ads:61:13
+
+ info: data dependencies proved
+--> transport_eval.ads:65:09
+
+ info: implicit aspect Always_Terminates on "Conjoin" has been proved, subprogram will terminate
+--> transport_eval.ads:67:13
+
+ info: data dependencies proved
+--> transport_eval.ads:70:09
+
+ info: implicit aspect Always_Terminates on "Step" has been proved, subprogram will terminate
+--> transport_eval.ads:72:13
+
+ info: data dependencies proved
+--> transport_eval.ads:74:09
+
+ info: postcondition proved
+--> transport_eval.ads:75:14
+
+ info: index check proved
+--> transport_eval.ads:80:49
+
+ info: index check proved
+--> transport_eval.ads:82:47
+
+ info: index check proved
+--> transport_eval.ads:83:47
+
+ info: index check proved
+--> transport_eval.ads:85:71
+
+ info: index check proved
+--> transport_eval.ads:88:52
+
+ info: index check proved
+--> transport_eval.ads:89:52
+
+ info: aspect Always_Terminates on "Evaluate" has been proved, subprogram will terminate
+--> transport_eval.ads:91:14
+
+ info: initialization of "Result" proved
+--> transport_eval.ads:91:57
+
+ info: data dependencies proved
+--> transport_eval.ads:92:09
+
+ info: postcondition proved
+--> transport_eval.ads:94:08
+
+ info: index check proved
+--> transport_eval.ads:95:19
+
+ info: precondition proved
+--> transport_eval.ads:95:24
+
+ info: range check proved
+--> transport_eval.ads:95:33
+
+ info: index check proved
+--> transport_eval.ads:96:58

@@ -1,0 +1,38 @@
+{
+  "schema": "quorum/observed-run-coverage/2",
+  "scope": "Only the two explicitly named frozen receiver captures; not an inventory of all available providers",
+  "records": [
+    {
+      "capture": "original-02",
+      "report_sha256": "d7eab01d3a30f59d3190e34d635071b3469856fee49fda418d5f0497257bd502",
+      "thread_id": "01a1889e-c3e8-7d93-93d3-43521004798d",
+      "identity_status": "OBSERVED_RECORD_MATCH_ONLY",
+      "model_metadata": [
+        {
+          "effort": "high",
+          "model": "gpt-6.1-sol"
+        }
+      ],
+      "quorum_admission": "NONE",
+      "reason": "These receiver explanations were not prompted as schema-conforming QUORUM assessments; no stance is inferred."
+    },
+    {
+      "capture": "transport-02",
+      "report_sha256": "44b76ef5b052cb063a77d5ac1e33754b8ef626a8d3d1eee9c47f8f8215717f73",
+      "thread_id": "01a1889e-d9eb-73f2-b9bf-4dbcb21988f2",
+      "identity_status": "OBSERVED_RECORD_MATCH_ONLY",
+      "model_metadata": [
+        {
+          "effort": "high",
+          "model": "gpt-6.1-sol"
+        }
+      ],
+      "quorum_admission": "NONE",
+      "reason": "These receiver explanations were not prompted as schema-conforming QUORUM assessments; no stance is inferred."
+    }
+  ],
+  "model_execution_by_this_change": "NONE",
+  "cross_family_live_threshold": "UNPERFORMED",
+  "provider_authentication": "NOT_ESTABLISHED",
+  "error_independence": "NOT_ESTABLISHED"
+}

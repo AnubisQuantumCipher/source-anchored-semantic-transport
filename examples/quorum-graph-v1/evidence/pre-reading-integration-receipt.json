@@ -1,0 +1,162 @@
+{
+  "benefit": "NOT_MEASURED",
+  "development_arm_outputs": 144,
+  "external_validation": "EXTERNAL_VALIDATION_PENDING",
+  "files": [
+    {
+      "bytes": 5798,
+      "path": ".github/workflows/source.yml",
+      "sha256": "2fdfd41a519c3ad992c9ce9e2d740db7ba64d3a7de56bd6d413a8e639ba4aa5a"
+    },
+    {
+      "bytes": 1954,
+      "path": "examples/quorum-graph-v1/README.md",
+      "sha256": "5b273f40b0c133a04a6e37589fb073f4299ef20019f752fd86b1d08b8e5cfda6"
+    },
+    {
+      "bytes": 8705,
+      "path": "examples/quorum-graph-v1/contract.json",
+      "sha256": "77b5a8338a93cf4d27703756c707005dd99ffa0507f9187cef0e1eeb1a734a6b"
+    },
+    {
+      "bytes": 10269,
+      "path": "examples/quorum-graph-v1/evidence/code-review.json",
+      "sha256": "cfa0c0cf48068cca5d151d17b25da670e3bbfb28a744daf4e3294274d3674335"
+    },
+    {
+      "bytes": 2089,
+      "path": "examples/quorum-graph-v1/evidence/command-results-01.json",
+      "sha256": "39244cf6e7272253d71f722cba61e68d0c7fcedc0d973bcc3fc9e43eac8e78e1"
+    },
+    {
+      "bytes": 1715,
+      "path": "examples/quorum-graph-v1/evidence/development-baseline.json",
+      "sha256": "8b88ca2c527b6ff953c48878135d4897bb786085c0572180a1d25021293f8c2d"
+    },
+    {
+      "bytes": 27047,
+      "path": "examples/quorum-graph-v1/evidence/graph-first-results.json",
+      "sha256": "93232922e9345220f4ed7e349f1ec192ff9ce43a21b1bc000831626b7054d9e4"
+    },
+    {
+      "bytes": 27047,
+      "path": "examples/quorum-graph-v1/evidence/independent-test-results.json",
+      "sha256": "93232922e9345220f4ed7e349f1ec192ff9ce43a21b1bc000831626b7054d9e4"
+    },
+    {
+      "bytes": 2819,
+      "path": "examples/quorum-graph-v1/oracle-addendum.json",
+      "sha256": "49098105e857be5a993061cae578c819892d2176010cbaf90bc34cbd7f9ec5cc"
+    },
+    {
+      "bytes": 14613,
+      "path": "examples/quorum-graph-v1/oracle.json",
+      "sha256": "5cb3a7fe16707a285170c1c939f517ce4b6d07bd4cca7f9880440da2a84dcd56"
+    },
+    {
+      "bytes": 3225,
+      "path": "examples/quorum-graph-v1/prepare_receipt.py",
+      "sha256": "6bee668ad350da65490615027d438479354704448dd22cc863509f9038ee77f3"
+    },
+    {
+      "bytes": 6546,
+      "path": "examples/quorum-graph-v1/review.json",
+      "sha256": "cceec14ab68e37d09fa1eee577ff95cd7315eaac1afdbb89abfde05dfe09d2e4"
+    },
+    {
+      "bytes": 1750,
+      "path": "install/check_source.py",
+      "sha256": "c30004ded45fcccad45b3d9cea7602dd7a23654d83d88eeeafd97d1b76ac0cc3"
+    },
+    {
+      "bytes": 6143,
+      "path": "install/test_quorum_graph.py",
+      "sha256": "95fcbd6801bf0afd0a2df95adbeab47701897d4ef00865b2874c9773eaf87043"
+    },
+    {
+      "bytes": 5524,
+      "path": "tools/transport_quorum_graph.py",
+      "sha256": "40edaed32f10d2803a3be59e33130d62f7724de3e67eeaadf9c8d823c5dc4902"
+    }
+  ],
+  "formal_proof": "UNPROVEN",
+  "full_replay": "UNRUN",
+  "installed_decoder": "UNCHANGED_NOT_INTEGRATED",
+  "literal_case_ids": [
+    "g_accepted_64_edges_dependent_seed",
+    "g_accepted_64_edges_required_seed",
+    "g_chain_leaf_direction",
+    "g_chain_middle",
+    "g_chain_root",
+    "g_changed_bool",
+    "g_changed_error_before_cycle",
+    "g_changed_float",
+    "g_changed_limit_before_duplicates",
+    "g_changed_missing_index",
+    "g_changed_wrong_type",
+    "g_count_bool",
+    "g_count_exhaustion",
+    "g_count_float",
+    "g_count_negative",
+    "g_cycle_no_changes",
+    "g_dependent_bool",
+    "g_diamond",
+    "g_disconnected_cycle",
+    "g_duplicate_changed",
+    "g_duplicate_edge",
+    "g_edge_limit_before_duplicates",
+    "g_edge_shape_long",
+    "g_edge_shape_short",
+    "g_edge_shape_string",
+    "g_edges_wrong_type",
+    "g_empty",
+    "g_fork",
+    "g_max_changed_sorted",
+    "g_max_node_chain",
+    "g_missing_before_unknown",
+    "g_missing_changed",
+    "g_missing_node_count",
+    "g_missing_required_index",
+    "g_multiple_seeds_sorted",
+    "g_negative_dependent",
+    "g_no_changes",
+    "g_object_array",
+    "g_object_null",
+    "g_one_isolated",
+    "g_required_float",
+    "g_reversed_dependency_direction",
+    "g_reversed_edge_input_order",
+    "g_schema_bool",
+    "g_schema_wrong",
+    "g_self_cycle",
+    "g_three_cycle",
+    "g_unknown_field",
+    "g_unrelated_components",
+    "p_bad_entry_before_cycle",
+    "p_bool",
+    "p_chain",
+    "p_disconnected_cycle",
+    "p_empty",
+    "p_float",
+    "p_fork",
+    "p_limit_before_bad_entry",
+    "p_limit_exhaustion",
+    "p_long_cycle",
+    "p_max_reverse_chain",
+    "p_max_roots",
+    "p_missing_reference",
+    "p_multiple_roots",
+    "p_negative_reference",
+    "p_null_outer",
+    "p_object_outer",
+    "p_reverse_array_order",
+    "p_root",
+    "p_self_cycle",
+    "p_smallest_available_each_step",
+    "p_string_root",
+    "p_two_cycle"
+  ],
+  "product_acceptance": false,
+  "schema": "quorum/graph-component-receipt/1",
+  "status": "TESTED"
+}

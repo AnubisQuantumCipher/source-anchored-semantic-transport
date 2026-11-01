@@ -1,0 +1,1 @@
+{"body":{"bytes":2139,"path":"body.json","sha256":"04eb46ba552123718352457b157240a3a738c08fa7975c0b3c469f5ea15737ec"},"schema":"quorum/sender-input/1","sources":[{"alias":"NOTICE","key":{"bytes":58,"logical_source_id":"ferry.notice-v1\n","sha256":"c61ff9df4bace167c7ed5076317d5ae2ec80e43b0fc79d27e6610646d15a0c1d"},"path":"source.bin"}]}

@@ -1,0 +1,15 @@
+{
+  "schema": "quorum/reading-output-resource-addendum/1",
+  "owner": "/root",
+  "status": "ADOPTED_BEFORE_READING_IMPLEMENTATION",
+  "base_contract_sha256": "f7303d91e238b95a794ff49477903c872981891ccc268e75c81e4d2b972d0c84",
+  "reason": "Finite schema bounds constrain object construction but do not prove the final canonical buffer fits the publication bound before allocation.",
+  "rules": [
+    "After all closure and withdrawal DAG gates, create complete non-Claim skeleton including all withdrawal rows and reserved LF. Check skeleton byte size <=32768 before any Claim entry append.",
+    "Construct one bounded Claim entry at a time; canonical scratch <=65536. Charge exact encoded entry bytes plus separator comma before appending to result claims. Overflow refuses READING_OUTPUT_BYTE_BOUND at READING_OUTPUT_BOUNDS; no trimmed success.",
+    "After all entries appended, complete canonical output plus LF must fit32768 and equal tracked byte size. Accounting mismatch refuses READING_OUTPUT_ACCOUNTING at READING_OUTPUT_BOUNDS using explicit condition even under -O.",
+    "Enforce output depth12 with bounded lexical scan of the complete <=32768 canonical bytes; translate lexical/depth failure to READING_OUTPUT_BYTE_BOUND. No parse, model, network or authorization action.",
+    "Object construction is finite under fixed schema: <=32 Reading dispositions across <=16 Claim entries; every Reading/Challenge/Withdrawal associated with exact Claim; no Python RSS or whole-system proof claimed."
+  ],
+  "impact": "No existing fixture success or refusal changed; additive resource-invariant refusal for unreachable implementation inconsistency. Original output cap and all admission/study obligations remain unchanged."
+}

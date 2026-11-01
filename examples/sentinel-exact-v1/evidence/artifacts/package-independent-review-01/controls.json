@@ -1,0 +1,115 @@
+{
+  "schema": "sentinel/package-independent-controls/1",
+  "source_before": [
+    {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_sentinel_package.py",
+      "bytes": 15129,
+      "sha256": "b4e31179b8ebbb2183d765417c1cc3c2dc13e9d518e596781f6563c6be3f7f3b"
+    },
+    {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_sentinel_package.py",
+      "bytes": 12090,
+      "sha256": "cb5ca372a395561981e1a03b4bb5bd24f1061da85fd520005e09b2c371321bf1"
+    },
+    {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_sentinel.py",
+      "bytes": 25423,
+      "sha256": "52f15b46d9af6e80d56d9ce4769057300767cb1c4bdc5b759c1841f38104dfd3"
+    },
+    {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_sentinel_export.py",
+      "bytes": 4799,
+      "sha256": "eaa8bc075c67c499872d5ebfd6879bd5d2fe838a3e7e64d83503040d5fb93c62"
+    },
+    {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_document_io.py",
+      "bytes": 4332,
+      "sha256": "f8724d0ab7213d2641cbeec2baf40f1b0d878e148f5d764c025d352f65776d3a"
+    },
+    {
+      "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/package-oracle-01/CONTRACT.md",
+      "bytes": 4330,
+      "sha256": "403ad91840ff33494cdfa627fa9a145779636c33fc62f21805aa653fd4b7daa6"
+    }
+  ],
+  "source_after": [
+    {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_sentinel_package.py",
+      "bytes": 15129,
+      "sha256": "b4e31179b8ebbb2183d765417c1cc3c2dc13e9d518e596781f6563c6be3f7f3b"
+    },
+    {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_sentinel_package.py",
+      "bytes": 12090,
+      "sha256": "cb5ca372a395561981e1a03b4bb5bd24f1061da85fd520005e09b2c371321bf1"
+    },
+    {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_sentinel.py",
+      "bytes": 25423,
+      "sha256": "52f15b46d9af6e80d56d9ce4769057300767cb1c4bdc5b759c1841f38104dfd3"
+    },
+    {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_sentinel_export.py",
+      "bytes": 4799,
+      "sha256": "eaa8bc075c67c499872d5ebfd6879bd5d2fe838a3e7e64d83503040d5fb93c62"
+    },
+    {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_document_io.py",
+      "bytes": 4332,
+      "sha256": "f8724d0ab7213d2641cbeec2baf40f1b0d878e148f5d764c025d352f65776d3a"
+    },
+    {
+      "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/package-oracle-01/CONTRACT.md",
+      "bytes": 4330,
+      "sha256": "403ad91840ff33494cdfa627fa9a145779636c33fc62f21805aa653fd4b7daa6"
+    }
+  ],
+  "runs": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "tests/test_transport_sentinel_package.py"
+      ],
+      "exit": 1,
+      "elapsed_ns": 925254771,
+      "stdout": {
+        "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/package-independent-review-01/normal.stdout",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/package-independent-review-01/normal.stderr",
+        "bytes": 2673,
+        "sha256": "c21b7cf42a6091dce40adb7c70ca0c6fba290fc24b786edaf9907dd1a6219594"
+      }
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-O",
+        "-Werror",
+        "tests/test_transport_sentinel_package.py"
+      ],
+      "exit": 1,
+      "elapsed_ns": 979819778,
+      "stdout": {
+        "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/package-independent-review-01/optimized.stdout",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/package-independent-review-01/optimized.stderr",
+        "bytes": 2673,
+        "sha256": "b238f603b4bb6350c61d01325e6bc0781aab2e3cc4a641000c3e65d825176959"
+      }
+    }
+  ],
+  "scope": "Pure existing17 controls normal/O, real graph fixture, subprocess.Popen denied by suite. No native/network/model/prover. Source remains unchanged."
+}

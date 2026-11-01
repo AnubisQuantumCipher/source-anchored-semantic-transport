@@ -1,0 +1,329 @@
+{
+  "additional_controls": [
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "stage": "CANONICAL_VALUE_ONLY",
+        "status": "ok"
+      },
+      "id": "r_integer_digit_boundary",
+      "raw_hex": "3132333435363738393031323334353637383930"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "error": "INPUT_INTEGER_BOUND",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "id": "r_integer_digit_overflow",
+      "raw_hex": "313233343536373839303132333435363738393031"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "error": "INPUT_ENCODING",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "id": "r_utf8_before_integer",
+      "raw_hex": "2d30ff"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "error": "INPUT_INTEGER_TOKEN",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "id": "r_integer_before_depth",
+      "raw_hex": "2d305b5b5b5b5b5b5b5b5b5b5b5b5b"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "error": "INPUT_DEPTH",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "id": "r_depth_before_integer",
+      "raw_hex": "5b5b5b5b5b5b5b5b5b5b5b5b5b2d305d5d5d5d5d5d5d5d5d5d5d5d5d"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "error": "INPUT_JSON",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "id": "r_duplicate_before_canonical",
+      "raw_hex": "7b2261223a302c202261223a317d"
+    },
+    {
+      "call_scope": "PRIVATE_CANONICAL_READER",
+      "expected": {
+        "error": "INPUT_JSON",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "id": "r_duplicate_before_scalar",
+      "raw_hex": "7b2261223a225c7564383030222c2261223a307d"
+    },
+    {
+      "call_scope": "BODY_WRAPPER",
+      "expected": {
+        "error": "INPUT_CLOSED_SCHEMA",
+        "stage": "SCHEMA",
+        "status": "error"
+      },
+      "id": "b_noncanonical_empty_shape",
+      "raw_hex": "207b7d20"
+    }
+  ],
+  "classification": "HAND_AUTHORED_DEVELOPMENT_EXPECTATIONS_UNRUN",
+  "expected_stage_overrides": [
+    {
+      "expected": {
+        "error": "INPUT_INTEGER_TOKEN",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "id": "r_negative"
+    },
+    {
+      "expected": {
+        "error": "INPUT_INTEGER_TOKEN",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "id": "r_negative_zero"
+    },
+    {
+      "expected": {
+        "error": "INPUT_INTEGER_TOKEN",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "id": "r_decimal"
+    },
+    {
+      "expected": {
+        "error": "INPUT_INTEGER_TOKEN",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "id": "r_exponent"
+    },
+    {
+      "expected": {
+        "error": "INPUT_INTEGER_TOKEN",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "id": "r_nan"
+    },
+    {
+      "expected": {
+        "error": "INPUT_INTEGER_TOKEN",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "id": "r_infinity"
+    },
+    {
+      "expected": {
+        "error": "INPUT_INTEGER_TOKEN",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "id": "r_leading_zero"
+    },
+    {
+      "expected": {
+        "error": "INPUT_JSON",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "id": "r_duplicate"
+    },
+    {
+      "expected": {
+        "error": "INPUT_JSON",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "id": "r_nested_duplicate"
+    },
+    {
+      "expected": {
+        "error": "INPUT_JSON",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "id": "r_escaped_duplicate"
+    },
+    {
+      "expected": {
+        "error": "INPUT_JSON",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "id": "r_trailing"
+    },
+    {
+      "expected": {
+        "error": "INPUT_JSON",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "id": "r_truncated"
+    },
+    {
+      "expected": {
+        "error": "INPUT_ENCODING",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "id": "r_bom"
+    },
+    {
+      "expected": {
+        "error": "INPUT_ENCODING",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "id": "r_invalid_utf8"
+    },
+    {
+      "expected": {
+        "error": "INPUT_ENCODING",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "id": "r_unpaired_surrogate"
+    },
+    {
+      "expected": {
+        "error": "INPUT_NONCANONICAL",
+        "stage": "CANONICAL_BYTES",
+        "status": "error"
+      },
+      "id": "r_whitespace"
+    },
+    {
+      "expected": {
+        "error": "INPUT_NONCANONICAL",
+        "stage": "CANONICAL_BYTES",
+        "status": "error"
+      },
+      "id": "r_final_lf"
+    },
+    {
+      "expected": {
+        "error": "INPUT_NONCANONICAL",
+        "stage": "CANONICAL_BYTES",
+        "status": "error"
+      },
+      "id": "r_escaped_ascii"
+    },
+    {
+      "expected": {
+        "error": "INPUT_NONCANONICAL",
+        "stage": "CANONICAL_BYTES",
+        "status": "error"
+      },
+      "id": "r_unsorted_keys"
+    },
+    {
+      "expected": {
+        "error": "INPUT_DEPTH",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "id": "r_depth13"
+    },
+    {
+      "expected": {
+        "error": "INPUT_BYTE_BOUND",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "id": "r_byte_overflow"
+    },
+    {
+      "expected": {
+        "error": "INPUT_BYTE_BOUND",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "id": "r_empty"
+    },
+    {
+      "expected": {
+        "error": "INPUT_TYPE",
+        "stage": "PREPARSE",
+        "status": "error"
+      },
+      "id": "r_bytearray"
+    }
+  ],
+  "originals_preserved": true,
+  "retention": "All originals remain unchanged. Private canonical-value success is not Body shape or replay acceptance. Freeze and independently review before code.",
+  "schema": "quorum/body-input-raw-controls-corrections/2",
+  "wrapper_constructions": [
+    {
+      "construction": "From retained minimal-body literal, append a fifth otherwise shape-valid RuleSpec; canonicalize exact candidate bytes only, not expected results.",
+      "expected": {
+        "error": "INPUT_RECORD_BOUND",
+        "stage": "BOUNDS",
+        "status": "error"
+      },
+      "id": "b_five_rules"
+    },
+    {
+      "construction": "From minimal-body, remove one RuleSpec while keeping other fields unchanged.",
+      "expected": {
+        "error": "INPUT_UNADMITTED",
+        "stage": "SCHEMA",
+        "status": "error"
+      },
+      "id": "b_three_rules"
+    },
+    {
+      "construction": "Change one present RuleSpec.version from V1 to V2 under minimal-body.",
+      "expected": {
+        "error": "INPUT_UNADMITTED",
+        "stage": "SCHEMA",
+        "status": "error"
+      },
+      "id": "b_unknown_rule_version"
+    },
+    {
+      "construction": "Add top-level key extra with null value to minimal-body.",
+      "expected": {
+        "error": "INPUT_CLOSED_SCHEMA",
+        "stage": "SCHEMA",
+        "status": "error"
+      },
+      "id": "b_extra_field"
+    },
+    {
+      "construction": "Remove top-level history field from minimal-body.",
+      "expected": {
+        "error": "INPUT_CLOSED_SCHEMA",
+        "stage": "SCHEMA",
+        "status": "error"
+      },
+      "id": "b_missing_field"
+    },
+    {
+      "construction": "Use retained independent revision02 closure C13_MANIFEST_RULE_OMISSION canonical Body candidate; preserve its existing expected reason.",
+      "expected": {
+        "error": "INPUT_CLOSED_SCHEMA",
+        "stage": "SCHEMA",
+        "status": "error"
+      },
+      "id": "b_manifest_rule_omission"
+    }
+  ]
+}

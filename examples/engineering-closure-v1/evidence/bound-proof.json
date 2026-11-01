@@ -1,0 +1,29 @@
+{
+  "argv": [
+    "/home/sicarii/opt/gnat/gnatprove-aarch64-linux-16.1.0-1/bin/gnatprove",
+    "-P",
+    "evaluation/transport_bound_eval_proof.gpr",
+    "-U",
+    "--level=2",
+    "--report=all",
+    "--warnings=error",
+    "--checks-as-errors=on",
+    "--proof-warnings=on",
+    "-j1"
+  ],
+  "elapsed_ns": 24273366507,
+  "exit_code": 0,
+  "status": "SUCCESS",
+  "stderr": {
+    "bytes": 15401,
+    "sha256": "3d602a431cb799a74e0c4f2f6483876ef3f60f6c2b7b3a97c4fc6107b3c588a6"
+  },
+  "stdout": {
+    "bytes": 323,
+    "sha256": "82462a29847e6215fe4c06dcf9b836968a0226cabbc230cc0d2002a81c3297b7"
+  },
+  "storage_after": {
+    "bytes": 81373405,
+    "files": 1173
+  }
+}

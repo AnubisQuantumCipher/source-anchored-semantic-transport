@@ -1,0 +1,71 @@
+[
+  {
+    "role": "implementation",
+    "source_rollout": "rollout-2026-10-29T07-15-37-01a1875f-6258-7f81-a179-e220a3187ef2.jsonl",
+    "retained_events": 22,
+    "bytes": 73388,
+    "sha256": "9ac5d5e298779ca18b88645e80472c1779b8e7cc0c30d70b56d6c222339a1f96",
+    "observed_model_settings": [
+      {
+        "model": "gpt-6-astra",
+        "effort": "ultra",
+        "cwd": "/home/sicarii",
+        "turn_id": "01a1875f-62ce-7391-9e3b-d4a0b3609b60"
+      },
+      {
+        "model": "gpt-6-astra",
+        "effort": "ultra",
+        "cwd": "/home/sicarii",
+        "turn_id": "01a18769-5324-7770-ab66-48bdae81cd02"
+      }
+    ],
+    "selection": "Session identity, model settings, user dispatches, tool calls/results and final reports only; internal reasoning excluded.",
+    "backend_attestation": "NOT_PROVIDED"
+  },
+  {
+    "role": "controls",
+    "source_rollout": "rollout-2026-10-29T07-16-30-01a18760-31aa-75c0-a7ae-366c09700c3c.jsonl",
+    "retained_events": 34,
+    "bytes": 126509,
+    "sha256": "1763dc01a837c063815585a76db93939bc72288441c7467226bacb07254bd939",
+    "observed_model_settings": [
+      {
+        "model": "gpt-6-astra",
+        "effort": "ultra",
+        "cwd": "/home/sicarii",
+        "turn_id": "01a18760-3204-7541-89f1-edd7b011702b"
+      },
+      {
+        "model": "gpt-6-astra",
+        "effort": "ultra",
+        "cwd": "/home/sicarii",
+        "turn_id": "01a1876a-8e3b-74b0-bf55-35c6cdad8795"
+      }
+    ],
+    "selection": "Session identity, model settings, user dispatches, tool calls/results and final reports only; internal reasoning excluded.",
+    "backend_attestation": "NOT_PROVIDED"
+  },
+  {
+    "role": "review",
+    "source_rollout": "rollout-2026-10-29T07-24-54-01a18767-e190-7311-8cce-080d1cc3c400.jsonl",
+    "retained_events": 26,
+    "bytes": 116708,
+    "sha256": "b20b8c3c3a15387d6188eb7f768c86fa06cb88b422656213fb9f7f17c1edea1a",
+    "observed_model_settings": [
+      {
+        "model": "gpt-6.1-sol",
+        "effort": "low",
+        "cwd": "/home/sicarii",
+        "turn_id": "01a18767-e218-7bc3-9461-239f17484d73"
+      },
+      {
+        "model": "gpt-6.1-sol",
+        "effort": "low",
+        "cwd": "/home/sicarii",
+        "turn_id": "01a1876a-b447-7c81-b147-80aa8249065e"
+      }
+    ],
+    "selection": "Session identity, model settings, user dispatches, tool calls/results and final reports only; internal reasoning excluded.",
+    "backend_attestation": "NOT_PROVIDED"
+  }
+]

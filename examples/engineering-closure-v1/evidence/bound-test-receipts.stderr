@@ -1,0 +1,18 @@
+test_bad_candidates_violated (__main__.Controls.test_bad_candidates_violated) ... ok
+test_changed_checker_refused (__main__.Controls.test_changed_checker_refused) ... ok
+test_correct_replacement_satisfied (__main__.Controls.test_correct_replacement_satisfied) ... ok
+test_domain_budget_refused (__main__.Controls.test_domain_budget_refused) ... ok
+test_exact_sources_and_additive_plan (__main__.Controls.test_exact_sources_and_additive_plan) ... ok
+test_forged_passing_receipt_refused (__main__.Controls.test_forged_passing_receipt_refused) ... ok
+test_function_bounds_and_no_shell (__main__.Controls.test_function_bounds_and_no_shell) ... ok
+test_held_input_mismatches_refused (__main__.Controls.test_held_input_mismatches_refused) ... ok
+test_imported_receipt_recomputed (__main__.Controls.test_imported_receipt_recomputed) ... ok
+test_original_detailed_reading_stays_unevaluable (__main__.Controls.test_original_detailed_reading_stays_unevaluable) ... ok
+test_receipt_for_other_candidate_refused (__main__.Controls.test_receipt_for_other_candidate_refused) ... ok
+test_truncated_receipt_refused (__main__.Controls.test_truncated_receipt_refused) ... ok
+test_unsafe_call_refused (__main__.Controls.test_unsafe_call_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 5.676s
+
+OK

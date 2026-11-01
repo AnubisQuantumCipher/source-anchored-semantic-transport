@@ -1,0 +1,27 @@
+test_changed_source_revision_and_unit_order_reject (__main__.Controls.test_changed_source_revision_and_unit_order_reject) ... ok
+test_citation_source_offset_quote_and_revision_reject (__main__.Controls.test_citation_source_offset_quote_and_revision_reject) ... ok
+test_cli_evaluation_pins_and_candidate_verdict (__main__.Controls.test_cli_evaluation_pins_and_candidate_verdict) ... ok
+test_exact_lowering_and_missing_conflict_masks (__main__.Controls.test_exact_lowering_and_missing_conflict_masks) ... ok
+test_explicit_record_and_declaration_bounds (__main__.Controls.test_explicit_record_and_declaration_bounds) ... ok
+test_explicit_unresolved_does_not_become_truth (__main__.Controls.test_explicit_unresolved_does_not_become_truth) ... ok
+test_fact_conjunction_inside_obligation (__main__.Controls.test_fact_conjunction_inside_obligation) ... ok
+test_function_bounds_and_no_shell (__main__.Controls.test_function_bounds_and_no_shell) ... ok
+test_heldout_not_and_ordered_actor_arguments (__main__.Controls.test_heldout_not_and_ordered_actor_arguments) ... ok
+test_native_malformed_frames_refuse (__main__.Controls.test_native_malformed_frames_refuse) ... ok
+test_native_nonregular_inputs_refuse_without_blocking (__main__.Controls.test_native_nonregular_inputs_refuse_without_blocking) ... ok
+test_native_output_requires_exact_node_sort_value_and_framing (__main__.Controls.test_native_output_requires_exact_node_sort_value_and_framing) ... ok
+test_native_relative_path_rejects_before_read_or_execution (__main__.Controls.test_native_relative_path_rejects_before_read_or_execution) ... ok
+test_nested_must_mixed_fact_norm_and_norm_negation_refused (__main__.Controls.test_nested_must_mixed_fact_norm_and_norm_negation_refused) ... ok
+test_observation_binding_contract_and_external_pins (__main__.Controls.test_observation_binding_contract_and_external_pins) ... ok
+test_package_unit_source_and_held_contract_pins (__main__.Controls.test_package_unit_source_and_held_contract_pins) ... ok
+test_sources_literals_and_explicit_unevaluated_scope (__main__.Controls.test_sources_literals_and_explicit_unevaluated_scope) ... ok
+test_true_false_missing_and_conflicting_reports (__main__.Controls.test_true_false_missing_and_conflicting_reports) ... ok
+test_unsupported_operators_are_refused_after_meaning_validation (__main__.Controls.test_unsupported_operators_are_refused_after_meaning_validation) ... ok
+test_unsupported_versions_truncation_and_report_values (__main__.Controls.test_unsupported_versions_truncation_and_report_values) ... ok
+test_wrong_nominal_sort_and_predicate_occurrence (__main__.Controls.test_wrong_nominal_sort_and_predicate_occurrence) ... ok
+test_wrong_verdict_rejects_correct_citation_commentary_ungraded (__main__.Controls.test_wrong_verdict_rejects_correct_citation_commentary_ungraded) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 2.452s
+
+OK

@@ -1,0 +1,23 @@
+test_altered_model_refused (__main__.ReceiptChecks.test_altered_model_refused) ... ok
+test_complete_evidence_matches (__main__.ReceiptChecks.test_complete_evidence_matches) ... ok
+test_current_source_change_refused (__main__.ReceiptChecks.test_current_source_change_refused) ... ok
+test_duplicate_json_key_refused (__main__.ReceiptChecks.test_duplicate_json_key_refused) ... ok
+test_error_control_failure_refused (__main__.ReceiptChecks.test_error_control_failure_refused) ... ok
+test_excessive_json_depth_refused (__main__.ReceiptChecks.test_excessive_json_depth_refused) ... ok
+test_extra_evidence_refused (__main__.ReceiptChecks.test_extra_evidence_refused) ... ok
+test_final_unproved_obligation_refused (__main__.ReceiptChecks.test_final_unproved_obligation_refused) ... ok
+test_gzip_expansion_and_truncation_refused (__main__.ReceiptChecks.test_gzip_expansion_and_truncation_refused) ... ok
+test_legacy_contract_prefix_change_refused (__main__.ReceiptChecks.test_legacy_contract_prefix_change_refused) ... ok
+test_missing_lexicon_refused (__main__.ReceiptChecks.test_missing_lexicon_refused) ... ok
+test_no_model_semantic_claim_refused (__main__.ReceiptChecks.test_no_model_semantic_claim_refused) ... ok
+test_original_failure_erasure_refused (__main__.ReceiptChecks.test_original_failure_erasure_refused) ... ok
+test_proof_failure_hidden_by_summary_swap_refused (__main__.ReceiptChecks.test_proof_failure_hidden_by_summary_swap_refused) ... ok
+test_relocated_input_pair_change_refused (__main__.ReceiptChecks.test_relocated_input_pair_change_refused) ... ok
+test_source_inventory_addition_refused (__main__.ReceiptChecks.test_source_inventory_addition_refused) ... ok
+test_swapped_archive_refused_even_after_inventory_regeneration (__main__.ReceiptChecks.test_swapped_archive_refused_even_after_inventory_regeneration) ... ok
+test_unsafe_path_and_symlink_refused (__main__.ReceiptChecks.test_unsafe_path_and_symlink_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 1.882s
+
+OK

@@ -1,0 +1,430 @@
+{
+  "schema": "sentinel/schema-catalog/1",
+  "format": "sentinel/meaning-graph/1",
+  "normative_validator": "sentinel_v1.graph.validate_graph",
+  "root_fields": [
+    "schema",
+    "source_set",
+    "nodes",
+    "edges",
+    "assurance"
+  ],
+  "source_fields": [
+    "id",
+    "source",
+    "revision",
+    "representation",
+    "window"
+  ],
+  "node_fields": [
+    "id",
+    "kind",
+    "origin",
+    "text",
+    "evidence",
+    "documentary_state",
+    "support_records",
+    "refutation_records",
+    "assurance"
+  ],
+  "evidence_fields": [
+    "source_id",
+    "start",
+    "end",
+    "quote_sha256"
+  ],
+  "edge_fields": [
+    "from",
+    "to",
+    "kind"
+  ],
+  "node_kinds": [
+    "ENTITY",
+    "REFERENCE",
+    "EVENT",
+    "PROPOSITION",
+    "PREDICATE",
+    "ARGUMENT",
+    "MODALITY",
+    "CONDITION",
+    "EXCEPTION",
+    "QUANTIFIER",
+    "TIME",
+    "ATTRIBUTION",
+    "NEGATION",
+    "UNCERTAINTY",
+    "REVISION",
+    "EVIDENCE",
+    "CONTRADICTION",
+    "ALTERNATIVE",
+    "OPAQUE",
+    "DOCUMENT_STRUCTURE"
+  ],
+  "origins": [
+    "SOURCE_OCCURRENCE",
+    "AUTHOR_ASSERTION",
+    "ATTRIBUTED",
+    "AGENT_INFERENCE",
+    "MODEL_RELATIVE",
+    "EXTERNAL_EVIDENCE"
+  ],
+  "relation_endpoints": {
+    "HAS_ARGUMENT": {
+      "from": [
+        "PREDICATE",
+        "EVENT"
+      ],
+      "to": [
+        "ARGUMENT",
+        "ENTITY",
+        "REFERENCE"
+      ]
+    },
+    "REFERS_TO": {
+      "from": [
+        "REFERENCE"
+      ],
+      "to": [
+        "ENTITY",
+        "REFERENCE",
+        "EVENT",
+        "PROPOSITION",
+        "PREDICATE",
+        "ARGUMENT",
+        "MODALITY",
+        "CONDITION",
+        "EXCEPTION",
+        "QUANTIFIER",
+        "TIME",
+        "ATTRIBUTION",
+        "NEGATION",
+        "UNCERTAINTY",
+        "REVISION",
+        "EVIDENCE",
+        "CONTRADICTION",
+        "ALTERNATIVE",
+        "OPAQUE",
+        "DOCUMENT_STRUCTURE"
+      ]
+    },
+    "MODIFIES": {
+      "from": [
+        "MODALITY",
+        "QUANTIFIER",
+        "TIME"
+      ],
+      "to": [
+        "PROPOSITION",
+        "EVENT",
+        "PREDICATE",
+        "ARGUMENT",
+        "ENTITY",
+        "REFERENCE"
+      ]
+    },
+    "CONDITION_OF": {
+      "from": [
+        "CONDITION",
+        "PROPOSITION"
+      ],
+      "to": [
+        "PROPOSITION",
+        "EVENT",
+        "MODALITY"
+      ]
+    },
+    "EXCEPTION_TO": {
+      "from": [
+        "EXCEPTION"
+      ],
+      "to": [
+        "PROPOSITION",
+        "EVENT",
+        "MODALITY"
+      ]
+    },
+    "QUANTIFIES": {
+      "from": [
+        "QUANTIFIER"
+      ],
+      "to": [
+        "PROPOSITION",
+        "EVENT",
+        "PREDICATE",
+        "ARGUMENT",
+        "ENTITY",
+        "REFERENCE"
+      ]
+    },
+    "TEMPORALLY_BEFORE": {
+      "from": [
+        "TIME",
+        "EVENT"
+      ],
+      "to": [
+        "TIME",
+        "EVENT"
+      ]
+    },
+    "ATTRIBUTED_TO": {
+      "from": [
+        "PROPOSITION",
+        "EVENT"
+      ],
+      "to": [
+        "ATTRIBUTION"
+      ]
+    },
+    "NEGATES": {
+      "from": [
+        "NEGATION"
+      ],
+      "to": [
+        "PROPOSITION",
+        "EVENT",
+        "PREDICATE",
+        "MODALITY",
+        "CONDITION"
+      ]
+    },
+    "UNCERTAINTY_OF": {
+      "from": [
+        "UNCERTAINTY"
+      ],
+      "to": [
+        "PROPOSITION",
+        "EVENT",
+        "PREDICATE",
+        "MODALITY",
+        "CONDITION",
+        "EXCEPTION",
+        "REFERENCE",
+        "ATTRIBUTION"
+      ]
+    },
+    "REVISES": {
+      "from": [
+        "REVISION"
+      ],
+      "to": [
+        "REVISION"
+      ]
+    },
+    "SUPPORTS": {
+      "from": [
+        "ENTITY",
+        "REFERENCE",
+        "EVENT",
+        "PROPOSITION",
+        "PREDICATE",
+        "ARGUMENT",
+        "MODALITY",
+        "CONDITION",
+        "EXCEPTION",
+        "QUANTIFIER",
+        "TIME",
+        "ATTRIBUTION",
+        "NEGATION",
+        "UNCERTAINTY",
+        "REVISION",
+        "EVIDENCE",
+        "CONTRADICTION",
+        "ALTERNATIVE",
+        "OPAQUE",
+        "DOCUMENT_STRUCTURE"
+      ],
+      "to": [
+        "ENTITY",
+        "REFERENCE",
+        "EVENT",
+        "PROPOSITION",
+        "PREDICATE",
+        "ARGUMENT",
+        "MODALITY",
+        "CONDITION",
+        "EXCEPTION",
+        "QUANTIFIER",
+        "TIME",
+        "ATTRIBUTION",
+        "NEGATION",
+        "UNCERTAINTY",
+        "REVISION",
+        "EVIDENCE",
+        "CONTRADICTION",
+        "ALTERNATIVE",
+        "OPAQUE",
+        "DOCUMENT_STRUCTURE"
+      ]
+    },
+    "CONTRADICTS": {
+      "from": [
+        "ENTITY",
+        "REFERENCE",
+        "EVENT",
+        "PROPOSITION",
+        "PREDICATE",
+        "ARGUMENT",
+        "MODALITY",
+        "CONDITION",
+        "EXCEPTION",
+        "QUANTIFIER",
+        "TIME",
+        "ATTRIBUTION",
+        "NEGATION",
+        "UNCERTAINTY",
+        "REVISION",
+        "EVIDENCE",
+        "CONTRADICTION",
+        "ALTERNATIVE",
+        "OPAQUE",
+        "DOCUMENT_STRUCTURE"
+      ],
+      "to": [
+        "ENTITY",
+        "REFERENCE",
+        "EVENT",
+        "PROPOSITION",
+        "PREDICATE",
+        "ARGUMENT",
+        "MODALITY",
+        "CONDITION",
+        "EXCEPTION",
+        "QUANTIFIER",
+        "TIME",
+        "ATTRIBUTION",
+        "NEGATION",
+        "UNCERTAINTY",
+        "REVISION",
+        "EVIDENCE",
+        "CONTRADICTION",
+        "ALTERNATIVE",
+        "OPAQUE",
+        "DOCUMENT_STRUCTURE"
+      ]
+    },
+    "ALTERNATIVE_TO": {
+      "from": [
+        "ENTITY",
+        "REFERENCE",
+        "EVENT",
+        "PROPOSITION",
+        "PREDICATE",
+        "ARGUMENT",
+        "MODALITY",
+        "CONDITION",
+        "EXCEPTION",
+        "QUANTIFIER",
+        "TIME",
+        "ATTRIBUTION",
+        "NEGATION",
+        "UNCERTAINTY",
+        "REVISION",
+        "EVIDENCE",
+        "CONTRADICTION",
+        "ALTERNATIVE",
+        "OPAQUE",
+        "DOCUMENT_STRUCTURE"
+      ],
+      "to": [
+        "ENTITY",
+        "REFERENCE",
+        "EVENT",
+        "PROPOSITION",
+        "PREDICATE",
+        "ARGUMENT",
+        "MODALITY",
+        "CONDITION",
+        "EXCEPTION",
+        "QUANTIFIER",
+        "TIME",
+        "ATTRIBUTION",
+        "NEGATION",
+        "UNCERTAINTY",
+        "REVISION",
+        "EVIDENCE",
+        "CONTRADICTION",
+        "ALTERNATIVE",
+        "OPAQUE",
+        "DOCUMENT_STRUCTURE"
+      ]
+    },
+    "DEPENDS_ON": {
+      "from": [
+        "ENTITY",
+        "REFERENCE",
+        "EVENT",
+        "PROPOSITION",
+        "PREDICATE",
+        "ARGUMENT",
+        "MODALITY",
+        "CONDITION",
+        "EXCEPTION",
+        "QUANTIFIER",
+        "TIME",
+        "ATTRIBUTION",
+        "NEGATION",
+        "UNCERTAINTY",
+        "REVISION",
+        "EVIDENCE",
+        "CONTRADICTION",
+        "ALTERNATIVE",
+        "OPAQUE",
+        "DOCUMENT_STRUCTURE"
+      ],
+      "to": [
+        "ENTITY",
+        "REFERENCE",
+        "EVENT",
+        "PROPOSITION",
+        "PREDICATE",
+        "ARGUMENT",
+        "MODALITY",
+        "CONDITION",
+        "EXCEPTION",
+        "QUANTIFIER",
+        "TIME",
+        "ATTRIBUTION",
+        "NEGATION",
+        "UNCERTAINTY",
+        "REVISION",
+        "EVIDENCE",
+        "CONTRADICTION",
+        "ALTERNATIVE",
+        "OPAQUE",
+        "DOCUMENT_STRUCTURE"
+      ]
+    }
+  },
+  "documentary_states": [
+    "SUPPORTED",
+    "REFUTED",
+    "BOTH",
+    "NEITHER"
+  ],
+  "assurance": {
+    "execution_authority": "NONE",
+    "qualification": "NOT_QUALIFIED",
+    "interpretation_entailment": "UNPROVEN",
+    "semantic_completeness": "UNPROVEN",
+    "context_adequacy": "UNPROVEN",
+    "world_truth": "UNPROVEN",
+    "package_binding": "UNPROVEN"
+  },
+  "bounds": {
+    "metadata_bytes": 1048576,
+    "nodes": 256,
+    "propositions": 64,
+    "edges": 512,
+    "links_per_node": 16,
+    "window_bytes": 65536,
+    "registry_bytes": 8388608,
+    "registry_entries": 256
+  },
+  "validation": "All records closed, exact bounded integer offsets, quote hashes and source/revision/coordinate identities mandatory. Registry exact closure. Unknown versions refuse. Three DAGs: DEPENDS_ON, REVISES, TEMPORALLY_BEFORE.",
+  "nonclaims": [
+    "Categories are proposed readings, not denotations or English entailment.",
+    "Documentary support/refutation records are not world truth.",
+    "Schema metadata never chooses executable code.",
+    "Existing meaning grammars unchanged."
+  ]
+}

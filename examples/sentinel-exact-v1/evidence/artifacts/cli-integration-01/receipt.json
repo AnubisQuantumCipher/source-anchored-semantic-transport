@@ -1,0 +1,116 @@
+{
+  "commands": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/sentinel-exact-v1/create_fixture.py",
+        "--out",
+        "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/cli-integration-01/fixture"
+      ],
+      "elapsed_ns": 155830558,
+      "returncode": 0,
+      "stdout_sha256": "172116b7b58ed003e3d6309b81cdb88c597ce50297a86c4991943d3da665c104"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_sentinel_package.py",
+        "encode",
+        "--sidecar",
+        "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/cli-integration-01/fixture/sidecar.json",
+        "--artifacts",
+        "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/cli-integration-01/fixture/artifacts",
+        "--sidecar-sha256",
+        "105ac681f5f1444f6db78eaedf36960798a000558aa4fb89fa6e6cef3a61db9c",
+        "--registry-sha256",
+        "2a3e26e82878a404ce3d2b338a8bb8b362822de78f46361f1ca574ed1350ac9c",
+        "--reference",
+        "https://example.invalid/SENTINEL-DEMO/evidence.zip",
+        "--budget",
+        "200",
+        "--out",
+        "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/cli-integration-01/package"
+      ],
+      "elapsed_ns": 132005401,
+      "returncode": 0,
+      "stdout_sha256": "672210283954847a74fefc9a4e0d0b1d86b2440b1f29f167f868af3ce64d0aa8"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_sentinel_package.py",
+        "inspect",
+        "--archive",
+        "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/cli-integration-01/package/evidence.zip",
+        "--share",
+        "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/cli-integration-01/package/share.txt"
+      ],
+      "elapsed_ns": 104464300,
+      "returncode": 0,
+      "stdout_sha256": "047dc68845a87d415f33108e214409aaab35783d82c66b8b95dcc452a89f1153"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_sentinel_package.py",
+        "staging",
+        "--archive",
+        "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/cli-integration-01/package/evidence.zip",
+        "--share",
+        "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/cli-integration-01/package/share.txt",
+        "--out",
+        "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/cli-integration-01/staging.json"
+      ],
+      "elapsed_ns": 106791958,
+      "returncode": 0,
+      "stdout_sha256": "047dc68845a87d415f33108e214409aaab35783d82c66b8b95dcc452a89f1153"
+    }
+  ],
+  "fresh_agent": "NOT_PERFORMED",
+  "hosted_sharing": "UNTESTED_PLACEHOLDER_ONLY",
+  "native_qualification": "NOT_PERFORMED",
+  "oracle": "MANUAL_DEVELOPMENT_FIXTURE",
+  "report": {
+    "candidates": 3,
+    "container_profile": "sentinel/evidence-zip/1",
+    "execution_authority": "NONE",
+    "package_id": "08da954c56b02cb6de495674ac0c65b090559d279f2c8fac211c1617ab9eef12",
+    "probes": 5,
+    "qualification": "NOT_QUALIFIED",
+    "registry_sha256": "2a3e26e82878a404ce3d2b338a8bb8b362822de78f46361f1ca574ed1350ac9c",
+    "repair_links": 3,
+    "retained_failures": 2,
+    "retained_results": 15,
+    "schema": "sentinel/structural-report/1",
+    "semantic_completeness": "UNPROVEN",
+    "sidecar_sha256": "105ac681f5f1444f6db78eaedf36960798a000558aa4fb89fa6e6cef3a61db9c",
+    "status": "STRUCTURE_AND_EXACT_BYTES_ONLY",
+    "world_truth": "NOT_CERTIFIED"
+  },
+  "semantic_completeness": "UNPROVEN",
+  "source": {
+    "examples/sentinel-exact-v1/create_fixture.py": "110be857037a1b33ef3d0fc14b7b488e8017022d7165a466be05ed24217e1743",
+    "tests/test_transport_sentinel.py": "229d0c6b2629e495ed40e5fcdb3020294fb821385098e4755da1d8e98d761d34",
+    "tools/transport_document_io.py": "f8724d0ab7213d2641cbeec2baf40f1b0d878e148f5d764c025d352f65776d3a",
+    "tools/transport_sentinel.py": "52f15b46d9af6e80d56d9ce4769057300767cb1c4bdc5b759c1841f38104dfd3",
+    "tools/transport_sentinel_export.py": "eaa8bc075c67c499872d5ebfd6879bd5d2fe838a3e7e64d83503040d5fb93c62",
+    "tools/transport_sentinel_package.py": "b4e31179b8ebbb2183d765417c1cc3c2dc13e9d518e596781f6563c6be3f7f3b"
+  },
+  "status": "TESTED_LOCAL_CLI_EXACT_EVIDENCE"
+}

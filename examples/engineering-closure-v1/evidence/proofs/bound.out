@@ -1,0 +1,60 @@
+=========================
+Summary of SPARK analysis
+=========================
+
+---------------------------------------------------------------------------------------------------
+SPARK Analysis results        Total        Flow                      Provers   Justified   Unproved
+---------------------------------------------------------------------------------------------------
+Data Dependencies                20          20                            .           .          .
+Flow Dependencies                 .           .                            .           .          .
+Initialization                   17          17                            .           .          .
+Non-Aliasing                      .           .                            .           .          .
+Run-time Checks                  98           .                    98 (CVC5)           .          .
+Assertions                       20           .         20 (CVC5 97%, Z3 3%)           .          .
+Functional Contracts             39           .    39 (CVC5 97%, Trivial 3%)           .          .
+LSP Verification                  .           .                            .           .          .
+Termination                      20          20                            .           .          .
+Concurrency                       .           .                            .           .          .
+---------------------------------------------------------------------------------------------------
+Total                           214    57 (27%)                    157 (73%)           .          .
+
+
+max steps used for successful proof: 4667
+
+============================
+Most difficult proved checks
+============================
+
+transport_bound_eval.adb:48:13: loop invariant after first iteration proved in max 2 seconds
+
+========================
+Detailed analysis report
+========================
+
+Analyzed 3 units
+in unit transport_bound_eval, 6 subprograms and packages out of 6 analyzed
+  Transport_Bound_Eval at transport_bound_eval.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Transport_Bound_Eval.Consistent at transport_bound_eval.ads:16 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Transport_Bound_Eval.Evaluate at transport_bound_eval.ads:22 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (21 checks)
+  Transport_Bound_Eval.Preserve_Prefix at transport_bound_eval.adb:19 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (20 checks)
+  Transport_Bound_Eval.Preserve_Step at transport_bound_eval.adb:2 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (11 checks)
+  Transport_Bound_Eval.Resolve_Mask at transport_bound_eval.ads:7 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+in unit transport_bound_eval_parse, 5 subprograms and packages out of 5 analyzed
+  Transport_Bound_Eval_Parse at transport_bound_eval_parse.ads:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Transport_Bound_Eval_Parse.Connected at transport_bound_eval_parse.ads:13 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (4 checks)
+  Transport_Bound_Eval_Parse.Nodes_From_Wire at transport_bound_eval_parse.adb:10 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (21 checks)
+  Transport_Bound_Eval_Parse.Read at transport_bound_eval_parse.ads:16 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (7 checks)
+  Transport_Bound_Eval_Parse.Word at transport_bound_eval_parse.adb:2 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (4 checks)
+in unit transport_eval, 12 subprograms and packages out of 12 analyzed
+  Transport_Eval at transport_eval.ads:1 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Transport_Eval.Both at transport_eval.ads:55 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Transport_Eval.Conjoin at transport_eval.ads:67 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Transport_Eval.Evaluate at transport_eval.ads:91 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (19 checks)
+  Transport_Eval.Judge at transport_eval.ads:61 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Transport_Eval.Kind at transport_eval.ads:25 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Transport_Eval.Negate at transport_eval.ads:49 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Transport_Eval.Preserve_Prefix at transport_eval.adb:58 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (16 checks)
+  Transport_Eval.Preserve_Step at transport_eval.adb:41 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (11 checks)
+  Transport_Eval.Step at transport_eval.ads:72 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (13 checks)
+  Transport_Eval.Typed_Node at transport_eval.ads:29 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (7 checks)
+  Transport_Eval.Well_Formed at transport_eval.ads:44 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (2 checks)

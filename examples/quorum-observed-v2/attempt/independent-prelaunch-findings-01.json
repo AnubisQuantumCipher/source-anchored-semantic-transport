@@ -1,0 +1,57 @@
+{
+  "accepted_scope_limits": [
+    "Existing authenticated client session is authorization to call that session, not provider/model identity attestation.",
+    "Resolved CLI modelUsage and GPT turn metadata are observations; families remain held assignments and error independence unestablished.",
+    "Derived registry is post-observation under a frozen resolution rule; no preregistered-byte claim.",
+    "Two public observations do not establish nine actual families, heldout validity, comparative benefit, truth or source completeness.",
+    "GPT no-tool rule is protocol only; observed calls must be checked."
+  ],
+  "findings": [
+    {
+      "id": "MEMORY_BOUND",
+      "reason": "No enforced address-space or resident-memory ceiling is present. RSS observation does not prevent host memory exhaustion.",
+      "required": "Use an enforced resident-memory boundary such as a tested delegated user cgroup, or another actual bounded profile. Do not call this fully resource-bounded from wall/CPU/I-O alone."
+    },
+    {
+      "id": "DESCENDANT_CLEANUP",
+      "reason": "Cleanup calls killpg only when leader poll() is None. An exited leader with surviving pipe-owning descendants can leak them after timeout.",
+      "required": "Always perform bounded owned-group cleanup and record/verify terminal cleanup; a cgroup can also contain descendants."
+    },
+    {
+      "id": "STDIN_DEADLINE",
+      "reason": "Blocking stdin.write runs before collect establishes its timeout.",
+      "required": "Bound input delivery under the same wall deadline; use nonblocking selector input or an equivalent tested mechanism."
+    },
+    {
+      "id": "ENVIRONMENT_CAPABILITY",
+      "reason": "Current environment passes every inherited variable except ANTHROPIC_/CLAUDE_ prefixes.",
+      "required": "Whitelist only explicit runtime/session necessities and record key names; never retain secret values."
+    }
+  ],
+  "next": "Owner preserves prior source/profile versions, repairs controls, runs non-model startup/hostile lifecycle checks under final profile, then obtains final exact-pin prelaunch review before dispatch.",
+  "pins": {
+    "contract.json": {
+      "bytes": 2607,
+      "sha256": "22c175c26f64104012b047117ec9d605eeb851ffa8cb8572c9848453b64f920b"
+    },
+    "prompt.txt": {
+      "bytes": 5515,
+      "sha256": "d2a914ff90e83020754df06edbc930da84b698bcb18d1e4053812dd6e6b66875"
+    },
+    "run_claude.py": {
+      "bytes": 4253,
+      "sha256": "c85c9e5f5dc755dad90e9335d42043b4efe37e9a623d0a74633733283fe9b6a0"
+    },
+    "settings.json": {
+      "bytes": 1024,
+      "sha256": "8ae186a030e79c4c1de4c8260a06257f8f9980150a669dfd2205b25a1238419a"
+    },
+    "startup-check.json": {
+      "bytes": 291,
+      "sha256": "23ae37e725619b5895e5ac1ed6b209dba474348ec0bfe325e6ef968c85500a53"
+    }
+  },
+  "schema": "quorum/independent-model-observation-prelaunch-review/1",
+  "scope": "No model calls; static/source review only. Public prompt and two-seat policy scope acceptable subject to control fixes.",
+  "status": "FINDINGS_REQUIRE_REPAIR_BEFORE_MODEL_CALLS"
+}

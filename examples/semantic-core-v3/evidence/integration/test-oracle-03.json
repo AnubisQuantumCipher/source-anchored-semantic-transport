@@ -1,0 +1,292 @@
+{
+  "execution": "Direct isolated Python script with explicit native/decoder/env dependencies; test __main__ sets bounded inherited limits itself.",
+  "files": [
+    {
+      "bytes": 17317,
+      "functions": [
+        {
+          "lines": 2,
+          "name": "digest"
+        },
+        {
+          "lines": 8,
+          "name": "fixture"
+        },
+        {
+          "lines": 11,
+          "name": "setUpClass"
+        },
+        {
+          "lines": 4,
+          "name": "setUp"
+        },
+        {
+          "lines": 7,
+          "name": "tearDown"
+        },
+        {
+          "lines": 2,
+          "name": "common"
+        },
+        {
+          "lines": 7,
+          "name": "encoded"
+        },
+        {
+          "lines": 14,
+          "name": "command"
+        },
+        {
+          "lines": 32,
+          "name": "test_01_encode_and_fresh_recipient_recover_exact_source_model_and_verdict"
+        },
+        {
+          "lines": 11,
+          "name": "test_02_model_changes_preserve_unknown_and_conditional_satisfaction"
+        },
+        {
+          "lines": 12,
+          "name": "test_03_missing_model_is_not_evaluated"
+        },
+        {
+          "lines": 13,
+          "name": "test_04_cli_draft_matches_literal_requirement_scope"
+        },
+        {
+          "lines": 23,
+          "name": "test_05_envelope_model_source_operator_and_version_tampering_refused"
+        },
+        {
+          "lines": 14,
+          "name": "test_06_present_malformed_model_is_never_treated_as_absent"
+        },
+        {
+          "lines": 12,
+          "name": "test_07_authored_tree_and_role_binding_mismatches_refused"
+        },
+        {
+          "lines": 16,
+          "name": "test_08_clock_source_requires_explicit_documentary_translation_status"
+        },
+        {
+          "lines": 15,
+          "name": "test_09_swapped_archive_and_truncated_archive_refuse_before_evaluation"
+        },
+        {
+          "lines": 12,
+          "name": "test_10_missing_and_conflicting_tuples_stay_unresolved"
+        },
+        {
+          "lines": 9,
+          "name": "test_11_dependency_pin_and_private_parent_errors_refuse"
+        },
+        {
+          "lines": 27,
+          "name": "test_12_child_limits_never_increase_and_workspace_descriptor_is_closed"
+        }
+      ],
+      "path": "tests/test_transport_core_bridge.py",
+      "sha256": "8302d6615c267294f6129fb68b5acca43a5abedc90ee6b0de9b3426150fb3cf0"
+    },
+    {
+      "bytes": 11155,
+      "functions": [
+        {
+          "lines": 3,
+          "name": "identifier"
+        },
+        {
+          "lines": 3,
+          "name": "records"
+        },
+        {
+          "lines": 20,
+          "name": "binding"
+        },
+        {
+          "lines": 21,
+          "name": "symbols"
+        },
+        {
+          "lines": 7,
+          "name": "predicate"
+        },
+        {
+          "lines": 21,
+          "name": "node_kind"
+        },
+        {
+          "lines": 15,
+          "name": "tree"
+        },
+        {
+          "lines": 9,
+          "name": "plan"
+        },
+        {
+          "lines": 15,
+          "name": "model"
+        },
+        {
+          "lines": 5,
+          "name": "symbol_wire"
+        },
+        {
+          "lines": 7,
+          "name": "node_wire"
+        },
+        {
+          "lines": 17,
+          "name": "wire"
+        },
+        {
+          "lines": 12,
+          "name": "display"
+        },
+        {
+          "lines": 14,
+          "name": "native_values"
+        }
+      ],
+      "path": "tools/transport_core.py",
+      "sha256": "c186f9e9a78060fd03e95c339d2c5b31e7558fd37e6f4b7f12e8538bf952e6cd"
+    },
+    {
+      "bytes": 11092,
+      "functions": [
+        {
+          "lines": 6,
+          "name": "pinned"
+        },
+        {
+          "lines": 8,
+          "name": "runtime"
+        },
+        {
+          "lines": 8,
+          "name": "workspace"
+        },
+        {
+          "lines": 11,
+          "name": "call"
+        },
+        {
+          "lines": 6,
+          "name": "translation"
+        },
+        {
+          "lines": 10,
+          "name": "envelope"
+        },
+        {
+          "lines": 10,
+          "name": "check_envelope"
+        },
+        {
+          "lines": 14,
+          "name": "courier_plan"
+        },
+        {
+          "lines": 39,
+          "name": "encode"
+        },
+        {
+          "lines": 12,
+          "name": "recover"
+        },
+        {
+          "lines": 14,
+          "name": "evaluate"
+        },
+        {
+          "lines": 22,
+          "name": "decode"
+        }
+      ],
+      "path": "tools/transport_core_bridge.py",
+      "sha256": "c11226a6f16f55a4ebc5ffea976be9f58b6b14725d3fadc9943f8c401fb1cda6"
+    },
+    {
+      "bytes": 3796,
+      "functions": [
+        {
+          "lines": 23,
+          "name": "arguments"
+        },
+        {
+          "lines": 11,
+          "name": "draft"
+        },
+        {
+          "lines": 12,
+          "name": "run"
+        },
+        {
+          "lines": 14,
+          "name": "main"
+        }
+      ],
+      "path": "tools/transport_core_cli.py",
+      "sha256": "514dbfa17bd3b900eb779fe52b36c236aa14803dbbd04484e760518bfbccc5d1"
+    },
+    {
+      "bytes": 2650,
+      "functions": [
+        {
+          "lines": 5,
+          "name": "limit"
+        },
+        {
+          "lines": 8,
+          "name": "child_limits"
+        },
+        {
+          "lines": 29,
+          "name": "run_bounded"
+        }
+      ],
+      "path": "tools/transport_core_process.py",
+      "sha256": "4bf942e5d3eff91a5f676c42554ac5bb4800c22d702c9544fb92851925d8b838"
+    },
+    {
+      "bytes": 6843,
+      "functions": [
+        {
+          "lines": 6,
+          "name": "outside"
+        },
+        {
+          "lines": 20,
+          "name": "role_symbols"
+        },
+        {
+          "lines": 11,
+          "name": "expected_tree"
+        },
+        {
+          "lines": 6,
+          "name": "canonical_sentence"
+        },
+        {
+          "lines": 24,
+          "name": "parse_fragment"
+        },
+        {
+          "lines": 25,
+          "name": "bounded_canonical"
+        },
+        {
+          "lines": 12,
+          "name": "validate_translation"
+        }
+      ],
+      "path": "tools/transport_core_language.py",
+      "sha256": "8652bb99fd9c0083f5e979db3603d79662db41c37a709cb1e73afb9cfbcb2f91"
+    }
+  ],
+  "native_sha256": "aa04e9aca4afa2663202eac7085329ac5e1f331057b418d3339c2ed17309c23b",
+  "prior_oracle": "test-oracle-01.json",
+  "status": "FROZEN_BEFORE_FINAL_EXECUTION",
+  "supplement": "Added child inherited-limit and fd-lifetime test; added original/recovered replay assertions and invalid-plan-without-model refusal. Source interpretation UNPROVEN now separate from entailment-procedure NOT_CHECKED. Exact earlier11 scope retained.",
+  "test_methods_expected": 12
+}

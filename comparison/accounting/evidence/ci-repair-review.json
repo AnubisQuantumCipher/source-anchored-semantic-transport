@@ -1,0 +1,65 @@
+{
+  "acceptance_evidence_required": "Successful hosted replay receipt check at the successor commit; retain the failed checkpoint and its hosted failure as history.",
+  "base_commit": "14e99040efd6833f4f0d0fca7853edcabdda5290",
+  "blocking_findings_remaining": [],
+  "checks": [
+    {
+      "command": "python3 -I -S -B -Werror examples/quorum-replay-v1/prepare_receipt.py --check",
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "REPLAY_RECEIPT_CHECKED\n"
+    },
+    {
+      "command": "python3 -I -S -B -O -Werror examples/quorum-replay-v1/prepare_receipt.py --check",
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "REPLAY_RECEIPT_CHECKED\n"
+    }
+  ],
+  "decision": "PASS_NARROW_README_IDENTITY_REPAIR",
+  "formal_proof": "UNPROVEN",
+  "historical_failure_README_pin": {
+    "bytes": 9036,
+    "sha256": "9cbfab5394da499bddd6f3b460f81369df3ce523112adb562d83713e559ec543"
+  },
+  "limits": [
+    "No artifact extraction, build, model campaign or replacement of published review evidence was performed.",
+    "Hosted success for the successor repair remains unobserved by this review; whole-system proof and product acceptance remain separate."
+  ],
+  "observations": [
+    "Current README equals git object 39da9cd:README.md byte for byte and matches the retained replay receipt README entry.",
+    "The README in 14e9904 matches the previously published publication review pin but differs from the historical replay receipt identity.",
+    "README is the sole tracked working-tree change. Every other source/evidence pin in the published publication review still matches.",
+    "Replay receipt generator, retained replay receipt and replay workflow are byte-identical to both 39da9cd and 14e9904; no checker, receipt, pin or executable was relaxed or regenerated.",
+    "Independent normal and optimized receipt-check executions both exited zero, emitted REPLAY_RECEIPT_CHECKED and produced empty stderr. The complete derived receipt matched retained bytes in each mode."
+  ],
+  "pins": {
+    ".github/workflows/quorum-replay.yml": {
+      "bytes": 926,
+      "sha256": "a302885a5eabbdee6fd2e3a85e63937daa0343d0e7e238af1fc86d89dafa2785"
+    },
+    "README.md": {
+      "bytes": 8783,
+      "sha256": "4a9f2ed165c237ad9150c61727f3dbe5eb2a119af20f57e8639a9fc84dc0063f"
+    },
+    "comparison/accounting/evidence/publication-review.json": {
+      "bytes": 7340,
+      "sha256": "d2d1118bc5047eca9d16ff8a1902dccc097c6c2f7e7a11c87e98be625b68962a"
+    },
+    "examples/quorum-replay-v1/prepare_receipt.py": {
+      "bytes": 9171,
+      "sha256": "d488ab2f765d1fab32c65a6c3e47775673a0d63f76bd552d867c90aa1adc61c6"
+    },
+    "examples/quorum-replay-v1/receipt.json": {
+      "bytes": 159799,
+      "sha256": "dea96022cc7751075a1d8f5fff760cf4d34745b074162e592049542e6367c8c2"
+    }
+  },
+  "product_acceptance": false,
+  "repair": "Restore root README bytes already held by the historical replay receipt, removing only the newly added accounting feature bullet. Accounting implementation, dedicated documentation, fixtures, CI and existing evidence remain unchanged.",
+  "restored_from_commit": "39da9cd15bba82b77ccc9870caab81ee32c44b03",
+  "reviewer": "accounting_publication_review",
+  "schema": "transport/accounting-ci-repair-review/1",
+  "scope": "Independent verification of historical source-receipt compatibility repair following accounting checkpoint; no broader study or release acceptance.",
+  "smallest_sound_next_step": "Commit the README restoration and this additive review, then obtain exact-source hosted receipt-check readback."
+}

@@ -1,0 +1,160 @@
+{
+  "Qv3_index": {
+    "bytes": 7266,
+    "sha256": "4fda3d407ad754ff3508088b39b3219a814e64a76dc95b6b362bd18d2e65fa20"
+  },
+  "acceptance": "NOT_ASSESSED",
+  "actual_native_CLI_model_human_runs_by_collator": "NONE",
+  "actual_state": {
+    "T4": "PERMANENT_FAILED",
+    "build": "SUCCESS_EXIT0_COMPLETE_CAPTURE_GROUP_ABSENT",
+    "generated_why3_config": "ABSENT",
+    "missing_PID1032727_group_creator": "UNKNOWN_INITIAL_FOREIGN_ATTRIBUTION_CORRECTED",
+    "proof": "FAILED_RETURN_MINUS9_INCOMPLETE",
+    "proof_oracle": "NOT_SATISFIED",
+    "proof_stdout": "64_BYTE_PHASE1_HEADING_ONLY",
+    "proof_summary": "ABSENT"
+  },
+  "checks": {
+    "kind": "INERT_ARCHIVE_MEMBER_BYTES_HASH_DATA_ONLY_NO_NATIVE_CLI_MODEL_SIGNAL_OR_PROC_CENSUS",
+    "normal": {
+      "argv": [
+        "/usr/bin/python3.14",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "/dev/shm/semantic-transport-verification-publication-20261029/proof-fourth/collate.py",
+        "check"
+      ],
+      "exit": 0,
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 37,
+        "sha256": "e68339652eefdef92fc36cba75a2a23d9d62ac8f15f06233fa44e9dd9fa954ee"
+      }
+    },
+    "optimized": {
+      "argv": [
+        "/usr/bin/python3.14",
+        "-I",
+        "-S",
+        "-B",
+        "-O",
+        "-Werror",
+        "/dev/shm/semantic-transport-verification-publication-20261029/proof-fourth/collate.py",
+        "check"
+      ],
+      "exit": 0,
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 37,
+        "sha256": "e68339652eefdef92fc36cba75a2a23d9d62ac8f15f06233fa44e9dd9fa954ee"
+      }
+    }
+  },
+  "expanded_bytes": 1316725,
+  "files": {
+    "COLLATION-PLAN.json": {
+      "bytes": 6171,
+      "sha256": "29a8ea1761a30f78071d3310c29027d2ca67fa67f8154bb81d9b4e5d8e0e8cac"
+    },
+    "README.md": {
+      "bytes": 3004,
+      "sha256": "63241769bbd4c5b29de66f26a9146d982a95ea66fd1ef47e10a2f9e4a3202d8d"
+    },
+    "check-normal.exit": {
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    "check-normal.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "check-normal.stdout": {
+      "bytes": 37,
+      "sha256": "e68339652eefdef92fc36cba75a2a23d9d62ac8f15f06233fa44e9dd9fa954ee"
+    },
+    "check-optimized.exit": {
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    "check-optimized.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "check-optimized.stdout": {
+      "bytes": 37,
+      "sha256": "e68339652eefdef92fc36cba75a2a23d9d62ac8f15f06233fa44e9dd9fa954ee"
+    },
+    "collate.py": {
+      "bytes": 17595,
+      "sha256": "86e8aeb397253c20a54fbc0b410fd9fd5fc15c11934c3b5238e84b72b8f4f536"
+    },
+    "collation.exit": {
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    "collation.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "collation.stdout": {
+      "bytes": 209,
+      "sha256": "5fad992dcd7aba8f0d88c36ea0a07225cec44e39dfccb5fccef63827fa37d380"
+    },
+    "index.json": {
+      "bytes": 61735,
+      "sha256": "a98ed2004fdcef932a3c5ac337667fc71d10ceccf2bd4437910b7126f2420ea8"
+    },
+    "observations.zip": {
+      "bytes": 787462,
+      "sha256": "ee2cb214969b84b0cba3c728ac7531c844e99c52861b05af2fd7634fc2daf8fc"
+    }
+  },
+  "history": "T1/T2/T3/T4 failed. Current18 pure and independent23 scoped receipts distinct from65 earlier logic PASS/aggregate FAILED_RESOURCE_BOUND;3 older actual Python controls remain older-source-only. RestoredQ1MiB readback nonretroactive. Invalid administrative JSON raw originals and operative calendar02/adoption/Qv3 are retained.",
+  "member_count": 142,
+  "omission_count": 0,
+  "omissions": [],
+  "publication": "NOT_PERFORMED",
+  "review_input": {
+    "bytes": 14353,
+    "held_root_pin_matched": true,
+    "sha256": "2bce039ee3163530abb5ea8942641e25e689924a9b7b03486ec78d5ec007c504"
+  },
+  "schema": "transport/fourth-failed-proof-collation-receipt/1",
+  "signals_or_proc_census_by_collator": "NONE",
+  "source_function_lines": {
+    "canonical": 2,
+    "capacity": 19,
+    "create_archive": 22,
+    "inventory": 26,
+    "main": 26,
+    "need": 3,
+    "outcomes": 16,
+    "read": 12,
+    "readme": 40,
+    "safe_name": 6,
+    "scan": 4,
+    "sha": 2,
+    "stat_row": 4,
+    "tree": 26,
+    "verify_archive": 21,
+    "write": 8
+  },
+  "source_integrity": {
+    "after_data_checks": "EVERY_ARCHIVED_SOURCE_FILE_BYTES_SHA256_SELECTED_STAT_FIELDS_RECHECKED_IDENTICAL",
+    "atime": "NOT_AN_IDENTITY_FIELD_NO_READER_CAUSE_ATTRIBUTION",
+    "before_after_full_inventory": "IDENTICAL_DURING_COLLATION",
+    "selected_source_byte_mutations": 0,
+    "selected_stat_mutations": 0
+  },
+  "status": "COLLATED_DATA_ONLY_NORMAL_OPTIMIZED_CHECKS_PASS_PENDING_INDEPENDENT_REVIEW",
+  "unrelated_future_cgroup_design": "EXCLUDED"
+}

@@ -1,0 +1,33 @@
+test_archive_link_types (__main__.ReceiptTests.test_archive_link_types) ... ok
+test_assessment_input_crosslink (__main__.ReceiptTests.test_assessment_input_crosslink) ... ok
+test_boolean_native_exit (__main__.ReceiptTests.test_boolean_native_exit) ... ok
+test_changed_current_source (__main__.ReceiptTests.test_changed_current_source) ... ok
+test_changed_held_answer_even_if_inventory_resealed (__main__.ReceiptTests.test_changed_held_answer_even_if_inventory_resealed) ... ok
+test_changed_quantity_citation (__main__.ReceiptTests.test_changed_quantity_citation) ... ok
+test_dispatch_settings_changed (__main__.ReceiptTests.test_dispatch_settings_changed) ... ok
+test_dropped_citation (__main__.ReceiptTests.test_dropped_citation) ... ok
+test_duplicate_and_deep_json (__main__.ReceiptTests.test_duplicate_and_deep_json) ... ok
+test_duplicate_archive_entries (__main__.ReceiptTests.test_duplicate_archive_entries) ... ok
+test_erased_first_failure (__main__.ReceiptTests.test_erased_first_failure) ... ok
+test_erased_masking_limitation (__main__.ReceiptTests.test_erased_masking_limitation) ... ok
+test_expansion_bound (__main__.ReceiptTests.test_expansion_bound) ... ok
+test_false_model_identity (__main__.ReceiptTests.test_false_model_identity) ... ok
+test_final_text_substitution (__main__.ReceiptTests.test_final_text_substitution) ... ok
+test_forbidden_event_kind (__main__.ReceiptTests.test_forbidden_event_kind) ... ok
+test_inventory_boolean_size (__main__.ReceiptTests.test_inventory_boolean_size) ... ok
+test_inventory_missing_entry (__main__.ReceiptTests.test_inventory_missing_entry) ... ok
+test_missing_receiver_engineering_finding (__main__.ReceiptTests.test_missing_receiver_engineering_finding) ... ok
+test_oversized_entry (__main__.ReceiptTests.test_oversized_entry) ... ok
+test_positive_frozen_evidence (__main__.ReceiptTests.test_positive_frozen_evidence) ... ok
+test_raw_journal_extra_in_capture (__main__.ReceiptTests.test_raw_journal_extra_in_capture) ... ok
+test_review_capture_crosslink (__main__.ReceiptTests.test_review_capture_crosslink) ... ok
+test_review_native_crosslink (__main__.ReceiptTests.test_review_native_crosslink) ... ok
+test_source_assessment_claim_upgrade (__main__.ReceiptTests.test_source_assessment_claim_upgrade) ... ok
+test_swapped_source_identity (__main__.ReceiptTests.test_swapped_source_identity) ... ok
+test_truncated_gzip (__main__.ReceiptTests.test_truncated_gzip) ... ok
+test_unsafe_archive_paths (__main__.ReceiptTests.test_unsafe_archive_paths) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.135s
+
+OK

@@ -1,0 +1,14 @@
+START current-export-encode
+current-export-encode SUCCESS
+START current-export-inspect
+current-export-inspect SUCCESS
+START current-export-render
+current-export-render SUCCESS
+START current-export-verify
+current-export-verify SUCCESS
+START current-independent-inspect
+current-independent-inspect SUCCESS
+START current-independent-recover
+current-independent-recover SUCCESS
+START current-independent-metadata
+current-independent-metadata SUCCESS

@@ -1,0 +1,26 @@
+{
+  "schema": "independent-pure-proof-roster-provenance-supplement/1",
+  "actual_model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "supersedes_no_bytes": true,
+  "retained_original_readback_sha256": "b7c3ce374ac598563df217b9821dc7dca149fe0618a1d29746f2bc297abcc9fc",
+  "correction": "Original metadata_pins.held_roster a328c16315a81e25947704de7243b14493ac1cc33e4c539859e63121308c230f denotes independent source04 entity-coordinate comparison roster, not dispatched source05 roster. Entity positions/contracts unchanged source05. Actual dispatched roster is separately pinned below; original live runtime-roster hashing included this file.",
+  "launch_sha256": "5d2e9b1953360b75a11d8ffa2e5cc69c04c54c8c75a6c1e6d412b006d33ef573",
+  "actual_dispatched_source05_roster": {
+    "bytes": 7496,
+    "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/build-oracle/policy-source05-roster.json",
+    "sha256": "c9be4819e618941729cbe47635a4dd89f1406df6859406df3d67a8e28cf0bba2"
+  },
+  "launch_embedded_roster_equals_actual_held_file": true,
+  "sources_bind_to_actual_frozen_source05": {
+    "sentinel_native/sentinel_policy.ads": "a66f97c23cbaedd317ff0a073d2eab0116c13578aeaeb8a72e0bf77551e52c75",
+    "sentinel_native/sentinel_policy.adb": "889348d21a6063f83976f0d51852d51064aeb5c43cf5a978a3ff5badbba5486f",
+    "sentinel_native/sentinel_policy.gpr": "363494be1324111c0064a173e617d87390b49aa6d7d934c7d75b223aadf1ac7c",
+    "sentinel_native/sentinel_policy_proof.gpr": "57de11fe7e0c0573b2b531f8e5a526fb7069e8d75d92f8ef107873b93e0c46ee"
+  },
+  "all_37_entities_equal_independent_coordinate_roster": true,
+  "entity_comparison": "by name/file/line/minimum_proved_checks/explicit_postcondition; extra annotations are not declaration identity",
+  "status": "CHECKED_SOURCE05_DISPATCHED_ROSTER_AND_SOURCE_BINDING",
+  "retained_supplement_development_failure": "First attempted supplement compared entire entity records including independent reviewer annotations and failed before report creation. Corrected comparison uses exact five operative fields by entity name, also used in original readback; no proof/evidence acceptance criterion changed.",
+  "limits": "No native/build/proof execution; provenance clarification only. Prior115goal proof/staticfixture scope unchanged."
+}

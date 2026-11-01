@@ -1,0 +1,19 @@
+START core-build
+core-build SUCCESS
+START evaluation-build
+evaluation-build SUCCESS
+START eval-checks-build
+eval-checks-build SUCCESS
+START bound-checks-build
+bound-checks-build SUCCESS
+START core-proof
+core-proof REFUSED_TIMEOUT
+START evaluation-proof
+evaluation-proof REFUSED_TIMEOUT
+START bound-proof
+bound-proof SUCCESS
+START eval-tests
+eval-tests SUCCESS
+START bound-tests
+bound-tests SUCCESS
+ALL_COMMANDS_RECORDED; proof gate assessment still required

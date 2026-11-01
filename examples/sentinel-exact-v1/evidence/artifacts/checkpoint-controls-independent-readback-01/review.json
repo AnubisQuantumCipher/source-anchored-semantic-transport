@@ -1,0 +1,18 @@
+{
+  "files": {
+    ".github/workflows/document-profile.yml": "b01aac513023a3c54bbf7f473cd68372de4803738e4f95878d623d5f32089472",
+    "examples/sentinel-exact-v1/freeze_receipt.py": "5bbe76bf421030619bd246de2198b7c058d3f281cf06b372e2c3bbcbd9a170fc",
+    "tests/check_sentinel_profile.py": "ed6f1f46e888bb138468f4e1f91f42a5c0efc3222ec521a073d4ecd75d8c0e1b",
+    "tests/test_sentinel_checkpoint.py": "ab0a4e9ba80d35e492912856eec0082ca2fb078bcc928ad2fde517c6ff7c23f5"
+  },
+  "findings": [
+    {
+      "detail": "New test_sentinel_checkpoint.py absent from explicit check_sentinel_profile FILES and document-profile.yml normal/O invocations at reviewed epoch. Add controlled new coverage/CI epoch before claiming enforced assurance.",
+      "status": "OPEN_INTEGRATION"
+    }
+  ],
+  "schema": "sentinel/checkpoint-controls-independent-source-review/1",
+  "scope": "Generator --check claims only current source and retained artifact byte identity, not new proof or semantic revalidation. Trusted local ancestor/source tree and no hostile-host TOCTOU attestation. Fullmission acceptance NOT_ESTABLISHED.",
+  "status": "SOURCE_CHARACTERIZATION_SCOPED_CLEAR_CI_INTEGRATION_PENDING",
+  "verified": "Read actual generator and4 independent controls. Fresh marker fixtures/row copies isolate negative cases; payload basename rejects absolute/parent paths before outside read; declared types/bounds and duplicate wanted entries failclosed; reader NOFOLLOW/NONBLOCK checks regular file before read, stable pre/post identity, growth/truncation/size. Tests forbid Popen. No native/compiler/prover or test execution by this reviewer."
+}

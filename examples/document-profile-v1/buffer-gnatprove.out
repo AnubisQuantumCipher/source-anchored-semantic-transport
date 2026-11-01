@@ -1,0 +1,41 @@
+=========================
+Summary of SPARK analysis
+=========================
+
+----------------------------------------------------------------------------------
+SPARK Analysis results        Total        Flow     Provers   Justified   Unproved
+----------------------------------------------------------------------------------
+Data Dependencies                 3           3           .           .          .
+Flow Dependencies                 .           .           .           .          .
+Initialization                    4           4           .           .          .
+Non-Aliasing                      .           .           .           .          .
+Run-time Checks                  35           .     35 (Z3)           .          .
+Assertions                        8           .      8 (Z3)           .          .
+Functional Contracts              3           .      3 (Z3)           .          .
+LSP Verification                  .           .           .           .          .
+Termination                       3           3           .           .          .
+Concurrency                       .           .           .           .          .
+----------------------------------------------------------------------------------
+Total                            56    10 (18%)    46 (82%)           .          .
+
+
+max steps used for successful proof: 1
+
+============================
+Most difficult proved checks
+============================
+
+No check found with max time greater than 1 second
+
+========================
+Detailed analysis report
+========================
+
+Analyzed 2 units
+in unit transport_buffers, 4 subprograms and packages out of 4 analyzed
+  Transport_Buffers at transport_buffers.ads:3 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Transport_Buffers.Append at transport_buffers.ads:16 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (26 checks)
+  Transport_Buffers.Equal at transport_buffers.ads:30 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (7 checks)
+  Transport_Buffers.Read_Token at transport_buffers.ads:4 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (13 checks)
+in unit transport_types, 1 subprograms and packages out of 1 analyzed
+  Transport_Types at transport_types.ads:1 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)

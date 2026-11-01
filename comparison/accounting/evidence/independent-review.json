@@ -1,0 +1,101 @@
+{
+  "schema": "transport/accounting-independent-implementation-review/1",
+  "reviewer": "work_accounting_review",
+  "decision": "PINNED_IMPLEMENTATION_REVIEW_PASSED_WITH_EXPLICIT_UNRUN_BOUNDARIES",
+  "scope": "Bounded informational completeness and attribution checker, thin CLI, independent fixtures and portable test wrapper. No campaign, endpoint arithmetic, human validation, authority or product acceptance.",
+  "product_acceptance": false,
+  "formal_proof": "UNPROVEN",
+  "pins_observed_final": {
+    "accounting.py": "4b44797d3455ca8c2cef28156422be2734825df4df90f539f6801c551ef78b87",
+    "check.py": "eabb3f5129606d4159a46f79491770a1e77b7c5921dc1e47d11506528eb7a8df",
+    "run_tests.py": "4f7287bdf962b5167d0848fee4ed3d1d7739081409672be6d5865ae66a1d2279",
+    "tests/run_independent_v5.py": "c3fdd2cac9cd76a4de9abd157f88643c91922b02dded8b4ad86d04fa1481c2af",
+    "contract-v2.json": "968ebd4fcdcc34d4b3be26c1a411474407ec90fa9021c1615e78b4eb1c3c376b",
+    "oracle-v2.json": "a7d461442299b3819244db101897ab563f65630d0987d7864606bf9026eb8426",
+    "fixtures-v4-manifest.json": "254e94ba6a3866e6922e4d1a480f3f7d30b64a0ea93670be49f93c5bbf0b73e9"
+  },
+  "blocking_implementation_findings_remaining": [],
+  "resolved_findings": [
+    {
+      "id": "I1_AGGREGATE_BYTE_PRECEDENCE",
+      "first_source_sha256": "1f1e313fa0b9916637074156ec0f2683a1c3116db7df79523229543c13d31be0",
+      "counterexample": "counterexample-aggregate-01.json",
+      "counterexample_sha256": "67ea3b0153114e3383230a9e7553e806a1125f784bc9469ff90d2526080fcd70",
+      "first_observation": "B05_AGGREGATE_ARTIFACT_OVER returned BINDING_MISMATCH rather than predeclared INPUT_BOUND because duplicate hash checks preceded the total supplied-byte cap.",
+      "fix": "Current core checks the bounded sum of actual supplied artifact byte lengths before semantic roster checks.",
+      "retest": "PASS in independent normal and optimized core runs, and portable normal/optimized CLI runs. First failure retained."
+    },
+    {
+      "id": "I2_STARTUP_REFUSAL_BOUNDARY",
+      "first_CLI_sha256": "e45319c61b3b5db6b186301f12121b7f6e123fcb22c6c3941daa894004047797",
+      "counterexample": "counterexample-loader-01.json",
+      "counterexample_sha256": "29f5ea17b9efdf425e838f3b4f26f9c3f98c0c0579599a37bdd95a7377a6554d",
+      "first_observation": "An isolated copied qualified-helper pin change caused an uncaught startup Refusal traceback with empty stdout before main.",
+      "fix": "Current CLI applies limits then loads the core inside its controlled failure boundary and can emit a fixed refusal without the loaded core.",
+      "retest": "PASS for helper pin mismatch, missing helper, missing core and syntax-invalid core; canonical fixed refusal, nonzero exit and empty stderr. First failure and isolated copies retained."
+    },
+    {
+      "id": "I3_OPTIMIZED_CLI_EVIDENCE_GAP",
+      "first_observation": "The earlier independent runner's -O mode optimized its imported core but did not pass -O to child CLI processes.",
+      "fix": "Independent successor v5 explicitly propagates -O to child CLI commands. Prior v4 optimized results are not represented as optimized CLI evidence.",
+      "retest": "Portable v5 normal and optimized modes passed, with inspected explicit flag propagation."
+    },
+    {
+      "id": "I4_PORTABLE_BOUND_IO_AND_HELD_SNAPSHOT",
+      "first_wrapper_sha256": "8f0eab687159721f50fcb32ebb3708f1cbc75918b4735acc5a940b376b6323fe",
+      "first_observation": "Static review found an unbounded read after lstat, ZIP path reopening after source verification, unbounded bootstrap source read and a subprocess timeout exceeding the admitted command limit. These were static findings, not executed counterexamples.",
+      "fix": "Current wrapper uses bounded no-follow descriptor reads with before/after identity, parses the verified ZIP bytes through BytesIO, bounds and hashes the exact bootstrap bytes before compile, and applies the admitted timeout. Original wrapper retained as inert historical text.",
+      "retest": "Reviewed exact successor delta and inspected successful portable raw results."
+    },
+    {
+      "id": "E1_RECURSIVE_FIXTURE_BUILDER",
+      "fix": "Successor materialize_iterative.py resolves fixture inheritance with a bounded iterative chain.",
+      "retest": "Independent comparison in builder-equivalence-01.json verified the original and successor ordered case IDs and all relative file size/digest pins match; all successor files matched their pins. Old recursive preparation remains historical provenance."
+    }
+  ],
+  "evidence": {
+    "first_core_v4": "core-v4-first-normal.stdout and .stderr; failure retained",
+    "corrected_independent_normal": "core-cli-v4-corrected-normal.stdout and .stderr; all applicable controls passed",
+    "corrected_independent_optimized_core": "core-cli-v4-corrected-optimized.stdout and .stderr; core optimized, child CLI normal under historical v4 runner",
+    "malformed_types": "malformed-type-matrix-01.json; postimplementation controls reject malformed list/object/Boolean field types without escaping exceptions",
+    "startup": "startup-controls-corrected-01.json; postimplementation controls passed",
+    "CLI_IO": "cli-io-controls-01.json; Unicode paths accepted, symlink leaf and parent, FIFO and actual oversized regular file refused",
+    "portable_stage": "/dev/shm/semantic-transport-accounting-20261029/accounting-portable-3baui04s",
+    "portable_normal": {
+      "file": "normal.json",
+      "sha256": "9ba3cc0ee808d9d09d48bd08eef2346dc41a68ead308838deaa433863c9fe419",
+      "status": "TESTED",
+      "API_PASS": 46,
+      "CLI_PASS": 48
+    },
+    "portable_optimized": {
+      "file": "optimized.json",
+      "sha256": "9ba3cc0ee808d9d09d48bd08eef2346dc41a68ead308838deaa433863c9fe419",
+      "status": "TESTED",
+      "API_PASS": 46,
+      "CLI_PASS": 48
+    },
+    "API_not_applicable_to_CLI_only_controls": ["N28_REQUEST_OVER_BYTES", "B06_DUPLICATE_CLI_BINDING"],
+    "portable_observation_boundary": "The independent author executed the reviewed wrapper after owner capacity clearance. This reviewer read both raw portable results, checked their hashes/statuses/outcomes and rechecked all final source pins. This reviewer separately executed earlier v4 core/CLI runs and startup/type/IO controls."
+  },
+  "reviewed_properties": [
+    "Closed bounded canonical JSON, fixed unsigned integer token and value bounds, duplicate-key rejection, bounded lexical depth and no data-selected code.",
+    "Fixed digest-checked helper source is compiled from the exact checked bytes. Runtime Python, standard libraries and operating system remain trusted exclusions.",
+    "Held plan/ledger and artifact identities, exact slot coverage, mandatory human task effort, retained UNKNOWN and prespecified NA explanation provenance.",
+    "Visible failed/unsafe/retry attempt metadata and source-pinned slot/metric/currency bindings with global measurement uniqueness and once-only use.",
+    "Interval overlap and comparability checks across the same declared actor and time metric; cumulative usage remains explicitly nonadditive.",
+    "Exact bounded report/refusal shapes and CLI framing/exit semantics. No numeric aggregate, conversion, benefit, authority or acceptance decision.",
+    "Thin CLI reads explicit bounded regular files without symlink traversal and returns fixed failures; portable ZIP members are inert data checked for exact membership, identity, modes and sizes."
+  ],
+  "chronology": "Original contract/oracle and original 42 raw fixtures preceded implementation. Six further required-boundary raw fixtures were materialized after first core implementation from already frozen oracle recipes, without changed expected outcomes or author product inspection. V5 runner and portable packaging are postimplementation verification infrastructure. They are not represented as all frozen before implementation.",
+  "remaining_UNRUN": [
+    "Exact valid 65536-byte plan/ledger intersection control, or source-bound evidence that the intersection is unreachable without weakening other bounds.",
+    "Valid-input output-overflow reachability control, or source-bound upper-bound evidence with runtime overflow retained UNRUN if unreachable."
+  ],
+  "remaining_assurance_limits": [
+    "No formal proof, exhaustive path proof, measured-human-work truth, clock trust, source authentication, actual prespecification timing or hidden-work detection follows.",
+    "Complete declared records do not establish complete real sender-plus-recipient work or correct task completion. Actor identity, chronology and NA rationales remain externally supplied claims.",
+    "Applicable inherited regression, proof, installation, independent human validation and release/publication gates remain separate. This receipt cannot close ACCEPTED_V1."
+  ],
+  "smallest_sound_next_step": "Resolve or retain the two explicitly named boundary obligations with source-bound evidence, preserve all first failures and source pins, and carry this item only as a scoped tested engineering checkpoint until the remaining required gates pass."
+}

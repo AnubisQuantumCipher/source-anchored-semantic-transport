@@ -1,0 +1,122 @@
+{
+  "schema": "sentinel/foundation-regressions/1",
+  "source_before": {
+    "test_transport_document_context.py": "7bc01877c646d11b10ff2f6e2a2e42828360462eeb1db345c8f3b7c1f1631fbc",
+    "test_transport_sentinel.py": "229d0c6b2629e495ed40e5fcdb3020294fb821385098e4755da1d8e98d761d34",
+    "test_transport_sentinel_package.py": "cb5ca372a395561981e1a03b4bb5bd24f1061da85fd520005e09b2c371321bf1",
+    "test_sentinel_qualification.py": "f8f0b8c9bcdf975ab9b42c3abb32ba031f80e608cb7892e63b49c3863aba348d",
+    "test_sentinel_checkpoint.py": "ab0a4e9ba80d35e492912856eec0082ca2fb078bcc928ad2fde517c6ff7c23f5"
+  },
+  "source_after": {
+    "test_transport_document_context.py": "7bc01877c646d11b10ff2f6e2a2e42828360462eeb1db345c8f3b7c1f1631fbc",
+    "test_transport_sentinel.py": "229d0c6b2629e495ed40e5fcdb3020294fb821385098e4755da1d8e98d761d34",
+    "test_transport_sentinel_package.py": "cb5ca372a395561981e1a03b4bb5bd24f1061da85fd520005e09b2c371321bf1",
+    "test_sentinel_qualification.py": "f8f0b8c9bcdf975ab9b42c3abb32ba031f80e608cb7892e63b49c3863aba348d",
+    "test_sentinel_checkpoint.py": "ab0a4e9ba80d35e492912856eec0082ca2fb078bcc928ad2fde517c6ff7c23f5"
+  },
+  "rows": [
+    {
+      "mode": "normal",
+      "name": "test_transport_document_context.py",
+      "returncode": 0,
+      "expected_tests": 14,
+      "count_observed": "14",
+      "passed": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c9811dcd7d51683ba5e61910b5aa26e91e8766a287b6a6f52a04bac8ac9f3a3d"
+    },
+    {
+      "mode": "normal",
+      "name": "test_transport_sentinel.py",
+      "returncode": 0,
+      "expected_tests": 25,
+      "count_observed": "25",
+      "passed": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "4a334d79877298f19a4e92d331d7da8fb5bb3e0abf216f6df9a7f3e4364eb3ac"
+    },
+    {
+      "mode": "normal",
+      "name": "test_transport_sentinel_package.py",
+      "returncode": 0,
+      "expected_tests": 17,
+      "count_observed": "17",
+      "passed": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c5d64926c0f81e3741c1c0448324ef63b0a24d437680cec13894b55d6f7b829d"
+    },
+    {
+      "mode": "normal",
+      "name": "test_sentinel_qualification.py",
+      "returncode": 0,
+      "expected_tests": 23,
+      "count_observed": "23",
+      "passed": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "a15da2818f73eb07f92ebf1ce3b5a40dccdaacc2be5208f49f0b96adb5679dd7"
+    },
+    {
+      "mode": "normal",
+      "name": "test_sentinel_checkpoint.py",
+      "returncode": 0,
+      "expected_tests": 4,
+      "count_observed": "4",
+      "passed": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "f956005d0fffd32ac4a36ab5c68098cf29abcd859b0dd83722c4ea73d78658fd"
+    },
+    {
+      "mode": "optimized",
+      "name": "test_transport_document_context.py",
+      "returncode": 0,
+      "expected_tests": 14,
+      "count_observed": "14",
+      "passed": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "416bf32537d4ffc17e47fc9001e09449b734d88682763b59741e1f5b52a25f02"
+    },
+    {
+      "mode": "optimized",
+      "name": "test_transport_sentinel.py",
+      "returncode": 0,
+      "expected_tests": 25,
+      "count_observed": "25",
+      "passed": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "f58a62c9fd097a34aea2d85409fa194e2ed7de2ab9bf3386d927a00dfafcf4fa"
+    },
+    {
+      "mode": "optimized",
+      "name": "test_transport_sentinel_package.py",
+      "returncode": 0,
+      "expected_tests": 17,
+      "count_observed": "17",
+      "passed": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "4eba03f2019456a570bf6a975606b13f28eee0507de659d1e4529edb1540a907"
+    },
+    {
+      "mode": "optimized",
+      "name": "test_sentinel_qualification.py",
+      "returncode": 0,
+      "expected_tests": 23,
+      "count_observed": "23",
+      "passed": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "5172d2a116bfdab27cdbf268b0fa7fb3fc3fe07a9d36bb66c2dd893272bd96bb"
+    },
+    {
+      "mode": "optimized",
+      "name": "test_sentinel_checkpoint.py",
+      "returncode": 0,
+      "expected_tests": 4,
+      "count_observed": "4",
+      "passed": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "5610bb341ae4df72930d9f88afd8d925eec567770a8ccf6387603ee214544c29"
+    }
+  ],
+  "status": "PASS",
+  "seconds": 4.635915111983195,
+  "observed_utc": "2026-10-30T06:03:24.783694+00:00"
+}

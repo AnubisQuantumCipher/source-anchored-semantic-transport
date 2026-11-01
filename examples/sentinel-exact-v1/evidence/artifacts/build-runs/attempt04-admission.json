@@ -1,0 +1,22 @@
+{
+  "automatic_retry": false,
+  "budget": "Within prepaid finite tranche27 ends05:59 UTC; unchanged530s outer watchdog fits05:35 dispatch.",
+  "machine_review_sha256": "8619214cc8e466f7e76294c7a3f12e1041703cb3090b21871636cb368db5b472",
+  "resources": {
+    "build_seconds": 90,
+    "checks_seconds": 30,
+    "external_bytes": 100663296,
+    "new_arena_bytes": 268435456,
+    "outer_seconds": 450,
+    "private_bytes": 67108864,
+    "proof_seconds": 180,
+    "terminal_reserve": 90
+  },
+  "schema": "sentinel/finite-native-qualification-admission/1",
+  "scope": "ONE source05 purepolicy build/static-fixtures/proof attempt. Only parentheses sourceclarification beyond reviewed04. All original Posts/settings/resources unchanged. New conservative rawmachine gate strengthens, never waives, text/source checks. Old04 115 discharged goals retained with raw diagnostic ambiguity separately UNRESOLVED; no active-warning assertion. No wireparser/model/OCR campaign.",
+  "snapshot_receipt_sha256": "026890f99f48236c64bce6fce85e6b2fd7578f8ca97a58aec6c9e137758f9b10",
+  "source_review_sha256": "248aa0d8820ad7fc727907657751f1c02898abe610a7785fa0ef8023d53f91b5",
+  "source_roster_sha256": "c9be4819e618941729cbe47635a4dd89f1406df6859406df3d67a8e28cf0bba2",
+  "source_snapshot": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/build-input-04",
+  "status": "ADMITTED_BEFORE_EXECUTION"
+}

@@ -1,0 +1,97 @@
+{
+  "assurance_boundary": [
+    "No model/provider authentication or error independence established; held family labels only",
+    "Clientreported model/usage and exactobserved metadata remain observations; no billingreceipt",
+    "GPT tools prohibited by protocol, no OS/backend hiddencontext confinement proof",
+    "systemd/kernel/trustedlocalhost enforcement assumed, no whole-system formal proof",
+    "Existing HOME login access remains allowed; no credentials copied/logged",
+    "This is source declaration identity reading only; V1 NEEDS_REVALIDATION remains despite any thresholdsuccess",
+    "Malformed/error/timeout/tooluse/boundfail remains ineligible, neverABSTAIN",
+    "A pipewrite proves bytes supplied, not that remoteprovider processed everybyte"
+  ],
+  "pins": {
+    "bounded-profile-addendum-02.json": {
+      "bytes": 1974,
+      "sha256": "47774d823dad521f9f8b458dbce92408e87ccdbf0a06e7c000e8576441e14dec"
+    },
+    "contract.json": {
+      "bytes": 2607,
+      "sha256": "22c175c26f64104012b047117ec9d605eeb851ffa8cb8572c9848453b64f920b"
+    },
+    "independent-bound-controls02.json": {
+      "bytes": 3039,
+      "sha256": "1ca5a37a6da574f3afb4a7a426e402bd3402fc518cdc63b874bf98afeaaae482"
+    },
+    "independent-prelaunch-findings-01.json": {
+      "bytes": 3072,
+      "sha256": "d39fda14e7e2180d91ec4081058fc596a782f76f6800c32c7b2fd106c9545739"
+    },
+    "prompt.txt": {
+      "bytes": 5515,
+      "sha256": "d2a914ff90e83020754df06edbc930da84b698bcb18d1e4053812dd6e6b66875"
+    },
+    "run_claude.py": {
+      "bytes": 4253,
+      "sha256": "c85c9e5f5dc755dad90e9335d42043b4efe37e9a623d0a74633733283fe9b6a0"
+    },
+    "run_claude_bound.py": {
+      "bytes": 10505,
+      "sha256": "6bf1821c244db00747c02b7d9900d9fe5f41c005ee616ee04c262d2d74b5f91b"
+    },
+    "run_claude_bound.v01.py": {
+      "bytes": 10416,
+      "sha256": "0165b9a129375d58034eb0ee7ee56391c80393fc570885e57cf6830d6138cf51"
+    },
+    "settings.json": {
+      "bytes": 1024,
+      "sha256": "8ae186a030e79c4c1de4c8260a06257f8f9980150a669dfd2205b25a1238419a"
+    },
+    "starter-controls-02.json": {
+      "bytes": 5197,
+      "sha256": "b62fa5992028900aacf2e9c9e06ceb6925f9aa8907f65a2246c2e022b4b41844"
+    }
+  },
+  "required_after_launch": [
+    "Exactly one attempt each; retained rawstdout/stderr/lifecycle/exit/cleanup andactualID",
+    "Sameprompt/settings pins and actualtoolaccess checked; complete capture and firstfinal equality",
+    "Postobservation registry/admissions derived by prefrozen rule, realsource replay recomputed; keep truth/authority NONE andV1 dependencywarning",
+    "Any failure retained with no automatic relaxation/retry"
+  ],
+  "retained_findings": [
+    "Initial runner memory/environment/descendant/stdin blockers preserved in findings01",
+    "First cgroup runner BrokenPipe false fullinput reporting preserved v01; corrected02 and zeroexit earlyclose is INCOMPLETE_INPUT withacceptedfalse"
+  ],
+  "review_model": "gpt-6.1-sol",
+  "schema": "quorum/independent-observed-prelaunch-review/2",
+  "scope": "Two separately bounded one-attempt public declaration observations, only existing authorized access. This review does not execute model calls.",
+  "source_fixture_pins": {
+    "body.json": {
+      "bytes": 10210,
+      "sha256": "358f61cce73aa485898a40c2a53c71b8cc3d595bf6c1ad87e5ab81f6f7be971f"
+    },
+    "originals.json": {
+      "bytes": 940,
+      "sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796"
+    }
+  },
+  "source_projection_checks": {
+    "claims": true,
+    "dependencies": true,
+    "history": true,
+    "original_bytes": true,
+    "selectors": true,
+    "sources": true,
+    "tasks": true,
+    "updates": true
+  },
+  "status": "CLEARED_FOR_SINGLE_SCOPED_OBSERVATION",
+  "verified": [
+    "Original source/task/claim projection exact; no other assessor responses included",
+    "Policy fixed2required/support2/families2 beforecalls; allstances retained, no retry/fallback or answerrepair",
+    "Actual Claude resolvedID must be sole modelUsage key; missing/ambiguous refuses; requestedalias separately retained",
+    "Revised runner env-i explicit5keys, cgroupMemoryMax512MiB/swap0 andKillMode verified before gate; CPU120/FS4MiB/NOFILE128/wall120 requested through fixed systemd properties",
+    "Input/output nonblocking and combinedoutput64KiB; actualbytesent offset preserved; incompleteinput refuses even exit0",
+    "Always stops owned transientunit, verifies group absent/empty and reapsclient regardless leader state",
+    "Native5 no-model controls pass including version/memory/descendant/blockedinput/earlyclose; independent cleanenvironment+earlyclose repeated"
+  ]
+}

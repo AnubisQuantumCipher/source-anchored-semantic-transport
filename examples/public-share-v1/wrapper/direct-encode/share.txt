@@ -1,0 +1,3 @@
+Σ[SOURCE] I[none] U[none] R[none]
+STS1:11e1c7495e6880605cf6d73fb30f1fbed8438a6e94efad14d0514ddb3fb3faaf
+attached:meaning.zip

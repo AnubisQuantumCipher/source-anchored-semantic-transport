@@ -1,0 +1,262 @@
+{
+  "CLI_model_human_execution_by_collator": "NONE",
+  "acceptance": "NOT_ASSESSED",
+  "actual_review": {
+    "bytes": 9500,
+    "held_pin_checked_before_collation": true,
+    "sha256": "ebc2263d943670bb2be282d3a36023f53c9c1d6c78013898c66436953b0cda57"
+  },
+  "expanded_bytes": 635807,
+  "files": {
+    "README.md": {
+      "bytes": 3116,
+      "sha256": "911c1682732adc21ef9a3b3a2b6a4e10a11f612776ec09f990876436101b0b61"
+    },
+    "collate.py": {
+      "bytes": 13976,
+      "sha256": "7033667ba8c7213ebb9bc2a5a46ed86469cecceac68d44eb0b5cf69381a2608e"
+    },
+    "index.json": {
+      "bytes": 90691,
+      "sha256": "d8775230837d8d5d38e9fd3de97674a9b08d04a33d53ddfb5d4ee6a24321e8c6"
+    },
+    "observations.zip": {
+      "bytes": 290103,
+      "sha256": "8c7e19b08857247209042bd777f6d6271f0d77a23698e978ce910c7d25e00be3"
+    }
+  },
+  "limitations": "The reviewed all-observed-generated-directory persistence rule was frozen for this failed attempt and cannot be retroactively waived. Source/compiler provenance and proposed future repair are distinct from executed proof.",
+  "member_count": 207,
+  "native_execution_by_collator": "NONE",
+  "omission_count": 12,
+  "omissions": [
+    {
+      "name": "N/helper-tests-01/inventory/alias",
+      "reason": "SYMLINK_OR_SPECIAL_NOT_DEREFERENCED",
+      "source_stat": {
+        "st_blocks": 0,
+        "st_ctime_ns": 1793308603288262876,
+        "st_dev": 29,
+        "st_ino": 418132,
+        "st_mode": 41471,
+        "st_mtime_ns": 1793308603288262876,
+        "st_nlink": 1,
+        "st_size": 84,
+        "st_uid": 1000
+      },
+      "target_string_only": "/dev/shm/semantic-transport-proof-ipc-design-20261029/helper-tests-01/inventory/data"
+    },
+    {
+      "name": "N/helper-tests-01/reads/alias",
+      "reason": "SYMLINK_OR_SPECIAL_NOT_DEREFERENCED",
+      "source_stat": {
+        "st_blocks": 0,
+        "st_ctime_ns": 1793308603331082190,
+        "st_dev": 29,
+        "st_ino": 418140,
+        "st_mode": 41471,
+        "st_mtime_ns": 1793308603331082190,
+        "st_nlink": 1,
+        "st_size": 80,
+        "st_uid": 1000
+      },
+      "target_string_only": "/dev/shm/semantic-transport-proof-ipc-design-20261029/helper-tests-01/reads/file"
+    },
+    {
+      "name": "N/helper-tests-02/inventory/alias",
+      "reason": "SYMLINK_OR_SPECIAL_NOT_DEREFERENCED",
+      "source_stat": {
+        "st_blocks": 0,
+        "st_ctime_ns": 1793308645119606385,
+        "st_dev": 29,
+        "st_ino": 418200,
+        "st_mode": 41471,
+        "st_mtime_ns": 1793308645119606385,
+        "st_nlink": 1,
+        "st_size": 84,
+        "st_uid": 1000
+      },
+      "target_string_only": "/dev/shm/semantic-transport-proof-ipc-design-20261029/helper-tests-02/inventory/data"
+    },
+    {
+      "name": "N/helper-tests-02/reads/alias",
+      "reason": "SYMLINK_OR_SPECIAL_NOT_DEREFERENCED",
+      "source_stat": {
+        "st_blocks": 0,
+        "st_ctime_ns": 1793308645176718745,
+        "st_dev": 29,
+        "st_ino": 418208,
+        "st_mode": 41471,
+        "st_mtime_ns": 1793308645176718745,
+        "st_nlink": 1,
+        "st_size": 80,
+        "st_uid": 1000
+      },
+      "target_string_only": "/dev/shm/semantic-transport-proof-ipc-design-20261029/helper-tests-02/reads/file"
+    },
+    {
+      "name": "N/helper-tests-03/inventory/alias",
+      "reason": "SYMLINK_OR_SPECIAL_NOT_DEREFERENCED",
+      "source_stat": {
+        "st_blocks": 0,
+        "st_ctime_ns": 1793308762405679069,
+        "st_dev": 29,
+        "st_ino": 418290,
+        "st_mode": 41471,
+        "st_mtime_ns": 1793308762405679069,
+        "st_nlink": 1,
+        "st_size": 84,
+        "st_uid": 1000
+      },
+      "target_string_only": "/dev/shm/semantic-transport-proof-ipc-design-20261029/helper-tests-03/inventory/data"
+    },
+    {
+      "name": "N/helper-tests-03/reads/alias",
+      "reason": "SYMLINK_OR_SPECIAL_NOT_DEREFERENCED",
+      "source_stat": {
+        "st_blocks": 0,
+        "st_ctime_ns": 1793308762471230954,
+        "st_dev": 29,
+        "st_ino": 418298,
+        "st_mode": 41471,
+        "st_mtime_ns": 1793308762471230954,
+        "st_nlink": 1,
+        "st_size": 80,
+        "st_uid": 1000
+      },
+      "target_string_only": "/dev/shm/semantic-transport-proof-ipc-design-20261029/helper-tests-03/reads/file"
+    },
+    {
+      "name": "N/ipc-tests-01/symlinks/tmp",
+      "reason": "SYMLINK_OR_SPECIAL_NOT_DEREFERENCED",
+      "source_stat": {
+        "st_blocks": 0,
+        "st_ctime_ns": 1793308603122949563,
+        "st_dev": 29,
+        "st_ino": 418117,
+        "st_mode": 41471,
+        "st_mtime_ns": 1793308603122949563,
+        "st_nlink": 1,
+        "st_size": 80,
+        "st_uid": 1000
+      },
+      "target_string_only": "/dev/shm/semantic-transport-proof-ipc-design-20261029/ipc-tests-01/ancestors/tmp"
+    },
+    {
+      "name": "N/ipc-tests-02/symlinks/tmp",
+      "reason": "SYMLINK_OR_SPECIAL_NOT_DEREFERENCED",
+      "source_stat": {
+        "st_blocks": 0,
+        "st_ctime_ns": 1793308644799604837,
+        "st_dev": 29,
+        "st_ino": 418185,
+        "st_mode": 41471,
+        "st_mtime_ns": 1793308644799604837,
+        "st_nlink": 1,
+        "st_size": 80,
+        "st_uid": 1000
+      },
+      "target_string_only": "/dev/shm/semantic-transport-proof-ipc-design-20261029/ipc-tests-02/ancestors/tmp"
+    },
+    {
+      "name": "N/ipc-tests-03/symlinks/tmp",
+      "reason": "SYMLINK_OR_SPECIAL_NOT_DEREFERENCED",
+      "source_stat": {
+        "st_blocks": 0,
+        "st_ctime_ns": 1793308738571981684,
+        "st_dev": 29,
+        "st_ino": 418261,
+        "st_mode": 41471,
+        "st_mtime_ns": 1793308738571981684,
+        "st_nlink": 1,
+        "st_size": 80,
+        "st_uid": 1000
+      },
+      "target_string_only": "/dev/shm/semantic-transport-proof-ipc-design-20261029/ipc-tests-03/ancestors/tmp"
+    },
+    {
+      "name": "N/ipc-tests-04/symlinks/tmp",
+      "reason": "SYMLINK_OR_SPECIAL_NOT_DEREFERENCED",
+      "source_stat": {
+        "st_blocks": 0,
+        "st_ctime_ns": 1793308762900579055,
+        "st_dev": 29,
+        "st_ino": 418333,
+        "st_mode": 41471,
+        "st_mtime_ns": 1793308762900579055,
+        "st_nlink": 1,
+        "st_size": 80,
+        "st_uid": 1000
+      },
+      "target_string_only": "/dev/shm/semantic-transport-proof-ipc-design-20261029/ipc-tests-04/ancestors/tmp"
+    },
+    {
+      "name": "N/review-tests-01/ancestor-recheck/tmp/fifo",
+      "reason": "SYMLINK_OR_SPECIAL_NOT_DEREFERENCED",
+      "source_stat": {
+        "st_blocks": 0,
+        "st_ctime_ns": 1793308904620594623,
+        "st_dev": 29,
+        "st_ino": 418375,
+        "st_mode": 4480,
+        "st_mtime_ns": 1793308904620594623,
+        "st_nlink": 1,
+        "st_size": 0,
+        "st_uid": 1000
+      }
+    },
+    {
+      "name": "N/review-tests-01/symlinks/tmp",
+      "reason": "SYMLINK_OR_SPECIAL_NOT_DEREFERENCED",
+      "source_stat": {
+        "st_blocks": 0,
+        "st_ctime_ns": 1793308904100803698,
+        "st_dev": 29,
+        "st_ino": 418363,
+        "st_mode": 41471,
+        "st_mtime_ns": 1793308904100803698,
+        "st_nlink": 1,
+        "st_size": 83,
+        "st_uid": 1000
+      },
+      "target_string_only": "/dev/shm/semantic-transport-proof-ipc-design-20261029/review-tests-01/ancestors/tmp"
+    }
+  ],
+  "preparation_failure": {
+    "effect": "No source bytes changed; the following command invoked the original bounded collation script successfully. Prior separate read-only check verified the exact supplied actual-review9500B/SHA/verdict; the archived index confirms that identical pin. No automatic retry or overwritten collation occurred.",
+    "kind": "SyntaxError in an optional literal-pin/README wording insertion command",
+    "raw_tool_output": "Retained in conversation tool result; no standalone raw capture was created or reconstructed as original evidence.",
+    "status": "FAILED_PREPARATION_COMMAND_NO_FILE_CHANGE"
+  },
+  "publication": "NOT_PERFORMED",
+  "schema": "transport/second-failed-proof-collation-receipt/1",
+  "scope": "Every regular N file; only six selected T2 root records; selected D admissions/launch streams/final implementation review/actual-attempt review. Nested ZIPs remain opaque. No compiled objects or new binaries collated from T2.",
+  "semantic_states": {
+    "atime_cause": "UNKNOWN_NO_READER_ATTRIBUTION",
+    "native_build_process_exit": 0,
+    "native_clean": "NOT_ESTABLISHED",
+    "proof": "NOT_RUN",
+    "supervisor_build": "FAILED_CAPTURE_INCOMPLETE",
+    "terminal": "FAILED"
+  },
+  "source_function_lines": {
+    "canonical": 2,
+    "capacity": 19,
+    "create_archive": 22,
+    "inventory": 9,
+    "main": 23,
+    "need": 3,
+    "outcomes": 10,
+    "read": 12,
+    "readme": 39,
+    "safe_name": 6,
+    "scan": 4,
+    "sha": 2,
+    "stat_row": 4,
+    "tree": 26,
+    "verify_archive": 21,
+    "write": 8
+  },
+  "source_inventory_before_after": "IDENTICAL_N_AND_SELECTED_T2_AND_D_METADATA_BYTE_READBACK",
+  "status": "COLLATED_DATA_ONLY_PENDING_INDEPENDENT_REVIEW"
+}

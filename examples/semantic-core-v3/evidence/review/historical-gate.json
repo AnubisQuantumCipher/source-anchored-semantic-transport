@@ -1,0 +1,83 @@
+{
+  "runs": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "examples/engineering-closure-v1/test_receipt.py"
+      ],
+      "cwd": "/dev/shm/semantic-transport-core-20261029/evidence/historical-source",
+      "elapsed_ns": 1396723488,
+      "exit_code": 0,
+      "streams": {
+        "stderr": {
+          "bytes": 1263,
+          "path": "historical-normal.stderr",
+          "sha256": "c64d2d98918a491de680e428820239c7aaa32620ac46dc05705135742b167ac4"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "historical-normal.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-O",
+        "-Werror",
+        "examples/engineering-closure-v1/test_receipt.py"
+      ],
+      "cwd": "/dev/shm/semantic-transport-core-20261029/evidence/historical-source",
+      "elapsed_ns": 1059430474,
+      "exit_code": 0,
+      "streams": {
+        "stderr": {
+          "bytes": 1263,
+          "path": "historical-optimized.stderr",
+          "sha256": "9483d33291275681f05ba5d8cb7c70fc9fbfe135187b48ab61ed291c16767bbc"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "historical-optimized.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "examples/engineering-closure-v1/receipt.py",
+        "--check"
+      ],
+      "cwd": "/dev/shm/semantic-transport-core-20261029/evidence/historical-source",
+      "elapsed_ns": 59078505,
+      "exit_code": 0,
+      "streams": {
+        "stderr": {
+          "bytes": 0,
+          "path": "historical-check.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 77,
+          "path": "historical-check.stdout",
+          "sha256": "cbae966d97827b118443261dbdac97a01e42ab819d69be38b39c67b98c3c3823"
+        }
+      }
+    }
+  ],
+  "schema": "transport/historical-gate/1",
+  "source_commit": "02f0bfee2d5f454e51869832fa70662d4de6229e"
+}

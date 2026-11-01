@@ -17,7 +17,7 @@ from transport_archive import read_archive, write_archive
 from transport_wire import CORE, MAX_SOURCE, MAX_WIRE, TransportError, pack, unpack
 
 ROOT = Path(__file__).resolve().parents[1]
-CORE_SHA256 = '572cd138d8e1efb64e20e3b5b444cb5e512d4165068ab674112772247d2655ea'
+CORE_SHA256 = 'dc31652c685ee47d3f78f26c247919897dab74facdb9135d9ad97fc8303cc17c'
 MODULES = ('transport_archive', 'transport_author', 'transport_cli', 'transport_codec', 'transport_codec_cli', 'transport_corpus', 'transport_formula', 'transport_graph', 'transport_lexicon', 'transport_meaning', 'transport_operators', 'transport_package', 'transport_plan', 'transport_readable', 'transport_references', 'transport_requirement_language', 'transport_schema', 'transport_semantics', 'transport_source_map', 'transport_structure', 'transport_wire')
 PRODUCT = 'Source-Anchored Semantic Transport'
 FORMATS = {'byte_frame': 'STB1', 'graph': 'STG1', 'mapping': 'STM1',

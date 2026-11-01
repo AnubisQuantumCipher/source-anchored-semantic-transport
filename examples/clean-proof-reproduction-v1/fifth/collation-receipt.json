@@ -1,0 +1,46 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-I",
+    "-S",
+    "-B",
+    "-Werror",
+    "/dev/shm/semantic-transport-verification-publication-20261029/fifth/collate_qualification.py",
+    "collate-qualification"
+  ],
+  "combined_output": "{\"status\": \"COLLATED_QUALIFICATION_ONLY_NATIVE_NOT_RUN\", \"members\": 134, \"expanded_bytes\": 1055696, \"archive\": {\"bytes\": 679820, \"sha256\": \"3b584edbab1dd5f5c1133d81a48a13f075a93ba7d6732207c5443e2b8833cf83\"}}\n",
+  "created_utc": "2026-10-29T23:22:08.063561+00:00",
+  "exit_code": 0,
+  "expanded_bytes": 1055696,
+  "latency": "NOT_MEASURED; tool wait latency is not total program latency",
+  "members": 134,
+  "native_task": "T5_ABSENT_NOT_RUN",
+  "pins": {
+    "README.md": {
+      "bytes": 2108,
+      "sha256": "787615aa1fc3b545a93fac5d3b497328c6d28366cf180a340acae9d8346d9044"
+    },
+    "READY-QUALIFICATION.json": {
+      "bytes": 2093,
+      "sha256": "a0249ebc34cd1969d3e6e2291b576c27c011a40933d19519f541c731cd72e01a"
+    },
+    "collate_qualification.py": {
+      "bytes": 22685,
+      "sha256": "5c6c3a4b21ed3361fea634050a82e3433fe1bd0a66be20ccff8048d6a607a3df"
+    },
+    "index.json": {
+      "bytes": 71744,
+      "sha256": "1dac9d3db79a857bd3f6db0641b4adfd2901051eaef0d40e0fb7d1e26a9d8943"
+    },
+    "observations.zip": {
+      "bytes": 679820,
+      "sha256": "3b584edbab1dd5f5c1133d81a48a13f075a93ba7d6732207c5443e2b8833cf83"
+    }
+  },
+  "review_aggregate": "FAILED_REVIEWER_CONTROL_ISOLATION_WITH_SEPARATELY_SCOPED_PASS_EVIDENCE",
+  "schema": "transport/inert-qualification-collation-receipt/1",
+  "scope": "One data collation; no archived execution, native/cgroup/actual control/model/provider operations. Original-source snapshot is not task recovery or proof. Exact data membership is not whole-system correctness, semantic fidelity or acceptance.",
+  "status": "COLLATION_EXIT_ZERO_PORTABLE_REVIEW_PENDING",
+  "stderr": "NOT_SEPARATELY_CAPTURED",
+  "underlying_readiness": "NOT_NATIVE_READY_IMPLEMENTATION_QUALIFICATION_INCOMPLETE"
+}

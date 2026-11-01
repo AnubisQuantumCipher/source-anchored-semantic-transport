@@ -1,0 +1,26 @@
+{
+  "schema": "quorum/retained-first-failures/2",
+  "events": [
+    {
+      "artifact": "policy-run-01.json",
+      "classification": "HARNESS_PROJECTION_FAILURE",
+      "observation": "46 refusal cases returned REFUSED with codes and no verdict; first harness projected only status, omitting the independently specified sentinel and no-partial fields. Corrected harness only; all expected oracle outcomes retained."
+    },
+    {
+      "artifact": "integration-normal-01.json",
+      "classification": "HARNESS_ARGUMENT_BOUND_FAILURE",
+      "observation": "CLI test runner rejected argv count above its unchanged32 argument cap before launch. Test now uses --option=value; product and process caps unchanged."
+    },
+    {
+      "artifact": "independent/adapter-normal-01/results.json.gz",
+      "classification": "INCOMPLETE_FIRST_CONTROL_RUN",
+      "observation": "42 planned adapter controls passed; V1 nine-seat negative remained pending. Later authentic original-arm invalid-nine-seat run supplies the missing evidence."
+    },
+    {
+      "artifact": "independent/oracle-fixture-correction-01.json",
+      "classification": "PRE_PRODUCT_FIXTURE_CORRECTION",
+      "observation": "Two unused-admission fixture reading digests regenerated for their exact hypothetical run IDs. All87 expected outcomes unchanged; both oracle revisions retained."
+    }
+  ],
+  "provenance": "Descriptions of observed tool results; not a claim these descriptions are raw stderr transcripts."
+}

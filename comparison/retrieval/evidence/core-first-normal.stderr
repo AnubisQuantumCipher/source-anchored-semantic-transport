@@ -1,0 +1,82 @@
+test_aggregate_source_byte_bound (__main__.AdmissionTests.test_aggregate_source_byte_bound) ... ok
+test_annotation_byte_bound (__main__.AdmissionTests.test_annotation_byte_bound) ... ok
+test_annotation_pin_detects_changed_permission_data (__main__.AdmissionTests.test_annotation_pin_detects_changed_permission_data) ... ok
+test_annotation_pin_mismatch (__main__.AdmissionTests.test_annotation_pin_mismatch) ... ok
+test_dependency_edge_bound (__main__.AdmissionTests.test_dependency_edge_bound) ... ok
+test_duplicate_identity_and_bool_length (__main__.AdmissionTests.test_duplicate_identity_and_bool_length) ... ok
+test_invalid_declared_utf8 (__main__.AdmissionTests.test_invalid_declared_utf8) ... ok
+test_nonbytes_source_rejected (__main__.AdmissionTests.test_nonbytes_source_rejected) ... ok
+test_recomputed_source_hash_cannot_hide_bad_quote_hash (__main__.AdmissionTests.test_recomputed_source_hash_cannot_hide_bad_quote_hash) ... ok
+test_source_actor_swap_tampering (__main__.AdmissionTests.test_source_actor_swap_tampering) ... ok
+test_source_count_bound (__main__.AdmissionTests.test_source_count_bound) ... ok
+test_source_numeric_byte_tampering (__main__.AdmissionTests.test_source_numeric_byte_tampering) ... ok
+test_source_set_mismatch (__main__.AdmissionTests.test_source_set_mismatch) ... ok
+test_unit_bound_is_sixteen_per_invocation (__main__.AdmissionTests.test_unit_bound_is_sixteen_per_invocation) ... ok
+test_unit_span_and_quote_hash_validation (__main__.AdmissionTests.test_unit_span_and_quote_hash_validation) ... ok
+test_unknown_annotation_fields (__main__.AdmissionTests.test_unknown_annotation_fields) ... ok
+test_metrics_are_separate_fresh_dicts_without_result_identity_effect (__main__.EqualityAndMetricsTests.test_metrics_are_separate_fresh_dicts_without_result_identity_effect) ... ok
+test_same_action_schedule_is_byte_identical_between_fixture_routes (__main__.EqualityAndMetricsTests.test_same_action_schedule_is_byte_identical_between_fixture_routes) ... ok
+test_all_raw_quotes_and_byte_anchors_are_exact (__main__.FrozenOracleTests.test_all_raw_quotes_and_byte_anchors_are_exact) ... ok
+test_declared_scenario_inputs_use_identical_bytes_and_annotations (__main__.FrozenOracleTests.test_declared_scenario_inputs_use_identical_bytes_and_annotations) ... ok
+test_initial_archive_retains_original_identity (__main__.FrozenOracleTests.test_initial_archive_retains_original_identity) ... ok
+test_raw_v2_archive_is_exact_working_source (__main__.FrozenOracleTests.test_raw_v2_archive_is_exact_working_source) ... ok
+test_split_no_match_scope_preserves_original_query (__main__.FrozenOracleTests.test_split_no_match_scope_preserves_original_query) ... ok
+test_fts_index_run_bound_preserves_literal_lane (__main__.FtsTests.test_fts_index_run_bound_preserves_literal_lane) ... ok
+test_fts_query_operators_are_quoted_tokens (__main__.FtsTests.test_fts_query_operators_are_quoted_tokens) ... ok
+test_fts_token_bound_does_not_silently_truncate (__main__.FtsTests.test_fts_token_bound_does_not_silently_truncate) ... ok
+test_optional_fts_returns_named_lane_or_explicit_refusal (__main__.FtsTests.test_optional_fts_returns_named_lane_or_explicit_refusal) ... ok
+test_all_literal_queries_and_complete_closures_identically (__main__.LiteralOracleTests.test_all_literal_queries_and_complete_closures_identically) ... ok
+test_catalog_preserves_full_metadata_and_marks_unresolved_dependency (__main__.LiteralOracleTests.test_catalog_preserves_full_metadata_and_marks_unresolved_dependency) ... ok
+test_expand_missing_dependency_and_cycle_refuse_without_partial_payload (__main__.LiteralOracleTests.test_expand_missing_dependency_and_cycle_refuse_without_partial_payload) ... ok
+test_expand_retains_complete_whole_units_and_cross_source_context (__main__.LiteralOracleTests.test_expand_retains_complete_whole_units_and_cross_source_context) ... ok
+test_expand_two_versions_keeps_both_distinct_identities (__main__.LiteralOracleTests.test_expand_two_versions_keeps_both_distinct_identities) ... ok
+test_byte_pages_preserve_split_utf8_and_full_annotation_scope (__main__.PageTests.test_byte_pages_preserve_split_utf8_and_full_annotation_scope) ... ok
+test_corpus_owns_fixed_snapshot_after_caller_changes_mapping (__main__.PageTests.test_corpus_owns_fixed_snapshot_after_caller_changes_mapping) ... ok
+test_opaque_page_is_exact_bytes_with_no_inferred_utf8 (__main__.PageTests.test_opaque_page_is_exact_bytes_with_no_inferred_utf8) ... ok
+test_equal_fts_score_ties_use_source_before_unit_identity (__main__.PreExecutionRegressionTests.test_equal_fts_score_ties_use_source_before_unit_identity) ... ok
+test_trace_binding_pairs_are_globally_sorted_by_left_then_right (__main__.PreExecutionRegressionTests.test_trace_binding_pairs_are_globally_sorted_by_left_then_right) ... ok
+test_closed_corpus_refuses (__main__.RefusalTests.test_closed_corpus_refuses) ... ok
+test_closed_request_shapes_types_and_canonical_json (__main__.RefusalTests.test_closed_request_shapes_types_and_canonical_json) ... 
+  test_closed_request_shapes_types_and_canonical_json (__main__.RefusalTests.test_closed_request_shapes_types_and_canonical_json) (payload=b'{"action":"page","offset":true,"source":"S_SYNTH"}') ... FAIL
+test_complete_output_overflow_refuses_without_truncation (__main__.RefusalTests.test_complete_output_overflow_refuses_without_truncation) ... ok
+test_empty_queries_and_ascii_space_token_rule (__main__.RefusalTests.test_empty_queries_and_ascii_space_token_rule) ... ok
+test_invalid_expand_roots_and_page_offset (__main__.RefusalTests.test_invalid_expand_roots_and_page_offset) ... ok
+test_oversized_request_has_explicit_bound_refusal (__main__.RefusalTests.test_oversized_request_has_explicit_bound_refusal) ... ok
+test_query_byte_token_and_pagination_bounds (__main__.RefusalTests.test_query_byte_token_and_pagination_bounds) ... ok
+test_refusal_reason_is_stable_between_both_fixture_routes (__main__.RefusalTests.test_refusal_reason_is_stable_between_both_fixture_routes) ... ok
+test_refusals_count_toward_saturating_session_budget (__main__.RefusalTests.test_refusals_count_toward_saturating_session_budget) ... ok
+test_unknown_empty_and_duplicate_source_scopes (__main__.RefusalTests.test_unknown_empty_and_duplicate_source_scopes) ... ok
+test_combined_origin_labels_preserve_source_and_annotation (__main__.SearchTests.test_combined_origin_labels_preserve_source_and_annotation) ... ok
+test_literal_search_pagination_does_not_hide_other_roots (__main__.SearchTests.test_literal_search_pagination_does_not_hide_other_roots) ... ok
+test_opaque_attribute_hit_is_data_without_text_extraction (__main__.SearchTests.test_opaque_attribute_hit_is_data_without_text_extraction) ... ok
+test_permission_and_freshness_attributes_cannot_grant_authority (__main__.SearchTests.test_permission_and_freshness_attributes_cannot_grant_authority) ... ok
+test_source_attribute_hit_has_no_invented_unit (__main__.SearchTests.test_source_attribute_hit_has_no_invented_unit) ... ok
+test_unannotated_whole_source_match_retains_fallback (__main__.SearchTests.test_unannotated_whole_source_match_retains_fallback) ... ok
+test_unit_annotation_hits_are_separately_labeled (__main__.SearchTests.test_unit_annotation_hits_are_separately_labeled) ... ok
+test_changed_external_definition_has_exact_byte_difference_enclosure (__main__.TraceTests.test_changed_external_definition_has_exact_byte_difference_enclosure) ... ok
+test_trace_does_not_select_revoked_or_prior_permission (__main__.TraceTests.test_trace_does_not_select_revoked_or_prior_permission) ... ok
+test_trace_without_family_preserves_self_only (__main__.TraceTests.test_trace_without_family_preserves_self_only) ... ok
+test_unchanged_core_retains_changed_declared_definition_binding (__main__.TraceTests.test_unchanged_core_retains_changed_declared_definition_binding) ... ok
+
+======================================================================
+FAIL: test_closed_request_shapes_types_and_canonical_json (__main__.RefusalTests.test_closed_request_shapes_types_and_canonical_json) (payload=b'{"action":"page","offset":true,"source":"S_SYNTH"}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/comparison/retrieval/test_retrieval.py", line 649, in test_closed_request_shapes_types_and_canonical_json
+    self.refused(corpus, payload, 'REFUSED_SCHEMA')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/comparison/retrieval/test_retrieval.py", line 396, in refused
+    self.assertEqual(value['result'], {'reason': reason})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'reason': 'REFUSED_QUERY'} != {'reason': 'REFUSED_SCHEMA'}
+- {'reason': 'REFUSED_QUERY'}
+?                     ^^ ^^
+
++ {'reason': 'REFUSED_SCHEMA'}
+?                     ^^^ ^^
+
+
+----------------------------------------------------------------------
+Ran 58 tests in 0.208s
+
+FAILED (failures=1)

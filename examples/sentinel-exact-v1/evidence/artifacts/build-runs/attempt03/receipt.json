@@ -1,0 +1,29 @@
+{
+  "argv": [
+    "/usr/bin/unshare",
+    "--user",
+    "--map-root-user",
+    "--mount",
+    "--pid",
+    "--fork",
+    "--mount-proc",
+    "--net",
+    "--propagation",
+    "private",
+    "--kill-child=SIGKILL",
+    "/usr/bin/python3",
+    "-I",
+    "-S",
+    "-B",
+    "-c",
+    "import runpy,sys;sys.path.insert(0,sys.argv[1]);sys.path.insert(0,sys.argv[2]);runpy.run_module('sentinel_build_profile',run_name='__main__')",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/build-input-03/tools",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/build-input-03/sentinel_native",
+    "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/build-runs/attempt03"
+  ],
+  "external_bytes": 25901588,
+  "failure": null,
+  "namespace_waited": true,
+  "returncode": 0,
+  "status": "SENTINEL_POLICY_BUILD_TEST_PROOF_CHECKED"
+}

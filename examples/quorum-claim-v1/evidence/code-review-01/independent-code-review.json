@@ -1,0 +1,55 @@
+{
+  "schema":"quorum/claim-structure-independent-code-review/1",
+  "reviewer":"/root/quorum_graph_oracle",
+  "classification":"OBSERVED_SOURCE_REVIEW_AND_TESTED_BOUNDED_COMPONENT",
+  "model_identity":{"required_actual_model":"gpt-6.1-sol","attestation_basis":"Parent dispatch/provider record; this JSON does not independently authenticate its own model. Parent-reported capacity event retained separately without an alternate-model substitution."},
+  "scope":"Exact closed Claim/DeclarationSource structure stage and its private validated source/schema bundle. No product edits by reviewer, native build, actual assessor campaign, full replay or product acceptance.",
+  "reviewed_pins":{
+    "tools/transport_quorum_claim.py":"ec502414c70b0b577c66134a485f3063a3b5893515d22c5d547f72cc3d72a43b",
+    "tools/transport_quorum_source.py":"3a356f0e135900bdbe1ce1199579e8b08978b5f00a4ab499b709993466279616",
+    "tools/transport_quorum_input.py":"6a90037a747b0cc2965dcf1b7169220a9732a16080ca0f3ca7c3b24d0349d653",
+    "tools/transport_quorum_shape.py":"6fef25a491be924fb310ecafe581da9da9f3dfa19baf44b956838745c95f2170",
+    "install/test_quorum_claim.py":"1093cce6c93cabdea9825467b5639741695dd5652b3b998d4f6118a2c296fdd9",
+    "contract.json":"8a55255115c34b9a96d43a073404193f29701725058a9caeda69c83ed9a93ce0",
+    "owner-design-addendum.json":"fcac41fa63e61297e7da01e0d46f3d09a4ac58634691e7e58b0767141ebfd592",
+    "oracle.json":"a2b4090d6ca9138377bba966fe2772872bb9e922bfe0d0f205c78ebbf6379e9d"
+  },
+  "first_execution_results":[
+    {"evidence":"independent-suite-first.json","status":"TESTED_PASS","command":"PYTHONDONTWRITEBYTECODE=1 timeout --kill-after=2s 30s python -W error install/test_quorum_claim.py --evidence CREATE_ONLY_PATH","coverage":"Three methods: twenty-two complete manual results, forty-five independent complete minimal-pair results and raw-first/output-ownership checks. Exact observed and expected results retained."},
+    {"evidence":"additional-results-first.json","status":"TESTED_PASS","oracle":"additional-probes.json","oracle_sha256":"1ad79aecf506ddde09370dd32194f1b35b121ca857324ac289235410d4757a7e","coverage":"Thirteen complementary preimplementation-frozen probes plus exact two-parameter public API check; before/after source dependency pins identical."},
+    {"evidence":"static-inspection.json","status":"OBSERVED_SOURCE_AST_IDENTITY_AND_TESTED_STRICT_COMPILE","coverage":"Reviewed source/input/source-bundle/shape/test functions at most sixty physical lines, strict in-memory warnings-as-errors compilation, operational refactor AST comparisons against source-component commit92d6743."}
+  ],
+  "retained_execution_events":[
+    {"evidence":"capacity-event.json","detail":"Parent-reported model-capacity event retained with provenance and no alternate model or budget reset. No completion was claimed before actual execution."},
+    {"evidence":"static-first-check-failure.json","detail":"Reviewer's first AST comparison asserted exact helper docstring identity and failed on its intentionally changed documentation. No product defect was inferred."},
+    {"evidence":"static-check-resolution.json","detail":"Reviewer narrowed the check to the operational validation prefix, excluding the changed docstring and intentional schema-carrying return. Operational AST identity passes; first check failure remains retained. No product code or behavioral expectation changed."}
+  ],
+  "source_bound_findings":[],
+  "inspection_observations":[
+    "Public check_claim_structure accepts exactly body_raw/originals. It obtains Body, verified sources, resolved selectors, complete source result and pinned schema only from private source._validated_sources. Caller decoded Body/bundle/boolean/schema/root is not an entrypoint.",
+    "Private source bundle preserves the complete former source pipeline in order and evaluates its result/output cap before returning. A patched source.MAX_OUTPUT=1 yields the original OUTPUT_BYTE_BOUND/OUTPUT_BOUNDS rather than proceeding to Claim processing.",
+    "The input schema-carrying helper has the same operational load_schema/read/shape/canonical validation sequence as the prior helper. Body evaluator loop AST is unchanged after fixed-root initializer extraction, and existing source helper ASTs are unchanged. These are inspected source identities, not a formal proof of the whole runtime.",
+    "Declaration source validation hard-codes definitions['DeclarationSource'] using the pinned schema carried from the owned Body gate, with the same bounded evaluator. There is no external root/reference resolution or second schema load. A full original shaped as ReplayBody refuses DECLARATION_SCHEMA.",
+    "Global Claim/dependency duplicate and selector/dependency ownership/primary-anchor checks complete before guard processing. Claims are visited in explicit lexical id/revision order. Complementary probes verify global reference refusal before earlier guard/cardinality errors and lexical order despite a reversed input Claim array.",
+    "Each structural Claim validates both complete guards before its REF loop, then the next Claim. Guard root-last, earlier operands and descending-index reachability checks use bounded schema-admitted arrays and no recursive project traversal or Boolean evaluation.",
+    "Every REF requires an owning exact SOURCE-target dependency and an already verified complete SourceKey. REF identity accepts all schema roles without changing their stored role. Primary anchoring separately requires SOURCE role. Borrowing another Claim's REF dependency refuses owner validation; shared selector use requires each Claim's own primary anchor.",
+    "All Claim guard/REF checks precede source parsing for every Claim. Complementary probe confirms a later Claim's missing REF refuses before an earlier selected invalid JSON source is parsed.",
+    "Per-Claim source parsing, source guard validation and the source REF union complete before structural equality. No shared-source eligibility cache exists. Source-only missing definition links are not concealed by a statement mismatch.",
+    "Scope and quote mismatch retain separate unresolved/not-checked outcomes; opaque or insufficient/unmatched-quote sources are not parsed and do not acquire source REF closure qualification. Structural zero/multiple selector cardinality refuses rather than selecting a fallback.",
+    "Statement equality compares the complete five-field closed shape with array/operand order preserved. Both sides have independently passed strict shape/type guards; Python bool/integer equivalence cannot enter valid integer node/key positions.",
+    "Result dictionaries own copied identity fields and preserve semantic_role_relevance UNPROVEN, full_reference_closure NOT_EVALUATED, semantic_completeness UNPROVEN, source_authentication UNVERIFIED, current_authority NONE and freshness UNKNOWN. No raw Statement/source/Body, accepted_result or partial Claim success escapes on refusal."
+  ],
+  "harness_observations":[
+    "Portable fixtures and complete expected envelopes are pinned and read through bounded regular-file loaders. Handwritten results are not computed from the Claim implementation.",
+    "The two named arms call the same checker with the same input; they supply component repeatability/same-checker observations, not a measured transport representation advantage.",
+    "Complementary fixtures were frozen before product inspection. Source gate and output bound, cross-Claim ownership/ordering, duplicate precedence, unowned selector and fixed DeclarationSource root cases add coverage beyond the single-Claim focused suite."
+  ],
+  "limits_and_outstanding_evidence":[
+    "Input/source regression suites are being executed independently by the separate controls agent; this review does not fabricate their outcome.",
+    "Formal proof, total Python memory theorem and trusted parser/serializer/hash/runtime implementation assurance remain unproved. Source caps and explicit bounded control flow are inspected/tested component properties.",
+    "Full dependency DAG/unrelated source/unused Dependency/Task/Manifest/Reading/runtime/global-ID/semantic relevance and applicability gates remain outside this stage and binding before full replay.",
+    "Full replay, installed decoder/package acceptance, inherited native proof/recovery/interoperability, external-human validation, measured benefit and product acceptance remain unrun or unproved."
+  ],
+  "smallest_sound_next_step":"Owner reconciles exact final source/test identities, retains this evidence and independent regression receipts, and performs controlled publication only of the bounded informational component. Any changed source or harness requires appropriate pin reconciliation and revalidation.",
+  "verdict":"NO_MATERIAL_COMPONENT_CODE_DEFECT_IDENTIFIED_ON_EXACT_PINS; BOUNDED_STRUCTURE_COMPONENT_REVIEWED_AND_TESTED; FULL_REPLAY_UNRUN_AND_PRODUCT_NOT_ACCEPTED"
+}

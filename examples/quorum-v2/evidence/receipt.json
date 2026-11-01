@@ -1,0 +1,178 @@
+{
+  "schema": "quorum/source-bound-engineering-receipt/2",
+  "status": "TESTED_LOCAL",
+  "scope": "Additive QUORUM v2 informational threshold verifier and live admitted V1 source-replay adapter. No native semantics or immutable V1 file edited.",
+  "source_files": {
+    "docs/QUORUM-V2.md": {
+      "bytes": 8913,
+      "sha256": "6fca56f05b2d8b67a26a2d0eefcbbd644aab633b546a231e18aad0b23f0d7c33"
+    },
+    "docs/quorum-v2-contract.json": {
+      "bytes": 7981,
+      "sha256": "b18d82dedcfd9a90dfa4e6576ae453296c2f6f32baa222c5c83b27c0cbdd43ae"
+    },
+    "docs/quorum-v2-replay-admitted.json": {
+      "bytes": 3549,
+      "sha256": "3efde7878e3b61d7a8af2b2b99f27a9ef78c7fd9e421f8953fa96dd7a1238869"
+    },
+    "docs/quorum-v2-replay-contract.json": {
+      "bytes": 3388,
+      "sha256": "17173995c4dbbcd6ff16e9c6ac7bd92eca3b47193e4eb77635577623f74a9a52"
+    },
+    "examples/quorum-v2/oracle.json.gz": {
+      "bytes": 13820,
+      "sha256": "c2621f69de91b4318721afce63e6a2e0f9262a6fb6848001c13cb3549bbe73d9"
+    },
+    "examples/quorum-v2/policy-inputs.zip": {
+      "bytes": 150957,
+      "sha256": "9702779e28bd7f13c5dca9960b423100e0220dd6c3c1397070408b6eb82a3106"
+    },
+    "examples/quorum-v2/source-replay-example/admissions.json": {
+      "bytes": 2227,
+      "sha256": "266c0eb4a157c6bd9a406e523078030bd543eb2e4271568d6e67556979519aa6"
+    },
+    "examples/quorum-v2/source-replay-example/ballot.json": {
+      "bytes": 2289,
+      "sha256": "de9435279358a060748f25cd887e5541df45cf2f696c949e0fb961eafc263d0c"
+    },
+    "examples/quorum-v2/source-replay-example/held-roots.json": {
+      "bytes": 235,
+      "sha256": "ea770eae13c0b172f83852448fa26d61455c796810187c83e9fea3d15a1b5c61"
+    },
+    "examples/quorum-v2/source-replay-example/policy.json": {
+      "bytes": 435,
+      "sha256": "0ec0dad504fb1af52a6bbc7c30019c975d6756c4143723f63f6a0fb6d46299b8"
+    },
+    "examples/quorum-v2/source-replay-example/provenance.json": {
+      "bytes": 718,
+      "sha256": "8f7382b978d958293bb778d309f94e2f5596c76cb0a7bd60533fda71df005f24"
+    },
+    "examples/quorum-v2/source-replay-example/registry.json": {
+      "bytes": 231,
+      "sha256": "d5795decce33a00e3f532084555848239536858ffd428673efe1a9719666a774"
+    },
+    "install/test_quorum_v2.py": {
+      "bytes": 5874,
+      "sha256": "9c2b308b54e1d6cc52d507f773f2e84a841ef4d981151cd96b1c54d179b594d1"
+    },
+    "install/test_quorum_v2_replay.py": {
+      "bytes": 7746,
+      "sha256": "fc9bb2f2dfb6a1120f3a5c7e27d434d156ebb503c80543bb38dc97e327452e27"
+    },
+    "tools/transport_quorum_v2.py": {
+      "bytes": 1294,
+      "sha256": "e2f25465de327642c870dc5dc3fcfe4f9f155955622ab96b633040312dcfd2f0"
+    },
+    "tools/transport_quorum_v2_input.py": {
+      "bytes": 3800,
+      "sha256": "39a0ba765ac123ee3d69573094923d96173ebe7965a594168f74dbe7d9ccb5cf"
+    },
+    "tools/transport_quorum_v2_policy.py": {
+      "bytes": 5362,
+      "sha256": "b4f31395cea75d81d5512ccaef49fa5c99e9f589e9096371714360803f947abb"
+    },
+    "tools/transport_quorum_v2_process.py": {
+      "bytes": 2782,
+      "sha256": "fdd5b229d4dba1f369a3a478b21952d0ae574642a6fa102a74505c82e0692297"
+    },
+    "tools/transport_quorum_v2_replay.py": {
+      "bytes": 12727,
+      "sha256": "5e7889ea91a6af60d361e0f2ca6118a1b14fdbc72034453297848ab1019c7f18"
+    },
+    "tools/transport_quorum_v2_schema.py": {
+      "bytes": 4059,
+      "sha256": "346e7a84c6267ef7d748991c305c8491a59531dc7f232cd902dde18d0f517c92"
+    }
+  },
+  "evidence_files": {
+    "examples/quorum-v2/evidence/archive-index.json.gz": {
+      "bytes": 30167,
+      "sha256": "aee68ebfd0959de123e7c7c87d5514c12d01dbc89ea379e5c1d089bbe2f3e698"
+    },
+    "examples/quorum-v2/evidence/independent-final-review.json": {
+      "bytes": 15412,
+      "sha256": "0017e360e9f164c0860f5fcbf034b336b2c68322671664b1c28e7f14d419367c"
+    },
+    "examples/quorum-v2/evidence/integration-final-normal.json.gz": {
+      "bytes": 5658,
+      "sha256": "6fa1fc9ffeed253896b1c0bd312c1b2cd574fea5aee14ae470ada5149467c5c0"
+    },
+    "examples/quorum-v2/evidence/integration-final-optimized.json.gz": {
+      "bytes": 5655,
+      "sha256": "bb6fe73f779fedee4e8372c52993b2f6044fc1aa7103a52ed1e11aa68686e4e8"
+    },
+    "examples/quorum-v2/evidence/metrics.json": {
+      "bytes": 2625,
+      "sha256": "2c6cc04d9f351ac41164092242041001bd7472aece8c5584278478715aa039af"
+    },
+    "examples/quorum-v2/evidence/observed-run-coverage.json": {
+      "bytes": 1422,
+      "sha256": "b23996ea17be9b6e0f1d5d52f2b48c73476f59f33a1c34858bd58070f66c1189"
+    },
+    "examples/quorum-v2/evidence/policy-final-normal.json.gz": {
+      "bytes": 9082,
+      "sha256": "188470f3a1f65d6ea82a37d09b4d3836b0f346b3dce073dfde225108dc3c53a9"
+    },
+    "examples/quorum-v2/evidence/policy-final-optimized.json.gz": {
+      "bytes": 9082,
+      "sha256": "188470f3a1f65d6ea82a37d09b4d3836b0f346b3dce073dfde225108dc3c53a9"
+    },
+    "examples/quorum-v2/evidence/retained-evidence.tar.gz": {
+      "bytes": 1626528,
+      "sha256": "e5bacde43fe91ad660acbcfdbfcc47ec4960236ff486d5cf11824285d0a4bf6e"
+    },
+    "examples/quorum-v2/evidence/retained-failures.json": {
+      "bytes": 1480,
+      "sha256": "0248ad0183da94edb40a0c904d079eb1afba157630d8c83856b0e07d2c47262f"
+    }
+  },
+  "local_host": {
+    "machine": "aarch64",
+    "system": "Linux",
+    "python": "3.14.7 (main, Aug 12 2026, 13:41:09) [GCC 16.1.1 20260430]"
+  },
+  "verification": {
+    "independent_policy_oracle": {
+      "cases": 87,
+      "normal": "PASS",
+      "optimized": "PASS",
+      "oracle_sha256": "20d24834b1890a6e09130ea58bdaa9e225ded525bdfcf96391f54d068ffde428"
+    },
+    "independent_adapter_controls": {
+      "cases": 43,
+      "normal": "PASS",
+      "optimized": "PASS",
+      "oracle_sha256": "340fd1bd5ad0809731f51fd7bcb13c1ba9cc4b70ebcfcb5344079fefe5be0e27"
+    },
+    "original_and_transport_live_replay": "PASS",
+    "nine_seat_companion_with_original_v1": "PASS_NORMAL_AND_OPTIMIZED_SYNTHETIC",
+    "v1_nine_seat_refusal": "PASS_EXPECTED_REFUSAL",
+    "host_key_callback_negative": "REFUSED_WITHOUT_CALLBACK_AFTER_FIX",
+    "nul_path_error_contract": "STRUCTURED_REFUSAL_AFTER_FIX",
+    "product_integration_methods": {
+      "count": 6,
+      "normal": "PASS",
+      "optimized": "PASS"
+    },
+    "frozen_v1_files": "INDEPENDENTLY_EQUAL_BASELINE_02f0bfee",
+    "native_semantics": "UNCHANGED_NOT_REPROVED_BY_THIS_TRANCHE",
+    "archive_readback": "EVERY_RETAINED_ENTRY_SHA256_MATCHED"
+  },
+  "reviewer_receipt_sha256": "0017e360e9f164c0860f5fcbf034b336b2c68322671664b1c28e7f14d419367c",
+  "retained_failures": "See retained-failures.json and complete retained-evidence.tar.gz; independent source-pin reconstruction provenance is retained-source/provenance.json within archive.",
+  "commands": {
+    "policy": "python3 -I -B install/test_quorum_v2.py --oracle=/tmp/oracle.json --fixtures=examples/quorum-v2/policy-inputs.zip --output=/tmp/new-policy-run.json",
+    "policy_optimized": "python3 -I -B -O install/test_quorum_v2.py --oracle=/tmp/oracle.json --fixtures=examples/quorum-v2/policy-inputs.zip --output=/tmp/new-policy-optimized.json",
+    "oracle_materialization": "gzip -dc examples/quorum-v2/oracle.json.gz > /tmp/oracle.json",
+    "live_replay": "python3 -I -B install/test_quorum_v2_replay.py --options=/path/to/held-adapter-options.json --output=/tmp/new-live-replay.json",
+    "replay_prerequisite": "Existing admitted V1 runtime/closure; see docs/QUORUM-V2.md and retained prerequisite profiles. No implicit rebuild."
+  },
+  "unproved_or_unperformed": [
+    "No formal proof of Python policy/IO/process orchestration.",
+    "No inference of source truth, English entailment, completeness, current approval or execution authority.",
+    "Held family/origin declarations do not establish provider authentication or independent errors.",
+    "No model/provider calls in this implementation/review tranche; later observed-family runs require separate evidence.",
+    "Only the exact admitted local runtime/closure was exercised; hosted CI, other runtimes and client platforms are not claimed.",
+    "Trusted local source, Python/OS/hash implementations and filesystem-race assumptions remain."
+  ]
+}

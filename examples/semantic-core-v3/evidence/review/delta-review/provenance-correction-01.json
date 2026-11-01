@@ -1,0 +1,54 @@
+{
+  "cause_boundary": "Separate file inodes rule out a hardlink between the inspected copies. The exact overwrite/copy timing of the mutable source was not established.",
+  "corrected_summary": {
+    "flow": "342",
+    "inode": 273195,
+    "path": "/dev/shm/semantic-transport-core-20261029/evidence/delta-review/proof03/proof-03-summary.out",
+    "prover": "1015",
+    "sha256": "3ac4c650e4238c04fda5faf709ce947070dfefa1d07c5a585c65fd72ee25ab02",
+    "source": "/dev/shm/semantic-transport-core-20261029/native/proof-03-summary.out",
+    "total": "1362",
+    "unproved": "5"
+  },
+  "effect": "Invalidates original receipt PROOF-03 summary provenance; final proof04/testing observations remain separately hash-backed. No source/native/test outcome is relabeled.",
+  "error": "Reviewer copied the mutable obj/gnatprove/gnatprove.out into proof03 without verifying its attempt identity. The copied summary was proof04, so the previous retained-failure reference was wrong.",
+  "mislabeled_retained": {
+    "actually_matches": "proof04-summary.out",
+    "inode": 272231,
+    "path": "/dev/shm/semantic-transport-core-20261029/evidence/delta-review/proof03/gnatprove.out",
+    "sha256": "eb4499a33700abec16c3942482841c42525d49092288a4c252dc358ff0073d87"
+  },
+  "original_vcs": [
+    {
+      "location": "transport_eval.adb:136:44",
+      "message": "medium: postcondition might fail, cannot prove Typed_Node (T, M, J)"
+    },
+    {
+      "location": "transport_eval.adb:141:10",
+      "message": "medium: precondition might fail, cannot prove Typed_Node (T, M, I)"
+    },
+    {
+      "location": "transport_eval.adb:143:36",
+      "message": "medium: loop invariant might not be preserved by an arbitrary iteration, cannot prove T.Items (I).Left = 0"
+    },
+    {
+      "location": "transport_eval.adb:154:24",
+      "message": "medium: precondition might fail, cannot prove T.Items (I).Right = 0"
+    },
+    {
+      "location": "transport_eval.adb:158:36",
+      "message": "medium: loop invariant might not be preserved by an arbitrary iteration, cannot prove Typed_Node (T, M, J)"
+    }
+  ],
+  "proof04_summary": {
+    "inode": 272264,
+    "path": "/dev/shm/semantic-transport-core-20261029/native/proof-04-summary.out",
+    "sha256": "eb4499a33700abec16c3942482841c42525d49092288a4c252dc358ff0073d87"
+  },
+  "raw_proof03_diagnostics": {
+    "path": "/dev/shm/semantic-transport-core-20261029/evidence/delta-review/proof03/proof-03.stderr",
+    "sha256": "c6b6fdd3bb1352237294333ab7dc3e8f9a59d21dfb2f6ad839518d1f05680479"
+  },
+  "schema": "semantic-core-review-provenance-correction/1",
+  "status": "PROVENANCE_ERROR_CONFIRMED_CORRECTED_WITH_OLD_EVIDENCE_RETAINED"
+}

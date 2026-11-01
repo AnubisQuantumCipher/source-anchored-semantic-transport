@@ -1,0 +1,64 @@
+{
+  "checks": {
+    "cleanup_confirmed": true,
+    "full_gate_and_prompt_sent": true,
+    "launch_prompt_pin": true,
+    "launch_runner_pin": true,
+    "process_accepted": false,
+    "stderr_empty": true
+  },
+  "interpretation": "Authentication failed before an observed model response. No resolved primary model ID, no eligible admission and no stance; success subtype does not override process failure/is_error. Requested alias sonnet cannot substitute for missing resolved modelID.",
+  "next_step": "Retain this sole attempt; frozen no retry/fallback remains. Any final report must state actualtwo-family success NOT_ESTABLISHED; do not synthesize ABSTAIN, response or identity.",
+  "outcome": {
+    "exit": 1,
+    "is_error": true,
+    "message": "Failed to authenticate: OAuth session expired and could not be refreshed",
+    "modelUsage": {},
+    "no_model_stance": true,
+    "terminal_reason": "api_error"
+  },
+  "pins": {
+    "bounded-profile-addendum-02.json": {
+      "bytes": 1974,
+      "sha256": "47774d823dad521f9f8b458dbce92408e87ccdbf0a06e7c000e8576441e14dec"
+    },
+    "claude.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "claude.stdout": {
+      "bytes": 1213,
+      "sha256": "0e38bebc8f2a49d4e70f664a92c220458ee57a8b5b2085de79263092ed5fc76e"
+    },
+    "contract.json": {
+      "bytes": 2607,
+      "sha256": "22c175c26f64104012b047117ec9d605eeb851ffa8cb8572c9848453b64f920b"
+    },
+    "independent-prelaunch-review02.json": {
+      "bytes": 4660,
+      "sha256": "bc31fe9fa9e453a9f42b257af5589650034989ccd86fba4443ebe8a54a4c9cde"
+    },
+    "launch.json": {
+      "bytes": 751,
+      "sha256": "8edb92019e4058f6ff94479dbe4a625f5df0a5d74721a7296d3e7e1ec70887e7"
+    },
+    "prompt.txt": {
+      "bytes": 5515,
+      "sha256": "d2a914ff90e83020754df06edbc930da84b698bcb18d1e4053812dd6e6b66875"
+    },
+    "run.json": {
+      "bytes": 832,
+      "sha256": "0d107232b12db95975444513b675540186c569f6251b74142b436a63cc0c93f3"
+    },
+    "run_claude_bound.py": {
+      "bytes": 10505,
+      "sha256": "6bf1821c244db00747c02b7d9900d9fe5f41c005ee616ee04c262d2d74b5f91b"
+    },
+    "settings.json": {
+      "bytes": 1024,
+      "sha256": "8ae186a030e79c4c1de4c8260a06257f8f9980150a669dfd2205b25a1238419a"
+    }
+  },
+  "schema": "quorum/independent-observed-client-failure/1",
+  "status": "FAILED_ATTEMPT_RETAINED_NO_ADMISSION"
+}

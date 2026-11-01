@@ -1,0 +1,39 @@
+{
+  "schema": "independent/probe-generation-precode-review/1",
+  "actual_model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "verdict": "PASS_FOR_BOUNDED_IMPLEMENTATION_WITH_ACCEPTED_PRECODE_CLARIFICATIONS",
+  "contract_sha256": "1c3fadb88967d80abb39508d6d14de871984cbfa96898f2108e92fb2f7a3a479",
+  "oracle_freeze_sha256": "9deeca6fe03edbf4db0ecc5a45c37b58be11f913eb464ff7dd64f60d33add283",
+  "oracle_sha256": "174cc9395cb54bf25260ab29aecbda23f7eef3d0c9a07604cf043459d0779685",
+  "frozen_literal_cases": {
+    "positive": 5,
+    "exact_response_negative": 21,
+    "boundary_expectation": 14
+  },
+  "executed_against_product": "NOT_RUN",
+  "literal_manual_bytes_selfcheck": "FOUR_ASCII_MUTATIONS_EXACT; NO_PRODUCT_IMPORTS",
+  "closed_clarifications": [
+    "Relative offsets to exact selected evidence bytes, with sourceabsolute locator preserved.",
+    "Exactint indices/spans rejectbool; UTF8 before/replacement/after and boundaries checked withoutnormalization.",
+    "Locator target membership alone insufficient; transformationbefore mustbyteequal selectedevidence viaexistingselected_bytes mechanism.",
+    "Closedresponse/proposalfieldsets and fixedfocusenum; noexpectedanswer/oracle/selfadmittedmetadata fields.",
+    "Allsourcewindowsaggregate<=65536 beforepromptconstruction; finalprompt<=65536 wholeorrefuse, no truncation.",
+    "Incrementalcombinedregistry<=8MiB/256entries; wholeimportrefuses beforeacceptance on overflow.",
+    "Allgeneratedprobes oracle_pin=None/oracle_statusUNRESOLVED, even preservingproposal labels; independentlyheldoracleadmission remainsseparate.",
+    "Actualgenerationprovenance boundexactprompt/rawresponse usingexistingreviewerchecks; noidentity/independence fromselfdeclaration."
+  ],
+  "required_next": [
+    "Retainacceptedclarifications in additivecontract beforewriting functions.",
+    "PreserveoldPROMPT andoldAPIs/tests.",
+    "Implementonlynewanalysis methods withfunctions<=60 and existingstaticguards.",
+    "Runfrozenliteralcontrols plus meaningfulrequest/source/provenance/resource negativecontrols normal/-O withPopen/execdenied.",
+    "Independentexactsource/testreview beforeanyseparatelyadmitted actualmodelgeneration."
+  ],
+  "unproved": [
+    "No challenge-quality/contextadequacy/semanticcoverage/equivalence/truth claim from importedmutations.",
+    "Manualfixture suppliesimmutablegraphwindows; actualSASTpackagebinding notestablished byfixture.",
+    "Model/provider/native execution NOT_RUN; no Canswer or ownoraclesemanticassessment."
+  ],
+  "execution_authority": "NONE"
+}

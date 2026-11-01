@@ -1,0 +1,74 @@
+{
+  "acceptance_evidence_required": "Exact reviewed source pins, reproducible companion receipt, retained literal formatter and qualified-encoder comparisons, unchanged original tracked bytes, and successful controlled publication/CI readback. Any code change invalidates this source-specific review.",
+  "assurance_limits": [
+    "Finite source review plus identity checking of retained observations; no native/model campaign or new formatter/wrapper test execution by this reviewer.",
+    "Stable filesystem, no hostile concurrent same-user mutation, single-threaded CLI, qualified installed runtime, OS and standard-library behavior remain assumptions. Hash-then-execute is not isolation from hostile mutation.",
+    "Python bounded checks do not constitute a fixed-memory theorem or whole-system formal proof. No source/package author authentication, semantic completeness, execution authority, durable atomic publication or platform-wide compatibility is established.",
+    "CI configuration was read only; hosted CI execution and controlled release/publication remain pending."
+  ],
+  "base": "d6fbfc76ed52ce06f80d366dab526bbb40c4292c",
+  "blocking_findings": [],
+  "model_provenance": "Parent dispatch explicitly identifies actual gpt-6.1-sol selection for this review. This report is not an external provider attestation of model identity; earlier review labels are not treated as authenticated model metadata.",
+  "observed_evidence_not_reexecuted": [
+    "Retained formatter normal and optimized reports each contain 24 case rows with all checks true; boundary probe evidence is receipt-bound.",
+    "Retained wrapper-results and portable wrapper reproduction each contain 16 rows with all checks true and empty failures, including exact complete canonical baselines and refusal controls.",
+    "Owner observations record original decoder accepting the canonical pair and rejecting the companion, and original source inventory/replay receipt checks passing."
+  ],
+  "requested_spawn_model_identifier": "gpt-6.1-sol",
+  "schema": "transport/public-share-explicit-gpt61-release-review/1",
+  "smallest_sound_next_step": "Bind this exact source-bound review into release evidence, reproduce its receipt, then perform controlled publication and collect CI/readback receipts without changing original codec or weakening gates.",
+  "source_pins": [
+    {
+      "path": "install/transport_public_share.py",
+      "sha256": "cba055858360c177f25bd510c24ebdf31833e8ed550f362c55d946acbfc766b9"
+    },
+    {
+      "path": "install/test_public_share.py",
+      "sha256": "8d6362546a3527101321831458b581e528dde18b2bb611dd34c60c58af341b76"
+    },
+    {
+      "path": "docs/PUBLIC_SHARE.md",
+      "sha256": "8cf6eb3f8eca452858093965e861d9c5678645f90320f8702f32f63846254896"
+    },
+    {
+      "path": ".github/workflows/public-share.yml",
+      "sha256": "2023b38db106ad4266af7ebb028e37874360d0711c8140d2c100ec3eeab25b4c"
+    },
+    {
+      "path": "examples/public-share-v1/README.md",
+      "sha256": "5309d5b494a747e05e02ca6f322de692ad3c2ef2f8161bc87302b7f40457efb3"
+    },
+    {
+      "path": "examples/public-share-v1/prepare_receipt.py",
+      "sha256": "748accaf5338f82e00fe5d6b67647ea2c910f4a9201a7f7c3e0912207b829c07"
+    },
+    {
+      "path": "examples/public-share-v1/receipt.json",
+      "sha256": "8b26ee533a7a8e735a58150b9a0a6c592f8d0519eb90f5583da1948d8764e938"
+    },
+    {
+      "path": "examples/public-share-v1/wrapper/run.py",
+      "sha256": "ce80b0f8015da466206b3cfb1bb6feecc37f999780a12d9c0ce22e97bd25527f"
+    },
+    {
+      "path": "examples/public-share-v1/evidence/wrapper-contract.json",
+      "sha256": "60cf3232bf2ff3be5996eeae8284227a7c2bdbdc74ba10ac53f5a35dd210a456"
+    },
+    {
+      "path": "examples/public-share-v1/evidence/owner-checks.json",
+      "sha256": "a68e2c0f6954ab8d2953f60434a1a7d7cfd329716bcc5e451c961017875c7cb4"
+    }
+  ],
+  "status": "PASS_WITH_STATED_LIMITS",
+  "verified_current_turn": [
+    "Read source, formatter tests, wrapper reproduction harness, documentation, workflow, receipt generator and selected retained evidence.",
+    "Implementation source SHA matches cba055858360c177f25bd510c24ebdf31833e8ed550f362c55d946acbfc766b9.",
+    "git diff --exit-code against base returned zero: existing tracked bytes unchanged; new feature files remain untracked at review time.",
+    "prepare_receipt.py --check returned zero and matched retained source and observation identities.",
+    "Formatter hashes the complete regex-constrained ASCII STS1 token, excluding LF, and inserts CRED immediately beneath it while preserving all pre-existing share bytes in order.",
+    "Canonical decoder, manifest, verification inputs and original fixtures are unchanged. Companion output is separate and create-only; full public Unicode budget and UTF8 byte bound are checked before publication.",
+    "Fixed launcher version, explicit held pin, bounded file reads/argv/source counts, nofollow file traversal, fixed subprocess command, time/resource caps and named refusal paths limit the integration scope.",
+    "Post-encoder budget refusal retains canonical artifacts; preflight output existence and unsupported pin refuse before encoder launch; canonical bytes are compared after formatting.",
+    "Documentation discloses freely computable non-authentication marker, unchanged decoder rejection, qualified-runtime dependency, and absence of semantic/formal proof claims."
+  ]
+}

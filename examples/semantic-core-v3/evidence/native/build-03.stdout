@@ -1,0 +1,9 @@
+Compile
+   [Ada]          transport_core_native.adb
+   [Ada]          transport_core_parse.adb
+   [Ada]          transport_eval.adb
+Bind
+   [gprbind]      transport_core_native.bexch
+   [Ada]          transport_core_native.ali
+Link
+   [link]         transport_core_native.adb

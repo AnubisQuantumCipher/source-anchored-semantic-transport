@@ -1,0 +1,101 @@
+{
+  "schema": "quorum/admitted-replay-closure/2",
+  "files": [
+    {
+      "bytes": 27955,
+      "path": "checker/install/transport_quorum_bootstrap.py",
+      "sha256": "03f2bf18a67b9a6d6ccf25fd506b252b38ac34c78f56153eb22b8ecfca5738ea"
+    },
+    {
+      "bytes": 32177,
+      "path": "checker/tools/transport_quorum_body.schema.json",
+      "sha256": "b6c7cafc1d4f1703188f7bdcb2150316feadc6b870eda9495ee146e2f429f8aa"
+    },
+    {
+      "bytes": 9598,
+      "path": "checker/tools/transport_quorum_claim.py",
+      "sha256": "c361d626536f4dbd1f1079b613a0ba52375e78af5b09295ef151e276010d5425"
+    },
+    {
+      "bytes": 12295,
+      "path": "checker/tools/transport_quorum_context.py",
+      "sha256": "6ab179a99fecd5bba4c3a0df58ce6244dcd5d01a8484206d62d127aab62ffebe"
+    },
+    {
+      "bytes": 5524,
+      "path": "checker/tools/transport_quorum_graph.py",
+      "sha256": "40edaed32f10d2803a3be59e33130d62f7724de3e67eeaadf9c8d823c5dc4902"
+    },
+    {
+      "bytes": 16564,
+      "path": "checker/tools/transport_quorum_impact.py",
+      "sha256": "b97e87b2a63a036d87e776cd92980ba80c7ae11fbafe9860708c73dbf2bdbbf1"
+    },
+    {
+      "bytes": 4952,
+      "path": "checker/tools/transport_quorum_input.py",
+      "sha256": "6a90037a747b0cc2965dcf1b7169220a9732a16080ca0f3ca7c3b24d0349d653"
+    },
+    {
+      "bytes": 63967,
+      "path": "checker/tools/transport_quorum_protocol-rules.json",
+      "sha256": "437df64e8d4a21d985570c218ec8abb208f18b6d1cd2bc23fd07d36e46c1ee48"
+    },
+    {
+      "bytes": 16588,
+      "path": "checker/tools/transport_quorum_reading.py",
+      "sha256": "ecc3ab465cff4f367d71ae6970bfba9e7917a53f1145aceb743fe3f8eb16cfd4"
+    },
+    {
+      "bytes": 34956,
+      "path": "checker/tools/transport_quorum_replay.py",
+      "sha256": "af53ad9a704726ae97fd8b4ba0be909e1e1cb3870c1cd5ce96cd2e23c6421584"
+    },
+    {
+      "bytes": 16277,
+      "path": "checker/tools/transport_quorum_shape.py",
+      "sha256": "6fef25a491be924fb310ecafe581da9da9f3dfa19baf44b956838745c95f2170"
+    },
+    {
+      "bytes": 11078,
+      "path": "checker/tools/transport_quorum_source.py",
+      "sha256": "3a356f0e135900bdbe1ce1199579e8b08978b5f00a4ab499b709993466279616"
+    },
+    {
+      "bytes": 24910,
+      "path": "handoff/install/test_portable_handoff.py",
+      "sha256": "f8146be8e0b75ae38dea727f2983f4fb2e156775db8c075f3fbbeceb9da8c5bb"
+    },
+    {
+      "bytes": 9696,
+      "path": "handoff/install/transport_handoff_inputs.py",
+      "sha256": "e8250f03719d375ce660e8f262ef009ce2ca569bae37dcfb72ed10bfb3a91cc8"
+    },
+    {
+      "bytes": 8449,
+      "path": "handoff/install/transport_install_layout.py",
+      "sha256": "92bca5af352c244f0c70831a824030511b82a0017fd4834b4a8e6916a5ed422b"
+    },
+    {
+      "bytes": 17126,
+      "path": "handoff/install/transport_install_support.py",
+      "sha256": "f8e63f6265bb7e35b3a296e1ec463a15140a4e0106865334ce5140ff7d2586da"
+    }
+  ],
+  "decoder_source_manifest_sha256": "f401ff305afcdb6a8232d6e25228c6e156a9d4505c8228d80c263a51ea21817a",
+  "runtime_descriptor": {
+    "bytes": 3632,
+    "logical_source_id": "DECODER_RUNTIME_DESCRIPTOR",
+    "sha256": "2dad376ffe96800b4c2ee80971bd95ea30d43d5eacd088d83a21ffa0fdf8af90"
+  },
+  "decoder_install_descriptor": {
+    "bytes": 4891,
+    "logical_source_id": "DECODER_INSTALL_DESCRIPTOR",
+    "sha256": "75e1311f9e66c4aafd133d8b00e6e2029f5ae724e3750d13a4d8fb338e34da96"
+  },
+  "python": {
+    "bytes": 67720,
+    "sha256": "c6bc1ef497b896b7575c546b13f9bafe52e2066f184fdd3fec6af4b5b6349947"
+  },
+  "platform": "LINUX_OMARCHY_ONLY"
+}

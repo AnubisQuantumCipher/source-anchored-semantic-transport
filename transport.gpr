@@ -6,8 +6,15 @@ project Transport is
    package Compiler is
       for Default_Switches ("Ada") use
         ("-gnat2022", "-gnatwa", "-gnatwe", "-gnatVa", "-gnata", "-gnatf",
-         "-O2", "-g", "-fstack-usage");
+         "-O2", "-g", "-fstack-usage", "-gno-record-gcc-switches",
+         "-ffile-prefix-map=" & Project'Project_Dir & "=/source/source-anchored-semantic-transport/",
+         "-fdebug-prefix-map=" & Project'Project_Dir & "=/source/source-anchored-semantic-transport/",
+         "-ffile-prefix-map=" & Project'Object_Dir & "=/source/source-anchored-semantic-transport/obj",
+         "-fdebug-prefix-map=" & Project'Object_Dir & "=/source/source-anchored-semantic-transport/obj");
    end Compiler;
+   package Builder is
+      for Default_Switches ("Ada") use ("-R");
+   end Builder;
    package Prove is
       for Proof_Switches ("Ada") use
         ("--level=2", "--report=all", "--warnings=error", "-j1");

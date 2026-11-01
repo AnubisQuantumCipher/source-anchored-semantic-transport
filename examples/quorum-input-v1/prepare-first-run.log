@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/dev/shm/semantic-transport-input-shape-controls-20261029/prepare.py", line 277, in <module>
+    raise ValueError('candidate byte budget exceeded: ' + case['id'])
+ValueError: candidate byte budget exceeded: CAP_input_manifests_MAX

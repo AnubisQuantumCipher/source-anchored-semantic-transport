@@ -1,0 +1,220 @@
+{
+  "all_passed": true,
+  "outputs": [
+    {
+      "expected": {
+        "stage": "BODY_INPUT_SHAPE_ONLY",
+        "status": "ok"
+      },
+      "id": "minimal",
+      "observed": {
+        "stage": "BODY_INPUT_SHAPE_ONLY",
+        "status": "ok"
+      }
+    },
+    {
+      "expected": {
+        "error": "INPUT_UNADMITTED",
+        "stage": "SCHEMA",
+        "status": "error"
+      },
+      "id": "unknown_body_schema",
+      "observed": {
+        "error": "INPUT_UNADMITTED",
+        "stage": "SCHEMA",
+        "status": "error"
+      }
+    },
+    {
+      "expected": {
+        "error": "INPUT_CLOSED_SCHEMA",
+        "stage": "SCHEMA",
+        "status": "error"
+      },
+      "id": "nonstring_body_schema",
+      "observed": {
+        "error": "INPUT_CLOSED_SCHEMA",
+        "stage": "SCHEMA",
+        "status": "error"
+      }
+    },
+    {
+      "expected": {
+        "error": "INPUT_CLOSED_SCHEMA",
+        "stage": "SCHEMA",
+        "status": "error"
+      },
+      "id": "missing_body_schema",
+      "observed": {
+        "error": "INPUT_CLOSED_SCHEMA",
+        "stage": "SCHEMA",
+        "status": "error"
+      }
+    },
+    {
+      "expected": {
+        "error": "INPUT_BYTE_FIELD_BOUND",
+        "stage": "BOUNDS",
+        "status": "error"
+      },
+      "id": "const_string_over",
+      "observed": {
+        "error": "INPUT_BYTE_FIELD_BOUND",
+        "stage": "BOUNDS",
+        "status": "error"
+      }
+    },
+    {
+      "expected": {
+        "error": "INPUT_BYTE_FIELD_BOUND",
+        "stage": "BOUNDS",
+        "status": "error"
+      },
+      "id": "enum_string_over",
+      "observed": {
+        "error": "INPUT_BYTE_FIELD_BOUND",
+        "stage": "BOUNDS",
+        "status": "error"
+      }
+    },
+    {
+      "actual": 2,
+      "id": "canonical_size",
+      "size": 2,
+      "value": ""
+    },
+    {
+      "actual": 3,
+      "id": "canonical_size",
+      "size": 3,
+      "value": "a"
+    },
+    {
+      "actual": 22,
+      "id": "canonical_size",
+      "size": 22,
+      "value": "\"\\\b\t\n\f\r\u0000"
+    },
+    {
+      "actual": 4,
+      "id": "canonical_size",
+      "size": 4,
+      "value": "é"
+    },
+    {
+      "actual": 5,
+      "id": "canonical_size",
+      "size": 5,
+      "value": "é"
+    },
+    {
+      "actual": 5,
+      "id": "canonical_size",
+      "size": 5,
+      "value": " "
+    },
+    {
+      "actual": 6,
+      "id": "canonical_size",
+      "size": 6,
+      "value": "😀"
+    },
+    {
+      "actual": 23,
+      "id": "canonical_size",
+      "size": 23,
+      "value": [
+        null,
+        true,
+        false,
+        0,
+        123
+      ]
+    },
+    {
+      "actual": 32,
+      "id": "canonical_size",
+      "size": 32,
+      "value": {
+        "a": [
+          "é",
+          "😀"
+        ],
+        "b": "\u0001"
+      }
+    },
+    {
+      "code": "INPUT_WORK_BOUND",
+      "id": "zero_byte_budget",
+      "stage": "SCHEMA",
+      "steps_after": 1048576,
+      "steps_before": 1048576
+    },
+    {
+      "id": "schema_special_file",
+      "kind": "fifo",
+      "observed": {
+        "error": "INPUT_SCHEMA_UNSUPPORTED",
+        "stage": "BOOTSTRAP",
+        "status": "error"
+      }
+    },
+    {
+      "id": "schema_special_file",
+      "kind": "bad",
+      "observed": {
+        "error": "INPUT_SCHEMA_UNSUPPORTED",
+        "stage": "BOOTSTRAP",
+        "status": "error"
+      }
+    },
+    {
+      "id": "schema_special_file",
+      "kind": "oversized",
+      "observed": {
+        "error": "INPUT_SCHEMA_UNSUPPORTED",
+        "stage": "BOOTSTRAP",
+        "status": "error"
+      }
+    },
+    {
+      "id": "schema_special_file",
+      "kind": "link",
+      "observed": {
+        "error": "INPUT_SCHEMA_UNSUPPORTED",
+        "stage": "BOOTSTRAP",
+        "status": "error"
+      }
+    },
+    {
+      "id": "schema_special_file",
+      "kind": "independent-schema-5f0pskp3",
+      "observed": {
+        "error": "INPUT_SCHEMA_UNSUPPORTED",
+        "stage": "BOOTSTRAP",
+        "status": "error"
+      }
+    },
+    {
+      "id": "schema_special_file",
+      "kind": "missing",
+      "observed": {
+        "error": "INPUT_SCHEMA_UNSUPPORTED",
+        "stage": "BOOTSTRAP",
+        "status": "error"
+      }
+    }
+  ],
+  "python": "3.14.7 (main, Aug 12 2026, 13:41:09) [GCC 16.1.1 20260430]",
+  "source_after": {
+    "tools/transport_quorum_body.schema.json": "b6c7cafc1d4f1703188f7bdcb2150316feadc6b870eda9495ee146e2f429f8aa",
+    "tools/transport_quorum_input.py": "14a4105d184cd0964af07e4eec71a33c010e2ba65342631e8ce373e625f1b369",
+    "tools/transport_quorum_shape.py": "b77d9bf35c266a60a508c1e245065c740130da147d253d5af85cda1cd3229012"
+  },
+  "source_before": {
+    "tools/transport_quorum_body.schema.json": "b6c7cafc1d4f1703188f7bdcb2150316feadc6b870eda9495ee146e2f429f8aa",
+    "tools/transport_quorum_input.py": "14a4105d184cd0964af07e4eec71a33c010e2ba65342631e8ce373e625f1b369",
+    "tools/transport_quorum_shape.py": "b77d9bf35c266a60a508c1e245065c740130da147d253d5af85cda1cd3229012"
+  },
+  "stable": true
+}

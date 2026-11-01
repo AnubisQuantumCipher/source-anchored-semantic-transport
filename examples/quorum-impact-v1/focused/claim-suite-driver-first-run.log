@@ -1,0 +1,1 @@
+{"suite": "claim", "execution": {"outcome": "returned", "exit_code": 0}, "receipt": {"path": "/dev/shm/semantic-transport-impact-controls-20261029/claim-suite-first-run.json", "bytes": 13915, "sha256": "a55377fbfd88e6a506f51c62d41fb77e20ea80be54553609cbd4fa1f2be343da"}, "source_pins_unchanged": true}

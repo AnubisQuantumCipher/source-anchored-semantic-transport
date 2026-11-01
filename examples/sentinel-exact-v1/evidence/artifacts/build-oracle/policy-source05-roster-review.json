@@ -1,0 +1,61 @@
+{
+  "schema": "sentinel/source05-roster-independent-review/1",
+  "verdict": "PASS_SOURCE_DELTA_AND_FRESH_TYPED_ROSTER_ONLY",
+  "source_freeze": {
+    "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/policy-source-05/freeze.json",
+    "bytes": 9823,
+    "sha256": "74d477239805d6f2cbedacb2d0cd440912a600d50ef15352dcf08dfa10d8412b"
+  },
+  "roster": {
+    "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/build-oracle/policy-source05-roster.json",
+    "bytes": 7496,
+    "sha256": "c9be4819e618941729cbe47635a4dd89f1406df6859406df3d67a8e28cf0bba2"
+  },
+  "source": {
+    "sentinel_policy.adb": {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/sentinel_native/sentinel_policy.adb",
+      "bytes": 8467,
+      "sha256": "889348d21a6063f83976f0d51852d51064aeb5c43cf5a978a3ff5badbba5486f"
+    },
+    "sentinel_policy.ads": {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/sentinel_native/sentinel_policy.ads",
+      "bytes": 13476,
+      "sha256": "a66f97c23cbaedd317ff0a073d2eab0116c13578aeaeb8a72e0bf77551e52c75"
+    },
+    "sentinel_policy.gpr": {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/sentinel_native/sentinel_policy.gpr",
+      "bytes": 607,
+      "sha256": "363494be1324111c0064a173e617d87390b49aa6d7d934c7d75b223aadf1ac7c"
+    },
+    "sentinel_policy_checks.adb": {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/sentinel_native/sentinel_policy_checks.adb",
+      "bytes": 210,
+      "sha256": "67c7956085d3a7e3d199fca0786aef953ce20b499ddf461556e1dc36aeed9032"
+    },
+    "sentinel_policy_fixtures.adb": {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/sentinel_native/sentinel_policy_fixtures.adb",
+      "bytes": 12827,
+      "sha256": "985154957f77ac9022c6633cb3ae75ed83dee3287ac6006c86838e3f788283e2"
+    },
+    "sentinel_policy_fixtures.ads": {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/sentinel_native/sentinel_policy_fixtures.ads",
+      "bytes": 84,
+      "sha256": "4aadb54ed5da460de5b6a5c84d611f8235e91db76b84f5e81aa9dcc3bd65d1d1"
+    },
+    "sentinel_policy_proof.gpr": {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/sentinel_native/sentinel_policy_proof.gpr",
+      "bytes": 509,
+      "sha256": "57de11fe7e0c0573b2b531f8e5a526fb7069e8d75d92f8ef107873b93e0c46ee"
+    }
+  },
+  "delta": "Exact one replacement at body line110 adds explicit grouping to the Count loop-bound assertion. All original Pre/Post/invariants remain, same assertion count, no assertion policy, flags, proof settings, fixtures, body operations or declaration/type coordinates changed. No weakening or behavioral bypass identified by source inspection; actual proof remains required.",
+  "derivation": "Fresh public spec/body function/procedure first declarations, package line1 and Session full type completion independently scanned. Exact37 names/file/line match current source. Seven explicit Post entities retain minimum1; Session DIC line200 separately retains positive minimum1. No proof output used to derive roster.",
+  "reasoning_scope": "Code-level review, not a mathematical/compiler equivalence or runtime proof. JACKAL does not cover Ada bounded-machine multivariable expression refinement; no stronger numerical or symbolic certificate is claimed.",
+  "retained": "Source04 text115discharged goals retained with raw operator-reassociation diagnostic classification UNRESOLVED; neither called an active warning nor strict acceptance PASS. Earlier two proof timeouts and prior35-roster omitted-DIC failure retained.",
+  "reviewer_preparation_failure": {
+    "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/build-oracle/source05-roster-review-preparation-failure.json",
+    "bytes": 466,
+    "sha256": "aeed9ad25032ca926e4cd8d1d381b7493f1d05b98b2249a8d775a4da4a10a611"
+  },
+  "next_gate": "Only root may admit one fixed source05 build/static/proof attempt against fresh pinned roster and complete raw diagnostic acceptance. No actual execution/retry grant inferred."
+}

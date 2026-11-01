@@ -1,0 +1,15 @@
+{
+  "attempt": "test-normal-01",
+  "cause": "Harness hard address-space/file caps 512 MiB/1 MiB are below shared child runner requested 1 GiB/32 MiB. CLI itself hard-caps 512 MiB/4 MiB, so CLI child launches have the same incompatibility. No semantic results obtained from refused launches.",
+  "next": "Keep existing source/test oracle and retained failed run; repair only new bridge/CLI runtime admission; rerun fresh artifact directory with declared runner-compatible caps.",
+  "observed": {
+    "child_launch_status": "REFUSED_LAUNCH",
+    "cli_draft_error": "ValueError: not allowed to raise maximum limit",
+    "errors": 8,
+    "failures": 1,
+    "test_methods": 11
+  },
+  "retained": true,
+  "schema": "transport/integration-failure/1",
+  "test_source_sha256": "e9a40a540f4e8c9d0ab69e3bbfc7e98f9ee2689eae09f87100b15c55327530d0"
+}

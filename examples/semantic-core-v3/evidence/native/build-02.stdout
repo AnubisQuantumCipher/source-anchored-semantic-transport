@@ -1,0 +1,19 @@
+Compile
+   [Ada]          transport_core_native.adb
+   [Ada]          transport_core_parse.adb
+   [Ada]          transport_eval.adb
+   [Ada]          transport_io.adb
+   [Ada]          transport_types.ads
+   [Ada]          transport_decoder.adb
+   [Ada]          transport_graph_parse.adb
+   [Ada]          transport_paths.adb
+   [Ada]          transport_temporal.adb
+   [Ada]          transport_temporal_parse.adb
+   [Ada]          transport_graphs.adb
+   [Ada]          transport_buffers.adb
+   [Ada]          transport_temporal_format.adb
+Bind
+   [gprbind]      transport_core_native.bexch
+   [Ada]          transport_core_native.ali
+Link
+   [link]         transport_core_native.adb

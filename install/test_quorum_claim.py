@@ -1,0 +1,187 @@
+#!/usr/bin/env python3
+"""Frozen declaration-structure comparisons; no natural-language entailment claim."""
+
+import argparse
+import base64
+import hashlib
+import inspect
+import json
+from pathlib import Path
+import sys
+import unittest
+from unittest.mock import patch
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'tools'))
+from transport_quorum_claim import check_claim_structure
+import transport_quorum_source as source_component
+
+FIXTURES = ROOT / 'examples/quorum-claim-v1'
+PINS = {
+    'contract.json': '8a55255115c34b9a96d43a073404193f29701725058a9caeda69c83ed9a93ce0',
+    'owner-design-addendum.json': 'fcac41fa63e61297e7da01e0d46f3d09a4ac58634691e7e58b0767141ebfd592',
+    'oracle.json': 'a2b4090d6ca9138377bba966fe2772872bb9e922bfe0d0f205c78ebbf6379e9d',
+    'focused/handwritten-expectations.json': '9af588b2cd141ebb86233fbb7c629064a45318e866d6b5d7d99f96d3f9b81bf8',
+    'evidence/code-review-01/additional-probes.json': '1ad79aecf506ddde09370dd32194f1b35b121ca857324ac289235410d4757a7e',
+}
+SOURCE = ('tools/transport_quorum_claim.py', 'tools/transport_quorum_source.py',
+          'tools/transport_quorum_input.py', 'tools/transport_quorum_shape.py',
+          'tools/transport_quorum_body.schema.json', 'tools/transport_schema.py',
+          'tools/transport_wire.py', 'install/test_quorum_claim.py')
+OUTCOMES = []
+
+
+def read(path: Path) -> bytes:
+    if path.is_symlink() or not path.is_file():
+        raise ValueError('fixture must be a regular file')
+    with path.open('rb') as stream:
+        raw = stream.read(1048577)
+    if len(raw) > 1048576:
+        raise ValueError('fixture exceeds byte bound')
+    return raw
+
+
+def frozen(name: str) -> dict:
+    raw = read(FIXTURES / name)
+    if hashlib.sha256(raw).hexdigest() != PINS[name]:
+        raise ValueError('fixture identity mismatch')
+    return json.loads(raw)
+
+
+def serialize(value: object) -> bytes:
+    return json.dumps(value, sort_keys=True, ensure_ascii=False,
+                      separators=(',', ':'), allow_nan=False).encode('utf-8')
+
+
+def compact_case(case: dict) -> tuple:
+    files = {}
+    for name, pin in case['files'].items():
+        raw = read(FIXTURES / case['id'] / name)
+        if len(raw) != pin['bytes'] or hashlib.sha256(raw).hexdigest() != pin['sha256']:
+            raise ValueError('literal candidate identity mismatch')
+        files[name] = raw
+    recipe = json.loads(files['originals.json'])
+    if recipe['outer_type'] != 'tuple' or len(recipe['items']) > 15:
+        raise ValueError('unsupported literal fixture recipe')
+    originals = []
+    for item in recipe['items']:
+        if item['item_type'] != 'tuple' or item['data_type'] != 'bytes':
+            raise ValueError('unsupported literal item recipe')
+        originals.append((item['alias_id'], item['key'],
+                          base64.b64decode(item['base64'], validate=True)))
+    return files['body.json'], tuple(originals), json.loads(files['expected.json'])
+
+
+def focused_case(case: dict) -> tuple:
+    raw = read(FIXTURES / 'focused/raw' / Path(case['body_raw']['path']).name)
+    pin = case['body_raw']
+    if len(raw) != pin['bytes'] or hashlib.sha256(raw).hexdigest() != pin['sha256']:
+        raise ValueError('focused candidate identity mismatch')
+    originals = tuple((item['alias'], item['key'], bytes.fromhex(item['immutable_bytes_hex']))
+                      for item in case['originals_exact_tuple_recipe'])
+    return raw, originals, case['handwritten_expected_complete_result']
+
+
+def additional_case(case: dict) -> tuple:
+    path = FIXTURES / 'evidence/code-review-01'
+    raw = read(path / case['body_file'])
+    recipe = read(path / case['originals_file'])
+    if hashlib.sha256(raw).hexdigest() != case['body_sha256']:
+        raise ValueError('additional Body identity mismatch')
+    if hashlib.sha256(recipe).hexdigest() != case['originals_sha256']:
+        raise ValueError('additional originals identity mismatch')
+    originals = tuple((item['alias_id'], item['key'], base64.b64decode(item['base64'], validate=True))
+                      for item in json.loads(recipe)['items'])
+    if case['mode'] == 'originals_list':
+        originals = list(originals)
+    elif case['mode'] not in (None, 'source_output_cap_one'):
+        raise ValueError('unknown frozen probe mode')
+    return raw, originals, case['expected']
+
+
+class ClaimTests(unittest.TestCase):
+    def compare(self, name, raw, originals, expected):
+        results = []
+        for arm in ('original_annotation', 'transport_projection'):
+            result = check_claim_structure(raw, originals)
+            OUTCOMES.append(dict(case=name, arm=arm, result=result, expected=expected))
+            self.assertEqual(result, expected)
+            self.assertLessEqual(len(serialize(result)) + 1, 32768)
+            results.append(result)
+        self.assertEqual(results[0], results[1])
+        self.assertIsNot(results[0], results[1])
+
+    def test_complete_manual_results(self):
+        frozen('contract.json')
+        frozen('owner-design-addendum.json')
+        cases = frozen('oracle.json')['cases']
+        self.assertEqual(len(cases), 22)
+        for case in cases:
+            with self.subTest(case=case['id']):
+                self.compare(case['id'], *compact_case(case))
+
+    def test_independent_minimal_pairs(self):
+        cases = frozen('focused/handwritten-expectations.json')['cases']
+        self.assertEqual(len(cases), 45)
+        for case in cases:
+            with self.subTest(case=case['id']):
+                self.compare(case['id'], *focused_case(case))
+
+    def test_body_first_and_owned_output(self):
+        self.compare('body_before_originals', b'{', None,
+                     dict(status='error', stage='PREPARSE', error='INPUT_JSON'))
+        raw, originals, expected = compact_case(frozen('oracle.json')['cases'][0])
+        before = serialize(originals[0][1])
+        result = check_claim_structure(raw, originals)
+        self.assertEqual(result, expected)
+        self.assertEqual(serialize(originals[0][1]), before)
+        self.assertIsNot(result['claims'][0]['source'], originals[0][1])
+        snapshot = serialize(result)
+        originals[0][1]['bytes'] = 123
+        self.assertEqual(serialize(result), snapshot)
+        self.assertEqual(result['full_reference_closure'], 'NOT_EVALUATED')
+        self.assertEqual(result['current_authority'], 'NONE')
+        for name in ('body', 'originals', 'statement', 'accepted_result'):
+            self.assertNotIn(name, result)
+
+    def test_additional_frozen_review_probes(self):
+        cases = frozen('evidence/code-review-01/additional-probes.json')['cases']
+        self.assertEqual(len(cases), 13)
+        for case in cases:
+            with self.subTest(case=case['id']):
+                args = additional_case(case)
+                if case['mode'] == 'source_output_cap_one':
+                    # Fault injection checks gate propagation, not a natural overflow.
+                    with patch.object(source_component, 'MAX_OUTPUT', 1):
+                        self.compare(case['id'], *args)
+                else:
+                    self.compare(case['id'], *args)
+        parameters = list(inspect.signature(check_claim_structure).parameters)
+        expected = ['body_raw', 'originals']
+        OUTCOMES.append(dict(case='C14_PUBLIC_INTERFACE', result=parameters, expected=expected))
+        self.assertEqual(parameters, expected)
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--evidence', type=Path)
+    args = parser.parse_args()
+    result = unittest.TextTestRunner(verbosity=2).run(
+        unittest.defaultTestLoader.loadTestsFromTestCase(ClaimTests))
+    if args.evidence is not None:
+        pins = {name: hashlib.sha256(read(ROOT / name)).hexdigest() for name in SOURCE}
+        data = dict(schema='quorum/claim-component-results/1', passed=result.wasSuccessful(),
+            test_methods=result.testsRun, source_pins=pins, fixture_pins=PINS, python=sys.version,
+            outputs=OUTCOMES, full_replay='UNRUN', formal_proof='UNPROVEN',
+            external_validation='EXTERNAL_VALIDATION_PENDING', benefit='NOT_MEASURED')
+        raw = serialize(data)
+        if len(raw) > 1048576:
+            raise ValueError('test evidence bound exceeded')
+        with args.evidence.open('xb') as stream:
+            if stream.write(raw) != len(raw):
+                raise OSError('short evidence write')
+    raise SystemExit(0 if result.wasSuccessful() else 1)
+
+
+if __name__ == '__main__':
+    main()

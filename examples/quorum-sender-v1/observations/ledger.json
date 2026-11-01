@@ -1,0 +1,49 @@
+{
+  "acceptance": {
+    "behavioral_superiority": "NOT_ESTABLISHED",
+    "desktop_x86_marketplace": "UNPERFORMED",
+    "exact_source_recovery": "TESTED",
+    "external_validation": "EXTERNAL_VALIDATION_PENDING",
+    "formal_proof_of_new_python_adapter": "UNPROVEN",
+    "fresh_agent_qualitative_fidelity": "ONE_DEVELOPMENT_CASE_EVALUATED",
+    "same_checker_original_zip_parity": "TESTED",
+    "semantic_completeness": "UNPROVEN"
+  },
+  "all_results_pass": true,
+  "case_rows": 28,
+  "classification": "DEVELOPMENT_ONLY_NOT_ACCEPTANCE",
+  "initial_failure": "Wrong inherited harness hard limits caused qualified-helper launcher refusal; source bundle unchanged. First streams retained. Initial complete harness source was not separately frozen; final source is pinned.",
+  "measurement": {
+    "canonical_share_characters": 174,
+    "canonical_share_utf8_bytes": 175,
+    "decoder_setup_file_bytes": 1943944,
+    "decoder_setup_note": "Installed bundle files only; excludes Python/OS/system libraries and new checker/sender source. Metadata/records are charged in ZIP. No token/context or work advantage inferred.",
+    "model_context_tokens": "UNKNOWN",
+    "records_body_bytes": 6181,
+    "sender_plus_recipient_active_human_work": "NOT_MEASURED",
+    "shared_reuse": "No measured amortization benefit; exact runtime remains shared declared dependency.",
+    "source_bytes": [
+      362,
+      75,
+      89
+    ],
+    "source_concat_gzip_bytes": 406,
+    "straightforward_structured_json_bytes": 6915,
+    "straightforward_structured_json_gzip_bytes": 2429,
+    "tool_overhead": "Complete command argv/exits/streams and monotonic timings in observations and full retained local evidence. Single development samples, no latency benefit claim.",
+    "zip_bytes": 20286
+  },
+  "model_evidence": {
+    "backend_model_identity": "NOT_INDEPENDENTLY_OBSERVED",
+    "both_fork_turns": "none",
+    "evaluator_requested_model": "gpt-6.1-sol",
+    "reasoning_settings": "inherited_not_exposed",
+    "receiver_requested_model": "gpt-6.1-sol",
+    "tokens": "UNKNOWN"
+  },
+  "passed_case_rows": 28,
+  "positive_scenarios_per_mode": 3,
+  "qualified_replay_executions": 12,
+  "review_repair": "Preserved inherited logical-source ID grammar instead of uppercase archive alias restriction; mixed/punctuated and final-LF positive cases separately frozen then tested.",
+  "schema": "quorum/sender-observation-ledger/1"
+}

@@ -1,0 +1,38 @@
+{
+  "schema": "quorum/replay-adapter-contract/2",
+  "status": "FROZEN_FOR_IMPLEMENTATION",
+  "inputs": "Externally selected bootstrap path/SHA256, invocation path/SHA256, exact V1 request bytes/SHA256, selected claim_id/revision; separately pinned v2 policy/registry/admissions and candidate ballot. No paths or executable commands taken from ballot.",
+  "execution": "Existing admitted V1 bootstrap through additive bounded process wrapper reusing original capture/cleanup, original V1 ceilings AS1073741824/CPU120/FSIZE33554432/NOFILE128, never raises inherited caps; if any inherited cap is below original nested-required ceiling refuse before launch. Current interpreter -I -S; fixed CLI arguments; clean environment; timeout60; combined stdout/stderr<=131072. No shell/install/network/credentials.",
+  "context_binding": {
+    "claim_sha256": "exact selected claim.sha256 in freshly recomputed V1 result",
+    "task_sha256": "request.task.sha256",
+    "source_set_sha256": "SHA256 of canonical no-LF request.external_source_pins array"
+  },
+  "gates": [
+    "Externally supplied bootstrap/invocation/request digest matches before launch",
+    "Live bootstrap exits0 with SUCCESS bounded-run status and recognized recomputed-result shape",
+    "Output request SHA256 and bytes match exact supplied request",
+    "Exactly one selected claim record",
+    "Derived context exactly matches v2 policy context",
+    "Both output streams and full composed response meet byte bounds",
+    "stdout/stderr are each canonical JSON plus exactly one terminal LF; no empty or extra records",
+    "stderr exact recognized qualification receipt schema/status and stdout typed accepted_result true/replay recomputed; these are admitted child output, not ballot Boolean assertions",
+    "Product-fixed closure projection matches invocation descriptor before child launch and after run; trusted host/filesystem race assumptions remain explicit"
+  ],
+  "scope": "Only fresh bounded bootstrap output can feed live replay result; no caller-supplied accepted-result Boolean or saved result substitutes. Preserve whole V1 output/receipt and per-dimension warnings. A threshold does not resolve V1 NEEDS_REVALIDATION, prove interpretation, authenticate a source/model, grant authority or set native facts.",
+  "bounds": {
+    "v2_input_total": 65536,
+    "adapter_metadata_total": 65536,
+    "replay_stdout_stderr": 131072,
+    "composed_result_bytes": 131072,
+    "timeout_seconds": 60
+  },
+  "failure": "Any launch, capture, identity, V1 replay, source binding or resource failure yields explicit REFUSED; no threshold-only fallback labeled live replay.",
+  "testing": "Pinned public V1 fixture with newly generated synthetic v2 ballots; preserve manual/fixture provenance. Mutation controls for request, invocation, source/claim/task context and output caps. Actual multiple-model-family observations remain unperformed unless separately evidenced.",
+  "admission": {
+    "bootstrap_sha256": "03f2bf18a67b9a6d6ccf25fd506b252b38ac34c78f56153eb22b8ecfca5738ea",
+    "closure_file": "quorum-v2-replay-admitted.json",
+    "closure_sha256": "3efde7878e3b61d7a8af2b2b99f27a9ef78c7fd9e421f8953fa96dd7a1238869",
+    "meaning": "Product-fixed exact 16-file roster, Python identity, decoder source manifest, runtime/install descriptors; physical paths may relocate. Caller pins alone cannot admit other code."
+  }
+}

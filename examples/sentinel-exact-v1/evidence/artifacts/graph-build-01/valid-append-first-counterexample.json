@@ -1,0 +1,8 @@
+{
+  "status": "FAILED_VALID_APPEND_COUNTEREXAMPLE",
+  "error": "unreachable current registry artifact",
+  "old_only_registry_entries": [
+    "HISTORY_1",
+    "RESULTS_1"
+  ]
+}

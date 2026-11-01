@@ -1,0 +1,6 @@
+{
+  "cause": "attempted to bind qualified frozen courier source to newer checkout; correct evidence scope is separate exact frozen courier source inventory",
+  "reason": "pin mismatch: tools/transport_authoring.py",
+  "runtime_mutated": false,
+  "status": "REFUSED"
+}

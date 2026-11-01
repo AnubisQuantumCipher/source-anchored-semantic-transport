@@ -1,0 +1,45 @@
+{
+  "observations": [
+    {
+      "expected": {
+        "error": "INPUT_BYTE_FIELD_BOUND",
+        "stage": "BOUNDS",
+        "status": "error"
+      },
+      "id": "generic_literal_const_over4096",
+      "input_sha256": "102805e61c28128caf102499faf1d47588237cd4a714bc14b73725d34f26c8f3",
+      "observed": {
+        "error": "INPUT_CLOSED_SCHEMA",
+        "stage": "SCHEMA",
+        "status": "error"
+      }
+    },
+    {
+      "id": "zero_step_budget",
+      "observed": {
+        "error": "INPUT_WORK_BOUND",
+        "stage": "SCHEMA",
+        "status": "error"
+      },
+      "remaining_bytes": 1048576,
+      "remaining_steps": 0
+    },
+    {
+      "id": "zero_byte_budget",
+      "observed": {
+        "error": "INPUT_WORK_BOUND",
+        "stage": "SCHEMA",
+        "status": "error"
+      },
+      "remaining_bytes": 0,
+      "remaining_steps": 1047551
+    },
+    {
+      "explanation": "Child killed by subprocess timeout; schema open did not produce a bounded regular-file refusal.",
+      "id": "fifo_schema",
+      "timed_out": true,
+      "timeout_seconds": 1
+    }
+  ],
+  "python": "3.14.7 (main, Aug 12 2026, 13:41:09) [GCC 16.1.1 20260430]"
+}

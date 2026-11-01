@@ -1,0 +1,22 @@
+{
+  "campaign_admission": false,
+  "comparison_outcome": "No cost or superiority inference. Upstream adapters, cold/warm delivery, cache/delta/search, full original source equivalence and the mandated strongest baseline remain unperformed. This finite development parity control does not replace any study.",
+  "contract_sha256": "77b5a8338a93cf4d27703756c707005dd99ffa0507f9187cef0e1eeb1a734a6b",
+  "frozen_epoch_seconds": 1793251432,
+  "heldout_access": false,
+  "oracle_sha256": "5cb3a7fe16707a285170c1c939f517ce4b6d07bd4cca7f9880440da2a84dcd56",
+  "original_arm": {
+    "access": "All declared graph nodes, edges and changes",
+    "checker": "tools/transport_quorum_graph.py reverse_reachable and predecessor_order",
+    "input": "Oracle graph records represent a direct human-readable original-source dependency manifest; unchanged exact annotations"
+  },
+  "procedure": "For each frozen literal case, call the same helper with distinct exact copies for each arm; require full output equality and exact frozen expected result, input nonmutation and independent result containers. Record every first output and failure. No graph assertion may depend on an arm label.",
+  "schema": "quorum/development-baseline/1",
+  "scope": "Post-decode bounded graph helpers; identical declared graphs and checker in original and transport development arms",
+  "status": "PRESPECIFIED_COMPONENT_PARITY_ONLY",
+  "transport_arm": {
+    "access": "Identical nodes, edges and changes",
+    "checker": "Same helper functions, version and limits",
+    "input": "The identical oracle graph records represent the transport-derived projection after upstream checks; upstream extraction is not executed in this component control"
+  }
+}

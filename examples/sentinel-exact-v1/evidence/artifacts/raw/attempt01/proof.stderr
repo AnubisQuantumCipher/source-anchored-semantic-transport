@@ -1,0 +1,338 @@
+ info: implicit aspect Always_Terminates on "Identity_Valid" has been proved, subprogram will terminate
+--> sentinel_policy.adb:2:13
+
+ info: implicit aspect Always_Terminates on "Roster_Valid" has been proved, subprogram will terminate
+--> sentinel_policy.adb:9:13
+
+ info: index check proved
+--> sentinel_policy.adb:12:39
+
+ info: index check proved
+--> sentinel_policy.adb:13:25
+
+ info: index check proved
+--> sentinel_policy.adb:14:25
+
+ info: implicit aspect Always_Terminates on "Link_Valid" has been proved, subprogram will terminate
+--> sentinel_policy.adb:16:13
+
+ info: implicit aspect Always_Terminates on "Claims_Valid" has been proved, subprogram will terminate
+--> sentinel_policy.adb:27:13
+
+ info: index check proved
+--> sentinel_policy.adb:30:38
+
+ info: index check proved
+--> sentinel_policy.adb:31:34
+
+ info: index check proved
+--> sentinel_policy.adb:31:47
+
+ info: implicit aspect Always_Terminates on "All_Linked" has been proved, subprogram will terminate
+--> sentinel_policy.adb:33:13
+
+ info: index check proved
+--> sentinel_policy.adb:35:45
+
+ info: implicit aspect Always_Terminates on "Repairs_Valid" has been proved, subprogram will terminate
+--> sentinel_policy.adb:37:13
+
+ info: implicit aspect Always_Terminates on "New_Candidate" has been proved, subprogram will terminate
+--> sentinel_policy.adb:44:13
+
+ info: index check proved
+--> sentinel_policy.adb:46:57
+
+ info: implicit aspect Always_Terminates on "All_Match" has been proved, subprogram will terminate
+--> sentinel_policy.adb:71:13
+
+ info: range check proved
+--> sentinel_policy.adb:74:39
+
+ info: index check proved
+--> sentinel_policy.adb:75:42
+
+ info: implicit aspect Always_Terminates on "Current_Differs" has been proved, subprogram will terminate
+--> sentinel_policy.adb:87:13
+
+ info: range check proved
+--> sentinel_policy.adb:89:38
+
+ info: implicit aspect Always_Terminates on "Current_Challenge" has been proved, subprogram will terminate
+--> sentinel_policy.adb:91:13
+
+ info: index check proved
+--> sentinel_policy.adb:93:32
+
+ info: loop invariant initialization proved
+--> sentinel_policy.adb:110:16
+
+ info: loop invariant preservation proved
+--> sentinel_policy.adb:110:16
+
+ info: loop invariant initialization proved
+--> sentinel_policy.adb:112:16
+
+ info: loop invariant preservation proved
+--> sentinel_policy.adb:112:16
+
+ info: range check proved
+--> sentinel_policy.adb:116:31
+
+ info: loop invariant initialization proved
+--> sentinel_policy.adb:119:33
+
+ info: loop invariant preservation proved
+--> sentinel_policy.adb:119:33
+
+ info: loop invariant initialization proved
+--> sentinel_policy.adb:121:13
+
+ info: loop invariant preservation proved
+--> sentinel_policy.adb:121:13
+
+ info: range check proved
+--> sentinel_policy.adb:178:63
+
+ info: range check proved
+--> sentinel_policy.adb:198:35
+
+ info: default initial condition proved
+--> sentinel_policy.ads:61:40
+
+ info: implicit aspect Always_Terminates on "Valid" has been proved, subprogram will terminate
+--> sentinel_policy.ads:63:13
+
+ info: data dependencies proved
+--> sentinel_policy.ads:63:56
+
+ info: implicit aspect Always_Terminates on "Initialized" has been proved, subprogram will terminate
+--> sentinel_policy.ads:64:13
+
+ info: data dependencies proved
+--> sentinel_policy.ads:64:62
+
+ info: implicit aspect Always_Terminates on "Identity_Of" has been proved, subprogram will terminate
+--> sentinel_policy.ads:65:13
+
+ info: data dependencies proved
+--> sentinel_policy.ads:65:63
+
+ info: implicit aspect Always_Terminates on "Questions_Of" has been proved, subprogram will terminate
+--> sentinel_policy.ads:66:13
+
+ info: data dependencies proved
+--> sentinel_policy.ads:66:65
+
+ info: implicit aspect Always_Terminates on "Current_Round" has been proved, subprogram will terminate
+--> sentinel_policy.ads:67:13
+
+ info: data dependencies proved
+--> sentinel_policy.ads:67:65
+
+ info: implicit aspect Always_Terminates on "Candidate_Of" has been proved, subprogram will terminate
+--> sentinel_policy.ads:68:13
+
+ info: data dependencies proved
+--> sentinel_policy.ads:68:62
+
+ info: implicit aspect Always_Terminates on "Accepted_Count" has been proved, subprogram will terminate
+--> sentinel_policy.ads:69:13
+
+ info: data dependencies proved
+--> sentinel_policy.ads:70:11
+
+ info: implicit aspect Always_Terminates on "Expected_Of" has been proved, subprogram will terminate
+--> sentinel_policy.ads:71:13
+
+ info: data dependencies proved
+--> sentinel_policy.ads:72:11
+
+ info: implicit aspect Always_Terminates on "Fatal" has been proved, subprogram will terminate
+--> sentinel_policy.ads:73:13
+
+ info: data dependencies proved
+--> sentinel_policy.ads:73:56
+
+ info: implicit aspect Always_Terminates on "Eligible" has been proved, subprogram will terminate
+--> sentinel_policy.ads:74:13
+
+ info: data dependencies proved
+--> sentinel_policy.ads:74:59
+
+ info: implicit aspect Always_Terminates on "State_Of" has been proved, subprogram will terminate
+--> sentinel_policy.ads:75:13
+
+ info: data dependencies proved
+--> sentinel_policy.ads:76:11
+
+ info: implicit aspect Always_Terminates on "Authority" has been proved, subprogram will terminate
+--> sentinel_policy.ads:77:13
+
+ info: data dependencies proved
+--> sentinel_policy.ads:78:11
+
+ info: implicit aspect Always_Terminates on "Failure_History" has been proved, subprogram will terminate
+--> sentinel_policy.ads:79:13
+
+ info: data dependencies proved
+--> sentinel_policy.ads:80:11
+
+ info: implicit aspect Always_Terminates on "Failure_Count" has been proved, subprogram will terminate
+--> sentinel_policy.ads:81:13
+
+ info: data dependencies proved
+--> sentinel_policy.ads:82:11
+
+ info: postcondition proved
+--> sentinel_policy.ads:83:16
+
+ info: implicit aspect Always_Terminates on "Documentary_Of" has been proved, subprogram will terminate
+--> sentinel_policy.ads:87:13
+
+ info: data dependencies proved
+--> sentinel_policy.ads:88:36
+
+ info: implicit aspect Always_Terminates on "Result_Of" has been proved, subprogram will terminate
+--> sentinel_policy.ads:89:13
+
+ info: data dependencies proved
+--> sentinel_policy.ads:90:32
+
+ info: implicit aspect Always_Terminates on "History_Preserved" has been proved, subprogram will terminate
+--> sentinel_policy.ads:91:13
+
+ info: data dependencies proved
+--> sentinel_policy.ads:92:11
+
+ info: implicit aspect Always_Terminates on "Answer_Admissible" has been proved, subprogram will terminate
+--> sentinel_policy.ads:93:13
+
+ info: data dependencies proved
+--> sentinel_policy.ads:96:11
+
+ info: implicit aspect Always_Terminates on "Refinement_Admissible" has been proved, subprogram will terminate
+--> sentinel_policy.ads:97:13
+
+ info: data dependencies proved
+--> sentinel_policy.ads:99:26
+
+ info: aspect Always_Terminates on "Initialize" has been proved, subprogram will terminate
+--> sentinel_policy.ads:101:14
+
+ info: data dependencies proved
+--> sentinel_policy.ads:105:09
+
+ info: flow dependencies proved
+--> sentinel_policy.ads:106:06
+
+ info: postcondition proved
+--> sentinel_policy.ads:109:14
+
+ info: aspect Always_Terminates on "Bind_Source" has been proved, subprogram will terminate
+--> sentinel_policy.ads:119:14
+
+ info: data dependencies proved
+--> sentinel_policy.ads:122:09
+
+ info: flow dependencies proved
+--> sentinel_policy.ads:123:06
+
+ info: postcondition proved
+--> sentinel_policy.ads:126:14
+
+ info: aspect Always_Terminates on "Record_Answer" has been proved, subprogram will terminate
+--> sentinel_policy.ads:131:14
+
+ info: data dependencies proved
+--> sentinel_policy.ads:134:09
+
+ info: flow dependencies proved
+--> sentinel_policy.ads:135:06
+
+ info: postcondition proved
+--> sentinel_policy.ads:138:14
+
+ info: aspect Always_Terminates on "Request_Qualification" has been proved, subprogram will terminate
+--> sentinel_policy.ads:156:14
+
+ info: data dependencies proved
+--> sentinel_policy.ads:157:09
+
+ info: flow dependencies proved
+--> sentinel_policy.ads:157:25
+
+ medium: postcondition might fail, cannot prove (State_Of (Item) = Qualified_For_Q) = Eligible (Item)
+--> sentinel_policy.ads:163:12
+  163 |           and (State_Of (Item) = Qualified_For_Q) = Eligible (Item);
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      + provers reached time limit before completing the proof
+
+ info: aspect Always_Terminates on "Begin_Refinement" has been proved, subprogram will terminate
+--> sentinel_policy.ads:165:14
+
+ info: data dependencies proved
+--> sentinel_policy.ads:168:09
+
+ info: flow dependencies proved
+--> sentinel_policy.ads:169:06
+
+ info: postcondition proved
+--> sentinel_policy.ads:171:14
+
+ info: index check proved
+--> sentinel_policy.ads:253:27
+
+ info: index check proved
+--> sentinel_policy.ads:253:51
+
+ info: index check proved
+--> sentinel_policy.ads:254:33
+
+ info: index check proved
+--> sentinel_policy.ads:254:54
+
+ info: index check proved
+--> sentinel_policy.ads:255:33
+
+ info: index check proved
+--> sentinel_policy.ads:255:54
+
+ info: index check proved
+--> sentinel_policy.ads:258:45
+
+ info: index check proved
+--> sentinel_policy.ads:259:38
+
+ info: index check proved
+--> sentinel_policy.ads:259:65
+
+ info: index check proved
+--> sentinel_policy.ads:260:45
+
+ info: index check proved
+--> sentinel_policy.ads:260:73
+
+ info: index check proved
+--> sentinel_policy.ads:261:39
+
+ info: index check proved
+--> sentinel_policy.ads:261:61
+
+ info: index check proved
+--> sentinel_policy.ads:262:41
+
+ info: index check proved
+--> sentinel_policy.ads:262:65
+
+ info: index check proved
+--> sentinel_policy.ads:263:46
+
+ info: index check proved
+--> sentinel_policy.ads:264:40
+
+ info: index check proved
+--> sentinel_policy.ads:266:38
+
+ info: index check proved
+--> sentinel_policy.ads:266:58

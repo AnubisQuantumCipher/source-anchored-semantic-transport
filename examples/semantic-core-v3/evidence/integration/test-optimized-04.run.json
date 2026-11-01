@@ -1,0 +1,35 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-I",
+    "-S",
+    "-O",
+    "-B",
+    "-Werror",
+    "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_core_bridge.py",
+    "-v"
+  ],
+  "environment": {
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "PATH": "/usr/bin:/bin",
+    "TRANSPORT_CORE_DECODER": "/dev/shm/semantic-transport-proof-closure-20261029/install-current/first-bundle/bin/semantic-transport",
+    "TRANSPORT_CORE_DECODER_SHA256": "7e028b1f02935d5673b5b19ca2d403d2134b9dc87bcbce226256be5dab1b476b",
+    "TRANSPORT_CORE_NATIVE": "/dev/shm/semantic-transport-core-20261029/native/bin/transport_core_native",
+    "TRANSPORT_CORE_NATIVE_SHA256": "aa04e9aca4afa2663202eac7085329ac5e1f331057b418d3339c2ed17309c23b",
+    "TRANSPORT_CORE_TEST_ROOT": "/dev/shm/semantic-transport-core-20261029/integration/test-optimized-04"
+  },
+  "exit_code": 0,
+  "logs": {
+    "stderr": {
+      "bytes": 1991,
+      "sha256": "bc5575df82d2b3c37a6d8c746b054f5acae1335180edea2b1fa8059c6e808840"
+    },
+    "stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "source_snapshot": "test-oracle-04.json",
+  "wall_seconds": 6.384424298070371
+}

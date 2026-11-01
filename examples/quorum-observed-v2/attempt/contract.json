@@ -1,0 +1,38 @@
+{
+  "authorization": "User fix all audit findings; use existing authorized model access only. Tranche14 before19:29UTC.",
+  "binding": "Same V1 claim/task/source-set context independently recomputed by liveadapter. Raw response exactbytes retained, v2 response_text is exact raw UTF8 JSON text; stance only parsed from exactobject, reading wholeobjecthash pinned.",
+  "cost": "Existing claude.ai Max session only; no APIkey purchase/credentials copy. Output usage may report estimated API-equivalent cost; not billingreceipt. No tools, network fetches other than authorized model call, install, account changes or persistent service.",
+  "inputs": {
+    "body_sha256": "358f61cce73aa485898a40c2a53c71b8cc3d595bf6c1ad87e5ab81f6f7be971f",
+    "originals_sha256": "aa1940e09393e1964fa38ae8669dec45ba8e0d9fe961dbad482c5f8057d3f796",
+    "prompt_sha256": "d2a914ff90e83020754df06edbc930da84b698bcb18d1e4053812dd6e6b66875"
+  },
+  "isolation": "Neither sees other response; freshcontext/safemode switch claims checked against observable client metadata. No OS/backend/provider identity or hiddencontext attestation.",
+  "policy": {
+    "dissent_rule": "ELIGIBLE_OPPOSE_OR_DISPUTE_BLOCKS",
+    "minimum_families": 2,
+    "minimum_support": 2,
+    "required_seats": [
+      "OBS_ANTHROPIC",
+      "OBS_OPENAI"
+    ]
+  },
+  "prelaunch": "Independent GPT6.1 review plus pinned input/settings/runner before calls.",
+  "registry": "Derived after observations by frozen resolution rule; post-observation bytes, not preregistered registry. No response-selected family assignment.",
+  "schema": "quorum/public-observation-admission/1",
+  "scope": "Two actual public declaration-reading observations feeding additive v2 replay, no heldout, benefit, nine actual families, external-human or source truth acceptance. Not a code review.",
+  "seats": [
+    {
+      "family_id": "HELD_OPENAI",
+      "model_rule": "exact sole TURN_MODEL_METADATA gpt-6.1-sol; actual requested model not provider attestation",
+      "seat_id": "OBS_OPENAI"
+    },
+    {
+      "family_id": "HELD_ANTHROPIC",
+      "model_rule": "exact sole modelUsage key from successful CLI JSON result; requested alias sonnet recorded separately; missing/multiple primary IDs refuse admission",
+      "seat_id": "OBS_ANTHROPIC"
+    }
+  ],
+  "status": "FROZEN_BEFORE_MODEL_CALLS",
+  "submission": "Exactly one attempt each, no fallback/retry/answer repair; malformed JSON, tooluse, error, timeout or bounds failure retained/ineligible, never converted toABSTAIN. Exactly two responsekeys stance/rationale, stance strict enum, rationale nonempty <=4096UTF8bytes."
+}

@@ -1,0 +1,70 @@
+{
+  "acceptance_evidence_required": "Exact destination-byte readback for publication of this data checkpoint; wider acceptance continues to require its separate prespecified evidence and decision.",
+  "archive_observations": {
+    "cached_bytecode": "PRESERVED_INERT_DATA_NOT_EXECUTED_BY_THIS_REVIEW",
+    "expanded_bytes": 1417483,
+    "intentional_symlink_omissions": 1,
+    "member_count": 140,
+    "nested_archives": "OPAQUE_DATA_NOT_EXECUTED_OR_RECURSIVELY_EXTRACTED"
+  },
+  "blocking_findings_remaining": [],
+  "credential_scan": {
+    "limitation": "Pattern absence is not proof of arbitrary-secret absence; nested compressed payloads remain opaque as disclosed.",
+    "patterns": [
+      "private-key header",
+      "sk-proj provider token",
+      "ghp GitHub token",
+      "AKIA access-key identifier"
+    ],
+    "status": "NO_MATCH_HEURISTIC_ONLY"
+  },
+  "decision": "PASS_PUBLIC_DATA_COLLATION_REVIEW",
+  "execution_by_reviewer": "READ_ONLY_VERIFICATION_ONLY; no archive content/helper/CLI execution",
+  "formal_proof": "UNPROVEN",
+  "product_acceptance": false,
+  "public_file_pins": {
+    "README.md": {
+      "bytes": 6121,
+      "sha256": "c57083b9675b4ffdaf52e072f016f8c0ada35323de97cc396d7735a1048301d5"
+    },
+    "collate.py": {
+      "bytes": 13678,
+      "sha256": "5101646826c95f4debf8907e77f0e4a537ab061c9898ac4e4ef85fd1064a9458"
+    },
+    "collation-receipt.json": {
+      "bytes": 1949,
+      "sha256": "8d2af4e3f238072969ef61cc0bafd0dc9dd95044de5f1f45d040c84301a573ef"
+    },
+    "index.json": {
+      "bytes": 61754,
+      "sha256": "972df4649dc32b1632b12e4dd9f45c5c84ad9ec421709371de37686a4809773c"
+    },
+    "observations.zip": {
+      "bytes": 176096,
+      "sha256": "b6e61f249e814365d813ffdd20a71955e4b2ee55f251fe4808e2be822feb5d82"
+    }
+  },
+  "publication": "NOT_PERFORMED_BY_THIS_REVIEW",
+  "remaining_limits": [
+    "Archive/index matching establishes byte identity and scoped record preservation, not semantic completeness, source authenticity, independent human validation, runtime-library/cache execution attestation or formal proof.",
+    "Historical local paths, user-owned filesystem observations and synthetic process identifiers are deliberately retained provenance. The artifact contains historical drivers as inert data; they are not portable automatic launchers.",
+    "The data checker establishes bounded archive/index consistency under its stated file/runtime assumptions. Publication copies and future hosted checks require their own exact-byte/readback evidence.",
+    "This review does not change historical failed implementations, reviewer invocation/check-target errors, former API-only/CLI-UNRUN receipts, acceptance state or publication state."
+  ],
+  "reviewer": "accounting_publication_review",
+  "schema": "transport/accounting-cli-public-collation-review/1",
+  "scope": "Bounded read-only review of the exact public CLI qualification archive, index, collation helper/receipt and README; no archived code, new CLI or synthetic helper was executed.",
+  "smallest_sound_next_step": "Copy only the qualified named public files and this additive review by exact bytes, retain source/copy pins, and perform the authorized Git/hosted readback separately.",
+  "source_head": "b8aefc51a51d6f391e58460b95074f28f654f50a",
+  "verified": [
+    "Archive digest and size match the held publication pins, index and collation receipt. Exactly 140 unique lexical-safe relative member names match the complete index, with regular read-only archive modes, supported compression and no encryption or symlink members.",
+    "Every bounded archive member was read in memory and checked against indexed size/SHA256 and complete live source bytes plus original stat observations. Expanded aggregate identity is 1417483 bytes and remains within the declared collation bound. No extraction or recursive nested-archive processing occurred.",
+    "Complete C and Q regular-file inventories match the indexed snapshot. D contains exactly the fixed two admissions, parent launch stdout/stderr/exit and independently pinned actual-result review. Current C/Q file byte/stat identities remain unchanged.",
+    "Exactly one omission is declared consistently in index and receipt: C/helper-controls/link.bin. Its live lstat identity and link target string match the omission; its target was not dereferenced as an omitted member.",
+    "The archived D actual-review bytes match SHA256 786c587c1bbaa5612a36694c09e1d2733e58c71964ceb4ca6dcd0690b691fefd and decision PASS_FINITE_ACTUAL_CLI_BOUNDARY_QUALIFICATION. The archived terminal retains the six PASS actual observations. Every collated normal/optimized complete stdout still equals its collated frozen API reference.",
+    "README recorded argv arrays exactly match archived actual intent arrays. Runtime and source identity, expected INCOMPLETE/zero and OUTPUT_BOUND/nonzero outcomes, complete-byte framing, historical UNRUN provenance and engineering-review scope agree with retained evidence.",
+    "README identifies historical absolute-path drivers as inspection artifacts and describes separately authorized request-interface reproduction with new private staged paths and held input descriptors. It makes no automatic reproduction, portability, independent semantic oracle, proof, benefit, study validity or product acceptance claim.",
+    "Static inspection confirms collate.py check only reads/verifies archive/index data and imports no archive member. The pinned helper compiles and all its functions satisfy the stated line ceiling. This review independently verified archive bytes in memory rather than executing the helper.",
+    "All raw member bytes were scanned using the stated fixed private-key/OpenAI-project-token/GitHub-token/AWS-access-key patterns; none matched. README correctly labels this a heuristic observation and retains the no-private-participant-data scope."
+  ]
+}

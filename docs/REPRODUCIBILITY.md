@@ -6,7 +6,9 @@ A package identifies an exact decoder runtime. If unchanged source produces a di
 
 The original repeated builds differed only in `.debug_info` and `.debug_str`. GPRbuild supplied process-dependent configuration/mapping filenames to GNAT, and the default compiler option recording embedded those filenames in `DW_AT_producer`.
 
-The installer now passes `-gno-record-gcc-switches`. This suppresses the appended compiler option string, while retaining `-g`, compiler-version information and the project's strict warnings/assertions. The [GCC option definition](https://gcc.gnu.org/onlinedocs/gcc/Debugging-Options.html#index-grecord-gcc-switches) describes this metadata behavior. The build command receipt and pinned project retain the fixed build options. Neither the Ada/GPR source nor decoder identity validation changes.
+The installer now passes `-gno-record-gcc-switches`. This suppresses the appended compiler option string, while retaining `-g`, compiler-version information and the project's strict warnings/assertions. The [GCC option definition](https://gcc.gnu.org/onlinedocs/gcc/Debugging-Options.html#index-grecord-gcc-switches) describes this metadata behavior. The build command receipt and pinned project retain the fixed build options.
+
+`transport.gpr` also carries those options: no run path, no recorded compiler-switch text, and prefix maps that rewrite the project and object directories to fixed source paths. On this host, clean builds from two archive directories and from both the default object directory and an external `TRANSPORT_OBJ_DIR` produced one native digest. `CORE_SHA256` is that digest. The earlier absolute-path binary remains the historical package identity and is not the output of the current source. Decoder identity validation still requires the exact digest. This is an observation for this compiler and host, not a proof for every host.
 
 Independent comparison found all allocated ELF section headers and payloads unchanged from the previous binary. Source, type, line and variable-location debugging remains present. The earlier NOT_BYTE_IDENTICAL result is retained; it is not relabeled as a pass.
 

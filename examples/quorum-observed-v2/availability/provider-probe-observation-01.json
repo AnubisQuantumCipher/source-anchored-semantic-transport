@@ -1,0 +1,13 @@
+{
+  "action": "No further Gemini invocation, installation retry, provider execution or credential access. No cache deletion. Partial tool-managed files may remain.",
+  "intent": "read-only installed version probe",
+  "model_calls": 0,
+  "observed": "mise shim attempted automatic installation of gemini@0.66.0, fetched dependencies, then failed node-pty install lifecycle; command exit1. This was not an authorized installation request.",
+  "other_probes": {
+    "claude_version": "2.1.280 (Claude Code)",
+    "ollama_list": "Only nomic-embed-text v1.5 and latest embedding models listed; no generative model exercised."
+  },
+  "recorded_utc": "2026-10-29T18:59:45.012961+00:00",
+  "requested_command": "timeout 15 gemini --version",
+  "schema": "transport/unexpected-tool-side-effect/1"
+}

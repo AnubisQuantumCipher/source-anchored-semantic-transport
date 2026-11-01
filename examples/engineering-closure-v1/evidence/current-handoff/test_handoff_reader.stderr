@@ -1,0 +1,18 @@
+test_actual_frozen_bundle_module_mutation_refuses_before_decode (__main__.ReaderControls.test_actual_frozen_bundle_module_mutation_refuses_before_decode) ... ok
+test_exact_page_bytes_split_utf8_and_eof (__main__.ReaderControls.test_exact_page_bytes_split_utf8_and_eof) ... ok
+test_finite_call_limit_includes_describe (__main__.ReaderControls.test_finite_call_limit_includes_describe) ... ok
+test_helper_mutation_and_missing_dependency_refuse (__main__.ReaderControls.test_helper_mutation_and_missing_dependency_refuse) ... ok
+test_invalid_requests_are_counted_and_unrelated_is_observed (__main__.ReaderControls.test_invalid_requests_are_counted_and_unrelated_is_observed) ... ok
+test_original_pages_catalog_and_exact_unedited_finish (__main__.ReaderControls.test_original_pages_catalog_and_exact_unedited_finish) ... ok
+test_output_cap_includes_newline_and_functions_are_bounded (__main__.ReaderControls.test_output_cap_includes_newline_and_functions_are_bounded) ... ok
+test_request_and_candidate_size_refusals_preserve_prefix_and_count (__main__.ReaderControls.test_request_and_candidate_size_refusals_preserve_prefix_and_count) ... ok
+test_session_hash_chain_unexpected_files_and_partial_logs_refuse (__main__.ReaderControls.test_session_hash_chain_unexpected_files_and_partial_logs_refuse) ... ok
+test_source_mutation_missing_target_and_unexpected_content_refuse (__main__.ReaderControls.test_source_mutation_missing_target_and_unexpected_content_refuse) ... ok
+test_transport_focus_catalog_matches_original_and_pages (__main__.ReaderControls.test_transport_focus_catalog_matches_original_and_pages) ... ok
+test_wrong_manifest_and_source_held_digest_refuse (__main__.ReaderControls.test_wrong_manifest_and_source_held_digest_refuse) ... ok
+test_wrong_transport_identity_and_runtime_pin_refuse (__main__.ReaderControls.test_wrong_transport_identity_and_runtime_pin_refuse) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 10.944s
+
+OK

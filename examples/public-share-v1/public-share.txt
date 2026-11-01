@@ -1,0 +1,4 @@
+Σ[DEF_NEW,DEF_OLD,Q_RECORDS,SOURCE] I[none] U[none] R[none]
+STS1:235e89b46786024e507cbbf498aeb19985a08ba3a3f18ebd33626731bef290dd
+CRED:d70abca4088012725ecfcb4c1fba6bfe288fdfbfd11fc1cfc9d5699c338b4f46
+attached:meaning.zip

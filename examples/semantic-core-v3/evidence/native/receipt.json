@@ -1,0 +1,374 @@
+{
+  "schema": "transport/closed-core-native-receipt/1",
+  "status": "PROVED_DECLARED_CORE_CONTRACTS_AND_TESTED_NATIVE_BOUNDARY",
+  "grammar": "transport/meaning/3",
+  "wire": "STC3",
+  "binary": {
+    "path": "/dev/shm/semantic-transport-core-20261029/native/bin/transport_core_native",
+    "sha256": "aa04e9aca4afa2663202eac7085329ac5e1f331057b418d3339c2ed17309c23b"
+  },
+  "proof": {
+    "command": [
+      "gnatprove",
+      "-P",
+      "evaluation/transport_core.gpr",
+      "-U",
+      "--level=2",
+      "--report=all",
+      "--warnings=error",
+      "-j1",
+      "--prover=z3",
+      "--timeout=1",
+      "--counterexamples=off",
+      "-XTRANSPORT_CORE_OBJ=/dev/shm/semantic-transport-core-20261029/native/obj",
+      "-XTRANSPORT_CORE_BIN=/dev/shm/semantic-transport-core-20261029/native/bin"
+    ],
+    "process_exit": 0,
+    "all_project_units": true,
+    "summary_line": "Total                          1368    342 (25%)                                        1026 (75%)           .          .",
+    "source_manifest": "proof-source-manifest-04.json",
+    "exact_sources": "proof-04-sources/",
+    "resource_profile": {
+      "timeout_seconds": 300,
+      "address_space_bytes": 1073741824,
+      "parallel_jobs": 1,
+      "TMPDIR": "/dev/shm/semantic-transport-core-20261029/native/tmp"
+    },
+    "properties": [
+      "Step returns the case denotation for every typed core node",
+      "Evaluate returns Step-consistent values at every active node; unused cells default",
+      "must result sort is Norm and its Truth is Unresolved; child facts are not changed",
+      "Finite predicate lookup and quantifier denotations are pure declared definitions",
+      "Successful parser output is well-formed; failed parser resets tree and model counts",
+      "Absence of runtime errors and required termination over SPARK-admitted inputs"
+    ],
+    "exclusions": [
+      "No functional theorem equates all wire fields with the source JSON/model",
+      "File IO and command-line rendering are SPARK Off and tested only",
+      "No English entailment or model-world truth proof",
+      "No authorship, permission, current authority or semantic completeness of arbitrary documents"
+    ]
+  },
+  "tests": {
+    "build": "checks-build-04",
+    "run": "checks-03",
+    "exit": 0,
+    "stdout": "PASS CORE_CHECKS",
+    "scope": [
+      "literal truth tables",
+      "missing/conflicting/explicit unknown predicate rows",
+      "typed Norm does not manufacture Fact truth",
+      "finite and empty domain cases",
+      "parser truncation and malformed frame refusal"
+    ],
+    "independent_oracle_tests": "Recorded separately by root and independent reviewer"
+  },
+  "retained_failures": [
+    {
+      "attempt": "build-01",
+      "exit": 4,
+      "reason": "mixed logical operator syntax"
+    },
+    {
+      "attempt": "checks-build-01",
+      "exit": 4,
+      "reason": "strict warning on obsolescent array aggregate syntax"
+    },
+    {
+      "attempt": "proof-01",
+      "exit": 124,
+      "reason": "300-second timeout; inherited root-cache TMPDIR resource deviation"
+    },
+    {
+      "attempt": "proof-02",
+      "exit": 124,
+      "reason": "300-second timeout; corrected TMPDIR, unfinished proof"
+    },
+    {
+      "attempt": "proof-03",
+      "exit": 0,
+      "unproved": 5,
+      "reason": "Typed_Node inline expansion caused five timed-out typing obligations; not accepted despite exit zero",
+      "source_copy": "proof-03-source/"
+    }
+  ],
+  "repair": "New Typed_Node was modularized into an ordinary function with identical explicit postcondition and body; no legacy declarations, semantics or proof contracts weakened.",
+  "legacy": [
+    {
+      "path": "evaluation/src/transport_eval.ads",
+      "legacy_sha256": "a70421ced9f139915045a309fa2f18e2f7510a9f4126ca8672606cd7dc5be3e2",
+      "prefix_byte_preserved": true
+    },
+    {
+      "path": "evaluation/src/transport_eval.adb",
+      "legacy_sha256": "1b34c157b07c1cc4be459b91be8ae6bbb88937f70be49f445fdb3e70bb2f953d",
+      "prefix_byte_preserved": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "evaluation/src/transport_core_native.adb",
+      "bytes": 1460,
+      "sha256": "aec83b35ccc7ece64facefda5247099147e55b51dd749689204498740489d405"
+    },
+    {
+      "path": "evaluation/src/transport_core_parse.adb",
+      "bytes": 5066,
+      "sha256": "c0b8efb1690b7558771450ba6be192e5b824f596a53712a174b3e7bdc23c6e61"
+    },
+    {
+      "path": "evaluation/src/transport_core_parse.ads",
+      "bytes": 561,
+      "sha256": "e63c01c17bfc40bc1e2c26d36fa61f3970837790ecd0d712cc1314c13700a30b"
+    },
+    {
+      "path": "evaluation/src/transport_eval.adb",
+      "bytes": 8105,
+      "sha256": "260e066eb5b7b4d027b679bc1b4b05dcaae9fde9df8bfffc2b199232bea8ad35"
+    },
+    {
+      "path": "evaluation/src/transport_eval.ads",
+      "bytes": 11658,
+      "sha256": "22f52d356bc99d09ad932f4cfca5c97446383d03f1ab5e217361eafad727e79d"
+    },
+    {
+      "path": "evaluation/tests/core_checks.adb",
+      "bytes": 268,
+      "sha256": "fd07fc5a2bce01ff139b7bbf825674b0aa4b704873c5bec3e53520d2c0f5f6fd"
+    },
+    {
+      "path": "evaluation/tests/core_checks_support.adb",
+      "bytes": 4575,
+      "sha256": "3905081a8d7c4db172bad75511fd3d3f9f3b440a551b7c827b5b5230fbbff1ab"
+    },
+    {
+      "path": "evaluation/tests/core_checks_support.ads",
+      "bytes": 155,
+      "sha256": "194995442bf152760b567a26202a16fd2f992622a5cfa62029c6fbef266255be"
+    },
+    {
+      "path": "evaluation/transport_core.gpr",
+      "bytes": 598,
+      "sha256": "57e1ae758149fb7adbfa85cc80cec23c5cf9616d4a6360718ee149666cfc5be9"
+    },
+    {
+      "path": "evaluation/transport_core_checks.gpr",
+      "bytes": 488,
+      "sha256": "b3212d9b8e7ed2fa9089970ca5c1febc46d653fe61cd7e2d19666c08104068c3"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "build-01.stderr",
+      "bytes": 144,
+      "sha256": "83c77a0ef8e910128c54518d48c251686b0f43c26de825225f7fe66f8166012c"
+    },
+    {
+      "name": "build-01.stdout",
+      "bytes": 91,
+      "sha256": "2554d0417ef9b44aab22376af5a69eae2718b6e6ba9a4f6728c49913a04f37fa"
+    },
+    {
+      "name": "build-02.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "build-02.stdout",
+      "bytes": 686,
+      "sha256": "2c15fd0920dfc79ffe3772558e716c1fc6c1bbcf57acf92c2d291ab99771fe72"
+    },
+    {
+      "name": "build-03.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "build-03.stdout",
+      "bytes": 276,
+      "sha256": "cb743b45f315084dbe06088f7eece69a624a907bf64b40d41e132c4d1c84c3eb"
+    },
+    {
+      "name": "checks-01.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "checks-01.stdout",
+      "bytes": 17,
+      "sha256": "4e62640e0c87e49063101526b78a6799b3c8acc97dc25d84e36e69014f19e952"
+    },
+    {
+      "name": "checks-02.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "checks-02.stdout",
+      "bytes": 17,
+      "sha256": "4e62640e0c87e49063101526b78a6799b3c8acc97dc25d84e36e69014f19e952"
+    },
+    {
+      "name": "checks-03.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "checks-03.stdout",
+      "bytes": 17,
+      "sha256": "4e62640e0c87e49063101526b78a6799b3c8acc97dc25d84e36e69014f19e952"
+    },
+    {
+      "name": "checks-build-01.stderr",
+      "bytes": 862,
+      "sha256": "70c5a182d35fef1d0fc18bfefd11df78305dee2c882d0c6ce6c3e48c53c8b51d"
+    },
+    {
+      "name": "checks-build-01.stdout",
+      "bytes": 156,
+      "sha256": "1084aef559076dfaee0a11ff685ee5ff01817803ee3d294da3ad26b42b9be41c"
+    },
+    {
+      "name": "checks-build-02.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "checks-build-02.stdout",
+      "bytes": 274,
+      "sha256": "1b23d54a65f15533ee3f27aacc53e34ccfd98646185b330c80b80ed54670a72e"
+    },
+    {
+      "name": "checks-build-03.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "checks-build-03.stdout",
+      "bytes": 236,
+      "sha256": "43aaaf9f76181ae311ee3249fae6890b88d38fcf22ce2ce6e2b1e9b79c9955e3"
+    },
+    {
+      "name": "checks-build-04.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "checks-build-04.stdout",
+      "bytes": 198,
+      "sha256": "e009b7ecf935b4a9a2b265b922900d2c5747296fae9c0f38f37461bab68c017f"
+    },
+    {
+      "name": "core_checks-before-test-layout.adb",
+      "bytes": 4672,
+      "sha256": "d2dfcddb37f94dda41aceb85c05fa08d31a65bb4ce21db6ed00a4e40afc6617d"
+    },
+    {
+      "name": "gcc-version.stderr",
+      "bytes": 1218,
+      "sha256": "c5cce26b58302501d513ecf40e9666b1020ab3050ae70e5b3fd969c64e9f831c"
+    },
+    {
+      "name": "gcc-version.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "gnatprove-version.txt",
+      "bytes": 396,
+      "sha256": "7003362a89b06f3a9c9a771071d1237ccc46748c17629f304b093362ebad8abe"
+    },
+    {
+      "name": "gprbuild-version.txt",
+      "bytes": 233,
+      "sha256": "b7af7e2e658742c57dd28432908a28d9a29893959c4580b877eea0c855e3c8b7"
+    },
+    {
+      "name": "legacy-prefix.json",
+      "bytes": 839,
+      "sha256": "e5f11bfe7dee22f95f52767a289c469c4b0851b2c7a0beb0f06ae7888529463e"
+    },
+    {
+      "name": "proof-01.stderr",
+      "bytes": 58745,
+      "sha256": "1125cf523a79e3d9b7978c62722d9924bd7e97c396dbc8a06e6c18204942e58a"
+    },
+    {
+      "name": "proof-01.stdout",
+      "bytes": 155,
+      "sha256": "69a3389efb77199c9dd6f5aaf376dbcced2e7ef1d4edbca98643c88cb7d3578d"
+    },
+    {
+      "name": "proof-02.stderr",
+      "bytes": 58745,
+      "sha256": "1125cf523a79e3d9b7978c62722d9924bd7e97c396dbc8a06e6c18204942e58a"
+    },
+    {
+      "name": "proof-02.stdout",
+      "bytes": 155,
+      "sha256": "69a3389efb77199c9dd6f5aaf376dbcced2e7ef1d4edbca98643c88cb7d3578d"
+    },
+    {
+      "name": "proof-03-summary.out",
+      "bytes": 24836,
+      "sha256": "3ac4c650e4238c04fda5faf709ce947070dfefa1d07c5a585c65fd72ee25ab02"
+    },
+    {
+      "name": "proof-03.stderr",
+      "bytes": 100322,
+      "sha256": "c6b6fdd3bb1352237294333ab7dc3e8f9a59d21dfb2f6ad839518d1f05680479"
+    },
+    {
+      "name": "proof-03.stdout",
+      "bytes": 250,
+      "sha256": "31f3de2497e99a3f2261de1cf9f32f2a68565cfb44de132c08681477208539be"
+    },
+    {
+      "name": "proof-04-summary.out",
+      "bytes": 24797,
+      "sha256": "eb4499a33700abec16c3942482841c42525d49092288a4c252dc358ff0073d87"
+    },
+    {
+      "name": "proof-04.stderr",
+      "bytes": 99061,
+      "sha256": "684ef5a803fdab729e4d1f6e2efa14785c94dfa3c27e59218d7909fd009dc069"
+    },
+    {
+      "name": "proof-04.stdout",
+      "bytes": 292,
+      "sha256": "2108d020cfe9fc287483dab36856f3f229d3b0f12466d5870f875c03f92d7305"
+    },
+    {
+      "name": "proof-attempt-01-state.tar.gz",
+      "bytes": 6331592,
+      "sha256": "7623dbe669acb0288dfc75cf108a0004155570dba11aab71609cefbcd00ca357"
+    },
+    {
+      "name": "proof-attempt-02-state.tar.gz",
+      "bytes": 6392459,
+      "sha256": "9382dfe3a29ac93f1c91d3ba6c97988848409a8daab159e00c565c8f33d2d7cf"
+    },
+    {
+      "name": "proof-attempt-03-state.tar.gz",
+      "bytes": 8068533,
+      "sha256": "e1ff986f44ef05b178146906480c48bb08d57b5715b2b94e860eaca2862d54ea"
+    },
+    {
+      "name": "proof-attempt-04-state.tar.gz",
+      "bytes": 8135760,
+      "sha256": "832db229037739839f0390835d1417dbb103f7743b514ca0a0283c15ada573af"
+    },
+    {
+      "name": "proof-source-manifest-01.json",
+      "bytes": 6602,
+      "sha256": "7ae0407df1dbcb945169892f18bc3fef0c256b188e52b3423a2d86f914684851"
+    },
+    {
+      "name": "proof-source-manifest-04.json",
+      "bytes": 6560,
+      "sha256": "f013611aefcbc712f9c2261a975bf324d16233395427a1cfcc1531e62e9562c1"
+    }
+  ],
+  "execution_authority": "NONE",
+  "model_authentication": "NOT_AUTHENTICATED"
+}

@@ -1,0 +1,12 @@
+test_additional_frozen_review_probes (__main__.SourceTests.test_additional_frozen_review_probes) ... ok
+test_body_precedes_sources_and_output_is_owned (__main__.SourceTests.test_body_precedes_sources_and_output_is_owned) ... ok
+test_complete_literal_results (__main__.SourceTests.test_complete_literal_results) ... ok
+test_focused_independent_controls (__main__.SourceTests.test_focused_independent_controls) ... ok
+test_host_boundary_types (__main__.SourceTests.test_host_boundary_types) ... ok
+test_host_key_callbacks_not_invoked (__main__.SourceTests.test_host_key_callbacks_not_invoked) ... ok
+test_private_budget_precedence (__main__.SourceTests.test_private_budget_precedence) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.786s
+
+OK

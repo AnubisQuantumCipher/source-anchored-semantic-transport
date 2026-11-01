@@ -1,0 +1,17 @@
+{
+  "comparison": "Whitespace removed; only constant Item alias substituted with T.Items(I); no logical simplification or model verdict",
+  "new_body_sha256": "260e066eb5b7b4d027b679bc1b4b05dcaae9fde9df8bfffc2b199232bea8ad35",
+  "new_spec_sha256": "22f52d356bc99d09ad932f4cfca5c97446383d03f1ab5e217361eafad727e79d",
+  "old_expression_matches_current_body": true,
+  "old_expression_matches_current_exact_post": true,
+  "old_spec_sha256": "d558b864f27bf670c47e82a7b75b312dc733a65de0cb8c4ea738ec918d954929",
+  "proof03_status": "UNPROVEN_FIVE_TIMEOUT_VCS",
+  "residual_locations": [
+    "transport_eval.adb:136:44",
+    "transport_eval.adb:141:10",
+    "transport_eval.adb:143:36",
+    "transport_eval.adb:154:24",
+    "transport_eval.adb:158:36"
+  ],
+  "schema": "semantic-core-independent-typing-contract-comparison/1"
+}

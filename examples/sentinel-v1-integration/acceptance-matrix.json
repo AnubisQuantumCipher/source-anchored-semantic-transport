@@ -1,0 +1,168 @@
+{
+  "gates": [
+    {
+      "acceptance_evidence": [
+        "Independently held final commit or candidate tree identity plus full file SHA256 manifest; no moving worktree during runs.",
+        "Retain every existing failed/timeout attempt, historical source snapshot and receipt byte.",
+        "Refresh this source-only roster against final source; any source drift invalidates later evidence."
+      ],
+      "current_status": "UNRUN_FOR_FINAL_COMBINED_REVISION",
+      "id": "00-exact-candidate",
+      "requires": [],
+      "scope": "Freeze the exact combined candidate source, requirements, test contracts, public synthetic fixtures, source inventory, toolchain and dependency identities before any accepting run."
+    },
+    {
+      "acceptance_evidence": [
+        "One result per command/job; stdout/stderr and hashes; no missing workflow/job/step.",
+        "I-workflows.json and M-workflows.json preserve exact observed source text; final revision must retain all applicable obligations.",
+        "Historical engineering-evidence steps stay at their two exact sealed source commits; current-source continuity runs separately."
+      ],
+      "current_status": "UNRUN_FOR_FINAL_COMBINED_REVISION",
+      "id": "01-all-hosted-ci",
+      "requires": [
+        "00-exact-candidate"
+      ],
+      "scope": "Run every job and every existing step from the complete final workflow roster. M document-profile.yml supersedes its earlier I version; every other inherited workflow remains required."
+    },
+    {
+      "acceptance_evidence": [
+        "All original literal and mutation outcomes; normal/optimized equivalence; current-source manifest before/after.",
+        "Historical aliases only for the exact checker/workflow snapshots; all non-alias current component bytes must match retained pins.",
+        "Static profile remains legacy<=128, document exactly9; M observed legacy128 and document9."
+      ],
+      "current_status": "UNRUN_FOR_FINAL_COMBINED_REVISION",
+      "id": "02-quorum-and-legacy-source",
+      "requires": [
+        "00-exact-candidate"
+      ],
+      "scope": "Full QUORUM components and replay, frozen schemas and retained historical aliases, original package controls and conservative unknown/conflict behavior."
+    },
+    {
+      "acceptance_evidence": [
+        "Actual source-derived unit/subprogram and contract roster, not only an aggregate count.",
+        "No unproved/justified required checks, warnings, proof-warning assumptions or silently excluded units.",
+        "Separate SPARK-Off/parser/IO/main/OS/compiler limitations; overlapping proof totals are not additive.",
+        "Trusted exact toolchain; clean scratch; strict original switches; raw logs, machine diagnostics, commands, exit status and all timeouts retained."
+      ],
+      "current_status": "UNRUN_FOR_FINAL_COMBINED_REVISION",
+      "id": "03-clean-native-proof-and-assertion-tests",
+      "requires": [
+        "02-quorum-and-legacy-source"
+      ],
+      "scope": "Fresh clean core, evaluator (including preserved legacy overload), closed grammar3 and bound-evaluation proof/build/assertion tests under strict flags."
+    },
+    {
+      "acceptance_evidence": [
+        "Every meaningful suite, SDK response, original fixture and install check must pass without mandatory skips.",
+        "test_installed_regression.py is only its five declared suites; original recipient/MCP/pagination suites remain separate.",
+        "Old source archive INSTALL/SOURCE runtime pins remain their original identities; additive repository features are not automatically installed by the old source roster.",
+        "Readback old packages using their held original decoder and show intended refusal under incompatible new identity."
+      ],
+      "current_status": "UNRUN_FOR_FINAL_COMBINED_REVISION",
+      "id": "04-installed-runtime-and-old-package-compatibility",
+      "requires": [
+        "03-clean-native-proof-and-assertion-tests"
+      ],
+      "scope": "Two fresh private installations from independently copied pinned source inputs; installed regressions, all product/SDK controls, old package/old decoder positive baseline and explicit incompatible-runtime refusal, portable exchange and bound-native flows."
+    },
+    {
+      "acceptance_evidence": [
+        "Entire core suite, not only the schema/operator selectors in semantic-core.yml; no native skips.",
+        "Fresh native/decoder source and binary pins; retained exact expected tables and all refusal controls."
+      ],
+      "current_status": "UNRUN_FOR_FINAL_COMBINED_REVISION",
+      "id": "05-closed-core-native-and-bridge",
+      "requires": [
+        "03-clean-native-proof-and-assertion-tests",
+        "04-installed-runtime-and-old-package-compatibility"
+      ],
+      "scope": "Run complete grammar3 tables, parser boundaries and original/transport bridge on exact pinned freshly built native artifacts."
+    },
+    {
+      "acceptance_evidence": [
+        "Fresh source/binary/helper/tool roster pin, successful terminal, complete read-only capture inventory, actual namespace/PID cleanup and hard quota evidence.",
+        "Ledger proof and native byte recovery are distinct from buffer-refinement proof and natural-language/OCR interpretation.",
+        "Exact original source recovery and all native boundary refusals with declared capacities unchanged.",
+        "Reference-missing fidelity remains missing; synthetic controls do not qualify maximum document capacities or private books."
+      ],
+      "current_status": "UNRUN_FOR_FINAL_COMBINED_REVISION",
+      "id": "06-whole-document-native",
+      "requires": [
+        "03-clean-native-proof-and-assertion-tests"
+      ],
+      "scope": "Build whole-document runtime using the bounded isolation helper; qualify exact ledger and buffer proof profiles; run all native/document sender/bundle/media/OCR/fidelity controls."
+    },
+    {
+      "acceptance_evidence": [
+        "Exact source epoch and every original failure/counterexample preserved.",
+        "All package/bootstrap/bound library and context/history challenge/refinement refusals; no self-minted bundled admission upgraded to independent authority.",
+        "Graph/census/locator validity remains structural/proposed; source entailment, source truth and semantic completeness retain UNPROVEN."
+      ],
+      "current_status": "UNRUN_FOR_FINAL_COMBINED_REVISION",
+      "id": "07-sentinel-foundation-and-portable",
+      "requires": [
+        "02-quorum-and-legacy-source",
+        "05-closed-core-native-and-bridge",
+        "06-whole-document-native"
+      ],
+      "scope": "Carry SENTINEL foundation, closed inventories, frozen core endpoint fixtures, all additive suites and bound receiving/analysis/context/collection/display controls."
+    },
+    {
+      "acceptance_evidence": [
+        "Preparer check alone yields SOURCE_PREPARED_UNQUALIFIED.",
+        "Policy: exact source-derived entities, all explicit postconditions and Session default-initial-condition obligation; strict proof categories and no missing obligations.",
+        "Wire: every frozen literal and strict prefix, bounded parsing/order/errors; checked against independent frozen oracle.",
+        "Proof, build, wire-parser tests and actual bridge readback are separate; wire mode does not rerun policy proof.",
+        "Manifest mismatch requires a new justified epoch and independent review; no in-place resealing of historical evidence."
+      ],
+      "current_status": "UNRUN_FOR_FINAL_COMBINED_REVISION",
+      "id": "08-sentinel-versioned-policy-and-wire",
+      "requires": [
+        "07-sentinel-foundation-and-portable"
+      ],
+      "scope": "Reproduce versioned native policy and STN1 wire qualification from held source13 overlay manifest without altering source05 foundation receipts."
+    },
+    {
+      "acceptance_evidence": [
+        "Fresh acquisition identity for upstream17ebc1aa493265515a92239c76507ae28777cd4a, source/compiler/config/argv/binary digests, strict build warnings and both fault-provider identities.",
+        "No skipped native or RNG controls; no deterministic signing fallback or alternate parameter/provider lane.",
+        "Externally admitted public key and independently held registry/current status; never re-label envelope values as trusted.",
+        "Signature-before-payload observations, metadata budget and maximum-shape controls, atomic create-only publication failures/races, wrong key/pin/status/algorithm refusal.",
+        "Signing unit tests use fresh ephemeral memfd keys only; no production key admission follows.",
+        "Signed document unit tests mock provider/native boundaries; require separate actual native document/signature integration evidence."
+      ],
+      "current_status": "UNRUN_FOR_FINAL_COMBINED_REVISION",
+      "id": "09-strict-mldsa87-native-signing",
+      "requires": [
+        "06-whole-document-native",
+        "08-sentinel-versioned-policy-and-wire"
+      ],
+      "scope": "Only pinned mldsa-native portable C parameter87 provider; complete canonical manifest, external key/current revocation admission, signature verification before frame access, randomized signing and explicit RNG refusal."
+    },
+    {
+      "acceptance_evidence": [
+        "Per-entry point evidence mapping, mode, dependency pins and raw outcome; no unexplained omissions or green subset marketed as full acceptance.",
+        "All final edits and evidence freeze reviewed by actual GPT6.1 independent of implementation; this preparatory review cannot accept a future revision.",
+        "Engineering integration acceptance is distinct from external human/real-task/four-arm/pilot/benefit/client/marketplace/release gates."
+      ],
+      "current_status": "UNRUN_FOR_FINAL_COMBINED_REVISION",
+      "id": "10-full-roster-reconciliation-and-independent-review",
+      "requires": [
+        "01-all-hosted-ci",
+        "04-installed-runtime-and-old-package-compatibility",
+        "05-closed-core-native-and-bridge",
+        "06-whole-document-native",
+        "08-sentinel-versioned-policy-and-wire",
+        "09-strict-mldsa87-native-signing"
+      ],
+      "scope": "Reconcile every active test entrypoint and every supported variant against exact candidate results, then obtain a fresh independent actual GPT6.1 review of final source and evidence."
+    }
+  ],
+  "schema": "sast/public-preparatory-acceptance-matrix/1",
+  "scope": "OBSERVED_I_AND_M_SNAPSHOTS_ONLY",
+  "source": {
+    "bytes": 25361,
+    "sha256": "a882c4b839394d74735f72c462a4982a586bd50f1533bb9823db0f438f853684"
+  },
+  "status": "UNRUN_FOR_FINAL_COMBINED_REVISION"
+}

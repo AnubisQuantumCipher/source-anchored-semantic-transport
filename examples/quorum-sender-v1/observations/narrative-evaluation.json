@@ -1,0 +1,233 @@
+{
+  "schema": "transport/development-narrative-evaluation/1",
+  "evaluator": {
+    "requested_actual_model": "gpt-6.1-sol",
+    "fork_turns": "none",
+    "actual_model_verification": "Requested configuration only; no independent runtime attestation available to evaluator",
+    "method": "Independent source-grounded qualitative reading; no product edits or output fabrication"
+  },
+  "pins": {
+    "criteria": {
+      "path": "/dev/shm/semantic-transport-sender-20261029/recipient-criteria.json",
+      "bytes": 1490,
+      "sha256": "ce01166764a3ef985a7e012b1efb2f893f31d5434b2cac0afbe1f0a88d78af1d"
+    },
+    "sources": [
+      {
+        "path": "/dev/shm/semantic-transport-sender-20261029/oracle/ACCESS_NOTICE.bin",
+        "bytes": 362,
+        "sha256": "b7f79a7e1ccab21f4e5c32f44a6bf4b8428cf8f323c1b88b11727c711be232b8"
+      },
+      {
+        "path": "/dev/shm/semantic-transport-sender-20261029/oracle/TIMETABLE_BEFORE.bin",
+        "bytes": 75,
+        "sha256": "6a3d818593d214ecd4011c223231e8b7ae75a17a5ebab6d83713aa483ce3747e"
+      },
+      {
+        "path": "/dev/shm/semantic-transport-sender-20261029/oracle/TIMETABLE_AFTER.bin",
+        "bytes": 89,
+        "sha256": "349bef4efdcc442155d1ea928ca077d30bac6081b4defb25a4fda0bf7e80aeea"
+      },
+      {
+        "path": "/dev/shm/semantic-transport-sender-20261029/oracle/body.json",
+        "bytes": 6181,
+        "sha256": "6955de23c4d68eece6e47b21fd1c19be8ce616c2610fb1860d6a054b60963fc6"
+      }
+    ],
+    "answer": {
+      "path": "/dev/shm/semantic-transport-sender-20261029/fresh-recipient/reconstruction.md",
+      "bytes": 6670,
+      "sha256": "cae0b81bd9653cbda64d531c600cedb8e83cdacedc5535b6a906ae7dbaf9bb10"
+    },
+    "run": {
+      "path": "/dev/shm/semantic-transport-sender-20261029/fresh-recipient/run.json",
+      "bytes": 5122,
+      "sha256": "9209bd7d4acbb589daa6f379b08b6ae9a1748d6f7ce33a72f8eb7be0216e2e9f"
+    },
+    "decoder_outputs": [
+      {
+        "path": "/dev/shm/semantic-transport-sender-20261029/fresh-recipient/check.stdout",
+        "bytes": 2388,
+        "sha256": "46f5bfa835239d89184b518601e9c5c26db5a9e30222946dbf53fdc9e0d7d159"
+      },
+      {
+        "path": "/dev/shm/semantic-transport-sender-20261029/fresh-recipient/check.stderr",
+        "bytes": 6675,
+        "sha256": "f7c0d486eb63a7593b911f23601a1bf4c9859e3666b76ac8370b1e370f8819bf"
+      },
+      {
+        "path": "/dev/shm/semantic-transport-sender-20261029/fresh-recipient/inspect.stdout",
+        "bytes": 2361,
+        "sha256": "eb5163bf69438ddc64204dde24c6ce335befc36c60ed8ffea53612b284cfbe72"
+      }
+    ]
+  },
+  "frozen_pin_match": true,
+  "criteria_results": [
+    {
+      "requirement": "confirmed reservation qualification",
+      "verdict": "PASS",
+      "answer_reference": {
+        "file": "fresh-recipient/reconstruction.md",
+        "line": 16,
+        "span": "confirmed reservation"
+      },
+      "source_reference": "ACCESS_NOTICE.bin line 2; confirmed-booking qualification in body.json /claims/0/payload/text"
+    },
+    {
+      "requirement": "safety-exercise exception",
+      "verdict": "PASS",
+      "answer_reference": {
+        "file": "fresh-recipient/reconstruction.md",
+        "line": 16,
+        "span": "except during safety exercises"
+      },
+      "source_reference": "ACCESS_NOTICE.bin line 2; /claims/0/payload/text"
+    },
+    {
+      "requirement": "Japanese bad-weather suspension is possible, not certain",
+      "verdict": "PASS",
+      "answer_reference": {
+        "file": "fresh-recipient/reconstruction.md",
+        "line": 16,
+        "span": "service may be suspended in bad weather; possibility, not a reported actual suspension"
+      },
+      "source_reference": "ACCESS_NOTICE.bin line 3: 可能性があります"
+    },
+    {
+      "requirement": "resumption time undecided",
+      "verdict": "PASS",
+      "answer_reference": {
+        "file": "fresh-recipient/reconstruction.md",
+        "line": 16,
+        "span": "resumption time is undecided; no reopening time is promised"
+      },
+      "source_reference": "ACCESS_NOTICE.bin line 3: 再開時刻は未定です"
+    },
+    {
+      "requirement": "old east-gate route provisional/pending",
+      "verdict": "PASS",
+      "answer_reference": {
+        "file": "fresh-recipient/reconstruction.md",
+        "line": 21,
+        "span": "Provisional timetable: pier access by the east gate; confirmation pending."
+      },
+      "source_reference": "TIMETABLE_BEFORE.bin complete text; answer line 30 retains provisional status"
+    },
+    {
+      "requirement": "revised east-gate closure and accessible route awaiting confirmation",
+      "verdict": "PASS",
+      "answer_reference": {
+        "file": "fresh-recipient/reconstruction.md",
+        "line": 27,
+        "span": "east gate closed; accessible route awaiting confirmation"
+      },
+      "source_reference": "TIMETABLE_AFTER.bin complete text; answer line 30 denies confirmed alternative"
+    },
+    {
+      "requirement": "separate timetable context change requires revalidation",
+      "verdict": "PASS",
+      "answer_reference": {
+        "file": "fresh-recipient/reconstruction.md",
+        "line": 48,
+        "span": "change_impact: NEEDS_REVALIDATION; impact path through TIMETABLE_CONTEXT"
+      },
+      "source_reference": "body.json /dependencies/1 and /updates/0; check.stdout /claims/0/impact_paths"
+    },
+    {
+      "requirement": "source match distinct from unverified opaque interpretation",
+      "verdict": "PASS",
+      "answer_reference": {
+        "file": "fresh-recipient/reconstruction.md",
+        "line": 36,
+        "span": "matching quoted bytes establish source membership only; they do not establish interpretation truth"
+      },
+      "source_reference": "body.json /selectors/0 and /claims/0/payload/uncertainty; check.stdout /claims/0/interpretation; answer lines 34,46"
+    },
+    {
+      "requirement": "no live service or authorization assertion",
+      "verdict": "PASS",
+      "answer_reference": {
+        "file": "fresh-recipient/reconstruction.md",
+        "line": 3,
+        "span": "do not establish a real ferry policy, authenticated issuer, current service status or passenger eligibility"
+      },
+      "source_reference": "body.json /policy/authority and /claims/0/payload/omitted_scope; answer lines 46,54"
+    },
+    {
+      "requirement": "no invented times, quantities, source authority or causation",
+      "verdict": "PASS",
+      "answer_reference": {
+        "file": "fresh-recipient/reconstruction.md",
+        "line": 16,
+        "span": "no reopening time is promised"
+      },
+      "source_reference": "Complete comparison of source prose and body.json with answer: no invented times, quantities, source authority or causation found; line 46 authoritative bootstrap denotes pinned replay entry, not ferry issuer, and immediately limits acceptance"
+    },
+    {
+      "requirement": "no invented model observations or quorum agreement",
+      "verdict": "PASS",
+      "answer_reference": {
+        "file": "fresh-recipient/reconstruction.md",
+        "line": 40,
+        "span": "no independent model agreement or dissent is present"
+      },
+      "source_reference": "body.json /readings=[], /run_evidence=[], /registry/seats=[]; check.stdout /claims/0/aggregation; answer line 48"
+    },
+    {
+      "requirement": "trace explanation to recovered package entries",
+      "verdict": "PASS",
+      "answer_reference": {
+        "file": "fresh-recipient/reconstruction.md",
+        "line": 36,
+        "span": "NOTICE_SPAN; ACCESS_BYTES; TIMETABLE_CONTEXT"
+      },
+      "source_reference": "Answer lines 7-42 names all source entries and principal declaration IDs; check.stdout and inspect.stdout observations explicitly separated in lines 44-50"
+    }
+  ],
+  "critical_vetoes": [
+    {
+      "criterion": "fabricated authority",
+      "triggered": false
+    },
+    {
+      "criterion": "silent qualification or exception omission",
+      "triggered": false
+    },
+    {
+      "criterion": "false currentness",
+      "triggered": false
+    },
+    {
+      "criterion": "fabricated source fact",
+      "triggered": false
+    }
+  ],
+  "critical_omissions": [],
+  "contradictions": [],
+  "unsupported_additions": [],
+  "minor_caveats": [
+    {
+      "answer_line": 46,
+      "text": "The word authoritative is attached to bootstrap rather than source authority; surrounding sentence correctly scopes acceptance to replay/qualification. Prefer pinned bootstrap for less ambiguity."
+    }
+  ],
+  "provenance_reporting": {
+    "verdict": "HONESTLY_LIMITED",
+    "requested_model": "gpt-6.1-sol",
+    "actual_model_identity": "NOT_INDEPENDENTLY_OBSERVED as explicitly stated in run.json",
+    "reasoning_effort": "inherited; not independently exposed",
+    "model_tokens": "UNKNOWN; no model token counts claimed",
+    "resource_counts": "Source byte counts and execution elapsed times are observations, not model tokens",
+    "separation": "Instruction-level separation only; run.json explicitly denies security sandbox claim; no independent OS audit performed"
+  },
+  "visible_uncertainties": [
+    "Multilingual interpretation judged by evaluator reading, not formally established translation equivalence.",
+    "No authenticated live ferry facts or complete operating policy.",
+    "No independent model-runtime identity, token, or context-isolation attestation.",
+    "Current output files inspected; execution records not independently rerun by evaluator."
+  ],
+  "scoped_verdict": "PASS for frozen qualitative requirements in this one development reconstruction. No external-human, heldout, behavioral-superiority, semantic-completeness, live-service, authorization, or whole-system acceptance is established.",
+  "smallest_sound_next_step": "Preserve this receipt and independently design heldout reconstruction/decision tests before broader fidelity or utility claims.",
+  "acceptance_evidence_required": "For broader claims: preregistered heldout source tasks, independent recipients/evaluators, verified runtime provenance, comparison baselines, and retained negative results; for ferry use: authenticated current policy and timetable plus validated multilingual interpretation."
+}

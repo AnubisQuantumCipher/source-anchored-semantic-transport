@@ -1,0 +1,271 @@
+{
+  "bounds": {
+    "scratch_bytes": 12582912,
+    "test_arm_bytes": 6291456,
+    "timeout_seconds": 300
+  },
+  "files": [
+    {
+      "bytes": 14394,
+      "functions": [
+        {
+          "lines": 2,
+          "name": "digest"
+        },
+        {
+          "lines": 8,
+          "name": "fixture"
+        },
+        {
+          "lines": 11,
+          "name": "setUpClass"
+        },
+        {
+          "lines": 4,
+          "name": "setUp"
+        },
+        {
+          "lines": 7,
+          "name": "tearDown"
+        },
+        {
+          "lines": 2,
+          "name": "common"
+        },
+        {
+          "lines": 7,
+          "name": "encoded"
+        },
+        {
+          "lines": 14,
+          "name": "command"
+        },
+        {
+          "lines": 24,
+          "name": "test_01_encode_and_fresh_recipient_recover_exact_source_model_and_verdict"
+        },
+        {
+          "lines": 11,
+          "name": "test_02_model_changes_preserve_unknown_and_conditional_satisfaction"
+        },
+        {
+          "lines": 7,
+          "name": "test_03_missing_model_is_not_evaluated"
+        },
+        {
+          "lines": 13,
+          "name": "test_04_cli_draft_matches_literal_requirement_scope"
+        },
+        {
+          "lines": 23,
+          "name": "test_05_envelope_model_source_operator_and_version_tampering_refused"
+        },
+        {
+          "lines": 12,
+          "name": "test_06_present_malformed_model_is_never_treated_as_absent"
+        },
+        {
+          "lines": 12,
+          "name": "test_07_authored_tree_and_role_binding_mismatches_refused"
+        },
+        {
+          "lines": 15,
+          "name": "test_08_clock_source_requires_explicit_documentary_translation_status"
+        },
+        {
+          "lines": 15,
+          "name": "test_09_swapped_archive_and_truncated_archive_refuse_before_evaluation"
+        },
+        {
+          "lines": 12,
+          "name": "test_10_missing_and_conflicting_tuples_stay_unresolved"
+        },
+        {
+          "lines": 9,
+          "name": "test_11_dependency_pin_and_private_parent_errors_refuse"
+        }
+      ],
+      "path": "tests/test_transport_core_bridge.py",
+      "sha256": "e9a40a540f4e8c9d0ab69e3bbfc7e98f9ee2689eae09f87100b15c55327530d0"
+    },
+    {
+      "bytes": 10115,
+      "functions": [
+        {
+          "lines": 3,
+          "name": "identifier"
+        },
+        {
+          "lines": 3,
+          "name": "records"
+        },
+        {
+          "lines": 20,
+          "name": "binding"
+        },
+        {
+          "lines": 21,
+          "name": "symbols"
+        },
+        {
+          "lines": 7,
+          "name": "predicate"
+        },
+        {
+          "lines": 21,
+          "name": "node_kind"
+        },
+        {
+          "lines": 15,
+          "name": "tree"
+        },
+        {
+          "lines": 9,
+          "name": "plan"
+        },
+        {
+          "lines": 15,
+          "name": "model"
+        },
+        {
+          "lines": 5,
+          "name": "symbol_wire"
+        },
+        {
+          "lines": 7,
+          "name": "node_wire"
+        },
+        {
+          "lines": 17,
+          "name": "wire"
+        },
+        {
+          "lines": 12,
+          "name": "display"
+        },
+        {
+          "lines": 14,
+          "name": "native_values"
+        }
+      ],
+      "path": "tools/transport_core.py",
+      "sha256": "517552f59b1e06a60f8ad2da74932e2d20b305474cf168c1a156002186ad9239"
+    },
+    {
+      "bytes": 9866,
+      "functions": [
+        {
+          "lines": 6,
+          "name": "pinned"
+        },
+        {
+          "lines": 8,
+          "name": "runtime"
+        },
+        {
+          "lines": 8,
+          "name": "workspace"
+        },
+        {
+          "lines": 11,
+          "name": "call"
+        },
+        {
+          "lines": 6,
+          "name": "translation"
+        },
+        {
+          "lines": 10,
+          "name": "envelope"
+        },
+        {
+          "lines": 10,
+          "name": "check_envelope"
+        },
+        {
+          "lines": 14,
+          "name": "courier_plan"
+        },
+        {
+          "lines": 27,
+          "name": "encode"
+        },
+        {
+          "lines": 12,
+          "name": "recover"
+        },
+        {
+          "lines": 12,
+          "name": "evaluate"
+        },
+        {
+          "lines": 21,
+          "name": "decode"
+        }
+      ],
+      "path": "tools/transport_core_bridge.py",
+      "sha256": "5a071a4bbf89ad382c62c178f9d467cf845da9fbdd21b28ce568ac4233a4938f"
+    },
+    {
+      "bytes": 3813,
+      "functions": [
+        {
+          "lines": 23,
+          "name": "arguments"
+        },
+        {
+          "lines": 11,
+          "name": "draft"
+        },
+        {
+          "lines": 12,
+          "name": "run"
+        },
+        {
+          "lines": 14,
+          "name": "main"
+        }
+      ],
+      "path": "tools/transport_core_cli.py",
+      "sha256": "5e79dab4aee8fec75180d06ff1d27972fa95a35d88766764439809df10c9d440"
+    },
+    {
+      "bytes": 6843,
+      "functions": [
+        {
+          "lines": 6,
+          "name": "outside"
+        },
+        {
+          "lines": 20,
+          "name": "role_symbols"
+        },
+        {
+          "lines": 11,
+          "name": "expected_tree"
+        },
+        {
+          "lines": 6,
+          "name": "canonical_sentence"
+        },
+        {
+          "lines": 24,
+          "name": "parse_fragment"
+        },
+        {
+          "lines": 25,
+          "name": "bounded_canonical"
+        },
+        {
+          "lines": 12,
+          "name": "validate_translation"
+        }
+      ],
+      "path": "tools/transport_core_language.py",
+      "sha256": "8652bb99fd9c0083f5e979db3603d79662db41c37a709cb1e73afb9cfbcb2f91"
+    }
+  ],
+  "negative_failures_retained": true,
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "tests_expected": 11
+}

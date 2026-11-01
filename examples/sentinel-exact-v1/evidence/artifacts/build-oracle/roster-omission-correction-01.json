@@ -1,0 +1,34 @@
+{
+  "schema": "sentinel/independent-proof-roster-omission-correction/1",
+  "created_utc": "2026-10-30T05:18:43.844380+00:00",
+  "status": "FAILED_REVIEWER_COVERAGE_OMITTED_DIC_TYPE",
+  "affected_unchanged_rosters": [
+    {
+      "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/build-oracle/policy-source02-roster.json",
+      "bytes": 7117,
+      "sha256": "949aae2849abdcf3119e7697e17136247dea285d193ddd6669d1ca9cbad11f19"
+    },
+    {
+      "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/build-oracle/policy-source03-roster.json",
+      "bytes": 7117,
+      "sha256": "2d195f0bbf447c909e9feadf6265822e4cf460224e0f6f10e8143ee6b9fe492d"
+    }
+  ],
+  "source_evidence": {
+    "02": {
+      "partial_type_line": 60,
+      "full_type_completion_line": 196
+    },
+    "03": {
+      "partial_type_line": 60,
+      "full_type_completion_line": 196
+    },
+    "04": {
+      "partial_type_line": 60,
+      "full_type_completion_line": 200
+    }
+  },
+  "issue": "Earlier complete-roster claim enumerated package and explicit subprogram declarations but omitted Session full private type carrying source-declared Default_Initial_Condition. Those35-entity rosters are incomplete for full GNAT analysis coverage and must not qualify any complete proof. They remain retained unchanged.",
+  "correction": "New source04 roster includes full private type at actual completion coordinate and positive DIC minimum, plus new Qualification_Requested observer and State_Of Post. Source-derived contracts determine roster/minima; no proof output parsed or copied.",
+  "actual_history": "Source02/source03 actual attempts remain FAILED; reported complete summary count alerted reviewer omission, not acceptance. No failed proof is retroactively passed."
+}

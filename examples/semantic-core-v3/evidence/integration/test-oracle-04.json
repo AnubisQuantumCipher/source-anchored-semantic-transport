@@ -1,0 +1,37 @@
+{
+  "files": [
+    {
+      "bytes": 17551,
+      "path": "tests/test_transport_core_bridge.py",
+      "sha256": "9affaec480f44bec36b52a45117cb6d0a069baa57a3ba1d851983e2080665440"
+    },
+    {
+      "bytes": 11155,
+      "path": "tools/transport_core.py",
+      "sha256": "c186f9e9a78060fd03e95c339d2c5b31e7558fd37e6f4b7f12e8538bf952e6cd"
+    },
+    {
+      "bytes": 11231,
+      "path": "tools/transport_core_bridge.py",
+      "sha256": "fa65f65d9021b1c14470ff46cef5686dcc91d951a323073006ed2607dafcb5d7"
+    },
+    {
+      "bytes": 3796,
+      "path": "tools/transport_core_cli.py",
+      "sha256": "514dbfa17bd3b900eb779fe52b36c236aa14803dbbd04484e760518bfbccc5d1"
+    },
+    {
+      "bytes": 2650,
+      "path": "tools/transport_core_process.py",
+      "sha256": "4bf942e5d3eff91a5f676c42554ac5bb4800c22d702c9544fb92851925d8b838"
+    },
+    {
+      "bytes": 6843,
+      "path": "tools/transport_core_language.py",
+      "sha256": "8652bb99fd9c0083f5e979db3603d79662db41c37a709cb1e73afb9cfbcb2f91"
+    }
+  ],
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "supplement": "Missing model must report NONE_NO_MODEL and all source readings remain PROPOSED_STRUCTURED_READING. Prior03 retained.",
+  "test_methods_expected": 12
+}

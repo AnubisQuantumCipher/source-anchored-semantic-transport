@@ -1,0 +1,19 @@
+test_adjacent_candidate_and_evidence_limits_refuse_before_dispatch (__main__.Controls.test_adjacent_candidate_and_evidence_limits_refuse_before_dispatch) ... ok
+test_character_offsets_do_not_substitute_for_byte_offsets (__main__.Controls.test_character_offsets_do_not_substitute_for_byte_offsets) ... ok
+test_evidence_and_candidate_maximum_roundtrip (__main__.Controls.test_evidence_and_candidate_maximum_roundtrip) ... ok
+test_exact_original_and_real_transport_custody (__main__.Controls.test_exact_original_and_real_transport_custody) ... ok
+test_fabricated_quote_actor_number_digest_source_and_span_refuse (__main__.Controls.test_fabricated_quote_actor_number_digest_source_and_span_refuse) ... ok
+test_false_approval_with_true_revocation_quote_is_not_semantic_acceptance (__main__.Controls.test_false_approval_with_true_revocation_quote_is_not_semantic_acceptance) ... ok
+test_finished_session_refuses_further_call_and_preserves_exact_candidate (__main__.Controls.test_finished_session_refuses_further_call_and_preserves_exact_candidate) ... ok
+test_frozen_helper_and_source_or_archive_tamper_refuse (__main__.Controls.test_frozen_helper_and_source_or_archive_tamper_refuse) ... ok
+test_missing_evidence_flag_pairs_and_contract_refuse_before_dispatch (__main__.Controls.test_missing_evidence_flag_pairs_and_contract_refuse_before_dispatch) ... ok
+test_old_finish_remains_available_without_evidence_contract (__main__.Controls.test_old_finish_remains_available_without_evidence_contract) ... ok
+test_post_save_evidence_drift_preserves_raw_capture_and_unknown_custody (__main__.Controls.test_post_save_evidence_drift_preserves_raw_capture_and_unknown_custody) ... ok
+test_repeated_quotes_have_explicit_locations_and_utf8_byte_offsets (__main__.Controls.test_repeated_quotes_have_explicit_locations_and_utf8_byte_offsets) ... ok
+test_short_functions_and_no_direct_recursion (__main__.Controls.test_short_functions_and_no_direct_recursion) ... ok
+test_wrong_evidence_pin_structure_pin_and_tampered_contract_refuse (__main__.Controls.test_wrong_evidence_pin_structure_pin_and_tampered_contract_refuse) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 14.061s
+
+OK

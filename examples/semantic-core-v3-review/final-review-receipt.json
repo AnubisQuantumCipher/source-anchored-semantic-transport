@@ -1,0 +1,83 @@
+{
+  "acceptance_receipt_generation_by_reviewer": "NONE",
+  "checkout_isolation": "EXPLICIT_AND_MANDATORY",
+  "evidence": {
+    "final-review.txt": {
+      "bytes": 4184,
+      "sha256": "9885261a1362d4692a6c57a2d7d57419d77a44e8215865816d285205ae62f16f"
+    },
+    "metadata-results.json": {
+      "bytes": 733,
+      "sha256": "4859c289d1b586dea6e4362ee0a0a063f05da2c788cb4ed7c22344675a425513"
+    },
+    "normal.stderr": {
+      "bytes": 117,
+      "sha256": "f77a0a1e0216cc6cb416812324c576aa779824b9c993133fda7881b284acf111"
+    },
+    "optimized.stderr": {
+      "bytes": 7646,
+      "sha256": "1e620723cee6876ff7c04b6cbea4c3aa8459ae771039296a2114a3bcc1ab1c56"
+    },
+    "sealed-check-optimized.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "sealed-check-optimized.stdout": {
+      "bytes": 37,
+      "sha256": "0856ccf72f812808780751ac757e37a8ef4eb641419f873c4908237fc91abe72"
+    },
+    "sealed-check.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "sealed-check.stdout": {
+      "bytes": 37,
+      "sha256": "0856ccf72f812808780751ac757e37a8ef4eb641419f873c4908237fc91abe72"
+    },
+    "sealed-normal.stderr": {
+      "bytes": 122,
+      "sha256": "cff2db16b753ba9c2fde942aba29972604ec62e0d2eb044d45bcf66791a6c4e3"
+    },
+    "sealed-normal.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "sealed-optimized.stderr": {
+      "bytes": 122,
+      "sha256": "079cb0fb6dca4cb77b8bd3e82ebeaaf185ca5296709a257b36cf022ca4f2276d"
+    },
+    "sealed-optimized.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "sealed-probes.json": {
+      "bytes": 5511,
+      "sha256": "85c4b77c28ea0b5e1924c7cd160d76168d2c3296b8019b028119408c690cef86"
+    }
+  },
+  "fresh_model_calls": "NONE",
+  "historical_files_unchanged": true,
+  "historical_revision": "02f0bfee2d5f454e51869832fa70662d4de6229e",
+  "hosted_ci": "UNRUN_BY_REVIEWER",
+  "native_proof_runs": "NONE",
+  "schema": "semantic-core-independent-ci-review/1",
+  "source_pins": {
+    ".github/workflows/engineering-evidence.yml": "c6962a5394e872c43c682459ae7182c12851ce72f176c2e732adf64459e9c22e",
+    ".github/workflows/source.yml": "4d0df5e3aa7b70fde1e710d4e77de08528ab5deb6c6ba080ec5e9424830c4815",
+    "examples/semantic-core-v3/receipt.json": "54c2b2a67acfbda9c6629b6b298d0dca111b1ec384abccca0ab18cfb0180a9a1",
+    "examples/semantic-core-v3/receipt.py": "9c4de03f3661e0183de7df708403364b7a7526f1d0628af18791d7187c5fe2b9",
+    "examples/semantic-core-v3/run_controls.py": "f20d4a9f097bb7a50aa852dc462b8b27de8b61e48e7cebabd0fe25ee0addd8a0",
+    "examples/semantic-core-v3/test_receipt.py": "f4aedd2e8f864a6a74a8e32409264a450a530e089942d1b032dc0d604e45799b"
+  },
+  "status": "REVIEWED_SCOPED_PASS",
+  "test_results": {
+    "focused_probes": 24,
+    "focused_status": "PASS",
+    "normal": "PASS_EXIT0",
+    "optimized": "PASS_EXIT0",
+    "standalone_check_normal": "PASS_EXIT0",
+    "standalone_check_optimized": "PASS_EXIT0",
+    "tamper_methods_per_mode": 23
+  },
+  "whole_product_acceptance": "NOT_CLAIMED"
+}

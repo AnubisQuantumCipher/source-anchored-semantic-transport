@@ -1,0 +1,9 @@
+test_cli_negative_controls (__main__.IndependentReaderControls.test_cli_negative_controls) ... ok
+test_negative_controls (__main__.IndependentReaderControls.test_negative_controls) ... ok
+test_positive_controls (__main__.IndependentReaderControls.test_positive_controls) ... ok
+test_static_import_boundary (__main__.IndependentReaderControls.test_static_import_boundary) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 45.969s
+
+OK

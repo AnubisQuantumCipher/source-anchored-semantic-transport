@@ -1,0 +1,6 @@
+{
+  "reason": "A recursive copy of scratch evidence encountered the concurrent historical-source checkout; bounded count stopped after513 generated files. No source/runtime changed.",
+  "repair": "Removed only generated duplicate historical-source subtree from this new example; original scratch frozen checkout retained. Subsequent selection names exact review directories and omits duplicate frames.",
+  "semantic_or_test_result": "NONE",
+  "status": "FAILED_STAGING_ATTEMPT_RETAINED"
+}

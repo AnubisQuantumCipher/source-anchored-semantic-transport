@@ -1,0 +1,193 @@
+{
+  "legacy_source_sha256": "e9bd5b8fa360da23f9c2fd55aea9597260da453083b8ab64462a031e444d965b",
+  "runs": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-Werror",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_transport_core_language.py",
+        "-v"
+      ],
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools"
+      },
+      "exit_code": 0,
+      "logs": [
+        {
+          "bytes": 0,
+          "path": "normal.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 2651,
+          "path": "normal.stderr",
+          "sha256": "9ac09505602032f2c814b3b5e11244a8d15384c9f0e089090e8b2d0ee316142f"
+        }
+      ],
+      "mode": "normal",
+      "test_methods": 15
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "-B",
+        "-Werror",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_transport_core_language.py",
+        "-v"
+      ],
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools"
+      },
+      "exit_code": 0,
+      "logs": [
+        {
+          "bytes": 0,
+          "path": "optimized.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 2651,
+          "path": "optimized.stderr",
+          "sha256": "513257c99c28fc3e6fcd773452887f2bf8e8a29897298133a57b854bed9f912f"
+        }
+      ],
+      "mode": "optimized",
+      "test_methods": 15
+    }
+  ],
+  "schema": "transport/controlled-language-test-receipt/1",
+  "scope": "Complete controlled surface, fixed source bindings and exact tree equality; role lexical meaning opaque; no truth evaluator or English entailment proof.",
+  "source": [
+    {
+      "bytes": 6843,
+      "functions": [
+        {
+          "lines": 6,
+          "name": "outside"
+        },
+        {
+          "lines": 20,
+          "name": "role_symbols"
+        },
+        {
+          "lines": 11,
+          "name": "expected_tree"
+        },
+        {
+          "lines": 6,
+          "name": "canonical_sentence"
+        },
+        {
+          "lines": 24,
+          "name": "parse_fragment"
+        },
+        {
+          "lines": 25,
+          "name": "bounded_canonical"
+        },
+        {
+          "lines": 12,
+          "name": "validate_translation"
+        }
+      ],
+      "path": "tools/transport_core_language.py",
+      "sha256": "8652bb99fd9c0083f5e979db3603d79662db41c37a709cb1e73afb9cfbcb2f91",
+      "under_60_lines": true
+    },
+    {
+      "bytes": 10425,
+      "functions": [
+        {
+          "lines": 7,
+          "name": "assert_outside"
+        },
+        {
+          "lines": 10,
+          "name": "test_literal_complete_source_tree_and_byte_bindings"
+        },
+        {
+          "lines": 11,
+          "name": "test_no_exception_has_literal_conditional_norm_scope"
+        },
+        {
+          "lines": 10,
+          "name": "test_multiword_labels_remain_opaque_and_anchored"
+        },
+        {
+          "lines": 13,
+          "name": "test_exact_translation_checks_tree_and_source_bindings"
+        },
+        {
+          "lines": 10,
+          "name": "test_actor_event_action_exception_mutations_do_not_match_old_bindings"
+        },
+        {
+          "lines": 16,
+          "name": "test_scope_operand_and_type_mutations_are_refused"
+        },
+        {
+          "lines": 6,
+          "name": "test_removed_exception_or_event_never_silently_matches"
+        },
+        {
+          "lines": 10,
+          "name": "test_clock_quantities_and_old_controller_stay_outside"
+        },
+        {
+          "lines": 10,
+          "name": "test_document_padding_and_truncation_never_parse_a_prefix"
+        },
+        {
+          "lines": 7,
+          "name": "test_unicode_controls_numbers_and_noncanonical_labels_stay_outside"
+        },
+        {
+          "lines": 9,
+          "name": "test_declared_reserved_markers_are_case_insensitively_rejected"
+        },
+        {
+          "lines": 7,
+          "name": "test_one_optional_newline_and_exact_source_hash"
+        },
+        {
+          "lines": 9,
+          "name": "test_type_and_resource_limits_fail_closed"
+        },
+        {
+          "lines": 8,
+          "name": "test_untrusted_authored_objects_are_bounded_before_serialization"
+        },
+        {
+          "lines": 4,
+          "name": "test_outside_source_has_no_checked_translation_despite_valid_authored_tree"
+        }
+      ],
+      "path": "tests/test_transport_core_language.py",
+      "sha256": "2c2b73c3e4391a6e304cfb1f404d68fa126130706a5f7437494798b8cd4b6bff",
+      "under_60_lines": true
+    }
+  ],
+  "status": "TESTED",
+  "unproved": [
+    "General English interpretation",
+    "Model adequacy",
+    "Native truth evaluation",
+    "Formal proof of Python parsing"
+  ]
+}

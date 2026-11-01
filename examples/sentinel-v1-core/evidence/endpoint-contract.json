@@ -1,0 +1,363 @@
+{
+  "schema": "sentinel/meaning-edge-endpoints/1",
+  "status": "FROZEN_PROPOSED_STRUCTURAL_PROFILE_BEFORE_REPAIR",
+  "kinds": [
+    "ENTITY",
+    "REFERENCE",
+    "EVENT",
+    "PROPOSITION",
+    "PREDICATE",
+    "ARGUMENT",
+    "MODALITY",
+    "CONDITION",
+    "EXCEPTION",
+    "QUANTIFIER",
+    "TIME",
+    "ATTRIBUTION",
+    "NEGATION",
+    "UNCERTAINTY",
+    "REVISION",
+    "EVIDENCE",
+    "CONTRADICTION",
+    "ALTERNATIVE",
+    "OPAQUE",
+    "DOCUMENT_STRUCTURE"
+  ],
+  "relations": {
+    "HAS_ARGUMENT": {
+      "from": [
+        "PREDICATE",
+        "EVENT"
+      ],
+      "to": [
+        "ARGUMENT",
+        "ENTITY",
+        "REFERENCE"
+      ]
+    },
+    "REFERS_TO": {
+      "from": [
+        "REFERENCE"
+      ],
+      "to": [
+        "ENTITY",
+        "REFERENCE",
+        "EVENT",
+        "PROPOSITION",
+        "PREDICATE",
+        "ARGUMENT",
+        "MODALITY",
+        "CONDITION",
+        "EXCEPTION",
+        "QUANTIFIER",
+        "TIME",
+        "ATTRIBUTION",
+        "NEGATION",
+        "UNCERTAINTY",
+        "REVISION",
+        "EVIDENCE",
+        "CONTRADICTION",
+        "ALTERNATIVE",
+        "OPAQUE",
+        "DOCUMENT_STRUCTURE"
+      ]
+    },
+    "MODIFIES": {
+      "from": [
+        "MODALITY",
+        "QUANTIFIER",
+        "TIME"
+      ],
+      "to": [
+        "PROPOSITION",
+        "EVENT",
+        "PREDICATE",
+        "ARGUMENT",
+        "ENTITY",
+        "REFERENCE"
+      ]
+    },
+    "CONDITION_OF": {
+      "from": [
+        "CONDITION",
+        "PROPOSITION"
+      ],
+      "to": [
+        "PROPOSITION",
+        "EVENT",
+        "MODALITY"
+      ]
+    },
+    "EXCEPTION_TO": {
+      "from": [
+        "EXCEPTION"
+      ],
+      "to": [
+        "PROPOSITION",
+        "EVENT",
+        "MODALITY"
+      ]
+    },
+    "QUANTIFIES": {
+      "from": [
+        "QUANTIFIER"
+      ],
+      "to": [
+        "PROPOSITION",
+        "EVENT",
+        "PREDICATE",
+        "ARGUMENT",
+        "ENTITY",
+        "REFERENCE"
+      ]
+    },
+    "TEMPORALLY_BEFORE": {
+      "from": [
+        "TIME",
+        "EVENT"
+      ],
+      "to": [
+        "TIME",
+        "EVENT"
+      ]
+    },
+    "ATTRIBUTED_TO": {
+      "from": [
+        "PROPOSITION",
+        "EVENT"
+      ],
+      "to": [
+        "ATTRIBUTION"
+      ]
+    },
+    "NEGATES": {
+      "from": [
+        "NEGATION"
+      ],
+      "to": [
+        "PROPOSITION",
+        "EVENT",
+        "PREDICATE",
+        "MODALITY",
+        "CONDITION"
+      ]
+    },
+    "UNCERTAINTY_OF": {
+      "from": [
+        "UNCERTAINTY"
+      ],
+      "to": [
+        "PROPOSITION",
+        "EVENT",
+        "PREDICATE",
+        "MODALITY",
+        "CONDITION",
+        "EXCEPTION",
+        "REFERENCE",
+        "ATTRIBUTION"
+      ]
+    },
+    "REVISES": {
+      "from": [
+        "REVISION"
+      ],
+      "to": [
+        "REVISION"
+      ]
+    },
+    "SUPPORTS": {
+      "from": [
+        "ENTITY",
+        "REFERENCE",
+        "EVENT",
+        "PROPOSITION",
+        "PREDICATE",
+        "ARGUMENT",
+        "MODALITY",
+        "CONDITION",
+        "EXCEPTION",
+        "QUANTIFIER",
+        "TIME",
+        "ATTRIBUTION",
+        "NEGATION",
+        "UNCERTAINTY",
+        "REVISION",
+        "EVIDENCE",
+        "CONTRADICTION",
+        "ALTERNATIVE",
+        "OPAQUE",
+        "DOCUMENT_STRUCTURE"
+      ],
+      "to": [
+        "ENTITY",
+        "REFERENCE",
+        "EVENT",
+        "PROPOSITION",
+        "PREDICATE",
+        "ARGUMENT",
+        "MODALITY",
+        "CONDITION",
+        "EXCEPTION",
+        "QUANTIFIER",
+        "TIME",
+        "ATTRIBUTION",
+        "NEGATION",
+        "UNCERTAINTY",
+        "REVISION",
+        "EVIDENCE",
+        "CONTRADICTION",
+        "ALTERNATIVE",
+        "OPAQUE",
+        "DOCUMENT_STRUCTURE"
+      ]
+    },
+    "CONTRADICTS": {
+      "from": [
+        "ENTITY",
+        "REFERENCE",
+        "EVENT",
+        "PROPOSITION",
+        "PREDICATE",
+        "ARGUMENT",
+        "MODALITY",
+        "CONDITION",
+        "EXCEPTION",
+        "QUANTIFIER",
+        "TIME",
+        "ATTRIBUTION",
+        "NEGATION",
+        "UNCERTAINTY",
+        "REVISION",
+        "EVIDENCE",
+        "CONTRADICTION",
+        "ALTERNATIVE",
+        "OPAQUE",
+        "DOCUMENT_STRUCTURE"
+      ],
+      "to": [
+        "ENTITY",
+        "REFERENCE",
+        "EVENT",
+        "PROPOSITION",
+        "PREDICATE",
+        "ARGUMENT",
+        "MODALITY",
+        "CONDITION",
+        "EXCEPTION",
+        "QUANTIFIER",
+        "TIME",
+        "ATTRIBUTION",
+        "NEGATION",
+        "UNCERTAINTY",
+        "REVISION",
+        "EVIDENCE",
+        "CONTRADICTION",
+        "ALTERNATIVE",
+        "OPAQUE",
+        "DOCUMENT_STRUCTURE"
+      ]
+    },
+    "ALTERNATIVE_TO": {
+      "from": [
+        "ENTITY",
+        "REFERENCE",
+        "EVENT",
+        "PROPOSITION",
+        "PREDICATE",
+        "ARGUMENT",
+        "MODALITY",
+        "CONDITION",
+        "EXCEPTION",
+        "QUANTIFIER",
+        "TIME",
+        "ATTRIBUTION",
+        "NEGATION",
+        "UNCERTAINTY",
+        "REVISION",
+        "EVIDENCE",
+        "CONTRADICTION",
+        "ALTERNATIVE",
+        "OPAQUE",
+        "DOCUMENT_STRUCTURE"
+      ],
+      "to": [
+        "ENTITY",
+        "REFERENCE",
+        "EVENT",
+        "PROPOSITION",
+        "PREDICATE",
+        "ARGUMENT",
+        "MODALITY",
+        "CONDITION",
+        "EXCEPTION",
+        "QUANTIFIER",
+        "TIME",
+        "ATTRIBUTION",
+        "NEGATION",
+        "UNCERTAINTY",
+        "REVISION",
+        "EVIDENCE",
+        "CONTRADICTION",
+        "ALTERNATIVE",
+        "OPAQUE",
+        "DOCUMENT_STRUCTURE"
+      ]
+    },
+    "DEPENDS_ON": {
+      "from": [
+        "ENTITY",
+        "REFERENCE",
+        "EVENT",
+        "PROPOSITION",
+        "PREDICATE",
+        "ARGUMENT",
+        "MODALITY",
+        "CONDITION",
+        "EXCEPTION",
+        "QUANTIFIER",
+        "TIME",
+        "ATTRIBUTION",
+        "NEGATION",
+        "UNCERTAINTY",
+        "REVISION",
+        "EVIDENCE",
+        "CONTRADICTION",
+        "ALTERNATIVE",
+        "OPAQUE",
+        "DOCUMENT_STRUCTURE"
+      ],
+      "to": [
+        "ENTITY",
+        "REFERENCE",
+        "EVENT",
+        "PROPOSITION",
+        "PREDICATE",
+        "ARGUMENT",
+        "MODALITY",
+        "CONDITION",
+        "EXCEPTION",
+        "QUANTIFIER",
+        "TIME",
+        "ATTRIBUTION",
+        "NEGATION",
+        "UNCERTAINTY",
+        "REVISION",
+        "EVIDENCE",
+        "CONTRADICTION",
+        "ALTERNATIVE",
+        "OPAQUE",
+        "DOCUMENT_STRUCTURE"
+      ]
+    }
+  },
+  "rules": [
+    "Exact source and target node-kind membership required for each relation; unknown kinds/relations refuse.",
+    "A single incompatible edge refuses the complete graph; no silent omission, coercion or broad-relation fallback.",
+    "OPAQUE preserves unclassified content but is not a wildcard for strict relations. OPAQUE can participate only where this table explicitly lists it.",
+    "SUPPORTS/CONTRADICTS/ALTERNATIVE_TO/DEPENDS_ON are broad documentary proposal links, not entailment/equivalence/world-truth or authority. They do not substitute for quote-checked support/refutation records.",
+    "REFERS_TO has a strictly typed REFERENCE source and an explicitly broad referent domain; cyclic references can remain documentary.",
+    "Existing exact IDs, nonself, duplicate, bounds, quote/provenance and three per-relation DAG controls remain mandatory.",
+    "This is Python structural validation only; no grammar3 semantics, native policy verdict, qualification or execution authority is introduced."
+  ],
+  "revision_scope": "REVISES requires explicit REVISION nodes on both ends. Other revised content can be referenced from those nodes; no implicit cast to REVISION."
+}

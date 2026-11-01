@@ -1,0 +1,40 @@
+{
+  "diff_check": {
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "61238b",
+      "exit_code": 0,
+      "original_token_count": 70,
+      "output": " .github/workflows/source.yml | 2 ++\n install/check_source.py      | 3 ++-\n 2 files changed, 4 insertions(+), 1 deletion(-)\n M .github/workflows/source.yml\n M install/check_source.py\n?? examples/quorum-graph-v1/\n?? install/test_quorum_graph.py\n?? tools/transport_quorum_graph.py\n",
+      "wall_time_seconds": 5.875e-06
+    }
+  },
+  "first_test": {
+    "cmd": "timeout 30s python3 -I -S -B -Werror install/test_quorum_graph.py --evidence /home/sicarii/Projects/source-anchored-semantic-transport/evidence/acceptance-v1-preflight-20261029/engineering-admission-01/graph-first-results.json",
+    "result": {
+      "chunk_id": "672700",
+      "exit_code": 0,
+      "original_token_count": 123,
+      "output": "test_frozen_graph_cases (__main__.FrozenGraphTests.test_frozen_graph_cases) ... ok\ntest_frozen_predecessor_cases (__main__.FrozenGraphTests.test_frozen_predecessor_cases) ... ok\ntest_non_json_host_shapes (__main__.FrozenGraphTests.test_non_json_host_shapes) ... ok\ntest_result_mutation_cannot_poison_later_call (__main__.FrozenGraphTests.test_result_mutation_cannot_poison_later_call) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.004s\n\nOK\n",
+      "wall_time_seconds": 0.026335889
+    }
+  },
+  "schema": "quorum/component-command-results/1",
+  "source_inventory": {
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "7a354d",
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "{\"authentication\":\"NOT_PROVIDED\",\"bytes\":7264,\"sha256\":\"e1796ecd8ba6bab8d4e8694cbe73f27315eaac0e0ffe8016abfac0fd9a5827c6\",\"status\":\"SOURCE_INVENTORY_CHECKED\"}\n",
+      "wall_time_seconds": 0.04041019
+    }
+  },
+  "static": {
+    "chunk_id": "4f214a",
+    "exit_code": 0,
+    "original_token_count": 16,
+    "output": "PASS: parsed source files=83; bounded installer functions=869\n",
+    "wall_time_seconds": 0.853355044
+  }
+}

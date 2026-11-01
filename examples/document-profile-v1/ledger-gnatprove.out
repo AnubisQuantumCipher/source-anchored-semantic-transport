@@ -1,0 +1,43 @@
+=========================
+Summary of SPARK analysis
+=========================
+
+---------------------------------------------------------------------------------
+SPARK Analysis results        Total        Flow    Provers   Justified   Unproved
+---------------------------------------------------------------------------------
+Data Dependencies                 2           2          .           .          .
+Flow Dependencies                 .           .          .           .          .
+Initialization                    1           1          .           .          .
+Non-Aliasing                      .           .          .           .          .
+Run-time Checks                   4           .     4 (Z3)           .          .
+Assertions                        .           .          .           .          .
+Functional Contracts              2           .     2 (Z3)           .          .
+LSP Verification                  .           .          .           .          .
+Termination                       7           7          .           .          .
+Concurrency                       .           .          .           .          .
+---------------------------------------------------------------------------------
+Total                            16    10 (63%)    6 (38%)           .          .
+
+
+max steps used for successful proof: 1
+
+============================
+Most difficult proved checks
+============================
+
+No check found with max time greater than 1 second
+
+========================
+Detailed analysis report
+========================
+
+Analyzed 1 unit
+in unit document_frame_ledger, 8 subprograms and packages out of 8 analyzed
+  Document_Frame_Ledger at document_frame_ledger.ads:1 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Document_Frame_Ledger.Accept_Frame at document_frame_ledger.ads:52 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (3 checks)
+  Document_Frame_Ledger.Admissible at document_frame_ledger.ads:36 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Document_Frame_Ledger.Complete at document_frame_ledger.ads:27 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Document_Frame_Ledger.Initialize at document_frame_ledger.ads:44 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Document_Frame_Ledger.Next_Length at document_frame_ledger.ads:31 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Document_Frame_Ledger.Required_Frames at document_frame_ledger.ads:9 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Document_Frame_Ledger.Valid at document_frame_ledger.ads:20 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)

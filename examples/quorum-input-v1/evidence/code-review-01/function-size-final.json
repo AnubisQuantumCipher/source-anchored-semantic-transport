@@ -1,0 +1,181 @@
+[
+  {
+    "all_at_most60": true,
+    "functions": [
+      {
+        "line": 21,
+        "lines": 16,
+        "name": "_token"
+      },
+      {
+        "line": 39,
+        "lines": 28,
+        "name": "_lexical"
+      },
+      {
+        "line": 69,
+        "lines": 21,
+        "name": "_scalars"
+      },
+      {
+        "line": 92,
+        "lines": 18,
+        "name": "_read_value"
+      },
+      {
+        "line": 112,
+        "lines": 3,
+        "name": "_canonical_bytes"
+      },
+      {
+        "line": 117,
+        "lines": 2,
+        "name": "_error"
+      },
+      {
+        "line": 121,
+        "lines": 8,
+        "name": "check_canonical_value"
+      },
+      {
+        "line": 131,
+        "lines": 11,
+        "name": "check_body_input"
+      },
+      {
+        "line": 15,
+        "lines": 4,
+        "name": "__init__"
+      }
+    ],
+    "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_quorum_input.py",
+    "sha256": "14a4105d184cd0964af07e4eec71a33c010e2ba65342631e8ce373e625f1b369"
+  },
+  {
+    "all_at_most60": true,
+    "functions": [
+      {
+        "line": 50,
+        "lines": 9,
+        "name": "_schema_children"
+      },
+      {
+        "line": 61,
+        "lines": 23,
+        "name": "_schema_inventory"
+      },
+      {
+        "line": 86,
+        "lines": 24,
+        "name": "_schema_acyclic"
+      },
+      {
+        "line": 112,
+        "lines": 20,
+        "name": "load_schema"
+      },
+      {
+        "line": 134,
+        "lines": 12,
+        "name": "_text_limit"
+      },
+      {
+        "line": 148,
+        "lines": 7,
+        "name": "_limits"
+      },
+      {
+        "line": 157,
+        "lines": 2,
+        "name": "_scalar_equal"
+      },
+      {
+        "line": 161,
+        "lines": 8,
+        "name": "_utf8_width"
+      },
+      {
+        "line": 171,
+        "lines": 15,
+        "name": "_string_size"
+      },
+      {
+        "line": 188,
+        "lines": 6,
+        "name": "_integer_size"
+      },
+      {
+        "line": 196,
+        "lines": 34,
+        "name": "_canonical_size"
+      },
+      {
+        "line": 232,
+        "lines": 17,
+        "name": "_unique"
+      },
+      {
+        "line": 251,
+        "lines": 12,
+        "name": "_object"
+      },
+      {
+        "line": 265,
+        "lines": 39,
+        "name": "_basic"
+      },
+      {
+        "line": 306,
+        "lines": 17,
+        "name": "_children"
+      },
+      {
+        "line": 339,
+        "lines": 24,
+        "name": "_evaluate"
+      },
+      {
+        "line": 365,
+        "lines": 20,
+        "name": "_record_count"
+      },
+      {
+        "line": 387,
+        "lines": 4,
+        "name": "_version"
+      },
+      {
+        "line": 393,
+        "lines": 24,
+        "name": "_admission"
+      },
+      {
+        "line": 419,
+        "lines": 9,
+        "name": "check_shape"
+      },
+      {
+        "line": 34,
+        "lines": 4,
+        "name": "__init__"
+      },
+      {
+        "line": 39,
+        "lines": 4,
+        "name": "step"
+      },
+      {
+        "line": 44,
+        "lines": 4,
+        "name": "byte"
+      },
+      {
+        "line": 328,
+        "lines": 9,
+        "name": "__init__"
+      }
+    ],
+    "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_quorum_shape.py",
+    "sha256": "b77d9bf35c266a60a508c1e245065c740130da147d253d5af85cda1cd3229012"
+  }
+]

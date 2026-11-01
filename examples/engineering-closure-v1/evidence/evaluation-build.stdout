@@ -1,0 +1,23 @@
+Setup
+   [mkdir]        object directory for project Transport_Eval
+   [mkdir]        exec directory for project Transport_Eval
+Compile
+   [Ada]          transport_eval_native.adb
+   [Ada]          transport_child_harness.adb
+   [Ada]          transport_eval.adb
+   [Ada]          transport_eval_parse.adb
+   [Ada]          transport_io.adb
+   [Ada]          transport_types.ads
+   [Ada]          transport_decoder.adb
+   [Ada]          transport_graph_parse.adb
+   [Ada]          transport_paths.adb
+   [Ada]          transport_temporal.adb
+   [Ada]          transport_temporal_parse.adb
+   [Ada]          transport_graphs.adb
+   [Ada]          transport_buffers.adb
+   [Ada]          transport_temporal_format.adb
+Bind
+   [gprbind]      transport_eval_native.bexch
+   [Ada]          transport_eval_native.ali
+Link
+   [link]         transport_eval_native.adb

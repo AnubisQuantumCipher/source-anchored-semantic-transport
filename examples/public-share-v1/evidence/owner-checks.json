@@ -1,0 +1,88 @@
+{
+  "schema": "transport/public-share-owner-checks/1",
+  "scope": "Observed command results; decoder still uses exact canonical share; no authentication claim",
+  "source_base": "d6fbfc76ed52ce06f80d366dab526bbb40c4292c",
+  "runs": [
+    {
+      "name": "canonical-validation",
+      "cmd": "/home/sicarii/Projects/source-anchored-semantic-transport/evidence/semantic-handoff-v1/positive-02/transport/decoder/bin/semantic-transport validate examples/quorum-replay-v1/recipient/share.txt --archive examples/quorum-replay-v1/recipient/meaning.zip",
+      "expected_exit": 0,
+      "chunk_id": "6eb134",
+      "wall_time_seconds": 0.068354767,
+      "exit_code": 0,
+      "original_token_count": 572,
+      "output": "{\"assurance\":{\"author_authentication\":\"NOT_AUTHENTICATED\",\"confidentiality\":\"NOT_PROVIDED\",\"declarations\":\"UNVERIFIED\",\"interpretation_entailment\":\"UNPROVEN\",\"media_understanding\":\"UNPROVEN\",\"runtime_boundary\":\"External trusted runtime; hash-then-use does not isolate hostile concurrent same-user mutation.\",\"semantic_completeness\":\"NOT_CLAIMED\",\"source_bytes\":\"NATIVE_DECODED_AND_HASH_CHECKED\"},\"coverage\":{\"interpretation_supplied\":false,\"meaning\":\"Declared spans only; overlaps retained; uncovered bytes and semantic completeness are not inferred.\",\"sources\":{\"DEF_NEW\":{\"all_record_spans\":[],\"interpretation_coverage\":\"ABSENT\",\"interpretation_spans\":[],\"reference_coverage\":\"ABSENT\"},\"DEF_OLD\":{\"all_record_spans\":[],\"interpretation_coverage\":\"ABSENT\",\"interpretation_spans\":[],\"reference_coverage\":\"ABSENT\"},\"Q_RECORDS\":{\"all_record_spans\":[],\"interpretation_coverage\":\"ABSENT\",\"interpretation_spans\":[],\"reference_coverage\":\"ABSENT\"},\"SOURCE\":{\"all_record_spans\":[],\"interpretation_coverage\":\"ABSENT\",\"interpretation_spans\":[],\"reference_coverage\":\"ABSENT\"}}},\"identity\":\"STS1:235e89b46786024e507cbbf498aeb19985a08ba3a3f18ebd33626731bef290dd\",\"interpretations\":[],\"relations\":[],\"schema\":\"transport/decoded/1\",\"sources\":[{\"bytes\":3,\"id\":\"DEF_NEW\",\"label\":\"Exact fixture DEF_NEW\",\"media_type\":\"application/octet-stream\",\"provenance\":\"Manually supplied frozen original bytes; no semantic qualification.\",\"sha256\":\"11507a0e2f5e69d5dfa40a62a1bd7b6ee57e6bcd85c67c9b8431b36fff21c437\"},{\"bytes\":3,\"id\":\"DEF_OLD\",\"label\":\"Exact fixture DEF_OLD\",\"media_type\":\"application/octet-stream\",\"provenance\":\"Manually supplied frozen original bytes; no semantic qualification.\",\"sha256\":\"cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4\"},{\"bytes\":10210,\"id\":\"Q_RECORDS\",\"label\":\"Exact fixture Q_RECORDS\",\"media_type\":\"application/octet-stream\",\"provenance\":\"Manually supplied frozen original bytes; no semantic qualification.\",\"sha256\":\"358f61cce73aa485898a40c2a53c71b8cc3d595bf6c1ad87e5ab81f6f7be971f\"},{\"bytes\":222,\"id\":\"SOURCE\",\"label\":\"Exact fixture SOURCE\",\"media_type\":\"application/octet-stream\",\"provenance\":\"Manually supplied frozen original bytes; no semantic qualification.\",\"sha256\":\"d5f53b530032e6623ac78957f673571d4eaae53227c0628410b7a7966dab999f\"}],\"uncertainties\":[]}\n"
+    },
+    {
+      "name": "public-companion-rejected",
+      "cmd": "/home/sicarii/Projects/source-anchored-semantic-transport/evidence/semantic-handoff-v1/positive-02/transport/decoder/bin/semantic-transport validate examples/public-share-v1/public-share.txt --archive examples/quorum-replay-v1/recipient/meaning.zip",
+      "expected_exit": 1,
+      "chunk_id": "81f4ab",
+      "wall_time_seconds": 0.04066517,
+      "exit_code": 1,
+      "original_token_count": 18,
+      "output": "REFUSED: Transport share text/package identity or exact layout mismatch\n"
+    },
+    {
+      "name": "source-static",
+      "cmd": "python3 -I -S -B -Werror install/check_source.py",
+      "expected_exit": 0,
+      "chunk_id": "214bf0",
+      "wall_time_seconds": 0.560055877,
+      "exit_code": 0,
+      "original_token_count": 16,
+      "output": "PASS: parsed source files=102; bounded installer functions=1262\n"
+    },
+    {
+      "name": "source-inventory",
+      "cmd": "python3 -I -S -B -Werror install/prepare_source.py --check",
+      "expected_exit": 0,
+      "chunk_id": "766e9b",
+      "wall_time_seconds": 0.004405415,
+      "exit_code": 0,
+      "original_token_count": 40,
+      "output": "{\"authentication\":\"NOT_PROVIDED\",\"bytes\":7264,\"sha256\":\"e1796ecd8ba6bab8d4e8694cbe73f27315eaac0e0ffe8016abfac0fd9a5827c6\",\"status\":\"SOURCE_INVENTORY_CHECKED\"}\n"
+    },
+    {
+      "name": "sealed-replay",
+      "cmd": "python3 -I -S -B -Werror examples/quorum-replay-v1/prepare_receipt.py --check",
+      "expected_exit": 0,
+      "chunk_id": "6ad071",
+      "wall_time_seconds": 0.061909064,
+      "exit_code": 0,
+      "original_token_count": 6,
+      "output": "REPLAY_RECEIPT_CHECKED\n"
+    },
+    {
+      "name": "old-tracked-bytes",
+      "cmd": "git diff --exit-code d6fbfc76ed52ce06f80d366dab526bbb40c4292c --",
+      "expected_exit": 0,
+      "chunk_id": "213590",
+      "wall_time_seconds": 0.000025042,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    },
+    {
+      "name": "module-digest",
+      "cmd": "sha256sum install/transport_public_share.py",
+      "expected_exit": 0,
+      "chunk_id": "9d84a6",
+      "wall_time_seconds": 0.000016001,
+      "exit_code": 0,
+      "original_token_count": 25,
+      "output": "cba055858360c177f25bd510c24ebdf31833e8ed550f362c55d946acbfc766b9  install/transport_public_share.py\n"
+    },
+    {
+      "name": "example-count",
+      "cmd": "wc -c -m examples/public-share-v1/public-share.txt",
+      "expected_exit": 0,
+      "chunk_id": "562473",
+      "wall_time_seconds": 0.000009208,
+      "exit_code": 0,
+      "original_token_count": 13,
+      "output": "220 221 examples/public-share-v1/public-share.txt\n"
+    }
+  ]
+}
+

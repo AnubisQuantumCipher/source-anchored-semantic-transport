@@ -1,0 +1,193 @@
+{
+  "artifacts": {
+    "examples/sentinel-v1-core/check_endpoints.py": {
+      "bytes": 1519,
+      "sha256": "7abb052afc3c86df23668b9d92fc4ccceac88d50c051808147bde43497f85fa5"
+    },
+    "examples/sentinel-v1-core/evidence/boolean-target-failure.json": {
+      "bytes": 1506,
+      "sha256": "594bfcd73bfdb3ea2335cdbbe715b0458ad21f61d40fa9f18c1f9e1dda85e1aa"
+    },
+    "examples/sentinel-v1-core/evidence/core-tests.json": {
+      "bytes": 11444,
+      "sha256": "e8bd2ae40d940bb04f522819d80f9bcf1416378c78ea588f88283a2e47c5773e"
+    },
+    "examples/sentinel-v1-core/evidence/endpoint-contract.json": {
+      "bytes": 7687,
+      "sha256": "212154bd2b3f0b05f5a9de4b387bc6c9adcbe56e0af1dc7475522ebcbdd5e404"
+    },
+    "examples/sentinel-v1-core/evidence/endpoint-oracle.json": {
+      "bytes": 3205,
+      "sha256": "358b50e208b34811afd62a0585840ffb865364f20714eb69ad6bd49f9f4948b1"
+    },
+    "examples/sentinel-v1-core/evidence/endpoint-review.json": {
+      "bytes": 8715,
+      "sha256": "175ac7350e688ff0537f6d5faee01f5b5daf1de82a657853cd080d36604cccb5"
+    },
+    "examples/sentinel-v1-core/evidence/endpoint-sort-failure.json": {
+      "bytes": 968,
+      "sha256": "1a89de584cd412b611963a06b44443b8acc0516290c8ac0c42a3669501497766"
+    },
+    "examples/sentinel-v1-core/evidence/historical-impact-failure.json": {
+      "bytes": 3551,
+      "sha256": "ef1e406135265e0dee8079ccf344059acbfa4ecbfcd5e45ea6b9cdf3a378cf18"
+    },
+    "examples/sentinel-v1-core/evidence/refinement-review.json": {
+      "bytes": 5652,
+      "sha256": "48385b21101585479ac6fbd4437e0b13f0339a11b9c113e8a4af5d638e719541"
+    },
+    "examples/sentinel-v1-core/evidence/test_sentinel_challenges-normal.stderr": {
+      "bytes": 107,
+      "sha256": "8f7cf53d8806ba31f6894c49dc59270b899cc403c40f2021b8ff88f469d8cb97"
+    },
+    "examples/sentinel-v1-core/evidence/test_sentinel_challenges-normal.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "examples/sentinel-v1-core/evidence/test_sentinel_challenges-optimized.stderr": {
+      "bytes": 107,
+      "sha256": "8e0175c1f3fa65ac9778a574e9f6286b123bda6101a6e742022dd2417fc00424"
+    },
+    "examples/sentinel-v1-core/evidence/test_sentinel_challenges-optimized.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "examples/sentinel-v1-core/evidence/test_sentinel_common-normal.stderr": {
+      "bytes": 109,
+      "sha256": "f90205cbd4fdd781cd1743acb491bbf8107bba0a826706e16eea68607db679c8"
+    },
+    "examples/sentinel-v1-core/evidence/test_sentinel_common-normal.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "examples/sentinel-v1-core/evidence/test_sentinel_common-optimized.stderr": {
+      "bytes": 109,
+      "sha256": "7113510254859a25fd51a67566b4a2edd527f7bf5883b8868a9383bb875d9cf9"
+    },
+    "examples/sentinel-v1-core/evidence/test_sentinel_common-optimized.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "examples/sentinel-v1-core/evidence/test_sentinel_locators-normal.stderr": {
+      "bytes": 126,
+      "sha256": "6eccbc59606c5b0899f01d96302802facdb903833348c7e7b97d05a56e906324"
+    },
+    "examples/sentinel-v1-core/evidence/test_sentinel_locators-normal.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "examples/sentinel-v1-core/evidence/test_sentinel_locators-optimized.stderr": {
+      "bytes": 126,
+      "sha256": "715872ca47a930d94cce70d853b8f2c3b70f604e91d7086a6c2b426c10ca1ca5"
+    },
+    "examples/sentinel-v1-core/evidence/test_sentinel_locators-optimized.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "examples/sentinel-v1-core/evidence/test_sentinel_meaning-normal.stderr": {
+      "bytes": 124,
+      "sha256": "c4abd8b950da07cf9894693eef8ec5461ca4412c203d1e4e7790b1bf35693b29"
+    },
+    "examples/sentinel-v1-core/evidence/test_sentinel_meaning-normal.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "examples/sentinel-v1-core/evidence/test_sentinel_meaning-optimized.stderr": {
+      "bytes": 124,
+      "sha256": "00bdaaf3cae0ecdf517ca49e97abb77afa49a4e9bf44f64e72fa14846f1a3d3c"
+    },
+    "examples/sentinel-v1-core/evidence/test_sentinel_meaning-optimized.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "examples/sentinel-v1-core/evidence/test_sentinel_refinement-normal.stderr": {
+      "bytes": 107,
+      "sha256": "78fc77426ad440309e9088d66c78c87f2aea43aaccc83d0867c641831d5014c0"
+    },
+    "examples/sentinel-v1-core/evidence/test_sentinel_refinement-normal.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "examples/sentinel-v1-core/evidence/test_sentinel_refinement-optimized.stderr": {
+      "bytes": 107,
+      "sha256": "6833dda2b38051e657403553579c6e7de074e502e4475a3a82dbfc7b03d24a94"
+    },
+    "examples/sentinel-v1-core/evidence/test_sentinel_refinement-optimized.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "examples/sentinel-v1-core/freeze_core.py": {
+      "bytes": 3568,
+      "sha256": "4d12082747703a6cb5fc38d034b82f64174fa43082ff4d3256e099ff05679233"
+    },
+    "schemas/sentinel-meaning-graph-1.json": {
+      "bytes": 8309,
+      "sha256": "46c1f6c021b323c96c4966eb4da6c66ed25279744879a5f5363f0a7b5d390c64"
+    },
+    "tests/test_sentinel_challenges.py": {
+      "bytes": 9041,
+      "sha256": "eceec3eda95580a0e53729d0be0c2d9bd262441a34af3ac4e9e2965bd054c7f2"
+    },
+    "tests/test_sentinel_common.py": {
+      "bytes": 4752,
+      "sha256": "3c94991e2f0965eaff6693ea9ab37ac752b78a559cad0a70e4cd21747f074933"
+    },
+    "tests/test_sentinel_locators.py": {
+      "bytes": 21190,
+      "sha256": "499385c46f736713417ceff9be1630992d6bdfae982e1b489ff25947e72ab35c"
+    },
+    "tests/test_sentinel_meaning.py": {
+      "bytes": 21696,
+      "sha256": "24a1157a74e9ceb9f2adf0feaf51e510bcec6f435f7ec33ed67936f27cffcdc9"
+    },
+    "tests/test_sentinel_refinement.py": {
+      "bytes": 7331,
+      "sha256": "4eeea5a5b71575f3822817bd0eebd09f2fa5872de508f44b5ec30378e35b66fb"
+    },
+    "tools/sentinel_v1/__init__.py": {
+      "bytes": 83,
+      "sha256": "c56dd136c994f5677382349f71a802600cc23efa9000c13a04c9548b45051235"
+    },
+    "tools/sentinel_v1/bindings.py": {
+      "bytes": 5071,
+      "sha256": "1ca9e6952c7002cdcc74106e52cba2b1031fa1f6294fb0b3bf10978ca61b438a"
+    },
+    "tools/sentinel_v1/census.py": {
+      "bytes": 9996,
+      "sha256": "89cdc5184c280a1c11b76ea323a2666f8a8938e3722c655bacd125e4e54b8992"
+    },
+    "tools/sentinel_v1/challenges.py": {
+      "bytes": 12328,
+      "sha256": "98123cdb080593d8dd3e2e3d79018c8e56f6e52e005c1fbcd918c61dda818dfc"
+    },
+    "tools/sentinel_v1/common.py": {
+      "bytes": 9319,
+      "sha256": "2463b4572553603511f968e977d9460cee5db859f0f0d3715139abfde35694f8"
+    },
+    "tools/sentinel_v1/graph.py": {
+      "bytes": 11054,
+      "sha256": "9034ccc281d6c689d01511f1a4d2deec2db1033ed92146657bb27a203ca8f3dc"
+    },
+    "tools/sentinel_v1/locators.py": {
+      "bytes": 15740,
+      "sha256": "f098c132f72dd95b1775dea48931919ea920fdeeae3f7183490d472a4b34cd8c"
+    },
+    "tools/sentinel_v1/refinement.py": {
+      "bytes": 11554,
+      "sha256": "cd34cae18568a808bf8adb75704a4f60d8b935ff16e7e177aa313646bf2ed4bd"
+    }
+  },
+  "baseline_commit": "3e0d8602353e42a772927c8adaa32a73e7cc3b0a",
+  "comparative_superiority": "NOT_ESTABLISHED",
+  "execution_authority": "NONE",
+  "foundation_commit": "bb00d7526254eb5aa55f4dbaa3a2761018243c18",
+  "fresh_receivers": "NOT_COVERED",
+  "independent_assessment": "RECORDED_AGENT_ENGINEERING_REVIEW_NOT_CERTIFICATION",
+  "native_wire": "NOT_COVERED",
+  "proof": "NOT_A_FORMAL_PROOF",
+  "qualification": "NOT_QUALIFIED",
+  "schema": "sentinel/python-core-receipt/1",
+  "scope": "BOUNDARIES_CENSUS_GRAPH_REFERENCE_CHALLENGES_AND_REFINEMENT_ONLY",
+  "semantic_completeness": "UNPROVEN",
+  "status": "TESTED_SCOPED_PYTHON_CORE"
+}

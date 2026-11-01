@@ -1,0 +1,62 @@
+{
+  "schema": "sentinel/graph-independent-source-review/1",
+  "reviewed_utc": "2026-10-30T05:13:14.095795+00:00",
+  "verdict": "BLOCKED_CONFIRMED_REGISTRY_IDENTITY_TOCTOU",
+  "source_epoch": "source03",
+  "source_pins": [
+    {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_sentinel.py",
+      "bytes": 24753,
+      "sha256": "7fdc618b73a020c164e98b8d0291756d37e5adfcdb88f6b043332c6000b2f370"
+    },
+    {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_sentinel_export.py",
+      "bytes": 4799,
+      "sha256": "eaa8bc075c67c499872d5ebfd6879bd5d2fe838a3e7e64d83503040d5fb93c62"
+    },
+    {
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_sentinel.py",
+      "bytes": 25280,
+      "sha256": "2ff44aed14f1f08a9f2a0a54f346529c6ce9666372a24ad5debfc63ce019d7c2"
+    }
+  ],
+  "complete_read": [
+    "All validator/exporter/test source bytes",
+    "HANDOFF.md and operational exact interface",
+    "CONTRACT03 causal backreference correction",
+    "CONTRACT04 iterative explicitly reachable prior snapshot correction",
+    "CONTRACT05 unsupported spurious label restriction"
+  ],
+  "actual_evidence": [
+    {
+      "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/graph-independent-review-01/existing-controls.json",
+      "bytes": 3104,
+      "sha256": "9b9b935ca9735225849888817d950f9583f232ea8047e3f4d914e59fce2c1b97"
+    },
+    {
+      "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/graph-independent-review-01/registry-interleaving-counterexample-01.json",
+      "bytes": 3632,
+      "sha256": "e00315d3ff58ca97fec7d050d576e91d5a097e1fe689308f34a8c6ec30729a62"
+    }
+  ],
+  "blockers": [
+    {
+      "id": "G3",
+      "location": "tools/transport_sentinel.py:registry_context and checked_sidecar",
+      "issue": "Held manifest SHA is checked against caller mutable dict, then the same alias is stored and final keys are reread from caller. Substitution after hash but before resolution permits bytes not bound by held registry identity.",
+      "actual": "Ordinary inconsistent NOTE refuses. Deterministic pure interleaving restores expected raw-sidecar NOTE after registry hash generation: result claims STRUCTURE_AND_EXACT_BYTES_ONLY with old held registry SHA while actual used registry differs. Exact source03 preimages and failure retained.",
+      "required": "Bounded exact-dict snapshot before held manifest hash; validate entries/count/aggregate on that snapshot, resolve/parse exclusively from it and use snapshot keys for final reachability. Never copy an unchecked unbounded input or reread caller dict after snapshot. Export must consume checked document/context only. Explicit dict mutation during bounded extraction refuses."
+    }
+  ],
+  "sound_scoped_properties": [
+    "Closed schema/typed references and full actual registry bytes; unsupported relation/locator/fragment choices refuse.",
+    "Complete candidate/probe result matrix recomputes exact bytes; UNRUN/REFUSED remain explicit blockers; UNKNOWN/CONFLICT are opaque answer bytes, documentary state separate.",
+    "History records bind exact canonical target records, with sequence/unique typed record coverage and result-before-counterexample/later-repair chronology. Immutable prior snapshots preserve fixed epoch and exact old record prefixes with bounded iterative traversal.",
+    "Causal resolution backlinks stay empty; later history annotations point backward without mutating CEX. Unsupported SPURIOUS cannot bless a mismatch.",
+    "Exporter has no eligibility/accepted/qualified/native-wire authority. Source-set digest remains a set identity, not a one-source hash; a future adapter must admit complete projection or refuse.",
+    "Required context/adjudication/evaluator/provenance receipt bytes are opaque identity evidence only and cannot set native complete flags. Actual execution/oracle independence and pre-generation freeze are not attested by present pins."
+  ],
+  "remaining_review_scope": "No other concrete source03 blocker found in completed static read. Source04 needs independent delta/test/race readback before any source PASS. New scope/functionality would require separate review.",
+  "execution_scope": "Existing22 pure normal/O and deterministic mocked dictionary interleaving; all process/native calls denied. No source edits, real unshare/compiler/prover/native/model/OCR execution. Only private review receipts/source03 preimages written.",
+  "boundary": "No finite-Q qualification, natural-language denotation, oracle authenticity, OCR/full-book completeness or native projection acceptance; general proof requirement remains NOT_MET."
+}

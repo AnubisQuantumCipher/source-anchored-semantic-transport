@@ -1,0 +1,215 @@
+﻿2026-10-29T16:02:40.0701371Z Current runner version: '2.338.0'
+2026-10-29T16:02:40.0717273Z ##[group]Runner Image Provisioner
+2026-10-29T16:02:40.0717885Z Hosted Compute Agent
+2026-10-29T16:02:40.0718283Z Version: 20261021.618
+2026-10-29T16:02:40.0718655Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-29T16:02:40.0719289Z Build Date: 2026-10-21T00:45:21Z
+2026-10-29T16:02:40.0719703Z Worker ID: {49594e37-d886-4108-bf4a-4025b79de77b}
+2026-10-29T16:02:40.0720187Z Region: centralus
+2026-10-29T16:02:40.0720560Z Cloud: Azure
+2026-10-29T16:02:40.0720884Z ##[endgroup]
+2026-10-29T16:02:40.0721667Z ##[group]Operating System
+2026-10-29T16:02:40.0722039Z Ubuntu
+2026-10-29T16:02:40.0722390Z 24.04.5
+2026-10-29T16:02:40.0722749Z LTS
+2026-10-29T16:02:40.0723075Z ##[endgroup]
+2026-10-29T16:02:40.0723446Z ##[group]Runner Image
+2026-10-29T16:02:40.0723849Z Image: ubuntu-24.04
+2026-10-29T16:02:40.0724220Z Version: 20261025.353.1
+2026-10-29T16:02:40.0724985Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-29T16:02:40.0725904Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+2026-10-29T16:02:40.0726490Z ##[endgroup]
+2026-10-29T16:02:40.0727198Z ##[group]GITHUB_TOKEN Permissions
+2026-10-29T16:02:40.0728356Z Contents: read
+2026-10-29T16:02:40.0728888Z Metadata: read
+2026-10-29T16:02:40.0729246Z ##[endgroup]
+2026-10-29T16:02:40.0730510Z Secret source: Actions
+2026-10-29T16:02:40.0731161Z Cache mode: write
+2026-10-29T16:02:40.0731577Z Prepare workflow directory
+2026-10-29T16:02:40.0941942Z Prepare all required actions
+2026-10-29T16:02:40.0974497Z Getting action download info
+2026-10-29T16:02:40.3151252Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-29T16:02:40.4251182Z Download action repository 'actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97' (SHA:5fda3b95a4ea91299a34e894583c3862153e4b97)
+2026-10-29T16:02:40.6249384Z Complete job name: portable
+2026-10-29T16:02:40.6767963Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-10-29T16:02:40.6768504Z with:
+2026-10-29T16:02:40.6768981Z   repository: AnubisQuantumCipher/source-anchored-semantic-transport
+2026-10-29T16:02:40.6771162Z   token: ***
+2026-10-29T16:02:40.6771402Z   ssh-strict: true
+2026-10-29T16:02:40.6771646Z   ssh-user: git
+2026-10-29T16:02:40.6771903Z   persist-credentials: true
+2026-10-29T16:02:40.6772178Z   clean: true
+2026-10-29T16:02:40.6772433Z   sparse-checkout-cone-mode: true
+2026-10-29T16:02:40.6772726Z   fetch-depth: 1
+2026-10-29T16:02:40.6772966Z   fetch-tags: false
+2026-10-29T16:02:40.6773214Z   show-progress: true
+2026-10-29T16:02:40.6773463Z   lfs: false
+2026-10-29T16:02:40.6773695Z   submodules: false
+2026-10-29T16:02:40.6773949Z   set-safe-directory: true
+2026-10-29T16:02:40.6774239Z   allow-unsafe-pr-checkout: false
+2026-10-29T16:02:40.6774608Z ##[endgroup]
+2026-10-29T16:02:40.8978295Z Syncing repository: AnubisQuantumCipher/source-anchored-semantic-transport
+2026-10-29T16:02:40.8979845Z ##[group]Getting Git version info
+2026-10-29T16:02:40.8980588Z Working directory is '/home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport'
+2026-10-29T16:02:40.8981672Z [command]/usr/bin/git version
+2026-10-29T16:02:40.9051903Z git version 2.56.0
+2026-10-29T16:02:40.9063979Z ##[endgroup]
+2026-10-29T16:02:40.9072926Z Temporarily overriding HOME='/home/runner/work/_temp/636f581e-a86e-4bab-92d9-765a08d68e27' before making global git config changes
+2026-10-29T16:02:40.9074131Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-29T16:02:40.9076243Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport
+2026-10-29T16:02:40.9128186Z Deleting the contents of '/home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport'
+2026-10-29T16:02:40.9133711Z ##[group]Initializing the repository
+2026-10-29T16:02:40.9135007Z [command]/usr/bin/git init /home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport
+2026-10-29T16:02:40.9229016Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-29T16:02:40.9230036Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-29T16:02:40.9230852Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-29T16:02:40.9231492Z hint: call:
+2026-10-29T16:02:40.9231819Z hint:
+2026-10-29T16:02:40.9232248Z hint: 	git config --global init.defaultBranch <name>
+2026-10-29T16:02:40.9232768Z hint:
+2026-10-29T16:02:40.9233256Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-29T16:02:40.9234065Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-29T16:02:40.9234706Z hint:
+2026-10-29T16:02:40.9235039Z hint: 	git branch -m <name>
+2026-10-29T16:02:40.9235420Z hint:
+2026-10-29T16:02:40.9236003Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-29T16:02:40.9246357Z Initialized empty Git repository in /home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport/.git/
+2026-10-29T16:02:40.9254936Z [command]/usr/bin/git remote add origin https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport
+2026-10-29T16:02:40.9301468Z ##[endgroup]
+2026-10-29T16:02:40.9302246Z ##[group]Disabling automatic garbage collection
+2026-10-29T16:02:40.9303719Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-29T16:02:40.9332286Z ##[endgroup]
+2026-10-29T16:02:40.9332865Z ##[group]Setting up auth
+2026-10-29T16:02:40.9337469Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-29T16:02:40.9371934Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-29T16:02:40.9732792Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-29T16:02:40.9767944Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-29T16:02:40.9953541Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-29T16:02:40.9988939Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-29T16:02:41.0175087Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-29T16:02:41.0215904Z ##[endgroup]
+2026-10-29T16:02:41.0216594Z ##[group]Fetching the repository
+2026-10-29T16:02:41.0225121Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +44637227212d919b4d8d425047dcb8fbd37b38d2:refs/remotes/pull/13/merge
+2026-10-29T16:02:42.2691314Z From https://github.com/AnubisQuantumCipher/source-anchored-semantic-transport
+2026-10-29T16:02:42.2692571Z  * [new ref]         44637227212d919b4d8d425047dcb8fbd37b38d2 -> pull/13/merge
+2026-10-29T16:02:42.2720758Z ##[endgroup]
+2026-10-29T16:02:42.2721733Z ##[group]Determining the checkout info
+2026-10-29T16:02:42.2722661Z ##[endgroup]
+2026-10-29T16:02:42.2723415Z [command]/usr/bin/git sparse-checkout disable
+2026-10-29T16:02:42.2762981Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-29T16:02:42.2798683Z ##[group]Checking out the ref
+2026-10-29T16:02:42.2801885Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/13/merge
+2026-10-29T16:02:42.4570689Z Note: switching to 'refs/remotes/pull/13/merge'.
+2026-10-29T16:02:42.4571367Z 
+2026-10-29T16:02:42.4571842Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-29T16:02:42.4572998Z changes and commit them, and you can discard any commits you make in this
+2026-10-29T16:02:42.4574381Z state without impacting any branches by switching back to a branch.
+2026-10-29T16:02:42.4575044Z 
+2026-10-29T16:02:42.4575488Z If you want to create a new branch to retain commits you create, you may
+2026-10-29T16:02:42.4576498Z do so (now or later) by using -c with the switch command. Example:
+2026-10-29T16:02:42.4577063Z 
+2026-10-29T16:02:42.4577319Z   git switch -c <new-branch-name>
+2026-10-29T16:02:42.4577738Z 
+2026-10-29T16:02:42.4577986Z Or undo this operation with:
+2026-10-29T16:02:42.4578356Z 
+2026-10-29T16:02:42.4578580Z   git switch -
+2026-10-29T16:02:42.4579047Z 
+2026-10-29T16:02:42.4579518Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-29T16:02:42.4580221Z 
+2026-10-29T16:02:42.4580978Z HEAD is now at 4463722 Merge e0d3175a0292f1661a165ad149ee310799a3a143 into 4cdec4855a9ce9e4128dc6e7c7a8a26d9e974345
+2026-10-29T16:02:42.4591222Z ##[endgroup]
+2026-10-29T16:02:42.4638658Z [command]/usr/bin/git log -1 --format=%H
+2026-10-29T16:02:42.4668606Z 44637227212d919b4d8d425047dcb8fbd37b38d2
+2026-10-29T16:02:42.4942425Z ##[group]Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+2026-10-29T16:02:42.4943385Z with:
+2026-10-29T16:02:42.4943980Z   python-version: 3.14.10
+2026-10-29T16:02:42.4944625Z   architecture: x64
+2026-10-29T16:02:42.4945212Z   check-latest: false
+2026-10-29T16:02:42.4945813Z   allow-prereleases: false
+2026-10-29T16:02:42.4950742Z   token: ***
+2026-10-29T16:02:42.4951332Z   update-environment: true
+2026-10-29T16:02:42.4951958Z   freethreaded: false
+2026-10-29T16:02:42.5016337Z ##[endgroup]
+2026-10-29T16:02:42.5858079Z ##[group]Installed versions
+2026-10-29T16:02:42.5872966Z Version 3.14.10 was not found in the local cache
+2026-10-29T16:02:43.7908440Z Version 3.14.10 is available for downloading
+2026-10-29T16:02:43.7909338Z Download from "https://github.com/actions/python-versions/releases/download/3.14.10-40336797752/python-3.14.10-linux-24.04-x64.tar.gz"
+2026-10-29T16:02:44.4282497Z Extract downloaded archive
+2026-10-29T16:02:44.4634829Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/00696183-7dc7-481b-993a-11b356739661 -f /home/runner/work/_temp/7136046f-d90e-4e4a-bd09-787bb910d231
+2026-10-29T16:02:46.1125087Z Execute installation script
+2026-10-29T16:02:46.1219265Z Check if Python hostedtoolcache folder exist...
+2026-10-29T16:02:46.1219700Z Create Python 3.14.10 folder
+2026-10-29T16:02:46.1239871Z Copy Python binaries to hostedtoolcache folder
+2026-10-29T16:02:46.4974988Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+2026-10-29T16:02:46.5009459Z Upgrading pip...
+2026-10-29T16:02:48.2534309Z Collecting pip
+2026-10-29T16:02:48.3210302Z Downloading pip-26.2.2-py3-none-any.whl.metadata (4.6 kB)
+2026-10-29T16:02:48.3367076Z Downloading pip-26.2.2-py3-none-any.whl (1.8 MB)
+2026-10-29T16:02:48.4972416Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 12.8 MB/s  0:00:00
+2026-10-29T16:02:48.4972850Z 
+2026-10-29T16:02:48.5649638Z Installing collected packages: pip
+2026-10-29T16:02:48.5650254Z Attempting uninstall: pip
+2026-10-29T16:02:48.5664753Z Found existing installation: pip 26.2.2
+2026-10-29T16:02:48.5849748Z Uninstalling pip-26.2.2:
+2026-10-29T16:02:48.5886583Z Successfully uninstalled pip-26.2.2
+2026-10-29T16:02:49.3067997Z Successfully installed pip-26.2.2
+2026-10-29T16:02:49.3593351Z Create complete file
+2026-10-29T16:02:49.3629624Z Successfully set up CPython (3.14.10)
+2026-10-29T16:02:49.3630121Z ##[endgroup]
+2026-10-29T16:02:49.3821426Z ##[group]Run native_workflow_tmp="$(mktemp -d)"
+2026-10-29T16:02:49.3821689Z [36;1mnative_workflow_tmp="$(mktemp -d)"[0m
+2026-10-29T16:02:49.3821912Z [36;1mpython3 -I -S -B -Werror comparison/workflow/test_workflow.py \[0m
+2026-10-29T16:02:49.3822185Z [36;1m  --root "$native_workflow_tmp/normal" --mode portable \[0m
+2026-10-29T16:02:49.3822415Z [36;1m  --expect-product-sha256 "$NATIVE_WORKFLOW_HELD_SHA256"[0m
+2026-10-29T16:02:49.3822858Z [36;1mpython3 -I -S -B -O -Werror comparison/workflow/test_workflow.py \[0m
+2026-10-29T16:02:49.3823134Z [36;1m  --root "$native_workflow_tmp/optimized" --mode portable --optimized \[0m
+2026-10-29T16:02:49.3823412Z [36;1m  --expect-product-sha256 "$NATIVE_WORKFLOW_HELD_SHA256"[0m
+2026-10-29T16:02:49.3823687Z [36;1mnative_workflow_t_pin="$(sha256sum "$native_workflow_tmp/normal/T-preparation.json")"[0m
+2026-10-29T16:02:49.3824021Z [36;1mnative_workflow_receipt_pin="$(sha256sum "$native_workflow_tmp/normal/receipt.json")"[0m
+2026-10-29T16:02:49.3824333Z [36;1mpython3 -I -S -B -Werror comparison/workflow/test_native_tools.py \[0m
+2026-10-29T16:02:49.3824567Z [36;1m  --campaign-root "$native_workflow_tmp/normal" \[0m
+2026-10-29T16:02:49.3824786Z [36;1m  --expect-campaign-sha256 "${native_workflow_t_pin%% *}" \[0m
+2026-10-29T16:02:49.3825051Z [36;1m  --expect-campaign-receipt-sha256 "${native_workflow_receipt_pin%% *}" \[0m
+2026-10-29T16:02:49.3825290Z [36;1m  --root "$native_workflow_tmp/native-tools"[0m
+2026-10-29T16:02:49.3845641Z shell: /usr/bin/bash -e {0}
+2026-10-29T16:02:49.3845790Z env:
+2026-10-29T16:02:49.3845947Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T16:02:49.3846188Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+2026-10-29T16:02:49.3846414Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T16:02:49.3846620Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T16:02:49.3846839Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-10-29T16:02:49.3847047Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+2026-10-29T16:02:49.3847323Z   NATIVE_WORKFLOW_HELD_SHA256: 4679aae738dd3efb9c4840e677ec6e55e8a423dd7c8522a0addf6612a6bbfbc1
+2026-10-29T16:02:49.3847571Z ##[endgroup]
+2026-10-29T16:02:49.4526004Z Traceback (most recent call last):
+2026-10-29T16:02:49.4535968Z   File "/home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport/comparison/workflow/test_workflow.py", line 827, in <module>
+2026-10-29T16:02:49.4536723Z     main()
+2026-10-29T16:02:49.4536907Z     ~~~~^^
+2026-10-29T16:02:49.4537527Z   File "/home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport/comparison/workflow/test_workflow.py", line 822, in main
+2026-10-29T16:02:49.4538300Z     value = run_campaign(args.root, args.mode, args.expect_product_sha256, args.optimized)
+2026-10-29T16:02:49.4539299Z   File "/home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport/comparison/workflow/test_workflow.py", line 775, in run_campaign
+2026-10-29T16:02:49.4540013Z     tools, held = tool_records(), exhausted_binding(root, mode)
+2026-10-29T16:02:49.4540327Z                   ~~~~~~~~~~~~^^
+2026-10-29T16:02:49.4540982Z   File "/home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport/comparison/workflow/test_workflow.py", line 208, in tool_records
+2026-10-29T16:02:49.4541814Z     require(path.is_file() and not path.is_symlink(), 'required native tool missing or symlinked: ' + name)
+2026-10-29T16:02:49.4542292Z     ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T16:02:49.4542967Z   File "/home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport/comparison/workflow/test_workflow.py", line 44, in require
+2026-10-29T16:02:49.4543533Z     raise AssertionError(reason)
+2026-10-29T16:02:49.4544112Z AssertionError: required native tool missing or symlinked: rg
+2026-10-29T16:02:49.4599248Z ##[error]Process completed with exit code 1.
+2026-10-29T16:02:49.4703305Z Post job cleanup.
+2026-10-29T16:02:49.5293119Z [command]/usr/bin/git version
+2026-10-29T16:02:49.5328984Z git version 2.56.0
+2026-10-29T16:02:49.5355690Z Temporarily overriding HOME='/home/runner/work/_temp/3ea5f30c-0ba1-46e2-99b3-3f2bcf88fb32' before making global git config changes
+2026-10-29T16:02:49.5356635Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-29T16:02:49.5359158Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/source-anchored-semantic-transport/source-anchored-semantic-transport
+2026-10-29T16:02:49.5393153Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-29T16:02:49.5421899Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-29T16:02:49.5637011Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-29T16:02:49.5669494Z http.https://github.com/.extraheader
+2026-10-29T16:02:49.5681005Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-29T16:02:49.5711451Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-29T16:02:49.5925277Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-29T16:02:49.5962075Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-29T16:02:49.6303720Z Cleaning up orphan processes
+2026-10-29T16:02:49.6546021Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

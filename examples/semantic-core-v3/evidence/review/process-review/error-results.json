@@ -1,0 +1,49 @@
+{
+  "cases": [
+    {
+      "id": "cli_OSError",
+      "observed": {
+        "exit": 1,
+        "stderr": "REFUSED: injected limit failure\n"
+      },
+      "pass": true
+    },
+    {
+      "id": "cli_ValueError",
+      "observed": {
+        "exit": 1,
+        "stderr": "REFUSED: injected limit failure\n"
+      },
+      "pass": true
+    },
+    {
+      "id": "cli_MemoryError",
+      "observed": {
+        "exit": 1,
+        "stderr": "REFUSED: injected limit failure\n"
+      },
+      "pass": true
+    },
+    {
+      "id": "preexec_limit_failure",
+      "observed": {
+        "argv": [
+          "/usr/bin/python3",
+          "-I",
+          "-S",
+          "-B",
+          "-c",
+          "print(1)"
+        ],
+        "elapsed_ns": 2071729,
+        "exit_code": null,
+        "status": "REFUSED_LAUNCH",
+        "stderr": "",
+        "stdout": ""
+      },
+      "pass": true
+    }
+  ],
+  "schema": "semantic-core-independent-error-injection/1",
+  "status": "PASS"
+}

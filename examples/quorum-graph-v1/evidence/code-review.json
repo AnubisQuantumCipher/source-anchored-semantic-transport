@@ -1,0 +1,144 @@
+{
+  "acceptance_evidence_required_for_broader_claim": "Full applicable source-bound protocol/oracle qualification, bounded upstream parsing, identity/reference/rule closure, remaining inherited proof/runtime/recovery/interoperability controls, actual installation and external-human/benefit/release gates. This report waives none.",
+  "disposition": "NO_BLOCKING_CODE_ISSUE_FOUND_WITHIN_DECLARED_POST_DECODE_COMPONENT_SCOPE",
+  "evidence_classes": {
+    "component_literals": "TESTED",
+    "control_flow_and_bounds": "OBSERVED_IMPLEMENTATION_INSPECTION",
+    "external_validation": "EXTERNAL_VALIDATION_PENDING",
+    "formal_proof": "UNPROVEN",
+    "full_replay": "UNRUN",
+    "product_acceptance": "NOT_ACCEPTED",
+    "raw_parser": "UNQUALIFIED"
+  },
+  "findings": [],
+  "inspected_pins": [
+    {
+      "bytes": 5524,
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_quorum_graph.py",
+      "sha256": "40edaed32f10d2803a3be59e33130d62f7724de3e67eeaadf9c8d823c5dc4902"
+    },
+    {
+      "bytes": 6143,
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/install/test_quorum_graph.py",
+      "sha256": "95fcbd6801bf0afd0a2df95adbeab47701897d4ef00865b2874c9773eaf87043"
+    },
+    {
+      "bytes": 1446,
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/install/check_source.py",
+      "sha256": "3b48f1648b8eae671c402af26cd6740de822f39907813e807f255dfa25fac6a5"
+    },
+    {
+      "bytes": 4425,
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/.github/workflows/source.yml",
+      "sha256": "0c3ab554b31700008f97939d64a9b4c2fdaff1423aed5ddce2ab91ce4e4cff64"
+    },
+    {
+      "bytes": 8705,
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/quorum-graph-v1/contract.json",
+      "sha256": "77b5a8338a93cf4d27703756c707005dd99ffa0507f9187cef0e1eeb1a734a6b"
+    },
+    {
+      "bytes": 14613,
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/quorum-graph-v1/oracle.json",
+      "sha256": "5cb3a7fe16707a285170c1c939f517ce4b6d07bd4cca7f9880440da2a84dcd56"
+    },
+    {
+      "bytes": 2819,
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/quorum-graph-v1/oracle-addendum.json",
+      "sha256": "49098105e857be5a993061cae578c819892d2176010cbaf90bc34cbd7f9ec5cc"
+    },
+    {
+      "bytes": 6546,
+      "path": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/quorum-graph-v1/review.json",
+      "sha256": "cceec14ab68e37d09fa1eee577ff95cd7315eaac1afdbb89abfde05dfe09d2e4"
+    },
+    {
+      "bytes": 2415,
+      "path": "/home/sicarii/Projects/source-anchored-semantic-transport/evidence/acceptance-v1-preflight-20261029/engineering-admission-01/component-admission.json",
+      "sha256": "57edcf27da30adab61adc4a48848a9aeed11b3181bfc8875c09a91fd179b9476"
+    },
+    {
+      "bytes": 1715,
+      "path": "/home/sicarii/Projects/source-anchored-semantic-transport/evidence/acceptance-v1-preflight-20261029/engineering-admission-01/development-baseline.json",
+      "sha256": "8b88ca2c527b6ff953c48878135d4897bb786085c0572180a1d25021293f8c2d"
+    },
+    {
+      "bytes": 27047,
+      "path": "/dev/shm/semantic-transport-graph-20261029/independent-test-results.json",
+      "sha256": "93232922e9345220f4ed7e349f1ec192ff9ce43a21b1bc000831626b7054d9e4"
+    }
+  ],
+  "inspection": [
+    {
+      "classification": "OBSERVED",
+      "detail": "Header checks require exact dict, fixed required-field probes, exact key cardinality, schema and node-count types/range in frozen precedence. It does not copy or iterate arbitrary extra dictionary keys. Edge and change lists are exact builtins; collection lengths are checked before their contents. Every edge shape is checked before access, exact int before range/indexing, and duplicate detection follows frozen ordering.",
+      "id": "I01"
+    },
+    {
+      "classification": "OBSERVED",
+      "detail": "All public admitted collection loops are bounded by fixed MAX_NODES, MAX_EDGES or MAX_PREDECESSORS after validation. Auxiliary pending/emitted/affected arrays use MAX_NODES. The duplicate-edge list has at most MAX_EDGES elements, each comparison is a pair of admitted bounded indices. No recursive call, network access, source fetch or authority decision occurs.",
+      "id": "I02"
+    },
+    {
+      "classification": "OBSERVED",
+      "detail": "_topological_order maintains the count of un-emitted prerequisites for each node, emits the smallest available index, then decrements each outgoing required-to-dependent edge exactly when its required node is emitted. Failure to find a ready index returns None and public callers return only the appropriate cycle envelope. This covers every graph component, independently of the changed-node set.",
+      "id": "I03"
+    },
+    {
+      "classification": "OBSERVED",
+      "detail": "reverse_reachable initializes seeds, processes dependents after every prerequisite in the complete topological order, and propagates only required-to-dependent edges. A node is marked only if seeded or some required node is marked; the sorted output enumerates declared indices only. The reasoning supports implementation inspection, not a machine-checked proof.",
+      "id": "I04"
+    },
+    {
+      "classification": "OBSERVED",
+      "detail": "predecessor_order validates the full entry list before creating bounded edges; later-array predecessors are allowed. Reusing smallest-ready topological order implements the frozen tie rule and rejects disconnected cycles without returning a prefix.",
+      "id": "I05"
+    },
+    {
+      "classification": "TESTED",
+      "detail": "Frozen original and addendum pins are enforced. Literal graph and predecessor cases pass in distinct identical development arms. Tests check exact output/error equality, input serialization nonmutation, separate result containers/lists, host tuple/dict-subclass rejection, and immunity of another/later result to result mutation.",
+      "id": "I06"
+    },
+    {
+      "classification": "OBSERVED",
+      "detail": "The addendum preserves the original oracle and provides valid accepted exact-edge-limit graphs for both a required seed and a dependent seed. Their declared literal expected results agree with the graph relationships; the earlier inclusive-bound coverage gap is addressed.",
+      "id": "I07"
+    },
+    {
+      "classification": "TESTED",
+      "detail": "Applicable isolated Python -Werror component tests and local syntax/function-size source check pass. CI contains the same isolated -Werror component test command. CI remote execution is not observed; the static tool is syntax/function-size checking, not formal verification or complete dynamic/static defect detection.",
+      "id": "I08"
+    }
+  ],
+  "integration_owner": "/root",
+  "limitations": [
+    "These functions admit already decoded, caller-owned JSON builtins. They are not safe raw-byte parsers and cannot restore duplicate object-member names discarded by an upstream parser.",
+    "No concurrent mutation during a call is admitted by the module contract. Arbitrary user-defined host objects or hostile custom dictionary-key callbacks are outside the post-decode exact-builtin input boundary; this review does not grant a general safe arbitrary-Python-object API claim.",
+    "Python interpreter, builtins and allocation behavior remain trusted runtime integration. Algorithm collection bounds are inspected and finite examples tested; no whole-runtime memory/time proof is claimed.",
+    "This development parity test uses identical graph annotations and helpers; extraction/adapters and strongest original-document baseline are not executed, and no cost, superiority or semantic adequacy conclusion follows.",
+    "Current source is an uncommitted local implementation. Remote CI, publication, installed runtime, native proof, source/version identity checks, authentication, full replay and external human validation remain outside this result."
+  ],
+  "model_identity_basis": "Parent actual-model spawn record; no independent provider identity attestation is fabricated here.",
+  "reviewer": "/root/quorum_wire_review",
+  "runs": [
+    {
+      "command": "timeout 30s /usr/bin/python3 -I -S -B -Werror install/test_quorum_graph.py --evidence /dev/shm/semantic-transport-graph-20261029/independent-test-results.json",
+      "cwd": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028",
+      "evidence": "/dev/shm/semantic-transport-graph-20261029/independent-test-results.json",
+      "evidence_source_pin_matches_inspected_source": true,
+      "exit_code": 0,
+      "raw_output": "test_frozen_graph_cases (__main__.FrozenGraphTests.test_frozen_graph_cases) ... ok\ntest_frozen_predecessor_cases (__main__.FrozenGraphTests.test_frozen_predecessor_cases) ... ok\ntest_non_json_host_shapes (__main__.FrozenGraphTests.test_non_json_host_shapes) ... ok\ntest_result_mutation_cannot_poison_later_call (__main__.FrozenGraphTests.test_result_mutation_cannot_poison_later_call) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.010s\n\nOK\n"
+    },
+    {
+      "command": "timeout 30s /usr/bin/python3 -I -S -B -Werror install/check_source.py",
+      "cwd": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028",
+      "exit_code": 0,
+      "raw_output": "PASS: parsed source files=83; bounded installer functions=869\n",
+      "scope": "Syntax and bounded-function-size check only"
+    }
+  ],
+  "schema": "quorum/independent-graph-code-review/1",
+  "scope": "Only source-bound bounded post-decode reverse_reachable and predecessor_order, frozen component fixtures, test runner and observed static/CI hook. No raw parser, full wire, native build, proof, installed integration or product acceptance claim.",
+  "smallest_sound_next_step": "Owner may retain these exact source-bound component test/review results, complete the applicable inherited engineering checks for any broader claim, and separately freeze/qualify the next bounded integration boundary. Do not emit public accepted replay results based on this component result.",
+  "source_pins_unchanged_during_review": true
+}

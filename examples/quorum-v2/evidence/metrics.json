@@ -1,0 +1,68 @@
+{
+  "schema": "quorum/measured-local-accounting/2",
+  "scope": "Three-seat synthetic companion with actual admitted V1 transport-arm replay; file bytes separate from conservative memory/input budget. Shared files may overlap categories.",
+  "message_files": {
+    "assessment_policy": {
+      "bytes": 435,
+      "sha256": "0ec0dad504fb1af52a6bbc7c30019c975d6756c4143723f63f6a0fb6d46299b8"
+    },
+    "assessment_registry": {
+      "bytes": 231,
+      "sha256": "d5795decce33a00e3f532084555848239536858ffd428673efe1a9719666a774"
+    },
+    "assessment_admissions": {
+      "bytes": 2227,
+      "sha256": "266c0eb4a157c6bd9a406e523078030bd543eb2e4271568d6e67556979519aa6"
+    },
+    "assessment_ballot": {
+      "bytes": 2289,
+      "sha256": "de9435279358a060748f25cd887e5541df45cf2f696c949e0fb961eafc263d0c"
+    },
+    "invocation": {
+      "bytes": 3501,
+      "sha256": "52e4566911a7a734b81cf0ed0789fcac9ae6ddc3b166aa240ed2f73d2deacaa7"
+    },
+    "request": {
+      "bytes": 4780,
+      "sha256": "83c696b9112d91756465327abf016dc7c6b8b09133406a98b5146e70cb502902"
+    },
+    "checker_descriptor": {
+      "bytes": 3016,
+      "sha256": "262db12783fb3e9e3f1e906e1591375774d86f10260c5547bc32ab760c79547e"
+    },
+    "envelope": {
+      "bytes": 4862,
+      "sha256": "1b325b7936aeb79dd34b6d866e95b51ef627e26a3060276757a9d61098e77fb4"
+    },
+    "package": {
+      "bytes": 23700,
+      "sha256": "fa81968b4a14642b5444b7fd39613a79cb29b4be9ea26e4c2e654f0ddfd4e906"
+    },
+    "share": {
+      "bytes": 151,
+      "sha256": "d3ed9a8dd0e1cd0bee6f02001307a777a1578bd147b76140e102927258385b81"
+    }
+  },
+  "message_unique_named_file_bytes": 45192,
+  "conservative_product_accounting": {
+    "conservative_message_total_bytes": 55630,
+    "contained_source_bytes_counted_again": true,
+    "declared_carrier_bytes": 39151,
+    "decoder_bundle_declared_file_bytes": 1938640,
+    "external_runtime_declared_bytes": 2123288,
+    "message_budget_bytes": 65536,
+    "policy_input_bytes": 5182,
+    "replay_metadata_bytes": 11297,
+    "setup_accounting": "SEPARATE_CATEGORIES_MAY_SHARE_FILES",
+    "setup_not_counted": "Python standard library, transitive libraries and operating system",
+    "shared_checker_helper_bytes": 312112,
+    "shared_python_executable_bytes": 67720
+  },
+  "observed_replay_elapsed_ns": 295439928,
+  "model_calls": 0,
+  "model_tokens": "NOT_APPLICABLE_NO_MODEL_CALL",
+  "money_cost": "NOT_MEASURED",
+  "python_version": "3.14.7 (main, Aug 12 2026, 13:41:09) [GCC 16.1.1 20260430]",
+  "platform": "linux",
+  "unmeasured_shared_setup": "Full Python standard library, transitive libraries and operating system"
+}

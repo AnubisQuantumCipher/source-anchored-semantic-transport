@@ -1,0 +1,11 @@
+{
+  "candidate_execution": false,
+  "finding": {
+    "path": "/dev/shm/semantic-transport-replay-integration-20261029/code-review-01/import-loader-late-finding.json",
+    "sha256": "1c47d07d1328b5543d2a9486a42f828a84e0348990d5b705a5759434494d2a89"
+  },
+  "freeze": "source-freeze-01.json",
+  "reason": "Late independent review demonstrated SourceFileLoader may execute cached bytecode whose current backing source matches pinned bytes. Original review and freeze retained; no new candidate was run. Owned-source loader repair and new independent source freeze required.",
+  "schema": "quorum/source-freeze-eligibility-update/1",
+  "status": "INELIGIBLE_FOR_EXECUTION"
+}

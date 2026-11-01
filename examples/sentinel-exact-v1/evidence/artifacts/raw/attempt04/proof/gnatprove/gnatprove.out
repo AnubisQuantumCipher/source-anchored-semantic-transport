@@ -1,0 +1,72 @@
+=========================
+Summary of SPARK analysis
+=========================
+
+-------------------------------------------------------------------------------------------------
+SPARK Analysis results        Total        Flow                    Provers   Justified   Unproved
+-------------------------------------------------------------------------------------------------
+Data Dependencies                25          25                          .           .          .
+Flow Dependencies                 5           5                          .           .          .
+Initialization                    .           .                          .           .          .
+Non-Aliasing                      .           .                          .           .          .
+Run-time Checks                  34           .                    34 (Z3)           .          .
+Assertions                        8           .    8 (Trivial 33%, Z3 67%)           .          .
+Functional Contracts              8           .     8 (Trivial 3%, Z3 97%)           .          .
+LSP Verification                  .           .                          .           .          .
+Termination                      35          35                          .           .          .
+Concurrency                       .           .                          .           .          .
+-------------------------------------------------------------------------------------------------
+Total                           115    65 (57%)                   50 (43%)           .          .
+
+
+max steps used for successful proof: 902
+
+============================
+Most difficult proved checks
+============================
+
+No check found with max time greater than 1 second
+
+========================
+Detailed analysis report
+========================
+
+Analyzed 1 unit
+in unit sentinel_policy, 37 subprograms and packages out of 37 analyzed
+  Sentinel_Policy at sentinel_policy.ads:1 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Sentinel_Policy.Accepted_Count at sentinel_policy.ads:69 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Sentinel_Policy.All_Linked at sentinel_policy.adb:33 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Sentinel_Policy.All_Match at sentinel_policy.adb:71 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (2 checks)
+  Sentinel_Policy.Answer_Admissible at sentinel_policy.ads:97 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Sentinel_Policy.Authority at sentinel_policy.ads:81 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Sentinel_Policy.Begin_Refinement at sentinel_policy.ads:169 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (2 checks)
+  Sentinel_Policy.Bind_Source at sentinel_policy.ads:123 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Sentinel_Policy.Candidate_Of at sentinel_policy.ads:68 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Sentinel_Policy.Claims_Valid at sentinel_policy.adb:27 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (3 checks)
+  Sentinel_Policy.Current_Challenge at sentinel_policy.adb:91 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Sentinel_Policy.Current_Differs at sentinel_policy.adb:87 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Sentinel_Policy.Current_Round at sentinel_policy.ads:67 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Sentinel_Policy.Documentary_Of at sentinel_policy.ads:91 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Sentinel_Policy.Eligible at sentinel_policy.ads:76 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Sentinel_Policy.Expected_Of at sentinel_policy.ads:71 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Sentinel_Policy.Failure_Count at sentinel_policy.ads:85 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (10 checks)
+  Sentinel_Policy.Failure_History at sentinel_policy.ads:83 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Sentinel_Policy.Fatal at sentinel_policy.ads:75 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Sentinel_Policy.History_Preserved at sentinel_policy.ads:95 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (19 checks)
+  Sentinel_Policy.Identity_Of at sentinel_policy.ads:65 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Sentinel_Policy.Identity_Valid at sentinel_policy.adb:2 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Sentinel_Policy.Initialize at sentinel_policy.ads:105 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Sentinel_Policy.Initialized at sentinel_policy.ads:64 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Sentinel_Policy.Link_Valid at sentinel_policy.adb:16 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Sentinel_Policy.New_Candidate at sentinel_policy.adb:44 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Sentinel_Policy.Qualification_Requested at sentinel_policy.ads:73 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Sentinel_Policy.Questions_Of at sentinel_policy.ads:66 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Sentinel_Policy.Record_Answer at sentinel_policy.ads:135 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (2 checks)
+  Sentinel_Policy.Refinement_Admissible at sentinel_policy.ads:101 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Sentinel_Policy.Repairs_Valid at sentinel_policy.adb:37 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Sentinel_Policy.Request_Qualification at sentinel_policy.ads:160 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Sentinel_Policy.Result_Of at sentinel_policy.ads:93 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Sentinel_Policy.Roster_Valid at sentinel_policy.adb:9 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (3 checks)
+  Sentinel_Policy.Session at sentinel_policy.ads:200 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Sentinel_Policy.State_Of at sentinel_policy.ads:77 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (1 checks)
+  Sentinel_Policy.Valid at sentinel_policy.ads:63 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)

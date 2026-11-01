@@ -1,0 +1,135 @@
+{
+  "assurance_boundary": [
+    "This reviews retained public projections; no provider journal authentication/backend dispatch proof",
+    "Source recovery/citations exact; semantic completeness/source truth not proved",
+    "Assessor independent blinded completion not asserted due disclosed workflow",
+    "Original paired trial failed; no comparative benefit established",
+    "Receiver ad hoc assert-with-write remains observed engineering discipline failure, not accepted reusable policy",
+    "No private assessment-X07 access or new model dispatch performed"
+  ],
+  "ci_review": {
+    "quorum-v2.yml": "Original frozen SHA256SUMS preserved; isolated original87 normal/O. New coherence continuity and9 controls require additive workflow step owned by root; no implied Ubuntu live replay.",
+    "receiving-repair.yml": "Pinned actions, read-onlypermissions,5min,isolatednormal/O tests and exactretainedreceipt checks; executes no model/native"
+  },
+  "current_pins": {
+    "examples/receiving-repair-v2/README.md": "059189bab921dfd02204d14b9803a6691c33ba958ba1fb82b99653669e986187",
+    "examples/receiving-repair-v2/answer.json": "e496c17a2f2d4eb94fc1744f0590f2685e43cf4a22c484a03376e42b825cfd13",
+    "examples/receiving-repair-v2/checks/normal.json": "bac81d10fa343af8b5ff885543f266a934bb1e7a4b290663df151ba82a207cd5",
+    "examples/receiving-repair-v2/checks/normal.stderr": "caa224b8b8bf0ba386eb1b97f6e91fabdc40b59d9d77c24c7ff843637cd96b24",
+    "examples/receiving-repair-v2/checks/normal.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "examples/receiving-repair-v2/checks/optimized.json": "4509ba723832542fcbbfb55bb6eafc91a852a564dfe356f730d102c73e45be28",
+    "examples/receiving-repair-v2/checks/optimized.stderr": "050a504554dace743ede6959f7fa433c0f125fbedb9e1bd151d4b36f9f398b46",
+    "examples/receiving-repair-v2/checks/optimized.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "examples/receiving-repair-v2/evidence.tar.gz": "48c721782d359f4d954ea74fdfa5c6f2cd4ca5de0fd013a5a56110476e4b944f",
+    "examples/receiving-repair-v2/history/01/README.md": "a9f171493ab994d12592624950062e0b055006df10de8affb6afe3f29c0735b1",
+    "examples/receiving-repair-v2/history/01/checks/normal.json": "560896904e01821caef4249b3a35dabc1dbcc42faea5fa90470ebd8ef43d6fee",
+    "examples/receiving-repair-v2/history/01/checks/normal.stderr": "c5b859dbb3f297b270d76120db75a945e83fafd82321a2e6f1a37e1dc80d3875",
+    "examples/receiving-repair-v2/history/01/checks/normal.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "examples/receiving-repair-v2/history/01/checks/optimized.json": "9732cba7c3979ee3eef0ac101f0af30f7c3ee0bc5b980e47ac122fc9b3d4b771",
+    "examples/receiving-repair-v2/history/01/checks/optimized.stderr": "d91b50c314f81dc159137785c91db5bd113b6de2c7eb9201154bea95e96b66fe",
+    "examples/receiving-repair-v2/history/01/checks/optimized.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "examples/receiving-repair-v2/history/01/former-top-level-receipt.json": "eaccf6cb611764e9c96091b11def2db0d4dd7a66a4acb68921f5e5d041477001",
+    "examples/receiving-repair-v2/history/01/pack_evidence.py": "96eb1aefb8b0604e94e78bdbe733bd2d5133f2e287882b6d257ef71a4e66ad7d",
+    "examples/receiving-repair-v2/history/01/receipt.json": "eaccf6cb611764e9c96091b11def2db0d4dd7a66a4acb68921f5e5d041477001",
+    "examples/receiving-repair-v2/history/01/receipt.py": "fc51852c332a3e5f53da1d6d685f00750c0feb4092a5cf33a207a50916b3700a",
+    "examples/receiving-repair-v2/history/01/test_receipt.py": "79232b5501ff6b18d4ce840298271dbae568e615e421b623a76afadbe76168bc",
+    "examples/receiving-repair-v2/meaning.zip": "2cb953366def4ad24302f6612ec027fdab8c6f44855d4479f6eed9b90dd7bac8",
+    "examples/receiving-repair-v2/pack_evidence.py": "96eb1aefb8b0604e94e78bdbe733bd2d5133f2e287882b6d257ef71a4e66ad7d",
+    "examples/receiving-repair-v2/receipt.json": "94113ae522d9f53ad0d8c467a098553b1ab644b7a1ec622896689c6b30cc4837",
+    "examples/receiving-repair-v2/receipt.py": "164da2a5dbbac26cfe589838cc67a8fb4a81b4812177cdde2de13d2090033a44",
+    "examples/receiving-repair-v2/share.txt": "130779e7bb59db9f4eabb3bb47690d213981e90d26efa124a77e390368a58322",
+    "examples/receiving-repair-v2/test_receipt.py": "af98d3f84d75fc356f5ef32e5a50ef6339a8ca764c4690ad58a4af424f2ce5a8"
+  },
+  "independent_coherently_resealed_mutations": [
+    {
+      "case": "coherent_capture",
+      "reason": "HELD_INPUT_CHANGED:receiver-capture/report.json",
+      "status": "REFUSED"
+    },
+    {
+      "case": "native_receipt",
+      "reason": "REVIEW_NATIVE_PIN",
+      "status": "REFUSED"
+    },
+    {
+      "case": "assessor_dispatch",
+      "reason": "HELD_INPUT_CHANGED:assessment/launch.json",
+      "status": "REFUSED"
+    },
+    {
+      "case": "source_swap",
+      "reason": "SOURCE_RECOVERY_CHANGED",
+      "status": "REFUSED"
+    }
+  ],
+  "next_acceptance_evidence": "Run exact final workflow commands against committed source and inspect hosted CI, preserving this receipt outside sealed example.",
+  "review_model": "gpt-6.1-sol",
+  "runs": [
+    {
+      "command": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "examples/receiving-repair-v2/test_receipt.py"
+      ],
+      "exit": 0,
+      "stderr": "............................\n----------------------------------------------------------------------\nRan 28 tests in 0.136s\n\nOK\n",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "examples/receiving-repair-v2/receipt.py",
+        "--check"
+      ],
+      "exit": 0,
+      "stderr": "",
+      "stdout": "{\"status\": \"CHECKED\", \"files\": 344, \"archive\": {\"bytes\": 468081, \"sha256\": \"48c721782d359f4d954ea74fdfa5c6f2cd4ca5de0fd013a5a56110476e4b944f\"}, \"receipt\": {\"bytes\": 25992, \"sha256\": \"94113ae522d9f53ad0d8c467a098553b1ab644b7a1ec622896689c6b30cc4837\"}}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-O",
+        "-Werror",
+        "examples/receiving-repair-v2/test_receipt.py"
+      ],
+      "exit": 0,
+      "stderr": "............................\n----------------------------------------------------------------------\nRan 28 tests in 0.114s\n\nOK\n",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-O",
+        "-Werror",
+        "examples/receiving-repair-v2/receipt.py",
+        "--check"
+      ],
+      "exit": 0,
+      "stderr": "",
+      "stdout": "{\"status\": \"CHECKED\", \"files\": 344, \"archive\": {\"bytes\": 468081, \"sha256\": \"48c721782d359f4d954ea74fdfa5c6f2cd4ca5de0fd013a5a56110476e4b944f\"}, \"receipt\": {\"bytes\": 25992, \"sha256\": \"94113ae522d9f53ad0d8c467a098553b1ab644b7a1ec622896689c6b30cc4837\"}}\n"
+    }
+  ],
+  "schema": "transport/independent-public-receiving-review/2",
+  "source_review": [
+    "Bounded no-extract archive inventory; fixed immutable roots and current source comparison",
+    "Postlaunch report binds actual capture/native receipt/final/source pins",
+    "Capture projections contain tool events/final and whitelisted metadata only",
+    "Original trial failure, lower-profile refusal, side-effecting assert defect, wrong historical-pin attempt and assessor masking limitation retained",
+    "Fresh receipt verification and controls run under exact isolated workflow commands normal/O"
+  ],
+  "sources_unchanged": true,
+  "status": "TESTED_SCOPED_PASS"
+}

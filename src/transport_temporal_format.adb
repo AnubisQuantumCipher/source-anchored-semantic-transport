@@ -1,22 +1,13 @@
 package body Transport_Temporal_Format with SPARK_Mode is
    function Value (Wire : Wire_Buffer; Index : Field_Index) return Tick is
    begin
-      return Tick (Wire (4 * Index + 1)) * 16_777_216 +
-        Tick (Wire (4 * Index + 2)) * 65_536 +
-        Tick (Wire (4 * Index + 3)) * 256 + Tick (Wire (4 * Index + 4));
+      return ((Tick (Wire (4 * Index + 1)) * 16_777_216 +
+        Tick (Wire (4 * Index + 2)) * 65_536) +
+        Tick (Wire (4 * Index + 3)) * 256) + Tick (Wire (4 * Index + 4));
    end Value;
 
    function Projection (Wire : Wire_Buffer; Count : Field_Count) return Fields is
-      Result : Fields := [others => 0];
-   begin
-      for I in 1 .. Count loop
-         Result (I) := Value (Wire, I);
-         pragma Loop_Invariant
-           (for all J in 1 .. I => Result (J) = Value (Wire, J));
-         pragma Loop_Invariant (for all J in I + 1 .. Max_Fields => Result (J) = 0);
-      end loop;
-      return Result;
-   end Projection;
+     ([for I in Field_Index => (if I <= Count then Value (Wire, I) else 0)]);
 
    function Shape (Wire : Wire_Buffer; Length : Wire_Length) return Boolean is
    begin
@@ -138,6 +129,20 @@ package body Transport_Temporal_Format with SPARK_Mode is
         Fields_Match (Projection (Wire, (Length - 4) / 4), Item);
    end Represents;
 
+   procedure Same_Event_Valid (Left, Right : Fields; Offset : Natural)
+   with Ghost, Global => null, Always_Terminates,
+     Pre => Left = Right and then Offset <= Max_Fields - Event_Fields,
+     Post => Event_Valid (Left, Offset) = Event_Valid (Right, Offset)
+   is
+   begin
+      pragma Assert (for all I in Field_Index => Left (I) = Right (I));
+      pragma Assert
+        (Scope_Valid (Left, Offset + 1) = Scope_Valid (Right, Offset + 1));
+      pragma Assert (Left (Offset + 1) = Right (Offset + 1));
+      pragma Assert (Left (Offset + 11) = Right (Offset + 11));
+      pragma Assert (Left (Offset + 13) = Right (Offset + 13));
+   end Same_Event_Valid;
+
    procedure Prove_Frame_Validity
      (Wire : Wire_Buffer; Length : Wire_Length; Values : Fields; Count : Field_Count)
    is
@@ -150,9 +155,8 @@ package body Transport_Temporal_Format with SPARK_Mode is
       pragma Assert (Scope_Valid (Projected, 20) = Scope_Valid (Values, 20));
       pragma Assert (Coverage_Valid (Projected) = Coverage_Valid (Values));
       for I in 1 .. Max_Events loop
-         pragma Assert
-           (Event_Valid (Projected, Fixed_Fields + (I - 1) * Event_Fields) =
-            Event_Valid (Values, Fixed_Fields + (I - 1) * Event_Fields));
+         Same_Event_Valid
+           (Projected, Values, Fixed_Fields + (I - 1) * Event_Fields);
          pragma Loop_Invariant
            (for all J in 1 .. I =>
               Event_Valid (Projected, Fixed_Fields + (J - 1) * Event_Fields) =

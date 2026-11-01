@@ -1,0 +1,79 @@
+{
+  "schema": "independent-context-review/1",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "created_utc": "2026-10-30T04:48:07.147686+00:00",
+  "verdict": "PASS_SCOPED_CODE_AND_PURE_MOCKED_CONTROLS",
+  "source_pins_before": {
+    "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_document_context.py": "84c599cf82d391bcd83aa092335bfb1a393610c0231e932099e223cd722dbbdc",
+    "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_document_context.py": "7bc01877c646d11b10ff2f6e2a2e42828360462eeb1db345c8f3b7c1f1631fbc",
+    "/dev/shm/semantic-transport-large-document-20261030/fidelity-reference-build-01/independent-review/context-interface-oracle-01.json": "aebe782808200fcdfd67b3f25fe604bf574a455d5cf0c86b68b9d5ec7db4c38b",
+    "/dev/shm/semantic-transport-large-document-20261030/fidelity-reference-build-01/independent-review/context-controls-01/receipt.json": "d970ec92c53456de17bdfe48a6ab7db095e3ff5c8fd03ec04092a353b0739ed1"
+  },
+  "source_pins_after": {
+    "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tools/transport_document_context.py": "84c599cf82d391bcd83aa092335bfb1a393610c0231e932099e223cd722dbbdc",
+    "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_document_context.py": "7bc01877c646d11b10ff2f6e2a2e42828360462eeb1db345c8f3b7c1f1631fbc",
+    "/dev/shm/semantic-transport-large-document-20261030/fidelity-reference-build-01/independent-review/context-interface-oracle-01.json": "aebe782808200fcdfd67b3f25fe604bf574a455d5cf0c86b68b9d5ec7db4c38b",
+    "/dev/shm/semantic-transport-large-document-20261030/fidelity-reference-build-01/independent-review/context-controls-01/receipt.json": "d970ec92c53456de17bdfe48a6ab7db095e3ff5c8fd03ec04092a353b0739ed1"
+  },
+  "pins_unchanged": true,
+  "runs": [
+    {
+      "label": "normal",
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "-c",
+        "import contextlib,os,runpy,subprocess,sys,resource\nfrom unittest.mock import patch\nresource.setrlimit(resource.RLIMIT_AS,(1073741824,1073741824))\nresource.setrlimit(resource.RLIMIT_FSIZE,(1048576,1048576))\ntarget=sys.argv[1];sys.argv=[target]\nwith contextlib.ExitStack() as g:\n g.enter_context(patch.object(subprocess,'Popen',side_effect=AssertionError('review process launch forbidden')))\n for n in ('system','posix_spawn','posix_spawnp'):\n  if hasattr(os,n):g.enter_context(patch.object(os,n,side_effect=AssertionError('review process launch forbidden')))\n runpy.run_path(target,run_name='__main__')\n",
+        "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_document_context.py"
+      ],
+      "exit": 0,
+      "elapsed_seconds": 0.09702516405377537,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "0fa6e9196f096183c02cc2acc9c66c1dc944647981973bb5cc84a89647a36d1e"
+    },
+    {
+      "label": "optimized",
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-O",
+        "-Werror",
+        "-c",
+        "import contextlib,os,runpy,subprocess,sys,resource\nfrom unittest.mock import patch\nresource.setrlimit(resource.RLIMIT_AS,(1073741824,1073741824))\nresource.setrlimit(resource.RLIMIT_FSIZE,(1048576,1048576))\ntarget=sys.argv[1];sys.argv=[target]\nwith contextlib.ExitStack() as g:\n g.enter_context(patch.object(subprocess,'Popen',side_effect=AssertionError('review process launch forbidden')))\n for n in ('system','posix_spawn','posix_spawnp'):\n  if hasattr(os,n):g.enter_context(patch.object(os,n,side_effect=AssertionError('review process launch forbidden')))\n runpy.run_path(target,run_name='__main__')\n",
+        "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/tests/test_transport_document_context.py"
+      ],
+      "exit": 0,
+      "elapsed_seconds": 0.10401073307730258,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "f196bef0973ff999dcbcf679ca035393cbb4be84e582dd7f9d09005e1f656ac4"
+    }
+  ],
+  "legacy_readback": {
+    "tools/transport_document.py": "f2b86ca3b6bf984114331bd3c49dbb2256106ded5658444b7bb183794620db6a",
+    "tools/transport_document_io.py": "f8724d0ab7213d2641cbeec2baf40f1b0d878e148f5d764c025d352f65776d3a",
+    "tools/transport_document_fidelity.py": "9f5ff3acbaa6d9e6c8470fbf7221ec75e1cdb57e22a178af53a782ed3abe4dee"
+  },
+  "findings": [],
+  "reviewed_properties": [
+    "separate parts retain source spans and exact bytes; virtual output offsets do not imply adjacency",
+    "gap scope is only between returned parts; no prefix/suffix or whole-source semantic coverage claim",
+    "dependency closure source ordering and merging use existing validated section machinery",
+    "65536 aggregate selected bytes,64 parts and32768 metadata cap fail closed",
+    "validation precedes part access; symlink, size, shortread and descriptor changes refuse",
+    "legacy raw concatenation behavior retained and explicitly exercised",
+    "no interpretation or execution authority; no qualification status produced"
+  ],
+  "limits": [
+    "validated() mocked in both14-test runs; archive/source cryptographic recovery not independently exercised here",
+    "no native/OCR/model execution",
+    "descriptor identity is not hostile concurrent-host attestation; trusted/private validated recovery context remains an assumption",
+    "structural context preservation does not prove semantic interpretation, document completeness or factual truth"
+  ],
+  "acceptance_next": "Root may separately admit the one source-package/context integration. Implementation remains subject to exact-source independent integration readback."
+}

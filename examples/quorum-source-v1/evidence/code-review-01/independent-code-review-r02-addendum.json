@@ -1,0 +1,11 @@
+{
+  "schema":"quorum/source-membership-independent-code-r02-addendum/1",
+  "reviewer":"/root/quorum_graph_oracle",
+  "source_sha256":"791e2ae4d8e08d563ba4ebef01b3e8588218bdc958e03656b0bf14dfce74e98f",
+  "manual_probes":"r02-private-probes.json",
+  "execution_evidence":"r02-private-results.json",
+  "status":"TESTED_PASS",
+  "coverage":"Direct _binary calls with valid canonical Base64 and used=65536, once with wrong declared length and once with oversized decoded data, both return DECODED_BYTE_BOUND/BLOB_INTEGRITY before LENGTH_MISMATCH.",
+  "scope_limit":"This is helper-specific precedence coverage. The public raw Body byte cap likely prevents cumulative decoded overflow from becoming reachable; this addendum does not claim a public-reachable overflow case or prove that reachability bound.",
+  "retention":"Original first-suite failure, repaired full-suite evidence, root findings and independent main review remain unchanged. No product edits."
+}

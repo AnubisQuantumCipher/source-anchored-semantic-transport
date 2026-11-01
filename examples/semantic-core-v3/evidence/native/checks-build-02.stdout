@@ -1,0 +1,10 @@
+Compile
+   [Ada]          core_checks.adb
+   [Ada]          transport_core_parse.adb
+   [Ada]          transport_eval.adb
+   [Ada]          transport_types.ads
+Bind
+   [gprbind]      core_checks.bexch
+   [Ada]          core_checks.ali
+Link
+   [link]         core_checks.adb

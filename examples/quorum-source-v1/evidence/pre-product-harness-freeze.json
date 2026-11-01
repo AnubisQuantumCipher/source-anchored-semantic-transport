@@ -1,0 +1,9 @@
+{
+  "bytes": 8222,
+  "note": "Frozen complete and focused expectations precede implementation; additional host types and output ownership assertions are contract-derived.",
+  "observed_epoch": 1793254700,
+  "path": "install/test_quorum_source.py",
+  "product_execution": "UNRUN",
+  "schema": "quorum/source-harness-freeze/1",
+  "sha256": "c974a469f6193b3c3549332a27b3c13337de415caf7f96073eee3c12c918bb07"
+}

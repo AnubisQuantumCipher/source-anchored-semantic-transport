@@ -1,0 +1,31 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-I",
+    "-S",
+    "-B",
+    "-Werror",
+    "-O",
+    "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028/examples/receiving-repair-v2/test_receipt.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "sources": {
+    "receipt.py": {
+      "bytes": 14601,
+      "sha256": "fc51852c332a3e5f53da1d6d685f00750c0feb4092a5cf33a207a50916b3700a"
+    },
+    "test_receipt.py": {
+      "bytes": 8131,
+      "sha256": "79232b5501ff6b18d4ce840298271dbae568e615e421b623a76afadbe76168bc"
+    }
+  },
+  "stderr": {
+    "bytes": 2237,
+    "sha256": "d91b50c314f81dc159137785c91db5bd113b6de2c7eb9201154bea95e96b66fe"
+  },
+  "stdout": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

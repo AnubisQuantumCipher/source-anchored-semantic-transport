@@ -1,0 +1,18 @@
+project Document_Buffer_Proof is
+   for Source_Dirs use (".", "../src");
+   for Source_Files use
+     ("transport_types.ads", "transport_buffers.ads", "document_transport_buffers.adb");
+   for Excluded_Source_Files use ("transport_buffers.adb");
+   for Object_Dir use external ("DOCUMENT_BUFFER_PROOF_OBJ");
+   package Naming is
+      for Body ("Transport_Buffers") use "document_transport_buffers.adb";
+   end Naming;
+   package Compiler is
+      for Default_Switches ("Ada") use
+        ("-gnat2022", "-gnatwa", "-gnatwe", "-gnatVa", "-gnata", "-gnatf");
+   end Compiler;
+   package Prove is
+      for Proof_Switches ("Ada") use
+        ("--level=2", "--report=all", "--warnings=error", "-j1");
+   end Prove;
+end Document_Buffer_Proof;

@@ -1,0 +1,52 @@
+{
+  "plain": {
+    "source_bytes": 404,
+    "explanation_bytes": 101,
+    "metadata_bytes": 1897,
+    "export_bytes": 9171,
+    "export_files": 6,
+    "source_count": 3,
+    "counting": "raw file bytes, no filesystem allocation or transport framing",
+    "comparison": "originals plus identical data available to both arms; benefit not measured"
+  },
+  "typed": {
+    "source_bytes": 76,
+    "explanation_bytes": 104,
+    "metadata_bytes": 5486,
+    "export_bytes": 11706,
+    "export_files": 4,
+    "source_count": 1,
+    "counting": "raw file bytes, no filesystem allocation or transport framing",
+    "comparison": "originals plus identical data available to both arms; benefit not measured"
+  },
+  "empty_text": {
+    "source_bytes": 0,
+    "explanation_bytes": 0,
+    "metadata_bytes": 1125,
+    "export_bytes": 7158,
+    "export_files": 4,
+    "source_count": 1,
+    "counting": "raw file bytes, no filesystem allocation or transport framing",
+    "comparison": "originals plus identical data available to both arms; benefit not measured"
+  },
+  "source_bound": {
+    "source_bytes": 65536,
+    "explanation_bytes": 0,
+    "metadata_bytes": 1132,
+    "export_bytes": 72717,
+    "export_files": 4,
+    "source_count": 1,
+    "counting": "raw file bytes, no filesystem allocation or transport framing",
+    "comparison": "originals plus identical data available to both arms; benefit not measured"
+  },
+  "source_count": {
+    "source_bytes": 0,
+    "explanation_bytes": 0,
+    "metadata_bytes": 6684,
+    "export_bytes": 17710,
+    "export_files": 19,
+    "source_count": 16,
+    "counting": "raw file bytes, no filesystem allocation or transport framing",
+    "comparison": "originals plus identical data available to both arms; benefit not measured"
+  }
+}

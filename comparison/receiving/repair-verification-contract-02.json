@@ -1,0 +1,45 @@
+{
+  "accounting": "Owner records all preparation, verification, active waits, failure and model retry cost. Parent handles budget admission; this contract does not reset consumption.",
+  "admission": "Source/config/task/oracle/interface/expected checks frozen, actual native preflight, exact source comparison, directory controls, current budget, and independent GPT-6.1 review required before any model dispatch.",
+  "authority": "Latest direct user instruction to fix all audit findings; coordinated by the existing owner under execution amendment and prepaid tranche14. No new privilege, provider purchase, external study or acceptance waiver.",
+  "changes": [
+    "New private create-only run root and each descendant parent",
+    "Only transport manifest content.root is relocated; output paths and interface repair label change",
+    "New launch name and retry provenance; no previous answer supplied to receiver"
+  ],
+  "evaluation": "Same citation checker and complete unchanged source oracle. Separate source-grounded narrative assessment; no fluent-summary proof. Original failure is retained independently; no combining retry success with baseline as an unbiased comparison.",
+  "first_failure": {
+    "outcome": "WORKFLOW_PARENT_PRIVATE; no source recovered; answer evidence empty; retained without editing",
+    "path": "/dev/shm/semantic-transport-receiving-20261029/receivers/transport/answer.json",
+    "sha256": "49b301e2ea0345f6757d60a7c556d880aff5706de0155175c017938c8d86deda"
+  },
+  "privacy": "Existing admitted mode0700 owner anchor plus every new descendant parent; source files copied with mode0600. No chmod of existing paths. No OS isolation or same-UID race exclusion claimed.",
+  "receiver": {
+    "dispatch": "OWNER_ONLY_AFTER_INDEPENDENT_REVIEW_AND_ADMISSION",
+    "fork_turns": "none",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "high",
+    "runs": 1,
+    "wall_seconds": 600
+  },
+  "resource_bounds": {
+    "file_bytes": 1048576,
+    "files": 128,
+    "helper_address_bytes": 536870912,
+    "helper_cpu_seconds": 30,
+    "helper_wall_seconds": 30,
+    "inherited_limits": "Never raised",
+    "run_bytes": 16777216
+  },
+  "schema": "transport/public-receiving-repair-contract/2",
+  "scope": "One fresh transport-only receiving repair verification of the same PUBLIC SC_MAIN task. The first paired trial remains failed. This run is an explicitly charged repair retry, not comparative benefit evidence, not heldout and not a replacement for the original result.",
+  "status": "FROZEN_BEFORE_REPAIR_STAGING_IMPLEMENTATION",
+  "unchanged": [
+    "Exact task.txt",
+    "Exact oracle.json and obligations",
+    "Exact package bytes and source identities",
+    "Exact annotations and declared hash/edge change context",
+    "Exact decoder/native workspace/retrieval core dependencies",
+    "Exact first-submission and observed-final equality rules"
+  ]
+}

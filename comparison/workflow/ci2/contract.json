@@ -1,0 +1,14 @@
+{
+  "schema": "transport/native-workflow-ci-path-contract/1",
+  "parent_commit": "c13b9a8a8dd1f6d3d2811705ab52ea9b85b1f303",
+  "parent_delta_reader_sha256": "63a1c21ef1241b1419fb4711b312d39fc8c9c3cb68c91f6cfa8d6192f1d6914c",
+  "parent_delta_receipt_sha256": "0f9be203f4adb7c94cdb93bcd25cf8faba07fecc0b778d10fb5084c01cbf60aa",
+  "correction": "Create /dev/shm/semantic-transport-native-workflow-20261029 mode 0700 and invoke the unchanged evidence controls with new direct child paths normal and optimized.",
+  "invariants": [
+    "No product, test, parent reader, prior receipt or observation is changed.",
+    "The pinned prior delta reader recomputes and enforces the entire sealed base inventory with only its declared workflow pin difference.",
+    "A separate create-only receipt binds that current derived object, the pinned prior receipt and all new correction files.",
+    "Keep both failed hosted runs. The second passed product controls before its test-root refusal.",
+    "No limits, tests or failure gates are weakened."
+  ]
+}

@@ -1,0 +1,78 @@
+name: Native source workflow controls
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  portable:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.14.10'
+          architecture: 'x64'
+          check-latest: false
+          allow-prereleases: false
+      - name: Install required native search tool on ephemeral runner
+        timeout-minutes: 2
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends ripgrep
+          /usr/bin/rg --version
+      - name: Portable original-source controls in both interpreter modes
+        env:
+          NATIVE_WORKFLOW_HELD_SHA256: 4679aae738dd3efb9c4840e677ec6e55e8a423dd7c8522a0addf6612a6bbfbc1
+        run: |
+          native_workflow_tmp="$(mktemp -d)"
+          python3 -I -S -B -Werror comparison/workflow/test_workflow.py \
+            --root "$native_workflow_tmp/normal" --mode portable \
+            --expect-product-sha256 "$NATIVE_WORKFLOW_HELD_SHA256"
+          python3 -I -S -B -O -Werror comparison/workflow/test_workflow.py \
+            --root "$native_workflow_tmp/optimized" --mode portable --optimized \
+            --expect-product-sha256 "$NATIVE_WORKFLOW_HELD_SHA256"
+          native_workflow_t_pin="$(sha256sum "$native_workflow_tmp/normal/T-preparation.json")"
+          native_workflow_receipt_pin="$(sha256sum "$native_workflow_tmp/normal/receipt.json")"
+          python3 -I -S -B -Werror comparison/workflow/test_native_tools.py \
+            --campaign-root "$native_workflow_tmp/normal" \
+            --expect-campaign-sha256 "${native_workflow_t_pin%% *}" \
+            --expect-campaign-receipt-sha256 "${native_workflow_receipt_pin%% *}" \
+            --root "$native_workflow_tmp/native-tools"
+      - name: Source and retained evidence guards
+        env:
+          NATIVE_WORKFLOW_READER_SHA256: fed2ceb65a2d55ba9f856b7bf92fc1c9157c64f44e5049e0dd0bd67d1e53d8dc
+        run: |
+          native_evidence_tmp=/dev/shm/semantic-transport-native-workflow-20261029
+          mkdir -m 700 "$native_evidence_tmp"
+          python3 -I -S -B -Werror comparison/workflow/test_evidence.py \
+            --root "$native_evidence_tmp/normal" \
+            --expect-reader-sha256 "$NATIVE_WORKFLOW_READER_SHA256"
+          python3 -I -S -B -O -Werror comparison/workflow/test_evidence.py \
+            --root "$native_evidence_tmp/optimized" --optimized \
+            --expect-reader-sha256 "$NATIVE_WORKFLOW_READER_SHA256"
+          python3 -I -S -B -Werror comparison/workflow/ci/test_delta.py
+          python3 -I -S -B -O -Werror comparison/workflow/ci/test_delta.py
+          python3 -I -S -B -Werror comparison/workflow/ci2/prepare_receipt.py --check
+          python3 -I -S -B -O -Werror comparison/workflow/ci2/prepare_receipt.py --check
+          python3 -I -S -B -Werror comparison/retrieval/prepare_receipt.py --check
+          python3 -I -S -B -Werror install/check_source.py
+          python3 -I -S -B -Werror - <<'PY'
+          import ast
+          from pathlib import Path
+          root = Path('comparison/workflow')
+          for name in ('native_workspace.py', 'test_workflow.py', 'test_boundaries.py',
+                       'test_native_tools.py', 'test_evidence.py', 'prepare_receipt.py',
+                       'ci/prepare_receipt.py', 'ci/test_delta.py', 'ci2/prepare_receipt.py'):
+              with (root / name).open('rb') as source:
+                  raw = source.read(131073)
+              if len(raw) > 131072:
+                  raise ValueError('source byte bound: ' + name)
+              tree = ast.parse(raw)
+              for node in ast.walk(tree):
+                  if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+                      if node.end_lineno - node.lineno + 1 > 60:
+                          raise ValueError('function size: ' + name + ':' + node.name)
+                  if isinstance(node, ast.While):
+                      raise ValueError('explicit while requires separate review: ' + name)
+          print('Function-size and explicit-loop guards pass; no termination proof claimed')
+          PY

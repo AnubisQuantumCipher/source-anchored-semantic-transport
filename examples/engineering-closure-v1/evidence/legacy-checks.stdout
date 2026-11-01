@@ -1,0 +1,4 @@
+START legacy-recipient
+legacy-recipient SUCCESS
+START legacy-mcp
+legacy-mcp SUCCESS

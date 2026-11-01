@@ -1,0 +1,44 @@
+{
+  "schema": "sentinel/foundation-source05-independent-byte-readback/1",
+  "status": "CHECKED_DECLARED_SOURCE05_PROOF_STATIC_RAW_CAPTURE",
+  "launch": {
+    "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/build-runs/attempt04/launch.json",
+    "bytes": 760349,
+    "sha256": "5d2e9b1953360b75a11d8ffa2e5cc69c04c54c8c75a6c1e6d412b006d33ef573"
+  },
+  "parent": {
+    "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/build-runs/attempt04/receipt.json",
+    "bytes": 870,
+    "sha256": "86719321ed4403cb805efecb822f6369b8516f36d90ab383edcb20293e1e0e13"
+  },
+  "terminal": {
+    "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/build-runs/attempt04/namespace-result.json",
+    "bytes": 6793,
+    "sha256": "f6714f7380d2cc14f08a90d1479f298406d35d7b840b2e3903ab314f5d5d0d8f"
+  },
+  "inventory": {
+    "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/build-runs/attempt04/capture/inventory.json",
+    "bytes": 58716,
+    "sha256": "3b03ba01a092460a0d5be2a77f08ce3b258b5125437a33d4b82954e8608a1184"
+  },
+  "regular_payloads": 108,
+  "actual_dispatched_roster": {
+    "path": "/dev/shm/semantic-transport-large-document-20261030/sentinel-01/build-oracle/policy-source05-roster.json",
+    "bytes": 7496,
+    "sha256": "c9be4819e618941729cbe47635a4dd89f1406df6859406df3d67a8e28cf0bba2"
+  },
+  "launch_roster_exact_equality": "MATCH_FRESH_SOURCE05",
+  "proof_summary_sha256": "51f1e87f263ed569c7f7b4aed120d3113f301b1f2ba3782139e40624c1d89374",
+  "machine_raw_sha256": "ddb487b6ac49427b51e0f2990d0b12853dd0f0fd096eb33914999862626796df",
+  "machine_record_counts": {
+    "proof": 50,
+    "flow": 65,
+    "entities": 37,
+    "warn_error": 0
+  },
+  "declared_unique_live_tool_runtime_files": 2494,
+  "tool_runtime_status": "ALL_DECLARED_PINS_MATCH_STABLE_READS",
+  "frozen_source_rosters": "ALL_MATCH_FROZEN_MINIMAL_SNAPSHOT",
+  "root_book_review_metadata_qualification": "b7c original held_roster=a328 was source04 comparison roster; actual launch bound fresh source05 c9be. Parent/author asked for additive distinction; no actual run mismatch.",
+  "limits": "No native/proof/compiler/model/process/census execution. Fixed artifact byte reads only. Declared trusted producer/kernel/runtime scope; no hostile-host attestation, wholebook/OCR/English/authority or general failure cardinality proof."
+}

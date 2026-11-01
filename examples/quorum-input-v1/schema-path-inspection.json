@@ -1,0 +1,78 @@
+{
+  "all_integer_maxima_present_and_at_most65536": true,
+  "all_reachable_graph_nodes_emitted": true,
+  "frame_admission": "Proposed128frame stack exceeds observed longest pinned schema path when one child at a time and frame-local continuations are used. Owner/reviewer must check implementation preserves that design; no arbitrary schema input admitted.",
+  "frame_budget": 128,
+  "longest_schema_frame_path": [
+    "#/$defs/ReplayBody",
+    "#/$defs/ReplayBody/properties/claims",
+    "#/$defs/ReplayBody/properties/claims/items",
+    "#/$defs/Claim",
+    "#/$defs/Claim/properties/payload",
+    "#/$defs/Claim/properties/payload/oneOf/1",
+    "#/$defs/StructuredPayload",
+    "#/$defs/StructuredPayload/properties/statement",
+    "#/$defs/Statement",
+    "#/$defs/Statement/properties/condition",
+    "#/$defs/Guard",
+    "#/$defs/Guard/properties/nodes",
+    "#/$defs/Guard/properties/nodes/items",
+    "#/$defs/GuardNode",
+    "#/$defs/GuardNode/oneOf/1",
+    "#/$defs/GuardNode/oneOf/1/properties/target",
+    "#/$defs/SourceKey",
+    "#/$defs/SourceKey/properties/logical_source_id",
+    "#/$defs/Id"
+  ],
+  "longest_schema_frame_path_nodes": 19,
+  "method": "Iterative structural schema-node graph and local-ref graph traversal, then topological longest-path dynamic accounting. These are inspection measurements, not a formal proof or runtime evaluator test. Each schema node consumes one frame; continuation state remains in that frame and only one child is scheduled at once.",
+  "reachable_integer_schemas": [
+    {
+      "maximum": 4096,
+      "path": "#/$defs/Blob/properties/bytes"
+    },
+    {
+      "maximum": 31,
+      "path": "#/$defs/GuardNode/oneOf/3/properties/right"
+    },
+    {
+      "maximum": 65536,
+      "path": "#/$defs/Selector/properties/end"
+    },
+    {
+      "maximum": 65536,
+      "path": "#/$defs/SourceKey/properties/bytes"
+    },
+    {
+      "maximum": 65536,
+      "path": "#/$defs/Pin/properties/bytes"
+    },
+    {
+      "maximum": 31,
+      "path": "#/$defs/Guard/properties/root"
+    },
+    {
+      "maximum": 31,
+      "path": "#/$defs/GuardNode/oneOf/3/properties/left"
+    },
+    {
+      "maximum": 31,
+      "path": "#/$defs/GuardNode/oneOf/2/properties/operand"
+    },
+    {
+      "maximum": 65536,
+      "path": "#/$defs/Selector/properties/begin"
+    },
+    {
+      "maximum": 65536,
+      "path": "#/$defs/ClaimKey/properties/bytes"
+    },
+    {
+      "maximum": 4096,
+      "path": "#/$defs/Selector/properties/quote_bytes"
+    }
+  ],
+  "reachable_nodes": 340,
+  "schema_sha256": "b6c7cafc1d4f1703188f7bdcb2150316feadc6b870eda9495ee146e2f429f8aa",
+  "start": "#/$defs/ReplayBody"
+}

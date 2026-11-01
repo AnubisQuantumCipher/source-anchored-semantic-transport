@@ -1,0 +1,51 @@
+{
+  "source_sha256": "4fc3f3475d9686ed87d6c6227dfe6edd63f12a53b9cb56821f26407a30310c67",
+  "results": [
+    {
+      "case": "all_positive_short",
+      "stdout_hex": "7b22617574686f72697479223a224e4f4e45222c22737461747573223a2245584143545f50494e4e45445f4558504f52545f42595445535f5245434f5645524544227d0a",
+      "complete_json_exact": true,
+      "output_exact": true,
+      "passed": true
+    },
+    {
+      "case": "zero",
+      "returned_count": 0,
+      "outcome": "STDOUT_WRITE",
+      "passed": true
+    },
+    {
+      "case": "boolean",
+      "returned_count": true,
+      "outcome": "STDOUT_WRITE",
+      "passed": true
+    },
+    {
+      "case": "negative",
+      "returned_count": -1,
+      "outcome": "STDOUT_WRITE",
+      "passed": true
+    },
+    {
+      "case": "impossible",
+      "returned_count": 2,
+      "outcome": "STDOUT_WRITE",
+      "passed": true
+    },
+    {
+      "case": "stdout_partial_then_EPIPE_stderr_short",
+      "exit": 1,
+      "stdout_hex": "7b22617574686f",
+      "stderr_hex": "7b22617574686f72697479223a224e4f4e45222c22636f6465223a2246494c4553595354454d5f494f222c22737461747573223a2252454655534544227d0a",
+      "diagnostic": {
+        "authority": "NONE",
+        "code": "FILESYSTEM_IO",
+        "status": "REFUSED"
+      },
+      "selected_file_remains": false,
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "native_or_producer_executed": false
+}

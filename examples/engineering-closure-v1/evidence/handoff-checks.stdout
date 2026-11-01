@@ -1,0 +1,6 @@
+START test_handoff_prepare
+test_handoff_prepare SUCCESS
+START test_handoff_reader
+test_handoff_reader SUCCESS
+START test_evidence_finish
+test_evidence_finish SUCCESS

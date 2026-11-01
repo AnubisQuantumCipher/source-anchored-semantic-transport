@@ -1,0 +1,9 @@
+test_additional_frozen_review_probes (__main__.ClaimTests.test_additional_frozen_review_probes) ... ok
+test_body_first_and_owned_output (__main__.ClaimTests.test_body_first_and_owned_output) ... ok
+test_complete_manual_results (__main__.ClaimTests.test_complete_manual_results) ... ok
+test_independent_minimal_pairs (__main__.ClaimTests.test_independent_minimal_pairs) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.721s
+
+OK

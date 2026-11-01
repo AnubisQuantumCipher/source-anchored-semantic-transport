@@ -1,0 +1,156 @@
+{
+  "schema": "quorum/policy-contract/2",
+  "status": "FROZEN_FOR_IMPLEMENTATION",
+  "canonical_json": "UTF-8 JSON, sort_keys=True, separators=(comma,colon), ensure_ascii=False, no trailing LF; reading SHA256 covers complete reading object canonical bytes",
+  "input_templates": {
+    "policy": {
+      "schema": "quorum/threshold-policy/2",
+      "context": {
+        "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "required_seats": [
+        "seat1"
+      ],
+      "minimum_support": 1,
+      "minimum_families": 1,
+      "dissent_rule": "ELIGIBLE_OPPOSE_OR_DISPUTE_BLOCKS"
+    },
+    "registry": {
+      "schema": "quorum/held-registry/2",
+      "seats": [
+        {
+          "seat_id": "seat1",
+          "model_id": "model1",
+          "family_id": "family1"
+        }
+      ]
+    },
+    "admissions": {
+      "schema": "quorum/held-admissions/2",
+      "runs": [
+        {
+          "seat_id": "seat1",
+          "run_id": "run1",
+          "model_id": "model1",
+          "family_id": "family1",
+          "context": {
+            "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "raw_response_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "reading_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "state": "ACTIVE",
+          "origin": "SYNTHETIC_FIXTURE"
+        }
+      ]
+    },
+    "ballot": {
+      "schema": "quorum/ballot/2",
+      "context": {
+        "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "readings": [
+        {
+          "reading_id": "reading1",
+          "seat_id": "seat1",
+          "run_id": "run1",
+          "model_id": "model1",
+          "family_id": "family1",
+          "context": {
+            "claim_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "task_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "source_set_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "settings_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "raw_response_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "response_text": "SUPPORT",
+          "stance": "SUPPORT"
+        }
+      ]
+    }
+  },
+  "held_roots": "Policy, registry, admissions exact raw SHA256 are separate mandatory CLI/API arguments, externally chosen. Candidate cannot supply them. Hash match is relative integrity, not external-authentication proof. Roots are not embedded in package.",
+  "bounds": {
+    "aggregate_input_bytes": 65536,
+    "result_bytes": 32768,
+    "required_seats": 9,
+    "readings": 32,
+    "admissions": 32,
+    "semantic_records": 96,
+    "json_depth": 12,
+    "response_utf8_bytes": 4096,
+    "ordinary_id_ascii_chars": 32,
+    "run_id_ascii_chars": 128,
+    "model_id_ascii_chars": 128,
+    "semantic_records_definition": "registry.seats count + admissions.runs count + ballot.readings count (nested context records do not add records; depth/bytes remain independently bounded)"
+  },
+  "validation": "Closed objects, strict strings and integers, no floats, bool counts, duplicate JSON keys, invalid UTF-8, unknown fields or schemas. All SHA256 lowercase64hex. IDs [A-Za-z0-9_.:-]. Registry exactly covers required seats. Required seats lexicographically sorted unique. minimum_support <= number required; minimum_families <= minimum_support. Duplicate admission run_id or registry seat_id refuses. Admission for unknown seat or mismatched registry/context refuses even if no matching ballot reading. No network or source execution.",
+  "ballot_policy": "Candidate reading_id duplicate refuses. Candidate foreign seat, duplicated seat, duplicated run_id, missing admission, admission/reading linkage mismatch, response hash mismatch or withdrawn admission yields retained ineligible disposition. Every required seat needs one eligible reading including ABSTAIN before threshold passes. Same response bytes alone are not duplicate. All stance facts and digests are bound by externally held reading SHA256; this does not prove response meaning supports stance.",
+  "reason_order": [
+    "NOT_REQUIRED_SEAT",
+    "DUPLICATE_SEAT",
+    "DUPLICATE_RUN",
+    "MISSING_ADMISSION",
+    "BINDING_MISMATCH",
+    "RESPONSE_DIGEST_MISMATCH",
+    "WITHDRAWN"
+  ],
+  "verdict_order": [
+    "MISSING_ELIGIBLE_SEATS",
+    "BLOCKED_DISSENT",
+    "INSUFFICIENT_SUPPORT",
+    "INSUFFICIENT_FAMILY_DIVERSITY",
+    "RECORDED_SUPPORT_THRESHOLD_MET"
+  ],
+  "stance_values": [
+    "ABSTAIN",
+    "DISPUTE",
+    "OPPOSE",
+    "SUPPORT"
+  ],
+  "origin_values": [
+    "OBSERVED_BINDING",
+    "SYNTHETIC_FIXTURE"
+  ],
+  "admission_states": [
+    "ACTIVE",
+    "WITHDRAWN"
+  ],
+  "result_projection": {
+    "verdict": "one verdict_order value",
+    "reasons": "all failed policy conditions in verdict_order except final success",
+    "missing_seats": "sorted list",
+    "support_count": "eligible SUPPORT count",
+    "support_families": "sorted unique eligible SUPPORT family IDs",
+    "eligible_count": "count of eligible readings",
+    "provenance_class": "NO_ELIGIBLE_READINGS / OBSERVED_ONLY / SYNTHETIC_ONLY / MIXED",
+    "cross_family_policy_satisfied": "true iff verdict is RECORDED_SUPPORT_THRESHOLD_MET and minimum_families >=2",
+    "dispositions": "sorted by reading_id, each reading_id/eligible/reasons plus complete retained reading",
+    "raw_stance_counts": "all readings",
+    "eligible_stance_counts": "eligible only",
+    "actual_support_is_cross_family": "true iff number supporting assigned families >=2",
+    "policy_requires_cross_family": "true iff minimum_families >=2"
+  },
+  "scope": {
+    "authority": "NONE",
+    "source_truth": "NOT_ASSESSED",
+    "interpretation": "NOT_CHECKED",
+    "provider_authentication": "NOT_ESTABLISHED",
+    "error_independence": "NOT_ESTABLISHED",
+    "family_identity": "HELD_REGISTRY_ASSIGNMENT_ONLY",
+    "prompt_settings_source_bytes": "DIGEST_REFERENCES_ONLY_NOT_REPLAYED",
+    "response_bytes": "UTF8_TEXT_DIGEST_CHECKED",
+    "origin_class": "Externally held origin declarations only; OBSERVED_ONLY is not independently authenticated observation or provider proof"
+  },
+  "dissent": "Eligible OPPOSE or DISPUTE blocks; all ineligible dissent remains visible in dispositions/raw counts but does not veto. Abstentions remain visible. No free-form challenge channel in this version; explicit DISPUTE is blocking when eligible. Withdrawals are state in the separately pinned admission document and never erase readings.",
+  "raw_json": "Four inputs may use JSON whitespace; held root hashes cover exact raw bytes. Reading-object digest uses canonical no-LF bytes. Result is canonical JSON plus CLI terminal LF.",
+  "refusal": "Schema, input or trusted-root inconsistency produces status REFUSED with nonempty fixed code; no partial threshold result. Candidate qualification failures produce status EVALUATED with retained reasons."
+}

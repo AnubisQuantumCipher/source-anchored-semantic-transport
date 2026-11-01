@@ -1,0 +1,2434 @@
+ info: initialization of "Size" proved
+--> transport_buffers.adb:7:07
+
+ info: index check proved
+--> transport_buffers.adb:14:30
+
+ info: overflow check proved
+--> transport_buffers.adb:23:39
+
+ info: index check proved
+--> transport_buffers.adb:23:39
+
+ info: loop invariant initialization proved
+--> transport_buffers.adb:25:13
+
+ info: loop invariant preservation proved
+--> transport_buffers.adb:25:13
+
+ info: index check proved
+--> transport_buffers.adb:25:47
+
+ info: overflow check proved
+--> transport_buffers.adb:25:64
+
+ info: index check proved
+--> transport_buffers.adb:25:64
+
+ info: range check proved
+--> transport_buffers.adb:28:27
+
+ info: overflow check proved
+--> transport_buffers.adb:43:24
+
+ info: index check proved
+--> transport_buffers.adb:43:24
+
+ info: loop invariant initialization proved
+--> transport_buffers.adb:45:13
+
+ info: loop invariant preservation proved
+--> transport_buffers.adb:45:13
+
+ info: overflow check proved
+--> transport_buffers.adb:45:50
+
+ info: index check proved
+--> transport_buffers.adb:45:50
+
+ info: index check proved
+--> transport_buffers.adb:45:68
+
+ info: loop invariant initialization proved
+--> transport_buffers.adb:47:13
+
+ info: loop invariant preservation proved
+--> transport_buffers.adb:47:13
+
+ info: index check proved
+--> transport_buffers.adb:47:48
+
+ info: index check proved
+--> transport_buffers.adb:47:72
+
+ info: range check proved
+--> transport_buffers.adb:49:21
+
+ info: loop invariant initialization proved
+--> transport_buffers.adb:66:13
+
+ info: loop invariant preservation proved
+--> transport_buffers.adb:66:13
+
+ info: index check proved
+--> transport_buffers.adb:66:42
+
+ info: index check proved
+--> transport_buffers.adb:66:54
+
+ info: aspect Always_Terminates on "Read_Token" has been proved, subprogram will terminate
+--> transport_buffers.ads:4:14
+
+ info: initialization of "Item" proved
+--> transport_buffers.ads:6:07
+
+ info: initialization of "Result" proved
+--> transport_buffers.ads:6:26
+
+ info: data dependencies proved
+--> transport_buffers.ads:7:09
+
+ info: postcondition proved
+--> transport_buffers.ads:9:14
+
+ info: index check proved
+--> transport_buffers.ads:13:25
+
+ info: overflow check proved
+--> transport_buffers.ads:13:44
+
+ info: index check proved
+--> transport_buffers.ads:13:44
+
+ info: aspect Always_Terminates on "Append" has been proved, subprogram will terminate
+--> transport_buffers.ads:16:14
+
+ info: initialization of "Result" proved
+--> transport_buffers.ads:18:36
+
+ info: data dependencies proved
+--> transport_buffers.ads:19:09
+
+ info: postcondition proved
+--> transport_buffers.ads:21:08
+
+ info: index check proved
+--> transport_buffers.ads:26:21
+
+ info: index check proved
+--> transport_buffers.ads:26:38
+
+ info: overflow check proved
+--> transport_buffers.ads:28:30
+
+ info: index check proved
+--> transport_buffers.ads:28:30
+
+ info: index check proved
+--> transport_buffers.ads:28:48
+
+ info: implicit aspect Always_Terminates on "Equal" has been proved, subprogram will terminate
+--> transport_buffers.ads:30:13
+
+ info: data dependencies proved
+--> transport_buffers.ads:33:09
+
+ info: postcondition proved
+--> transport_buffers.ads:34:14
+
+ info: index check proved
+--> transport_buffers.ads:36:44
+
+ info: index check proved
+--> transport_buffers.ads:36:56
+ info: aspect Always_Terminates on "Symbol_Op" has been proved, subprogram will terminate
+--> transport_decoder.adb:4:14
+
+ info: initialization of "Result" proved
+--> transport_decoder.adb:8:07
+
+ info: data dependencies proved
+--> transport_decoder.adb:9:09
+
+ info: postcondition proved
+--> transport_decoder.adb:10:40
+
+ info: initialization of "Id" proved
+--> transport_decoder.adb:12:07
+
+ info: initialization of "Item" proved
+--> transport_decoder.adb:13:07
+
+ info: index check proved
+--> transport_decoder.adb:19:25
+
+ info: range check proved
+--> transport_decoder.adb:23:13
+
+ info: index check proved
+--> transport_decoder.adb:23:28
+
+ info: range check proved
+--> transport_decoder.adb:24:18
+
+ info: precondition proved
+--> transport_decoder.adb:30:27
+
+ info: aspect Always_Terminates on "Step" has been proved, subprogram will terminate
+--> transport_decoder.adb:43:14
+
+ info: initialization of "Done" proved
+--> transport_decoder.adb:46:36
+
+ info: initialization of "Result" proved
+--> transport_decoder.adb:46:56
+
+ info: data dependencies proved
+--> transport_decoder.adb:47:09
+
+ info: postcondition proved
+--> transport_decoder.adb:48:36
+
+ info: index check proved
+--> transport_decoder.adb:50:37
+
+ info: initialization of "Item" proved
+--> transport_decoder.adb:51:07
+
+ info: range check proved
+--> transport_decoder.adb:53:18
+
+ info: precondition proved
+--> transport_decoder.adb:58:30
+
+ info: precondition proved
+--> transport_decoder.adb:63:13
+
+ info: aspect Always_Terminates on "Expand" has been proved, subprogram will terminate
+--> transport_decoder.adb:75:14
+
+ info: initialization of "Output" proved
+--> transport_decoder.adb:76:49
+
+ info: initialization of "Used" proved
+--> transport_decoder.adb:77:07
+
+ info: initialization of "Result" proved
+--> transport_decoder.adb:77:33
+
+ info: data dependencies proved
+--> transport_decoder.adb:78:09
+
+ info: initialization of "Done" proved
+--> transport_decoder.adb:82:07
+
+ info: range check proved
+--> transport_decoder.adb:87:29
+
+ info: loop invariant initialization proved
+--> transport_decoder.adb:91:33
+
+ info: loop invariant preservation proved
+--> transport_decoder.adb:91:33
+
+ info: precondition proved
+--> transport_decoder.adb:96:10
+
+ info: aspect Always_Terminates on "Decode" has been proved, subprogram will terminate
+--> transport_decoder.ads:4:14
+
+ info: initialization of "Output" proved
+--> transport_decoder.ads:5:49
+
+ info: initialization of "Used" proved
+--> transport_decoder.ads:6:07
+
+ info: initialization of "Result" proved
+--> transport_decoder.ads:6:33
+
+ info: data dependencies proved
+--> transport_decoder.ads:7:09
+
+ info: postcondition proved
+--> transport_decoder.ads:8:14
+
+ info: aspect Always_Terminates on "Check" has been proved, subprogram will terminate
+--> transport_decoder.ads:11:14
+
+ info: initialization of "Output" proved
+--> transport_decoder.ads:13:29
+
+ info: initialization of "Used" proved
+--> transport_decoder.ads:14:07
+
+ info: initialization of "Result" proved
+--> transport_decoder.ads:14:33
+
+ info: data dependencies proved
+--> transport_decoder.ads:15:09
+
+ info: postcondition proved
+--> transport_decoder.ads:17:08
+
+ info: index check proved
+--> transport_decoder.ads:18:46
+
+ info: index check proved
+--> transport_decoder.ads:18:59
+ info: implicit aspect Always_Terminates on "Header" has been proved, subprogram will terminate
+--> transport_graph_parse.adb:4:13
+
+ info: data dependencies proved
+--> transport_graph_parse.adb:5:09
+
+ info: postcondition proved
+--> transport_graph_parse.adb:6:14
+
+ info: aspect Always_Terminates on "Read_U16" has been proved, subprogram will terminate
+--> transport_graph_parse.adb:19:14
+
+ info: initialization of "Value" proved
+--> transport_graph_parse.adb:21:07
+
+ info: initialization of "Result" proved
+--> transport_graph_parse.adb:21:24
+
+ info: data dependencies proved
+--> transport_graph_parse.adb:22:09
+
+ info: postcondition proved
+--> transport_graph_parse.adb:24:14
+
+ info: index check proved
+--> transport_graph_parse.adb:26:37
+
+ info: index check proved
+--> transport_graph_parse.adb:27:36
+
+ info: index check proved
+--> transport_graph_parse.adb:36:31
+
+ info: index check proved
+--> transport_graph_parse.adb:36:64
+
+ info: range check proved
+--> transport_graph_parse.adb:37:18
+
+ info: aspect Always_Terminates on "Read_Node" has been proved, subprogram will terminate
+--> transport_graph_parse.adb:41:14
+
+ info: initialization of "Result" proved
+--> transport_graph_parse.adb:43:42
+
+ info: data dependencies proved
+--> transport_graph_parse.adb:44:09
+
+ info: postcondition proved
+--> transport_graph_parse.adb:46:14
+
+ info: initialization of "Control" proved
+--> transport_graph_parse.adb:48:07
+
+ info: initialization of "Size" proved
+--> transport_graph_parse.adb:48:16
+
+ info: initialization of "Child" proved
+--> transport_graph_parse.adb:48:22
+
+ info: precondition proved
+--> transport_graph_parse.adb:50:07
+
+ info: precondition proved
+--> transport_graph_parse.adb:54:07
+
+ info: division check proved
+--> transport_graph_parse.adb:58:18
+
+ info: division check proved
+--> transport_graph_parse.adb:59:17
+
+ info: division check proved
+--> transport_graph_parse.adb:64:44
+
+ info: range check proved
+--> transport_graph_parse.adb:64:44
+
+ info: division check proved
+--> transport_graph_parse.adb:65:41
+
+ info: range check proved
+--> transport_graph_parse.adb:65:41
+
+ info: loop invariant initialization proved
+--> transport_graph_parse.adb:67:33
+
+ info: loop invariant preservation proved
+--> transport_graph_parse.adb:67:33
+
+ info: loop invariant initialization proved
+--> transport_graph_parse.adb:68:33
+
+ info: loop invariant preservation proved
+--> transport_graph_parse.adb:68:33
+
+ info: precondition proved
+--> transport_graph_parse.adb:69:10
+
+ info: range check proved
+--> transport_graph_parse.adb:74:42
+
+ info: range check proved
+--> transport_graph_parse.adb:81:31
+
+ info: cannot unroll loop (too many loop iterations) [info-unrolling-inlining]
+--> transport_graph_parse.adb:82:26
+
+ info: overflow check proved
+--> transport_graph_parse.adb:83:25
+
+ info: index check proved
+--> transport_graph_parse.adb:83:25
+
+ info: overflow check proved
+--> transport_graph_parse.adb:83:43
+
+ info: index check proved
+--> transport_graph_parse.adb:83:47
+
+ info: range check proved
+--> transport_graph_parse.adb:85:24
+
+ info: range check proved
+--> transport_graph_parse.adb:86:18
+
+ info: initialization of "Count" proved
+--> transport_graph_parse.adb:95:07
+
+ info: initialization of "Root" proved
+--> transport_graph_parse.adb:95:14
+
+ info: precondition proved
+--> transport_graph_parse.adb:102:07
+
+ info: precondition proved
+--> transport_graph_parse.adb:106:07
+
+ info: range check proved
+--> transport_graph_parse.adb:113:18
+
+ info: range check proved
+--> transport_graph_parse.adb:114:17
+
+ info: loop invariant initialization proved
+--> transport_graph_parse.adb:116:33
+
+ info: loop invariant preservation proved
+--> transport_graph_parse.adb:116:33
+
+ info: precondition proved
+--> transport_graph_parse.adb:117:10
+
+ info: initialization of "Raw_Count" proved
+--> transport_graph_parse.adb:134:07
+
+ info: precondition proved
+--> transport_graph_parse.adb:142:07
+
+ info: overflow check proved
+--> transport_graph_parse.adb:151:30
+
+ info: index check proved
+--> transport_graph_parse.adb:151:30
+
+ info: index check proved
+--> transport_graph_parse.adb:155:19
+
+ info: range check proved
+--> transport_graph_parse.adb:155:25
+
+ info: overflow check proved
+--> transport_graph_parse.adb:155:42
+
+ info: index check proved
+--> transport_graph_parse.adb:155:42
+
+ info: loop invariant initialization proved
+--> transport_graph_parse.adb:157:13
+
+ info: loop invariant preservation proved
+--> transport_graph_parse.adb:157:13
+
+ info: index check proved
+--> transport_graph_parse.adb:157:45
+
+ info: overflow check proved
+--> transport_graph_parse.adb:157:67
+
+ info: index check proved
+--> transport_graph_parse.adb:157:67
+
+ info: loop invariant initialization proved
+--> transport_graph_parse.adb:159:13
+
+ info: loop invariant preservation proved
+--> transport_graph_parse.adb:159:13
+
+ info: overflow check proved
+--> transport_graph_parse.adb:159:28
+
+ info: index check proved
+--> transport_graph_parse.adb:159:57
+
+ info: range check proved
+--> transport_graph_parse.adb:161:16
+
+ info: initialization of "Count" proved
+--> transport_graph_parse.adb:170:07
+
+ info: initialization of "Value" proved
+--> transport_graph_parse.adb:170:14
+
+ info: precondition proved
+--> transport_graph_parse.adb:177:07
+
+ info: loop invariant initialization proved
+--> transport_graph_parse.adb:183:33
+
+ info: loop invariant preservation proved
+--> transport_graph_parse.adb:183:33
+
+ info: loop invariant initialization proved
+--> transport_graph_parse.adb:184:33
+
+ info: loop invariant preservation proved
+--> transport_graph_parse.adb:184:33
+
+ info: index check proved
+--> transport_graph_parse.adb:184:65
+
+ info: precondition proved
+--> transport_graph_parse.adb:185:10
+
+ info: range check proved
+--> transport_graph_parse.adb:190:21
+
+ info: aspect Always_Terminates on "Read_Graph" has been proved, subprogram will terminate
+--> transport_graph_parse.ads:6:14
+
+ info: initialization of "G" proved
+--> transport_graph_parse.ads:8:07
+
+ info: initialization of "Result" proved
+--> transport_graph_parse.ads:8:22
+
+ info: data dependencies proved
+--> transport_graph_parse.ads:9:09
+
+ info: postcondition proved
+--> transport_graph_parse.ads:10:14
+
+ info: aspect Always_Terminates on "Read_Map" has been proved, subprogram will terminate
+--> transport_graph_parse.ads:12:14
+
+ info: initialization of "Map" proved
+--> transport_graph_parse.ads:14:07
+
+ info: initialization of "Result" proved
+--> transport_graph_parse.ads:14:27
+
+ info: data dependencies proved
+--> transport_graph_parse.ads:15:09
+
+ info: postcondition proved
+--> transport_graph_parse.ads:16:14
+
+ info: index check proved
+--> transport_graph_parse.ads:17:44
+
+ info: aspect Always_Terminates on "Read_Path" has been proved, subprogram will terminate
+--> transport_graph_parse.ads:19:14
+
+ info: initialization of "Choices" proved
+--> transport_graph_parse.ads:21:07
+
+ info: initialization of "Count" proved
+--> transport_graph_parse.ads:21:27
+
+ info: initialization of "Result" proved
+--> transport_graph_parse.ads:21:52
+
+ info: data dependencies proved
+--> transport_graph_parse.ads:22:09
+
+ info: postcondition proved
+--> transport_graph_parse.ads:23:14
+
+ info: index check proved
+--> transport_graph_parse.ads:30:45
+
+ info: overflow check proved
+--> transport_graph_parse.ads:30:67
+
+ info: index check proved
+--> transport_graph_parse.ads:30:67
+
+ info: index check proved
+--> transport_graph_parse.ads:31:57
+ info: index check proved
+--> transport_graphs.adb:7:49
+
+ info: overflow check proved
+--> transport_graphs.adb:12:37
+
+ info: index check proved
+--> transport_graphs.adb:12:41
+
+ info: overflow check proved
+--> transport_graphs.adb:13:39
+
+ info: index check proved
+--> transport_graphs.adb:13:43
+
+ info: index check proved
+--> transport_graphs.adb:15:20
+
+ info: index check proved
+--> transport_graphs.adb:15:31
+
+ info: index check proved
+--> transport_graphs.adb:15:53
+
+ info: implicit aspect Always_Terminates on "Well_Formed" has been proved, subprogram will terminate
+--> transport_graphs.ads:32:13
+
+ info: index check proved
+--> transport_graphs.ads:35:18
+
+ info: index check proved
+--> transport_graphs.ads:36:18
+
+ info: index check proved
+--> transport_graphs.ads:37:18
+
+ info: index check proved
+--> transport_graphs.ads:37:51
+
+ info: index check proved
+--> transport_graphs.ads:38:22
+
+ info: index check proved
+--> transport_graphs.ads:38:56
+
+ info: index check proved
+--> transport_graphs.ads:39:24
+
+ info: index check proved
+--> transport_graphs.ads:39:54
+
+ info: index check proved
+--> transport_graphs.ads:40:37
+
+ info: index check proved
+--> transport_graphs.ads:41:20
+
+ info: index check proved
+--> transport_graphs.ads:41:33
+
+ info: data dependencies proved
+--> transport_graphs.ads:42:09
+
+ info: implicit aspect Always_Terminates on "Valid_Map" has been proved, subprogram will terminate
+--> transport_graphs.ads:44:13
+
+ info: index check proved
+--> transport_graphs.ads:47:49
+
+ info: data dependencies proved
+--> transport_graphs.ads:48:09
+
+ info: implicit aspect Always_Terminates on "Node_Preserved" has been proved, subprogram will terminate
+--> transport_graphs.ads:50:13
+
+ info: data dependencies proved
+--> transport_graphs.ads:53:09
+
+ info: postcondition proved
+--> transport_graphs.ads:55:14
+
+ info: index check proved
+--> transport_graphs.ads:56:51
+
+ info: index check proved
+--> transport_graphs.ads:57:52
+
+ info: index check proved
+--> transport_graphs.ads:58:54
+
+ info: overflow check proved
+--> transport_graphs.ads:60:51
+
+ info: index check proved
+--> transport_graphs.ads:60:55
+
+ info: index check proved
+--> transport_graphs.ads:61:44
+
+ info: overflow check proved
+--> transport_graphs.ads:61:59
+
+ info: index check proved
+--> transport_graphs.ads:61:63
+
+ info: index check proved
+--> transport_graphs.ads:63:34
+
+ info: index check proved
+--> transport_graphs.ads:63:45
+
+ info: index check proved
+--> transport_graphs.ads:64:28
+
+ info: index check proved
+--> transport_graphs.ads:64:47
+
+ info: implicit aspect Always_Terminates on "Preserves" has been proved, subprogram will terminate
+--> transport_graphs.ads:66:13
+
+ info: index check proved
+--> transport_graphs.ads:69:20
+
+ info: precondition proved
+--> transport_graphs.ads:71:09
+
+ info: range check proved
+--> transport_graphs.ads:71:51
+
+ info: index check proved
+--> transport_graphs.ads:73:52
+
+ info: data dependencies proved
+--> transport_graphs.ads:74:09
+
+ info: aspect Always_Terminates on "Check" has been proved, subprogram will terminate
+--> transport_graphs.ads:76:14
+
+ info: initialization of "Result" proved
+--> transport_graphs.ads:77:52
+
+ info: data dependencies proved
+--> transport_graphs.ads:78:09
+
+ info: postcondition proved
+--> transport_graphs.ads:79:14
+ info: index check proved
+--> transport_paths.adb:6:47
+
+ info: index check proved
+--> transport_paths.adb:9:23
+
+ info: precondition proved
+--> transport_paths.adb:19:24
+
+ info: index check proved
+--> transport_paths.adb:19:46
+
+ info: loop invariant initialization proved
+--> transport_paths.adb:20:33
+
+ info: loop invariant preservation proved
+--> transport_paths.adb:20:33
+
+ info: loop invariant initialization proved
+--> transport_paths.adb:22:13
+
+ info: loop invariant preservation proved
+--> transport_paths.adb:22:13
+
+ info: index check proved
+--> transport_paths.adb:22:44
+
+ info: loop invariant initialization proved
+--> transport_paths.adb:24:13
+
+ info: loop invariant preservation proved
+--> transport_paths.adb:24:13
+
+ info: index check proved
+--> transport_paths.adb:25:22
+
+ info: precondition proved
+--> transport_paths.adb:25:27
+
+ info: index check proved
+--> transport_paths.adb:25:49
+
+ info: index check proved
+--> transport_paths.adb:25:64
+
+ info: loop invariant initialization proved
+--> transport_paths.adb:27:13
+
+ info: loop invariant preservation proved
+--> transport_paths.adb:27:13
+
+ info: index check proved
+--> transport_paths.adb:28:26
+
+ info: index check proved
+--> transport_paths.adb:28:46
+
+ info: overflow check proved
+--> transport_paths.adb:28:49
+
+ info: loop invariant initialization proved
+--> transport_paths.adb:30:13
+
+ info: loop invariant preservation proved
+--> transport_paths.adb:30:13
+
+ info: overflow check proved
+--> transport_paths.adb:30:28
+
+ info: index check proved
+--> transport_paths.adb:30:56
+
+ info: precondition proved
+--> transport_paths.adb:38:38
+
+ info: aspect Always_Terminates on "Prove_Step" has been proved, subprogram will terminate
+--> transport_paths.adb:43:14
+
+ info: data dependencies proved
+--> transport_paths.adb:46:16
+
+ info: precondition proved
+--> transport_paths.adb:49:14
+
+ info: postcondition proved
+--> transport_paths.adb:49:14
+
+ info: precondition proved
+--> transport_paths.adb:50:20
+
+ info: precondition proved
+--> transport_paths.adb:54:25
+
+ info: assertion proved
+--> transport_paths.adb:54:25
+
+ info: range check proved
+--> transport_paths.adb:54:67
+
+ info: precondition proved
+--> transport_paths.adb:62:37
+
+ info: precondition proved
+--> transport_paths.adb:63:38
+
+ info: assertion proved
+--> transport_paths.adb:65:22
+
+ info: loop invariant initialization proved
+--> transport_paths.adb:68:13
+
+ info: loop invariant preservation proved
+--> transport_paths.adb:68:13
+
+ info: index check proved
+--> transport_paths.adb:68:47
+
+ info: index check proved
+--> transport_paths.adb:68:70
+
+ info: precondition proved
+--> transport_paths.adb:69:10
+
+ info: index check proved
+--> transport_paths.adb:69:56
+
+ info: assertion proved
+--> transport_paths.adb:70:25
+
+ info: precondition proved
+--> transport_paths.adb:74:13
+
+ info: assertion proved
+--> transport_paths.adb:74:13
+
+ info: range check proved
+--> transport_paths.adb:74:55
+
+ info: implicit aspect Always_Terminates on "Advance" has been proved, subprogram will terminate
+--> transport_paths.ads:10:13
+
+ info: data dependencies proved
+--> transport_paths.ads:12:09
+
+ info: postcondition proved
+--> transport_paths.ads:14:14
+
+ info: index check proved
+--> transport_paths.ads:16:51
+
+ info: index check proved
+--> transport_paths.ads:17:25
+
+ info: implicit aspect Always_Terminates on "Trace" has been proved, subprogram will terminate
+--> transport_paths.ads:20:13
+
+ info: data dependencies proved
+--> transport_paths.ads:22:09
+
+ info: postcondition proved
+--> transport_paths.ads:23:14
+
+ info: index check proved
+--> transport_paths.ads:24:51
+
+ info: index check proved
+--> transport_paths.ads:25:51
+
+ info: precondition proved
+--> transport_paths.ads:26:11
+
+ info: index check proved
+--> transport_paths.ads:26:39
+
+ info: index check proved
+--> transport_paths.ads:26:54
+
+ info: index check proved
+--> transport_paths.ads:28:29
+
+ info: index check proved
+--> transport_paths.ads:28:55
+
+ info: overflow check proved
+--> transport_paths.ads:28:58
+
+ info: index check proved
+--> transport_paths.ads:29:63
+
+ info: implicit aspect Always_Terminates on "Follow" has been proved, subprogram will terminate
+--> transport_paths.ads:31:13
+
+ info: data dependencies proved
+--> transport_paths.ads:33:09
+
+ info: postcondition proved
+--> transport_paths.ads:34:14
+
+ info: precondition proved
+--> transport_paths.ads:34:30
+
+ info: implicit aspect Always_Terminates on "Image" has been proved, subprogram will terminate
+--> transport_paths.ads:38:13
+
+ info: index check proved
+--> transport_paths.ads:39:35
+
+ info: data dependencies proved
+--> transport_paths.ads:40:09
+
+ info: implicit aspect Always_Terminates on "Same_Observation" has been proved, subprogram will terminate
+--> transport_paths.ads:42:13
+
+ info: index check proved
+--> transport_paths.ads:46:24
+
+ info: index check proved
+--> transport_paths.ads:46:52
+
+ info: index check proved
+--> transport_paths.ads:47:21
+
+ info: index check proved
+--> transport_paths.ads:47:50
+
+ info: index check proved
+--> transport_paths.ads:48:21
+
+ info: index check proved
+--> transport_paths.ads:48:52
+
+ info: index check proved
+--> transport_paths.ads:49:40
+
+ info: index check proved
+--> transport_paths.ads:50:34
+
+ info: overflow check proved
+--> transport_paths.ads:50:49
+
+ info: index check proved
+--> transport_paths.ads:50:53
+
+ info: index check proved
+--> transport_paths.ads:51:36
+
+ info: overflow check proved
+--> transport_paths.ads:51:52
+
+ info: index check proved
+--> transport_paths.ads:51:56
+
+ info: data dependencies proved
+--> transport_paths.ads:52:09
+
+ info: aspect Always_Terminates on "Prove_Path_Preservation" has been proved, subprogram will terminate
+--> transport_paths.ads:56:14
+
+ info: data dependencies proved
+--> transport_paths.ads:59:16
+
+ info: postcondition proved
+--> transport_paths.ads:62:08
+
+ info: precondition proved
+--> transport_paths.ads:62:37
+
+ info: index check proved
+--> transport_paths.ads:62:73
+
+ info: precondition proved
+--> transport_paths.ads:63:23
+
+ info: index check proved
+--> transport_paths.ads:63:58
+
+ info: precondition proved
+--> transport_paths.ads:64:08
+
+ info: precondition proved
+--> transport_paths.ads:65:21
+
+ info: precondition proved
+--> transport_paths.ads:66:22
+ info: index check proved
+--> transport_temporal.adb:15:26
+
+ info: index check proved
+--> transport_temporal.adb:15:54
+
+ info: index check proved
+--> transport_temporal.adb:16:26
+
+ info: index check proved
+--> transport_temporal.adb:17:26
+
+ info: index check proved
+--> transport_temporal.adb:18:26
+
+ info: index check proved
+--> transport_temporal.adb:20:29
+
+ info: index check proved
+--> transport_temporal.adb:20:52
+
+ info: range check proved
+--> transport_temporal.adb:45:53
+
+ info: range check proved
+--> transport_temporal.adb:52:55
+
+ info: loop invariant initialization proved
+--> transport_temporal.adb:62:13
+
+ info: loop invariant preservation proved
+--> transport_temporal.adb:62:13
+
+ info: index check proved
+--> transport_temporal.adb:63:50
+
+ info: precondition proved
+--> transport_temporal.adb:82:10
+
+ info: precondition proved
+--> transport_temporal.adb:84:12
+
+ info: precondition proved
+--> transport_temporal.adb:85:10
+
+ info: precondition proved
+--> transport_temporal.adb:87:12
+
+ info: precondition proved
+--> transport_temporal.adb:95:21
+
+ info: precondition proved
+--> transport_temporal.adb:96:21
+
+ info: precondition proved
+--> transport_temporal.adb:97:22
+
+ info: precondition proved
+--> transport_temporal.adb:101:11
+
+ info: precondition proved
+--> transport_temporal.adb:103:13
+
+ info: implicit aspect Always_Terminates on "Known" has been proved, subprogram will terminate
+--> transport_temporal.ads:45:13
+
+ info: data dependencies proved
+--> transport_temporal.ads:46:09
+
+ info: postcondition proved
+--> transport_temporal.ads:47:14
+
+ info: implicit aspect Always_Terminates on "Admitted" has been proved, subprogram will terminate
+--> transport_temporal.ads:52:13
+
+ info: data dependencies proved
+--> transport_temporal.ads:53:09
+
+ info: postcondition proved
+--> transport_temporal.ads:54:14
+
+ info: index check proved
+--> transport_temporal.ads:59:26
+
+ info: index check proved
+--> transport_temporal.ads:59:54
+
+ info: index check proved
+--> transport_temporal.ads:60:26
+
+ info: index check proved
+--> transport_temporal.ads:61:26
+
+ info: index check proved
+--> transport_temporal.ads:62:26
+
+ info: index check proved
+--> transport_temporal.ads:64:29
+
+ info: index check proved
+--> transport_temporal.ads:64:52
+
+ info: implicit aspect Always_Terminates on "In_Window" has been proved, subprogram will terminate
+--> transport_temporal.ads:66:13
+
+ info: data dependencies proved
+--> transport_temporal.ads:67:09
+
+ info: postcondition proved
+--> transport_temporal.ads:68:14
+
+ info: implicit aspect Always_Terminates on "Empty" has been proved, subprogram will terminate
+--> transport_temporal.ads:74:13
+
+ info: data dependencies proved
+--> transport_temporal.ads:76:09
+
+ info: postcondition proved
+--> transport_temporal.ads:77:14
+
+ info: implicit aspect Always_Terminates on "Last_Point" has been proved, subprogram will terminate
+--> transport_temporal.ads:83:13
+
+ info: data dependencies proved
+--> transport_temporal.ads:85:09
+
+ info: postcondition proved
+--> transport_temporal.ads:87:14
+
+ info: implicit aspect Always_Terminates on "First_Point" has been proved, subprogram will terminate
+--> transport_temporal.ads:89:13
+
+ info: data dependencies proved
+--> transport_temporal.ads:91:09
+
+ info: postcondition proved
+--> transport_temporal.ads:93:14
+
+ info: implicit aspect Always_Terminates on "Witness" has been proved, subprogram will terminate
+--> transport_temporal.ads:95:13
+
+ info: data dependencies proved
+--> transport_temporal.ads:96:09
+
+ info: postcondition proved
+--> transport_temporal.ads:97:14
+
+ info: index check proved
+--> transport_temporal.ads:99:42
+
+ info: implicit aspect Always_Terminates on "Coverage_Valid" has been proved, subprogram will terminate
+--> transport_temporal.ads:103:13
+
+ info: data dependencies proved
+--> transport_temporal.ads:104:09
+
+ info: postcondition proved
+--> transport_temporal.ads:105:14
+
+ info: implicit aspect Always_Terminates on "Whole_Window" has been proved, subprogram will terminate
+--> transport_temporal.ads:111:13
+
+ info: data dependencies proved
+--> transport_temporal.ads:112:09
+
+ info: postcondition proved
+--> transport_temporal.ads:113:14
+
+ info: precondition proved
+--> transport_temporal.ads:118:10
+
+ info: precondition proved
+--> transport_temporal.ads:120:12
+
+ info: precondition proved
+--> transport_temporal.ads:121:10
+
+ info: precondition proved
+--> transport_temporal.ads:123:12
+
+ info: implicit aspect Always_Terminates on "Open_Prefix" has been proved, subprogram will terminate
+--> transport_temporal.ads:125:13
+
+ info: data dependencies proved
+--> transport_temporal.ads:126:09
+
+ info: postcondition proved
+--> transport_temporal.ads:127:14
+
+ info: precondition proved
+--> transport_temporal.ads:131:21
+
+ info: precondition proved
+--> transport_temporal.ads:132:21
+
+ info: precondition proved
+--> transport_temporal.ads:133:22
+
+ info: precondition proved
+--> transport_temporal.ads:137:11
+
+ info: precondition proved
+--> transport_temporal.ads:139:13
+
+ info: aspect Always_Terminates on "Prove_Empty_Exclusion" has been proved, subprogram will terminate
+--> transport_temporal.ads:141:14
+
+ info: data dependencies proved
+--> transport_temporal.ads:142:16
+
+ info: postcondition proved
+--> transport_temporal.ads:144:14
+
+ info: aspect Always_Terminates on "Prove_Whole_Coverage" has been proved, subprogram will terminate
+--> transport_temporal.ads:146:14
+
+ info: data dependencies proved
+--> transport_temporal.ads:147:16
+
+ info: postcondition proved
+--> transport_temporal.ads:149:14
+
+ info: implicit aspect Always_Terminates on "Evaluate" has been proved, subprogram will terminate
+--> transport_temporal.ads:155:13
+
+ info: data dependencies proved
+--> transport_temporal.ads:156:09
+
+ info: postcondition proved
+--> transport_temporal.ads:157:14
+ info: loop invariant initialization proved
+--> transport_temporal_format.adb:15:13
+
+ info: loop invariant preservation proved
+--> transport_temporal_format.adb:15:13
+
+ info: index check proved
+--> transport_temporal_format.adb:15:44
+
+ info: range check proved
+--> transport_temporal_format.adb:15:62
+
+ info: loop invariant initialization proved
+--> transport_temporal_format.adb:16:33
+
+ info: loop invariant preservation proved
+--> transport_temporal_format.adb:16:33
+
+ info: overflow check proved
+--> transport_temporal_format.adb:16:48
+
+ info: index check proved
+--> transport_temporal_format.adb:16:77
+
+ info: division check proved
+--> transport_temporal_format.adb:25:62
+
+ info: division check proved
+--> transport_temporal_format.adb:26:22
+
+ info: overflow check proved
+--> transport_temporal_format.adb:31:53
+
+ info: index check proved
+--> transport_temporal_format.adb:31:53
+
+ info: precondition proved
+--> transport_temporal_format.adb:36:14
+
+ info: precondition proved
+--> transport_temporal_format.adb:46:14
+
+ info: precondition proved
+--> transport_temporal_format.adb:53:14
+
+ info: overflow check proved
+--> transport_temporal_format.adb:53:42
+
+ info: overflow check proved
+--> transport_temporal_format.adb:54:24
+
+ info: index check proved
+--> transport_temporal_format.adb:54:24
+
+ info: overflow check proved
+--> transport_temporal_format.adb:55:24
+
+ info: index check proved
+--> transport_temporal_format.adb:55:24
+
+ info: overflow check proved
+--> transport_temporal_format.adb:56:24
+
+ info: index check proved
+--> transport_temporal_format.adb:56:24
+
+ info: overflow check proved
+--> transport_temporal_format.adb:62:30
+
+ info: range check proved
+--> transport_temporal_format.adb:62:41
+
+ info: overflow check proved
+--> transport_temporal_format.adb:62:54
+
+ info: range check proved
+--> transport_temporal_format.adb:64:37
+
+ info: precondition proved
+--> transport_temporal_format.adb:65:12
+
+ info: overflow check proved
+--> transport_temporal_format.adb:65:46
+
+ info: overflow check proved
+--> transport_temporal_format.adb:65:56
+
+ info: overflow check proved
+--> transport_temporal_format.adb:72:50
+
+ info: index check proved
+--> transport_temporal_format.adb:72:50
+
+ info: overflow check proved
+--> transport_temporal_format.adb:73:43
+
+ info: index check proved
+--> transport_temporal_format.adb:73:43
+
+ info: overflow check proved
+--> transport_temporal_format.adb:74:47
+
+ info: index check proved
+--> transport_temporal_format.adb:74:47
+
+ info: overflow check proved
+--> transport_temporal_format.adb:75:46
+
+ info: index check proved
+--> transport_temporal_format.adb:75:46
+
+ info: overflow check proved
+--> transport_temporal_format.adb:76:44
+
+ info: index check proved
+--> transport_temporal_format.adb:76:44
+
+ info: overflow check proved
+--> transport_temporal_format.adb:77:46
+
+ info: index check proved
+--> transport_temporal_format.adb:77:46
+
+ info: overflow check proved
+--> transport_temporal_format.adb:78:45
+
+ info: index check proved
+--> transport_temporal_format.adb:78:45
+
+ info: overflow check proved
+--> transport_temporal_format.adb:79:44
+
+ info: index check proved
+--> transport_temporal_format.adb:79:44
+
+ info: overflow check proved
+--> transport_temporal_format.adb:80:46
+
+ info: index check proved
+--> transport_temporal_format.adb:80:46
+
+ info: precondition proved
+--> transport_temporal_format.adb:85:14
+
+ info: precondition proved
+--> transport_temporal_format.adb:98:14
+
+ info: overflow check proved
+--> transport_temporal_format.adb:110:47
+
+ info: index check proved
+--> transport_temporal_format.adb:110:47
+
+ info: precondition proved
+--> transport_temporal_format.adb:111:09
+
+ info: overflow check proved
+--> transport_temporal_format.adb:111:39
+
+ info: overflow check proved
+--> transport_temporal_format.adb:112:60
+
+ info: index check proved
+--> transport_temporal_format.adb:112:60
+
+ info: overflow check proved
+--> transport_temporal_format.adb:113:40
+
+ info: index check proved
+--> transport_temporal_format.adb:113:40
+
+ info: overflow check proved
+--> transport_temporal_format.adb:114:48
+
+ info: index check proved
+--> transport_temporal_format.adb:114:48
+
+ info: precondition proved
+--> transport_temporal_format.adb:121:12
+
+ info: overflow check proved
+--> transport_temporal_format.adb:121:48
+
+ info: overflow check proved
+--> transport_temporal_format.adb:121:58
+
+ info: index check proved
+--> transport_temporal_format.adb:121:88
+
+ info: index check proved
+--> transport_temporal_format.adb:123:26
+
+ info: division check proved
+--> transport_temporal_format.adb:129:54
+
+ info: range check proved
+--> transport_temporal_format.adb:129:54
+
+ info: division check proved
+--> transport_temporal_format.adb:129:73
+
+ info: range check proved
+--> transport_temporal_format.adb:129:73
+
+ info: division check proved
+--> transport_temporal_format.adb:138:54
+
+ info: range check proved
+--> transport_temporal_format.adb:138:54
+
+ info: division check proved
+--> transport_temporal_format.adb:144:69
+
+ info: range check proved
+--> transport_temporal_format.adb:144:69
+
+ info: assertion proved
+--> transport_temporal_format.adb:146:22
+
+ info: division check proved
+--> transport_temporal_format.adb:146:43
+
+ info: assertion proved
+--> transport_temporal_format.adb:147:22
+
+ info: precondition proved
+--> transport_temporal_format.adb:148:22
+
+ info: assertion proved
+--> transport_temporal_format.adb:148:22
+
+ info: precondition proved
+--> transport_temporal_format.adb:148:51
+
+ info: assertion proved
+--> transport_temporal_format.adb:149:22
+
+ info: precondition proved
+--> transport_temporal_format.adb:150:22
+
+ info: assertion proved
+--> transport_temporal_format.adb:150:22
+
+ info: precondition proved
+--> transport_temporal_format.adb:150:52
+
+ info: assertion proved
+--> transport_temporal_format.adb:151:22
+
+ info: precondition proved
+--> transport_temporal_format.adb:154:13
+
+ info: assertion proved
+--> transport_temporal_format.adb:154:13
+
+ info: precondition proved
+--> transport_temporal_format.adb:155:13
+
+ info: loop invariant initialization proved
+--> transport_temporal_format.adb:157:13
+
+ info: loop invariant preservation proved
+--> transport_temporal_format.adb:157:13
+
+ info: precondition proved
+--> transport_temporal_format.adb:158:15
+
+ info: overflow check proved
+--> transport_temporal_format.adb:158:52
+
+ info: overflow check proved
+--> transport_temporal_format.adb:158:62
+
+ info: precondition proved
+--> transport_temporal_format.adb:159:15
+
+ info: overflow check proved
+--> transport_temporal_format.adb:159:49
+
+ info: overflow check proved
+--> transport_temporal_format.adb:159:59
+
+ info: assertion proved
+--> transport_temporal_format.adb:161:22
+
+ info: implicit aspect Always_Terminates on "Value" has been proved, subprogram will terminate
+--> transport_temporal_format.ads:12:13
+
+ info: data dependencies proved
+--> transport_temporal_format.ads:13:16
+
+ info: postcondition proved
+--> transport_temporal_format.ads:14:14
+
+ info: implicit aspect Always_Terminates on "Projection" has been proved, subprogram will terminate
+--> transport_temporal_format.ads:19:13
+
+ info: data dependencies proved
+--> transport_temporal_format.ads:20:16
+
+ info: postcondition proved
+--> transport_temporal_format.ads:21:14
+
+ info: implicit aspect Always_Terminates on "Shape" has been proved, subprogram will terminate
+--> transport_temporal_format.ads:24:13
+
+ info: data dependencies proved
+--> transport_temporal_format.ads:25:16
+
+ info: postcondition proved
+--> transport_temporal_format.ads:26:14
+
+ info: division check proved
+--> transport_temporal_format.ads:29:62
+
+ info: division check proved
+--> transport_temporal_format.ads:30:22
+
+ info: implicit aspect Always_Terminates on "Scope_Valid" has been proved, subprogram will terminate
+--> transport_temporal_format.ads:32:13
+
+ info: data dependencies proved
+--> transport_temporal_format.ads:33:16
+
+ info: postcondition proved
+--> transport_temporal_format.ads:34:14
+
+ info: overflow check proved
+--> transport_temporal_format.ads:35:47
+
+ info: index check proved
+--> transport_temporal_format.ads:35:47
+
+ info: implicit aspect Always_Terminates on "Base_Valid" has been proved, subprogram will terminate
+--> transport_temporal_format.ads:37:13
+
+ info: data dependencies proved
+--> transport_temporal_format.ads:38:16
+
+ info: postcondition proved
+--> transport_temporal_format.ads:39:14
+
+ info: precondition proved
+--> transport_temporal_format.ads:40:09
+
+ info: implicit aspect Always_Terminates on "Coverage_Valid" has been proved, subprogram will terminate
+--> transport_temporal_format.ads:47:13
+
+ info: data dependencies proved
+--> transport_temporal_format.ads:48:16
+
+ info: postcondition proved
+--> transport_temporal_format.ads:49:14
+
+ info: precondition proved
+--> transport_temporal_format.ads:50:09
+
+ info: implicit aspect Always_Terminates on "Event_Valid" has been proved, subprogram will terminate
+--> transport_temporal_format.ads:54:13
+
+ info: data dependencies proved
+--> transport_temporal_format.ads:55:16
+
+ info: postcondition proved
+--> transport_temporal_format.ads:56:14
+
+ info: precondition proved
+--> transport_temporal_format.ads:57:09
+
+ info: overflow check proved
+--> transport_temporal_format.ads:57:37
+
+ info: overflow check proved
+--> transport_temporal_format.ads:58:24
+
+ info: index check proved
+--> transport_temporal_format.ads:58:24
+
+ info: overflow check proved
+--> transport_temporal_format.ads:59:24
+
+ info: index check proved
+--> transport_temporal_format.ads:59:24
+
+ info: overflow check proved
+--> transport_temporal_format.ads:60:24
+
+ info: index check proved
+--> transport_temporal_format.ads:60:24
+
+ info: implicit aspect Always_Terminates on "Fields_Valid" has been proved, subprogram will terminate
+--> transport_temporal_format.ads:62:13
+
+ info: data dependencies proved
+--> transport_temporal_format.ads:63:16
+
+ info: postcondition proved
+--> transport_temporal_format.ads:64:14
+
+ info: overflow check proved
+--> transport_temporal_format.ads:66:30
+
+ info: range check proved
+--> transport_temporal_format.ads:66:41
+
+ info: overflow check proved
+--> transport_temporal_format.ads:66:54
+
+ info: range check proved
+--> transport_temporal_format.ads:68:37
+
+ info: precondition proved
+--> transport_temporal_format.ads:69:12
+
+ info: overflow check proved
+--> transport_temporal_format.ads:69:46
+
+ info: overflow check proved
+--> transport_temporal_format.ads:69:56
+
+ info: implicit aspect Always_Terminates on "Scope_Matches" has been proved, subprogram will terminate
+--> transport_temporal_format.ads:71:13
+
+ info: data dependencies proved
+--> transport_temporal_format.ads:73:16
+
+ info: postcondition proved
+--> transport_temporal_format.ads:74:14
+
+ info: overflow check proved
+--> transport_temporal_format.ads:75:45
+
+ info: index check proved
+--> transport_temporal_format.ads:75:45
+
+ info: overflow check proved
+--> transport_temporal_format.ads:76:43
+
+ info: index check proved
+--> transport_temporal_format.ads:76:43
+
+ info: overflow check proved
+--> transport_temporal_format.ads:77:47
+
+ info: index check proved
+--> transport_temporal_format.ads:77:47
+
+ info: overflow check proved
+--> transport_temporal_format.ads:78:46
+
+ info: index check proved
+--> transport_temporal_format.ads:78:46
+
+ info: overflow check proved
+--> transport_temporal_format.ads:79:44
+
+ info: index check proved
+--> transport_temporal_format.ads:79:44
+
+ info: overflow check proved
+--> transport_temporal_format.ads:80:46
+
+ info: index check proved
+--> transport_temporal_format.ads:80:46
+
+ info: overflow check proved
+--> transport_temporal_format.ads:81:45
+
+ info: index check proved
+--> transport_temporal_format.ads:81:45
+
+ info: overflow check proved
+--> transport_temporal_format.ads:82:44
+
+ info: index check proved
+--> transport_temporal_format.ads:82:44
+
+ info: overflow check proved
+--> transport_temporal_format.ads:83:46
+
+ info: index check proved
+--> transport_temporal_format.ads:83:46
+
+ info: implicit aspect Always_Terminates on "Base_Matches" has been proved, subprogram will terminate
+--> transport_temporal_format.ads:85:13
+
+ info: data dependencies proved
+--> transport_temporal_format.ads:86:16
+
+ info: postcondition proved
+--> transport_temporal_format.ads:87:14
+
+ info: precondition proved
+--> transport_temporal_format.ads:88:09
+
+ info: implicit aspect Always_Terminates on "Coverage_Matches" has been proved, subprogram will terminate
+--> transport_temporal_format.ads:98:13
+
+ info: data dependencies proved
+--> transport_temporal_format.ads:99:16
+
+ info: postcondition proved
+--> transport_temporal_format.ads:100:14
+
+ info: precondition proved
+--> transport_temporal_format.ads:101:09
+
+ info: implicit aspect Always_Terminates on "Event_Matches" has been proved, subprogram will terminate
+--> transport_temporal_format.ads:108:13
+
+ info: data dependencies proved
+--> transport_temporal_format.ads:110:16
+
+ info: postcondition proved
+--> transport_temporal_format.ads:111:14
+
+ info: overflow check proved
+--> transport_temporal_format.ads:112:42
+
+ info: index check proved
+--> transport_temporal_format.ads:112:42
+
+ info: precondition proved
+--> transport_temporal_format.ads:113:09
+
+ info: overflow check proved
+--> transport_temporal_format.ads:113:39
+
+ info: overflow check proved
+--> transport_temporal_format.ads:114:60
+
+ info: index check proved
+--> transport_temporal_format.ads:114:60
+
+ info: overflow check proved
+--> transport_temporal_format.ads:115:40
+
+ info: index check proved
+--> transport_temporal_format.ads:115:40
+
+ info: overflow check proved
+--> transport_temporal_format.ads:116:48
+
+ info: index check proved
+--> transport_temporal_format.ads:116:48
+
+ info: implicit aspect Always_Terminates on "Fields_Match" has been proved, subprogram will terminate
+--> transport_temporal_format.ads:118:13
+
+ info: data dependencies proved
+--> transport_temporal_format.ads:119:16
+
+ info: postcondition proved
+--> transport_temporal_format.ads:120:14
+
+ info: precondition proved
+--> transport_temporal_format.ads:123:12
+
+ info: overflow check proved
+--> transport_temporal_format.ads:123:48
+
+ info: overflow check proved
+--> transport_temporal_format.ads:123:58
+
+ info: index check proved
+--> transport_temporal_format.ads:123:88
+
+ info: index check proved
+--> transport_temporal_format.ads:125:26
+
+ info: implicit aspect Always_Terminates on "Frame_Valid" has been proved, subprogram will terminate
+--> transport_temporal_format.ads:127:13
+
+ info: data dependencies proved
+--> transport_temporal_format.ads:128:16
+
+ info: postcondition proved
+--> transport_temporal_format.ads:129:14
+
+ info: division check proved
+--> transport_temporal_format.ads:131:54
+
+ info: range check proved
+--> transport_temporal_format.ads:131:54
+
+ info: division check proved
+--> transport_temporal_format.ads:131:73
+
+ info: range check proved
+--> transport_temporal_format.ads:131:73
+
+ info: implicit aspect Always_Terminates on "Represents" has been proved, subprogram will terminate
+--> transport_temporal_format.ads:133:13
+
+ info: data dependencies proved
+--> transport_temporal_format.ads:135:16
+
+ info: postcondition proved
+--> transport_temporal_format.ads:136:14
+
+ info: division check proved
+--> transport_temporal_format.ads:139:54
+
+ info: range check proved
+--> transport_temporal_format.ads:139:54
+
+ info: aspect Always_Terminates on "Prove_Frame_Validity" has been proved, subprogram will terminate
+--> transport_temporal_format.ads:141:14
+
+ info: data dependencies proved
+--> transport_temporal_format.ads:143:16
+
+ info: postcondition proved
+--> transport_temporal_format.ads:146:14
+ info: implicit aspect Always_Terminates on "Word" has been proved, subprogram will terminate
+--> transport_temporal_parse.adb:5:13
+
+ info: data dependencies proved
+--> transport_temporal_parse.adb:6:09
+
+ info: postcondition proved
+--> transport_temporal_parse.adb:8:14
+
+ info: index check proved
+--> transport_temporal_parse.adb:9:20
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:9:57
+
+ info: index check proved
+--> transport_temporal_parse.adb:9:57
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:10:24
+
+ info: index check proved
+--> transport_temporal_parse.adb:10:24
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:10:54
+
+ info: index check proved
+--> transport_temporal_parse.adb:10:54
+
+ info: index check proved
+--> transport_temporal_parse.adb:13:26
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:14:25
+
+ info: index check proved
+--> transport_temporal_parse.adb:14:25
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:15:25
+
+ info: index check proved
+--> transport_temporal_parse.adb:15:25
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:15:55
+
+ info: index check proved
+--> transport_temporal_parse.adb:15:55
+
+ info: aspect Always_Terminates on "Read_Fields" has been proved, subprogram will terminate
+--> transport_temporal_parse.adb:18:14
+
+ info: initialization of "Values" proved
+--> transport_temporal_parse.adb:20:07
+
+ info: initialization of "Count" proved
+--> transport_temporal_parse.adb:20:28
+
+ info: initialization of "Result" proved
+--> transport_temporal_parse.adb:20:53
+
+ info: data dependencies proved
+--> transport_temporal_parse.adb:21:09
+
+ info: postcondition proved
+--> transport_temporal_parse.adb:22:14
+
+ info: index check proved
+--> transport_temporal_parse.adb:25:44
+
+ info: precondition proved
+--> transport_temporal_parse.adb:25:49
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:25:63
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:25:67
+
+ info: initialization of "Used" proved
+--> transport_temporal_parse.adb:29:07
+
+ info: division check proved
+--> transport_temporal_parse.adb:41:23
+
+ info: division check proved
+--> transport_temporal_parse.adb:42:22
+
+ info: division check proved
+--> transport_temporal_parse.adb:46:28
+
+ info: range check proved
+--> transport_temporal_parse.adb:46:28
+
+ info: precondition proved
+--> transport_temporal_parse.adb:48:24
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:48:38
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:48:42
+
+ info: loop invariant initialization proved
+--> transport_temporal_parse.adb:50:13
+
+ info: loop invariant preservation proved
+--> transport_temporal_parse.adb:50:13
+
+ info: index check proved
+--> transport_temporal_parse.adb:50:44
+
+ info: precondition proved
+--> transport_temporal_parse.adb:50:49
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:50:63
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:50:67
+
+ info: loop invariant initialization proved
+--> transport_temporal_parse.adb:51:33
+
+ info: loop invariant preservation proved
+--> transport_temporal_parse.adb:51:33
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:51:48
+
+ info: index check proved
+--> transport_temporal_parse.adb:51:77
+
+ info: aspect Always_Terminates on "Read_Scope" has been proved, subprogram will terminate
+--> transport_temporal_parse.adb:57:14
+
+ info: initialization of "Keys" proved
+--> transport_temporal_parse.adb:58:42
+
+ info: initialization of "Result" proved
+--> transport_temporal_parse.adb:58:60
+
+ info: data dependencies proved
+--> transport_temporal_parse.adb:59:09
+
+ info: postcondition proved
+--> transport_temporal_parse.adb:61:14
+
+ info: precondition proved
+--> transport_temporal_parse.adb:61:31
+
+ info: precondition proved
+--> transport_temporal_parse.adb:62:29
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:63:45
+
+ info: index check proved
+--> transport_temporal_parse.adb:63:45
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:64:42
+
+ info: index check proved
+--> transport_temporal_parse.adb:64:42
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:65:46
+
+ info: index check proved
+--> transport_temporal_parse.adb:65:46
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:66:45
+
+ info: index check proved
+--> transport_temporal_parse.adb:66:45
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:67:43
+
+ info: index check proved
+--> transport_temporal_parse.adb:67:43
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:68:45
+
+ info: index check proved
+--> transport_temporal_parse.adb:68:45
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:69:44
+
+ info: index check proved
+--> transport_temporal_parse.adb:69:44
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:70:43
+
+ info: index check proved
+--> transport_temporal_parse.adb:70:43
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:71:45
+
+ info: index check proved
+--> transport_temporal_parse.adb:71:45
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:78:28
+
+ info: index check proved
+--> transport_temporal_parse.adb:78:28
+
+ info: loop invariant initialization proved
+--> transport_temporal_parse.adb:82:13
+
+ info: loop invariant preservation proved
+--> transport_temporal_parse.adb:82:13
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:82:51
+
+ info: index check proved
+--> transport_temporal_parse.adb:82:51
+
+ info: range check proved
+--> transport_temporal_parse.adb:84:37
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:84:52
+
+ info: index check proved
+--> transport_temporal_parse.adb:84:52
+
+ info: range check proved
+--> transport_temporal_parse.adb:85:35
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:85:50
+
+ info: index check proved
+--> transport_temporal_parse.adb:85:50
+
+ info: range check proved
+--> transport_temporal_parse.adb:86:39
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:86:54
+
+ info: index check proved
+--> transport_temporal_parse.adb:86:54
+
+ info: range check proved
+--> transport_temporal_parse.adb:87:38
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:87:53
+
+ info: index check proved
+--> transport_temporal_parse.adb:87:53
+
+ info: range check proved
+--> transport_temporal_parse.adb:88:36
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:88:51
+
+ info: index check proved
+--> transport_temporal_parse.adb:88:51
+
+ info: range check proved
+--> transport_temporal_parse.adb:89:38
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:89:53
+
+ info: index check proved
+--> transport_temporal_parse.adb:89:53
+
+ info: range check proved
+--> transport_temporal_parse.adb:90:37
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:90:52
+
+ info: index check proved
+--> transport_temporal_parse.adb:90:52
+
+ info: range check proved
+--> transport_temporal_parse.adb:91:36
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:91:51
+
+ info: index check proved
+--> transport_temporal_parse.adb:91:51
+
+ info: range check proved
+--> transport_temporal_parse.adb:92:38
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:92:53
+
+ info: index check proved
+--> transport_temporal_parse.adb:92:53
+
+ info: aspect Always_Terminates on "Read_Base" has been proved, subprogram will terminate
+--> transport_temporal_parse.adb:96:14
+
+ info: initialization of "Result" proved
+--> transport_temporal_parse.adb:96:63
+
+ info: data dependencies proved
+--> transport_temporal_parse.adb:97:09
+
+ info: postcondition proved
+--> transport_temporal_parse.adb:98:14
+
+ info: precondition proved
+--> transport_temporal_parse.adb:103:07
+
+ info: range check proved
+--> transport_temporal_parse.adb:117:35
+
+ info: range check proved
+--> transport_temporal_parse.adb:118:34
+
+ info: range check proved
+--> transport_temporal_parse.adb:122:36
+
+ info: range check proved
+--> transport_temporal_parse.adb:123:36
+
+ info: range check proved
+--> transport_temporal_parse.adb:124:43
+
+ info: range check proved
+--> transport_temporal_parse.adb:125:42
+
+ info: range check proved
+--> transport_temporal_parse.adb:126:45
+
+ info: range check proved
+--> transport_temporal_parse.adb:127:34
+
+ info: aspect Always_Terminates on "Read_Coverage" has been proved, subprogram will terminate
+--> transport_temporal_parse.adb:131:14
+
+ info: initialization of "Observed" proved
+--> transport_temporal_parse.adb:132:24
+
+ info: initialization of "Result" proved
+--> transport_temporal_parse.adb:132:49
+
+ info: data dependencies proved
+--> transport_temporal_parse.adb:133:09
+
+ info: postcondition proved
+--> transport_temporal_parse.adb:134:14
+
+ info: precondition proved
+--> transport_temporal_parse.adb:139:07
+
+ info: range check proved
+--> transport_temporal_parse.adb:150:39
+
+ info: range check proved
+--> transport_temporal_parse.adb:153:40
+
+ info: range check proved
+--> transport_temporal_parse.adb:154:40
+
+ info: range check proved
+--> transport_temporal_parse.adb:155:39
+
+ info: aspect Always_Terminates on "Read_Event" has been proved, subprogram will terminate
+--> transport_temporal_parse.adb:159:14
+
+ info: initialization of "Event" proved
+--> transport_temporal_parse.adb:161:07
+
+ info: initialization of "Result" proved
+--> transport_temporal_parse.adb:161:32
+
+ info: data dependencies proved
+--> transport_temporal_parse.adb:162:09
+
+ info: postcondition proved
+--> transport_temporal_parse.adb:164:14
+
+ info: precondition proved
+--> transport_temporal_parse.adb:164:31
+
+ info: precondition proved
+--> transport_temporal_parse.adb:165:29
+
+ info: precondition proved
+--> transport_temporal_parse.adb:169:07
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:169:34
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:174:25
+
+ info: index check proved
+--> transport_temporal_parse.adb:174:25
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:175:24
+
+ info: index check proved
+--> transport_temporal_parse.adb:175:24
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:176:24
+
+ info: index check proved
+--> transport_temporal_parse.adb:176:24
+
+ info: range check proved
+--> transport_temporal_parse.adb:180:30
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:180:45
+
+ info: index check proved
+--> transport_temporal_parse.adb:180:45
+
+ info: range check proved
+--> transport_temporal_parse.adb:181:36
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:181:51
+
+ info: index check proved
+--> transport_temporal_parse.adb:181:51
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:182:39
+
+ info: index check proved
+--> transport_temporal_parse.adb:182:39
+
+ info: range check proved
+--> transport_temporal_parse.adb:183:36
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:183:51
+
+ info: index check proved
+--> transport_temporal_parse.adb:183:51
+
+ info: aspect Always_Terminates on "Read_History" has been proved, subprogram will terminate
+--> transport_temporal_parse.adb:187:14
+
+ info: initialization of "History" proved
+--> transport_temporal_parse.adb:189:07
+
+ info: initialization of "Result" proved
+--> transport_temporal_parse.adb:189:34
+
+ info: data dependencies proved
+--> transport_temporal_parse.adb:190:09
+
+ info: postcondition proved
+--> transport_temporal_parse.adb:191:14
+
+ info: precondition proved
+--> transport_temporal_parse.adb:193:11
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:193:45
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:193:55
+
+ info: precondition proved
+--> transport_temporal_parse.adb:196:14
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:196:50
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:196:60
+
+ info: index check proved
+--> transport_temporal_parse.adb:196:85
+
+ info: index check proved
+--> transport_temporal_parse.adb:197:58
+
+ info: precondition proved
+--> transport_temporal_parse.adb:203:10
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:204:34
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:204:44
+
+ info: loop invariant initialization proved
+--> transport_temporal_parse.adb:208:33
+
+ info: loop invariant preservation proved
+--> transport_temporal_parse.adb:208:33
+
+ info: loop invariant initialization proved
+--> transport_temporal_parse.adb:210:13
+
+ info: loop invariant preservation proved
+--> transport_temporal_parse.adb:210:13
+
+ info: precondition proved
+--> transport_temporal_parse.adb:211:15
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:211:49
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:211:59
+
+ info: loop invariant initialization proved
+--> transport_temporal_parse.adb:213:13
+
+ info: loop invariant preservation proved
+--> transport_temporal_parse.adb:213:13
+
+ info: precondition proved
+--> transport_temporal_parse.adb:214:15
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:214:51
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:214:61
+
+ info: index check proved
+--> transport_temporal_parse.adb:214:86
+
+ info: loop invariant initialization proved
+--> transport_temporal_parse.adb:216:13
+
+ info: loop invariant preservation proved
+--> transport_temporal_parse.adb:216:13
+
+ info: overflow check proved
+--> transport_temporal_parse.adb:216:28
+
+ info: index check proved
+--> transport_temporal_parse.adb:216:58
+
+ info: initialization of "Values" proved
+--> transport_temporal_parse.adb:224:07
+
+ info: initialization of "Count" proved
+--> transport_temporal_parse.adb:225:07
+
+ info: initialization of "Candidate" proved
+--> transport_temporal_parse.adb:226:07
+
+ info: precondition proved
+--> transport_temporal_parse.adb:233:07
+
+ info: assertion proved
+--> transport_temporal_parse.adb:250:22
+
+ info: aspect Always_Terminates on "Read_Model" has been proved, subprogram will terminate
+--> transport_temporal_parse.ads:6:14
+
+ info: initialization of "Item" proved
+--> transport_temporal_parse.ads:8:07
+
+ info: initialization of "Result" proved
+--> transport_temporal_parse.ads:8:25
+
+ info: data dependencies proved
+--> transport_temporal_parse.ads:9:09
+
+ info: postcondition proved
+--> transport_temporal_parse.ads:10:14

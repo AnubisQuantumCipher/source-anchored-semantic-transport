@@ -1,0 +1,21 @@
+{
+  "schema":"transport/accounting-portable-preflight-history/1",
+  "record_type":"Agent transcription of observed command/tool outputs; original tool outputs remain in the authoring session. Not a newly rerun historical receipt.",
+  "first_attempt":{
+    "command":"python3 -I -S -B -Werror comparison/accounting/run_tests.py --scratch-parent /dev/shm/semantic-transport-accounting-20261029 --capacity-root /dev/shm/semantic-transport-accounting-20261029",
+    "exit_code":1,
+    "source_sha256_at_attempt":"UNKNOWN_NOT_RETAINED",
+    "terminal_error":"ValueError: capacity special file",
+    "additional_observation":"ResourceWarning: unclosed scandir iterator while handling the refusal.",
+    "stage_created":false,
+    "cause":"The capacity inventory encountered an intentional special-file negative-control fixture elsewhere in the existing task tree before staging.",
+    "repair":"The capacity scanner now closes scandir through a context manager and counts no-follow lstat allocation for nondirectory entries. It never opens those files or follows links. Archive extraction independently continues to reject special, symlinked, unsafe, missing and extra members. Aggregate and staging resource caps are unchanged."
+  },
+  "second_attempt":{
+    "exit_code":1,
+    "terminal_error":"ValueError: aggregate8MiB capacity: current=6758570 reserve=2924544",
+    "stage_created":false,
+    "outcome":"Capacity gate retained. Portable execution paused pending verified retirement of redundant task-local fixture copies; no cap increase or hidden relocation."
+  },
+  "coverage_note":"The earlier v4 runner did not propagate optimized mode into CLI children. Its optimized API evidence remains valid; optimized CLI coverage is UNRUN until the corrected portable v5 actually executes."
+}

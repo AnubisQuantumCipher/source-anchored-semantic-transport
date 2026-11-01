@@ -1,0 +1,98 @@
+{
+  "schema": "transport/reader-owner-checks/1",
+  "utc": "2026-10-29T11:33:47.368155+00:00",
+  "status": "PASS_FOR_FROZEN_DEVELOPMENT_CONTROLS",
+  "base_commit": "7ba5178d9672d84ccd49d1a37637bc9de4913324",
+  "reader": {
+    "bytes": 29108,
+    "sha256": "4fc3f3475d9686ed87d6c6227dfe6edd63f12a53b9cb56821f26407a30310c67"
+  },
+  "test_runner": {
+    "bytes": 19937,
+    "sha256": "818bae441299abce11faa03c05b0a0d91495e6fba3e95a7e318805df5b46e386"
+  },
+  "fixture_builder": {
+    "bytes": 19345,
+    "sha256": "8eb88a6a3f48bd6d24c0f526aea3a4e2fd46e054116a9ad77885c074aeaa5fce"
+  },
+  "control_rows_per_mode": 163,
+  "control_kinds": {
+    "positive": 16,
+    "negative": 135,
+    "cli_negative": 11,
+    "static": 1
+  },
+  "modes": [
+    "normal",
+    "optimized"
+  ],
+  "actual_export_comparisons": 10,
+  "original_explanation_metadata_byte_comparison": "PASS",
+  "installed_producer_unchanged": true,
+  "retained_first_failure": "review/short_stdout_repro.json in raw-evidence.tar.gz",
+  "review": "R01_CLOSED_NO_NEW_FINDINGS",
+  "platform": "Linux-7.2.6-1-aarch64-ARCH-aarch64-with-glibc2.43",
+  "python": "3.14.7 (main, Aug 12 2026, 13:41:09) [GCC 16.1.1 20260430]",
+  "python_binary": {
+    "bytes": 67720,
+    "sha256": "c6bc1ef497b896b7575c546b13f9bafe52e2066f184fdd3fec6af4b5b6349947"
+  },
+  "checks": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "install/check_source.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: parsed source files=107; bounded installer functions=1403\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "examples/quorum-replay-v1/prepare_receipt.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "REPLAY_RECEIPT_CHECKED\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "examples/public-share-v1/prepare_receipt.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "Public share source and observation receipt matches\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "-Werror",
+        "examples/quorum-sender-v1/receipt.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "Sender checkpoint source and retained observation identities match\n",
+      "stderr": ""
+    }
+  ],
+  "claim_scope": "Development reader integrity and exact byte recovery; source interpretation, external humans, native proof closure and task benefit remain separate uncompleted gates."
+}

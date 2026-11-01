@@ -1,0 +1,44 @@
+{
+  "oracle_id": "quorum-graph-development-oracle-addendum/1",
+  "contract_id": "quorum-graph-development-contract/1",
+  "classification": "HAND_AUTHORED_DEVELOPMENT_DATA",
+  "status": "UNRUN",
+  "purpose": "Add the accepted 64-edge boundary before owner freeze without changing contract.json or oracle.json.",
+  "derivation": "Literal expected outputs independently hand-authored before implementation. Each of nodes 16,17,18,19 depends directly on every node 0 through 15; all other nodes are isolated. No dependency points back from these dependents to their requirements.",
+  "scope": "Informational component qualification only; not heldout, external validation, full replay, whole-system proof or product acceptance. All inherited gates remain binding.",
+  "graph_cases": [
+    {
+      "id": "g_accepted_64_edges_required_seed",
+      "input": {
+        "schema": "quorum/graph-development/1",
+        "node_count": 32,
+        "edges": [
+          [16,0],[16,1],[16,2],[16,3],[16,4],[16,5],[16,6],[16,7],[16,8],[16,9],[16,10],[16,11],[16,12],[16,13],[16,14],[16,15],
+          [17,0],[17,1],[17,2],[17,3],[17,4],[17,5],[17,6],[17,7],[17,8],[17,9],[17,10],[17,11],[17,12],[17,13],[17,14],[17,15],
+          [18,0],[18,1],[18,2],[18,3],[18,4],[18,5],[18,6],[18,7],[18,8],[18,9],[18,10],[18,11],[18,12],[18,13],[18,14],[18,15],
+          [19,0],[19,1],[19,2],[19,3],[19,4],[19,5],[19,6],[19,7],[19,8],[19,9],[19,10],[19,11],[19,12],[19,13],[19,14],[19,15]
+        ],
+        "changed_nodes": [0]
+      },
+      "expected": {"status":"ok","nodes":[0,16,17,18,19]},
+      "rationale": "The edge-limit graph is acyclic and valid. Seed 0 directly affects the four declared dependents; other requirements and isolated nodes are unaffected."
+    },
+    {
+      "id": "g_accepted_64_edges_dependent_seed",
+      "input": {
+        "schema": "quorum/graph-development/1",
+        "node_count": 32,
+        "edges": [
+          [16,0],[16,1],[16,2],[16,3],[16,4],[16,5],[16,6],[16,7],[16,8],[16,9],[16,10],[16,11],[16,12],[16,13],[16,14],[16,15],
+          [17,0],[17,1],[17,2],[17,3],[17,4],[17,5],[17,6],[17,7],[17,8],[17,9],[17,10],[17,11],[17,12],[17,13],[17,14],[17,15],
+          [18,0],[18,1],[18,2],[18,3],[18,4],[18,5],[18,6],[18,7],[18,8],[18,9],[18,10],[18,11],[18,12],[18,13],[18,14],[18,15],
+          [19,0],[19,1],[19,2],[19,3],[19,4],[19,5],[19,6],[19,7],[19,8],[19,9],[19,10],[19,11],[19,12],[19,13],[19,14],[19,15]
+        ],
+        "changed_nodes": [19]
+      },
+      "expected": {"status":"ok","nodes":[19]},
+      "rationale": "Seed 19 has no declared dependents. Its own requirements and the other three nodes sharing those requirements do not become affected."
+    }
+  ],
+  "retention": "Preserve original contract.json, oracle.json, first outputs, failures and all inherited controls unchanged."
+}

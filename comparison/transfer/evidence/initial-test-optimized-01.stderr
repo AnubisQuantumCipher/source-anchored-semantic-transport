@@ -1,0 +1,37 @@
+test_binary_source_bytes (__main__.TransferControls.test_binary_source_bytes) ... ok
+test_changed_current_pin (__main__.TransferControls.test_changed_current_pin) ... ok
+test_corrupt_archive_member (__main__.TransferControls.test_corrupt_archive_member) ... ok
+test_current_aggregate_over_cap (__main__.TransferControls.test_current_aggregate_over_cap) ... ok
+test_duplicate_current_id (__main__.TransferControls.test_duplicate_current_id) ... ok
+test_duplicate_prior_id (__main__.TransferControls.test_duplicate_prior_id) ... ok
+test_empty_source_bytes (__main__.TransferControls.test_empty_source_bytes) ... ok
+test_exact_aggregate_cap (__main__.TransferControls.test_exact_aggregate_cap) ... ok
+test_exact_prior_aggregate_cap (__main__.TransferControls.test_exact_prior_aggregate_cap) ... ok
+test_exact_row_count_cap (__main__.TransferControls.test_exact_row_count_cap) ... ok
+test_existing_destination (__main__.TransferControls.test_existing_destination) ... ok
+test_invalid_revision (__main__.TransferControls.test_invalid_revision) ... ok
+test_literal_object_sets_and_alias_recovery (__main__.TransferControls.test_literal_object_sets_and_alias_recovery) ... ok
+test_malformed_archive (__main__.TransferControls.test_malformed_archive) ... ok
+test_missing_prior_file (__main__.TransferControls.test_missing_prior_file) ... ok
+test_missing_warm_cache (__main__.TransferControls.test_missing_warm_cache) ... ok
+test_prior_aggregate_over_cap (__main__.TransferControls.test_prior_aggregate_over_cap) ... ok
+test_request_over_cap (__main__.TransferControls.test_request_over_cap) ... ok
+test_source_over_cap (__main__.TransferControls.test_source_over_cap) ... ok
+test_source_symlink (__main__.TransferControls.test_source_symlink) ... ok
+test_stale_prior_declared_hash (__main__.TransferControls.test_stale_prior_declared_hash) ... ok
+test_too_many_current_rows (__main__.TransferControls.test_too_many_current_rows) ... ok
+test_too_many_prior_rows (__main__.TransferControls.test_too_many_prior_rows) ... ok
+test_trailing_archive_data (__main__.TransferControls.test_trailing_archive_data) ... ok
+test_traversal_id (__main__.TransferControls.test_traversal_id) ... ok
+test_truncated_archive (__main__.TransferControls.test_truncated_archive) ... ok
+test_unknown_schema (__main__.TransferControls.test_unknown_schema) ... ok
+test_unsafe_archive_name (__main__.TransferControls.test_unsafe_archive_name) ... ok
+test_unsupported_archive_version (__main__.TransferControls.test_unsupported_archive_version) ... ok
+test_wrong_cache_bytes (__main__.TransferControls.test_wrong_cache_bytes) ... ok
+test_wrong_held_archive_digest (__main__.TransferControls.test_wrong_held_archive_digest) ... ok
+test_wrong_held_manifest_digest (__main__.TransferControls.test_wrong_held_manifest_digest) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 1.654s
+
+OK

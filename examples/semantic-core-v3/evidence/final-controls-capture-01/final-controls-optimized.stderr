@@ -1,0 +1,8 @@
+test_frozen_native_truth_tables (core_controls.CoreIndependentChecks.test_frozen_native_truth_tables) ... ok
+test_published_operator_dictionary_matches_frozen_oracle (core_controls.CoreIndependentChecks.test_published_operator_dictionary_matches_frozen_oracle) ... ok
+test_schema_guards (core_controls.CoreIndependentChecks.test_schema_guards) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.189s
+
+OK

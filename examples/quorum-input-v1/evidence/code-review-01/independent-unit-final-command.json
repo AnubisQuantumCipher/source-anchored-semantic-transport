@@ -1,0 +1,34 @@
+{
+  "command": [
+    "timeout",
+    "30s",
+    "/usr/bin/python3",
+    "-I",
+    "-S",
+    "-B",
+    "-Werror",
+    "install/test_quorum_input.py",
+    "--evidence",
+    "/dev/shm/semantic-transport-wire-input-20261029/code-review-01/independent-unit-final-results.json"
+  ],
+  "cwd": "/home/sicarii/Work/semantic-transport-bound-evaluation-20261028",
+  "exit_code": 0,
+  "python": "3.14.7 (main, Aug 12 2026, 13:41:09) [GCC 16.1.1 20260430]",
+  "source_after": {
+    "examples/quorum-input-v1/admission-correction.json": "52615783aa6bfd8bd6061829491b5207c19d222486b707b2d14106d163de98c6",
+    "install/test_quorum_input.py": "15601efbfa3d5ead0acd811ae9a8fd89f9cc2b38b6cf21d230a4b7186d618d51",
+    "tools/transport_quorum_body.schema.json": "b6c7cafc1d4f1703188f7bdcb2150316feadc6b870eda9495ee146e2f429f8aa",
+    "tools/transport_quorum_input.py": "14a4105d184cd0964af07e4eec71a33c010e2ba65342631e8ce373e625f1b369",
+    "tools/transport_quorum_shape.py": "b77d9bf35c266a60a508c1e245065c740130da147d253d5af85cda1cd3229012"
+  },
+  "source_before": {
+    "examples/quorum-input-v1/admission-correction.json": "52615783aa6bfd8bd6061829491b5207c19d222486b707b2d14106d163de98c6",
+    "install/test_quorum_input.py": "15601efbfa3d5ead0acd811ae9a8fd89f9cc2b38b6cf21d230a4b7186d618d51",
+    "tools/transport_quorum_body.schema.json": "b6c7cafc1d4f1703188f7bdcb2150316feadc6b870eda9495ee146e2f429f8aa",
+    "tools/transport_quorum_input.py": "14a4105d184cd0964af07e4eec71a33c010e2ba65342631e8ce373e625f1b369",
+    "tools/transport_quorum_shape.py": "b77d9bf35c266a60a508c1e245065c740130da147d253d5af85cda1cd3229012"
+  },
+  "stable": true,
+  "stderr": "test_bootstrap_special_files_and_tamper (__main__.InputTests.test_bootstrap_special_files_and_tamper) ... ok\ntest_explicit_work_refusal (__main__.InputTests.test_explicit_work_refusal) ... ok\ntest_frozen_independent_shape_observations (__main__.InputTests.test_frozen_independent_shape_observations) ... ok\ntest_frozen_raw (__main__.InputTests.test_frozen_raw) ... ok\ntest_host_type_and_unchanged_unicode (__main__.InputTests.test_host_type_and_unchanged_unicode) ... ok\ntest_review_regressions (__main__.InputTests.test_review_regressions) ... ok\ntest_wrapper_constructions (__main__.InputTests.test_wrapper_constructions) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 1.308s\n\nOK\n",
+  "stdout": ""
+}

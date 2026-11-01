@@ -1,0 +1,20 @@
+Setup
+   [mkdir]        object directory for project Transport
+   [mkdir]        exec directory for project Transport
+Compile
+   [Ada]          transport_native.adb
+   [Ada]          transport_graphs.adb
+   [Ada]          transport_io.adb
+   [Ada]          transport_types.ads
+   [Ada]          transport_decoder.adb
+   [Ada]          transport_graph_parse.adb
+   [Ada]          transport_paths.adb
+   [Ada]          transport_temporal.adb
+   [Ada]          transport_temporal_parse.adb
+   [Ada]          transport_buffers.adb
+   [Ada]          transport_temporal_format.adb
+Bind
+   [gprbind]      transport_native.bexch
+   [Ada]          transport_native.ali
+Link
+   [link]         transport_native.adb
