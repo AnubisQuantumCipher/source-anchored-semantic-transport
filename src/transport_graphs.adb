@@ -9,8 +9,8 @@ package body Transport_Graphs with SPARK_Mode is
       return Left.Tag = Right.Tag and then Left.Size = Right.Size and then
         Left.Degree = Right.Degree and then
         (for all J in 1 .. Left.Size =>
-          Original.Data ((Left.First + J) - 1) =
-          Candidate.Data ((Right.First + J) - 1)) and then
+          Original.Data (Left.First + J - 1) =
+          Candidate.Data (Right.First + J - 1)) and then
         (for all J in 1 .. Left.Degree =>
           Map (Left.Children (J)) = Right.Children (J));
    end Node_Preserved;

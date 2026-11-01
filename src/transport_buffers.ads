@@ -8,7 +8,7 @@ package Transport_Buffers with SPARK_Mode is
      Pre => Pos <= Length + 1,
      Post => Pos <= Length + 1 and then Pos >= Pos'Old
        and then (if Result = Ok then
-           Item.Size > 0 and then Pos = (Pos'Old + Item.Size) + 1
+           Item.Size > 0 and then Pos = Pos'Old + Item.Size + 1
            and then (for all J in 1 .. Item.Size =>
              Item.Data (J) = Wire (Pos'Old + J))
          else Item.Size = 0);

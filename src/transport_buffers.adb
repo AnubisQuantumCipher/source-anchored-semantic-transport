@@ -25,7 +25,7 @@ package body Transport_Buffers with SPARK_Mode is
            (for all K in 1 .. J => Item.Data (K) = Wire (Start + K));
       end loop;
       Item.Size := Size;
-      Pos := (Start + Size) + 1;
+      Pos := Start + Size + 1;
       Result := Ok;
    end Read_Token;
 

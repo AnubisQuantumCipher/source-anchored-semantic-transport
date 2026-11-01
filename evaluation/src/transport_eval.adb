@@ -79,7 +79,7 @@ package body Transport_Eval with SPARK_Mode is
       Result := [others => <>];
       for I in 1 .. T.Count loop
          Before := Result;
-         Result := [Result with delta I => Step (T, I, Observed, Result)];
+         Result (I) := Step (T, I, Observed, Result);
          Preserve_Prefix (T, I, Observed, Before, Result);
          pragma Loop_Invariant (Well_Formed (T));
          pragma Loop_Invariant
@@ -173,7 +173,7 @@ package body Transport_Eval with SPARK_Mode is
       Result := [others => <>];
       for I in 1 .. T.Count loop
          Before := Result;
-         Result := [Result with delta I => Step (T, M, I, Result)];
+         Result (I) := Step (T, M, I, Result);
          Preserve_Core_Prefix (T, M, I, Before, Result);
          pragma Loop_Invariant (Well_Formed (T, M));
          pragma Loop_Invariant

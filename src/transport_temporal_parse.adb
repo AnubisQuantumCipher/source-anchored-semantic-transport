@@ -6,13 +6,13 @@ package body Transport_Temporal_Parse with SPARK_Mode is
    with Global => null,
      Pre => Pos <= Max_Wire - 3,
      Post => Word'Result =
-       ((Tick (Wire (Pos)) * 16_777_216 + Tick (Wire (Pos + 1)) * 65_536) +
-        Tick (Wire (Pos + 2)) * 256) + Tick (Wire (Pos + 3))
+       Tick (Wire (Pos)) * 16_777_216 + Tick (Wire (Pos + 1)) * 65_536 +
+       Tick (Wire (Pos + 2)) * 256 + Tick (Wire (Pos + 3))
    is
    begin
-      return ((Tick (Wire (Pos)) * 16_777_216 +
-        Tick (Wire (Pos + 1)) * 65_536) +
-        Tick (Wire (Pos + 2)) * 256) + Tick (Wire (Pos + 3));
+      return Tick (Wire (Pos)) * 16_777_216 +
+        Tick (Wire (Pos + 1)) * 65_536 +
+        Tick (Wire (Pos + 2)) * 256 + Tick (Wire (Pos + 3));
    end Word;
 
    procedure Read_Fields
@@ -44,8 +44,12 @@ package body Transport_Temporal_Parse with SPARK_Mode is
          return;
       end if;
       Used := (Length - 4) / 4;
-      Values := [for I in Field_Index =>
-        (if I <= Used then Word (Wire, 4 * I + 1) else 0)];
+      for I in 1 .. Used loop
+         Values (I) := Word (Wire, 4 * I + 1);
+         pragma Loop_Invariant
+           (for all J in 1 .. I => Values (J) = Word (Wire, 4 * J + 1));
+         pragma Loop_Invariant (for all J in I + 1 .. Max_Fields => Values (J) = 0);
+      end loop;
       Count := Used;
       Result := Ok;
    end Read_Fields;

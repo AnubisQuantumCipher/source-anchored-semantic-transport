@@ -25,10 +25,10 @@ package body Transport_Core_Parse with SPARK_Mode is
          M.Symbols (I).Role := Core_Symbol_Kind'Val (Wire (Base + 1));
          M.Symbols (I).Arity := Natural (Wire (Base + 2));
          for J in Core_Id loop
-            if Wire ((Base + 2) + J) > 1 then
+            if Wire (Base + 2 + J) > 1 then
                return;
             end if;
-            M.Symbols (I).Domain (J) := Wire ((Base + 2) + J) = 1;
+            M.Symbols (I).Domain (J) := Wire (Base + 2 + J) = 1;
          end loop;
       end loop;
       Valid := True;
@@ -43,7 +43,7 @@ package body Transport_Core_Parse with SPARK_Mode is
    begin
       Valid := False;
       for I in 1 .. Count loop
-         Base := (10 + 66 * Symbols) + 4 * (I - 1);
+         Base := 10 + 66 * Symbols + 4 * (I - 1);
          if Wire (Base + 1) > 64 or Wire (Base + 2) > 64 or
            Wire (Base + 3) > 64 or Wire (Base + 4) > 2
          then
@@ -64,7 +64,7 @@ package body Transport_Core_Parse with SPARK_Mode is
    begin
       Valid := False;
       for I in 1 .. Count loop
-         Base := ((10 + 66 * Symbols) + 4 * Tuples) + 9 * (I - 1);
+         Base := 10 + 66 * Symbols + 4 * Tuples + 9 * (I - 1);
          if Wire (Base + 1) > Core_Operator'Pos (Core_Operator'Last) or
            Wire (Base + 2) > 64 or Wire (Base + 3) > 64 or
            Wire (Base + 4) > 64 or Wire (Base + 5) > 64
@@ -90,14 +90,14 @@ package body Transport_Core_Parse with SPARK_Mode is
       type Seen_Array is array (Node_Id) of Boolean;
       Seen : Seen_Array := [others => False];
    begin
-      Seen := [Seen with delta T.Count => True];
+      Seen (T.Count) := True;
       for I in reverse 1 .. T.Count loop
          if Seen (I) then
             if T.Items (I).Left > 0 then
-               Seen := [Seen with delta T.Items (I).Left => True];
+               Seen (T.Items (I).Left) := True;
             end if;
             if T.Items (I).Right > 0 then
-               Seen := [Seen with delta T.Items (I).Right => True];
+               Seen (T.Items (I).Right) := True;
             end if;
          end if;
       end loop;
@@ -126,7 +126,7 @@ package body Transport_Core_Parse with SPARK_Mode is
       Count := Word (Wire, 9);
       if Symbols not in 1 .. Max_Core_Symbols or Tuples > Max_Nodes or
         Count not in 1 .. Max_Nodes or
-        Length /= ((10 + 66 * Symbols) + 4 * Tuples) + 9 * Count
+        Length /= 10 + 66 * Symbols + 4 * Tuples + 9 * Count
       then
          return;
       end if;

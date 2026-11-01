@@ -12,9 +12,9 @@ package Transport_Temporal_Format with SPARK_Mode is
    function Value (Wire : Wire_Buffer; Index : Field_Index) return Tick
    with Ghost, Global => null,
      Post => Value'Result =
-       ((Tick (Wire (4 * Index + 1)) * 16_777_216 +
-         Tick (Wire (4 * Index + 2)) * 65_536) +
-        Tick (Wire (4 * Index + 3)) * 256) + Tick (Wire (4 * Index + 4));
+       Tick (Wire (4 * Index + 1)) * 16_777_216 +
+       Tick (Wire (4 * Index + 2)) * 65_536 +
+       Tick (Wire (4 * Index + 3)) * 256 + Tick (Wire (4 * Index + 4));
 
    function Projection (Wire : Wire_Buffer; Count : Field_Count) return Fields
    with Ghost, Global => null,
