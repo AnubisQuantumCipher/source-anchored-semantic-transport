@@ -465,12 +465,12 @@ def epub_package(archive, deadline):
 
 def emit_xhtml(root, writer, deadline):
     blocked = {'script', 'style', 'head', 'template', 'svg', 'math'}
-    breaks = {'p', 'div', 'section', 'article', 'br', 'li', 'h1', 'h2', 'h3', 'h4', 'tr'}
-    stack, visited, omitted = [(root, False)], 0, {}
+    breaks = {'p', 'div', 'section', 'article', 'br', 'li', 'h1', 'h2', 'h3', 'h4', 'tr', 'td', 'th'}
+    stack, visited, omitted, cells = [(root, False)], 0, {}, 0
     for _ in range(131073):
         tick(deadline)
         if not stack:
-            return omitted
+            return omitted, cells
         node, tail = stack.pop()
         if tail:
             writer.text(node.tail or '')
@@ -483,6 +483,8 @@ def emit_xhtml(root, writer, deadline):
             continue
         if tag in breaks:
             writer.put(b'\n')
+        if tag in ('td', 'th'):
+            cells += 1
         if tag == 'img':
             omitted['img'] = omitted.get('img', 0) + 1
         writer.text(node.text or '')
@@ -501,7 +503,7 @@ def extract_epub(source, folder, writer, deadline):
         resources = epub_inventory(archive, deadline)
         need(epub_read(archive, 'mimetype') == b'application/epub+zip', 'EPUB mimetype')
         package, manifest, spine = epub_package(archive, deadline)
-        segments, omissions = [], {}
+        segments, omissions, cells = [], {}, 0
         spine_paths = set()
         for number, key in enumerate(spine, 1):
             item = manifest[key]
@@ -509,7 +511,8 @@ def extract_epub(source, folder, writer, deadline):
                  'EPUB spine media type unsupported')
             tree = xml_root(epub_read(archive, item['path']), deadline)
             start = writer.size
-            omitted = emit_xhtml(tree, writer, deadline)
+            omitted, item_cells = emit_xhtml(tree, writer, deadline)
+            cells += item_cells
             writer.put(b'\n')
             segments.append(segment(number, 'Spine ' + str(number), start, writer.size,
                                     'epub-spine', {'path': item['path'], 'idref': key}))
@@ -522,10 +525,13 @@ def extract_epub(source, folder, writer, deadline):
     uncertainty = ['Reading view follows every spine item, not all semantic content.',
                    'Images, SVG, math, script/style/head/template text and formatting omitted; no scripts execute.',
                    'Non-spine resources are fully hashed/CRC-read but not merged into the reading text.']
+    if cells:
+        uncertainty.append('Table cells are separate syntactic lines in this derived reading; column meaning is UNPROVEN.')
     return {'defusedxml': defusedxml.__version__}, segments, uncertainty, {
         'spine_items': len(spine), 'traversed_spine_items': len(segments),
         'all_entries_crc_read': len(resources), 'omitted_elements': omissions,
-        'non_spine_entries': sum(not item['in_spine'] for item in resources)}
+        'non_spine_entries': sum(not item['in_spine'] for item in resources),
+        'table_cells': cells}
 
 
 def extract_text(source, writer, deadline, markdown):

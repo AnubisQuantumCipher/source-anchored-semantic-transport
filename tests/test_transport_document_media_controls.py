@@ -103,6 +103,37 @@ def pdf():
     return bytes(data)
 
 
+def table_cases():
+    markdown = ('| term | gloss |\n| --- | --- |\n'
+                '| water | agua |\n| 水 | eau |\n| ماء | water |\n').encode()
+    grid = b'item,qty\nalpha,1\nbeta,2\n'
+    xhtml = (b'<html><body><table><tr><td>alpha</td><td>beta</td></tr>'
+             b'<tr><td>gamma</td><td>delta</td></tr></table></body></html>')
+    return [('markdown_table', '.md', markdown),
+            ('csv_text_table', '.txt', grid),
+            ('html_table_epub', '.epub', epub(xhtml=xhtml))]
+
+
+def table_kept(name, source, report):
+    text = report['text_path'].read_bytes()
+    need(report['schema'] == 'transport/reading-view/1', 'table schema')
+    need(type(report['uncertainty']) is list and len(report['uncertainty']) >= 1,
+         'table uncertainty')
+    need(report['source_sha256'] == hashlib.sha256(source).hexdigest(), 'table source hash')
+    need(report['text_sha256'] == hashlib.sha256(text).hexdigest(), 'table reading hash')
+    if name in ('markdown_table', 'csv_text_table'):
+        need(text == source, 'table bytes retained')
+    else:
+        need(b'\nalpha\n' in text and b'\nbeta\n' in text and b'\ndelta\n' in text,
+             'html table cells stay on separate lines')
+        need(b'alphabeta' not in text and b'gammadelta' not in text, 'html cells are not concatenated')
+        need(b'<table' not in text and b'<td' not in text, 'html tags stay out of the reading')
+        need(report['coverage']['table_cells'] == 4, 'html table cell count')
+        need(any('UNPROVEN' in item for item in report['uncertainty']), 'table meaning stays unproved')
+    return {'name': name, 'PASS': True, 'text_equals_source': text == source,
+            'uncertainty_count': len(report['uncertainty'])}
+
+
 def negative_cases():
     base = epub()
     end = len(base) - 22
@@ -246,6 +277,11 @@ def run(mode):
         else:
             need(len(report['segments']) == 2 and b'CONTROL FIRST' in text and b'CONTROL SECOND' in text, 'PDF pages')
         results.append({'name': name, 'PASS': True})
+    for name, suffix, data in table_cases():
+        source = folder / (name + suffix)
+        source.write_bytes(data)
+        report = extract_case(module, source, folder / (name + '-out'))
+        results.append(table_kept(name, data, report))
     bad = [(name, '.epub', data) for name, data in negative_cases()]
     bad += [('invalid_utf8', '.md', b'bad\xff'), ('unsupported', '.bin', b'hello')]
     for name, suffix, data in bad:
