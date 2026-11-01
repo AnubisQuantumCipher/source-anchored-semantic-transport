@@ -25,7 +25,6 @@ import zipfile
 import transport_document_archive as archive_module
 import transport_document_io as io_module
 import transport_document_reading as reading_module
-import transport_document_namespace as supervisor_module
 from transport_document_archive import META_NAMES, opened, put, read_entry
 from transport_document_io import (DocumentError, FRAME_SOURCE, FRAME_WIRE, MAX_ARCHIVE,
     MAX_FRAMES, MAX_META, MAX_SOURCE, MAX_SPAN, MAX_TEMP, PROFILE, canonical, digest,
@@ -33,8 +32,7 @@ from transport_document_io import (DocumentError, FRAME_SOURCE, FRAME_WIRE, MAX_
     sha, write_new)
 
 MODULES = ('transport_document.py', 'transport_document_io.py', 'transport_document_archive.py',
-           'transport_document_reading.py', 'transport_document_supervisor.py',
-           'transport_document_namespace.py')
+           'transport_document_reading.py', 'transport_document_supervisor.py')
 OPERATORS = {'format': 'transport/document-operators/1', 'operators': {
     ':=': 'Names this source-preserving document view; not logical equivalence.',
     'Σ': 'Displays declared source units in listed order; not causal or truth inference.',
@@ -81,13 +79,40 @@ def native_path(value=None):
     return path
 
 
+def load_supervisor():
+    # Import stays deferred so a clean checkout can load this module. Callers
+    # that bind epochs or run the native decoder still require the adapter.
+    found = globals().get('supervisor_module')
+    if found is not None:
+        return found
+    import transport_document_namespace as loaded
+    globals()['supervisor_module'] = loaded
+    return loaded
+
+
+def module_epochs():
+    cached = globals().get('MODULE_EPOCHS')
+    if cached is not None:
+        return cached
+    import transport_document_supervisor as core
+    epochs = {'transport_document.py': SOURCE_EPOCH,
+              'transport_document_io.py': io_module.SOURCE_EPOCH,
+              'transport_document_archive.py': archive_module.SOURCE_EPOCH,
+              'transport_document_reading.py': reading_module.SOURCE_EPOCH,
+              'transport_document_supervisor.py': core.SOURCE_EPOCH}
+    globals()['MODULE_EPOCHS'] = epochs
+    return epochs
+
+
 def runtime(native):
+    # Identity covers tracked decoder sources. The uncommitted containment
+    # adapter is required by run_native and is not a field of this record.
+    epochs = module_epochs()
     base = Path(__file__).resolve().parent
     current = {name: file_digest(base / name, MAX_META)[0] for name in MODULES}
-    need(current == MODULE_EPOCHS, 'declared Python source changed after import')
+    need(current == epochs, 'declared Python source changed after import')
     return {'format': 'transport/document-decoder/2', 'native_sha256': file_digest(native, 16_777_216)[0],
-            'modules': current, 'process_dependencies': supervisor_module.runtime_dependencies(),
-            'platform': {'system': sys.platform, 'machine': platform.machine(),
+            'modules': current, 'platform': {'system': sys.platform, 'machine': platform.machine(),
             'python': platform.python_version(), 'implementation': sys.implementation.name,
             'libc': list(platform.libc_ver())}}
 
@@ -563,10 +588,11 @@ def run_native(native, wire, recovered, expected, output_limit):
         before = stream_pin(executable)
         need(before[0] == expected, 'native runtime identity changed before execution')
         with open_regular(wire, MAX_TEMP) as wire_stream, recovered.open('xb') as output:
+            supervisor = load_supervisor()
             try:
-                supervisor_module.run(executable.fileno(), wire_stream.fileno(),
-                                      output.fileno(), expected, output_limit)
-            except supervisor_module.SupervisorError as error:
+                supervisor.run(executable.fileno(), wire_stream.fileno(),
+                               output.fileno(), expected, output_limit)
+            except supervisor.SupervisorError as error:
                 raise DocumentError(str(error)) from error
             output.flush()
             os.fsync(output.fileno())
@@ -752,9 +778,11 @@ def list_reading_segments(archive, share, start=0, count=32, native=None):
 
 
 SOURCE_EPOCH = loaded_epoch(__file__, sys._getframe().f_code)
-MODULE_EPOCHS = {'transport_document.py': SOURCE_EPOCH,
-                 'transport_document_io.py': io_module.SOURCE_EPOCH,
-                 'transport_document_archive.py': archive_module.SOURCE_EPOCH,
-                 'transport_document_reading.py': reading_module.SOURCE_EPOCH,
-                 'transport_document_supervisor.py': supervisor_module.core.SOURCE_EPOCH,
-                 'transport_document_namespace.py': supervisor_module.SOURCE_EPOCH}
+
+
+def __getattr__(name):
+    if name == 'supervisor_module':
+        return load_supervisor()
+    if name == 'MODULE_EPOCHS':
+        return module_epochs()
+    raise AttributeError('module transport_document has no attribute ' + name)

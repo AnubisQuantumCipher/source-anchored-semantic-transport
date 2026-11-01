@@ -288,6 +288,63 @@ def protocol_controls():
     return results
 
 
+def forbid_numeric(stack, names, forbidden):
+    for name in names:
+        stack.enter_context(patch.object(os, name, forbidden))
+    stack.enter_context(patch.object(signal, 'pidfd_send_signal', forbidden))
+    stack.enter_context(patch.object(supervisor, 'reap_decoder', forbidden))
+
+
+def unknown_ownership_control():
+    results = []
+    child, calls = SimpleNamespace(returncode=None, pid=4242), []
+
+    def unknown(*_args):
+        calls.append('waitid')
+        raise ChildProcessError('controlled unknown ownership')
+
+    def forbidden(*_args):
+        raise ValueError('numeric/reap operation after unknown ownership')
+
+    with ExitStack() as stack:
+        stack.enter_context(patch.object(os, 'waitid', unknown))
+        forbid_numeric(stack, ('getpgid', 'getsid', 'killpg', 'kill', 'pidfd_open'), forbidden)
+        expect_refusal('unknown_ownership', lambda: supervisor.owned_cleanup(child), results)
+    require(calls == ['waitid'], 'unknown ownership must stop at observation')
+    return results, child, forbidden
+
+
+def lost_after_open_control(child, forbidden):
+    results, later, closed = [], [], []
+
+    def third(*_args):
+        later.append('waitid')
+        if later.count('waitid') == 3:
+            raise ChildProcessError('lost after open')
+        return SimpleNamespace(si_pid=child.pid)
+
+    def opened(pid, flags=0):
+        require(pid == child.pid and flags == 0, 'pidfd open target')
+        later.append('pidfd_open')
+        return 77
+
+    def closed_fd(fd):
+        require(fd == 77, 'pidfd close target')
+        closed.append(fd)
+
+    child.returncode = None
+    with ExitStack() as stack:
+        stack.enter_context(patch.object(os, 'waitid', third))
+        stack.enter_context(patch.object(os, 'pidfd_open', opened))
+        stack.enter_context(patch.object(os, 'close', closed_fd))
+        forbid_numeric(stack, ('getpgid', 'getsid', 'killpg', 'kill'), forbidden)
+        expect_refusal('lost_after_open', lambda: supervisor.owned_cleanup(child), results)
+    require(later == ['waitid', 'waitid', 'pidfd_open', 'waitid'],
+            'post-open loss must refuse before the signal')
+    require(closed == [77], 'opened pidfd must be closed without signaling')
+    return results
+
+
 def pure_controls(case, arguments):
     results = []
     if case == 'result_protocol':
@@ -298,55 +355,16 @@ def pure_controls(case, arguments):
         wrong = (*arguments[:3], '0' * 64, arguments[4])
         expect_refusal('native_pin', lambda: supervisor.run(*wrong), results)
     elif case == 'unknown_decoder_ownership':
-        child, calls = SimpleNamespace(returncode=None, pid=4242), []
-        def unknown(*_args):
-            calls.append('waitid'); raise ChildProcessError('controlled unknown ownership')
-        def forbidden(*_args):
-            raise ValueError('numeric/reap operation after unknown ownership')
-        with ExitStack() as stack:
-            stack.enter_context(patch.object(os, 'waitid', unknown))
-            for name in ('getpgid', 'getsid', 'killpg', 'kill', 'pidfd_open'):
-                stack.enter_context(patch.object(os, name, forbidden))
-            stack.enter_context(patch.object(signal, 'pidfd_send_signal', forbidden))
-            stack.enter_context(patch.object(supervisor, 'reap_decoder', forbidden))
-            expect_refusal('unknown_ownership', lambda: supervisor.owned_cleanup(child), results)
-        require(calls == ['waitid'], 'unknown ownership must stop at observation')
-        later, closed = [], []
-
-        def third(*_args):
-            later.append('waitid')
-            if later.count('waitid') == 3:
-                raise ChildProcessError('lost after open')
-            return SimpleNamespace(si_pid=child.pid)
-
-        def opened(pid, flags=0):
-            require(pid == child.pid and flags == 0, 'pidfd open target')
-            later.append('pidfd_open')
-            return 77
-
-        def closed_fd(fd):
-            require(fd == 77, 'pidfd close target')
-            closed.append(fd)
-
-        child.returncode = None
-        with ExitStack() as stack:
-            stack.enter_context(patch.object(os, 'waitid', third))
-            stack.enter_context(patch.object(os, 'pidfd_open', opened))
-            stack.enter_context(patch.object(os, 'close', closed_fd))
-            for name in ('getpgid', 'getsid', 'killpg', 'kill'):
-                stack.enter_context(patch.object(os, name, forbidden))
-            stack.enter_context(patch.object(signal, 'pidfd_send_signal', forbidden))
-            stack.enter_context(patch.object(supervisor, 'reap_decoder', forbidden))
-            expect_refusal('lost_after_open', lambda: supervisor.owned_cleanup(child), results)
-        require(later == ['waitid', 'waitid', 'pidfd_open', 'waitid'],
-                'post-open loss must refuse before the signal')
-        require(closed == [77], 'opened pidfd must be closed without signaling')
+        first, child, forbidden = unknown_ownership_control()
+        results = first + lost_after_open_control(child, forbidden)
     elif case == 'status_mismatch':
         def spawn(*args):
             args[-1].update(pid=4242, cancel=-1, result=-1, error=-1)
+
         def collect(_pid, _channels, _deadline, state, discard=False):
             state.update(exit=7, result=bytearray(supervisor.canonical(
                 supervisor.result_record('NONE', 0, '', 'OWNED_REAPED'))))
+
         with patch.object(supervisor, 'spawn_owner', spawn), patch.object(supervisor, 'collect_owner', collect):
             expect_refusal('valid_OK_nonzero_supervisor', lambda: supervisor.run(*arguments), results)
     return {'controls': results, 'control_count': len(results), 'processes_spawned': 0}

@@ -14,6 +14,43 @@ import transport_document as document
 import transport_document_cli as cli
 
 
+def observation_callbacks(test, child, actions, opened, closed, code, group_error,
+                          wait_error, observation_error):
+    def send(fd, number, info, flags):
+        test.assertIsNone(child.returncode)
+        test.assertEqual((fd, number, info, flags), (77, signal.SIGKILL, None, 4))
+        actions.append('signal')
+        if group_error:
+            raise group_error
+
+    def observe(idtype, ident, _options):
+        test.assertEqual(ident, child.pid if idtype == document.os.P_PID else 77)
+        if idtype == document.os.P_PIDFD:
+            actions.append('reap')
+            if wait_error:
+                raise wait_error
+            if code < 0:
+                return types.SimpleNamespace(si_pid=child.pid, si_code=document.os.CLD_KILLED,
+                                             si_status=-code)
+            return types.SimpleNamespace(si_pid=child.pid, si_code=document.os.CLD_EXITED,
+                                         si_status=code)
+        if observation_error is not None:
+            raise observation_error
+        test.assertEqual(idtype, document.os.P_PID)
+        return types.SimpleNamespace(si_pid=child.pid, si_code=document.os.CLD_EXITED, si_status=0)
+
+    def open_pid(pid, flags=0):
+        test.assertEqual((pid, flags), (child.pid, 0))
+        opened.append(pid)
+        return 77
+
+    def close_fd(fd):
+        test.assertEqual(fd, 77)
+        closed.append(fd)
+
+    return send, observe, open_pid, close_fd
+
+
 class ProcessControls(unittest.TestCase):
     def test_fractional_shorter_timer_countdown_is_untouched(self):
         for remaining in (0.125, 0.5, 450):
@@ -53,41 +90,10 @@ class ProcessControls(unittest.TestCase):
         selector.__enter__ = Mock(return_value=selector)
         selector.__exit__ = Mock(return_value=False)
         selector.select.return_value = [(None, None)]
-
         opened, closed = [], []
-
-        def send(fd, number, info, flags):
-            self.assertIsNone(child.returncode)
-            self.assertEqual((fd, number, info, flags), (77, signal.SIGKILL, None, 4))
-            actions.append('signal')
-            if group_error:
-                raise group_error
-
-        def observe(idtype, ident, _options):
-            self.assertEqual(ident, child.pid if idtype == document.os.P_PID else 77)
-            if idtype == document.os.P_PIDFD:
-                actions.append('reap')
-                if wait_error:
-                    raise wait_error
-                if code < 0:
-                    return types.SimpleNamespace(si_pid=child.pid, si_code=document.os.CLD_KILLED,
-                                                 si_status=-code)
-                return types.SimpleNamespace(si_pid=child.pid, si_code=document.os.CLD_EXITED,
-                                             si_status=code)
-            if observation_error is not None:
-                raise observation_error
-            self.assertEqual(idtype, document.os.P_PID)
-            return types.SimpleNamespace(si_pid=child.pid, si_code=document.os.CLD_EXITED, si_status=0)
-
-        def open_pid(pid, flags=0):
-            self.assertEqual((pid, flags), (child.pid, 0))
-            opened.append(pid)
-            return 77
-
-        def close_fd(fd):
-            self.assertEqual(fd, 77)
-            closed.append(fd)
-
+        send, observe, open_pid, close_fd = observation_callbacks(
+            self, child, actions, opened, closed, code, group_error, wait_error,
+            observation_error)
         with contextlib.ExitStack() as stack:
             for target, name, options in [
                 (document.selectors, 'DefaultSelector', {'return_value': selector}),
