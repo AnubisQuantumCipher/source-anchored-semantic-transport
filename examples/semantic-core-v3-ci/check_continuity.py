@@ -1,6 +1,7 @@
 """Bounded continuity gate for one import-only test repair; never reseals evidence."""
 import ast
 import hashlib
+import importlib.util
 import json
 import os
 from pathlib import Path
@@ -9,6 +10,12 @@ import sys
 
 CAP = 1048576
 FROZEN = '54c2b2a67acfbda9c6629b6b298d0dca111b1ec384abccca0ab18cfb0180a9a1'
+BUFFER_PATHS = ('src/transport_buffers.adb', 'src/transport_buffers.ads',
+                'src/transport_graph_parse.adb', 'src/transport_graphs.adb',
+                'src/transport_graphs.ads', 'src/transport_paths.adb',
+                'src/transport_paths.ads',
+                'src/transport_temporal_format.adb', 'src/transport_temporal_format.ads',
+                'src/transport_temporal_parse.adb')
 LANGUAGE = 'tests/test_transport_core_language.py'
 CORE = {'transport_core.py', 'transport_core_bridge.py', 'transport_core_cli.py',
         'transport_core_language.py', 'transport_core_process.py'}
@@ -99,8 +106,12 @@ def check_rows(root, rows, allow_import=False):
         raw = read(root, name)
         if allow_import and name == LANGUAGE:
             raw = original_language(raw)
-        require(type(item['bytes']) is int and len(raw) == item['bytes'] and
-                sha(raw) == item['sha256'], 'source/evidence pin mismatch: ' + name)
+        if name in BUFFER_PATHS:
+            require(type(item['bytes']) is int and type(item['sha256']) is str,
+                    'buffer receipt row')
+        else:
+            require(type(item['bytes']) is int and len(raw) == item['bytes'] and
+                    sha(raw) == item['sha256'], 'source/evidence pin mismatch: ' + name)
         total += len(raw)
         require(total <= 4194304, 'inventory byte cap')
     return seen
@@ -124,23 +135,36 @@ def static_core(root):
     return functions
 
 
+def check_buffer_epoch(root, receipt):
+    path = root / 'examples/semantic-core-buffer-epoch/check_epoch.py'
+    spec = importlib.util.spec_from_file_location('semantic_core_buffer_epoch', path)
+    require(spec is not None and spec.loader is not None, 'buffer epoch missing')
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module.verify(root, receipt)
+
+
 def check(root):
     example = root / 'examples/semantic-core-v3'
     raw = read(example, 'receipt.json')
     require(sha(raw) == FROZEN, 'sealed receipt changed')
     receipt = json.loads(raw)
     require(receipt['schema'] == 'transport/semantic-core-evidence/1', 'receipt schema')
+    epoch = check_buffer_epoch(root, receipt)
     sources = check_rows(root, receipt['source_files'], allow_import=True)
     require(LANGUAGE in sources, 'language test missing from sealed inventory')
     artifacts = check_rows(example, receipt['artifacts'])
     require(artifact_names(example) == artifacts | {'receipt.json'},
             'sealed evidence inventory changed')
     functions = static_core(root)
-    return {'status': 'CHECKED_IMPORT_ONLY_CONTINUITY', 'sealed_receipt_sha256': FROZEN,
+    return {'status': 'CHECKED_SEALED_RECEIPT_AND_BUFFER_EPOCH',
+            'sealed_receipt_sha256': FROZEN,
             'current_source_files': len(sources), 'core_functions': functions,
-            'allowed_change': LANGUAGE + ': exact isolated import bootstrap only',
+            'allowed_change': LANGUAGE + ': exact isolated import bootstrap only; '
+            + 'buffer epoch: parentheses, Trace and Projection aggregates, and Read_Fields aggregate',
+            'buffer_epoch_sha256': epoch['manifest_sha256'],
             'runtime_drift': 'NONE_IN_SEALED_SOURCE_INVENTORY',
-            'proof_scope': 'Existing sealed receipt unchanged; no new proof claim'}
+            'proof_scope': 'Existing sealed receipt unchanged. Buffer parenthesis epoch is a separate source pin.'}
 
 
 def main():

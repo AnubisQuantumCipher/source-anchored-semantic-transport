@@ -73,14 +73,14 @@ package body Transport_Graph_Parse with SPARK_Mode is
          end if;
          G.Nodes (Index).Children (J) := Child;
       end loop;
-      if Size > Length + 1 - Pos or else Size > Max_Source - G.Used then
+      if Size > (Length + 1) - Pos or else Size > Max_Source - G.Used then
          Result := Capacity_Exceeded;
          return;
       end if;
       G.Nodes (Index).First := G.Used + 1;
       G.Nodes (Index).Size := Size;
       for J in 1 .. Size loop
-         G.Data (G.Used + J) := Wire (Pos + J - 1);
+         G.Data (G.Used + J) := Wire ((Pos + J) - 1);
       end loop;
       G.Used := G.Used + Size;
       Pos := Pos + Size;
@@ -143,7 +143,7 @@ package body Transport_Graph_Parse with SPARK_Mode is
       if Result /= Ok then
          return;
       end if;
-      if Raw_Count > Max_Nodes or else Length /= Pos - 1 + Raw_Count then
+      if Raw_Count > Max_Nodes or else Length /= (Pos - 1) + Raw_Count then
          Result := Invalid_Graph;
          return;
       end if;

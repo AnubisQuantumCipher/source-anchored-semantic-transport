@@ -21,6 +21,8 @@ class ContinuityTests(unittest.TestCase):
         self.example = self.root / 'examples/semantic-core-v3'
         CHECK.artifact_names(ROOT / 'examples/semantic-core-v3')
         shutil.copytree(ROOT / 'examples/semantic-core-v3', self.example)
+        shutil.copytree(ROOT / 'examples/semantic-core-buffer-epoch',
+                        self.root / 'examples/semantic-core-buffer-epoch')
         receipt = json.loads(CHECK.read(self.example, 'receipt.json'))
         for item in receipt['source_files']:
             destination = self.root / item['path']
@@ -29,7 +31,7 @@ class ContinuityTests(unittest.TestCase):
 
     def test_exact_continuity(self):
         result = CHECK.check(self.root)
-        self.assertEqual(result['status'], 'CHECKED_IMPORT_ONLY_CONTINUITY')
+        self.assertEqual(result['status'], 'CHECKED_SEALED_RECEIPT_AND_BUFFER_EPOCH')
 
     def test_arbitrary_language_test_change_refused(self):
         path = self.root / CHECK.LANGUAGE

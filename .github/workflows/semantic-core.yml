@@ -19,6 +19,8 @@ jobs:
           python3 -I -S -B -Werror examples/semantic-core-v3-ci/check_continuity.py
           python3 -I -S -B -Werror examples/semantic-core-v3-ci/test_continuity.py
           python3 -I -S -B -O -Werror examples/semantic-core-v3-ci/test_continuity.py
+          python3 -I -S -B -Werror examples/semantic-core-buffer-epoch/test_epoch.py
+          python3 -I -S -B -O -Werror examples/semantic-core-buffer-epoch/test_epoch.py
       - name: Closed grammar 3 schema and controlled translation
         run: |
           python3 -I -S -B -Werror tests/test_transport_core.py CoreIndependentChecks.test_schema_guards

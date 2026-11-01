@@ -14,9 +14,10 @@ package body Transport_Paths with SPARK_Mode is
    is
       Result : Path_Trace := [others => 0];
    begin
-      Result (0) := G.Root;
+      Result := [Result with delta 0 => G.Root];
       for I in 1 .. Length loop
-         Result (I) := Advance (G, Result (I - 1), Choices (I));
+         Result := [Result with delta I =>
+           Advance (G, Result (I - 1), Choices (I))];
          pragma Loop_Invariant (Result (0) = G.Root);
          pragma Loop_Invariant
            (for all J in 0 .. I => Result (J) <= G.Count);
