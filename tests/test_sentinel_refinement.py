@@ -134,6 +134,48 @@ class RefinementControls(unittest.TestCase):
             with self.subTest(ordinal=ordinal, key=key), self.assertRaises(SentinelError):
                 advance(canonical(edited), value, registry, admission, changes=['C1'])
 
+    def test_later_answers_use_the_same_checker_and_keep_the_old_history(self):
+        value, registry, admission, _locator = packet()
+        first = advance(None, value, registry, admission)
+        raw, authority = canonical(value), canonical(admission)
+        held, admitted = digest(raw), digest(authority)
+        registry[digest(b'MATERIAL_CHANGE')] = b'MATERIAL_CHANGE'
+        later = parse(r.revise_answers(first, digest(first), raw, held, registry,
+            registry_root(registry), authority, admitted, {'Q1': b'MATERIAL_CHANGE'}))
+        self.assertEqual(later['status'], 'REFERENCE_MATCHED_NOT_QUALIFIED')
+        self.assertEqual(later['results'][0]['status'], 'MATCH_REFERENCE')
+        self.assertEqual(later['qualification'], 'NOT_QUALIFIED')
+        self.assertEqual(later['semantic_completeness'], 'UNPROVEN')
+        self.assertEqual(later['execution_authority'], 'NONE')
+        self.assertEqual(later['predecessor_sha256'], digest(first))
+        self.assertEqual(later['retained_counterexample_sha256s'],
+                         [parse(first)['rounds'][0]['counterexamples'][0]['sha256']])
+        self.assertEqual(r.history_checked(first, digest(first))['outcome'], 'UNRESOLVED')
+        with self.assertRaises(SentinelError):
+            r.revise_answers(None, None, raw, held, registry, registry_root(registry),
+                             authority, admitted, {'Q1': b'MATERIAL_CHANGE'})
+        with self.assertRaises(SentinelError):
+            r.revise_answers(first, digest(first), raw, held, registry, registry_root(registry),
+                             authority, admitted, {'Q1': b'WRONG'})
+        with patch.object(r.challenges, 'SOURCE_EPOCH', '0' * 64), self.assertRaises(SentinelError):
+            r.revise_answers(first, digest(first), raw, held, registry, registry_root(registry),
+                             authority, admitted, {'Q1': b'MATERIAL_CHANGE'})
+        edited = parse(first)
+        edited['rounds'][0]['changed_nodes'] = ['C1']
+        edited['rounds'][0]['invalidated_nodes'] = ['C1']
+        tampered = canonical(edited)
+        with self.assertRaises(SentinelError):
+            r.revise_answers(tampered, digest(tampered), raw, held, registry,
+                             registry_root(registry), authority, admitted, {'Q1': b'MATERIAL_CHANGE'})
+        revised_graph = deepcopy(value)
+        revised(revised_graph, registry, admission, 'Repaired reading for a closed round.')
+        ready = advance(first, revised_graph, registry, admission, b'MATERIAL_CHANGE', ['C1'])
+        ready_raw, ready_auth = canonical(revised_graph), canonical(admission)
+        with self.assertRaises(SentinelError):
+            r.revise_answers(ready, digest(ready), ready_raw, digest(ready_raw), registry,
+                             registry_root(registry), ready_auth, digest(ready_auth),
+                             {'Q1': b'MATERIAL_CHANGE'})
+
 
 if __name__ == '__main__':
     unittest.main()

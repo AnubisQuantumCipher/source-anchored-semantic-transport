@@ -202,3 +202,62 @@ def advance(previous_raw, previous_held, challenge_raw, challenge_held, registry
         'test_contract_sha256': contract, 'source_set_sha256': value['source_set_sha256'],
         'rounds': old_rounds + [row], 'outcome': outcome, 'qualification': 'NOT_QUALIFIED',
         'execution_authority': 'NONE'})
+
+
+ANSWER_REVISION = 'sentinel/answer-revision/1'
+
+
+def _prior_answers(results, snapshot):
+    prior = {}
+    for result in results:
+        require(result['answer_pin'] is not None, 'retained round has an unrun probe')
+        prior[result['id']] = challenges.artifact(result['answer_pin'], snapshot)
+    return prior
+
+
+def _parents(previous):
+    parents = []
+    for row in previous['rounds']:
+        for entry in row['counterexamples']:
+            parents.append(entry['sha256'])
+    require(1 <= len(parents) <= PROBES * ROUNDS, 'answer revision needs a retained counterexample')
+    return parents
+
+
+def revise_answers(previous_raw, previous_held, challenge_raw, challenge_held, registry,
+                   registry_held, admission_raw, admission_held, answers):
+    """Replay later answers on one retained challenge. Do not rewrite that history."""
+    answers = challenges.answer_snapshot(answers)
+    previous = history_checked(previous_raw, previous_held)
+    require(previous is not None and previous['outcome'] == 'UNRESOLVED',
+            'answer revision requires an unresolved predecessor')
+    last = previous['rounds'][-1]
+    require(challenge_held == last['challenge_set_sha256'], 'challenge differs from retained round')
+    require(admission_held == last['admission_sha256'], 'admission differs from retained round')
+    admission = held_record(admission_raw, admission_held)
+    require('checker_sha256' in admission and admission['checker_sha256'] == challenges.SOURCE_EPOCH,
+            'checker identity mismatch')
+    snapshot = registry_snapshot(registry, registry_held)
+    recheck_prior(previous['rounds'], held_record(challenge_raw, challenge_held),
+                  admission_raw, snapshot, registry_held)
+    for raw in answers.values():
+        require(snapshot.get(digest(raw)) == raw, 'raw answer not retained in artifact registry')
+    prior = _prior_answers(last['results'], snapshot)
+    require(set(answers) == set(prior), 'answer roster differs from retained round')
+    require(prior != answers, 'answer set unchanged')
+    replay_raw = challenges.replay(challenge_raw, challenge_held, snapshot, registry_held,
+                                   admission_raw, admission_held, answers)
+    replay = parse(replay_raw)
+    matched = True
+    for row in replay['results']:
+        if row['status'] != 'MATCH_REFERENCE':
+            matched = False
+    return canonical({'schema': ANSWER_REVISION, 'predecessor_sha256': previous_held,
+        'predecessor_outcome': previous['outcome'], 'challenge_set_sha256': challenge_held,
+        'admission_sha256': admission_held, 'checker_sha256': admission['checker_sha256'],
+        'replay_sha256': digest(replay_raw), 'results': replay['results'],
+        'retained_counterexample_sha256s': _parents(previous),
+        'status': 'REFERENCE_MATCHED_NOT_QUALIFIED' if matched else 'MISMATCHES_RETAINED',
+        'qualification': 'NOT_QUALIFIED', 'semantic_completeness': 'UNPROVEN',
+        'execution_authority': 'NONE',
+        'scope': 'LATER_RECORDED_ANSWERS_ON_UNCHANGED_CHECKER_NOT_QUALIFICATION'})
