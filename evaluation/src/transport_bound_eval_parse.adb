@@ -48,14 +48,14 @@ package body Transport_Bound_Eval_Parse with SPARK_Mode is
       type Seen_Array is array (Node_Id) of Boolean;
       Seen : Seen_Array := [others => False];
    begin
-      Seen (T.Count) := True;
+      Seen := [Seen with delta T.Count => True];
       for I in reverse 1 .. T.Count loop
          if Seen (I) then
             if T.Items (I).Left > 0 then
-               Seen (T.Items (I).Left) := True;
+               Seen := [Seen with delta T.Items (I).Left => True];
             end if;
             if T.Items (I).Right > 0 then
-               Seen (T.Items (I).Right) := True;
+               Seen := [Seen with delta T.Items (I).Right => True];
             end if;
          end if;
       end loop;

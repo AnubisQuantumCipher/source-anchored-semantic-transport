@@ -47,8 +47,8 @@ package Transport_Paths with SPARK_Mode is
         Left.Nodes (Left_At).Size = Right.Nodes (Right_At).Size and then
         Left.Nodes (Left_At).Degree = Right.Nodes (Right_At).Degree and then
         (for all J in 1 .. Left.Nodes (Left_At).Size =>
-          Left.Data (Left.Nodes (Left_At).First + J - 1) =
-          Right.Data (Right.Nodes (Right_At).First + J - 1)))
+          Left.Data ((Left.Nodes (Left_At).First + J) - 1) =
+          Right.Data ((Right.Nodes (Right_At).First + J) - 1)))
    with Global => null,
      Pre => Well_Formed (Left) and then Well_Formed (Right) and then
        Left_At <= Left.Count and then Right_At <= Right.Count;

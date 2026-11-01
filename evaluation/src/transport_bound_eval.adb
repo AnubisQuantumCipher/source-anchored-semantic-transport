@@ -41,7 +41,7 @@ package body Transport_Bound_Eval with SPARK_Mode is
       Result := [others => <>];
       for I in 1 .. T.Count loop
          Before := Result;
-         Result (I) := Step (T, I, Observed (I), Result);
+         Result := [Result with delta I => Step (T, I, Observed (I), Result)];
          Preserve_Prefix (T, I, Observed, Before, Result);
          pragma Loop_Invariant (Well_Formed (T));
          pragma Loop_Invariant
