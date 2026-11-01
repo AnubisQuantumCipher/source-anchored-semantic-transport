@@ -4,6 +4,7 @@ import hashlib
 import io
 import json
 import os
+import types
 from pathlib import Path
 import resource
 import signal
@@ -109,24 +110,24 @@ class BoundaryTests(unittest.TestCase):
         wire = self.case / 'wire'
         wire.write_bytes(b'ignored by trusted fixture')
         recovered = self.case / 'temporary-output'
-        real_popen = subprocess.Popen
+        real_run = document.supervisor_module.run
         calls = []
 
-        def swapped(argv, **kwargs):
-            self.assertTrue(argv[0].startswith('/proc/self/fd/'))
-            descriptor = int(argv[0].rsplit('/', 1)[1])
-            self.assertEqual(kwargs['pass_fds'], (descriptor,))
+        def swapped(descriptor, wire_descriptor, output_descriptor, held, output_limit):
             self.assertEqual(sha(os.pread(descriptor, 4096, 0)), expected)
-            calls.append(tuple(argv))
+            self.assertEqual(os.pread(wire_descriptor, 4096, 0), wire.read_bytes())
+            self.assertEqual(os.fstat(output_descriptor).st_size, 0)
+            self.assertEqual((held, output_limit), (expected, 32))
+            calls.append((descriptor, wire_descriptor, output_descriptor))
             native.rename(saved)
             replacement.rename(native)
             try:
-                return real_popen(argv, **kwargs)
+                return real_run(descriptor, wire_descriptor, output_descriptor, held, output_limit)
             finally:
                 native.rename(replacement)
                 saved.rename(native)
 
-        with patch.object(document.subprocess, 'Popen', side_effect=swapped):
+        with patch.object(document.supervisor_module, 'run', side_effect=swapped):
             try:
                 document.run_native(native, wire, recovered, expected, 32)
             except ValueError as error:
@@ -137,7 +138,12 @@ class BoundaryTests(unittest.TestCase):
         self.assertEqual(sha(native.read_bytes()), expected)
 
     def fake_child(self):
-        child = Mock(pid=2000000)
+        child = Mock(pid=2000000, returncode=None)
+        child.operations = []
+        def reaped(timeout):
+            child.operations.append("reap")
+            return child.wait.return_value
+        child.wait.side_effect = reaped
         child.stderr.fileno.return_value = 123
         selector = Mock()
         selector.__enter__ = Mock(return_value=selector)
@@ -145,40 +151,76 @@ class BoundaryTests(unittest.TestCase):
         selector.select.return_value = [(None, None)]
         return child, selector
 
+    def pidfd_child_result(self, child, selector, read, exit_code, observed=None):
+        def waitid(idtype, ident, _options):
+            if idtype == os.P_PIDFD:
+                self.assertEqual(ident, 77)
+                child.operations.append('reap')
+                if exit_code < 0:
+                    return types.SimpleNamespace(si_pid=child.pid, si_code=os.CLD_KILLED,
+                                                 si_status=-exit_code)
+                return types.SimpleNamespace(si_pid=child.pid, si_code=os.CLD_EXITED,
+                                             si_status=exit_code)
+            self.assertEqual((idtype, ident), (os.P_PID, child.pid))
+            return types.SimpleNamespace(si_pid=child.pid)
+
+        def send(fd, number, info, flags):
+            self.assertEqual((fd, number, info, flags), (77, signal.SIGKILL, None, 4))
+            child.operations.append('signal')
+
+        patches = [
+            patch.object(document.selectors, 'DefaultSelector', return_value=selector),
+            patch.object(document.os, 'read', **read),
+            patch.object(document.os, 'waitid', side_effect=waitid),
+            patch.object(document.os, 'pidfd_open', return_value=77),
+            patch.object(document.os, 'close'),
+            patch.object(document.os, 'killpg', side_effect=AssertionError('numeric killpg')),
+            patch.object(document.os, 'getpgid', side_effect=AssertionError('numeric getpgid')),
+            patch.object(document.os, 'getsid', side_effect=AssertionError('numeric getsid')),
+            patch.object(document.signal, 'pidfd_send_signal', side_effect=send),
+        ]
+        if observed is not None:
+            patches.append(patch.object(document, 'child_exit_observed', side_effect=observed))
+        return patches
+
     def test_stderr_4097_kills_reaps_and_closes(self):
         child, selector = self.fake_child()
-        child.wait.return_value = -9
-        with patch.object(document.selectors, 'DefaultSelector', return_value=selector), \
-             patch.object(document.os, 'read', return_value=b'x' * 4097), \
-             patch.object(document.os, 'killpg') as kill:
+        patches = self.pidfd_child_result(child, selector, {'return_value': b'x' * 4097}, -9)
+        with patches[0], patches[1], patches[2], patches[3], patches[4] as close, \
+             patches[5], patches[6], patches[7], patches[8]:
             with self.assertRaisesRegex(ValueError, 'native stderr limit exceeded'):
                 document.child_result(child)
-        kill.assert_called_once_with(child.pid, signal.SIGKILL)
-        child.wait.assert_called_once_with(timeout=5)
+        close.assert_called_once_with(77)
+        child.wait.assert_not_called()
+        self.assertEqual(child.operations, ['signal', 'reap'])
         child.stderr.close.assert_called_once()
 
     def test_stderr_4096_is_within_bound_but_still_diagnostic_refusal(self):
         child, selector = self.fake_child()
-        child.wait.return_value = 0
-        with patch.object(document.selectors, 'DefaultSelector', return_value=selector), \
-             patch.object(document.os, 'read', side_effect=[b'x' * 4096, b'']), \
-             patch.object(document.os, 'killpg') as kill:
+        patches = self.pidfd_child_result(
+            child, selector, {'side_effect': [b'x' * 4096, b'']}, 0)
+        with patches[0], patches[1], patches[2], patches[3], patches[4] as close, \
+             patches[5], patches[6], patches[7], patches[8]:
             with self.assertRaisesRegex(ValueError, 'native document refusal'):
                 document.child_result(child)
-        kill.assert_called_once_with(child.pid, signal.SIGKILL)
-        self.assertEqual(child.wait.call_count, 2)
+        close.assert_called_once_with(77)
+        # Original refusal purpose retained; the pidfd signal must precede the sole reap.
+        child.wait.assert_not_called()
+        self.assertEqual(child.operations, ['signal', 'reap'])
         child.stderr.close.assert_called_once()
 
     def test_timeout_kills_owned_fake_session_and_reaps(self):
         child, selector = self.fake_child()
-        child.wait.side_effect = [subprocess.TimeoutExpired('native', 120), -9]
-        with patch.object(document.selectors, 'DefaultSelector', return_value=selector), \
-             patch.object(document.os, 'read', return_value=b''), \
-             patch.object(document.os, 'killpg') as kill:
+        patches = self.pidfd_child_result(
+            child, selector, {'return_value': b''}, -9,
+            observed=subprocess.TimeoutExpired('native', 120))
+        with patches[0], patches[1], patches[2], patches[3], patches[4] as close, \
+             patches[5], patches[6], patches[7], patches[8], patches[9]:
             with self.assertRaises(subprocess.TimeoutExpired):
                 document.child_result(child)
-        kill.assert_called_once_with(child.pid, signal.SIGKILL)
-        self.assertEqual(child.wait.call_args_list[-1].kwargs, {'timeout': 5})
+        close.assert_called_once_with(77)
+        child.wait.assert_not_called()
+        self.assertEqual(child.operations, ['signal', 'reap'])
         child.stderr.close.assert_called_once()
 
     def test_oversized_stdout_refuses_before_final_publication(self):

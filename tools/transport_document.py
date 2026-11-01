@@ -25,6 +25,7 @@ import zipfile
 import transport_document_archive as archive_module
 import transport_document_io as io_module
 import transport_document_reading as reading_module
+import transport_document_namespace as supervisor_module
 from transport_document_archive import META_NAMES, opened, put, read_entry
 from transport_document_io import (DocumentError, FRAME_SOURCE, FRAME_WIRE, MAX_ARCHIVE,
     MAX_FRAMES, MAX_META, MAX_SOURCE, MAX_SPAN, MAX_TEMP, PROFILE, canonical, digest,
@@ -32,7 +33,8 @@ from transport_document_io import (DocumentError, FRAME_SOURCE, FRAME_WIRE, MAX_
     sha, write_new)
 
 MODULES = ('transport_document.py', 'transport_document_io.py', 'transport_document_archive.py',
-           'transport_document_reading.py')
+           'transport_document_reading.py', 'transport_document_supervisor.py',
+           'transport_document_namespace.py')
 OPERATORS = {'format': 'transport/document-operators/1', 'operators': {
     ':=': 'Names this source-preserving document view; not logical equivalence.',
     'Σ': 'Displays declared source units in listed order; not causal or truth inference.',
@@ -83,8 +85,9 @@ def runtime(native):
     base = Path(__file__).resolve().parent
     current = {name: file_digest(base / name, MAX_META)[0] for name in MODULES}
     need(current == MODULE_EPOCHS, 'declared Python source changed after import')
-    return {'format': 'transport/document-decoder/1', 'native_sha256': file_digest(native, 16_777_216)[0],
-            'modules': current, 'platform': {'system': sys.platform, 'machine': platform.machine(),
+    return {'format': 'transport/document-decoder/2', 'native_sha256': file_digest(native, 16_777_216)[0],
+            'modules': current, 'process_dependencies': supervisor_module.runtime_dependencies(),
+            'platform': {'system': sys.platform, 'machine': platform.machine(),
             'python': platform.python_version(), 'implementation': sys.implementation.name,
             'libc': list(platform.libc_ver())}}
 
@@ -444,8 +447,74 @@ def native_limits(output_limit):
         resource.setrlimit(key, (bound, bound))
 
 
+def child_exit_observed(process, deadline):
+    # WNOWAIT reserves the owned leader PID until group cleanup has finished.
+    for _ in range(8192):
+        remaining = deadline - time.monotonic()
+        need(remaining > 0, 'native decoder timed out')
+        observed = os.waitid(os.P_PID, process.pid, os.WEXITED | os.WNOHANG | os.WNOWAIT)
+        if observed is not None:
+            need(time.monotonic() <= deadline, 'native decoder timed out')
+            return
+        time.sleep(min(remaining, 0.25))
+    raise DocumentError('native completion iteration bound')
+
+
+# linux/pidfd.h PIDFD_SIGNAL_PROCESS_GROUP. A scratch observation on this kernel
+# accepted the integer 4. Kernel pidfd behavior is ASSUMED, not proved.
+PIDFD_SIGNAL_PROCESS_GROUP = 4
+
+
+def pidfd_exit_code(info, pid, reason):
+    need(info is not None and info.si_pid == pid, reason)
+    if info.si_code == os.CLD_EXITED:
+        return info.si_status
+    if info.si_code in (os.CLD_KILLED, os.CLD_DUMPED):
+        return -info.si_status
+    raise DocumentError(reason)
+
+
+def child_cleanup(process):
+    # Two non-consuming waitids refuse a foreign reap that lands inside the
+    # first observation. pidfd_open is reached only after both return. That
+    # open is not atomic with the confirmation: a PID reused by another child
+    # of this process can still be opened, so the pre-open window is UNPROVEN.
+    # After the fd is open, the group signal and the reap use that fd. They do
+    # not call kill, killpg, getpgid, getsid, or Popen.wait. This does not
+    # discharge PRIORITY-A.
+    need(process.returncode is None and process.pid > 0, 'native child already reaped')
+    flags = os.WEXITED | os.WNOHANG | os.WNOWAIT
+    os.waitid(os.P_PID, process.pid, flags)
+    os.waitid(os.P_PID, process.pid, flags)
+    descriptor = os.pidfd_open(process.pid)
+    try:
+        os.waitid(os.P_PID, process.pid, flags)
+        signal_error = None
+        try:
+            signal.pidfd_send_signal(descriptor, signal.SIGKILL, None, PIDFD_SIGNAL_PROCESS_GROUP)
+        except ProcessLookupError:
+            pass
+        except OSError as error:
+            signal_error = error
+        deadline = time.monotonic() + 5
+        info = None
+        while info is None:
+            info = os.waitid(os.P_PIDFD, descriptor, os.WEXITED | os.WNOHANG)
+            if info is None:
+                need(time.monotonic() < deadline, 'native child reap timed out')
+                time.sleep(0.01)
+        code = pidfd_exit_code(info, process.pid, 'native decoder owned session UNKNOWN')
+        process.returncode = code
+        if signal_error is not None:
+            raise signal_error
+        return code
+    finally:
+        os.close(descriptor)
+
+
 def child_result(process):
     deadline, stderr = time.monotonic() + 120, bytearray()
+    ownership_unknown = False
     try:
         with selectors.DefaultSelector() as selector:
             selector.register(process.stderr, selectors.EVENT_READ)
@@ -461,18 +530,19 @@ def child_result(process):
                     need(len(stderr) <= 4096, 'native stderr limit exceeded')
             else:
                 raise DocumentError('native control iteration bound')
-        code = process.wait(timeout=max(0.001, deadline - time.monotonic()))
-        need(code == 0 and not stderr,
-             'native document refusal: ' + stderr[:512].decode('ascii', errors='replace'))
-    except BaseException:
         try:
-            os.killpg(process.pid, signal.SIGKILL)
-        except ProcessLookupError:
-            pass
-        process.wait(timeout=5)
-        raise
+            child_exit_observed(process, deadline)
+        except OSError:
+            ownership_unknown = True
+            raise
     finally:
-        process.stderr.close()
+        try:
+            if not ownership_unknown:
+                code = child_cleanup(process)
+        finally:
+            process.stderr.close()
+    need(code == 0 and not stderr,
+         'native document refusal: ' + stderr[:512].decode('ascii', errors='replace'))
 
 
 def stream_pin(stream):
@@ -492,13 +562,12 @@ def run_native(native, wire, recovered, expected, output_limit):
     with open_regular(native, 16_777_216) as executable:
         before = stream_pin(executable)
         need(before[0] == expected, 'native runtime identity changed before execution')
-        descriptor = executable.fileno()
-        with recovered.open('xb') as output:
-            process = subprocess.Popen(['/proc/self/fd/' + str(descriptor), str(wire)],
-                pass_fds=(descriptor,), stdout=output, stderr=subprocess.PIPE,
-                start_new_session=True, preexec_fn=partial(native_limits, output_limit),
-                env={'PATH': '/usr/bin:/bin', 'LANG': 'C'})
-            child_result(process)
+        with open_regular(wire, MAX_TEMP) as wire_stream, recovered.open('xb') as output:
+            try:
+                supervisor_module.run(executable.fileno(), wire_stream.fileno(),
+                                      output.fileno(), expected, output_limit)
+            except supervisor_module.SupervisorError as error:
+                raise DocumentError(str(error)) from error
             output.flush()
             os.fsync(output.fileno())
         need(stream_pin(executable) == before, 'native decoder changed during execution')
@@ -686,4 +755,6 @@ SOURCE_EPOCH = loaded_epoch(__file__, sys._getframe().f_code)
 MODULE_EPOCHS = {'transport_document.py': SOURCE_EPOCH,
                  'transport_document_io.py': io_module.SOURCE_EPOCH,
                  'transport_document_archive.py': archive_module.SOURCE_EPOCH,
-                 'transport_document_reading.py': reading_module.SOURCE_EPOCH}
+                 'transport_document_reading.py': reading_module.SOURCE_EPOCH,
+                 'transport_document_supervisor.py': supervisor_module.core.SOURCE_EPOCH,
+                 'transport_document_namespace.py': supervisor_module.SOURCE_EPOCH}
