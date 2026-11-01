@@ -71,5 +71,173 @@ class ProfileControls(unittest.TestCase):
                 CHECK.analyze([path])
 
 
+class ExtensionProfileControls(unittest.TestCase):
+    def roster(self, root):
+        document = [root / 'tools' / name for name in CHECK.DOCUMENT_NAMES]
+        extension = [root / 'tools' / name for name in CHECK.TRANSPORT_EXTENSION_NAMES]
+        return document, extension
+
+    def test_extension_roster_is_explicit_unique_and_disjoint(self):
+        expected = ('transport_document_supervisor.py', 'transport_document_namespace.py',
+                    'transport_workflow_cli.py', 'transport_workflow_endpoint.py',
+                    'transport_workflow_mcp.py')
+        self.assertEqual(CHECK.TRANSPORT_EXTENSION_NAMES, expected)
+        self.assertEqual(len(set(expected)), 5)
+        self.assertFalse(set(expected).intersection(CHECK.DOCUMENT_NAMES))
+        self.assertEqual(len(CHECK.DOCUMENT_NAMES), 9)
+
+    def test_unchanged_128_129_legacy_bound_with_complete_extension(self):
+        root = Path('/declared')
+        document, extension = self.roster(root)
+        legacy = [root / 'tools' / ('legacy_%03d.py' % index) for index in range(129)]
+        profiles = CHECK.partition(legacy[:128] + document + extension, root)
+        self.assertEqual(profiles[0], ('legacy', legacy[:128]))
+        self.assertEqual(profiles[-1], ('transport-extension/1', sorted(extension)))
+        with self.assertRaisesRegex(ValueError, 'legacy source file bound exceeded'):
+            CHECK.partition(legacy + document + extension, root)
+
+    def test_every_partial_extension_roster_refuses(self):
+        root = Path('/declared')
+        document, extension = self.roster(root)
+        for absent in extension:
+            selected = [root / 'tools/legacy.py'] + document + [p for p in extension if p != absent]
+            with self.subTest(absent=absent), self.assertRaisesRegex(ValueError, 'extension roster missing'):
+                CHECK.partition(selected, root)
+        historical = [root / 'tools/legacy.py'] + document
+        self.assertEqual(len(CHECK.partition(historical, root)), 2)
+        with self.assertRaisesRegex(ValueError, 'extension roster missing'):
+            CHECK.extension_sources(historical, root, required=True)
+
+    def test_sources_refuses_when_all_extensions_are_missing(self):
+        with patch.object(Path, 'glob', return_value=[]):
+            with self.assertRaisesRegex(ValueError, 'extension roster missing'):
+                CHECK.sources()
+
+    def test_future_extension_name_stays_in_legacy_profile(self):
+        root = Path('/declared')
+        document, extension = self.roster(root)
+        unknown = root / 'tools/transport_workflow_future.py'
+        profiles = CHECK.partition([unknown] + document + extension, root)
+        self.assertEqual(profiles[0], ('legacy', [unknown]))
+        self.assertNotIn(unknown, profiles[-1][1])
+
+    def test_extended_partition_complete_disjoint_and_duplicate_refuses(self):
+        root = Path('/declared')
+        document, extension = self.roster(root)
+        selected = [root / 'install/legacy.py'] + document + extension
+        profiles = CHECK.partition(selected, root)
+        flattened = [path for _label, paths in profiles for path in paths]
+        self.assertCountEqual(flattened, selected)
+        self.assertEqual(len(flattened), len(set(flattened)))
+        for repeated in extension:
+            with self.subTest(repeated=repeated), self.assertRaisesRegex(ValueError, 'duplicate'):
+                CHECK.partition(selected + [repeated], root)
+
+    def test_each_extension_gets_real_function_syntax_and_byte_bounds(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / 'tools').mkdir()
+            with patch.object(CHECK, 'ROOT', root):
+                for name in CHECK.TRANSPORT_EXTENSION_NAMES:
+                    path = root / 'tools' / name
+                    self.assertTrue(CHECK.bounded_functions(path))
+                    path.write_text('def oversized():\n' + '    pass\n' * 60)
+                    with self.subTest(name=name, case='function'), self.assertRaisesRegex(ValueError, 'exceeds 60'):
+                        CHECK.analyze([path])
+                    path.write_text('await missing_context()\n')
+                    with self.subTest(name=name, case='syntax'), self.assertRaises(SyntaxError):
+                        CHECK.analyze([path])
+                    path.write_bytes(b'#' * 131073)
+                    with self.subTest(name=name, case='bytes'), self.assertRaisesRegex(ValueError, 'unsupported'):
+                        CHECK.analyze([path])
+
+
+class WorkflowAttemptProfileControls(unittest.TestCase):
+    def roster(self, root):
+        document = [root / 'tools' / name for name in CHECK.DOCUMENT_NAMES]
+        extension = [root / 'tools' / name for name in CHECK.TRANSPORT_EXTENSION_NAMES]
+        attempt = [root / 'tools' / name for name in CHECK.WORKFLOW_ATTEMPT_NAMES]
+        return document, extension, attempt
+
+    def test_attempt_roster_is_explicit_unique_and_disjoint(self):
+        expected = ('transport_workflow_attempts.py', 'transport_workflow_capture.py',
+                    'transport_workflow_catalog.py')
+        self.assertEqual(CHECK.WORKFLOW_ATTEMPT_NAMES, expected)
+        self.assertEqual(len(set(expected)), 3)
+        self.assertFalse(set(expected).intersection(CHECK.DOCUMENT_NAMES))
+        self.assertFalse(set(expected).intersection(CHECK.TRANSPORT_EXTENSION_NAMES))
+        self.assertEqual(len(CHECK.TRANSPORT_EXTENSION_NAMES), 5)
+        self.assertEqual(len(CHECK.DOCUMENT_NAMES), 9)
+
+    def test_unchanged_128_129_legacy_bound_with_complete_attempt_roster(self):
+        root = Path('/declared')
+        document, extension, attempt = self.roster(root)
+        legacy = [root / 'tools' / ('legacy_%03d.py' % index) for index in range(129)]
+        profiles = CHECK.partition(legacy[:128] + document + extension + attempt, root)
+        self.assertEqual(profiles[0], ('legacy', legacy[:128]))
+        self.assertEqual(profiles[-2], ('transport-extension/1', sorted(extension)))
+        self.assertEqual(profiles[-1], ('transport-workflow-attempt/1', sorted(attempt)))
+        with self.assertRaisesRegex(ValueError, 'legacy source file bound exceeded'):
+            CHECK.partition(legacy + document + extension + attempt, root)
+
+    def test_every_partial_attempt_roster_refuses(self):
+        root = Path('/declared')
+        document, extension, attempt = self.roster(root)
+        for absent in attempt:
+            selected = [root / 'tools/legacy.py'] + document + extension + [p for p in attempt if p != absent]
+            with self.subTest(absent=absent), self.assertRaisesRegex(ValueError, 'attempt roster missing'):
+                CHECK.partition(selected, root)
+        historical = [root / 'tools/legacy.py'] + document + extension
+        self.assertEqual(CHECK.partition(historical, root)[-1][0], 'transport-extension/1')
+        with self.assertRaisesRegex(ValueError, 'attempt roster missing'):
+            CHECK.attempt_sources(historical, root, required=True)
+
+    def test_future_attempt_name_stays_in_legacy_profile(self):
+        root = Path('/declared')
+        document, extension, attempt = self.roster(root)
+        unknown = root / 'tools/transport_workflow_future_attempt.py'
+        profiles = CHECK.partition([unknown] + document + extension + attempt, root)
+        self.assertEqual(profiles[0], ('legacy', [unknown]))
+        self.assertNotIn(unknown, profiles[-1][1])
+
+    def test_attempt_partition_complete_disjoint_and_duplicate_refuses(self):
+        root = Path('/declared')
+        document, extension, attempt = self.roster(root)
+        selected = [root / 'install/legacy.py'] + document + extension + attempt
+        profiles = CHECK.partition(selected, root)
+        flattened = [path for _label, paths in profiles for path in paths]
+        self.assertCountEqual(flattened, selected)
+        self.assertEqual(len(flattened), len(set(flattened)))
+        for repeated in attempt:
+            with self.subTest(repeated=repeated), self.assertRaisesRegex(ValueError, 'duplicate'):
+                CHECK.partition(selected + [repeated], root)
+
+    def test_each_attempt_module_gets_real_function_syntax_and_byte_bounds(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / 'tools').mkdir()
+            with patch.object(CHECK, 'ROOT', root):
+                for name in CHECK.WORKFLOW_ATTEMPT_NAMES:
+                    path = root / 'tools' / name
+                    self.assertTrue(CHECK.bounded_functions(path))
+                    path.write_text('def oversized():\n' + '    pass\n' * 60)
+                    with self.subTest(name=name, case='function'), self.assertRaisesRegex(ValueError, 'exceeds 60'):
+                        CHECK.analyze([path])
+                    path.write_text('await missing_context()\n')
+                    with self.subTest(name=name, case='syntax'), self.assertRaises(SyntaxError):
+                        CHECK.analyze([path])
+                    path.write_bytes(b'#' * 131073)
+                    with self.subTest(name=name, case='bytes'), self.assertRaisesRegex(ValueError, 'unsupported'):
+                        CHECK.analyze([path])
+
+    def test_live_attempt_modules_leave_the_legacy_profile(self):
+        profiles = dict(CHECK.sources())
+        attempt = profiles['transport-workflow-attempt/1']
+        self.assertEqual([path.name for path in attempt], list(CHECK.WORKFLOW_ATTEMPT_NAMES))
+        legacy_names = {path.name for path in profiles['legacy']}
+        self.assertTrue(set(CHECK.WORKFLOW_ATTEMPT_NAMES).isdisjoint(legacy_names))
+        self.assertLessEqual(len(profiles['legacy']), 128)
+
+
 if __name__ == '__main__':
     unittest.main()

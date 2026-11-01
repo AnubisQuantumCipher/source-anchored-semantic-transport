@@ -19,29 +19,58 @@ DOCUMENT_NAMES = ('build_document_decoder.py', 'package_document_decoder.py',
                   'transport_document_archive.py', 'transport_document_cli.py',
                   'transport_document_media.py', 'transport_document_ocr.py',
                   'transport_document_reading.py')
-# Tracked supervisor source is outside the fixed 128-file legacy budget.
-# Untracked containment and workflow adapters stay out of this committed roster.
-SUPERVISOR_NAMES = ('transport_document_supervisor.py',)
+
+
+# Explicit additive adapters only; the original legacy and document budgets stay fixed.
+TRANSPORT_EXTENSION_NAMES = ('transport_document_supervisor.py', 'transport_document_namespace.py',
+                             'transport_workflow_cli.py', 'transport_workflow_endpoint.py',
+                             'transport_workflow_mcp.py')
+WORKFLOW_ATTEMPT_NAMES = ('transport_workflow_attempts.py', 'transport_workflow_capture.py',
+                          'transport_workflow_catalog.py')
+
+
+def extension_sources(selected, root, required=False):
+    extension = {root / 'tools' / name for name in TRANSPORT_EXTENSION_NAMES}
+    document = {root / 'tools' / name for name in DOCUMENT_NAMES}
+    if len(extension) != 5 or extension.intersection(document):
+        raise ValueError('fixed transport extension roster differs')
+    present = extension.intersection(selected)
+    if present != extension and (present or required):
+        raise ValueError('declared transport extension roster missing')
+    return sorted(present)
+
+
+def attempt_sources(selected, root, required=False):
+    attempt = {root / 'tools' / name for name in WORKFLOW_ATTEMPT_NAMES}
+    document = {root / 'tools' / name for name in DOCUMENT_NAMES}
+    extension = {root / 'tools' / name for name in TRANSPORT_EXTENSION_NAMES}
+    if len(attempt) != 3 or attempt.intersection(document) or attempt.intersection(extension):
+        raise ValueError('fixed workflow attempt roster differs')
+    present = attempt.intersection(selected)
+    if present != attempt and (present or required):
+        raise ValueError('declared workflow attempt roster missing')
+    return sorted(present)
 
 
 def partition(selected, root=ROOT):
     document = {root / 'tools' / name for name in DOCUMENT_NAMES}
-    supervisor = {root / 'tools' / name for name in SUPERVISOR_NAMES}
     if len(set(selected)) != len(selected):
         raise ValueError('duplicate static-analysis input')
     if not document.issubset(selected):
         raise ValueError('declared document source roster missing')
-    present = supervisor.intersection(selected)
-    if present and present != supervisor:
-        raise ValueError('declared supervisor source missing')
-    legacy = [path for path in selected if path not in document and path not in present]
+    extension = extension_sources(selected, root)
+    attempt = attempt_sources(selected, root)
+    classified = document.union(extension, attempt)
+    legacy = [path for path in selected if path not in classified]
     if not 1 <= len(legacy) <= 128:
         raise ValueError('legacy source file bound exceeded')
     if len(document) != 9:
         raise ValueError('fixed document source file bound exceeded')
     profiles = [('legacy', legacy), ('document', sorted(document))]
-    if present:
-        profiles.append(('transport-supervisor/1', sorted(present)))
+    if extension:
+        profiles.append(('transport-extension/1', extension))
+    if attempt:
+        profiles.append(('transport-workflow-attempt/1', attempt))
     return profiles
 
 
@@ -49,13 +78,16 @@ def sources():
     selected = sorted((ROOT / 'tools').glob('*.py')) + sorted((ROOT / 'install').glob('*.py'))
     selected.append(CONTINUATION)
     selected += sorted(HELDOUT.glob('*.py'))
+    extension_sources(selected, ROOT, required=True)
+    attempt_sources(selected, ROOT, required=True)
     return partition(selected)
 
 
 def bounded_functions(path):
     return (path.parent.name == 'install' or path in (CONTINUATION, QUORUM_GRAPH)
             or path in QUORUM_INPUT or path.parent == HELDOUT
-            or path == ROOT / 'tools' / path.name and path.name in DOCUMENT_NAMES)
+            or path == ROOT / 'tools' / path.name
+            and path.name in DOCUMENT_NAMES + TRANSPORT_EXTENSION_NAMES + WORKFLOW_ATTEMPT_NAMES)
 
 
 def analyze(paths):

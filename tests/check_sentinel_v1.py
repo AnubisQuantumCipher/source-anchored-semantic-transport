@@ -14,6 +14,8 @@ TESTS = ('common', 'meaning', 'locators', 'challenges', 'refinement', 'assessmen
          'document_analysis_reuse', 'collection',
          'collection_document', 'document_client', 'document_display')
 CORE = ('__init__', 'common', 'bindings', 'census', 'graph', 'locators', 'challenges', 'refinement')
+# Separate additive profile; the original twenty-two-module inventory is unchanged.
+WORKFLOW_MODULES = ('workflow', 'workflow_store', 'workflow_host')
 
 
 def checked_tree(path, production):
@@ -47,9 +49,11 @@ def main():
     directory = ROOT / 'tools/sentinel_v1'
     files = {entry.name for entry in directory.iterdir() if entry.name != '__pycache__'}
     expected = {name + '.py' for name in MODULES}
+    extension = {name + '.py' for name in WORKFLOW_MODULES}
     required = {name + '.py' for name in CORE} if core else expected
-    if not required <= files <= expected or len(expected) > 22:
-        raise ValueError('closed additive module inventory mismatch: ' + repr(files ^ expected))
+    if (not required <= files <= expected | extension or len(expected) > 22
+            or len(extension) != 3 or files & extension not in (set(), extension)):
+        raise ValueError('closed additive module inventory mismatch: ' + repr(files ^ (expected | extension)))
     count = sum(checked_tree(directory / name, True) for name in sorted(files))
     suites = TESTS[:5] if core else TESTS
     count += sum(checked_tree(ROOT / ('tests/test_sentinel_' + name + '.py'), False)
@@ -58,6 +62,7 @@ def main():
     print('SENTINEL v1 additive inventory: ' + str(len(files)) + ' modules, '
           + str(len(suites)) + ' suites, ' + str(count) + ' short functions checked; '
           + ('CORE_SCOPE' if core else 'FULL_SCOPE'))
+    print('Separate sentinel/automatic-workflow/1 inventory: ' + str(len(files & extension)))
     print('No transitive-call termination, language understanding or whole-system proof claim.')
 
 
